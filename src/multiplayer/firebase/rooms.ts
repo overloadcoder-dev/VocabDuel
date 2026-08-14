@@ -3,6 +3,7 @@ import { getFirebaseServices } from './client'
 import type { AnswerRecord, MultiplayerIdentity, RoomConfig, RoomPlayer, RoomRecord } from '../types'
 
 const ROOM_LIFETIME_MS = 2 * 60 * 60 * 1000
+const REMATCH_COUNTDOWN_MS = 10_000
 const CODE_CHARS = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
 
 function randomCode(): string {
@@ -122,16 +123,19 @@ export async function voteRematch(code: string, uid: string): Promise<void> {
 
 export async function beginRematch(code: string, uid: string, offsetMs: number): Promise<void> {
   const { database } = await getFirebaseServices()
-  const room = (await get(ref(database, `rooms/${code}`))).val() as RoomRecord | null
+  const roomRef = ref(database, `rooms/${code}`)
+  const room = (await get(roomRef)).val() as RoomRecord | null
   if (!room || room.metadata.hostUid !== uid || room.metadata.state !== 'finished') return
   const ids = Object.keys(room.players ?? {})
   if (ids.length !== 2 || !ids.every((id) => room.rematchVotes?.[id])) return
-  await set(ref(database, `rooms/${code}/metadata/seed`), (room.metadata.seed + 1) >>> 0)
-  await set(ref(database, `rooms/${code}/match`), { startAt: Date.now() + offsetMs + 3500, rematchNumber: (room.match?.rematchNumber ?? 0) + 1 })
-  await remove(ref(database, `rooms/${code}/answers`))
-  await remove(ref(database, `rooms/${code}/roundEnds`))
-  await remove(ref(database, `rooms/${code}/rematchVotes`))
-  await runTransaction(ref(database, `rooms/${code}/metadata/state`), (state) => state === 'finished' ? 'countdown' : undefined)
+  await update(roomRef, {
+    'metadata/seed': (room.metadata.seed + 1) >>> 0,
+    'metadata/state': 'countdown',
+    match: { startAt: Date.now() + offsetMs + REMATCH_COUNTDOWN_MS, rematchNumber: (room.match?.rematchNumber ?? 0) + 1 },
+    answers: null,
+    roundEnds: null,
+    rematchVotes: null,
+  })
 }
 
 export async function leaveRoom(code: string, uid: string): Promise<void> {

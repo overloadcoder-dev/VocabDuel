@@ -10,5 +10,5 @@ export function validateNickname(value: string): string | null {
 }
 
 export function normalizeRoomCode(value: string): string {
-  return value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6)
+  return value.toUpperCase().replace(/[^A-HJ-NP-Z2-9]/g, '').slice(0, 6)
 }

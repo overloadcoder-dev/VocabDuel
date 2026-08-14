@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { canTransition } from './state-machine'
 import { activeRoundTiming, remainingRoundMs, roundWindow } from './time'
-import { sanitizeNickname, validateNickname } from './validation'
+import { normalizeRoomCode, sanitizeNickname, validateNickname } from './validation'
 
 describe('multiplayer state transitions', () => {
   it('accepts legal progress and rejects state skipping', () => {
@@ -35,5 +35,12 @@ describe('nickname validation', () => {
     expect(sanitizeNickname('  小 明  ')).toBe('小 明')
     expect(validateNickname('<script>')).not.toBeNull()
     expect(validateNickname('Guest 4821')).toBeNull()
+  })
+})
+
+describe('room code input', () => {
+  it('uppercases valid characters and removes ambiguous or unsafe input', () => {
+    expect(normalizeRoomCode(' ab-cd29 ')).toBe('ABCD29')
+    expect(normalizeRoomCode('io01k7pm42')).toBe('K7PM42')
   })
 })

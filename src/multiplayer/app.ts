@@ -33,6 +33,8 @@ const root: HTMLElement = rootElement
 
 const resultTimeMs = 1_800
 const disconnectGraceMs = 30_000
+const initialCountdownMs = 3_500
+const rematchCountdownMs = 10_000
 let identity: MultiplayerIdentity | null = null
 let roomCode = ''
 let room: RoomRecord | null = null
@@ -44,8 +46,10 @@ let lastView = ''
 let actionPending = false
 let startRequested = false
 let rematchRequested = false
+let rematchVotePending = false
 let notice = ''
 const earlyClosePending = new Set<string>()
+const answerSubmissions = new Map<string, string>()
 
 function escapeHtml(value: string): string {
   const node = document.createElement('div')
@@ -65,6 +69,25 @@ function guestName(uid: string): string {
 
 function defaultConfig(): RoomConfig {
   return { level: 3, category: 'All', gameType: 'meaning', questionCount: 10, roundTimeMs: 10_000 }
+}
+
+function roomCodeInputTemplate(value: string): string {
+  const code = normalizeRoomCode(value)
+  const slots = Array.from({ length: 6 }, (_item, index) => `<span class="room-code-slot" ${code[index] ? 'data-filled' : ''}>${escapeHtml(code[index] ?? '')}</span>`).join('')
+  return `<div class="room-code-input" data-room-code-input>
+    <input class="room-code-entry" name="code" inputmode="text" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" maxlength="6" pattern="[A-HJ-NP-Z2-9]{6}" value="${escapeHtml(code)}" aria-describedby="room-code-hint" required>
+    <div class="room-code-slots" aria-hidden="true">${slots}</div>
+  </div><small id="room-code-hint" class="field-hint">输入或粘贴六位房间码</small>`
+}
+
+function refreshRoomCodeInput(input: HTMLInputElement): void {
+  input.value = normalizeRoomCode(input.value)
+  const slots = input.closest<HTMLElement>('[data-room-code-input]')?.querySelectorAll<HTMLElement>('.room-code-slot')
+  slots?.forEach((slot, index) => {
+    slot.textContent = input.value[index] ?? ''
+    slot.toggleAttribute('data-filled', Boolean(input.value[index]))
+    slot.toggleAttribute('data-active', document.activeElement === input && index === Math.min(input.value.length, 5))
+  })
 }
 
 function questionsFor(current: RoomRecord): GameQuestion[] {
@@ -92,7 +115,7 @@ function menuTemplate(): string {
       <form class="panel multiplayer-form" data-join-form>
         <h2>加入好友房间</h2>
         <label>昵称<input name="nickname" minlength="2" maxlength="16" value="${escapeHtml(identity?.displayName ?? '')}" required></label>
-        <label>六位房间码<input name="code" inputmode="text" autocomplete="off" maxlength="6" placeholder="K7PM42" value="${escapeHtml(new URLSearchParams(location.search).get('room') ?? '')}" required></label>
+        <label>六位房间码${roomCodeInputTemplate(new URLSearchParams(location.search).get('room') ?? '')}</label>
         <button class="button secondary" type="submit" ${actionPending ? 'disabled' : ''}>加入房间</button>
       </form>
     </section>${notice ? `<p class="status-message" role="alert">${escapeHtml(notice)}</p>` : ''}`
@@ -127,13 +150,28 @@ function scoreFor(uid: string, current: RoomRecord, questions: GameQuestion[]): 
   return { score, correct, totalTime }
 }
 
+function countdownTemplate(untilStart: number, isRematch: boolean): string {
+  const duration = isRematch ? rematchCountdownMs : initialCountdownMs
+  const progress = Math.max(0, Math.min(1, untilStart / duration))
+  const count = Math.ceil(untilStart / 1000)
+  const display = !isRematch && count > 3 ? 'READY' : String(count)
+  const unit = display === 'READY' ? '' : '<small>秒</small>'
+  return `<section class="panel countdown-panel">
+    <p class="countdown-status">${isRematch ? '双方已接受重赛' : '双方已准备'}</p>
+    <div class="countdown-dial" data-countdown-dial role="timer" aria-label="距离比赛开始还有 ${count} 秒" style="--countdown-progress:${progress}">
+      <div class="countdown-dial-inner"><strong class="countdown-number" data-countdown-number>${display}</strong><span data-countdown-unit>${unit}</span></div>
+    </div>
+    <p class="countdown-caption">${isRematch ? '下一场对决即将开始' : '保持专注，比赛马上开始'}</p>
+  </section>`
+}
+
 function gameTemplate(current: RoomRecord): string {
   if (!current.match || !identity) return '<div class="panel"><p>正在同步比赛时间…</p></div>'
   const now = synchronizedNow(serverOffset)
   const untilStart = current.match.startAt - now
   if (untilStart > 0) {
-    const count = Math.ceil(untilStart / 1000)
-    return `<section class="panel countdown-panel" aria-live="assertive"><p>双方已准备</p><div class="countdown-number">${count > 3 ? 'READY' : count}</div><p>保持专注，比赛马上开始</p></section>`
+    const isRematch = current.match.rematchNumber > 0
+    return countdownTemplate(untilStart, isRematch)
   }
   const questions = questionsFor(current)
   const timing = activeRoundTiming(current.match.startAt, now, questions.map(({ id }) => id), current.config.roundTimeMs, resultTimeMs, current.roundEnds)
@@ -148,6 +186,7 @@ function gameTemplate(current: RoomRecord): string {
   const window = timing
   const inResult = now >= window.roundEndAt
   const answer = current.answers?.[question.id]?.[identity.uid]
+  const selectedAnswer = answer?.selectedAnswer ?? answerSubmissions.get(question.id)
   const opponent = Object.values(current.players).find((player) => player.uid !== identity?.uid)
   const opponentAnswer = opponent ? current.answers?.[question.id]?.[opponent.uid] : undefined
   const bothAnswered = Boolean(answer && opponentAnswer)
@@ -163,16 +202,16 @@ function gameTemplate(current: RoomRecord): string {
   const vocabularyItem = getVocabularyById(question.vocabularyId)
   const meaning = vocabularyItem?.chineseExplanation ?? question.explanation
   const acceptingAnswers = current.metadata.state === 'playing'
-  return `<section class="panel battle-panel">
+  return `<section class="panel battle-panel" data-round-index="${index}" data-round-result="${inResult}">
     <div class="battle-meta"><span>Level ${current.config.level}</span><span>第 ${index + 1} / ${questions.length} 题</span></div>
-    <div class="timer" role="timer" aria-label="剩余 ${(remaining / 1000).toFixed(1)} 秒"><span style="--progress:${remaining / current.config.roundTimeMs}"></span>${(remaining / 1000).toFixed(1)}s</div>
+    <div class="timer" role="timer" aria-label="剩余 ${Math.ceil(remaining / 1000)} 秒" style="--progress:${remaining / current.config.roundTimeMs}" ${remaining / current.config.roundTimeMs <= .25 ? 'data-urgent' : ''}><span class="timer-fill" aria-hidden="true"></span><strong data-timer-value>${(remaining / 1000).toFixed(1)}s</strong></div>
     ${question.gameType === 'audio' ? `<p class="question-kicker">听音辨词</p><button class="audio-orb" data-speak="${escapeHtml(question.audioTerm ?? '')}" aria-label="播放单词发音">▶</button>` : `<p class="question-kicker">选择正确答案</p><h2 class="battle-question">${escapeHtml(question.prompt)}</h2>`}
     <div class="answer-grid">${question.choices?.map((choice, choiceIndex) => {
-      const isMine = answer?.selectedAnswer === choice.id
+      const isMine = selectedAnswer === choice.id
       const state = revealAnswers && isMine ? (choice.id === question.correctAnswer ? 'correct' : 'wrong') : isMine ? 'selected' : ''
-      return `<button class="answer-button" data-answer="${choice.id}" ${state ? `data-state="${state}"` : ''} ${answer || revealAnswers || !acceptingAnswers ? 'disabled' : ''}><span>${choiceIndex + 1}</span>${escapeHtml(choice.label)}</button>`
+      return `<button class="answer-button" data-answer="${choice.id}" ${state ? `data-state="${state}"` : ''} ${selectedAnswer || revealAnswers || !acceptingAnswers ? 'disabled' : ''}><span>${choiceIndex + 1}</span>${escapeHtml(choice.label)}</button>`
     }).join('') ?? ''}</div>
-    ${revealAnswers ? `<div class="round-result ${answer?.selectedAnswer === question.correctAnswer ? 'correct' : 'incorrect'}"><strong>${answer?.selectedAnswer === question.correctAnswer ? '✓ Correct' : answer ? '✕ Incorrect' : 'Time is up'}</strong><p>${escapeHtml(correctLabel)}</p><small><strong>${escapeHtml(vocabularyItem?.term ?? question.prompt)}</strong> — ${escapeHtml(meaning)}</small></div>` : answer ? '<p class="answer-locked" role="status">Answer locked in. Waiting for your opponent…</p>' : ''}
+    ${revealAnswers ? `<div class="round-result ${selectedAnswer === question.correctAnswer ? 'correct' : 'incorrect'}"><strong>${selectedAnswer === question.correctAnswer ? '✓ Correct' : selectedAnswer ? '✕ Incorrect' : 'Time is up'}</strong><p>${escapeHtml(correctLabel)}</p><small><strong>${escapeHtml(vocabularyItem?.term ?? question.prompt)}</strong> — ${escapeHtml(meaning)}</small></div>` : selectedAnswer ? '<p class="answer-locked" role="status">Answer locked in. Waiting for your opponent…</p>' : ''}
     <p class="opponent-status">${opponent && !opponent.connected ? `对手正在重连… ${Math.ceil(reconnectRemaining / 1000)}s` : !opponentAnswer ? 'Opponent is thinking…' : opponentAnswer.selectedAnswer === question.correctAnswer && revealAnswers ? '✓ Opponent answered correctly' : revealAnswers ? '✕ Opponent answered incorrectly' : '✓ Opponent has answered'}</p>
     <div class="score-strip"><span>你 <strong>${mine.score}</strong></span><span>${escapeHtml(opponent?.displayName ?? '对手')} <strong>${theirs.score}</strong></span></div>
     ${notice ? `<p class="status-message" role="alert">${escapeHtml(notice)}</p>` : ''}
@@ -188,7 +227,7 @@ function resultsTemplate(current: RoomRecord, suppliedQuestions?: GameQuestion[]
   const verdict = mine.score === theirs.score ? 'DRAW' : mine.score > theirs.score ? 'VICTORY' : 'DEFEAT'
   const wrong = questions.filter((question) => current.answers?.[question.id]?.[identity?.uid ?? '']?.selectedAnswer !== question.correctAnswer)
   const reviewedWords = questions.map((question) => getVocabularyById(question.vocabularyId)).filter((item) => item !== undefined)
-  const voted = Boolean(current.rematchVotes?.[identity.uid])
+  const voted = Boolean(current.rematchVotes?.[identity.uid]) || rematchVotePending
   const opponentAvailable = Boolean(opponent?.connected)
   return `<section class="panel results-panel"><p class="eyebrow">MATCH COMPLETE</p><h2>${verdict}</h2>
     <div class="final-score"><strong>${mine.score}</strong><span>—</span><strong>${theirs.score}</strong></div>
@@ -223,6 +262,66 @@ function readIdentity(form: HTMLFormElement): MultiplayerIdentity | null {
   return identity
 }
 
+function updateCountdownDial(current: RoomRecord, untilStart: number): boolean {
+  const dial = root.querySelector<HTMLElement>('[data-countdown-dial]')
+  const number = root.querySelector<HTMLElement>('[data-countdown-number]')
+  const unit = root.querySelector<HTMLElement>('[data-countdown-unit]')
+  if (!dial || !number || !unit) return false
+
+  const isRematch = (current.match?.rematchNumber ?? 0) > 0
+  const duration = isRematch ? rematchCountdownMs : initialCountdownMs
+  const count = Math.max(1, Math.ceil(untilStart / 1000))
+  const display = !isRematch && count > 3 ? 'READY' : String(count)
+  dial.style.setProperty('--countdown-progress', String(Math.max(0, Math.min(1, untilStart / duration))))
+  if (number.textContent !== display) {
+    number.textContent = display
+    unit.innerHTML = display === 'READY' ? '' : '<small>秒</small>'
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      number.animate([{ opacity: .35, transform: 'scale(.78)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 320, easing: 'cubic-bezier(.2,.8,.2,1)' })
+    }
+  }
+  if (dial.dataset.announcedSecond !== String(count)) {
+    dial.dataset.announcedSecond = String(count)
+    dial.setAttribute('aria-label', `距离比赛开始还有 ${count} 秒`)
+  }
+  return true
+}
+
+function updateRoundTimer(current: RoomRecord, now: number): boolean {
+  if (!current.match) return false
+  const questions = questionsFor(current)
+  const timing = activeRoundTiming(current.match.startAt, now, questions.map(({ id }) => id), current.config.roundTimeMs, resultTimeMs, current.roundEnds)
+  const battle = root.querySelector<HTMLElement>('.battle-panel')
+  const inResult = now >= timing.roundEndAt
+  if (!battle) return Boolean(root.querySelector('.loading-panel, .unavailable-panel'))
+  if (battle.dataset.roundIndex !== String(timing.index) || battle.dataset.roundResult !== String(inResult)) return false
+
+  const timer = battle.querySelector<HTMLElement>('.timer')
+  const timerValue = timer?.querySelector<HTMLElement>('[data-timer-value]')
+  if (!timer || !timerValue) return false
+  const remaining = remainingRoundMs(timing.roundEndAt, serverOffset)
+  const progress = Math.max(0, Math.min(1, remaining / current.config.roundTimeMs))
+  timer.style.setProperty('--progress', String(progress))
+  timer.toggleAttribute('data-urgent', progress <= .25)
+  timerValue.textContent = `${(remaining / 1000).toFixed(1)}s`
+  const announcedSecond = Math.ceil(remaining / 1000)
+  if (timer.dataset.announcedSecond !== String(announcedSecond)) {
+    timer.dataset.announcedSecond = String(announcedSecond)
+    timer.setAttribute('aria-label', `剩余 ${announcedSecond} 秒`)
+  }
+  return true
+}
+
+function runLiveTimer(): void {
+  if (room?.match && ['countdown', 'playing'].includes(room.metadata.state)) {
+    const now = synchronizedNow(serverOffset)
+    const untilStart = room.match.startAt - now
+    const updated = untilStart > 0 ? updateCountdownDial(room, untilStart) : updateRoundTimer(room, now)
+    if (!updated) render()
+  }
+  tickHandle = window.requestAnimationFrame(runLiveTimer)
+}
+
 async function watchRoom(code: string): Promise<void> {
   roomUnsubscribe?.()
   offsetUnsubscribe?.()
@@ -231,9 +330,15 @@ async function watchRoom(code: string): Promise<void> {
   offsetUnsubscribe = await observeServerOffset((value) => { serverOffset = value })
   roomUnsubscribe = await subscribeRoom(code, (value) => {
     room = value
-    if (!value) { roomCode = ''; history.replaceState({}, '', SITE.routes.multiplayer); setNotice('房间已关闭。'); return }
+    if (!value) { answerSubmissions.clear(); roomCode = ''; history.replaceState({}, '', SITE.routes.multiplayer); setNotice('房间已关闭。'); return }
+    if (identity) {
+      answerSubmissions.forEach((_selection, roundId) => {
+        if (value.answers?.[roundId]?.[identity!.uid]) answerSubmissions.delete(roundId)
+      })
+    }
     if (value.metadata.state !== 'waiting') startRequested = false
-    if (value.metadata.state !== 'finished') rematchRequested = false
+    if (value.metadata.state !== 'finished') { rematchRequested = false; rematchVotePending = false }
+    else if (identity && value.rematchVotes?.[identity.uid]) rematchVotePending = false
     if (identity && value.match && value.metadata.hostUid === identity.uid && value.metadata.state === 'playing') {
       const questions = questionsFor(value)
       const timing = activeRoundTiming(value.match.startAt, synchronizedNow(serverOffset), questions.map(({ id }) => id), value.config.roundTimeMs, resultTimeMs, value.roundEnds)
@@ -260,11 +365,24 @@ async function watchRoom(code: string): Promise<void> {
     }
     render()
   })
-  window.clearInterval(tickHandle)
-  tickHandle = window.setInterval(() => { if (room && ['countdown', 'playing'].includes(room.metadata.state)) render() }, 150)
+  if (tickHandle !== undefined) window.cancelAnimationFrame(tickHandle)
+  tickHandle = window.requestAnimationFrame(runLiveTimer)
 }
 
 function bindActions(): void {
+  root.querySelectorAll<HTMLInputElement>('.room-code-entry').forEach((input) => {
+    refreshRoomCodeInput(input)
+    input.addEventListener('input', () => refreshRoomCodeInput(input))
+    input.addEventListener('paste', (event) => {
+      const pastedCode = normalizeRoomCode(event.clipboardData?.getData('text') ?? '')
+      if (!pastedCode) return
+      event.preventDefault()
+      input.value = pastedCode
+      refreshRoomCodeInput(input)
+    })
+    input.addEventListener('focus', () => refreshRoomCodeInput(input))
+    input.addEventListener('blur', () => refreshRoomCodeInput(input))
+  })
   root.querySelector<HTMLFormElement>('[data-create-form]')?.addEventListener('submit', async (event) => {
     event.preventDefault(); notice = ''
     const form = event.currentTarget as HTMLFormElement
@@ -315,8 +433,14 @@ function bindActions(): void {
     const index = activeRoundTiming(room.match.startAt, synchronizedNow(serverOffset), questions.map(({ id }) => id), room.config.roundTimeMs, resultTimeMs, room.roundEnds).index
     const question = questions[index]
     if (!question) return
-    root.querySelectorAll<HTMLButtonElement>('[data-answer]').forEach((item) => { item.disabled = true })
-    void submitAnswer(roomCode, question.id, identity.uid, button.dataset.answer ?? '').catch(() => setNotice('答案提交失败，请检查连接。'))
+    if (room.answers?.[question.id]?.[identity.uid] || answerSubmissions.has(question.id)) return
+    const selectedAnswer = button.dataset.answer ?? ''
+    answerSubmissions.set(question.id, selectedAnswer)
+    render()
+    void submitAnswer(roomCode, question.id, identity.uid, selectedAnswer).catch(() => {
+      answerSubmissions.delete(question.id)
+      setNotice('答案提交失败，请检查连接。')
+    })
   }))
   root.querySelector<HTMLButtonElement>('[data-speak]')?.addEventListener('click', (event) => {
     if (!('speechSynthesis' in window)) { setNotice('此浏览器不支持语音播放。'); return }
@@ -324,7 +448,16 @@ function bindActions(): void {
     const utterance = new SpeechSynthesisUtterance(button.dataset.speak ?? '')
     utterance.lang = 'en-US'; speechSynthesis.cancel(); speechSynthesis.speak(utterance)
   })
-  root.querySelector<HTMLButtonElement>('[data-rematch]')?.addEventListener('click', () => { if (identity) void voteRematch(roomCode, identity.uid) })
+  root.querySelector<HTMLButtonElement>('[data-rematch]')?.addEventListener('click', () => {
+    if (!identity || rematchVotePending || room?.rematchVotes?.[identity.uid]) return
+    rematchVotePending = true
+    notice = ''
+    render()
+    void voteRematch(roomCode, identity.uid).catch(() => {
+      rematchVotePending = false
+      setNotice('无法提交重赛请求，请检查连接后重试。')
+    })
+  })
 }
 
 document.addEventListener('keydown', (event) => {
@@ -349,5 +482,5 @@ async function initialize(): Promise<void> {
   }
 }
 
-window.addEventListener('beforeunload', () => { roomUnsubscribe?.(); offsetUnsubscribe?.(); window.clearInterval(tickHandle) })
+window.addEventListener('beforeunload', () => { roomUnsubscribe?.(); offsetUnsubscribe?.(); if (tickHandle !== undefined) window.cancelAnimationFrame(tickHandle) })
 void initialize()
