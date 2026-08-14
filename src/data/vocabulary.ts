@@ -13,10 +13,18 @@ export {
   level5Vocabulary,
 }
 
-export const vocabulary: readonly VocabularyItem[] = [
+const allVocabulary: readonly VocabularyItem[] = [
   ...level1Vocabulary,
   ...level2Vocabulary,
   ...level3Vocabulary,
   ...level4Vocabulary,
   ...level5Vocabulary,
 ]
+
+// Some words are useful at more than one teaching level. The application needs
+// one stable record per ID, so the earliest (and therefore simplest) level wins.
+const vocabularyById = new Map<string, VocabularyItem>()
+for (const item of allVocabulary) {
+  if (!vocabularyById.has(item.id)) vocabularyById.set(item.id, item)
+}
+export const vocabulary: readonly VocabularyItem[] = [...vocabularyById.values()]

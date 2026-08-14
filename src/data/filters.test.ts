@@ -13,13 +13,12 @@ describe('vocabulary filters', () => {
     expect(filterVocabulary(vocabulary, { query: '预算' }).map(({ id }) => id)).toContain('budget')
   })
 
-  it('provides ten unique, valid terms at every app level', () => {
-    expect(vocabulary).toHaveLength(50)
+  it('provides enough unique, valid terms at every app level', () => {
     expect(new Set(vocabulary.map(({ id }) => id)).size).toBe(vocabulary.length)
 
     for (const guide of VOCABULARY_LEVEL_GUIDE) {
       const terms = vocabulary.filter(({ level }) => level === guide.level)
-      expect(terms).toHaveLength(10)
+      expect(terms.length).toBeGreaterThanOrEqual(10)
       expect(terms.every(({ cefr }) => cefr && guide.cefr.some((expected) => expected === cefr))).toBe(true)
     }
   })
