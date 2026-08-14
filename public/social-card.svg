@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">VocabDuel</title><desc id="desc">Master English. Challenge your friends.</desc>
+  <defs><linearGradient id="bg" x1="110" y1="40" x2="1090" y2="590" gradientUnits="userSpaceOnUse"><stop stop-color="#171d3c"/><stop offset="1" stop-color="#090d1c"/></linearGradient><linearGradient id="accent" x1="300" y1="190" x2="900" y2="450" gradientUnits="userSpaceOnUse"><stop stop-color="#9b8cff"/><stop offset="1" stop-color="#38ddca"/></linearGradient></defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/><circle cx="1035" cy="90" r="180" fill="#6d5dfc" opacity=".16"/><circle cx="135" cy="590" r="220" fill="#31d7c5" opacity=".12"/>
+  <text x="100" y="178" fill="url(#accent)" font-family="system-ui, sans-serif" font-size="72" font-weight="800">VocabDuel</text><text x="100" y="310" fill="#fff" font-family="system-ui, sans-serif" font-size="68" font-weight="750">Master English.</text><text x="100" y="395" fill="#fff" font-family="system-ui, sans-serif" font-size="68" font-weight="750">Challenge your friends.</text><text x="100" y="500" fill="#bdc5e4" font-family="system-ui, sans-serif" font-size="32">Learn deeply • Practise actively • Battle live</text>
+</svg>

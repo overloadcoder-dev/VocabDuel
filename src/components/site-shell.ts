@@ -1,0 +1,22 @@
+import { SITE } from '../config'
+
+const mark = `<span aria-hidden="true" class="grid size-9 place-items-center rounded-xl bg-brand text-sm font-black text-white shadow-md">VD</span>`
+
+export function siteHeader(active: 'home' | 'learn' | 'play' | 'multiplayer'): string {
+  const items = [
+    ['learn', SITE.routes.learn, 'Learn', '学习'],
+    ['play', SITE.routes.play, 'Play', '练习'],
+    ['multiplayer', SITE.routes.multiplayer, 'Duel', '对战'],
+  ] as const
+  return `<a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="border-b border-black/5 bg-white/80 backdrop-blur-lg">
+    <div class="page-wrap flex min-h-18 items-center justify-between gap-4">
+      <a href="${SITE.routes.home}" class="flex items-center gap-2.5 font-extrabold tracking-tight" ${active === 'home' ? 'aria-current="page"' : ''}>${mark}<span>${SITE.name.slice(0, 5)}<span class="text-brand">${SITE.name.slice(5)}</span></span></a>
+      <nav aria-label="Primary navigation"><ul class="flex items-center gap-1 sm:gap-2">${items.map(([id, href, en, zh]) => `<li><a href="${href}" ${active === id ? 'aria-current="page"' : ''} class="rounded-xl px-3 py-2 text-sm font-bold ${active === id ? 'bg-brand-soft text-brand-dark' : 'text-muted hover:bg-slate-100 hover:text-ink'}"><span>${en}</span><span class="hidden sm:inline"> · ${zh}</span></a></li>`).join('')}</ul></nav>
+    </div>
+  </header>`
+}
+
+export function siteFooter(): string {
+  return `<footer class="mt-20 border-t border-black/5 bg-white"><div class="page-wrap grid gap-8 py-10 sm:grid-cols-[1fr_auto] sm:items-end"><div><div class="mb-3 flex items-center gap-2 font-extrabold">${mark}<span>${SITE.name}</span></div><p class="max-w-lg text-sm leading-6 text-muted">${SITE.description}</p></div><nav aria-label="Footer navigation" class="flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-muted"><a href="${SITE.routes.howToPlay}">How to play</a><a href="${SITE.routes.about}">About</a><a href="${SITE.routes.privacy}">Privacy</a><a href="${SITE.routes.terms}">Terms</a></nav></div></footer>`
+}

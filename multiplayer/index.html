@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>好友词汇对战 | VocabDuel</title>
+    <meta name="description" content="创建私人房间，与好友进行实时英语词汇 1 对 1 对战。" />
+    <link rel="canonical" href="https://vocabduel.example/multiplayer/" />
+    <meta property="og:title" content="好友词汇对战 | VocabDuel" />
+    <meta property="og:description" content="创建私人房间，与好友进行实时英语词汇 1 对 1 对战。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vocabduel.example/multiplayer/" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/favicon.svg" />
+    <script type="module" src="/src/multiplayer/app.ts"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳至主要内容</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="VocabDuel 首页"><span aria-hidden="true">V</span> VocabDuel</a>
+      <nav aria-label="主要导航"><a href="/learn/">学习</a><a href="/play/">单人游戏</a><a aria-current="page" href="/multiplayer/">好友对战</a></nav>
+    </header>
+    <main id="main" class="page-shell multiplayer-page">
+      <section class="page-intro">
+        <p class="eyebrow">PRIVATE 1V1</p>
+        <h1>和好友来一场词汇对决</h1>
+        <p>匿名加入，不用注册。双方会收到相同题目和统一计时。</p>
+      </section>
+      <div id="multiplayer-app" aria-live="polite">
+        <div class="panel loading-panel"><span class="spinner" aria-hidden="true"></span><p>正在准备多人模式…</p></div>
+      </div>
+      <aside class="notice" aria-label="多人模式说明">
+        <strong>休闲竞技说明</strong>
+        <p>V1 对战由浏览器参与计分，适合好友学习切磋，不属于防作弊排名系统。单人学习无需 Firebase，仍可正常使用。</p>
+      </aside>
+    </main>
+    <footer class="site-footer"><a href="/privacy/">隐私</a><a href="/terms/">条款</a><a href="/how-to-play/">玩法说明</a></footer>
+  </body>
+</html>
