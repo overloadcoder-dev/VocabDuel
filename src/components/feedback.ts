@@ -15,7 +15,7 @@ export function confirmAction(options: { title: string; message: string; confirm
   return new Promise((resolve) => {
     const dialog = document.createElement('dialog')
     dialog.setAttribute('aria-labelledby', 'dialog-title')
-    dialog.innerHTML = `<form method="dialog" class="p-6"><h2 id="dialog-title" class="text-center text-xl font-extrabold">${options.title}</h2><p class="mt-3 leading-7 text-muted">${options.message}</p><div class="mt-6 flex justify-end gap-3"><button class="button button-secondary" value="cancel">Cancel</button><button class="button ${options.danger ? 'bg-danger text-white' : 'button-primary'}" value="confirm">${options.confirmLabel}</button></div></form>`
+    dialog.innerHTML = `<form method="dialog" class="p-6"><h2 id="dialog-title" class="text-xl font-extrabold">${options.title}</h2><p class="mt-3 leading-7 text-muted">${options.message}</p><div class="mt-6 flex justify-end gap-3"><button class="button button-secondary" value="cancel">Cancel</button><button class="button ${options.danger ? 'bg-danger text-white' : 'button-primary'}" value="confirm">${options.confirmLabel}</button></div></form>`
     document.body.append(dialog)
     dialog.addEventListener('close', () => {
       resolve(dialog.returnValue === 'confirm')

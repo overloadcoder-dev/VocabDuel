@@ -193,7 +193,7 @@
   .technical-note { color: var(--color-muted); font-size: .8rem; }
 }
 
-dialog { width: min(30rem, calc(100% - 2rem)); border: 0; border-radius: 1.25rem; padding: 0; color: var(--color-ink); box-shadow: 0 24px 80px rgb(16 24 40 / .28); }
+dialog { position: fixed; inset: 0; width: min(30rem, calc(100% - 2rem)); max-height: calc(100dvh - 2rem); margin: auto; border: 0; border-radius: 1.25rem; padding: 0; color: var(--color-ink); box-shadow: 0 24px 80px rgb(16 24 40 / .28); }
 dialog::backdrop { background: rgb(23 32 51 / .55); backdrop-filter: blur(3px); }
 .toast { position: fixed; z-index: 80; right: 1rem; bottom: calc(1rem + env(safe-area-inset-bottom)); width: min(23rem, calc(100% - 2rem)); border: 1px solid #d9dce5; border-left: 4px solid var(--color-brand); border-radius: .9rem; background: white; padding: .85rem 1rem; box-shadow: 0 15px 45px rgb(23 32 51 / .18); animation: toast-in .2s ease-out; }
 .toast[data-tone="success"] { border-left-color: var(--color-success); }
