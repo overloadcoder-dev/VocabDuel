@@ -84,6 +84,41 @@
   .button:disabled, .answer-button:disabled, .answer-option:disabled { cursor: not-allowed; opacity: .62; transform: none; }
   .icon-button { display: inline-grid; width: 2.9rem; height: 2.9rem; place-items: center; border: 1px solid #d9dce5; border-radius: .9rem; background: white; color: var(--color-ink); cursor: pointer; }
   .field { min-height: 2.9rem; width: 100%; border: 1px solid #d7dae4; border-radius: .85rem; background: white; padding: .65rem .8rem; color: var(--color-ink); }
+  select.field, .multiplayer-form select {
+    appearance: none;
+    cursor: pointer;
+    padding-right: 2.75rem;
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='m6 8 4 4 4-4' stroke='%234d3bc5' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: right .8rem center;
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    box-shadow: 0 1px 2px rgb(23 32 51 / .04);
+    font-weight: 700;
+    transition: border-color .16s ease, box-shadow .16s ease, background-color .16s ease;
+  }
+  select.field:hover, .multiplayer-form select:hover {
+    border-color: #aaa2eb;
+    background-color: #fcfbff;
+    box-shadow: 0 4px 12px rgb(77 59 197 / .08);
+  }
+  select.field:focus-visible, .multiplayer-form select:focus-visible {
+    border-color: var(--color-cyan);
+    outline: 3px solid rgb(21 163 184 / .2);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 1px rgb(21 163 184 / .15), 0 6px 18px rgb(23 32 51 / .08);
+  }
+  select.field:disabled, .multiplayer-form select:disabled {
+    cursor: not-allowed;
+    background-color: #f4f5f8;
+    color: var(--color-muted);
+    opacity: .72;
+  }
+  select.field option, .multiplayer-form select option {
+    background: white;
+    color: var(--color-ink);
+    font-weight: 600;
+  }
   .tag { display: inline-flex; align-items: center; border-radius: 999px; padding: .34rem .68rem; background: #f1f2f7; color: #4c556b; font-size: .78rem; font-weight: 700; }
   .skip-link { position: fixed; top: .5rem; left: .5rem; z-index: 100; transform: translateY(-200%); border-radius: .5rem; background: var(--color-ink); padding: .75rem 1rem; color: white; }
   .skip-link:focus { transform: translateY(0); }
