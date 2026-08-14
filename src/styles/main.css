@@ -48,6 +48,16 @@
   .content-hero h1, .page-intro h1 { margin: .65rem 0 0; font-size: clamp(2.25rem, 7vw, 4.5rem); line-height: 1.05; letter-spacing: -.045em; font-weight: 900; }
   .content-hero p, .page-intro p { margin-top: 1rem; color: var(--color-muted); font-size: 1.05rem; line-height: 1.8; }
   .content-grid { display: grid; gap: 1rem; }
+  .level-card { border: 1px solid rgb(23 32 51 / .08); border-radius: 1.25rem; background: white; padding: clamp(1.15rem, 3vw, 1.6rem); box-shadow: var(--shadow-soft); }
+  .level-card h3 { margin: 1rem 0 .8rem; font-size: 1.3rem; }
+  .level-card > p:last-child { margin-bottom: 0; color: var(--color-muted); line-height: 1.65; }
+  .level-summary { display: grid; gap: .55rem; margin: 0; }
+  .level-summary div { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25rem 1rem; border-top: 1px solid #eceef4; padding-top: .55rem; }
+  .level-summary dt { color: var(--color-muted); font-size: .8rem; font-weight: 750; }
+  .level-summary dd { margin: 0; color: var(--color-brand-dark); font-size: .9rem; font-weight: 850; text-align: right; }
+  .ielts-note { margin-block: 2rem; border: 1px solid #d8d3ff; border-radius: 1.1rem; background: var(--color-brand-soft); padding: clamp(1rem, 3vw, 1.5rem); color: #493c9f; }
+  .ielts-note h2 { margin: 0; color: #302672; font-size: 1.2rem; }
+  .ielts-note p { margin: .65rem 0 0; line-height: 1.7; }
   .panel, .loading-panel, .cta-panel { border: 1px solid rgb(23 32 51 / .08); border-radius: 1.25rem; background: white; padding: clamp(1.25rem, 3vw, 2rem); box-shadow: var(--shadow-soft); }
   .notice { border: 1px solid #d8d3ff; border-radius: .9rem; background: var(--color-brand-soft); padding: .85rem 1rem; color: #493c9f; }
   .loading-panel { display: grid; min-height: 12rem; place-items: center; text-align: center; }
