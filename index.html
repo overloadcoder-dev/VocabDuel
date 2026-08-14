@@ -14,7 +14,7 @@
   <body>
     <div id="site-header"></div>
     <main id="main-content">
-      <section class="page-wrap grid min-h-[calc(100svh-4.5rem)] items-center gap-12 py-14 lg:grid-cols-[1.05fr_.95fr] lg:py-20">
+      <section class="home-hero page-wrap grid min-h-[calc(100svh-4.5rem)] items-center gap-12 py-14 lg:grid-cols-[1.05fr_.95fr] lg:py-20">
         <div>
           <p class="eyebrow">Learn it. Use it. Own it.</p>
           <h1 class="mt-5 max-w-3xl text-5xl font-black leading-[1.04] tracking-[-.045em] sm:text-6xl lg:text-7xl">Master English.<br><span class="bg-gradient-to-r from-brand to-cyan bg-clip-text text-transparent">Challenge yourself.</span></h1>
@@ -26,9 +26,10 @@
           <div class="absolute -inset-4 -z-10 rotate-2 rounded-[2rem] bg-gradient-to-br from-brand/15 to-cyan/15"></div>
           <div class="glass-card overflow-hidden p-5 sm:p-7">
             <div class="flex items-center justify-between"><span class="tag">Meaning Match</span><span class="text-sm font-bold text-muted">Preview</span></div>
-            <div class="py-8 text-center"><p class="text-4xl font-black tracking-tight" id="preview-word">reluctant</p><p class="mt-2 text-muted" id="preview-ipa">/rɪˈlʌktənt/</p></div>
-            <div id="preview-options" class="grid gap-3"><button class="answer-option" data-correct="true"><span class="answer-key">1</span><span>不情愿的；勉强的</span></button><button class="answer-option"><span class="answer-key">2</span><span>十分热情的</span></button><button class="answer-option"><span class="answer-key">3</span><span>谨慎而缓慢的</span></button></div>
-            <p id="preview-feedback" class="mt-4 min-h-6 text-center text-sm font-bold text-muted" aria-live="polite">Choose an answer — this preview really works.</p>
+            <div class="py-8 text-center"><p class="text-4xl font-black tracking-tight" id="preview-word">Loading…</p><p class="mt-2 text-muted" id="preview-ipa"></p></div>
+            <div id="preview-options" class="grid gap-3"></div>
+            <p id="preview-feedback" class="mt-4 min-h-6 text-center text-sm font-bold text-muted" aria-live="polite">Preparing a random question…</p>
+            <button id="preview-next" class="button button-quiet mx-auto mt-3" type="button" hidden>Next word <span aria-hidden="true">→</span></button>
           </div>
         </div>
       </section>

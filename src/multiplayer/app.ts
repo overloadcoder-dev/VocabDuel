@@ -1,10 +1,13 @@
 import '../styles/main.css'
+import { siteFooter, siteHeader } from '../components/site-shell'
 import { SITE } from '../config'
+import { getVocabularyById } from '../data'
 import { generateQuestions, calculateScore } from '../games'
 import type { GameQuestion, VocabularyCategory } from '../types'
 import { authenticateGuest, isFirebaseConfigured } from './firebase/client'
 import {
   beginRematch,
+  closeRoundEarly,
   createRoom,
   finishMatch,
   joinRoom,
@@ -17,9 +20,12 @@ import {
   subscribeRoom,
   voteRematch,
 } from './firebase/rooms'
-import { remainingRoundMs, roundWindow, synchronizedNow } from './time'
+import { activeRoundTiming, remainingRoundMs, roundTimingAtIndex, synchronizedNow } from './time'
 import type { MultiplayerIdentity, RoomConfig, RoomRecord } from './types'
 import { normalizeRoomCode, sanitizeNickname, validateNickname } from './validation'
+
+document.querySelector('#site-header')!.innerHTML = siteHeader('multiplayer')
+document.querySelector('#site-footer')!.innerHTML = siteFooter()
 
 const rootElement = document.querySelector<HTMLElement>('#multiplayer-app')
 if (!rootElement) throw new Error('Multiplayer root is missing.')
@@ -39,6 +45,7 @@ let actionPending = false
 let startRequested = false
 let rematchRequested = false
 let notice = ''
+const earlyClosePending = new Set<string>()
 
 function escapeHtml(value: string): string {
   const node = document.createElement('div')
@@ -57,7 +64,7 @@ function guestName(uid: string): string {
 }
 
 function defaultConfig(): RoomConfig {
-  return { level: 3, category: 'All', gameType: 'meaning', questionCount: 5, roundTimeMs: 10_000 }
+  return { level: 3, category: 'All', gameType: 'meaning', questionCount: 10, roundTimeMs: 10_000 }
 }
 
 function questionsFor(current: RoomRecord): GameQuestion[] {
@@ -79,7 +86,7 @@ function menuTemplate(): string {
         <div class="form-row"><label>难度<select name="level">${[1, 2, 3, 4, 5].map((n) => `<option value="${n}" ${n === 3 ? 'selected' : ''}>Level ${n}</option>`).join('')}</select></label>
         <label>类别<select name="category"><option value="All">全部类别</option>${['Daily English', 'Travel', 'School', 'Business', 'Technology', 'Academic'].map((value) => `<option>${value}</option>`).join('')}</select></label></div>
         <label>题型<select name="gameType"><option value="meaning">英文选中文</option><option value="reverse">中文选英文</option><option value="audio">听音辨词</option><option value="context">语境挑战</option></select></label>
-        <div class="form-row"><label>题数<select name="questionCount"><option>5</option><option>10</option><option>15</option></select></label><label>每题时间<select name="roundTime"><option value="10000">10 秒</option><option value="15000">15 秒</option><option value="20000">20 秒</option></select></label></div>
+        <div class="form-row"><label>题数<select name="questionCount"><option>10</option><option>15</option><option>20</option></select></label><label>每题时间<select name="roundTime"><option value="10000">10 秒</option><option value="15000">15 秒</option><option value="20000">20 秒</option></select></label></div>
         <button class="button primary" type="submit" ${actionPending ? 'disabled' : ''}>${actionPending ? '创建中…' : '创建房间'}</button>
       </form>
       <form class="panel multiplayer-form" data-join-form>
@@ -110,7 +117,7 @@ function scoreFor(uid: string, current: RoomRecord, questions: GameQuestion[]): 
   questions.forEach((question, index) => {
     const answer = current.answers?.[question.id]?.[uid]
     if (!answer || !current.match) return
-    const window = roundWindow(current.match.startAt, index, current.config.roundTimeMs, resultTimeMs)
+    const window = roundTimingAtIndex(current.match.startAt, index, questions.map(({ id }) => id), current.config.roundTimeMs, resultTimeMs, current.roundEnds)
     const isCorrect = answer.selectedAnswer === question.correctAnswer
     if (isCorrect) correct += 1
     const elapsed = Math.max(0, Math.min(current.config.roundTimeMs, answer.submittedAt - window.roundStartAt))
@@ -129,8 +136,8 @@ function gameTemplate(current: RoomRecord): string {
     return `<section class="panel countdown-panel" aria-live="assertive"><p>双方已准备</p><div class="countdown-number">${count > 3 ? 'READY' : count}</div><p>保持专注，比赛马上开始</p></section>`
   }
   const questions = questionsFor(current)
-  const span = current.config.roundTimeMs + resultTimeMs
-  const index = Math.floor((now - current.match.startAt) / span)
+  const timing = activeRoundTiming(current.match.startAt, now, questions.map(({ id }) => id), current.config.roundTimeMs, resultTimeMs, current.roundEnds)
+  const index = timing.index
   if (index >= questions.length) {
     if (current.metadata.hostUid === identity.uid && current.metadata.state !== 'finished') void finishMatch(roomCode, identity.uid)
     return '<section class="panel loading-panel"><span class="spinner" aria-hidden="true"></span><p>正在核对最终比分…</p></section>'
@@ -138,11 +145,13 @@ function gameTemplate(current: RoomRecord): string {
   if (current.metadata.hostUid === identity.uid && current.metadata.state === 'countdown') void markPlaying(roomCode, identity.uid)
   const question = questions[index]
   if (!question) return '<div class="panel"><p>题目生成失败。</p></div>'
-  const window = roundWindow(current.match.startAt, index, current.config.roundTimeMs, resultTimeMs)
+  const window = timing
   const inResult = now >= window.roundEndAt
   const answer = current.answers?.[question.id]?.[identity.uid]
   const opponent = Object.values(current.players).find((player) => player.uid !== identity?.uid)
   const opponentAnswer = opponent ? current.answers?.[question.id]?.[opponent.uid] : undefined
+  const bothAnswered = Boolean(answer && opponentAnswer)
+  const revealAnswers = inResult || bothAnswered
   const reconnectRemaining = opponent && !opponent.connected ? Math.max(0, disconnectGraceMs - (now - opponent.lastSeenAt)) : 0
   if (opponent && !opponent.connected && reconnectRemaining <= 0) {
     return `<section class="panel unavailable-panel"><p class="eyebrow">MATCH PAUSED</p><h2>对手已离开比赛</h2><p>等待 30 秒后仍未恢复连接。本局不再继续计分。</p><button class="button primary" data-leave>返回多人菜单</button><a class="button ghost" href="${SITE.routes.play}">玩单人模式</a></section>`
@@ -151,13 +160,20 @@ function gameTemplate(current: RoomRecord): string {
   const theirs = opponent ? scoreFor(opponent.uid, current, questions) : { score: 0, correct: 0, totalTime: 0 }
   const remaining = remainingRoundMs(window.roundEndAt, serverOffset)
   const correctLabel = question.choices?.find((choice) => choice.id === question.correctAnswer)?.label ?? question.correctAnswer
+  const vocabularyItem = getVocabularyById(question.vocabularyId)
+  const meaning = vocabularyItem?.chineseExplanation ?? question.explanation
   const acceptingAnswers = current.metadata.state === 'playing'
   return `<section class="panel battle-panel">
     <div class="battle-meta"><span>Level ${current.config.level}</span><span>第 ${index + 1} / ${questions.length} 题</span></div>
     <div class="timer" role="timer" aria-label="剩余 ${(remaining / 1000).toFixed(1)} 秒"><span style="--progress:${remaining / current.config.roundTimeMs}"></span>${(remaining / 1000).toFixed(1)}s</div>
     ${question.gameType === 'audio' ? `<p class="question-kicker">听音辨词</p><button class="audio-orb" data-speak="${escapeHtml(question.audioTerm ?? '')}" aria-label="播放单词发音">▶</button>` : `<p class="question-kicker">选择正确答案</p><h2 class="battle-question">${escapeHtml(question.prompt)}</h2>`}
-    ${inResult ? `<div class="round-result ${answer?.selectedAnswer === question.correctAnswer ? 'correct' : 'incorrect'}"><strong>${answer?.selectedAnswer === question.correctAnswer ? '✓ 回答正确' : '✕ 正确答案'}</strong><p>${escapeHtml(correctLabel)}</p><small>${escapeHtml(question.explanation)}</small></div>` : `<div class="answer-grid">${question.choices?.map((choice, choiceIndex) => `<button class="answer-button" data-answer="${choice.id}" ${answer || !acceptingAnswers ? 'disabled' : ''}><span>${choiceIndex + 1}</span>${escapeHtml(choice.label)}</button>`).join('') ?? ''}</div>`}
-    <p class="opponent-status">${opponent && !opponent.connected ? `对手正在重连… ${Math.ceil(reconnectRemaining / 1000)}s` : opponentAnswer ? '✓ 对手已作答' : '对手正在思考…'}</p>
+    <div class="answer-grid">${question.choices?.map((choice, choiceIndex) => {
+      const isMine = answer?.selectedAnswer === choice.id
+      const state = revealAnswers && isMine ? (choice.id === question.correctAnswer ? 'correct' : 'wrong') : isMine ? 'selected' : ''
+      return `<button class="answer-button" data-answer="${choice.id}" ${state ? `data-state="${state}"` : ''} ${answer || revealAnswers || !acceptingAnswers ? 'disabled' : ''}><span>${choiceIndex + 1}</span>${escapeHtml(choice.label)}</button>`
+    }).join('') ?? ''}</div>
+    ${revealAnswers ? `<div class="round-result ${answer?.selectedAnswer === question.correctAnswer ? 'correct' : 'incorrect'}"><strong>${answer?.selectedAnswer === question.correctAnswer ? '✓ Correct' : answer ? '✕ Incorrect' : 'Time is up'}</strong><p>${escapeHtml(correctLabel)}</p><small><strong>${escapeHtml(vocabularyItem?.term ?? question.prompt)}</strong> — ${escapeHtml(meaning)}</small></div>` : answer ? '<p class="answer-locked" role="status">Answer locked in. Waiting for your opponent…</p>' : ''}
+    <p class="opponent-status">${opponent && !opponent.connected ? `对手正在重连… ${Math.ceil(reconnectRemaining / 1000)}s` : !opponentAnswer ? 'Opponent is thinking…' : opponentAnswer.selectedAnswer === question.correctAnswer && revealAnswers ? '✓ Opponent answered correctly' : revealAnswers ? '✕ Opponent answered incorrectly' : '✓ Opponent has answered'}</p>
     <div class="score-strip"><span>你 <strong>${mine.score}</strong></span><span>${escapeHtml(opponent?.displayName ?? '对手')} <strong>${theirs.score}</strong></span></div>
     ${notice ? `<p class="status-message" role="alert">${escapeHtml(notice)}</p>` : ''}
   </section>`
@@ -171,12 +187,14 @@ function resultsTemplate(current: RoomRecord, suppliedQuestions?: GameQuestion[]
   const theirs = opponent ? scoreFor(opponent.uid, current, questions) : { score: 0, correct: 0, totalTime: 0 }
   const verdict = mine.score === theirs.score ? 'DRAW' : mine.score > theirs.score ? 'VICTORY' : 'DEFEAT'
   const wrong = questions.filter((question) => current.answers?.[question.id]?.[identity?.uid ?? '']?.selectedAnswer !== question.correctAnswer)
+  const reviewedWords = questions.map((question) => getVocabularyById(question.vocabularyId)).filter((item) => item !== undefined)
   const voted = Boolean(current.rematchVotes?.[identity.uid])
   const opponentAvailable = Boolean(opponent?.connected)
   return `<section class="panel results-panel"><p class="eyebrow">MATCH COMPLETE</p><h2>${verdict}</h2>
     <div class="final-score"><strong>${mine.score}</strong><span>—</span><strong>${theirs.score}</strong></div>
     <div class="result-stats"><p><span>正确率</span><strong>${Math.round(mine.correct / questions.length * 100)}%</strong></p><p><span>答对</span><strong>${mine.correct}/${questions.length}</strong></p><p><span>平均用时</span><strong>${mine.correct ? (mine.totalTime / Math.max(1, Object.keys(current.answers ?? {}).length) / 1000).toFixed(1) : '—'}s</strong></p></div>
-    ${wrong.length ? `<details><summary>复习错词 (${wrong.length})</summary><ul>${wrong.map((question) => `<li>${escapeHtml(question.explanation)}</li>`).join('')}</ul></details>` : '<p>全对！这组词掌握得很好。</p>'}
+    ${wrong.length ? `<details open><summary>Review incorrect words (${wrong.length})</summary><ul class="word-review-list">${wrong.map((question) => `<li>${escapeHtml(question.explanation)}</li>`).join('')}</ul></details>` : '<p>Perfect score — you got every word right.</p>'}
+    <details><summary>All words and meanings (${reviewedWords.length})</summary><dl class="match-word-list">${reviewedWords.map((item) => `<div><dt>${escapeHtml(item.term)}</dt><dd>${escapeHtml(item.chineseShort)} · ${escapeHtml(item.englishDefinition)}</dd></div>`).join('')}</dl></details>
     <div class="result-actions"><button class="button primary" data-rematch ${voted || !opponentAvailable ? 'disabled' : ''}>${!opponentAvailable ? '对手已离线' : voted ? '等待对手…' : '再来一局'}</button><a class="button secondary" href="${SITE.routes.play}">玩单人模式</a><button class="button ghost" data-leave>离开</button></div>
   </section>`
 }
@@ -216,6 +234,16 @@ async function watchRoom(code: string): Promise<void> {
     if (!value) { roomCode = ''; history.replaceState({}, '', SITE.routes.multiplayer); setNotice('房间已关闭。'); return }
     if (value.metadata.state !== 'waiting') startRequested = false
     if (value.metadata.state !== 'finished') rematchRequested = false
+    if (identity && value.match && value.metadata.hostUid === identity.uid && value.metadata.state === 'playing') {
+      const questions = questionsFor(value)
+      const timing = activeRoundTiming(value.match.startAt, synchronizedNow(serverOffset), questions.map(({ id }) => id), value.config.roundTimeMs, resultTimeMs, value.roundEnds)
+      const question = questions[timing.index]
+      const answers = question ? Object.values(value.answers?.[question.id] ?? {}) : []
+      if (question && !value.roundEnds?.[question.id] && answers.length === 2 && answers.every(({ selectedAnswer }) => selectedAnswer === question.correctAnswer) && !earlyClosePending.has(question.id)) {
+        earlyClosePending.add(question.id)
+        void closeRoundEarly(code, question.id, identity.uid).catch(() => undefined).finally(() => earlyClosePending.delete(question.id))
+      }
+    }
     if (identity && value.metadata.hostUid === identity.uid && value.metadata.state === 'waiting' && !startRequested) {
       const players = Object.values(value.players ?? {})
       if (players.length === 2 && players.every((player) => player.ready && player.connected)) {
@@ -284,7 +312,7 @@ function bindActions(): void {
   root.querySelectorAll<HTMLButtonElement>('[data-answer]').forEach((button) => button.addEventListener('click', () => {
     if (!identity || !room?.match) return
     const questions = questionsFor(room)
-    const index = Math.floor((synchronizedNow(serverOffset) - room.match.startAt) / (room.config.roundTimeMs + resultTimeMs))
+    const index = activeRoundTiming(room.match.startAt, synchronizedNow(serverOffset), questions.map(({ id }) => id), room.config.roundTimeMs, resultTimeMs, room.roundEnds).index
     const question = questions[index]
     if (!question) return
     root.querySelectorAll<HTMLButtonElement>('[data-answer]').forEach((item) => { item.disabled = true })

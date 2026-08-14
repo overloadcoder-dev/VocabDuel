@@ -38,6 +38,7 @@ export interface RoomRecord {
   players: Record<string, RoomPlayer>
   match?: { startAt: number; rematchNumber: number }
   answers?: Record<string, Record<string, AnswerRecord>>
+  roundEnds?: Record<string, number>
   rematchVotes?: Record<string, boolean>
 }
 

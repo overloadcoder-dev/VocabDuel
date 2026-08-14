@@ -102,6 +102,19 @@ export async function submitAnswer(code: string, roundId: string, uid: string, s
   if (!result.committed) throw new Error('本题答案已经提交。')
 }
 
+export async function closeRoundEarly(code: string, roundId: string, uid: string): Promise<void> {
+  const { database } = await getFirebaseServices()
+  const room = (await get(ref(database, `rooms/${code}`))).val() as RoomRecord | null
+  if (!room || room.metadata.hostUid !== uid || room.metadata.state !== 'playing') return
+  const answers = Object.values(room.answers?.[roundId] ?? {})
+  if (answers.length !== 2 || answers.some((answer) => answer.selectedAnswer !== answers[0]?.selectedAnswer)) return
+  await runTransaction(
+    ref(database, `rooms/${code}/roundEnds/${roundId}`),
+    (current) => current ?? serverTimestamp(),
+    { applyLocally: false },
+  )
+}
+
 export async function voteRematch(code: string, uid: string): Promise<void> {
   const { database } = await getFirebaseServices()
   await set(ref(database, `rooms/${code}/rematchVotes/${uid}`), true)
@@ -116,6 +129,7 @@ export async function beginRematch(code: string, uid: string, offsetMs: number):
   await set(ref(database, `rooms/${code}/metadata/seed`), (room.metadata.seed + 1) >>> 0)
   await set(ref(database, `rooms/${code}/match`), { startAt: Date.now() + offsetMs + 3500, rematchNumber: (room.match?.rematchNumber ?? 0) + 1 })
   await remove(ref(database, `rooms/${code}/answers`))
+  await remove(ref(database, `rooms/${code}/roundEnds`))
   await remove(ref(database, `rooms/${code}/rematchVotes`))
   await runTransaction(ref(database, `rooms/${code}/metadata/state`), (state) => state === 'finished' ? 'countdown' : undefined)
 }
