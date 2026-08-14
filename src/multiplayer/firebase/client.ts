@@ -12,7 +12,7 @@ export function isFirebaseConfigured(): boolean {
 
 export async function getFirebaseServices(): Promise<FirebaseServices> {
   if (services) return services
-  if (!isFirebaseConfigured()) throw new Error('Firebase 尚未配置。请先设置 VITE_FIREBASE_* 环境变量。')
+  if (!isFirebaseConfigured()) throw new Error('Firebase is not configured. Set the VITE_FIREBASE_* environment variables first.')
   const app = getApps().length ? getApp() : initializeApp({
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
     authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,

@@ -24,7 +24,7 @@ export async function createRoom(identity: MultiplayerIdentity, config: RoomConf
     }, { applyLocally: false })
     if (result.committed) { await attachPresence(code, identity.uid); return code }
   }
-  throw new Error('暂时无法创建房间，请重试。')
+  throw new Error('A room could not be created. Please try again.')
 }
 
 export async function joinRoom(code: string, identity: MultiplayerIdentity): Promise<void> {
@@ -32,20 +32,20 @@ export async function joinRoom(code: string, identity: MultiplayerIdentity): Pro
   const roomRef = ref(database, `rooms/${code}`)
   const snapshot = await get(roomRef)
   const room = snapshot.val() as RoomRecord | null
-  if (!room) throw new Error('找不到该房间。')
-  if (room.metadata.expiresAt < Date.now()) throw new Error('房间已过期。')
-  if (room.metadata.state !== 'waiting') throw new Error('对战已经开始。')
+  if (!room) throw new Error('Room not found.')
+  if (room.metadata.expiresAt < Date.now()) throw new Error('This room has expired.')
+  if (room.metadata.state !== 'waiting') throw new Error('This match has already started.')
   if (room.players?.[identity.uid]) {
     await attachPresence(code, identity.uid)
     return
   }
-  if (room.metadata.guestUid && room.metadata.guestUid !== identity.uid) throw new Error('房间已满。')
+  if (room.metadata.guestUid && room.metadata.guestUid !== identity.uid) throw new Error('This room is full.')
   const now = Date.now()
   const player: RoomPlayer = { ...identity, ready: false, connected: true, joinedAt: now, lastSeenAt: now }
   await update(roomRef, {
     'metadata/guestUid': identity.uid,
     [`players/${identity.uid}`]: player
-  }).catch(() => { throw new Error('房间已满或已不可加入。') })
+  }).catch(() => { throw new Error('This room is full or no longer available.') })
   await attachPresence(code, identity.uid)
 }
 
@@ -100,7 +100,7 @@ export async function submitAnswer(code: string, roundId: string, uid: string, s
   const answerRef = ref(database, `rooms/${code}/answers/${roundId}/${uid}`)
   const record = { selectedAnswer, submittedAt: serverTimestamp() } as unknown as AnswerRecord
   const result = await runTransaction(answerRef, (current) => current ?? record, { applyLocally: false })
-  if (!result.committed) throw new Error('本题答案已经提交。')
+  if (!result.committed) throw new Error('An answer has already been submitted for this question.')
 }
 
 export async function closeRoundEarly(code: string, roundId: string, uid: string): Promise<void> {

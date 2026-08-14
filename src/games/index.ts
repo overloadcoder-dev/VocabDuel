@@ -1,4 +1,5 @@
 export * from './normalization'
+export * from './placement'
 export * from './questions'
 export * from './rng'
 export * from './scoring'

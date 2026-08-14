@@ -12,6 +12,7 @@ export const SITE = {
     learn: sitePath('/learn/'),
     play: sitePath('/play/'),
     multiplayer: sitePath('/multiplayer/'),
+    placement: sitePath('/placement/'),
     levels: sitePath('/levels/'),
     howToPlay: sitePath('/how-to-play/'),
     about: sitePath('/about/'),

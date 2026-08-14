@@ -140,12 +140,15 @@
   label:has(input:focus-visible) > span { outline: 3px solid rgb(21 163 184 / .5); outline-offset: 3px; }
   .progress-track { overflow: hidden; height: .55rem; border-radius: 99px; background: #ebecef; }
   .progress-fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--color-brand), var(--color-cyan)); transition: width .3s ease; }
+  .placement-notice { border: 1px solid rgb(103 87 232 / .18); border-radius: 1rem; background: var(--color-brand-soft); padding: 1rem; color: var(--color-brand-dark); }
+  .placement-notice p { margin: .35rem 0 0; color: var(--color-muted); line-height: 1.6; }
   .multiplayer-page { width: min(760px, calc(100% - 2rem)); min-height: auto; margin-inline: auto; padding-block: 2rem 4rem; background: none; overflow: visible; }
   .multiplayer-page .notice { margin-top: 1.25rem; line-height: 1.6; }
   .multiplayer-page .notice p { margin: .25rem 0 0; }
   .multiplayer-grid { display: grid; gap: 1rem; }
   .multiplayer-form { display: grid; gap: 1rem; }
   .multiplayer-form h2 { margin: 0; font-size: 1.35rem; }
+  .form-copy { margin: -.65rem 0 0; color: var(--color-muted); font-size: .86rem; line-height: 1.55; }
   .multiplayer-form label { display: grid; gap: .4rem; color: #465066; font-size: .85rem; font-weight: 750; }
   .multiplayer-form input, .multiplayer-form select { width: 100%; min-height: 2.9rem; border: 1px solid #d7dae4; border-radius: .8rem; background: white; padding: .65rem .75rem; color: var(--color-ink); }
   .room-code-input { position: relative; width: 100%; }
@@ -162,6 +165,8 @@
   .lobby-panel, .countdown-panel, .results-panel { text-align: center; }
   .room-code { margin: .4rem 0; color: var(--color-ink); font-size: clamp(2.4rem, 10vw, 4.5rem); line-height: 1; font-weight: 950; letter-spacing: .16em; }
   .room-actions, .lobby-actions, .result-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .65rem; }
+  .room-settings { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem; margin: 1rem 0 0; padding: 0; list-style: none; }
+  .room-settings li { border-radius: 999px; background: #f2f1ff; padding: .35rem .65rem; color: var(--color-brand-dark); font-size: .75rem; font-weight: 750; }
   .versus-grid { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: .7rem; margin-block: 2rem; }
   .player-card { min-width: 0; border: 1px solid #e1e3ea; border-radius: 1rem; padding: 1rem .5rem; }
   .player-card h2 { overflow: hidden; margin: .35rem 0; font-size: 1rem; text-overflow: ellipsis; }
@@ -243,9 +248,21 @@ dialog::backdrop { background: rgb(23 32 51 / .55); backdrop-filter: blur(3px); 
   .page-wrap { width: min(1120px, calc(100% - 2.5rem)); }
   .app-header-inner { flex-wrap: wrap; gap: .5rem; padding-block: .625rem; }
   .app-nav, .app-nav ul { width: 100%; }
-  .app-nav ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .35rem; }
+  .app-nav ul { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .35rem; }
   .app-nav li { min-width: 0; }
   .app-nav-link { width: 100%; padding-inline: .4rem; }
+  .learn-filters[data-collapsed] { display: none; }
+  .learn-top-actions { width: 100%; }
+  .learn-top-actions .button { flex: 1; }
+  .learn-word-controls { align-items: center; }
+  .learn-word-controls h2 { max-width: 100%; overflow-wrap: anywhere; }
+  .learn-status-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
+  .learn-status-actions .button { width: 100%; }
+  .learn-actions { position: sticky; bottom: 0; z-index: 12; display: grid; grid-template-columns: .8fr 1.6fr; padding-bottom: calc(1rem + env(safe-area-inset-bottom)); box-shadow: 0 -8px 25px rgb(23 32 51 / .09); }
+  .learn-actions > span { grid-column: 1 / -1; grid-row: 1; text-align: center; }
+  .learn-actions > button { grid-column: 1; grid-row: 2; width: 100%; }
+  .learn-actions > div { display: grid; grid-column: 2; grid-row: 2; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
+  .learn-actions > div > * { width: 100%; padding-inline: .55rem; }
   .home-hero { min-height: auto; gap: 2.5rem; padding-block: 2.5rem 3.5rem; }
   .content-page > .site-header { flex-wrap: wrap; padding-block: .75rem; }
   .content-page > .site-header nav { width: 100%; flex-direction: column; align-items: stretch; padding-bottom: .5rem; }

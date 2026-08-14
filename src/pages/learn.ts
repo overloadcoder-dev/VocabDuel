@@ -18,6 +18,8 @@ const element = <T extends HTMLElement>(selector: string) => document.querySelec
 const search = element<HTMLInputElement>('#word-search')
 const level = element<HTMLSelectElement>('#level-filter')
 const category = element<HTMLSelectElement>('#category-filter')
+const filterToggle = element<HTMLButtonElement>('#filter-toggle')
+const filters = element<HTMLElement>('#vocabulary-filters')
 vocabularyCategories.forEach((name) => category.insertAdjacentHTML('beforeend', `<option value="${name}">${name}</option>`))
 
 const tags = (values?: readonly string[]) => values?.length ? values.map((value) => `<span class="tag">${value}</span>`).join('') : '<span class="text-sm text-muted">—</span>'
@@ -63,19 +65,31 @@ function applyFilters(): void {
   filtered = vocabulary.filter((word) => (level.value === 'all' || String(word.level) === level.value) && (category.value === 'all' || word.categories.includes(category.value as never)) && (!query || `${word.term} ${word.chineseShort} ${word.englishDefinition}`.toLocaleLowerCase().includes(query)))
   index = 0; render()
 }
+function moveTo(nextIndex: number): void {
+  index = nextIndex
+  render()
+  element('#word-term').focus({ preventScroll: true })
+}
+function setFiltersExpanded(expanded: boolean): void {
+  filters.toggleAttribute('data-collapsed', !expanded)
+  filterToggle.setAttribute('aria-expanded', String(expanded))
+  filterToggle.textContent = expanded ? 'Hide search and filters' : 'Show search and filters'
+}
 async function speak(speed: 'normal' | 'slow'): Promise<void> {
   const word = filtered[index]; if (!word) return
   const result = await speechService.speak(word.term, { speed }); if (!result.ok) announce(result.message ?? 'Pronunciation could not be played.', 'error')
 }
 
 search.addEventListener('input', applyFilters); level.addEventListener('change', applyFilters); category.addEventListener('change', applyFilters)
+filterToggle.addEventListener('click', () => setFiltersExpanded(filterToggle.getAttribute('aria-expanded') !== 'true'))
 element('#clear-filters').addEventListener('click', () => { search.value = ''; level.value = 'all'; category.value = 'all'; applyFilters(); search.focus() })
-element('#previous-word').addEventListener('click', () => { index = (index - 1 + filtered.length) % filtered.length; render() })
-element('#next-word').addEventListener('click', () => { index = (index + 1) % filtered.length; render() })
-element('#random-word').addEventListener('click', () => { if (filtered.length > 1) index = (index + 1 + Math.floor(Math.random() * (filtered.length - 1))) % filtered.length; render() })
+element('#previous-word').addEventListener('click', () => moveTo((index - 1 + filtered.length) % filtered.length))
+element('#next-word').addEventListener('click', () => moveTo((index + 1) % filtered.length))
+element('#random-word').addEventListener('click', () => { if (filtered.length > 1) moveTo((index + 1 + Math.floor(Math.random() * (filtered.length - 1))) % filtered.length) })
 element('#learned-word').addEventListener('click', () => toggle('learned')); element('#difficult-word').addEventListener('click', () => toggle('difficult'))
 element('#speak-word').addEventListener('click', () => { void speak('normal') }); element('#slow-word').addEventListener('click', () => { void speak('slow') })
 element<HTMLButtonElement>('#weak-practice').addEventListener('click', () => { const weak = rankWeakWords(study); if (!weak.length) announce('Mark difficult words or complete a few quizzes first.'); else location.href = `${SITE.routes.play}?words=${weak.join(',')}` })
 element('#progress-button').addEventListener('click', async () => { const accuracy = study.totalQuestionsAttempted ? Math.round(study.correctAnswers / study.totalQuestionsAttempted * 100) : 0; if (await confirmAction({ title: 'Local progress', message: `${study.learnedWords.length} learned · ${study.difficultWords.length} difficult · ${accuracy}% quiz accuracy. Reset all local progress?`, confirmLabel: 'Reset progress', danger: true })) { study = progressRepository.reset(); render(); announce('Local progress has been reset.', 'success') } })
 const hashId = decodeURIComponent(location.hash.slice(1)); const hashIndex = vocabulary.findIndex((word) => word.id === hashId); if (hashIndex >= 0) index = hashIndex
+setFiltersExpanded(false)
 render()

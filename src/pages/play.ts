@@ -26,7 +26,11 @@ let answered = false
 let sessionStartedAt = 0
 let questionStartedAt = 0
 let endAt: number | undefined
+let questionEndAt: number | undefined
+let questionTimeLimitMs = 0
+let feedbackPace: 'manual' | 'auto' = 'manual'
 let timerFrame = 0
+let advanceHandle = 0
 let replayCount = 0
 let incorrectIds: string[] = []
 let progressBefore: LocalProgress = progressRepository.load()
@@ -38,7 +42,10 @@ function showScreen(name: 'setup' | 'game' | 'result'): void {
   el('#setup-screen').classList.toggle('hidden', name !== 'setup')
   el('#game-screen').classList.toggle('hidden', name !== 'game')
   el('#result-screen').classList.toggle('hidden', name !== 'result')
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+  if (name !== 'game') { cancelAnimationFrame(timerFrame); window.clearTimeout(advanceHandle) }
+  const focusTarget = name === 'setup' ? document.querySelector<HTMLElement>('#setup-screen h1') : name === 'result' ? el('#result-title') : undefined
+  if (focusTarget) { focusTarget.tabIndex = -1; focusTarget.focus({ preventScroll: true }) }
+  window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })
 }
 
 function createQuestionSet(count: number, level?: VocabularyLevel, category?: VocabularyCategory, ids?: string[]): GameQuestion[] {
@@ -62,19 +69,21 @@ function startGame(): void {
   const selectedLevel = el<HTMLSelectElement>('#game-level').value
   const selectedCategory = categorySelect.value
   const ids = new URLSearchParams(location.search).get('words')?.split(',').filter(Boolean)
-  const count = sessionType === 'level-challenge' ? 15 : sessionType === 'practice' ? 10 : 60
+  const count = Number(el<HTMLSelectElement>('#question-total').value)
+  questionTimeLimitMs = Number(el<HTMLSelectElement>('#question-timer').value)
+  feedbackPace = el<HTMLSelectElement>('#feedback-pace').value === 'auto' ? 'auto' : 'manual'
   try { questions = createQuestionSet(count, selectedLevel === 'all' ? undefined : Number(selectedLevel) as VocabularyLevel, selectedCategory === 'all' ? undefined : selectedCategory as VocabularyCategory, ids) }
   catch (error) { announce(error instanceof Error ? error.message : 'Could not create this session.', 'error'); return }
   questionIndex = 0; correctCount = 0; score = 0; lives = SESSION_CONFIGS.survival.lives ?? 3; incorrectIds = []; answered = false
   progressBefore = progressRepository.load(); sessionStartedAt = Date.now(); endAt = sessionType === 'time-attack' ? sessionStartedAt + (SESSION_CONFIGS['time-attack'].timeLimitMs ?? 60_000) : undefined
   el('#session-label').textContent = `${gameLabels[gameType]} · ${sessionLabels[sessionType]}`
-  showScreen('game'); renderQuestion(); updateStats(); startTimer()
+  showScreen('game'); renderQuestion(); updateStats()
 }
 
 function renderQuestion(): void {
   const question = questions[questionIndex]
   if (!question) { finishGame(); return }
-  answered = false; replayCount = 0; questionStartedAt = Date.now()
+  answered = false; replayCount = 0; questionStartedAt = Date.now(); questionEndAt = questionTimeLimitMs ? questionStartedAt + questionTimeLimitMs : undefined
   el('#question-kind').textContent = gameType === 'audio' ? 'Press listen, then identify the word' : gameLabels[gameType]
   el('#question-prompt').textContent = question.prompt
   el('#question-prompt').classList.remove('blur-sm')
@@ -91,13 +100,16 @@ function renderQuestion(): void {
   const input = el<HTMLInputElement>('#spelling-answer'); input.value = ''
   el('#answer-feedback').classList.add('hidden')
   if (gameType === 'spelling') window.setTimeout(() => input.focus(), 50)
-  updateStats()
+  else window.setTimeout(() => { const prompt = el('#question-prompt'); prompt.tabIndex = -1; prompt.focus({ preventScroll: true }) }, 50)
+  updateStats(); startTimer()
 }
 
 function submitAnswer(value: string, selected?: HTMLButtonElement): void {
   if (answered) return
   const question = questions[questionIndex]; if (!question) return
   answered = true
+  questionEndAt = undefined
+  cancelAnimationFrame(timerFrame)
   const correct = gameType === 'spelling' ? answersMatch(value, question.correctAnswer) : value === question.correctAnswer
   const elapsed = Date.now() - questionStartedAt
   const earned = calculateScore({ correct, timeRemainingMs: Math.max(0, 12_000 - elapsed), roundDurationMs: 12_000 }).total
@@ -108,10 +120,14 @@ function submitAnswer(value: string, selected?: HTMLButtonElement): void {
   const feedback = el('#answer-feedback'); feedback.className = `mt-6 rounded-2xl p-5 ${correct ? 'bg-mint text-success' : 'bg-red-50 text-danger'}`
   el('#feedback-title').textContent = correct ? `✓ Correct · +${earned} points` : `✕ Not quite · Correct: ${answerLabel(question)}`
   el('#feedback-explanation').textContent = question.explanation
-  el<HTMLButtonElement>('#continue-button').focus({ preventScroll: true })
+  const continueButton = el<HTMLButtonElement>('#continue-button')
+  const automatic = feedbackPace === 'auto' || sessionType === 'time-attack' || (sessionType === 'survival' && lives <= 0)
+  continueButton.classList.toggle('hidden', automatic)
+  if (!automatic) continueButton.focus({ preventScroll: true })
+  else el('#answer-feedback').focus({ preventScroll: true })
   updateStats(); saveAnswer(question.vocabularyId, correct)
-  if (sessionType === 'time-attack') window.setTimeout(nextQuestion, 650)
-  else if (sessionType === 'survival' && lives <= 0) window.setTimeout(finishGame, 700)
+  if (sessionType === 'survival' && lives <= 0) advanceHandle = window.setTimeout(finishGame, 900)
+  else if (automatic) advanceHandle = window.setTimeout(nextQuestion, sessionType === 'time-attack' ? 650 : 1000)
 }
 
 function answerLabel(question: GameQuestion): string { return question.choices?.find((choice) => choice.id === question.correctAnswer)?.label ?? question.correctAnswer }
@@ -123,18 +139,29 @@ function nextQuestion(): void { if (!answered) return; questionIndex += 1; if (q
 function updateStats(): void {
   el('#score-display').textContent = `Score ${score}`
   el('#question-count').textContent = sessionType === 'time-attack' ? `${questionIndex + 1} answered at speed` : `Question ${Math.min(questionIndex + 1, questions.length)} / ${questions.length}`
-  el('#game-progress').style.width = sessionType === 'time-attack' && endAt ? `${Math.max(0, (endAt - Date.now()) / 600)}%` : `${questionIndex / questions.length * 100}%`
+  const progressValue = sessionType === 'time-attack' && endAt ? Math.max(0, (endAt - Date.now()) / 600) : questionIndex / questions.length * 100
+  el('#game-progress').style.width = `${progressValue}%`
+  el('#game-progress-track').setAttribute('aria-valuenow', String(Math.round(progressValue)))
   const livesDisplay = el('#lives-display'); livesDisplay.classList.toggle('hidden', sessionType !== 'survival'); livesDisplay.textContent = `Lives ${'♥'.repeat(Math.max(0, lives))}${'♡'.repeat(Math.max(0, 3 - lives))}`
 }
 
 function startTimer(): void {
   cancelAnimationFrame(timerFrame)
-  const timer = el('#timer-display'); timer.classList.toggle('hidden', !endAt)
-  if (!endAt) return
+  const timer = el('#timer-display')
+  const deadline = [endAt, questionEndAt].filter((value): value is number => value !== undefined).sort((a, b) => a - b)[0]
+  timer.classList.toggle('hidden', !deadline)
+  if (!deadline) return
   const tick = (): void => {
-    if (!endAt || el('#game-screen').classList.contains('hidden')) return
-    const remaining = Math.max(0, endAt - Date.now()); timer.textContent = `${Math.ceil(remaining / 1000)}s`; timer.setAttribute('aria-label', `${Math.ceil(remaining / 1000)} seconds remaining`); updateStats()
-    if (remaining <= 0) { finishGame(); return }
+    if (el('#game-screen').classList.contains('hidden') || answered) return
+    const now = Date.now()
+    const activeDeadline = [endAt, questionEndAt].filter((value): value is number => value !== undefined).sort((a, b) => a - b)[0]
+    if (!activeDeadline) return
+    const remaining = Math.max(0, activeDeadline - now); timer.textContent = `${Math.ceil(remaining / 1000)}s`; timer.setAttribute('aria-label', `${Math.ceil(remaining / 1000)} seconds remaining`); updateStats()
+    if (remaining <= 0) {
+      if (endAt !== undefined && endAt <= now) finishGame()
+      else submitAnswer('')
+      return
+    }
     timerFrame = requestAnimationFrame(tick)
   }
   timerFrame = requestAnimationFrame(tick)
@@ -143,6 +170,7 @@ function startTimer(): void {
 function finishGame(): void {
   if (el('#game-screen').classList.contains('hidden')) return
   cancelAnimationFrame(timerFrame)
+  window.clearTimeout(advanceHandle)
   const attempted = Math.min(questionIndex + Number(answered), questions.length); const accuracy = attempted ? Math.round(correctCount / attempted * 100) : 0
   const passed = sessionType !== 'level-challenge' || accuracy >= (SESSION_CONFIGS['level-challenge'].passingScore ?? .8) * 100
   const current = progressRepository.update((saved) => ({ ...saved, bestTimeAttackScore: sessionType === 'time-attack' ? Math.max(saved.bestTimeAttackScore, score) : saved.bestTimeAttackScore, longestSurvivalRun: sessionType === 'survival' ? Math.max(saved.longestSurvivalRun, attempted) : saved.longestSurvivalRun }))
@@ -174,3 +202,5 @@ document.addEventListener('keydown', (event) => {
 })
 const requestedIds = new URLSearchParams(location.search).get('words')?.split(',').filter(Boolean) ?? []
 if (requestedIds.length) el('#setup-note').textContent = `Focused practice: ${requestedIds.length} selected word${requestedIds.length === 1 ? '' : 's'}.`
+const requestedLevel = new URLSearchParams(location.search).get('level')
+if (requestedLevel && /^[1-5]$/.test(requestedLevel)) el<HTMLSelectElement>('#game-level').value = requestedLevel

@@ -8,7 +8,7 @@ The production site is static. Firebase Anonymous Authentication and Realtime Da
 
 ## Architecture
 
-- Static multi-page HTML provides crawlable content at `/`, `/learn/`, `/play/`, `/multiplayer/`, `/levels/`, `/how-to-play/`, `/about/`, `/privacy/`, and `/terms/`.
+- Static multi-page HTML provides crawlable content at `/`, `/learn/`, `/play/`, `/multiplayer/`, `/placement/`, `/levels/`, `/how-to-play/`, `/about/`, `/privacy/`, and `/terms/`.
 - `src/data/vocabulary/` contains one curated term module per learning level; `src/data/vocabulary.ts` combines them behind the existing import, and `src/types/` defines vocabulary, game, and progress contracts.
 - `src/config/site.ts` centralizes the product name, provisional origin, description, and canonical route map; static HTML keeps route-specific metadata crawlable without JavaScript.
 - `src/games/` contains deterministic question generation, scoring, and session behavior separately from page rendering.
