@@ -28,6 +28,7 @@ export interface RoomRecord {
   metadata: {
     code: string
     hostUid: string
+    guestUid?: string
     state: MatchState
     seed: number
     createdAt: number

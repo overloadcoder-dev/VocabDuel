@@ -34,13 +34,17 @@ export async function joinRoom(code: string, identity: MultiplayerIdentity): Pro
   if (!room) throw new Error('找不到该房间。')
   if (room.metadata.expiresAt < Date.now()) throw new Error('房间已过期。')
   if (room.metadata.state !== 'waiting') throw new Error('对战已经开始。')
-  if (!room.players?.[identity.uid] && Object.keys(room.players ?? {}).length >= 2) throw new Error('房间已满。')
+  if (room.players?.[identity.uid]) {
+    await attachPresence(code, identity.uid)
+    return
+  }
+  if (room.metadata.guestUid && room.metadata.guestUid !== identity.uid) throw new Error('房间已满。')
   const now = Date.now()
-  const playerRef = ref(database, `rooms/${code}/players/${identity.uid}`)
-  const result = await runTransaction(playerRef, (player: RoomPlayer | null) => player ?? {
-    ...identity, ready: false, connected: true, joinedAt: now, lastSeenAt: now
-  }, { applyLocally: false })
-  if (!result.committed) throw new Error('房间已满或已不可加入。')
+  const player: RoomPlayer = { ...identity, ready: false, connected: true, joinedAt: now, lastSeenAt: now }
+  await update(roomRef, {
+    'metadata/guestUid': identity.uid,
+    [`players/${identity.uid}`]: player
+  }).catch(() => { throw new Error('房间已满或已不可加入。') })
   await attachPresence(code, identity.uid)
 }
 
@@ -123,5 +127,10 @@ export async function leaveRoom(code: string, uid: string): Promise<void> {
   const room = snapshot.val() as RoomRecord | null
   if (!room) return
   if (room.metadata.hostUid === uid) await remove(roomRef)
-  else await remove(ref(database, `rooms/${code}/players/${uid}`))
+  else if (room.metadata.guestUid === uid) {
+    await update(roomRef, {
+      'metadata/guestUid': null,
+      [`players/${uid}`]: null
+    })
+  } else await remove(ref(database, `rooms/${code}/players/${uid}`))
 }
