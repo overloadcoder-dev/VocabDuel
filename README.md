@@ -9,7 +9,7 @@ The production site is static. Firebase Anonymous Authentication and Realtime Da
 ## Architecture
 
 - Static multi-page HTML provides crawlable content at `/`, `/learn/`, `/play/`, `/multiplayer/`, `/levels/`, `/how-to-play/`, `/about/`, `/privacy/`, and `/terms/`.
-- `src/data/vocabulary.ts` is the seed content source; `src/types/` defines vocabulary, game, and progress contracts.
+- `src/data/vocabulary/` contains one curated term module per learning level; `src/data/vocabulary.ts` combines them behind the existing import, and `src/types/` defines vocabulary, game, and progress contracts.
 - `src/config/site.ts` centralizes the product name, provisional origin, description, and canonical route map; static HTML keeps route-specific metadata crawlable without JavaScript.
 - `src/games/` contains deterministic question generation, scoring, and session behavior separately from page rendering.
 - `src/storage/` stores non-sensitive solo progress in localStorage.
@@ -123,7 +123,9 @@ To add words:
 4. Assign only accurate levels, categories, and optional CEFR labels.
 5. Run typechecking and tests. Check that distractor generation still has enough same-level candidates.
 
-If the dataset grows large, split it by level or category and dynamically load the needed segment without changing the item contract.
+The typed classification rubric lives in `src/data/vocabulary/levels.ts` and its editorial explanation in `src/data/vocabulary/README.md`. IELTS ranges are approximate learner targets rather than official word-to-band assignments.
+
+If an individual level grows very large, it can be split further by category and dynamically loaded without changing the item contract.
 
 ## Deployment and SEO
 
