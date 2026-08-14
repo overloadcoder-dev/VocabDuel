@@ -240,7 +240,7 @@ dialog::backdrop { background: rgb(23 32 51 / .55); backdrop-filter: blur(3px); 
 }
 
 @media (max-width: 639px) {
-  .page-wrap { width: min(1120px, calc(100% - 1.25rem)); }
+  .page-wrap { width: min(1120px, calc(100% - 2.5rem)); }
   .app-header-inner { flex-wrap: wrap; gap: .5rem; padding-block: .625rem; }
   .app-nav, .app-nav ul { width: 100%; }
   .app-nav ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .35rem; }
@@ -252,7 +252,7 @@ dialog::backdrop { background: rgb(23 32 51 / .55); backdrop-filter: blur(3px); 
   body > .site-header nav { gap: .7rem; }
   body > .site-header nav a { font-size: .75rem; }
   .form-row { grid-template-columns: 1fr; }
-  .multiplayer-page { width: calc(100% - 1.25rem); padding-block: 1rem 2.5rem; }
+  .multiplayer-page { width: calc(100% - 2.5rem); padding-block: 1rem 2.5rem; }
   .page-intro { padding-block: 1rem 1.5rem; }
   .page-intro h1 { font-size: clamp(2rem, 11vw, 3rem); }
   .page-intro p { font-size: .95rem; line-height: 1.65; }
