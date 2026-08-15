@@ -12,6 +12,12 @@ export interface ScoreResult {
   total: number
 }
 
+export interface SoloQuestionScoreOptions {
+  correct: boolean
+  elapsedMs: number
+  timeLimitMs: number
+}
+
 export function calculateScore({
   correct,
   timeRemainingMs,
@@ -26,3 +32,15 @@ export function calculateScore({
   return { base: basePoints, speedBonus, total: basePoints + speedBonus }
 }
 
+export function calculateSoloQuestionScore({ correct, elapsedMs, timeLimitMs }: SoloQuestionScoreOptions): ScoreResult {
+  if (!Number.isFinite(elapsedMs) || elapsedMs < 0) throw new RangeError('elapsedMs must be non-negative.')
+  if (!Number.isFinite(timeLimitMs) || timeLimitMs < 0) throw new RangeError('timeLimitMs must be non-negative.')
+  if (timeLimitMs === 0) {
+    return calculateScore({ correct, timeRemainingMs: 0, roundDurationMs: 1, maximumSpeedBonus: 0 })
+  }
+  return calculateScore({
+    correct,
+    timeRemainingMs: Math.max(0, timeLimitMs - elapsedMs),
+    roundDurationMs: timeLimitMs,
+  })
+}

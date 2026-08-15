@@ -2,16 +2,18 @@ import '../styles/main.css'
 import { announce, confirmAction } from '../components/feedback'
 import { siteFooter, siteHeader } from '../components/site-shell'
 import { SITE } from '../config'
-import { vocabulary, vocabularyCategories } from '../data'
+import { loadAllVocabulary } from '../data'
 import { progressRepository, rankWeakWords, setWordStatus } from '../storage'
 import { speechService } from '../speech'
+import { VOCABULARY_CATEGORIES } from '../types'
 import type { LocalProgress, VocabularyItem } from '../types'
 
 document.querySelector('#site-header')!.innerHTML = siteHeader('learn')
 document.querySelector('#site-footer')!.innerHTML = siteFooter()
 
 let study: LocalProgress = progressRepository.load()
-let filtered: readonly VocabularyItem[] = vocabulary
+let vocabulary: readonly VocabularyItem[] = []
+let filtered: readonly VocabularyItem[] = []
 let index = 0
 
 const element = <T extends HTMLElement>(selector: string) => document.querySelector<T>(selector)!
@@ -20,7 +22,7 @@ const level = element<HTMLSelectElement>('#level-filter')
 const category = element<HTMLSelectElement>('#category-filter')
 const filterToggle = element<HTMLButtonElement>('#filter-toggle')
 const filters = element<HTMLElement>('#vocabulary-filters')
-vocabularyCategories.forEach((name) => category.insertAdjacentHTML('beforeend', `<option value="${name}">${name}</option>`))
+VOCABULARY_CATEGORIES.forEach((name) => category.insertAdjacentHTML('beforeend', `<option value="${name}">${name}</option>`))
 
 const tags = (values?: readonly string[]) => values?.length ? values.map((value) => `<span class="tag">${value}</span>`).join('') : '<span class="text-sm text-muted">—</span>'
 
@@ -90,6 +92,12 @@ element('#learned-word').addEventListener('click', () => toggle('learned')); ele
 element('#speak-word').addEventListener('click', () => { void speak('normal') }); element('#slow-word').addEventListener('click', () => { void speak('slow') })
 element<HTMLButtonElement>('#weak-practice').addEventListener('click', () => { const weak = rankWeakWords(study); if (!weak.length) announce('Mark difficult words or complete a few quizzes first.'); else location.href = `${SITE.routes.play}?words=${weak.join(',')}` })
 element('#progress-button').addEventListener('click', async () => { const accuracy = study.totalQuestionsAttempted ? Math.round(study.correctAnswers / study.totalQuestionsAttempted * 100) : 0; if (await confirmAction({ title: 'Local progress', message: `${study.learnedWords.length} learned · ${study.difficultWords.length} difficult · ${accuracy}% quiz accuracy. Reset all local progress?`, confirmLabel: 'Reset progress', danger: true })) { study = progressRepository.reset(); render(); announce('Local progress has been reset.', 'success') } })
-const hashId = decodeURIComponent(location.hash.slice(1)); const hashIndex = vocabulary.findIndex((word) => word.id === hashId); if (hashIndex >= 0) index = hashIndex
 setFiltersExpanded(false)
-render()
+void loadAllVocabulary().then((dataset) => {
+  vocabulary = dataset.items
+  filtered = vocabulary
+  const hashId = decodeURIComponent(location.hash.slice(1))
+  const hashIndex = vocabulary.findIndex((word) => word.id === hashId)
+  if (hashIndex >= 0) index = hashIndex
+  render()
+}).catch(() => announce('Vocabulary could not be loaded. Refresh to try again.', 'error'))

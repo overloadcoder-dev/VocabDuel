@@ -27,7 +27,7 @@ export async function createRoom(identity: MultiplayerIdentity, config: RoomConf
   throw new Error('无法建立房间，请重新尝试。')
 }
 
-export async function joinRoom(code: string, identity: MultiplayerIdentity): Promise<void> {
+export async function joinRoom(code: string, identity: MultiplayerIdentity): Promise<RoomRecord> {
   const { database } = await getFirebaseServices()
   const roomRef = ref(database, `rooms/${code}`)
   const snapshot = await get(roomRef)
@@ -37,7 +37,7 @@ export async function joinRoom(code: string, identity: MultiplayerIdentity): Pro
   if (room.metadata.state !== 'waiting') throw new Error('此房间的对战已经开始。')
   if (room.players?.[identity.uid]) {
     await attachPresence(code, identity.uid)
-    return
+    return room
   }
   if (room.metadata.guestUid && room.metadata.guestUid !== identity.uid) throw new Error('此房间人数已满。')
   const now = Date.now()
@@ -47,6 +47,7 @@ export async function joinRoom(code: string, identity: MultiplayerIdentity): Pro
     [`players/${identity.uid}`]: player
   }).catch(() => { throw new Error('此房间人数已满或已无法加入。') })
   await attachPresence(code, identity.uid)
+  return room
 }
 
 async function attachPresence(code: string, uid: string): Promise<void> {

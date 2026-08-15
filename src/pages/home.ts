@@ -1,7 +1,7 @@
 import '../styles/main.css'
 import { answerMarker, getAnswerState } from '../components/answer-state'
 import { siteFooter, siteHeader } from '../components/site-shell'
-import { getVocabularyById, vocabulary } from '../data'
+import { loadVocabularyLevel, type VocabularyDataset } from '../data'
 import { generateQuestions } from '../games'
 import type { GameQuestion } from '../types'
 
@@ -16,6 +16,7 @@ const previousButton = document.querySelector<HTMLButtonElement>('#preview-previ
 const nextButton = document.querySelector<HTMLButtonElement>('#preview-next')!
 
 let deck: GameQuestion[] = []
+let vocabulary: VocabularyDataset | undefined
 let deckIndex = 0
 let answered = false
 const selectedAnswers = new Map<number, string>()
@@ -25,7 +26,8 @@ function randomSeed(): number {
 }
 
 function refillDeck(previousVocabularyId?: string): void {
-  deck = generateQuestions({ gameType: 'meaning', questionCount: vocabulary.length, seed: randomSeed() })
+  if (!vocabulary) throw new Error('Vocabulary is still loading.')
+  deck = generateQuestions({ gameType: 'meaning', questionCount: vocabulary.items.length, seed: randomSeed() }, vocabulary.items)
   if (deck.length > 1 && deck[0]?.vocabularyId === previousVocabularyId) {
     ;[deck[0], deck[1]] = [deck[1]!, deck[0]!]
   }
@@ -41,7 +43,7 @@ function currentQuestion(): GameQuestion {
 
 function renderQuestion(): void {
   const question = currentQuestion()
-  const word = getVocabularyById(question.vocabularyId)
+  const word = vocabulary?.byId.get(question.vocabularyId)
   const selectedAnswer = selectedAnswers.get(deckIndex)
   answered = selectedAnswer !== undefined
   previewWord.textContent = question.prompt
@@ -113,5 +115,11 @@ function answerQuestion(selected: HTMLButtonElement): void {
 
 previousButton.addEventListener('click', showPreviousQuestion)
 nextButton.addEventListener('click', showNextQuestion)
-refillDeck()
-renderQuestion()
+void loadVocabularyLevel(1).then((dataset) => {
+  vocabulary = dataset
+  refillDeck()
+  renderQuestion()
+}).catch(() => {
+  feedback.textContent = 'The vocabulary preview could not be loaded. Refresh to try again.'
+  feedback.className = 'mt-4 min-h-6 text-center text-sm font-bold text-danger'
+})

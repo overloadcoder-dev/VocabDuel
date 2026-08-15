@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { filterVocabulary, VOCABULARY_LEVEL_GUIDE, vocabulary } from './index'
+import { filterVocabulary, VOCABULARY_LEVEL_GUIDE } from './index'
+import { vocabulary } from './vocabulary'
 
 describe('vocabulary filters', () => {
   it('filters by multiple levels', () => {

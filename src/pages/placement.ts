@@ -1,7 +1,8 @@
 import '../styles/main.css'
+import { announce } from '../components/feedback'
 import { siteFooter, siteHeader } from '../components/site-shell'
 import { SITE } from '../config'
-import { vocabulary } from '../data'
+import { loadVocabularyLevel } from '../data'
 import { getVocabularyLevelGuide } from '../data/vocabulary/levels'
 import {
   createPlacementState,
@@ -13,13 +14,14 @@ import {
 } from '../games'
 import type { PlacementState } from '../games'
 import { progressRepository } from '../storage'
-import type { GameQuestion, VocabularyLevel } from '../types'
+import type { GameQuestion, VocabularyItem, VocabularyLevel } from '../types'
 
 document.querySelector('#site-header')!.innerHTML = siteHeader('placement')
 document.querySelector('#site-footer')!.innerHTML = siteFooter()
 
 const el = <T extends HTMLElement>(selector: string) => document.querySelector<T>(selector)!
 let state: PlacementState = createPlacementState()
+let vocabulary: readonly VocabularyItem[] = []
 let question: GameQuestion | undefined
 let answered = false
 let usedIds = new Set<string>()
@@ -33,9 +35,20 @@ function show(name: 'intro' | 'quiz' | 'result'): void {
   window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })
 }
 
-function nextQuestion(): void {
+async function nextQuestion(): Promise<void> {
   if (state.answered >= PLACEMENT_QUESTION_COUNT) { finish(); return }
   const level = placementLevelForRating(state.rating)
+  const next = el<HTMLButtonElement>('#placement-next')
+  next.disabled = true
+  next.setAttribute('aria-busy', 'true')
+  try {
+    vocabulary = (await loadVocabularyLevel(level)).items
+  } catch {
+    announce('Vocabulary could not be loaded. Check your connection and try again.', 'error')
+    next.disabled = false
+    next.removeAttribute('aria-busy')
+    return
+  }
   const candidates = vocabulary.filter((item) => item.level === level && !usedIds.has(item.id))
   const source = candidates.length ? candidates : vocabulary.filter((item) => item.level === level)
   const target = source[(seed + state.answered * 997) % source.length]
@@ -44,6 +57,8 @@ function nextQuestion(): void {
   usedIds.add(target.id)
   answered = false
   renderQuestion(level)
+  next.disabled = false
+  next.removeAttribute('aria-busy')
 }
 
 function renderQuestion(level: VocabularyLevel): void {
@@ -96,15 +111,15 @@ function finish(): void {
   show('result')
 }
 
-function start(): void {
+async function start(): Promise<void> {
   state = createPlacementState(); answered = false; usedIds = new Set(); seed = crypto.getRandomValues(new Uint32Array(1))[0] ?? Date.now()
-  show('quiz'); nextQuestion()
+  show('quiz'); await nextQuestion()
 }
 
-el('#start-placement').addEventListener('click', start)
-el('#restart-placement').addEventListener('click', start)
-el('#retake-placement').addEventListener('click', start)
-el('#placement-next').addEventListener('click', nextQuestion)
+el('#start-placement').addEventListener('click', () => { void start() })
+el('#restart-placement').addEventListener('click', () => { void start() })
+el('#retake-placement').addEventListener('click', () => { void start() })
+el('#placement-next').addEventListener('click', () => { void nextQuestion() })
 document.addEventListener('keydown', (event) => {
   if (el('#placement-quiz').classList.contains('hidden')) return
   if (!answered && /^[1-4]$/.test(event.key)) document.querySelectorAll<HTMLButtonElement>('#placement-answers button')[Number(event.key) - 1]?.click()

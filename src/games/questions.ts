@@ -1,4 +1,4 @@
-import { filterVocabulary, vocabulary as defaultVocabulary } from '../data'
+import { filterVocabulary } from '../data/filters'
 import type { Choice, GameQuestion, QuestionGenerationOptions, VocabularyItem } from '../types'
 import { createSeededRandom, shuffleSeeded } from './rng'
 
@@ -100,7 +100,7 @@ function createQuestion(
 
 export function generateQuestions(
   options: QuestionGenerationOptions,
-  source: readonly VocabularyItem[] = defaultVocabulary,
+  source: readonly VocabularyItem[],
 ): GameQuestion[] {
   if (!Number.isInteger(options.questionCount) || options.questionCount < 1) {
     throw new RangeError('questionCount must be a positive integer.')

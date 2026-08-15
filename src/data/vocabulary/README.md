@@ -1,6 +1,6 @@
 # Vocabulary classification
 
-Vocabulary is split by the app's five learning levels. Each file currently contains 10 terms. Add a term to the file matching its learning burden rather than judging it only by word length.
+Vocabulary is split by the app's five learning levels. Level files vary in size; the combined catalog currently contains 2,220 unique terms after repeated IDs are resolved with the earliest level taking precedence. Add a term to the file matching its learning burden rather than judging it only by word length.
 
 | App level | Typical CEFR | Approximate IELTS target | Editorial meaning |
 | --- | --- | --- | --- |
@@ -25,4 +25,4 @@ Consider all of these together:
 
 Use a stable unique `id`, lowercase `normalizedTerm`, at least one bilingual example, and only categories declared in `VOCABULARY_CATEGORIES`. Keep definitions and examples original or appropriately licensed and human-reviewed.
 
-`levels.ts` contains the same guidance as typed data so the application can display it in future. `../vocabulary.ts` combines every level and preserves the existing `vocabulary` import used throughout the application.
+`levels.ts` contains the same guidance as typed data so the application can display it. `../vocabulary.ts` provides the full editorial/test aggregate, while `../load-vocabulary.ts` dynamically loads the levels required by each browser feature.

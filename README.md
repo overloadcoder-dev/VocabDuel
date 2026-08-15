@@ -4,12 +4,12 @@ VocabDuel is a static, mobile-first English vocabulary learning game for Chinese
 
 The production site is static. Firebase Anonymous Authentication and Realtime Database are loaded only for multiplayer; normal learning and solo games do not require an account or Firebase.
 
-> **Pre-deployment checklist:** `https://vocabduel.example` is a provisional origin. Replace it in every HTML canonical/social URL, `public/robots.txt`, `public/sitemap.xml`, and `.env` before deploying. The Privacy and Terms pages also contain operator/contact/jurisdiction placeholders that must be completed with appropriate legal review.
+> **Pre-deployment checklist:** source metadata uses `https://vocabduel.example` as a build-time token. The GitHub Pages workflow replaces it with `VITE_SITE_URL` or the repository-derived Pages origin; other production builds must set `VITE_SITE_URL`. The Privacy and Terms pages still require the real operator/contact/jurisdiction facts and appropriate legal review.
 
 ## Architecture
 
 - Static multi-page HTML provides crawlable content at `/`, `/learn/`, `/play/`, `/multiplayer/`, `/placement/`, `/levels/`, `/how-to-play/`, `/about/`, `/privacy/`, and `/terms/`.
-- `src/data/vocabulary/` contains one curated term module per learning level; `src/data/vocabulary.ts` combines them behind the existing import, and `src/types/` defines vocabulary, game, and progress contracts.
+- `src/data/vocabulary/` contains one curated term module per learning level. Browser routes dynamically load only the levels they need; `src/data/vocabulary.ts` remains the full editorial/test aggregate, and `src/types/` defines vocabulary, game, and progress contracts.
 - `src/config/site.ts` centralizes the product name, provisional origin, description, and canonical route map; static HTML keeps route-specific metadata crawlable without JavaScript.
 - `src/games/` contains deterministic question generation, scoring, and session behavior separately from page rendering.
 - `src/storage/` stores non-sensitive solo progress in localStorage.
@@ -101,7 +101,7 @@ npm run firebase:emulators
 npm run dev
 ```
 
-Configured local ports are Auth `9099`, Database `9000`, and Emulator UI `4000`. Always use a non-production Firebase project ID for emulator work. Add or maintain rule tests with `@firebase/rules-unit-testing` when changing authorization boundaries; emulator smoke testing alone is not a complete security test.
+Configured local ports are Auth `9099`, Database `9000`, Functions `5001`, and Emulator UI `4000`. Always use a non-production Firebase project ID for emulator work. Run `npm run firebase:rules:test` after installing Java 21 or newer; emulator smoke testing alone is not a complete security test.
 
 ### App Check and operational hardening
 
@@ -109,7 +109,17 @@ Before public launch, enable Firebase App Check for the web app with an appropri
 
 Also configure Firebase budget alerts and usage monitoring. App Check reduces unauthorized clients but does not replace Authentication or Security Rules.
 
-Expired room records require cleanup. RTDB Rules prevent access and invalid writes but cannot schedule deletion. Production should use a scheduled trusted process, such as a Cloud Function or equivalent operator job, to query `metadata/expiresAt` and remove expired rooms. Until that exists, periodically purge expired rooms through an audited admin process.
+Rooms expire two hours after creation. Rules deny reads and non-delete writes after expiry, and `functions/index.js` defines the trusted `cleanupExpiredRooms` job that deletes expired records every 15 minutes in bounded batches. The job is idempotent because scheduled invocations can overlap; under normal operation, room records are retained for roughly two hours plus the scheduler interval.
+
+The cleanup function requires a Firebase project on the Blaze plan with Cloud Scheduler available. Before the first production deployment, confirm that the Function and Realtime Database regions are appropriately colocated, then deploy from a trusted Firebase CLI session:
+
+```sh
+npm install --prefix functions
+npm run functions:test
+npx firebase-tools deploy --only functions:cleanupExpiredRooms,database
+```
+
+Monitor Function logs for batch-cap warnings. The Pages workflow installs and tests the Functions package so it cannot silently rot, but intentionally does not deploy backend resources or Database Rules.
 
 ## Vocabulary data
 
@@ -158,7 +168,7 @@ The Pages workflow does not deploy Realtime Database Rules. Deploy `firebase/dat
 
 Before release:
 
-- Replace the provisional `vocabduel.example` origin everywhere noted above and rebuild.
+- Set the canonical `VITE_SITE_URL` and `VITE_BASE_PATH`, rebuild, and confirm `dist/` contains no `vocabduel.example`. The Pages workflow derives these values automatically unless repository variables override them.
 - Confirm each canonical route returns `200` and has one H1, its own title/description/canonical, visible content, and internal links.
 - Fetch the deployed `/robots.txt` and `/sitemap.xml`; parse the sitemap and verify every listed canonical URL.
 - Check the social preview image on the target networks. Some networks do not accept SVG preview images; export `public/social-card.svg` to a 1200×630 PNG and update metadata if required.

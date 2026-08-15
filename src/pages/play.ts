@@ -2,19 +2,21 @@ import '../styles/main.css'
 import { announce, confirmAction } from '../components/feedback'
 import { siteFooter, siteHeader } from '../components/site-shell'
 import { SITE } from '../config'
-import { vocabulary, vocabularyCategories } from '../data'
-import { answersMatch, calculateScore, generateQuestions, SESSION_CONFIGS } from '../games'
+import { loadVocabulary } from '../data'
+import { answersMatch, calculateSoloQuestionScore, generateQuestions, SESSION_CONFIGS } from '../games'
 import { progressRepository, recordWordResult } from '../storage'
 import { speechService } from '../speech'
-import type { GameQuestion, GameType, LocalProgress, SessionType, VocabularyCategory, VocabularyLevel } from '../types'
+import { VOCABULARY_CATEGORIES } from '../types'
+import type { GameQuestion, GameType, LocalProgress, SessionType, VocabularyCategory, VocabularyItem, VocabularyLevel } from '../types'
 
 document.querySelector('#site-header')!.innerHTML = siteHeader('play')
 document.querySelector('#site-footer')!.innerHTML = siteFooter()
 
 const el = <T extends HTMLElement>(selector: string) => document.querySelector<T>(selector)!
 const categorySelect = el<HTMLSelectElement>('#game-category')
-vocabularyCategories.forEach((category) => categorySelect.insertAdjacentHTML('beforeend', `<option>${category}</option>`))
+VOCABULARY_CATEGORIES.forEach((category) => categorySelect.insertAdjacentHTML('beforeend', `<option>${category}</option>`))
 
+let vocabulary: readonly VocabularyItem[] = []
 let questions: GameQuestion[] = []
 let gameType: GameType = 'meaning'
 let sessionType: SessionType = 'practice'
@@ -65,15 +67,28 @@ function createQuestionSet(count: number, level?: VocabularyLevel, category?: Vo
   return result
 }
 
-function startGame(): void {
+async function startGame(): Promise<void> {
   const selectedLevel = el<HTMLSelectElement>('#game-level').value
   const selectedCategory = categorySelect.value
   const ids = new URLSearchParams(location.search).get('words')?.split(',').filter(Boolean)
   const count = Number(el<HTMLSelectElement>('#question-total').value)
   questionTimeLimitMs = Number(el<HTMLSelectElement>('#question-timer').value)
   feedbackPace = el<HTMLSelectElement>('#feedback-pace').value === 'auto' ? 'auto' : 'manual'
-  try { questions = createQuestionSet(count, selectedLevel === 'all' ? undefined : Number(selectedLevel) as VocabularyLevel, selectedCategory === 'all' ? undefined : selectedCategory as VocabularyCategory, ids) }
-  catch (error) { announce(error instanceof Error ? error.message : 'Could not create this session.', 'error'); return }
+  const level = selectedLevel === 'all' ? undefined : Number(selectedLevel) as VocabularyLevel
+  const submit = el<HTMLButtonElement>('#game-setup button[type="submit"]')
+  submit.disabled = true
+  submit.setAttribute('aria-busy', 'true')
+  try {
+    const dataset = await loadVocabulary(ids?.length || !level ? undefined : [level])
+    vocabulary = dataset.items
+    questions = createQuestionSet(count, level, selectedCategory === 'all' ? undefined : selectedCategory as VocabularyCategory, ids)
+  } catch (error) {
+    announce(error instanceof Error ? error.message : 'Could not create this session.', 'error')
+    return
+  } finally {
+    submit.disabled = false
+    submit.removeAttribute('aria-busy')
+  }
   questionIndex = 0; correctCount = 0; score = 0; lives = SESSION_CONFIGS.survival.lives ?? 3; incorrectIds = []; answered = false
   progressBefore = progressRepository.load(); sessionStartedAt = Date.now(); endAt = sessionType === 'time-attack' ? sessionStartedAt + (SESSION_CONFIGS['time-attack'].timeLimitMs ?? 60_000) : undefined
   el('#session-label').textContent = `${gameLabels[gameType]} · ${sessionLabels[sessionType]}`
@@ -112,7 +127,7 @@ function submitAnswer(value: string, selected?: HTMLButtonElement): void {
   cancelAnimationFrame(timerFrame)
   const correct = gameType === 'spelling' ? answersMatch(value, question.correctAnswer) : value === question.correctAnswer
   const elapsed = Date.now() - questionStartedAt
-  const earned = calculateScore({ correct, timeRemainingMs: Math.max(0, 12_000 - elapsed), roundDurationMs: 12_000 }).total
+  const earned = calculateSoloQuestionScore({ correct, elapsedMs: elapsed, timeLimitMs: questionTimeLimitMs }).total
   score += earned; correctCount += Number(correct)
   if (!correct) { lives -= Number(sessionType === 'survival'); incorrectIds.push(question.vocabularyId) }
   document.querySelectorAll<HTMLButtonElement>('#answer-choices button').forEach((button) => { button.disabled = true; if (button.dataset.answer === question.correctAnswer) button.dataset.state = 'correct' })
@@ -189,7 +204,7 @@ function speakCurrent(): void {
   void speechService.speak(question.audioTerm).then((result) => { if (!result.ok) announce(result.message ?? 'Speech playback is unavailable.', 'error') })
 }
 
-el<HTMLFormElement>('#game-setup').addEventListener('submit', (event) => { event.preventDefault(); const data = new FormData(el<HTMLFormElement>('#game-setup')); gameType = data.get('game-type') as GameType; sessionType = data.get('session-type') as SessionType; startGame() })
+el<HTMLFormElement>('#game-setup').addEventListener('submit', (event) => { event.preventDefault(); const data = new FormData(el<HTMLFormElement>('#game-setup')); gameType = data.get('game-type') as GameType; sessionType = data.get('session-type') as SessionType; void startGame() })
 el<HTMLFormElement>('#spelling-form').addEventListener('submit', (event) => { event.preventDefault(); submitAnswer(el<HTMLInputElement>('#spelling-answer').value) })
 el('#listen-button').addEventListener('click', speakCurrent); el('#continue-button').addEventListener('click', nextQuestion); el('#play-again').addEventListener('click', () => showScreen('setup'))
 el('#quit-game').addEventListener('click', async () => { if (await confirmAction({ title: 'Leave this session?', message: 'Answers already completed stay in your local progress, but this round will end.', confirmLabel: 'Leave session', danger: true })) { cancelAnimationFrame(timerFrame); showScreen('setup') } })

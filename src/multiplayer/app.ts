@@ -2,7 +2,7 @@ import '../styles/main.css'
 import { answerMarker, getAnswerState } from '../components/answer-state'
 import { siteFooter, siteHeader } from '../components/site-shell'
 import { SITE } from '../config'
-import { getVocabularyById } from '../data'
+import { loadVocabularyLevel, type VocabularyDataset } from '../data'
 import { generateQuestions, calculateScore } from '../games'
 import type { GameQuestion, VocabularyCategory } from '../types'
 import { authenticateGuest, isFirebaseConfigured } from './firebase/client'
@@ -39,6 +39,7 @@ const rematchCountdownMs = 10_000
 let identity: MultiplayerIdentity | null = null
 let roomCode = ''
 let room: RoomRecord | null = null
+let vocabularyDataset: VocabularyDataset | undefined
 let serverOffset = 0
 let roomUnsubscribe: (() => void) | undefined
 let offsetUnsubscribe: (() => void) | undefined
@@ -103,12 +104,14 @@ function refreshRoomCodeInput(input: HTMLInputElement): void {
 }
 
 function questionsFor(current: RoomRecord): GameQuestion[] {
+  if (!vocabularyDataset) throw new Error('Vocabulary is still loading.')
+  const source = vocabularyDataset.items
   const base = { gameType: current.config.gameType, questionCount: current.config.questionCount, seed: current.metadata.seed }
   try {
-    return generateQuestions({ ...base, level: current.config.level, category: current.config.category === 'All' ? undefined : current.config.category as VocabularyCategory })
+    return generateQuestions({ ...base, level: current.config.level, category: current.config.category === 'All' ? undefined : current.config.category as VocabularyCategory }, source)
   } catch {
-    try { return generateQuestions({ ...base, level: current.config.level }) }
-    catch { return generateQuestions(base) }
+    try { return generateQuestions({ ...base, level: current.config.level }, source) }
+    catch { return generateQuestions(base, source) }
   }
 }
 
@@ -212,7 +215,7 @@ function gameTemplate(current: RoomRecord): string {
   const theirs = opponent ? scoreFor(opponent.uid, current, questions) : { score: 0, correct: 0, totalTime: 0 }
   const remaining = remainingRoundMs(window.roundEndAt, serverOffset)
   const correctLabel = question.choices?.find((choice) => choice.id === question.correctAnswer)?.label ?? question.correctAnswer
-  const vocabularyItem = getVocabularyById(question.vocabularyId)
+  const vocabularyItem = vocabularyDataset?.byId.get(question.vocabularyId)
   const meaning = vocabularyItem?.chineseExplanation ?? question.explanation
   const acceptingAnswers = current.metadata.state === 'playing'
   return `<section class="panel battle-panel" data-round-index="${index}" data-round-result="${inResult}">
@@ -241,7 +244,7 @@ function resultsTemplate(current: RoomRecord, suppliedQuestions?: GameQuestion[]
   const theirs = opponent ? scoreFor(opponent.uid, current, questions) : { score: 0, correct: 0, totalTime: 0 }
   const verdict = mine.score === theirs.score ? '平手' : mine.score > theirs.score ? '胜利！' : '再接再厉'
   const wrong = questions.filter((question) => current.answers?.[question.id]?.[identity?.uid ?? '']?.selectedAnswer !== question.correctAnswer)
-  const reviewedWords = questions.map((question) => getVocabularyById(question.vocabularyId)).filter((item) => item !== undefined)
+  const reviewedWords = questions.map((question) => vocabularyDataset?.byId.get(question.vocabularyId)).filter((item) => item !== undefined)
   const voted = Boolean(current.rematchVotes?.[identity.uid]) || rematchVotePending
   const opponentAvailable = Boolean(opponent?.connected)
   return `<section class="panel results-panel"><p class="eyebrow">对战完成 · MATCH COMPLETE</p><h2>${verdict}</h2>
@@ -418,7 +421,10 @@ function bindActions(): void {
     config.questionCount = Number(data.get('questionCount'))
     config.roundTimeMs = Number(data.get('roundTime'))
     actionPending = true; render()
-    try { await watchRoom(await createRoom(currentIdentity, config)) }
+    try {
+      vocabularyDataset = await loadVocabularyLevel(config.level)
+      await watchRoom(await createRoom(currentIdentity, config))
+    }
     catch (error) { setNotice(error instanceof Error ? error.message : '无法建立房间，请稍后再试。') }
     finally { actionPending = false; render() }
   })
@@ -429,7 +435,11 @@ function bindActions(): void {
     const code = normalizeRoomCode(String(new FormData(form).get('code') ?? ''))
     if (code.length !== 6) { setNotice('请输入完整的 6 位房间码。'); return }
     actionPending = true; render()
-    try { await joinRoom(code, currentIdentity); await watchRoom(code) }
+    try {
+      const joinedRoom = await joinRoom(code, currentIdentity)
+      vocabularyDataset = await loadVocabularyLevel(joinedRoom.config.level)
+      await watchRoom(code)
+    }
     catch (error) { setNotice(error instanceof Error ? error.message : '无法加入房间，请检查房间码。') }
     finally { actionPending = false; render() }
   })

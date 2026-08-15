@@ -3,6 +3,8 @@ dist/
 .env
 .env.local
 firebase-debug.log
+firebase-debug.*.log
+functions-debug.log
 ui-debug.log
 preview.log
 preview-error.log

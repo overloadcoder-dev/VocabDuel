@@ -1,11 +1,18 @@
 import { describe, expect, it } from 'vitest'
-import { calculateScore, createSession, getRemainingTime, getTimerProgress, recordSessionAnswer, SESSION_CONFIGS, startSession } from './index'
+import { calculateScore, calculateSoloQuestionScore, createSession, getRemainingTime, getTimerProgress, recordSessionAnswer, SESSION_CONFIGS, startSession } from './index'
 
 describe('scoring and timers', () => {
   it('calculates deterministic bounded speed bonuses', () => {
     expect(calculateScore({ correct: true, timeRemainingMs: 5_000, roundDurationMs: 10_000 })).toEqual({ base: 100, speedBonus: 50, total: 150 })
     expect(calculateScore({ correct: true, timeRemainingMs: 20_000, roundDurationMs: 10_000 }).total).toBe(200)
     expect(calculateScore({ correct: false, timeRemainingMs: 10_000, roundDurationMs: 10_000 }).total).toBe(0)
+  })
+
+  it('uses the selected solo timer and disables speed bonuses when the timer is off', () => {
+    expect(calculateSoloQuestionScore({ correct: true, elapsedMs: 5_000, timeLimitMs: 10_000 })).toEqual({ base: 100, speedBonus: 50, total: 150 })
+    expect(calculateSoloQuestionScore({ correct: true, elapsedMs: 5_000, timeLimitMs: 20_000 })).toEqual({ base: 100, speedBonus: 75, total: 175 })
+    expect(calculateSoloQuestionScore({ correct: true, elapsedMs: 30_000, timeLimitMs: 0 })).toEqual({ base: 100, speedBonus: 0, total: 100 })
+    expect(calculateSoloQuestionScore({ correct: false, elapsedMs: 1_000, timeLimitMs: 20_000 }).total).toBe(0)
   })
 
   it('clamps timer values at their boundaries', () => {
@@ -34,4 +41,3 @@ describe('session transitions', () => {
     expect(() => recordSessionAnswer(createSession(SESSION_CONFIGS.practice), true)).toThrow(/only be recorded/)
   })
 })
-
