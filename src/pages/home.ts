@@ -1,4 +1,5 @@
 import '../styles/main.css'
+import { answerMarker, getAnswerState } from '../components/answer-state'
 import { siteFooter, siteHeader } from '../components/site-shell'
 import { getVocabularyById, vocabulary } from '../data'
 import { generateQuestions } from '../games'
@@ -11,12 +12,13 @@ const previewWord = document.querySelector<HTMLParagraphElement>('#preview-word'
 const previewIpa = document.querySelector<HTMLParagraphElement>('#preview-ipa')!
 const previewOptions = document.querySelector<HTMLDivElement>('#preview-options')!
 const feedback = document.querySelector<HTMLParagraphElement>('#preview-feedback')!
+const previousButton = document.querySelector<HTMLButtonElement>('#preview-previous')!
 const nextButton = document.querySelector<HTMLButtonElement>('#preview-next')!
 
 let deck: GameQuestion[] = []
 let deckIndex = 0
 let answered = false
-let advanceTimer: number | undefined
+const selectedAnswers = new Map<number, string>()
 
 function randomSeed(): number {
   return crypto.getRandomValues(new Uint32Array(1))[0] ?? Date.now()
@@ -28,6 +30,7 @@ function refillDeck(previousVocabularyId?: string): void {
     ;[deck[0], deck[1]] = [deck[1]!, deck[0]!]
   }
   deckIndex = 0
+  selectedAnswers.clear()
 }
 
 function currentQuestion(): GameQuestion {
@@ -39,7 +42,8 @@ function currentQuestion(): GameQuestion {
 function renderQuestion(): void {
   const question = currentQuestion()
   const word = getVocabularyById(question.vocabularyId)
-  answered = false
+  const selectedAnswer = selectedAnswers.get(deckIndex)
+  answered = selectedAnswer !== undefined
   previewWord.textContent = question.prompt
   previewIpa.textContent = word?.ipa ?? 'Pronunciation guide unavailable'
   previewOptions.replaceChildren()
@@ -59,36 +63,55 @@ function renderQuestion(): void {
   })
   feedback.textContent = 'Choose the matching meaning.'
   feedback.className = 'mt-4 min-h-6 text-center text-sm font-bold text-muted'
-  nextButton.hidden = true
+  previousButton.hidden = deckIndex === 0
+  nextButton.hidden = !answered
+  if (selectedAnswer) showAnswerReview(question, selectedAnswer)
+}
+
+function showAnswerReview(question: GameQuestion, selectedAnswer: string): void {
+  const correctChoice = question.choices?.find((choice) => choice.id === question.correctAnswer)
+  previewOptions.querySelectorAll<HTMLButtonElement>('button').forEach((button, index) => {
+    const state = getAnswerState(button.dataset.answer ?? '', selectedAnswer, question.correctAnswer, true)
+    button.disabled = true
+    if (state) button.dataset.state = state
+    const key = button.querySelector<HTMLElement>('.answer-key')
+    if (key) key.textContent = answerMarker(state, index)
+    const status = state === 'correct' ? ', correct answer' : state === 'wrong' ? ', your answer, incorrect' : ''
+    const label = question.choices?.[index]?.label ?? button.textContent ?? ''
+    button.setAttribute('aria-label', `${label}${status}`)
+  })
+  const correct = selectedAnswer === question.correctAnswer
+  feedback.textContent = correct
+    ? `✓ Correct — ${question.prompt} means ${correctChoice?.label ?? question.correctAnswer}.`
+    : `✕ Not quite — ${question.prompt} means ${correctChoice?.label ?? question.correctAnswer}.`
+  feedback.className = `mt-4 min-h-6 text-center text-sm font-bold ${correct ? 'text-success' : 'text-danger'}`
+  nextButton.hidden = false
 }
 
 function showNextQuestion(): void {
-  window.clearTimeout(advanceTimer)
   const previousVocabularyId = currentQuestion().vocabularyId
   deckIndex += 1
   if (deckIndex >= deck.length) refillDeck(previousVocabularyId)
   renderQuestion()
 }
 
-function answerQuestion(selected: HTMLButtonElement): void {
-  if (answered) return
-  answered = true
-  const question = currentQuestion()
-  const correctChoice = question.choices?.find((choice) => choice.id === question.correctAnswer)
-  previewOptions.querySelectorAll<HTMLButtonElement>('button').forEach((button) => {
-    button.disabled = true
-    if (button.dataset.answer === question.correctAnswer) button.dataset.state = 'correct'
-  })
-  const correct = selected.dataset.answer === question.correctAnswer
-  if (!correct) selected.dataset.state = 'wrong'
-  feedback.textContent = correct
-    ? `✓ Correct — ${question.prompt} means ${correctChoice?.label ?? question.correctAnswer}.`
-    : `✕ Not quite — ${question.prompt} means ${correctChoice?.label ?? question.correctAnswer}.`
-  feedback.className = `mt-4 min-h-6 text-center text-sm font-bold ${correct ? 'text-success' : 'text-danger'}`
-  nextButton.hidden = false
-  advanceTimer = window.setTimeout(showNextQuestion, 3200)
+function showPreviousQuestion(): void {
+  if (deckIndex === 0) return
+  deckIndex -= 1
+  renderQuestion()
 }
 
+function answerQuestion(selected: HTMLButtonElement): void {
+  if (answered) return
+  const question = currentQuestion()
+  const selectedAnswer = selected.dataset.answer
+  if (!selectedAnswer) return
+  answered = true
+  selectedAnswers.set(deckIndex, selectedAnswer)
+  showAnswerReview(question, selectedAnswer)
+}
+
+previousButton.addEventListener('click', showPreviousQuestion)
 nextButton.addEventListener('click', showNextQuestion)
 refillDeck()
 renderQuestion()

@@ -1,4 +1,5 @@
 import '../styles/main.css'
+import { answerMarker, getAnswerState } from '../components/answer-state'
 import { siteFooter, siteHeader } from '../components/site-shell'
 import { SITE } from '../config'
 import { getVocabularyById } from '../data'
@@ -220,9 +221,9 @@ function gameTemplate(current: RoomRecord): string {
     ${question.gameType === 'audio' ? `<p class="question-kicker">听发音，选出正确答案</p><button class="audio-orb" data-speak="${escapeHtml(question.audioTerm ?? '')}" aria-label="播放单词发音">▶</button>` : `<p class="question-kicker">请选择正确答案</p><h2 class="battle-question">${escapeHtml(question.prompt)}</h2>`}
     <div class="answer-grid">${question.choices?.map((choice, choiceIndex) => {
       const isMine = selectedAnswer === choice.id
-      const state = revealAnswers && isMine ? (choice.id === question.correctAnswer ? 'correct' : 'wrong') : isMine ? 'selected' : ''
-      const marker = state === 'correct' ? '✓' : state === 'wrong' ? '×' : String(choiceIndex + 1)
-      const answerStatus = state === 'correct' ? '，回答正确' : state === 'wrong' ? '，回答错误' : state === 'selected' ? '，已选择' : ''
+      const state = getAnswerState(choice.id, selectedAnswer, question.correctAnswer, revealAnswers)
+      const marker = answerMarker(state, choiceIndex)
+      const answerStatus = state === 'correct' ? (isMine ? '，回答正确' : '，正确答案') : state === 'wrong' ? '，回答错误' : state === 'selected' ? '，已选择' : ''
       return `<button class="answer-button" data-answer="${choice.id}" aria-label="${escapeHtml(choice.label)}${answerStatus}" ${state ? `data-state="${state}"` : ''} ${selectedAnswer || revealAnswers || !acceptingAnswers ? 'disabled' : ''}><span aria-hidden="true">${marker}</span>${escapeHtml(choice.label)}</button>`
     }).join('') ?? ''}</div>
     ${revealAnswers ? `<div class="round-result ${selectedAnswer === question.correctAnswer ? 'correct' : 'incorrect'}"><strong>${selectedAnswer === question.correctAnswer ? '✓ 回答正确' : selectedAnswer ? '✕ 回答错误' : '时间到'}</strong><p>${escapeHtml(correctLabel)}</p><small><strong>${escapeHtml(vocabularyItem?.term ?? question.prompt)}</strong> — ${escapeHtml(meaning)}</small></div>` : selectedAnswer ? '<p class="answer-locked" role="status">答案已锁定，等待对手作答…</p>' : ''}
