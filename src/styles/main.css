@@ -250,6 +250,7 @@
   .player-card h2 small { display: inline-block; border-radius: 999px; background: var(--color-brand-soft); padding: .15rem .4rem; color: var(--color-brand-dark); font-size: .62rem; vertical-align: .1rem; }
   .player-card p, .waiting-copy, .connection-label { color: var(--color-muted); font-size: .8rem; }
   .player-card .kick-player-button { min-height: 2rem; margin-top: .55rem; padding: .3rem .6rem; border-color: #efb2bd; color: #a62c42; background: #fff1f3; font-size: .7rem; }
+  .player-card .kick-player-button:hover { transform: none; }
   .presence { display: inline-block; width: .65rem; height: .65rem; border-radius: 50%; background: #aeb4c0; }
   .presence.online { background: var(--color-success); box-shadow: 0 0 0 4px rgb(22 131 91 / .12); }
   .versus { color: var(--color-brand); font-size: .85rem; }
