@@ -1,3 +1,5 @@
+export const ROUND_REVIEW_MS = 5_000
+
 export function synchronizedNow(offsetMs: number, localNow = Date.now()): number {
   return localNow + offsetMs
 }
@@ -6,7 +8,7 @@ export function remainingRoundMs(deadline: number, offsetMs: number, localNow = 
   return Math.max(0, deadline - synchronizedNow(offsetMs, localNow))
 }
 
-export function roundWindow(startAt: number, index: number, roundTimeMs: number, resultTimeMs = 1800) {
+export function roundWindow(startAt: number, index: number, roundTimeMs: number, resultTimeMs = ROUND_REVIEW_MS) {
   const roundStartAt = startAt + index * (roundTimeMs + resultTimeMs)
   return { roundStartAt, roundEndAt: roundStartAt + roundTimeMs, resultEndAt: roundStartAt + roundTimeMs + resultTimeMs }
 }
@@ -23,7 +25,7 @@ export function roundTimingAtIndex(
   index: number,
   questionIds: readonly string[],
   roundTimeMs: number,
-  resultTimeMs = 1800,
+  resultTimeMs = ROUND_REVIEW_MS,
   earlyRoundEnds: Readonly<Record<string, number>> = {},
 ): RoundTiming {
   let roundStartAt = startAt
@@ -45,7 +47,7 @@ export function activeRoundTiming(
   now: number,
   questionIds: readonly string[],
   roundTimeMs: number,
-  resultTimeMs = 1800,
+  resultTimeMs = ROUND_REVIEW_MS,
   earlyRoundEnds: Readonly<Record<string, number>> = {},
 ): RoundTiming {
   for (let index = 0; index < questionIds.length; index += 1) {

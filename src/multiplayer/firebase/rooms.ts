@@ -1,5 +1,6 @@
 import { get, onDisconnect, onValue, ref, remove, runTransaction, serverTimestamp, set, update, type Unsubscribe } from 'firebase/database'
 import { getFirebaseServices } from './client'
+import { bothPlayersAnswered } from '../state-machine'
 import type { AnswerRecord, MultiplayerIdentity, RoomConfig, RoomPlayer, RoomRecord } from '../types'
 
 const ROOM_LIFETIME_MS = 2 * 60 * 60 * 1000
@@ -109,7 +110,7 @@ export async function closeRoundEarly(code: string, roundId: string, uid: string
   const room = (await get(ref(database, `rooms/${code}`))).val() as RoomRecord | null
   if (!room || room.metadata.hostUid !== uid || room.metadata.state !== 'playing') return
   const answers = Object.values(room.answers?.[roundId] ?? {})
-  if (answers.length !== 2 || answers.some((answer) => answer.selectedAnswer !== answers[0]?.selectedAnswer)) return
+  if (!bothPlayersAnswered(answers.length)) return
   await runTransaction(
     ref(database, `rooms/${code}/roundEnds/${roundId}`),
     (current) => current ?? serverTimestamp(),

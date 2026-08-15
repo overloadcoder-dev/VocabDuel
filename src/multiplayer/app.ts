@@ -22,7 +22,8 @@ import {
   subscribeRoom,
   voteRematch,
 } from './firebase/rooms'
-import { activeRoundTiming, remainingRoundMs, roundTimingAtIndex, synchronizedNow } from './time'
+import { bothPlayersAnswered } from './state-machine'
+import { activeRoundTiming, remainingRoundMs, ROUND_REVIEW_MS, roundTimingAtIndex, synchronizedNow } from './time'
 import type { MultiplayerIdentity, RoomConfig, RoomRecord } from './types'
 import { normalizeRoomCode, sanitizeNickname, validateNickname } from './validation'
 
@@ -33,7 +34,7 @@ const rootElement = document.querySelector<HTMLElement>('#multiplayer-app')
 if (!rootElement) throw new Error('Multiplayer root is missing.')
 const root: HTMLElement = rootElement
 
-const resultTimeMs = 1_800
+const resultTimeMs = ROUND_REVIEW_MS
 const disconnectGraceMs = 30_000
 const initialCountdownMs = 3_500
 const rematchCountdownMs = 10_000
@@ -152,11 +153,12 @@ function lobbyTemplate(current: RoomRecord): string {
   </section>`
 }
 
-function scoreFor(uid: string, current: RoomRecord, questions: GameQuestion[]): { score: number; correct: number; totalTime: number } {
-  let score = 0; let correct = 0; let totalTime = 0
+function scoreFor(uid: string, current: RoomRecord, questions: GameQuestion[]): { score: number; correct: number; attempted: number; totalTime: number } {
+  let score = 0; let correct = 0; let attempted = 0; let totalTime = 0
   questions.forEach((question, index) => {
     const answer = current.answers?.[question.id]?.[uid]
     if (!answer || !current.match) return
+    attempted += 1
     const window = roundTimingAtIndex(current.match.startAt, index, questions.map(({ id }) => id), current.config.roundTimeMs, resultTimeMs, current.roundEnds)
     const isCorrect = answer.selectedAnswer === question.correctAnswer
     if (isCorrect) correct += 1
@@ -164,7 +166,7 @@ function scoreFor(uid: string, current: RoomRecord, questions: GameQuestion[]): 
     totalTime += elapsed
     score += calculateScore({ correct: isCorrect, timeRemainingMs: current.config.roundTimeMs - elapsed, roundDurationMs: current.config.roundTimeMs }).total
   })
-  return { score, correct, totalTime }
+  return { score, correct, attempted, totalTime }
 }
 
 function countdownTemplate(untilStart: number, isRematch: boolean): string {
@@ -213,7 +215,7 @@ function gameTemplate(current: RoomRecord): string {
     return `<section class="panel unavailable-panel"><p class="eyebrow">对战已结束</p><h2>对手已断线</h2><p>连接在 30 秒内没有恢复，本场计分已停止。</p><button class="button primary" data-leave>返回多人对战</button><a class="button ghost" href="${SITE.routes.play}">单人练习</a></section>`
   }
   const mine = scoreFor(identity.uid, current, questions)
-  const theirs = opponent ? scoreFor(opponent.uid, current, questions) : { score: 0, correct: 0, totalTime: 0 }
+  const theirs = opponent ? scoreFor(opponent.uid, current, questions) : { score: 0, correct: 0, attempted: 0, totalTime: 0 }
   const nextStepLabel = index === questions.length - 1 ? '查看结果' : '下一题'
   const timerRemaining = remainingRoundMs(inResult ? window.resultEndAt : window.roundEndAt, serverOffset)
   const timerDuration = inResult ? resultTimeMs : current.config.roundTimeMs
@@ -261,7 +263,7 @@ function resultsTemplate(current: RoomRecord, suppliedQuestions?: GameQuestion[]
   const questions = suppliedQuestions ?? questionsFor(current)
   const opponent = Object.values(current.players).find((player) => player.uid !== identity?.uid)
   const mine = scoreFor(identity.uid, current, questions)
-  const theirs = opponent ? scoreFor(opponent.uid, current, questions) : { score: 0, correct: 0, totalTime: 0 }
+  const theirs = opponent ? scoreFor(opponent.uid, current, questions) : { score: 0, correct: 0, attempted: 0, totalTime: 0 }
   const verdict = mine.score === theirs.score ? '平手' : mine.score > theirs.score ? '胜利！' : '再接再厉'
   const wrong = questions.filter((question) => current.answers?.[question.id]?.[identity?.uid ?? '']?.selectedAnswer !== question.correctAnswer)
   const reviewedWords = questions.map((question) => vocabularyDataset?.byId.get(question.vocabularyId)).filter((item) => item !== undefined)
@@ -269,11 +271,13 @@ function resultsTemplate(current: RoomRecord, suppliedQuestions?: GameQuestion[]
   const opponentAvailable = Boolean(opponent?.connected)
   const mineAccuracy = questions.length ? Math.round(mine.correct / questions.length * 100) : 0
   const theirsAccuracy = questions.length ? Math.round(theirs.correct / questions.length * 100) : 0
+  const mineAverageTime = mine.attempted ? `${(mine.totalTime / mine.attempted / 1000).toFixed(1)}s` : '—'
+  const theirsAverageTime = theirs.attempted ? `${(theirs.totalTime / theirs.attempted / 1000).toFixed(1)}s` : '—'
   return `<section class="panel results-panel"><p class="eyebrow">对战完成 · MATCH COMPLETE</p><h2>${verdict}</h2>
     <div class="result-comparison" role="group" aria-label="双方成绩对比">
-      <div class="result-player-card" ${mine.score > theirs.score ? 'data-leading' : ''}><p class="result-player-name">你</p><p class="result-player-score"><strong>${mine.score}</strong><span>得分</span></p><p class="result-player-rate"><span>正确率</span><strong>${mineAccuracy}%</strong></p></div>
+      <div class="result-player-card" ${mine.score > theirs.score ? 'data-leading' : ''}><p class="result-player-name">你</p><p class="result-player-score"><strong>${mine.score}</strong><span>得分</span></p><p class="result-player-rate"><span>正确率</span><strong>${mineAccuracy}%</strong></p><dl class="result-player-details"><div><dt>答对</dt><dd>${mine.correct}/${questions.length}</dd></div><div><dt>答错</dt><dd>${questions.length - mine.correct}</dd></div><div><dt>平均用时</dt><dd>${mineAverageTime}</dd></div></dl></div>
       <span class="result-versus" aria-hidden="true">VS</span>
-      <div class="result-player-card" ${theirs.score > mine.score ? 'data-leading' : ''}><p class="result-player-name">${escapeHtml(opponent?.displayName ?? '对手')}</p><p class="result-player-score"><strong>${theirs.score}</strong><span>得分</span></p><p class="result-player-rate"><span>正确率</span><strong>${theirsAccuracy}%</strong></p></div>
+      <div class="result-player-card" ${theirs.score > mine.score ? 'data-leading' : ''}><p class="result-player-name">${escapeHtml(opponent?.displayName ?? '对手')}</p><p class="result-player-score"><strong>${theirs.score}</strong><span>得分</span></p><p class="result-player-rate"><span>正确率</span><strong>${theirsAccuracy}%</strong></p><dl class="result-player-details"><div><dt>答对</dt><dd>${theirs.correct}/${questions.length}</dd></div><div><dt>答错</dt><dd>${questions.length - theirs.correct}</dd></div><div><dt>平均用时</dt><dd>${theirsAverageTime}</dd></div></dl></div>
     </div>
     ${wrong.length ? `<details open><summary>复习答错的单词（${wrong.length}）</summary><ul class="word-review-list">${wrong.map((question) => `<li>${escapeHtml(question.explanation)}</li>`).join('')}</ul></details>` : '<p>满分！所有单词都答对了。</p>'}
     <details><summary>查看全部单词与词义（${reviewedWords.length}）</summary><dl class="match-word-list">${reviewedWords.map((item) => `<div><dt>${escapeHtml(item.term)}</dt><dd>${escapeHtml(item.chineseShort)} · ${escapeHtml(item.englishDefinition)}</dd></div>`).join('')}</dl></details>
@@ -400,7 +404,7 @@ async function watchRoom(code: string): Promise<void> {
       const timing = activeRoundTiming(value.match.startAt, synchronizedNow(serverOffset), questions.map(({ id }) => id), value.config.roundTimeMs, resultTimeMs, value.roundEnds)
       const question = questions[timing.index]
       const answers = question ? Object.values(value.answers?.[question.id] ?? {}) : []
-      if (question && !value.roundEnds?.[question.id] && answers.length === 2 && answers.every(({ selectedAnswer }) => selectedAnswer === question.correctAnswer) && !earlyClosePending.has(question.id)) {
+      if (question && !value.roundEnds?.[question.id] && bothPlayersAnswered(answers.length) && !earlyClosePending.has(question.id)) {
         earlyClosePending.add(question.id)
         void closeRoundEarly(code, question.id, identity.uid).catch(() => undefined).finally(() => earlyClosePending.delete(question.id))
       }

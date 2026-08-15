@@ -15,3 +15,7 @@ export function canTransition(from: MatchState, to: MatchState): boolean {
 export function assertTransition(from: MatchState, to: MatchState): void {
   if (!canTransition(from, to)) throw new Error(`Illegal match transition: ${from} -> ${to}`)
 }
+
+export function bothPlayersAnswered(answerCount: number): boolean {
+  return answerCount === 2
+}

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { canTransition } from './state-machine'
-import { activeRoundTiming, remainingRoundMs, roundWindow } from './time'
+import { bothPlayersAnswered, canTransition } from './state-machine'
+import { activeRoundTiming, remainingRoundMs, ROUND_REVIEW_MS, roundWindow } from './time'
 import { normalizeRoomCode, sanitizeNickname, validateNickname } from './validation'
 
 describe('multiplayer state transitions', () => {
@@ -14,6 +14,7 @@ describe('multiplayer state transitions', () => {
 describe('synchronised timing', () => {
   it('calculates round boundaries and clamps remaining time', () => {
     expect(roundWindow(1_000, 2, 5_000, 1_000)).toEqual({ roundStartAt: 13_000, roundEndAt: 18_000, resultEndAt: 19_000 })
+    expect(roundWindow(1_000, 0, 10_000)).toEqual({ roundStartAt: 1_000, roundEndAt: 11_000, resultEndAt: 11_000 + ROUND_REVIEW_MS })
     expect(remainingRoundMs(5_000, 200, 4_000)).toBe(800)
     expect(remainingRoundMs(5_000, 200, 6_000)).toBe(0)
   })
@@ -27,6 +28,14 @@ describe('synchronised timing', () => {
       resultEndAt: 10_000,
     })
     expect(activeRoundTiming(1_000, 10_000, ['one', 'two'], 5_000, 1_000, { one: 3_000 }).index).toBe(2)
+  })
+})
+
+describe('early round completion', () => {
+  it('starts review as soon as both players answer, regardless of their selections', () => {
+    expect(bothPlayersAnswered(0)).toBe(false)
+    expect(bothPlayersAnswered(1)).toBe(false)
+    expect(bothPlayersAnswered(2)).toBe(true)
   })
 })
 

@@ -308,10 +308,14 @@
   .result-player-score span { color: var(--color-muted); font-size: .68rem; font-weight: 750; }
   .result-player-rate { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin: 0; border-radius: .75rem; background: white; padding: .6rem .7rem; color: var(--color-muted); font-size: .72rem; font-weight: 750; }
   .result-player-rate strong { color: var(--color-brand-dark); font-size: 1rem; font-variant-numeric: tabular-nums; }
+  .result-player-details { display: grid; gap: .4rem; margin: .65rem 0 0; }
+  .result-player-details > div { display: flex; align-items: center; justify-content: space-between; gap: .5rem; padding-inline: .15rem; font-size: .7rem; }
+  .result-player-details dt { color: var(--color-muted); }
+  .result-player-details dd { margin: 0; color: var(--color-ink); font-variant-numeric: tabular-nums; font-weight: 850; }
   .result-versus { display: grid; width: 2.35rem; height: 2.35rem; place-items: center; border: 1px solid #d8d3ff; border-radius: 50%; background: white; color: var(--color-brand-dark); font-size: .7rem; font-weight: 900; box-shadow: 0 5px 15px rgb(77 59 197 / .1); }
   .results-panel details { margin-block: 1rem; text-align: left; }
   .results-panel summary { min-height: 2.75rem; cursor: pointer; font-weight: 800; }
-  .word-review-list { display: grid; gap: .55rem; padding-left: 1.25rem; line-height: 1.55; }
+  .word-review-list { display: grid; gap: .55rem; padding-left: 0; line-height: 1.55; }
   .word-review-list > li { border-radius: .75rem; background: #f5f6fa; padding: .7rem .8rem; }
   .match-word-list { display: grid; gap: .55rem; margin: 0; }
   .match-word-list > div { display: grid; grid-template-columns: minmax(5.5rem, .35fr) 1fr; gap: .75rem; border-radius: .75rem; background: #f5f6fa; padding: .7rem .8rem; }
