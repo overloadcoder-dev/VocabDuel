@@ -49,10 +49,10 @@ describe('SpeechService', () => {
     expect(getSpoken()).toMatchObject({ text: 'clear', lang: 'en-GB', rate: 1, voice })
   })
 
-  it('matches the visible slow-speed label', async () => {
+  it.each([0.5, 0.75, 1, 1.25] as const)('uses the selected %s× pronunciation rate', async (rate) => {
     const { getSpoken } = installSpeechSynthesis()
-    await new SpeechService().speak('careful', { speed: 'slow' })
-    expect(getSpoken()?.rate).toBe(0.75)
+    await new SpeechService().speak('careful', { rate })
+    expect(getSpoken()?.rate).toBe(rate)
   })
 
   it('does not report deliberate browser cancellations as playback failures', async () => {

@@ -24,6 +24,16 @@ describe('local progress', () => {
     expect(createProgressRepository(storage).load()).toEqual(createDefaultProgress())
   })
 
+  it('preserves selected pronunciation rates and migrates the old slow setting', () => {
+    const storage = new MemoryStorage()
+    const repository = createProgressRepository(storage)
+    repository.save({ ...createDefaultProgress(), audioSpeed: 1.25 })
+    expect(repository.load().audioSpeed).toBe(1.25)
+
+    storage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify({ ...createDefaultProgress(), audioSpeed: 'slow' }))
+    expect(repository.load().audioSpeed).toBe(0.75)
+  })
+
   it('prioritizes explicitly difficult and repeatedly missed words', () => {
     let progress = createDefaultProgress()
     progress = recordWordResult(progress, 'acquire', false, 1)

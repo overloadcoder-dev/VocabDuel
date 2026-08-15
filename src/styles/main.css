@@ -30,6 +30,7 @@
 
 @layer components {
   .page-wrap { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; }
+  .home-hero-title-serif { font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
   .app-header { position: relative; z-index: 20; }
   .app-nav-link { display: flex; min-height: 2.75rem; align-items: center; justify-content: center; }
   .page-shell { min-height: 100vh; overflow-x: hidden; }
@@ -131,6 +132,8 @@
   .button[hidden] { display: none !important; }
   .button:hover { transform: translateY(-1px); }
   .button:active { transform: translateY(0); }
+  .learn-word-controls .button:hover, .learn-word-controls .button:active, .learn-status-actions .button:hover, .learn-status-actions .button:active { transform: none; }
+  .pronunciation-speed { display: block; min-width: 9.5rem; }
   .button-primary { color: white; background: linear-gradient(135deg, var(--color-brand), #7659d8); box-shadow: 0 8px 22px rgb(103 87 232 / .23); }
   .button-primary:hover { background: linear-gradient(135deg, var(--color-brand-dark), #6046cb); }
   .button-secondary { color: var(--color-ink); background: white; border-color: #d9dce5; }

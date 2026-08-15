@@ -1,7 +1,12 @@
-export type SpeechSpeed = 'normal' | 'slow'
+export const SPEECH_RATES = [0.5, 0.75, 1, 1.25] as const
+export type SpeechRate = (typeof SPEECH_RATES)[number]
+
+export function isSpeechRate(value: number): value is SpeechRate {
+  return SPEECH_RATES.some((rate) => rate === value)
+}
 
 export interface SpeakOptions {
-  speed?: SpeechSpeed
+  rate?: SpeechRate
   lang?: string
 }
 
@@ -65,7 +70,7 @@ export class SpeechService {
         ?? voices[0]
       utterance.voice = voice ?? null
       utterance.lang = voice?.lang ?? requestedLanguage
-      utterance.rate = options.speed === 'slow' ? 0.75 : 1
+      utterance.rate = options.rate ?? 1
       utterance.pitch = 1
 
       let settled = false

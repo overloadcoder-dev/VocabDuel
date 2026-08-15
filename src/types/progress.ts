@@ -21,7 +21,6 @@ export interface LocalProgress {
   xp: number
   unlockedLevels: VocabularyLevel[]
   theme: 'light' | 'dark' | 'system'
-  audioSpeed: 'normal' | 'slow'
+  audioSpeed: 0.5 | 0.75 | 1 | 1.25
   wordPerformance: Record<string, WordPerformance>
 }
-

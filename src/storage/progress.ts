@@ -17,7 +17,7 @@ export function createDefaultProgress(): LocalProgress {
     xp: 0,
     unlockedLevels: [1],
     theme: 'system',
-    audioSpeed: 'normal',
+    audioSpeed: 1,
     wordPerformance: {},
   }
 }
@@ -36,6 +36,7 @@ export function sanitizeProgress(value: unknown): LocalProgress {
   const defaults = createDefaultProgress()
   if (!value || typeof value !== 'object') return defaults
   const source = value as Partial<LocalProgress>
+  const storedAudioSpeed = (value as { audioSpeed?: unknown }).audioSpeed
   const performances: Record<string, WordPerformance> = {}
   if (source.wordPerformance && typeof source.wordPerformance === 'object') {
     for (const [id, performance] of Object.entries(source.wordPerformance)) {
@@ -64,7 +65,7 @@ export function sanitizeProgress(value: unknown): LocalProgress {
     xp: nonNegative(source.xp),
     unlockedLevels: Array.isArray(source.unlockedLevels) ? [...new Set(source.unlockedLevels.filter(validLevel))] : defaults.unlockedLevels,
     theme: source.theme === 'light' || source.theme === 'dark' ? source.theme : 'system',
-    audioSpeed: source.audioSpeed === 'slow' ? 'slow' : 'normal',
+    audioSpeed: storedAudioSpeed === 'slow' ? 0.75 : storedAudioSpeed === 'normal' ? 1 : storedAudioSpeed === 0.5 || storedAudioSpeed === 0.75 || storedAudioSpeed === 1 || storedAudioSpeed === 1.25 ? storedAudioSpeed : 1,
     wordPerformance: performances,
   }
 }
@@ -152,4 +153,3 @@ export function rankWeakWords(progress: LocalProgress, limit = 20): string[] {
     .slice(0, Math.max(0, limit))
     .map(({ id }) => id)
 }
-
