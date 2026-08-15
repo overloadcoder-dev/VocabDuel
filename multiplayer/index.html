@@ -1,21 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Private Vocabulary Duel with Friends | VocabDuel</title>
-    <meta name="description" content="Create a private room and play a real-time English vocabulary duel with a friend." />
+    <title>好友英语单词对战｜VocabDuel 双人词汇挑战</title>
+    <meta name="description" content="建立私人房间，与朋友进行即时英语词汇对战；无需注册，题目与倒计时自动同步。" />
     <meta name="theme-color" content="#6757e8" />
     <link rel="canonical" href="https://vocabduel.example/multiplayer/" />
     <meta property="og:site_name" content="VocabDuel" />
-    <meta property="og:title" content="Private Vocabulary Duel with Friends | VocabDuel" />
-    <meta property="og:description" content="Create a private room and play a real-time English vocabulary duel with a friend." />
+    <meta property="og:title" content="好友英语单词对战｜VocabDuel 双人词汇挑战" />
+    <meta property="og:description" content="建立私人房间，与朋友进行即时英语词汇对战；无需注册，题目与倒计时自动同步。" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://vocabduel.example/multiplayer/" />
     <meta property="og:image" content="https://vocabduel.example/social-card.svg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Private Vocabulary Duel with Friends | VocabDuel" />
-    <meta name="twitter:description" content="Create a private room and play a real-time English vocabulary duel with a friend." />
+    <meta name="twitter:title" content="好友英语单词对战｜VocabDuel 双人词汇挑战" />
+    <meta name="twitter:description" content="建立私人房间，与朋友进行即时英语词汇对战；无需注册，题目与倒计时自动同步。" />
     <meta name="twitter:image" content="https://vocabduel.example/social-card.svg" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/site.webmanifest" />
@@ -24,17 +24,23 @@
   <body>
     <div id="site-header"></div>
     <main id="main-content" class="page-shell multiplayer-page">
-      <section class="page-intro">
-        <p class="eyebrow">PRIVATE 1V1</p>
-        <h1>Challenge a friend to a vocabulary duel</h1>
-        <p>Create or join a private room without registering. Both players receive the same questions and synchronized timer.</p>
+      <section class="page-intro multiplayer-hero">
+        <p class="eyebrow">好友单词对战 · PRIVATE 1V1</p>
+        <h1>和朋友来一场<br><span>英语词汇对决</span></h1>
+        <p>建立或加入私人房间，两位玩家会收到相同题目与同步倒计时。无需注册，输入昵称即可开始。</p>
+        <ul class="multiplayer-benefits" aria-label="对战特色">
+          <li><span aria-hidden="true">✓</span> 无需注册</li>
+          <li><span aria-hidden="true">✓</span> 题目同步</li>
+          <li><span aria-hidden="true">✓</span> 即时计分</li>
+        </ul>
       </section>
       <div id="multiplayer-app">
-        <div class="panel loading-panel" role="status"><span class="spinner" aria-hidden="true"></span><p>Preparing multiplayer…</p></div>
+        <div class="panel loading-panel" role="status"><span class="spinner" aria-hidden="true"></span><p>正在准备多人对战…</p></div>
       </div>
-      <aside class="notice" aria-label="Multiplayer notice">
-        <strong>Casual play</strong>
-        <p>Browser-based scoring is designed for friendly learning, not cheat-proof rankings. Solo learning remains available without Firebase.</p>
+      <aside class="notice multiplayer-notice" aria-label="对战说明">
+        <span class="notice-icon" aria-hidden="true">i</span>
+        <div><strong>轻松练习，和朋友一起进步</strong>
+        <p>本模式适合好友之间练习英语，并非防作弊的竞技排名。即使多人服务暂时不可用，你仍可继续单人学习。</p></div>
       </aside>
     </main>
     <div id="site-footer"></div>

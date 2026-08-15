@@ -4,8 +4,8 @@ export function sanitizeNickname(value: string): string {
 
 export function validateNickname(value: string): string | null {
   const name = sanitizeNickname(value)
-  if (name.length < 2 || name.length > 16) return 'Nickname must contain 2–16 characters.'
-  if (!/^[\p{L}\p{N}_\- ]+$/u.test(name)) return 'Nickname may contain letters, numbers, spaces, hyphens, and underscores.'
+  if (name.length < 2 || name.length > 16) return '昵称须为 2–16 个字符。'
+  if (!/^[\p{L}\p{N}_\- ]+$/u.test(name)) return '昵称只可包含文字、数字、空格、连字号及底线。'
   return null
 }
 
