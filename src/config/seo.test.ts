@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { describe, expect, it } from 'vitest'
 
-const routes = ['', 'learn', 'play', 'multiplayer', 'placement', 'levels', 'how-to-play', 'about', 'privacy', 'terms'] as const
+const routes = ['', 'learn', 'play', 'multiplayer', 'multi-duel', 'placement', 'levels', 'how-to-play', 'about', 'privacy', 'terms'] as const
 const origin = 'https://vocabduel.example'
 
 function pageHtml(route: string): string {

@@ -2,13 +2,14 @@ import { SITE } from '../config'
 
 const mark = `<span aria-hidden="true" class="grid size-9 place-items-center rounded-xl bg-brand text-sm font-black text-white shadow-md">VD</span>`
 
-export type SiteSection = 'home' | 'learn' | 'play' | 'multiplayer' | 'placement' | 'levels' | 'howToPlay' | 'about' | 'privacy' | 'terms'
+export type SiteSection = 'home' | 'learn' | 'play' | 'multiplayer' | 'multiDuel' | 'placement' | 'levels' | 'howToPlay' | 'about' | 'privacy' | 'terms'
 
 export function siteHeader(active: SiteSection): string {
   const items = [
     ['learn', SITE.routes.learn, 'Learn'],
     ['play', SITE.routes.play, 'Play'],
     ['multiplayer', SITE.routes.multiplayer, 'Duel'],
+    ['multiDuel', SITE.routes.multiDuel, 'Multi Duel'],
     ['levels', SITE.routes.levels, 'Levels'],
   ] as const
   return `<a class="skip-link" href="#main-content">Skip to content</a>

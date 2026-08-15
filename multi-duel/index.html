@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>多人英语单词对战｜VocabDuel Multi Duel</title>
+    <meta name="description" content="建立最多四人的私人英语词汇对战房间；两人以上即可由房主开始，所有玩家共享题目、倒计时与即时排名。" />
+    <meta name="theme-color" content="#6757e8" />
+    <link rel="canonical" href="https://vocabduel.example/multi-duel/" />
+    <meta property="og:site_name" content="VocabDuel" />
+    <meta property="og:title" content="多人英语单词对战｜VocabDuel Multi Duel" />
+    <meta property="og:description" content="邀请二至四位玩家进入私人房间，进行同步英语词汇挑战。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vocabduel.example/multi-duel/" />
+    <meta property="og:image" content="https://vocabduel.example/social-card.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VocabDuel Multi Duel" />
+    <meta name="twitter:description" content="二至四位玩家同步挑战英语词汇。" />
+    <meta name="twitter:image" content="https://vocabduel.example/social-card.svg" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script type="module" src="/src/multi-duel/app.ts"></script>
+  </head>
+  <body>
+    <div id="site-header"></div>
+    <main id="main-content" class="page-shell multiplayer-page multi-duel-page">
+      <section class="page-intro multiplayer-hero">
+        <p class="eyebrow">好友多人单词对战 · 2–4 PLAYERS</p>
+        <h1>更多朋友，同一场<br><span>英语词汇对决</span></h1>
+        <p>建立最多三人或四人的私人房间。只要已有至少两位玩家且所有人准备完成，房主就能直接开始，不必为了人数不足重新建房。</p>
+        <ul class="multiplayer-benefits" aria-label="多人对战特色">
+          <li><span aria-hidden="true">✓</span> 2–4 人开局</li>
+          <li><span aria-hidden="true">✓</span> 同步题目</li>
+          <li><span aria-hidden="true">✓</span> 即时排名</li>
+        </ul>
+      </section>
+      <div id="multi-duel-app">
+        <div class="panel loading-panel" role="status"><span class="spinner" aria-hidden="true"></span><p>正在准备 Multi Duel…</p></div>
+      </div>
+      <aside class="notice multiplayer-notice" aria-label="多人对战说明">
+        <span class="notice-icon" aria-hidden="true">i</span>
+        <div><strong>Multi Duel 与原有 1v1 Duel 分开运行</strong>
+        <p>多人房间使用独立的数据空间；原有双人房间、计分和再战流程保持不变。</p></div>
+      </aside>
+    </main>
+    <div id="site-footer"></div>
+  </body>
+</html>

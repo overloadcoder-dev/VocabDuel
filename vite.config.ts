@@ -60,6 +60,7 @@ export default defineConfig(({ mode }) => {
           learn: resolve(__dirname, 'learn/index.html'),
           play: resolve(__dirname, 'play/index.html'),
           multiplayer: resolve(__dirname, 'multiplayer/index.html'),
+          multiDuel: resolve(__dirname, 'multi-duel/index.html'),
           placement: resolve(__dirname, 'placement/index.html'),
           levels: resolve(__dirname, 'levels/index.html'),
           howToPlay: resolve(__dirname, 'how-to-play/index.html'),

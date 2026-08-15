@@ -1,6 +1,6 @@
 # VocabDuel
 
-VocabDuel is a static, mobile-first English vocabulary learning game for Chinese-speaking learners. A shared, typed vocabulary dataset powers detailed word study, five solo question types, configurable challenge sessions, local weak-word practice, and casual private 1v1 matches.
+VocabDuel is a static, mobile-first English vocabulary learning game for Chinese-speaking learners. A shared, typed vocabulary dataset powers detailed word study, five solo question types, configurable challenge sessions, local weak-word practice, casual private 1v1 matches, and isolated 2–4 player Multi Duel rooms.
 
 The production site is static. Firebase Anonymous Authentication and Realtime Database are loaded only for multiplayer; normal learning and solo games do not require an account or Firebase.
 
@@ -86,9 +86,18 @@ rooms/{roomCode}/
   match/{startAt, rematchNumber}
   answers/{roundId}/{uid}/{selectedAnswer, submittedAt}
   rematchVotes/{uid}
+
+multiRooms/{roomCode}/
+  metadata/{code, hostUid, playerCount, state, seed, createdAt, expiresAt}
+  config/{level, category, gameType, questionCount, roundTimeMs, maxPlayers}
+  players/{uid}/{uid, displayName, ready, connected, joinedAt, lastSeenAt}
+  match/{startAt, rematchNumber}
+  answers/{roundId}/{uid}/{selectedAnswer, submittedAt}
+  answerCounts/{roundId}
+  rematchVotes/{uid}
 ```
 
-Room codes are locators, not passwords. Rules allow authenticated visitors to read a waiting room addressed by its code so they can join; after play starts, reads are member-only. The host controls configuration, match timing, and state changes. Each player can update only their own player record and create only their own bounded answer or rematch vote. Payload keys, strings, enums, counts, timing ranges, and room capacity are validated. Unknown top-level data is rejected.
+Room codes are locators, not passwords. Rules allow authenticated visitors to read a waiting room addressed by its code so they can join; after play starts, reads are member-only. The original `rooms` tree remains limited to two players. Multi Duel uses the separate `multiRooms` tree, supports a configured maximum of three or four, and lets a host start with any ready group of at least two. The host controls configuration, match timing, and state changes. Each player can update only their own player record and create only their own bounded answer or rematch vote. Payload keys, strings, enums, counts, timing ranges, and room capacity are validated. Unknown top-level data is rejected.
 
 The initial client uses server timestamp resolution and `/.info/serverTimeOffset` to render timers locally. It writes state transitions rather than countdown ticks. Presence uses `onDisconnect`; listeners must be detached when leaving a room.
 
@@ -116,7 +125,7 @@ The cleanup function requires a Firebase project on the Blaze plan with Cloud Sc
 ```sh
 npm install --prefix functions
 npm run functions:test
-npx firebase-tools deploy --only functions:cleanupExpiredRooms,database
+npx firebase-tools deploy --only functions:cleanupExpiredRooms,functions:cleanupExpiredMultiRooms,database
 ```
 
 Monitor Function logs for batch-cap warnings. The Pages workflow installs and tests the Functions package so it cannot silently rot, but intentionally does not deploy backend resources or Database Rules.

@@ -247,10 +247,14 @@
   .versus-grid { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: .7rem; margin-block: 2rem; }
   .player-card { min-width: 0; border: 1px solid #e1e3ea; border-radius: 1rem; padding: 1rem .5rem; }
   .player-card h2 { overflow: hidden; margin: .35rem 0; font-size: 1rem; text-overflow: ellipsis; }
+  .player-card h2 small { display: inline-block; border-radius: 999px; background: var(--color-brand-soft); padding: .15rem .4rem; color: var(--color-brand-dark); font-size: .62rem; vertical-align: .1rem; }
   .player-card p, .waiting-copy, .connection-label { color: var(--color-muted); font-size: .8rem; }
   .presence { display: inline-block; width: .65rem; height: .65rem; border-radius: 50%; background: #aeb4c0; }
   .presence.online { background: var(--color-success); box-shadow: 0 0 0 4px rgb(22 131 91 / .12); }
   .versus { color: var(--color-brand); font-size: .85rem; }
+  .multi-player-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; margin-block: 2rem 1rem; }
+  .empty-player-card { border-style: dashed; background: #fafbff; color: var(--color-muted); }
+  .empty-player-card > span { display: inline-grid; width: 1.8rem; height: 1.8rem; place-items: center; border-radius: 50%; background: #eef0f5; font-weight: 900; }
   .countdown-panel { display: grid; min-height: 25rem; place-items: center; align-content: center; gap: 1.15rem; overflow: hidden; background: radial-gradient(circle at 50% 44%, rgb(103 87 232 / .1), transparent 13rem), white; }
   .countdown-status { margin: 0; color: var(--color-brand-dark); font-size: .78rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
   .countdown-caption { max-width: 22rem; margin: 0; color: var(--color-muted); font-size: .9rem; line-height: 1.6; }
@@ -298,10 +302,21 @@
   .opponent-status[data-state="incorrect"] { border-color: #efb2bd; background: #fff1f3; color: #a62c42; }
   .score-strip { margin-top: 1rem; border-top: 1px solid #eceef2; padding-top: 1rem; color: var(--color-ink); }
   .score-strip strong { color: var(--color-brand-dark); font-size: 1.25rem; }
+  .multi-scoreboard { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .45rem; margin: 0 0 1.2rem; padding: 0; list-style: none; }
+  .multi-scoreboard li { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: .25rem .45rem; min-width: 0; border: 1px solid #e1e3ea; border-radius: .8rem; background: white; padding: .55rem .65rem; }
+  .multi-scoreboard li[data-state="offline"] { opacity: .62; }
+  .multi-scoreboard li[data-state="correct"] { border-color: #9fd9c2; background: #ebfaf4; }
+  .multi-scoreboard li[data-state="incorrect"] { border-color: #efb2bd; background: #fff1f3; }
+  .multi-scoreboard .multi-rank { display: grid; width: 1.45rem; height: 1.45rem; place-items: center; border-radius: 50%; background: var(--color-brand-soft); color: var(--color-brand-dark); font-size: .68rem; font-weight: 900; }
+  .multi-score-name { overflow: hidden; font-size: .78rem; font-weight: 850; text-overflow: ellipsis; white-space: nowrap; }
+  .multi-scoreboard strong { color: var(--color-brand-dark); font-variant-numeric: tabular-nums; }
+  .multi-scoreboard small { grid-column: 2 / -1; color: var(--color-muted); font-size: .65rem; text-align: left; }
   .results-panel > h2 { margin: .5rem 0; font-size: clamp(2.7rem, 12vw, 5rem); font-weight: 950; letter-spacing: -.04em; }
   .result-comparison { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); max-width: 43rem; align-items: center; gap: clamp(.4rem, 2vw, .9rem); margin: 1.5rem auto 2rem; }
   .result-player-card { min-width: 0; border: 1px solid #e1e3ea; border-radius: 1.1rem; background: #f5f6fa; padding: clamp(.75rem, 3vw, 1.15rem); box-shadow: 0 8px 24px rgb(23 32 51 / .06); }
   .result-player-card[data-leading] { border-color: #bcb4fa; background: linear-gradient(145deg, #f6f4ff, #eeecff); box-shadow: 0 10px 28px rgb(77 59 197 / .12); }
+  .multi-results-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; margin: 1.5rem auto 2rem; }
+  .result-rank { margin: 0 0 .35rem; color: var(--color-brand-dark); font-size: .72rem; font-weight: 900; }
   .result-player-name { overflow: hidden; margin: 0; color: var(--color-muted); font-size: .82rem; font-weight: 850; text-overflow: ellipsis; white-space: nowrap; }
   .result-player-score { display: grid; gap: .15rem; margin: .65rem 0 .8rem; }
   .result-player-score strong { color: var(--color-ink); font-size: clamp(2rem, 7vw, 3.2rem); line-height: 1; font-variant-numeric: tabular-nums; font-weight: 950; letter-spacing: -.04em; }
@@ -341,6 +356,7 @@ dialog::backdrop { background: rgb(23 32 51 / .55); backdrop-filter: blur(3px); 
   .answer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .menu-button { display: none; }
   [data-menu][hidden] { display: flex !important; }
+  .multi-player-grid, .multi-scoreboard, .multi-results-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
 @media (min-width: 800px) {
@@ -350,10 +366,11 @@ dialog::backdrop { background: rgb(23 32 51 / .55); backdrop-filter: blur(3px); 
 @media (max-width: 639px) {
   .page-wrap { width: min(1120px, calc(100% - 2.5rem)); }
   .app-header-inner { flex-wrap: wrap; gap: .5rem; padding-block: .625rem; }
-  .app-nav, .app-nav ul { width: 100%; }
-  .app-nav ul { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .35rem; }
-  .app-nav li { min-width: 0; }
-  .app-nav-link { width: 100%; padding-inline: .4rem; }
+  .app-nav { width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .app-nav::-webkit-scrollbar { display: none; }
+  .app-nav ul { display: flex; width: max-content; min-width: 100%; gap: .35rem; }
+  .app-nav li { flex: none; }
+  .app-nav-link { width: auto; padding-inline: .75rem; white-space: nowrap; }
   .learn-filters[data-collapsed] { display: none; }
   .learn-top-actions { width: 100%; }
   .learn-top-actions .button { flex: 1; }
@@ -387,6 +404,7 @@ dialog::backdrop { background: rgb(23 32 51 / .55); backdrop-filter: blur(3px); 
   .multiplayer-form > .button { width: 100%; }
   .room-code { margin-bottom: 1.15rem; letter-spacing: .1em; }
   .room-actions, .lobby-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .multi-duel-page .lobby-actions { grid-template-columns: 1fr; }
   .result-actions { display: grid; grid-template-columns: 1fr; }
   .room-actions .button, .lobby-actions .button, .result-actions .button { width: 100%; }
   .connection-label { margin: 1.25rem 0 0; }
@@ -424,6 +442,7 @@ dialog::backdrop { background: rgb(23 32 51 / .55); backdrop-filter: blur(3px); 
   .brand-name { display: none; }
   .multiplayer-form .form-row { grid-template-columns: 1fr; }
   .result-player-score strong { font-size: 1.8rem; }
+  .multi-results-grid { grid-template-columns: 1fr; }
 }
 .gentle-float { animation: float 4s ease-in-out infinite; }
 
