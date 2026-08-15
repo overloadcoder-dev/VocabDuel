@@ -334,7 +334,7 @@ export const level1Vocabulary = [
   },
   {
     id: 'orange', term: 'orange', normalizedTerm: 'orange', partOfSpeech: ['noun'], ipa: '/ˈɒɹɪndʒ/',
-    chineseShort: '橙子；橙色', chineseExplanation: '一种圆形柑橘类水果，也可表示橙色。', englishDefinition: 'A round citrus fruit, or the color between red and yellow.',
+    chineseShort: '橙子；橙色', chineseExplanation: '一种圆形柑橘类水果，也可表示橙色。', englishDefinition: 'A round citrus fruit, or the colour between red and yellow.',
     examples: [{ english: 'I bought three oranges at the market.', chinese: '我在市场买了三个橙子。' }], collocations: ['orange juice', 'orange peel'], level: 1, cefr: 'A1', categories: ['Daily English'],
   },
   {
@@ -449,7 +449,7 @@ export const level1Vocabulary = [
   },
   {
     id: 'learn', term: 'learn', normalizedTerm: 'learn', partOfSpeech: ['verb'], ipa: '/lˈɜːn/',
-    chineseShort: '学习；学会', chineseExplanation: '通过学习或练习获得知识或技能。', englishDefinition: 'To get knowledge or a skill by studying or practicing.',
+    chineseShort: '学习；学会', chineseExplanation: '通过学习或练习获得知识或技能。', englishDefinition: 'To get knowledge or a skill by studying or practising.',
     examples: [{ english: 'We learn new words every week.', chinese: '我们每周学习新单词。' }], collocations: ['learn English', 'learn to do'], level: 1, cefr: 'A1', categories: ['School'],
   },
   {
@@ -489,7 +489,7 @@ export const level1Vocabulary = [
   },
   {
     id: 'hotel', term: 'hotel', normalizedTerm: 'hotel', partOfSpeech: ['noun'], ipa: '/həʊtˈɛl/',
-    chineseShort: '酒店；旅馆', chineseExplanation: '旅客付费住宿的地方。', englishDefinition: 'A place where travelers pay to stay.',
+    chineseShort: '酒店；旅馆', chineseExplanation: '旅客付费住宿的地方。', englishDefinition: 'A place where travellers pay to stay.',
     examples: [{ english: 'Our hotel is near the beach.', chinese: '我们的酒店靠近海滩。' }], collocations: ['hotel room', 'stay at a hotel'], level: 1, cefr: 'A1', categories: ['Travel', 'Daily English'],
   },
   {
@@ -525,12 +525,12 @@ export const level1Vocabulary = [
   {
     id: 'town', term: 'town', normalizedTerm: 'town', partOfSpeech: ['noun'], ipa: '/tˈaʊn/',
     chineseShort: '城镇', chineseExplanation: '比村庄大、通常比城市小的居民区。', englishDefinition: 'A place where people live that is larger than a village and smaller than a city.',
-    examples: [{ english: 'She lives in a small town.', chinese: '她住在一个小镇。' }], collocations: ['small town', 'town center'], level: 1, cefr: 'A1', categories: ['Daily English'],
+    examples: [{ english: 'She lives in a small town.', chinese: '她住在一个小镇。' }], collocations: ['small town', 'town centre'], level: 1, cefr: 'A1', categories: ['Daily English'],
   },
   {
     id: 'city', term: 'city', normalizedTerm: 'city', partOfSpeech: ['noun'], ipa: '/sˈɪti/',
     chineseShort: '城市', chineseExplanation: '人口较多、有许多建筑和服务的大型居住地。', englishDefinition: 'A large town where many people live and work.',
-    examples: [{ english: 'Kuala Lumpur is a busy city.', chinese: '吉隆坡是一座繁忙的城市。' }], collocations: ['big city', 'city center'], level: 1, cefr: 'A1', categories: ['Daily English'],
+    examples: [{ english: 'Kuala Lumpur is a busy city.', chinese: '吉隆坡是一座繁忙的城市。' }], collocations: ['big city', 'city centre'], level: 1, cefr: 'A1', categories: ['Daily English'],
   },
   {
     id: 'village', term: 'village', normalizedTerm: 'village', partOfSpeech: ['noun'], ipa: '/vˈɪlɪdʒ/',
@@ -589,7 +589,7 @@ export const level1Vocabulary = [
   },
   {
     id: 'boat', term: 'boat', normalizedTerm: 'boat', partOfSpeech: ['noun'], ipa: '/bˈəʊt/',
-    chineseShort: '船；小船', chineseExplanation: '在水上载人或物品的交通工具。', englishDefinition: 'A vehicle used for traveling on water.',
+    chineseShort: '船；小船', chineseExplanation: '在水上载人或物品的交通工具。', englishDefinition: 'A vehicle used for travelling on water.',
     examples: [{ english: 'They crossed the river by boat.', chinese: '他们坐船过河。' }], collocations: ['fishing boat', 'boat trip'], level: 1, cefr: 'A1', categories: ['Travel'],
   },
   {
@@ -649,7 +649,7 @@ export const level1Vocabulary = [
   },
   {
     id: 'passport', term: 'passport', normalizedTerm: 'passport', partOfSpeech: ['noun'], ipa: '/pˈaspɔːt/',
-    chineseShort: '护照', chineseExplanation: '出国旅行时用来证明身份和国籍的官方证件。', englishDefinition: 'An official document used to identify you when traveling between countries.',
+    chineseShort: '护照', chineseExplanation: '出国旅行时用来证明身份和国籍的官方证件。', englishDefinition: 'An official document used to identify you when travelling between countries.',
     examples: [{ english: 'Do not forget your passport.', chinese: '不要忘记带护照。' }], collocations: ['passport number', 'valid passport'], level: 1, cefr: 'A2', categories: ['Travel'],
   },
   {
@@ -774,7 +774,7 @@ export const level1Vocabulary = [
   },
   {
     id: 'cloud', term: 'cloud', normalizedTerm: 'cloud', partOfSpeech: ['noun'], ipa: '/klˈaʊd/',
-    chineseShort: '云', chineseExplanation: '天空中由小水滴或冰晶形成的白色或灰色团块。', englishDefinition: 'A white or gray mass of tiny water drops in the sky.',
+    chineseShort: '云', chineseExplanation: '天空中由小水滴或冰晶形成的白色或灰色团块。', englishDefinition: 'A white or grey mass of tiny water drops in the sky.',
     examples: [{ english: 'There is a dark cloud above us.', chinese: '我们上方有一朵乌云。' }], collocations: ['dark cloud', 'rain cloud'], level: 1, cefr: 'A1', categories: ['Daily English'],
   },
   {
@@ -824,7 +824,7 @@ export const level1Vocabulary = [
   },
   {
     id: 'river', term: 'river', normalizedTerm: 'river', partOfSpeech: ['noun'], ipa: '/ɹˈɪvə/',
-    chineseShort: '河；河流', chineseExplanation: '自然流动并通向湖泊、海洋或另一条河的水道。', englishDefinition: 'A natural flow of water that moves toward a lake or sea.',
+    chineseShort: '河；河流', chineseExplanation: '自然流动并通向湖泊、海洋或另一条河的水道。', englishDefinition: 'A natural flow of water that moves towards a lake or sea.',
     examples: [{ english: 'The river runs through the town.', chinese: '这条河穿过城镇。' }], collocations: ['wide river', 'river water'], level: 1, cefr: 'A1', categories: ['Daily English'],
   },
   {
@@ -1014,27 +1014,27 @@ export const level1Vocabulary = [
   },
   {
     id: 'black', term: 'black', normalizedTerm: 'black', partOfSpeech: ['adjective', 'noun'], ipa: '/blˈak/',
-    chineseShort: '黑色的；黑色', chineseExplanation: '像夜晚或煤一样很深的颜色。', englishDefinition: 'The darkest color, like the color of coal.',
+    chineseShort: '黑色的；黑色', chineseExplanation: '像夜晚或煤一样很深的颜色。', englishDefinition: 'The darkest colour, like the colour of coal.',
     examples: [{ english: 'He bought a black bag.', chinese: '他买了一个黑色的包。' }], collocations: ['black shoes', 'black coffee'], level: 1, cefr: 'A1', categories: ['Daily English'],
   },
   {
     id: 'white', term: 'white', normalizedTerm: 'white', partOfSpeech: ['adjective', 'noun'], ipa: '/wˈaɪt/',
-    chineseShort: '白色的；白色', chineseExplanation: '像雪或牛奶一样很浅的颜色。', englishDefinition: 'The lightest color, like snow or milk.',
+    chineseShort: '白色的；白色', chineseExplanation: '像雪或牛奶一样很浅的颜色。', englishDefinition: 'The lightest colour, like snow or milk.',
     examples: [{ english: 'The walls are white.', chinese: '墙壁是白色的。' }], collocations: ['white shirt', 'white rice'], level: 1, cefr: 'A1', categories: ['Daily English'],
   },
   {
     id: 'red', term: 'red', normalizedTerm: 'red', partOfSpeech: ['adjective', 'noun'], ipa: '/ɹˈɛd/',
-    chineseShort: '红色的；红色', chineseExplanation: '像血液或成熟番茄一样的颜色。', englishDefinition: 'The color of blood or a ripe tomato.',
+    chineseShort: '红色的；红色', chineseExplanation: '像血液或成熟番茄一样的颜色。', englishDefinition: 'The colour of blood or a ripe tomato.',
     examples: [{ english: 'She has a red dress.', chinese: '她有一条红色连衣裙。' }], collocations: ['red light', 'red shirt'], level: 1, cefr: 'A1', categories: ['Daily English'],
   },
   {
     id: 'blue', term: 'blue', normalizedTerm: 'blue', partOfSpeech: ['adjective', 'noun'], ipa: '/blˈuː/',
-    chineseShort: '蓝色的；蓝色', chineseExplanation: '像晴朗天空一样的颜色。', englishDefinition: 'The color of a clear sky.',
+    chineseShort: '蓝色的；蓝色', chineseExplanation: '像晴朗天空一样的颜色。', englishDefinition: 'The colour of a clear sky.',
     examples: [{ english: 'The sky is blue today.', chinese: '今天的天空是蓝色的。' }], collocations: ['blue sky', 'blue shirt'], level: 1, cefr: 'A1', categories: ['Daily English'],
   },
   {
     id: 'green', term: 'green', normalizedTerm: 'green', partOfSpeech: ['adjective', 'noun'], ipa: '/ɡɹˈiːn/',
-    chineseShort: '绿色的；绿色', chineseExplanation: '像草和许多树叶一样的颜色。', englishDefinition: 'The color of grass and many leaves.',
+    chineseShort: '绿色的；绿色', chineseExplanation: '像草和许多树叶一样的颜色。', englishDefinition: 'The colour of grass and many leaves.',
     examples: [{ english: 'The door is green.', chinese: '那扇门是绿色的。' }], collocations: ['green tea', 'green light'], level: 1, cefr: 'A1', categories: ['Daily English'],
   },
   {
@@ -1104,7 +1104,7 @@ export const level1Vocabulary = [
   },
   {
     id: 'come', term: 'come', normalizedTerm: 'come', partOfSpeech: ['verb'], ipa: '/kˈʌm/',
-    chineseShort: '来；来到', chineseExplanation: '向说话者所在的位置或某个指定地点移动。', englishDefinition: 'To move toward the speaker or a particular place.',
+    chineseShort: '来；来到', chineseExplanation: '向说话者所在的位置或某个指定地点移动。', englishDefinition: 'To move towards the speaker or a particular place.',
     examples: [{ english: 'Come here and sit down.', chinese: '到这里来坐下。' }], collocations: ['come home', 'come back'], level: 1, cefr: 'A1', categories: ['Daily English'],
   },
   {
@@ -1114,7 +1114,7 @@ export const level1Vocabulary = [
   },
   {
     id: 'look', term: 'look', normalizedTerm: 'look', partOfSpeech: ['verb', 'noun'], ipa: '/lˈʊk/',
-    chineseShort: '看；观看', chineseExplanation: '把眼睛朝向某人或某物以便看清楚。', englishDefinition: 'To direct your eyes toward someone or something.',
+    chineseShort: '看；观看', chineseExplanation: '把眼睛朝向某人或某物以便看清楚。', englishDefinition: 'To direct your eyes towards someone or something.',
     examples: [{ english: 'Look at the picture on the wall.', chinese: '看看墙上的图片。' }], collocations: ['look at', 'look for'], level: 1, cefr: 'A1', categories: ['Daily English'],
   },
   {
@@ -1305,7 +1305,7 @@ export const level1Vocabulary = [
   {
     id: 'live', term: 'live', normalizedTerm: 'live', partOfSpeech: ['verb'], ipa: '/lˈaɪv/',
     chineseShort: '居住；生活', chineseExplanation: '把某地作为自己的家，也可表示活着。', englishDefinition: 'To have your home in a place or be alive.',
-    examples: [{ english: 'I live near the city center.', chinese: '我住在市中心附近。' }], collocations: ['live in', 'live with'], level: 1, cefr: 'A1', categories: ['Daily English'],
+    examples: [{ english: 'I live near the city centre.', chinese: '我住在市中心附近。' }], collocations: ['live in', 'live with'], level: 1, cefr: 'A1', categories: ['Daily English'],
   },
   {
     id: 'stay', term: 'stay', normalizedTerm: 'stay', partOfSpeech: ['verb'], ipa: '/stˈeɪ/',
@@ -1464,8 +1464,8 @@ export const level1Vocabulary = [
   },
   {
     id: 'kind', term: 'kind', normalizedTerm: 'kind', partOfSpeech: ['adjective'], ipa: '/kˈaɪnd/',
-    chineseShort: '善良的；友好的', chineseExplanation: '愿意帮助别人，并且对别人好。', englishDefinition: 'Caring and helpful toward other people.',
-    examples: [{ english: 'Our neighbor is very kind.', chinese: '我们的邻居很善良。' }], collocations: ['kind person', 'very kind'], level: 1, cefr: 'A1', categories: ['Daily English'],
+    chineseShort: '善良的；友好的', chineseExplanation: '愿意帮助别人，并且对别人好。', englishDefinition: 'Caring and helpful towards other people.',
+    examples: [{ english: 'Our neighbour is very kind.', chinese: '我们的邻居很善良。' }], collocations: ['kind person', 'very kind'], level: 1, cefr: 'A1', categories: ['Daily English'],
   },
   {
     id: 'nice', term: 'nice', normalizedTerm: 'nice', partOfSpeech: ['adjective'], ipa: '/nˈaɪs/',
@@ -1474,7 +1474,7 @@ export const level1Vocabulary = [
   },
   {
     id: 'friendly', term: 'friendly', normalizedTerm: 'friendly', partOfSpeech: ['adjective'], ipa: '/fɹˈɛndli/',
-    chineseShort: '友善的；亲切的', chineseExplanation: '对别人表现得友好、容易相处。', englishDefinition: 'Kind and pleasant toward other people.',
+    chineseShort: '友善的；亲切的', chineseExplanation: '对别人表现得友好、容易相处。', englishDefinition: 'Kind and pleasant towards other people.',
     examples: [{ english: 'The hotel staff are friendly.', chinese: '酒店员工很友善。' }], collocations: ['friendly person', 'friendly smile'], level: 1, cefr: 'A1', categories: ['Daily English'],
   },
   {

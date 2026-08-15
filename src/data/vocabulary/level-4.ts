@@ -1,6 +1,6 @@
 import type { VocabularyItem } from '../../types'
 
-/** Advanced Level 4 vocabulary centered on C1 / IELTS 7-8 usage, precision, register, and collocation control. */
+/** Advanced Level 4 vocabulary centred on C1 / IELTS 7-8 usage, precision, register, and collocation control. */
 export const level4Vocabulary = [
   {
     id: 'implement', term: 'implement', normalizedTerm: 'implement', partOfSpeech: ['verb'], ipa: '/ˈɪmplɪment/',
@@ -294,7 +294,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'converge', term: 'converge', normalizedTerm: 'converge', partOfSpeech: ['verb'], ipa: '/kənvˈɜːdʒ/',
-    chineseShort: '汇聚；趋同', chineseExplanation: '表示“汇聚；趋同”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To move toward the same point, result, opinion, or level.',
+    chineseShort: '汇聚；趋同', chineseExplanation: '表示“汇聚；趋同”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To move towards the same point, result, opinion, or level.',
     examples: [{ english: 'The report uses the expression "converge on a solution" in its analysis.', chinese: '报告在分析中使用了“趋向同一解决方案”这一表达。' }], collocations: ['converge on a solution', 'converging trends'], level: 4, cefr: 'C1', categories: ['Academic', 'Technology'],
   },
   {
@@ -344,7 +344,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'denounce', term: 'denounce', normalizedTerm: 'denounce', partOfSpeech: ['verb'], ipa: '/dɪnˈaʊns/',
-    chineseShort: '公开谴责', chineseExplanation: '表示“公开谴责”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To publicly condemn or criticize someone or something strongly.',
+    chineseShort: '公开谴责', chineseExplanation: '表示“公开谴责”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To publicly condemn or criticise someone or something strongly.',
     examples: [{ english: 'The phrase "denounce the policy" is common in formal academic or professional contexts.', chinese: '“谴责该政策”这一表达常见于正式的学术或专业语境。' }], collocations: ['denounce the policy', 'denounce corruption'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -374,7 +374,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'discern', term: 'discern', normalizedTerm: 'discern', partOfSpeech: ['verb'], ipa: '/dɪsˈɜːn/',
-    chineseShort: '辨别；察觉', chineseExplanation: '表示“辨别；察觉”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To recognize, identify, or understand something that is not immediately obvious.',
+    chineseShort: '辨别；察觉', chineseExplanation: '表示“辨别；察觉”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To recognise, identify, or understand something that is not immediately obvious.',
     examples: [{ english: 'The phrase "discern a pattern" is common in formal academic or professional contexts.', chinese: '“辨别模式”这一表达常见于正式的学术或专业语境。' }], collocations: ['discern a pattern', 'discern differences'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
@@ -389,7 +389,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'discriminate', term: 'discriminate', normalizedTerm: 'discriminate', partOfSpeech: ['verb'], ipa: '/dɪskɹˈɪmɪnˌeɪt/',
-    chineseShort: '区分；歧视', chineseExplanation: '表示“区分；歧视”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To recognize a difference between things, or to treat people unfairly based on group characteristics.',
+    chineseShort: '区分；歧视', chineseExplanation: '表示“区分；歧视”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To recognise a difference between things, or to treat people unfairly based on group characteristics.',
     examples: [{ english: 'The phrase "discriminate between variables" is common in formal academic or professional contexts.', chinese: '“区分变量”这一表达常见于正式的学术或专业语境。' }], collocations: ['discriminate between variables', 'discriminate against groups'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
@@ -554,7 +554,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'framework', term: 'framework', normalizedTerm: 'framework', partOfSpeech: ['noun'], ipa: '/fɹˈeɪmwɜːk/',
-    chineseShort: '框架；体系', chineseExplanation: '表示“框架；体系”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A basic structure of ideas, rules, or components used to organize or understand something.',
+    chineseShort: '框架；体系', chineseExplanation: '表示“框架；体系”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A basic structure of ideas, rules, or components used to organise or understand something.',
     examples: [{ english: 'The phrase "a conceptual framework" is common in formal academic or professional contexts.', chinese: '“概念框架”这一表达常见于正式的学术或专业语境。' }], collocations: ['a conceptual framework', 'regulatory framework'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -563,9 +563,9 @@ export const level4Vocabulary = [
     examples: [{ english: 'Researchers may encounter the expression "a futile attempt" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“徒劳的尝试”这一表达。' }], collocations: ['a futile attempt', 'prove futile'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
-    id: 'galvanize', term: 'galvanize', normalizedTerm: 'galvanize', partOfSpeech: ['verb'], ipa: '/ɡˈalvɐnˌaɪz/',
+    id: 'galvanize', term: 'galvanise', normalizedTerm: 'galvanise', partOfSpeech: ['verb'], ipa: '/ɡˈalvɐnˌaɪz/',
     chineseShort: '激励；促使行动', chineseExplanation: '表示“激励；促使行动”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To shock, inspire, or stimulate people into taking action.',
-    examples: [{ english: 'The report uses the expression "galvanize public support" in its analysis.', chinese: '报告在分析中使用了“激发公众支持”这一表达。' }], collocations: ['galvanize public support', 'galvanize the team'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
+    examples: [{ english: 'The report uses the expression "galvanise public support" in its analysis.', chinese: '报告在分析中使用了“激发公众支持”这一表达。' }], collocations: ['galvanise public support', 'galvanise the team'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
     id: 'hierarchy', term: 'hierarchy', normalizedTerm: 'hierarchy', partOfSpeech: ['noun'], ipa: '/hˈaɪəɹɑːki/',
@@ -579,7 +579,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'ideology', term: 'ideology', normalizedTerm: 'ideology', partOfSpeech: ['noun'], ipa: '/ˌaɪdɪˈɒlədʒi/',
-    chineseShort: '意识形态；思想体系', chineseExplanation: '表示“意识形态；思想体系”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A system of ideas and beliefs that influences political, social, or economic behavior.',
+    chineseShort: '意识形态；思想体系', chineseExplanation: '表示“意识形态；思想体系”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A system of ideas and beliefs that influences political, social, or economic behaviour.',
     examples: [{ english: 'The report uses the expression "political ideology" in its analysis.', chinese: '报告在分析中使用了“政治意识形态”这一表达。' }], collocations: ['political ideology', 'dominant ideology'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
@@ -728,9 +728,9 @@ export const level4Vocabulary = [
     examples: [{ english: 'Researchers may encounter the expression "marginal improvement" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“微小改进”这一表达。' }], collocations: ['marginal improvement', 'marginal cost'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
-    id: 'maximize', term: 'maximize', normalizedTerm: 'maximize', partOfSpeech: ['verb'], ipa: '/mˈaksɪmˌaɪz/',
+    id: 'maximize', term: 'maximise', normalizedTerm: 'maximise', partOfSpeech: ['verb'], ipa: '/mˈaksɪmˌaɪz/',
     chineseShort: '使最大化；充分利用', chineseExplanation: '表示“使最大化；充分利用”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To increase something to the greatest possible amount, degree, or effectiveness.',
-    examples: [{ english: 'The report uses the expression "maximize efficiency" in its analysis.', chinese: '报告在分析中使用了“最大化效率”这一表达。' }], collocations: ['maximize efficiency', 'maximize benefits'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
+    examples: [{ english: 'The report uses the expression "maximise efficiency" in its analysis.', chinese: '报告在分析中使用了“最大化效率”这一表达。' }], collocations: ['maximise efficiency', 'maximise benefits'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
     id: 'mechanism', term: 'mechanism', normalizedTerm: 'mechanism', partOfSpeech: ['noun'], ipa: '/mˈɛkənˌɪzəm/',
@@ -753,14 +753,14 @@ export const level4Vocabulary = [
     examples: [{ english: 'The phrase "research methodology" is common in formal academic or professional contexts.', chinese: '“研究方法论”这一表达常见于正式的学术或专业语境。' }], collocations: ['research methodology', 'sound methodology'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
-    id: 'minimize', term: 'minimize', normalizedTerm: 'minimize', partOfSpeech: ['verb'], ipa: '/mˈɪnɪmˌaɪz/',
+    id: 'minimize', term: 'minimise', normalizedTerm: 'minimise', partOfSpeech: ['verb'], ipa: '/mˈɪnɪmˌaɪz/',
     chineseShort: '使最小化；尽量减少', chineseExplanation: '表示“使最小化；尽量减少”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To reduce something to the smallest possible amount, degree, or importance.',
-    examples: [{ english: 'Researchers may encounter the expression "minimize risk" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“尽量降低风险”这一表达。' }], collocations: ['minimize risk', 'minimize disruption'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
+    examples: [{ english: 'Researchers may encounter the expression "minimise risk" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“尽量降低风险”这一表达。' }], collocations: ['minimise risk', 'minimise disruption'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
     id: 'modify', term: 'modify', normalizedTerm: 'modify', partOfSpeech: ['verb'], ipa: '/mˈɒdɪfˌaɪ/',
     chineseShort: '修改；调整', chineseExplanation: '表示“修改；调整”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To change something partly in order to improve it or make it more suitable.',
-    examples: [{ english: 'The report uses the expression "modify the design" in its analysis.', chinese: '报告在分析中使用了“修改设计”这一表达。' }], collocations: ['modify the design', 'modify behavior'], level: 4, cefr: 'C1', categories: ['Technology', 'Academic'],
+    examples: [{ english: 'The report uses the expression "modify the design" in its analysis.', chinese: '报告在分析中使用了“修改设计”这一表达。' }], collocations: ['modify the design', 'modify behaviour'], level: 4, cefr: 'C1', categories: ['Technology', 'Academic'],
   },
   {
     id: 'negligible', term: 'negligible', normalizedTerm: 'negligible', partOfSpeech: ['adjective'], ipa: '/nˈɛɡlɪdʒəbəl/',
@@ -879,7 +879,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'principle', term: 'principle', normalizedTerm: 'principle', partOfSpeech: ['noun'], ipa: '/pɹˈɪnsɪpəl/',
-    chineseShort: '原则；原理', chineseExplanation: '表示“原则；原理”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A fundamental rule, belief, or idea that guides behavior, reasoning, or a system.',
+    chineseShort: '原则；原理', chineseExplanation: '表示“原则；原理”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A fundamental rule, belief, or idea that guides behaviour, reasoning, or a system.',
     examples: [{ english: 'The report uses the expression "a guiding principle" in its analysis.', chinese: '报告在分析中使用了“指导原则”这一表达。' }], collocations: ['a guiding principle', 'underlying principle'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -889,7 +889,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'prohibit', term: 'prohibit', normalizedTerm: 'prohibit', partOfSpeech: ['verb'], ipa: '/pɹəhˈɪbɪt/',
-    chineseShort: '禁止；不准', chineseExplanation: '表示“禁止；不准”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To formally forbid an action, activity, or behavior by rule or law.',
+    chineseShort: '禁止；不准', chineseExplanation: '表示“禁止；不准”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To formally forbid an action, activity, or behaviour by rule or law.',
     examples: [{ english: 'Researchers may encounter the expression "prohibit smoking" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“禁止吸烟”这一表达。' }], collocations: ['prohibit smoking', 'prohibit access'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
@@ -954,7 +954,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'reinforce', term: 'reinforce', normalizedTerm: 'reinforce', partOfSpeech: ['verb'], ipa: '/ɹˌiːɪnfˈɔːs/',
-    chineseShort: '加强；强化', chineseExplanation: '表示“加强；强化”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To strengthen an idea, behavior, structure, or effect through additional support.',
+    chineseShort: '加强；强化', chineseExplanation: '表示“加强；强化”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To strengthen an idea, behaviour, structure, or effect through additional support.',
     examples: [{ english: 'The report uses the expression "reinforce the message" in its analysis.', chinese: '报告在分析中使用了“强化信息”这一表达。' }], collocations: ['reinforce the message', 'reinforce existing patterns'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -969,7 +969,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'render', term: 'render', normalizedTerm: 'render', partOfSpeech: ['verb'], ipa: '/ɹˈɛndə/',
-    chineseShort: '使成为；提供', chineseExplanation: '表示“使成为；提供”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To cause something to become a particular state, or to provide a service, judgment, or assistance.',
+    chineseShort: '使成为；提供', chineseExplanation: '表示“使成为；提供”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To cause something to become a particular state, or to provide a service, judgement, or assistance.',
     examples: [{ english: 'The report uses the expression "render the system ineffective" in its analysis.', chinese: '报告在分析中使用了“使系统失效”这一表达。' }], collocations: ['render the system ineffective', 'render assistance'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -1008,14 +1008,14 @@ export const level4Vocabulary = [
     examples: [{ english: 'The phrase "a salient feature" is common in formal academic or professional contexts.', chinese: '“显著特征”这一表达常见于正式的学术或专业语境。' }], collocations: ['a salient feature', 'salient point'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
-    id: 'scrutinize', term: 'scrutinize', normalizedTerm: 'scrutinize', partOfSpeech: ['verb'], ipa: '/skɹˈuːtɪnˌaɪz/',
+    id: 'scrutinize', term: 'scrutinise', normalizedTerm: 'scrutinise', partOfSpeech: ['verb'], ipa: '/skɹˈuːtɪnˌaɪz/',
     chineseShort: '仔细审查', chineseExplanation: '表示“仔细审查”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To examine something very carefully in order to detect details, weaknesses, or errors.',
-    examples: [{ english: 'Researchers may encounter the expression "scrutinize the evidence" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“仔细审查证据”这一表达。' }], collocations: ['scrutinize the evidence', 'scrutinize spending'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
+    examples: [{ english: 'Researchers may encounter the expression "scrutinise the evidence" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“仔细审查证据”这一表达。' }], collocations: ['scrutinise the evidence', 'scrutinise spending'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
-    id: 'skeptical', term: 'skeptical', normalizedTerm: 'skeptical', partOfSpeech: ['adjective'], ipa: '/skˈɛptɪkəl/',
+    id: 'skeptical', term: 'sceptical', normalizedTerm: 'sceptical', partOfSpeech: ['adjective'], ipa: '/skˈɛptɪkəl/',
     chineseShort: '怀疑的；持保留态度的', chineseExplanation: '表示“怀疑的；持保留态度的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Not easily convinced and inclined to question whether a claim is true or reliable.',
-    examples: [{ english: 'The report uses the expression "skeptical of the claim" in its analysis.', chinese: '报告在分析中使用了“对该主张持怀疑态度”这一表达。' }], collocations: ['skeptical of the claim', 'remain skeptical'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
+    examples: [{ english: 'The report uses the expression "sceptical of the claim" in its analysis.', chinese: '报告在分析中使用了“对该主张持怀疑态度”这一表达。' }], collocations: ['sceptical of the claim', 'remain sceptical'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
     id: 'simultaneous', term: 'simultaneous', normalizedTerm: 'simultaneous', partOfSpeech: ['adjective'], ipa: '/sˌɪməltˈeɪniəs/',
@@ -1024,7 +1024,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'sophisticated', term: 'sophisticated', normalizedTerm: 'sophisticated', partOfSpeech: ['adjective'], ipa: '/səfˈɪstɪkˌeɪtɪd/',
-    chineseShort: '复杂先进的；老练的', chineseExplanation: '表示“复杂先进的；老练的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Highly developed, complex, refined, or showing advanced knowledge and judgment.',
+    chineseShort: '复杂先进的；老练的', chineseExplanation: '表示“复杂先进的；老练的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Highly developed, complex, refined, or showing advanced knowledge and judgement.',
     examples: [{ english: 'Researchers may encounter the expression "a sophisticated model" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“复杂先进的模型”这一表达。' }], collocations: ['a sophisticated model', 'sophisticated analysis'], level: 4, cefr: 'C1', categories: ['Academic', 'Technology'],
   },
   {
@@ -1034,7 +1034,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'stance', term: 'stance', normalizedTerm: 'stance', partOfSpeech: ['noun'], ipa: '/stˈans/',
-    chineseShort: '立场；态度', chineseExplanation: '表示“立场；态度”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A particular position, opinion, or attitude toward an issue.',
+    chineseShort: '立场；态度', chineseExplanation: '表示“立场；态度”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A particular position, opinion, or attitude towards an issue.',
     examples: [{ english: 'The phrase "adopt a stance" is common in formal academic or professional contexts.', chinese: '“采取立场”这一表达常见于正式的学术或专业语境。' }], collocations: ['adopt a stance', 'a firm stance'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -1269,7 +1269,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'configuration', term: 'configuration', normalizedTerm: 'configuration', partOfSpeech: ['noun'], ipa: '/kənfˌɪɡjəɹˈeɪʃən/',
-    chineseShort: '配置；结构安排', chineseExplanation: '表示“配置；结构安排”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The arrangement or organization of the parts of a system or object.',
+    chineseShort: '配置；结构安排', chineseExplanation: '表示“配置；结构安排”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The arrangement or organisation of the parts of a system or object.',
     examples: [{ english: 'The report uses the expression "system configuration" in its analysis.', chinese: '报告在分析中使用了“系统配置”这一表达。' }], collocations: ['system configuration', 'network configuration'], level: 4, cefr: 'C1', categories: ['Technology', 'Academic'],
   },
   {
@@ -1309,7 +1309,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'deference', term: 'deference', normalizedTerm: 'deference', partOfSpeech: ['noun'], ipa: '/dˈɛfɹəns/',
-    chineseShort: '尊重；顺从', chineseExplanation: '表示“尊重；顺从”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Respectful submission to another person\'s judgment, authority, or wishes.',
+    chineseShort: '尊重；顺从', chineseExplanation: '表示“尊重；顺从”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Respectful submission to another person\'s judgement, authority, or wishes.',
     examples: [{ english: 'Researchers may encounter the expression "show deference" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“表示尊重”这一表达。' }], collocations: ['show deference', 'deference to authority'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
@@ -1339,7 +1339,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'differentiate', term: 'differentiate', normalizedTerm: 'differentiate', partOfSpeech: ['verb'], ipa: '/dˌɪfəɹˈɛnʃɪˌeɪt/',
-    chineseShort: '区分；使差异化', chineseExplanation: '表示“区分；使差异化”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To recognize, show, or create a difference between people, things, or ideas.',
+    chineseShort: '区分；使差异化', chineseExplanation: '表示“区分；使差异化”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To recognise, show, or create a difference between people, things, or ideas.',
     examples: [{ english: 'Researchers may encounter the expression "differentiate between concepts" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“区分概念”这一表达。' }], collocations: ['differentiate between concepts', 'differentiate a product'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -1369,7 +1369,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'dynamic', term: 'dynamic', normalizedTerm: 'dynamic', partOfSpeech: ['adjective', 'noun'], ipa: '/daɪnˈamɪk/',
-    chineseShort: '动态的；动力', chineseExplanation: '表示“动态的；动力”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Characterized by constant change, activity, or progress, or a force shaping interaction.',
+    chineseShort: '动态的；动力', chineseExplanation: '表示“动态的；动力”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Characterised by constant change, activity, or progress, or a force shaping interaction.',
     examples: [{ english: 'Researchers may encounter the expression "a dynamic environment" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“动态环境”这一表达。' }], collocations: ['a dynamic environment', 'group dynamics'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -1384,7 +1384,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'entity', term: 'entity', normalizedTerm: 'entity', partOfSpeech: ['noun'], ipa: '/ˈɛntɪti/',
-    chineseShort: '实体；独立存在体', chineseExplanation: '表示“实体；独立存在体”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Something that exists as a distinct and independent unit, organization, or concept.',
+    chineseShort: '实体；独立存在体', chineseExplanation: '表示“实体；独立存在体”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Something that exists as a distinct and independent unit, organisation, or concept.',
     examples: [{ english: 'Researchers may encounter the expression "a legal entity" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“法律实体”这一表达。' }], collocations: ['a legal entity', 'separate entity'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
@@ -1409,7 +1409,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'external', term: 'external', normalizedTerm: 'external', partOfSpeech: ['adjective'], ipa: '/ɛkstˈɜːnəl/',
-    chineseShort: '外部的；外来的', chineseExplanation: '表示“外部的；外来的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Existing, occurring, or originating outside a particular system, organization, or body.',
+    chineseShort: '外部的；外来的', chineseExplanation: '表示“外部的；外来的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Existing, occurring, or originating outside a particular system, organisation, or body.',
     examples: [{ english: 'The phrase "external factors" is common in formal academic or professional contexts.', chinese: '“外部因素”这一表达常见于正式的学术或专业语境。' }], collocations: ['external factors', 'external pressure'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -1429,7 +1429,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'protocol', term: 'protocol', normalizedTerm: 'protocol', partOfSpeech: ['noun'], ipa: '/pɹˈəʊtəkˌɒl/',
-    chineseShort: '协议；规程', chineseExplanation: '表示“协议；规程”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A formal set of rules, procedures, or technical standards governing behavior or communication.',
+    chineseShort: '协议；规程', chineseExplanation: '表示“协议；规程”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A formal set of rules, procedures, or technical standards governing behaviour or communication.',
     examples: [{ english: 'Researchers may encounter the expression "security protocol" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“安全协议”这一表达。' }], collocations: ['security protocol', 'research protocol'], level: 4, cefr: 'C1', categories: ['Technology', 'Academic'],
   },
   {
@@ -1469,7 +1469,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'sector', term: 'sector', normalizedTerm: 'sector', partOfSpeech: ['noun'], ipa: '/sˈɛktə/',
-    chineseShort: '行业；部门', chineseExplanation: '表示“行业；部门”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A distinct part of an economy, society, organization, or field of activity.',
+    chineseShort: '行业；部门', chineseExplanation: '表示“行业；部门”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A distinct part of an economy, society, organisation, or field of activity.',
     examples: [{ english: 'The phrase "public sector" is common in formal academic or professional contexts.', chinese: '“公共部门”这一表达常见于正式的学术或专业语境。' }], collocations: ['public sector', 'technology sector'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
@@ -1543,9 +1543,9 @@ export const level4Vocabulary = [
     examples: [{ english: 'The report uses the expression "undergo significant change" in its analysis.', chinese: '报告在分析中使用了“经历重大变化”这一表达。' }], collocations: ['undergo significant change', 'undergo evaluation'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
-    id: 'utilize', term: 'utilize', normalizedTerm: 'utilize', partOfSpeech: ['verb'], ipa: '/jˈuːtɪlˌaɪz/',
+    id: 'utilize', term: 'utilise', normalizedTerm: 'utilise', partOfSpeech: ['verb'], ipa: '/jˈuːtɪlˌaɪz/',
     chineseShort: '利用；使用', chineseExplanation: '表示“利用；使用”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To make practical or effective use of something.',
-    examples: [{ english: 'The phrase "utilize available resources" is common in formal academic or professional contexts.', chinese: '“利用可用资源”这一表达常见于正式的学术或专业语境。' }], collocations: ['utilize available resources', 'utilize technology'], level: 4, cefr: 'C1', categories: ['Business', 'Technology'],
+    examples: [{ english: 'The phrase "utilise available resources" is common in formal academic or professional contexts.', chinese: '“利用可用资源”这一表达常见于正式的学术或专业语境。' }], collocations: ['utilise available resources', 'utilise technology'], level: 4, cefr: 'C1', categories: ['Business', 'Technology'],
   },
   {
     id: 'variable', term: 'variable', normalizedTerm: 'variable', partOfSpeech: ['noun', 'adjective'], ipa: '/vˈeəɹɪəbəl/',
@@ -1564,7 +1564,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'acknowledge', term: 'acknowledge', normalizedTerm: 'acknowledge', partOfSpeech: ['verb'], ipa: '/ɐknˈɒlɪdʒ/',
-    chineseShort: '承认；确认', chineseExplanation: '表示“承认；确认”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To accept that something is true, valid, or important, or to formally recognize it.',
+    chineseShort: '承认；确认', chineseExplanation: '表示“承认；确认”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To accept that something is true, valid, or important, or to formally recognise it.',
     examples: [{ english: 'Researchers may encounter the expression "acknowledge a problem" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“承认问题”这一表达。' }], collocations: ['acknowledge a problem', 'acknowledge responsibility'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -1589,17 +1589,17 @@ export const level4Vocabulary = [
   },
   {
     id: 'administer', term: 'administer', normalizedTerm: 'administer', partOfSpeech: ['verb'], ipa: '/ɐdmˈɪnɪstə/',
-    chineseShort: '管理；实施', chineseExplanation: '表示“管理；实施”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To manage the operation of an organization, system, policy, test, or treatment.',
-    examples: [{ english: 'The phrase "administer a program" is common in formal academic or professional contexts.', chinese: '“实施项目”这一表达常见于正式的学术或专业语境。' }], collocations: ['administer a program', 'administer a test'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
+    chineseShort: '管理；实施', chineseExplanation: '表示“管理；实施”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To manage the operation of an organisation, system, policy, test, or treatment.',
+    examples: [{ english: 'The phrase "administer a programme" is common in formal academic or professional contexts.', chinese: '“实施项目”这一表达常见于正式的学术或专业语境。' }], collocations: ['administer a programme', 'administer a test'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
     id: 'administrative', term: 'administrative', normalizedTerm: 'administrative', partOfSpeech: ['adjective'], ipa: '/ɐdmˈɪnɪstɹətˌɪv/',
-    chineseShort: '行政的；管理的', chineseExplanation: '表示“行政的；管理的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Relating to the organization, management, or routine operation of an institution.',
+    chineseShort: '行政的；管理的', chineseExplanation: '表示“行政的；管理的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Relating to the organisation, management, or routine operation of an institution.',
     examples: [{ english: 'Researchers may encounter the expression "administrative procedures" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“行政程序”这一表达。' }], collocations: ['administrative procedures', 'administrative burden'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
     id: 'affiliation', term: 'affiliation', normalizedTerm: 'affiliation', partOfSpeech: ['noun'], ipa: '/ɐfˌɪlɪˈeɪʃən/',
-    chineseShort: '隶属；关联', chineseExplanation: '表示“隶属；关联”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A formal or informal connection with an organization, group, institution, or cause.',
+    chineseShort: '隶属；关联', chineseExplanation: '表示“隶属；关联”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A formal or informal connection with an organisation, group, institution, or cause.',
     examples: [{ english: 'The report uses the expression "institutional affiliation" in its analysis.', chinese: '报告在分析中使用了“机构隶属关系”这一表达。' }], collocations: ['institutional affiliation', 'political affiliation'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -1629,7 +1629,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'apparatus', term: 'apparatus', normalizedTerm: 'apparatus', partOfSpeech: ['noun'], ipa: '/ˌapəɹˈeɪtəs/',
-    chineseShort: '装置；机构体系', chineseExplanation: '表示“装置；机构体系”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A set of equipment used for a purpose, or an organized system serving a function.',
+    chineseShort: '装置；机构体系', chineseExplanation: '表示“装置；机构体系”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A set of equipment used for a purpose, or an organised system serving a function.',
     examples: [{ english: 'The report uses the expression "laboratory apparatus" in its analysis.', chinese: '报告在分析中使用了“实验室设备”这一表达。' }], collocations: ['laboratory apparatus', 'state apparatus'], level: 4, cefr: 'C1', categories: ['Academic', 'Technology'],
   },
   {
@@ -1673,13 +1673,13 @@ export const level4Vocabulary = [
     examples: [{ english: 'Researchers may encounter the expression "authoritative source" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“权威来源”这一表达。' }], collocations: ['authoritative source', 'authoritative guidance'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
-    id: 'authorize', term: 'authorize', normalizedTerm: 'authorize', partOfSpeech: ['verb'], ipa: '/ˈɔːθəɹˌaɪz/',
+    id: 'authorize', term: 'authorise', normalizedTerm: 'authorise', partOfSpeech: ['verb'], ipa: '/ˈɔːθəɹˌaɪz/',
     chineseShort: '授权；批准', chineseExplanation: '表示“授权；批准”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To give official permission, power, or legal authority for an action.',
-    examples: [{ english: 'The report uses the expression "authorize access" in its analysis.', chinese: '报告在分析中使用了“授权访问”这一表达。' }], collocations: ['authorize access', 'authorize payment'], level: 4, cefr: 'C1', categories: ['Business', 'Technology'],
+    examples: [{ english: 'The report uses the expression "authorise access" in its analysis.', chinese: '报告在分析中使用了“授权访问”这一表达。' }], collocations: ['authorise access', 'authorise payment'], level: 4, cefr: 'C1', categories: ['Business', 'Technology'],
   },
   {
     id: 'bias', term: 'bias', normalizedTerm: 'bias', partOfSpeech: ['noun', 'verb'], ipa: '/bˈaɪəs/',
-    chineseShort: '偏见；偏向', chineseExplanation: '表示“偏见；偏向”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A systematic preference or distortion that unfairly influences judgment, data, or outcomes.',
+    chineseShort: '偏见；偏向', chineseExplanation: '表示“偏见；偏向”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A systematic preference or distortion that unfairly influences judgement, data, or outcomes.',
     examples: [{ english: 'The phrase "reduce bias" is common in formal academic or professional contexts.', chinese: '“减少偏差”这一表达常见于正式的学术或专业语境。' }], collocations: ['reduce bias', 'selection bias'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
@@ -1694,13 +1694,13 @@ export const level4Vocabulary = [
   },
   {
     id: 'capacity', term: 'capacity', normalizedTerm: 'capacity', partOfSpeech: ['noun'], ipa: '/kəpˈasɪti/',
-    chineseShort: '能力；容量', chineseExplanation: '表示“能力；容量”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The maximum ability, amount, or potential that a person, system, or organization can provide or contain.',
+    chineseShort: '能力；容量', chineseExplanation: '表示“能力；容量”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The maximum ability, amount, or potential that a person, system, or organisation can provide or contain.',
     examples: [{ english: 'The phrase "institutional capacity" is common in formal academic or professional contexts.', chinese: '“机构能力”这一表达常见于正式的学术或专业语境。' }], collocations: ['institutional capacity', 'production capacity'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
-    id: 'characterize', term: 'characterize', normalizedTerm: 'characterize', partOfSpeech: ['verb'], ipa: '/kˈaɹɪktəɹˌaɪz/',
+    id: 'characterize', term: 'characterise', normalizedTerm: 'characterise', partOfSpeech: ['verb'], ipa: '/kˈaɹɪktəɹˌaɪz/',
     chineseShort: '描述…特征；以…为特点', chineseExplanation: '表示“描述…特征；以…为特点”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To describe the distinctive qualities of something or to be typical of it.',
-    examples: [{ english: 'Researchers may encounter the expression "characterize the trend" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“描述趋势特征”这一表达。' }], collocations: ['characterize the trend', 'characterize a period'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
+    examples: [{ english: 'Researchers may encounter the expression "characterise the trend" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“描述趋势特征”这一表达。' }], collocations: ['characterise the trend', 'characterise a period'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
     id: 'clarify', term: 'clarify', normalizedTerm: 'clarify', partOfSpeech: ['verb'], ipa: '/klˈaɹɪfˌaɪ/',
@@ -1719,12 +1719,12 @@ export const level4Vocabulary = [
   },
   {
     id: 'collaboration', term: 'collaboration', normalizedTerm: 'collaboration', partOfSpeech: ['noun'], ipa: '/kəlˌabəɹˈeɪʃən/',
-    chineseShort: '合作；协作', chineseExplanation: '表示“合作；协作”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The process of working jointly with others toward a common goal or output.',
+    chineseShort: '合作；协作', chineseExplanation: '表示“合作；协作”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The process of working jointly with others towards a common goal or output.',
     examples: [{ english: 'The report uses the expression "international collaboration" in its analysis.', chinese: '报告在分析中使用了“国际合作”这一表达。' }], collocations: ['international collaboration', 'close collaboration'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
     id: 'commodity', term: 'commodity', normalizedTerm: 'commodity', partOfSpeech: ['noun'], ipa: '/kəmˈɒdɪti/',
-    chineseShort: '商品；大宗商品', chineseExplanation: '表示“商品；大宗商品”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A raw material or standardized product that can be bought, sold, or traded.',
+    chineseShort: '商品；大宗商品', chineseExplanation: '表示“商品；大宗商品”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A raw material or standardised product that can be bought, sold, or traded.',
     examples: [{ english: 'The phrase "commodity prices" is common in formal academic or professional contexts.', chinese: '“商品价格”这一表达常见于正式的学术或专业语境。' }], collocations: ['commodity prices', 'agricultural commodity'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
@@ -1769,12 +1769,12 @@ export const level4Vocabulary = [
   },
   {
     id: 'confidential', term: 'confidential', normalizedTerm: 'confidential', partOfSpeech: ['adjective'], ipa: '/kˌɒnfɪdˈɛnʃəl/',
-    chineseShort: '保密的；机密的', chineseExplanation: '表示“保密的；机密的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Intended to be kept private and disclosed only to authorized people.',
+    chineseShort: '保密的；机密的', chineseExplanation: '表示“保密的；机密的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Intended to be kept private and disclosed only to authorised people.',
     examples: [{ english: 'The phrase "confidential information" is common in formal academic or professional contexts.', chinese: '“机密信息”这一表达常见于正式的学术或专业语境。' }], collocations: ['confidential information', 'confidential document'], level: 4, cefr: 'C1', categories: ['Business', 'Technology'],
   },
   {
     id: 'confidentiality', term: 'confidentiality', normalizedTerm: 'confidentiality', partOfSpeech: ['noun'], ipa: '/kˌɒnfɪdˈɛnʃɪˈalɪti/',
-    chineseShort: '保密性；机密性', chineseExplanation: '表示“保密性；机密性”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The principle or condition of keeping sensitive information private and protected from unauthorized disclosure.',
+    chineseShort: '保密性；机密性', chineseExplanation: '表示“保密性；机密性”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The principle or condition of keeping sensitive information private and protected from unauthorised disclosure.',
     examples: [{ english: 'Researchers may encounter the expression "maintain confidentiality" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“保持机密性”这一表达。' }], collocations: ['maintain confidentiality', 'patient confidentiality'], level: 4, cefr: 'C1', categories: ['Business', 'Technology'],
   },
   {
@@ -1784,7 +1784,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'conformity', term: 'conformity', normalizedTerm: 'conformity', partOfSpeech: ['noun'], ipa: '/kənfˈɔːmɪti/',
-    chineseShort: '一致；遵从', chineseExplanation: '表示“一致；遵从”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Behavior or conditions that match accepted rules, standards, expectations, or social norms.',
+    chineseShort: '一致；遵从', chineseExplanation: '表示“一致；遵从”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Behaviour or conditions that match accepted rules, standards, expectations, or social norms.',
     examples: [{ english: 'The phrase "social conformity" is common in formal academic or professional contexts.', chinese: '“社会从众”这一表达常见于正式的学术或专业语境。' }], collocations: ['social conformity', 'conformity with standards'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
@@ -1819,7 +1819,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'coordinate', term: 'coordinate', normalizedTerm: 'coordinate', partOfSpeech: ['verb'], ipa: '/kəʊˈɔːdɪnət/',
-    chineseShort: '协调；统筹', chineseExplanation: '表示“协调；统筹”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To organize people, activities, or resources so that they work together effectively.',
+    chineseShort: '协调；统筹', chineseExplanation: '表示“协调；统筹”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To organise people, activities, or resources so that they work together effectively.',
     examples: [{ english: 'Researchers may encounter the expression "coordinate efforts" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“协调努力”这一表达。' }], collocations: ['coordinate efforts', 'coordinate activities'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
@@ -1829,7 +1829,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'counteract', term: 'counteract', normalizedTerm: 'counteract', partOfSpeech: ['verb'], ipa: '/kˌaʊntəɹˈakt/',
-    chineseShort: '抵消；对抗', chineseExplanation: '表示“抵消；对抗”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To reduce, neutralize, or oppose the effect of something undesirable.',
+    chineseShort: '抵消；对抗', chineseExplanation: '表示“抵消；对抗”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To reduce, neutralise, or oppose the effect of something undesirable.',
     examples: [{ english: 'The phrase "counteract the effects" is common in formal academic or professional contexts.', chinese: '“抵消影响”这一表达常见于正式的学术或专业语境。' }], collocations: ['counteract the effects', 'counteract inflation'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -1843,9 +1843,9 @@ export const level4Vocabulary = [
     examples: [{ english: 'The report uses the expression "cultivate trust" in its analysis.', chinese: '报告在分析中使用了“培养信任”这一表达。' }], collocations: ['cultivate trust', 'cultivate expertise'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
-    id: 'decentralize', term: 'decentralize', normalizedTerm: 'decentralize', partOfSpeech: ['verb'], ipa: '/dɪsˈɛntɹəlˌaɪz/',
+    id: 'decentralize', term: 'decentralise', normalizedTerm: 'decentralise', partOfSpeech: ['verb'], ipa: '/dɪsˈɛntɹəlˌaɪz/',
     chineseShort: '分散权力；去中心化', chineseExplanation: '表示“分散权力；去中心化”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To distribute authority, control, or operations away from a single central body.',
-    examples: [{ english: 'The phrase "decentralize decision-making" is common in formal academic or professional contexts.', chinese: '“分散决策权”这一表达常见于正式的学术或专业语境。' }], collocations: ['decentralize decision-making', 'decentralize services'], level: 4, cefr: 'C1', categories: ['Business', 'Technology'],
+    examples: [{ english: 'The phrase "decentralise decision-making" is common in formal academic or professional contexts.', chinese: '“分散决策权”这一表达常见于正式的学术或专业语境。' }], collocations: ['decentralise decision-making', 'decentralise services'], level: 4, cefr: 'C1', categories: ['Business', 'Technology'],
   },
   {
     id: 'declaration', term: 'declaration', normalizedTerm: 'declaration', partOfSpeech: ['noun'], ipa: '/dˌɛkləɹˈeɪʃən/',
@@ -1873,9 +1873,9 @@ export const level4Vocabulary = [
     examples: [{ english: 'The report uses the expression "designate an authority" in its analysis.', chinese: '报告在分析中使用了“指定主管机构”这一表达。' }], collocations: ['designate an authority', 'designate an area'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
-    id: 'destabilize', term: 'destabilize', normalizedTerm: 'destabilize', partOfSpeech: ['verb'], ipa: '/diːstˈeɪbɪlˌaɪz/',
+    id: 'destabilize', term: 'destabilise', normalizedTerm: 'destabilise', partOfSpeech: ['verb'], ipa: '/diːstˈeɪbɪlˌaɪz/',
     chineseShort: '使不稳定；破坏稳定', chineseExplanation: '表示“使不稳定；破坏稳定”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To make a system, institution, market, or situation less stable and more likely to fail or change suddenly.',
-    examples: [{ english: 'The phrase "destabilize the economy" is common in formal academic or professional contexts.', chinese: '“破坏经济稳定”这一表达常见于正式的学术或专业语境。' }], collocations: ['destabilize the economy', 'destabilize a region'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
+    examples: [{ english: 'The phrase "destabilise the economy" is common in formal academic or professional contexts.', chinese: '“破坏经济稳定”这一表达常见于正式的学术或专业语境。' }], collocations: ['destabilise the economy', 'destabilise a region'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
     id: 'diagnose', term: 'diagnose', normalizedTerm: 'diagnose', partOfSpeech: ['verb'], ipa: '/dˌaɪəɡnˈəʊz/',
@@ -1904,7 +1904,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'dismantle', term: 'dismantle', normalizedTerm: 'dismantle', partOfSpeech: ['verb'], ipa: '/dɪsmˈantəl/',
-    chineseShort: '拆除；废除', chineseExplanation: '表示“拆除；废除”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To take a structure, system, or organization apart, physically or institutionally.',
+    chineseShort: '拆除；废除', chineseExplanation: '表示“拆除；废除”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To take a structure, system, or organisation apart, physically or institutionally.',
     examples: [{ english: 'The phrase "dismantle a system" is common in formal academic or professional contexts.', chinese: '“废除一个体系”这一表达常见于正式的学术或专业语境。' }], collocations: ['dismantle a system', 'dismantle equipment'], level: 4, cefr: 'C1', categories: ['Academic', 'Technology'],
   },
   {
@@ -1959,7 +1959,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'engagement', term: 'engagement', normalizedTerm: 'engagement', partOfSpeech: ['noun'], ipa: '/ɛnɡˈeɪdʒmənt/',
-    chineseShort: '参与；投入', chineseExplanation: '表示“参与；投入”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Active involvement, attention, or interaction with an activity, organization, issue, or audience.',
+    chineseShort: '参与；投入', chineseExplanation: '表示“参与；投入”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Active involvement, attention, or interaction with an activity, organisation, issue, or audience.',
     examples: [{ english: 'The report uses the expression "public engagement" in its analysis.', chinese: '报告在分析中使用了“公众参与”这一表达。' }], collocations: ['public engagement', 'employee engagement'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -1989,7 +1989,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'expenditure', term: 'expenditure', normalizedTerm: 'expenditure', partOfSpeech: ['noun'], ipa: '/ɛkspˈɛndɪtʃə/',
-    chineseShort: '支出；花费', chineseExplanation: '表示“支出；花费”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Money spent by a person, organization, or government for a particular purpose.',
+    chineseShort: '支出；花费', chineseExplanation: '表示“支出；花费”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Money spent by a person, organisation, or government for a particular purpose.',
     examples: [{ english: 'The report uses the expression "public expenditure" in its analysis.', chinese: '报告在分析中使用了“公共支出”这一表达。' }], collocations: ['public expenditure', 'capital expenditure'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
@@ -2009,7 +2009,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'faction', term: 'faction', normalizedTerm: 'faction', partOfSpeech: ['noun'], ipa: '/fˈakʃən/',
-    chineseShort: '派系；小集团', chineseExplanation: '表示“派系；小集团”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A smaller organized group within a larger body, often with competing interests or views.',
+    chineseShort: '派系；小集团', chineseExplanation: '表示“派系；小集团”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A smaller organised group within a larger body, often with competing interests or views.',
     examples: [{ english: 'The phrase "political faction" is common in formal academic or professional contexts.', chinese: '“政治派系”这一表达常见于正式的学术或专业语境。' }], collocations: ['political faction', 'rival faction'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -2029,17 +2029,17 @@ export const level4Vocabulary = [
   },
   {
     id: 'governance', term: 'governance', normalizedTerm: 'governance', partOfSpeech: ['noun'], ipa: '/ɡˈʌvənəns/',
-    chineseShort: '治理；管理机制', chineseExplanation: '表示“治理；管理机制”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The systems, rules, and processes through which an organization, institution, or society is directed and controlled.',
+    chineseShort: '治理；管理机制', chineseExplanation: '表示“治理；管理机制”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The systems, rules, and processes through which an organisation, institution, or society is directed and controlled.',
     examples: [{ english: 'Researchers may encounter the expression "corporate governance" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“公司治理”这一表达。' }], collocations: ['corporate governance', 'good governance'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
     id: 'incentive', term: 'incentive', normalizedTerm: 'incentive', partOfSpeech: ['noun'], ipa: '/ɪnsˈɛntɪv/',
-    chineseShort: '激励；刺激因素', chineseExplanation: '表示“激励；刺激因素”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Something that motivates or encourages a person, organization, or market participant to act in a particular way.',
+    chineseShort: '激励；刺激因素', chineseExplanation: '表示“激励；刺激因素”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Something that motivates or encourages a person, organisation, or market participant to act in a particular way.',
     examples: [{ english: 'The report uses the expression "financial incentive" in its analysis.', chinese: '报告在分析中使用了“经济激励”这一表达。' }], collocations: ['financial incentive', 'provide an incentive'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
     id: 'infrastructure', term: 'infrastructure', normalizedTerm: 'infrastructure', partOfSpeech: ['noun'], ipa: '/ˈɪnfɹəstɹˌʌktʃə/',
-    chineseShort: '基础设施；基础系统', chineseExplanation: '表示“基础设施；基础系统”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The basic physical, organizational, and technological systems needed for a society or organization to function.',
+    chineseShort: '基础设施；基础系统', chineseExplanation: '表示“基础设施；基础系统”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The basic physical, organizational, and technological systems needed for a society or organisation to function.',
     examples: [{ english: 'The phrase "public infrastructure" is common in formal academic or professional contexts.', chinese: '“公共基础设施”这一表达常见于正式的学术或专业语境。' }], collocations: ['public infrastructure', 'digital infrastructure'], level: 4, cefr: 'C1', categories: ['Academic', 'Technology'],
   },
   {
@@ -2049,7 +2049,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'institutional', term: 'institutional', normalizedTerm: 'institutional', partOfSpeech: ['adjective'], ipa: '/ˌɪnstɪtjˈuːʃənəl/',
-    chineseShort: '制度的；机构的', chineseExplanation: '表示“制度的；机构的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Relating to established organizations, formal systems, or long-standing social arrangements.',
+    chineseShort: '制度的；机构的', chineseExplanation: '表示“制度的；机构的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Relating to established organisations, formal systems, or long-standing social arrangements.',
     examples: [{ english: 'The report uses the expression "institutional reform" in its analysis.', chinese: '报告在分析中使用了“制度改革”这一表达。' }], collocations: ['institutional reform', 'institutional framework'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -2074,7 +2074,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'liability', term: 'liability', normalizedTerm: 'liability', partOfSpeech: ['noun'], ipa: '/lˌaɪəbˈɪlɪti/',
-    chineseShort: '责任；负债', chineseExplanation: '表示“责任；负债”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Legal or financial responsibility for something, or an amount that a person or organization owes.',
+    chineseShort: '责任；负债', chineseExplanation: '表示“责任；负债”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Legal or financial responsibility for something, or an amount that a person or organisation owes.',
     examples: [{ english: 'Researchers may encounter the expression "legal liability" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“法律责任”这一表达。' }], collocations: ['legal liability', 'financial liabilities'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
@@ -2128,9 +2128,9 @@ export const level4Vocabulary = [
     examples: [{ english: 'The report uses the expression "persistence of inequality" in its analysis.', chinese: '报告在分析中使用了“不平等的持续存在”这一表达。' }], collocations: ['persistence of inequality', 'show persistence'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
-    id: 'polarization', term: 'polarization', normalizedTerm: 'polarization', partOfSpeech: ['noun'], ipa: '/pˌəʊləɹaɪzˈeɪʃən/',
+    id: 'polarization', term: 'polarisation', normalizedTerm: 'polarisation', partOfSpeech: ['noun'], ipa: '/pˌəʊləɹaɪzˈeɪʃən/',
     chineseShort: '两极分化；极化', chineseExplanation: '表示“两极分化；极化”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The process by which opinions, groups, or conditions become increasingly divided into opposing extremes.',
-    examples: [{ english: 'The phrase "political polarization" is common in formal academic or professional contexts.', chinese: '“政治两极分化”这一表达常见于正式的学术或专业语境。' }], collocations: ['political polarization', 'social polarization'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
+    examples: [{ english: 'The phrase "political polarisation" is common in formal academic or professional contexts.', chinese: '“政治两极分化”这一表达常见于正式的学术或专业语境。' }], collocations: ['political polarisation', 'social polarisation'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
     id: 'priority', term: 'priority', normalizedTerm: 'priority', partOfSpeech: ['noun'], ipa: '/pɹaɪˈɒɹɪti/',
@@ -2149,12 +2149,12 @@ export const level4Vocabulary = [
   },
   {
     id: 'regulation', term: 'regulation', normalizedTerm: 'regulation', partOfSpeech: ['noun'], ipa: '/ɹˌɛɡjuːlˈeɪʃən/',
-    chineseShort: '规章；监管', chineseExplanation: '表示“规章；监管”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'An official rule or system of control intended to govern behavior, markets, processes, or standards.',
+    chineseShort: '规章；监管', chineseExplanation: '表示“规章；监管”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'An official rule or system of control intended to govern behaviour, markets, processes, or standards.',
     examples: [{ english: 'Researchers may encounter the expression "financial regulation" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“金融监管”这一表达。' }], collocations: ['financial regulation', 'strict regulation'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
     id: 'representation', term: 'representation', normalizedTerm: 'representation', partOfSpeech: ['noun'], ipa: '/ɹˌɛpɹɪzˈɛntˈeɪʃən/',
-    chineseShort: '代表；表述', chineseExplanation: '表示“代表；表述”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The act of speaking or acting for others, or the way something is presented, described, or symbolized.',
+    chineseShort: '代表；表述', chineseExplanation: '表示“代表；表述”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The act of speaking or acting for others, or the way something is presented, described, or symbolised.',
     examples: [{ english: 'The report uses the expression "political representation" in its analysis.', chinese: '报告在分析中使用了“政治代表”这一表达。' }], collocations: ['political representation', 'accurate representation'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
@@ -2164,7 +2164,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'revenue', term: 'revenue', normalizedTerm: 'revenue', partOfSpeech: ['noun'], ipa: '/ɹˈɛvənjˌuː/',
-    chineseShort: '收入；财政收入', chineseExplanation: '表示“收入；财政收入”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Money received by a business, organization, or government from its activities or sources.',
+    chineseShort: '收入；财政收入', chineseExplanation: '表示“收入；财政收入”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Money received by a business, organisation, or government from its activities or sources.',
     examples: [{ english: 'Researchers may encounter the expression "tax revenue" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“税收收入”这一表达。' }], collocations: ['tax revenue', 'generate revenue'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
@@ -2184,12 +2184,12 @@ export const level4Vocabulary = [
   },
   {
     id: 'stakeholder', term: 'stakeholder', normalizedTerm: 'stakeholder', partOfSpeech: ['noun'], ipa: '/stˈeɪkhəʊldə/',
-    chineseShort: '利益相关者', chineseExplanation: '表示“利益相关者”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A person, group, or organization affected by or able to influence a decision, project, or institution.',
+    chineseShort: '利益相关者', chineseExplanation: '表示“利益相关者”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A person, group, or organisation affected by or able to influence a decision, project, or institution.',
     examples: [{ english: 'The report uses the expression "key stakeholder" in its analysis.', chinese: '报告在分析中使用了“关键利益相关者”这一表达。' }], collocations: ['key stakeholder', 'stakeholder consultation'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
     id: 'structural', term: 'structural', normalizedTerm: 'structural', partOfSpeech: ['adjective'], ipa: '/stɹˈʌktʃəɹəl/',
-    chineseShort: '结构性的；体系层面的', chineseExplanation: '表示“结构性的；体系层面的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Relating to the basic organization, framework, or underlying arrangement of a system or society.',
+    chineseShort: '结构性的；体系层面的', chineseExplanation: '表示“结构性的；体系层面的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Relating to the basic organisation, framework, or underlying arrangement of a system or society.',
     examples: [{ english: 'The phrase "structural reform" is common in formal academic or professional contexts.', chinese: '“结构性改革”这一表达常见于正式的学术或专业语境。' }], collocations: ['structural reform', 'structural inequality'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -2249,7 +2249,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'compile', term: 'compile', normalizedTerm: 'compile', partOfSpeech: ['verb'], ipa: '/kəmpˈaɪl/',
-    chineseShort: '汇编；编制', chineseExplanation: '表示“汇编；编制”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To collect information from different sources and organize it into a document, list, or dataset.',
+    chineseShort: '汇编；编制', chineseExplanation: '表示“汇编；编制”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To collect information from different sources and organise it into a document, list, or dataset.',
     examples: [{ english: 'The phrase "compile a report" is common in formal academic or professional contexts.', chinese: '“编制报告”这一表达常见于正式的学术或专业语境。' }], collocations: ['compile a report', 'compile data'], level: 4, cefr: 'C1', categories: ['Academic', 'Technology'],
   },
   {
@@ -2258,9 +2258,9 @@ export const level4Vocabulary = [
     examples: [{ english: 'Researchers may encounter the expression "comply with regulations" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“遵守法规”这一表达。' }], collocations: ['comply with regulations', 'comply with standards'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
-    id: 'contextualize', term: 'contextualize', normalizedTerm: 'contextualize', partOfSpeech: ['verb'], ipa: '/kəntˈɛkstʃuːəlˌaɪz/',
+    id: 'contextualize', term: 'contextualise', normalizedTerm: 'contextualise', partOfSpeech: ['verb'], ipa: '/kəntˈɛkstʃuːəlˌaɪz/',
     chineseShort: '置于语境中理解', chineseExplanation: '表示“置于语境中理解”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To place an idea, event, or piece of information within its wider circumstances so it can be properly understood.',
-    examples: [{ english: 'The report uses the expression "contextualize the findings" in its analysis.', chinese: '报告在分析中使用了“把研究结果放入语境中理解”这一表达。' }], collocations: ['contextualize the findings', 'contextualize an argument'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
+    examples: [{ english: 'The report uses the expression "contextualise the findings" in its analysis.', chinese: '报告在分析中使用了“把研究结果放入语境中理解”这一表达。' }], collocations: ['contextualise the findings', 'contextualise an argument'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
     id: 'corruption', term: 'corruption', normalizedTerm: 'corruption', partOfSpeech: ['noun'], ipa: '/kəɹˈʌpʃən/',
@@ -2339,7 +2339,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'foundation', term: 'foundation', normalizedTerm: 'foundation', partOfSpeech: ['noun'], ipa: '/faʊndˈeɪʃən/',
-    chineseShort: '基础；基金会', chineseExplanation: '表示“基础；基金会”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A basic principle or structure on which something is built, or an organization established for a purpose.',
+    chineseShort: '基础；基金会', chineseExplanation: '表示“基础；基金会”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A basic principle or structure on which something is built, or an organisation established for a purpose.',
     examples: [{ english: 'The phrase "theoretical foundation" is common in formal academic or professional contexts.', chinese: '“理论基础”这一表达常见于正式的学术或专业语境。' }], collocations: ['theoretical foundation', 'solid foundation'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
@@ -2374,12 +2374,12 @@ export const level4Vocabulary = [
   },
   {
     id: 'incorporate', term: 'incorporate', normalizedTerm: 'incorporate', partOfSpeech: ['verb'], ipa: '/ɪnkˈɔːpəɹˌeɪt/',
-    chineseShort: '纳入；合并', chineseExplanation: '表示“纳入；合并”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To include something as part of a larger whole, system, plan, or organization.',
+    chineseShort: '纳入；合并', chineseExplanation: '表示“纳入；合并”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To include something as part of a larger whole, system, plan, or organisation.',
     examples: [{ english: 'Researchers may encounter the expression "incorporate feedback" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“纳入反馈”这一表达。' }], collocations: ['incorporate feedback', 'incorporate evidence'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
     id: 'induce', term: 'induce', normalizedTerm: 'induce', partOfSpeech: ['verb'], ipa: '/ɪndjˈuːs/',
-    chineseShort: '引起；促使', chineseExplanation: '表示“引起；促使”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To cause a particular condition, response, or behavior, often through a specific influence or treatment.',
+    chineseShort: '引起；促使', chineseExplanation: '表示“引起；促使”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To cause a particular condition, response, or behaviour, often through a specific influence or treatment.',
     examples: [{ english: 'The report uses the expression "induce change" in its analysis.', chinese: '报告在分析中使用了“引起变化”这一表达。' }], collocations: ['induce change', 'induce a response'], level: 4, cefr: 'C1', categories: ['Academic', 'Technology'],
   },
   {
@@ -2389,7 +2389,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'institution', term: 'institution', normalizedTerm: 'institution', partOfSpeech: ['noun'], ipa: '/ˌɪnstɪtjˈuːʃən/',
-    chineseShort: '机构；制度', chineseExplanation: '表示“机构；制度”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'An established organization or a long-standing system, practice, or social arrangement.',
+    chineseShort: '机构；制度', chineseExplanation: '表示“机构；制度”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'An established organisation or a long-standing system, practice, or social arrangement.',
     examples: [{ english: 'Researchers may encounter the expression "public institution" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“公共机构”这一表达。' }], collocations: ['public institution', 'financial institution'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -2403,9 +2403,9 @@ export const level4Vocabulary = [
     examples: [{ english: 'The phrase "intensive training" is common in formal academic or professional contexts.', chinese: '“强化训练”这一表达常见于正式的学术或专业语境。' }], collocations: ['intensive training', 'intensive research'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
-    id: 'legitimize', term: 'legitimize', normalizedTerm: 'legitimize', partOfSpeech: ['verb'], ipa: '/lədʒˈɪtɪmˌaɪz/',
+    id: 'legitimize', term: 'legitimise', normalizedTerm: 'legitimise', partOfSpeech: ['verb'], ipa: '/lədʒˈɪtɪmˌaɪz/',
     chineseShort: '使合法；使正当化', chineseExplanation: '表示“使合法；使正当化”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To make an action, institution, or claim appear lawful, acceptable, or justified.',
-    examples: [{ english: 'Researchers may encounter the expression "legitimize authority" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“使权威正当化”这一表达。' }], collocations: ['legitimize authority', 'legitimize a practice'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
+    examples: [{ english: 'Researchers may encounter the expression "legitimise authority" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“使权威正当化”这一表达。' }], collocations: ['legitimise authority', 'legitimise a practice'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
     id: 'mandatory', term: 'mandatory', normalizedTerm: 'mandatory', partOfSpeech: ['adjective'], ipa: '/mˈandətəɹi/',
@@ -2414,7 +2414,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'merge', term: 'merge', normalizedTerm: 'merge', partOfSpeech: ['verb'], ipa: '/mˈɜːdʒ/',
-    chineseShort: '合并；融合', chineseExplanation: '表示“合并；融合”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To combine two or more organizations, systems, ideas, or things into a single whole.',
+    chineseShort: '合并；融合', chineseExplanation: '表示“合并；融合”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To combine two or more organisations, systems, ideas, or things into a single whole.',
     examples: [{ english: 'The phrase "merge departments" is common in formal academic or professional contexts.', chinese: '“合并部门”这一表达常见于正式的学术或专业语境。' }], collocations: ['merge departments', 'merge datasets'], level: 4, cefr: 'C1', categories: ['Business', 'Technology'],
   },
   {
@@ -2443,9 +2443,9 @@ export const level4Vocabulary = [
     examples: [{ english: 'The report uses the expression "persistent problem" in its analysis.', chinese: '报告在分析中使用了“持续问题”这一表达。' }], collocations: ['persistent problem', 'persistent inequality'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
-    id: 'prioritize', term: 'prioritize', normalizedTerm: 'prioritize', partOfSpeech: ['verb'], ipa: '/pɹaɪˈɒɹɪtˌaɪz/',
+    id: 'prioritize', term: 'prioritise', normalizedTerm: 'prioritise', partOfSpeech: ['verb'], ipa: '/pɹaɪˈɒɹɪtˌaɪz/',
     chineseShort: '优先处理；确定优先级', chineseExplanation: '表示“优先处理；确定优先级”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To decide which tasks, goals, or issues are most important and deal with them first.',
-    examples: [{ english: 'The phrase "prioritize resources" is common in formal academic or professional contexts.', chinese: '“优先配置资源”这一表达常见于正式的学术或专业语境。' }], collocations: ['prioritize resources', 'prioritize safety'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
+    examples: [{ english: 'The phrase "prioritise resources" is common in formal academic or professional contexts.', chinese: '“优先配置资源”这一表达常见于正式的学术或专业语境。' }], collocations: ['prioritise resources', 'prioritise safety'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
     id: 'prospective', term: 'prospective', normalizedTerm: 'prospective', partOfSpeech: ['adjective'], ipa: '/pɹəspˈɛktɪv/',
@@ -2469,7 +2469,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'restructure', term: 'restructure', normalizedTerm: 'restructure', partOfSpeech: ['verb'], ipa: '/ɹɪstɹˈʌktʃə/',
-    chineseShort: '重组；调整结构', chineseExplanation: '表示“重组；调整结构”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To organize a company, system, debt, or process differently in order to improve performance or respond to change.',
+    chineseShort: '重组；调整结构', chineseExplanation: '表示“重组；调整结构”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To organise a company, system, debt, or process differently in order to improve performance or respond to change.',
     examples: [{ english: 'The report uses the expression "restructure operations" in its analysis.', chinese: '报告在分析中使用了“重组运营”这一表达。' }], collocations: ['restructure operations', 'restructure debt'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
@@ -2484,8 +2484,8 @@ export const level4Vocabulary = [
   },
   {
     id: 'revoke', term: 'revoke', normalizedTerm: 'revoke', partOfSpeech: ['verb'], ipa: '/ɹɪvˈəʊk/',
-    chineseShort: '撤销；废止', chineseExplanation: '表示“撤销；废止”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To officially cancel a law, license, permission, right, or decision.',
-    examples: [{ english: 'The report uses the expression "revoke a license" in its analysis.', chinese: '报告在分析中使用了“吊销许可证”这一表达。' }], collocations: ['revoke a license', 'revoke permission'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
+    chineseShort: '撤销；废止', chineseExplanation: '表示“撤销；废止”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To officially cancel a law, licence, permission, right, or decision.',
+    examples: [{ english: 'The report uses the expression "revoke a licence" in its analysis.', chinese: '报告在分析中使用了“吊销许可证”这一表达。' }], collocations: ['revoke a licence', 'revoke permission'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
     id: 'sanction', term: 'sanction', normalizedTerm: 'sanction', partOfSpeech: ['noun', 'verb'], ipa: '/sˈankʃən/',
@@ -2508,9 +2508,9 @@ export const level4Vocabulary = [
     examples: [{ english: 'The phrase "specify requirements" is common in formal academic or professional contexts.', chinese: '“明确要求”这一表达常见于正式的学术或专业语境。' }], collocations: ['specify requirements', 'specify a condition'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
-    id: 'stabilize', term: 'stabilize', normalizedTerm: 'stabilize', partOfSpeech: ['verb'], ipa: '/stˈeɪbɪlˌaɪz/',
+    id: 'stabilize', term: 'stabilise', normalizedTerm: 'stabilise', partOfSpeech: ['verb'], ipa: '/stˈeɪbɪlˌaɪz/',
     chineseShort: '使稳定；稳定下来', chineseExplanation: '表示“使稳定；稳定下来”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To make or become steady, balanced, or less likely to change suddenly.',
-    examples: [{ english: 'Researchers may encounter the expression "stabilize prices" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“稳定价格”这一表达。' }], collocations: ['stabilize prices', 'stabilize the system'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
+    examples: [{ english: 'Researchers may encounter the expression "stabilise prices" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“稳定价格”这一表达。' }], collocations: ['stabilise prices', 'stabilise the system'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
     id: 'stipulate', term: 'stipulate', normalizedTerm: 'stipulate', partOfSpeech: ['verb'], ipa: '/stˈɪpjʊlˌeɪt/',
@@ -2519,7 +2519,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'streamline', term: 'streamline', normalizedTerm: 'streamline', partOfSpeech: ['verb'], ipa: '/stɹˈiːmlaɪn/',
-    chineseShort: '简化；提高效率', chineseExplanation: '表示“简化；提高效率”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To simplify a process, organization, or system so that it operates more efficiently.',
+    chineseShort: '简化；提高效率', chineseExplanation: '表示“简化；提高效率”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To simplify a process, organisation, or system so that it operates more efficiently.',
     examples: [{ english: 'The phrase "streamline procedures" is common in formal academic or professional contexts.', chinese: '“简化程序”这一表达常见于正式的学术或专业语境。' }], collocations: ['streamline procedures', 'streamline operations'], level: 4, cefr: 'C1', categories: ['Business', 'Technology'],
   },
   {
@@ -2528,9 +2528,9 @@ export const level4Vocabulary = [
     examples: [{ english: 'Researchers may encounter the expression "susceptible to bias" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“容易受偏差影响”这一表达。' }], collocations: ['susceptible to bias', 'highly susceptible'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
-    id: 'synthesize', term: 'synthesize', normalizedTerm: 'synthesize', partOfSpeech: ['verb'], ipa: '/sˈɪnθəsˌaɪz/',
+    id: 'synthesize', term: 'synthesise', normalizedTerm: 'synthesise', partOfSpeech: ['verb'], ipa: '/sˈɪnθəsˌaɪz/',
     chineseShort: '综合；整合', chineseExplanation: '表示“综合；整合”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To combine information, evidence, or ideas from different sources into a coherent whole.',
-    examples: [{ english: 'The report uses the expression "synthesize evidence" in its analysis.', chinese: '报告在分析中使用了“综合证据”这一表达。' }], collocations: ['synthesize evidence', 'synthesize findings'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
+    examples: [{ english: 'The report uses the expression "synthesise evidence" in its analysis.', chinese: '报告在分析中使用了“综合证据”这一表达。' }], collocations: ['synthesise evidence', 'synthesise findings'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
     id: 'underlying', term: 'underlying', normalizedTerm: 'underlying', partOfSpeech: ['adjective'], ipa: '/ˌʌndəlˈaɪɪŋ/',
@@ -2578,13 +2578,13 @@ export const level4Vocabulary = [
     examples: [{ english: 'The report uses the expression "capital accumulation" in its analysis.', chinese: '报告在分析中使用了“资本积累”这一表达。' }], collocations: ['capital accumulation', 'accumulation of evidence'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
-    id: 'acknowledgment', term: 'acknowledgment', normalizedTerm: 'acknowledgment', partOfSpeech: ['noun'], ipa: '/ɐknˈɒlɪdʒmənt/',
+    id: 'acknowledgment', term: 'acknowledgement', normalizedTerm: 'acknowledgement', partOfSpeech: ['noun'], ipa: '/ɐknˈɒlɪdʒmənt/',
     chineseShort: '承认；确认', chineseExplanation: '表示“承认；确认”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Recognition that something exists, is true, important, or deserving of attention.',
-    examples: [{ english: 'The phrase "formal acknowledgment" is common in formal academic or professional contexts.', chinese: '“正式确认”这一表达常见于正式的学术或专业语境。' }], collocations: ['formal acknowledgment', 'acknowledgment of responsibility'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
+    examples: [{ english: 'The phrase "formal acknowledgement" is common in formal academic or professional contexts.', chinese: '“正式确认”这一表达常见于正式的学术或专业语境。' }], collocations: ['formal acknowledgement', 'acknowledgement of responsibility'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
     id: 'administration', term: 'administration', normalizedTerm: 'administration', partOfSpeech: ['noun'], ipa: '/ɐdmˌɪnɪstɹˈeɪʃən/',
-    chineseShort: '管理；行政机构', chineseExplanation: '表示“管理；行政机构”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The management of an organization or system, or the officials responsible for carrying it out.',
+    chineseShort: '管理；行政机构', chineseExplanation: '表示“管理；行政机构”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The management of an organisation or system, or the officials responsible for carrying it out.',
     examples: [{ english: 'Researchers may encounter the expression "public administration" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“公共行政”这一表达。' }], collocations: ['public administration', 'administration of policy'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -2594,7 +2594,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'advocacy', term: 'advocacy', normalizedTerm: 'advocacy', partOfSpeech: ['noun'], ipa: '/ˈadvəkəsi/',
-    chineseShort: '倡导；拥护', chineseExplanation: '表示“倡导；拥护”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Public or organized support for a cause, policy, group, or proposed course of action.',
+    chineseShort: '倡导；拥护', chineseExplanation: '表示“倡导；拥护”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Public or organised support for a cause, policy, group, or proposed course of action.',
     examples: [{ english: 'The phrase "policy advocacy" is common in formal academic or professional contexts.', chinese: '“政策倡导”这一表达常见于正式的学术或专业语境。' }], collocations: ['policy advocacy', 'public advocacy'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -2613,9 +2613,9 @@ export const level4Vocabulary = [
     examples: [{ english: 'The phrase "performance appraisal" is common in formal academic or professional contexts.', chinese: '“绩效评估”这一表达常见于正式的学术或专业语境。' }], collocations: ['performance appraisal', 'critical appraisal'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
-    id: 'authorization', term: 'authorization', normalizedTerm: 'authorization', partOfSpeech: ['noun'], ipa: '/ˌɔːθəɹaɪzˈeɪʃən/',
+    id: 'authorization', term: 'authorisation', normalizedTerm: 'authorisation', partOfSpeech: ['noun'], ipa: '/ˌɔːθəɹaɪzˈeɪʃən/',
     chineseShort: '授权；批准', chineseExplanation: '表示“授权；批准”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Official permission or authority to perform an action, access a resource, or make a decision.',
-    examples: [{ english: 'Researchers may encounter the expression "access authorization" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“访问授权”这一表达。' }], collocations: ['access authorization', 'formal authorization'], level: 4, cefr: 'C1', categories: ['Technology', 'Business'],
+    examples: [{ english: 'Researchers may encounter the expression "access authorisation" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“访问授权”这一表达。' }], collocations: ['access authorisation', 'formal authorisation'], level: 4, cefr: 'C1', categories: ['Technology', 'Business'],
   },
   {
     id: 'classification', term: 'classification', normalizedTerm: 'classification', partOfSpeech: ['noun'], ipa: '/klˌasɪfɪkˈeɪʃən/',
@@ -2629,12 +2629,12 @@ export const level4Vocabulary = [
   },
   {
     id: 'constraint', term: 'constraint', normalizedTerm: 'constraint', partOfSpeech: ['noun'], ipa: '/kənstɹˈeɪnt/',
-    chineseShort: '限制；约束条件', chineseExplanation: '表示“限制；约束条件”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A factor, rule, or condition that limits choices, resources, behavior, or possible outcomes.',
+    chineseShort: '限制；约束条件', chineseExplanation: '表示“限制；约束条件”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A factor, rule, or condition that limits choices, resources, behaviour, or possible outcomes.',
     examples: [{ english: 'Researchers may encounter the expression "budget constraint" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“预算约束”这一表达。' }], collocations: ['budget constraint', 'major constraint'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
     id: 'coordination', term: 'coordination', normalizedTerm: 'coordination', partOfSpeech: ['noun'], ipa: '/kəʊˈɔːdɪnˈeɪʃən/',
-    chineseShort: '协调；统筹', chineseExplanation: '表示“协调；统筹”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The organization of people, activities, or resources so that they work together effectively and efficiently.',
+    chineseShort: '协调；统筹', chineseExplanation: '表示“协调；统筹”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The organisation of people, activities, or resources so that they work together effectively and efficiently.',
     examples: [{ english: 'The report uses the expression "policy coordination" in its analysis.', chinese: '报告在分析中使用了“政策协调”这一表达。' }], collocations: ['policy coordination', 'improve coordination'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
@@ -2649,7 +2649,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'deviation', term: 'deviation', normalizedTerm: 'deviation', partOfSpeech: ['noun'], ipa: '/dˌiːvɪˈeɪʃən/',
-    chineseShort: '偏离；偏差', chineseExplanation: '表示“偏离；偏差”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A difference from an expected value, standard, route, behavior, or pattern.',
+    chineseShort: '偏离；偏差', chineseExplanation: '表示“偏离；偏差”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A difference from an expected value, standard, route, behaviour, or pattern.',
     examples: [{ english: 'The report uses the expression "standard deviation" in its analysis.', chinese: '报告在分析中使用了“标准差”这一表达。' }], collocations: ['standard deviation', 'significant deviation'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
@@ -2679,8 +2679,8 @@ export const level4Vocabulary = [
   },
   {
     id: 'evaluation', term: 'evaluation', normalizedTerm: 'evaluation', partOfSpeech: ['noun'], ipa: '/ɪvˌaljuːˈeɪʃən/',
-    chineseShort: '评估；评价', chineseExplanation: '表示“评估；评价”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A systematic judgment of the quality, effectiveness, value, or impact of a policy, program, method, or result.',
-    examples: [{ english: 'The report uses the expression "program evaluation" in its analysis.', chinese: '报告在分析中使用了“项目评估”这一表达。' }], collocations: ['program evaluation', 'evaluation criteria'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
+    chineseShort: '评估；评价', chineseExplanation: '表示“评估；评价”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'A systematic judgement of the quality, effectiveness, value, or impact of a policy, programme, method, or result.',
+    examples: [{ english: 'The report uses the expression "programme evaluation" in its analysis.', chinese: '报告在分析中使用了“项目评估”这一表达。' }], collocations: ['programme evaluation', 'evaluation criteria'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
     id: 'exploitation', term: 'exploitation', normalizedTerm: 'exploitation', partOfSpeech: ['noun'], ipa: '/ɛksplɔɪtˈeɪʃən/',
@@ -2703,14 +2703,14 @@ export const level4Vocabulary = [
     examples: [{ english: 'The phrase "policy formulation" is common in formal academic or professional contexts.', chinese: '“政策制定”这一表达常见于正式的学术或专业语境。' }], collocations: ['policy formulation', 'theoretical formulation'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
-    id: 'globalization', term: 'globalization', normalizedTerm: 'globalization', partOfSpeech: ['noun'], ipa: '/ɡlˌəʊbəlaɪzˈeɪʃən/',
+    id: 'globalization', term: 'globalisation', normalizedTerm: 'globalisation', partOfSpeech: ['noun'], ipa: '/ɡlˌəʊbəlaɪzˈeɪʃən/',
     chineseShort: '全球化', chineseExplanation: '表示“全球化”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The increasing international integration of economies, societies, technologies, communication, and institutions.',
-    examples: [{ english: 'Researchers may encounter the expression "economic globalization" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“经济全球化”这一表达。' }], collocations: ['economic globalization', 'effects of globalization'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
+    examples: [{ english: 'Researchers may encounter the expression "economic globalisation" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“经济全球化”这一表达。' }], collocations: ['economic globalisation', 'effects of globalisation'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
     id: 'hierarchical', term: 'hierarchical', normalizedTerm: 'hierarchical', partOfSpeech: ['adjective'], ipa: '/haɪəɹˈɑːkɪkəl/',
-    chineseShort: '层级的；等级制度的', chineseExplanation: '表示“层级的；等级制度的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Organized into levels of authority, importance, or classification arranged from higher to lower.',
-    examples: [{ english: 'The report uses the expression "hierarchical structure" in its analysis.', chinese: '报告在分析中使用了“层级结构”这一表达。' }], collocations: ['hierarchical structure', 'hierarchical organization'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
+    chineseShort: '层级的；等级制度的', chineseExplanation: '表示“层级的；等级制度的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Organised into levels of authority, importance, or classification arranged from higher to lower.',
+    examples: [{ english: 'The report uses the expression "hierarchical structure" in its analysis.', chinese: '报告在分析中使用了“层级结构”这一表达。' }], collocations: ['hierarchical structure', 'hierarchical organisation'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
     id: 'implementation', term: 'implementation', normalizedTerm: 'implementation', partOfSpeech: ['noun'], ipa: '/ˌɪmplɪməntˈeɪʃən/',
@@ -2734,13 +2734,13 @@ export const level4Vocabulary = [
   },
   {
     id: 'legitimacy', term: 'legitimacy', normalizedTerm: 'legitimacy', partOfSpeech: ['noun'], ipa: '/lədʒˈɪtɪməsi/',
-    chineseShort: '合法性；正当性', chineseExplanation: '表示“合法性；正当性”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The quality of being lawful, justified, accepted, or recognized as having proper authority.',
+    chineseShort: '合法性；正当性', chineseExplanation: '表示“合法性；正当性”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The quality of being lawful, justified, accepted, or recognised as having proper authority.',
     examples: [{ english: 'Researchers may encounter the expression "political legitimacy" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“政治合法性”这一表达。' }], collocations: ['political legitimacy', 'question legitimacy'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
-    id: 'marginalize', term: 'marginalize', normalizedTerm: 'marginalize', partOfSpeech: ['verb'], ipa: '/mˈɑːdʒɪnəlˌaɪz/',
-    chineseShort: '边缘化；忽视', chineseExplanation: '表示“边缘化；忽视”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To treat a person, group, or issue as unimportant, less influential, or outside the center of participation.',
-    examples: [{ english: 'The report uses the expression "marginalize communities" in its analysis.', chinese: '报告在分析中使用了“边缘化社区”这一表达。' }], collocations: ['marginalize communities', 'marginalize an issue'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
+    id: 'marginalize', term: 'marginalise', normalizedTerm: 'marginalise', partOfSpeech: ['verb'], ipa: '/mˈɑːdʒɪnəlˌaɪz/',
+    chineseShort: '边缘化；忽视', chineseExplanation: '表示“边缘化；忽视”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'To treat a person, group, or issue as unimportant, less influential, or outside the centre of participation.',
+    examples: [{ english: 'The report uses the expression "marginalise communities" in its analysis.', chinese: '报告在分析中使用了“边缘化社区”这一表达。' }], collocations: ['marginalise communities', 'marginalise an issue'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
     id: 'mediation', term: 'mediation', normalizedTerm: 'mediation', partOfSpeech: ['noun'], ipa: '/mˌiːdɪˈeɪʃən/',
@@ -2764,7 +2764,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'objectivity', term: 'objectivity', normalizedTerm: 'objectivity', partOfSpeech: ['noun'], ipa: '/ɒbdʒɪktˈɪvɪti/',
-    chineseShort: '客观性', chineseExplanation: '表示“客观性”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The quality of making judgments based on evidence and observable facts rather than personal feelings or bias.',
+    chineseShort: '客观性', chineseExplanation: '表示“客观性”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The quality of making judgements based on evidence and observable facts rather than personal feelings or bias.',
     examples: [{ english: 'Researchers may encounter the expression "maintain objectivity" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“保持客观性”这一表达。' }], collocations: ['maintain objectivity', 'scientific objectivity'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
@@ -2799,7 +2799,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'prevalence', term: 'prevalence', normalizedTerm: 'prevalence', partOfSpeech: ['noun'], ipa: '/pɹˈɛvələns/',
-    chineseShort: '普遍程度；流行率', chineseExplanation: '表示“普遍程度；流行率”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The extent to which a condition, behavior, belief, or phenomenon is common within a population or context.',
+    chineseShort: '普遍程度；流行率', chineseExplanation: '表示“普遍程度；流行率”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The extent to which a condition, behaviour, belief, or phenomenon is common within a population or context.',
     examples: [{ english: 'The report uses the expression "high prevalence" in its analysis.', chinese: '报告在分析中使用了“高流行率”这一表达。' }], collocations: ['high prevalence', 'prevalence of inequality'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
@@ -2824,7 +2824,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'rationality', term: 'rationality', normalizedTerm: 'rationality', partOfSpeech: ['noun'], ipa: '/ɹˌaʃənˈalɪti/',
-    chineseShort: '理性；合理性', chineseExplanation: '表示“理性；合理性”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The quality of being based on logic, consistent reasoning, and sensible judgment.',
+    chineseShort: '理性；合理性', chineseExplanation: '表示“理性；合理性”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The quality of being based on logic, consistent reasoning, and sensible judgement.',
     examples: [{ english: 'Researchers may encounter the expression "economic rationality" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“经济理性”这一表达。' }], collocations: ['economic rationality', 'question the rationality'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
@@ -2849,7 +2849,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'restraint', term: 'restraint', normalizedTerm: 'restraint', partOfSpeech: ['noun'], ipa: '/ɹɪstɹˈeɪnt/',
-    chineseShort: '克制；限制', chineseExplanation: '表示“克制；限制”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Control over behavior or spending, or a measure that restricts freedom, growth, or activity.',
+    chineseShort: '克制；限制', chineseExplanation: '表示“克制；限制”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Control over behaviour or spending, or a measure that restricts freedom, growth, or activity.',
     examples: [{ english: 'The phrase "exercise restraint" is common in formal academic or professional contexts.', chinese: '“保持克制”这一表达常见于正式的学术或专业语境。' }], collocations: ['exercise restraint', 'fiscal restraint'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -2889,7 +2889,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'suppression', term: 'suppression', normalizedTerm: 'suppression', partOfSpeech: ['noun'], ipa: '/səpɹˈɛʃən/',
-    chineseShort: '压制；抑制', chineseExplanation: '表示“压制；抑制”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The act of preventing, restraining, or reducing information, behavior, expression, or a process.',
+    chineseShort: '压制；抑制', chineseExplanation: '表示“压制；抑制”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The act of preventing, restraining, or reducing information, behaviour, expression, or a process.',
     examples: [{ english: 'The report uses the expression "information suppression" in its analysis.', chinese: '报告在分析中使用了“信息压制”这一表达。' }], collocations: ['information suppression', 'suppression of dissent'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {
@@ -2934,12 +2934,12 @@ export const level4Vocabulary = [
   },
   {
     id: 'discretion', term: 'discretion', normalizedTerm: 'discretion', partOfSpeech: ['noun'], ipa: '/dɪskɹˈɛʃən/',
-    chineseShort: '酌情权；谨慎判断', chineseExplanation: '表示“酌情权；谨慎判断”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The freedom or authority to make judgments and decisions within certain limits.',
+    chineseShort: '酌情权；谨慎判断', chineseExplanation: '表示“酌情权；谨慎判断”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'The freedom or authority to make judgements and decisions within certain limits.',
     examples: [{ english: 'The report uses the expression "managerial discretion" in its analysis.', chinese: '报告在分析中使用了“管理酌情权”这一表达。' }], collocations: ['managerial discretion', 'exercise discretion'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
     id: 'discretionary', term: 'discretionary', normalizedTerm: 'discretionary', partOfSpeech: ['adjective'], ipa: '/dɪskɹˈɛʃənəɹi/',
-    chineseShort: '酌情的；非强制的', chineseExplanation: '表示“酌情的；非强制的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Available for use according to judgment or choice rather than fixed requirement or obligation.',
+    chineseShort: '酌情的；非强制的', chineseExplanation: '表示“酌情的；非强制的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Available for use according to judgement or choice rather than fixed requirement or obligation.',
     examples: [{ english: 'The phrase "discretionary spending" is common in formal academic or professional contexts.', chinese: '“可自由支配支出”这一表达常见于正式的学术或专业语境。' }], collocations: ['discretionary spending', 'discretionary power'], level: 4, cefr: 'C1', categories: ['Business', 'Academic'],
   },
   {
@@ -2999,7 +2999,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'systematic', term: 'systematic', normalizedTerm: 'systematic', partOfSpeech: ['adjective'], ipa: '/sˌɪstəmˈatɪk/',
-    chineseShort: '系统的；有条理的', chineseExplanation: '表示“系统的；有条理的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Done according to an organized method, plan, or set of procedures rather than randomly.',
+    chineseShort: '系统的；有条理的', chineseExplanation: '表示“系统的；有条理的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Done according to an organised method, plan, or set of procedures rather than randomly.',
     examples: [{ english: 'The phrase "systematic review" is common in formal academic or professional contexts.', chinese: '“系统综述”这一表达常见于正式的学术或专业语境。' }], collocations: ['systematic review', 'systematic approach'], level: 4, cefr: 'C1', categories: ['Academic', 'School'],
   },
   {
@@ -3034,7 +3034,7 @@ export const level4Vocabulary = [
   },
   {
     id: 'constitutional', term: 'constitutional', normalizedTerm: 'constitutional', partOfSpeech: ['adjective'], ipa: '/kˌɒnstɪtjˈuːʃənəl/',
-    chineseShort: '宪法的；制度根本性的', chineseExplanation: '表示“宪法的；制度根本性的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Relating to a constitution or to the fundamental principles by which a state or organization is governed.',
+    chineseShort: '宪法的；制度根本性的', chineseExplanation: '表示“宪法的；制度根本性的”这一含义，常用于较正式、学术或专业语境中。', englishDefinition: 'Relating to a constitution or to the fundamental principles by which a state or organisation is governed.',
     examples: [{ english: 'Researchers may encounter the expression "constitutional reform" in advanced writing.', chinese: '研究者可能会在高级写作中遇到“宪法改革”这一表达。' }], collocations: ['constitutional reform', 'constitutional right'], level: 4, cefr: 'C1', categories: ['Academic', 'Business'],
   },
   {

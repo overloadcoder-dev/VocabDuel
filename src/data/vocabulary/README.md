@@ -1,6 +1,6 @@
 # Vocabulary classification
 
-Vocabulary is split by the app's five learning levels. Level files vary in size; the combined catalog currently contains 2,220 unique terms after repeated IDs are resolved with the earliest level taking precedence. Add a term to the file matching its learning burden rather than judging it only by word length.
+Vocabulary is split by the app's five learning levels. Level files vary in size; the combined catalogue currently contains 2,220 unique terms after repeated IDs are resolved with the earliest level taking precedence. Add a term to the file matching its learning burden rather than judging it only by word length.
 
 | App level | Typical CEFR | Approximate IELTS target | Editorial meaning |
 | --- | --- | --- | --- |

@@ -11,10 +11,10 @@ The production site is static. Firebase Anonymous Authentication and Realtime Da
 - Static multi-page HTML provides crawlable content at `/`, `/learn/`, `/play/`, `/multiplayer/`, `/placement/`, `/levels/`, `/how-to-play/`, `/about/`, `/privacy/`, and `/terms/`.
 - `src/data/vocabulary/` contains one curated term module per learning level. Browser routes dynamically load only the levels they need; `src/data/vocabulary.ts` remains the full editorial/test aggregate, and `src/types/` defines vocabulary, game, and progress contracts.
 - `src/config/site.ts` centralizes the product name, provisional origin, description, and canonical route map; static HTML keeps route-specific metadata crawlable without JavaScript.
-- `src/games/` contains deterministic question generation, scoring, and session behavior separately from page rendering.
+- `src/games/` contains deterministic question generation, scoring, and session behaviour separately from page rendering.
 - `src/storage/` stores non-sensitive solo progress in localStorage.
 - `src/speech/` wraps the browser Web Speech API.
-- `src/multiplayer/` isolates Firebase loading, room operations, presence, synchronized time, and state transitions.
+- `src/multiplayer/` isolates Firebase loading, room operations, presence, synchronised time, and state transitions.
 - Vite builds every route as a static HTML entry. Tailwind is compiled locally.
 
 ## Requirements and installation
@@ -107,7 +107,7 @@ Configured local ports are Auth `9099`, Database `9000`, Functions `5001`, and E
 
 Before public launch, enable Firebase App Check for the web app with an appropriate provider (such as reCAPTCHA Enterprise), register the production and intentional preview origins, verify valid traffic, and then enable enforcement for Realtime Database. Use the documented debug-token flow only for local development, never a production token in source control.
 
-Also configure Firebase budget alerts and usage monitoring. App Check reduces unauthorized clients but does not replace Authentication or Security Rules.
+Also configure Firebase budget alerts and usage monitoring. App Check reduces unauthorised clients but does not replace Authentication or Security Rules.
 
 Rooms expire two hours after creation. Rules deny reads and non-delete writes after expiry, and `functions/index.js` defines the trusted `cleanupExpiredRooms` job that deletes expired records every 15 minutes in bounded batches. The job is idempotent because scheduled invocations can overlap; under normal operation, room records are retained for roughly two hours plus the scheduler interval.
 
@@ -185,4 +185,4 @@ Before release:
 
 ## Manual release coverage
 
-In addition to automated tests, check current Chromium and Firefox desktop, Safari where available, Chrome Android, and Safari iPhone. Pay particular attention to keyboard-only operation, visible focus, 320 px reflow, speech availability/failure, simultaneous answers, reconnect and expiry behavior, reduced motion, and production HTML metadata.
+In addition to automated tests, check current Chromium and Firefox desktop, Safari where available, Chrome Android, and Safari iPhone. Pay particular attention to keyboard-only operation, visible focus, 320 px reflow, speech availability/failure, simultaneous answers, reconnect and expiry behaviour, reduced motion, and production HTML metadata.

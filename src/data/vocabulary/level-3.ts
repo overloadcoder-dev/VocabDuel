@@ -189,7 +189,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'authority', term: 'authority', normalizedTerm: 'authority', partOfSpeech: ['noun'], ipa: '/əθˈɔrəti/',
-    chineseShort: '权力；当局；权威', chineseExplanation: '指与“权力；当局；权威”有关的概念、情况或事物，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'The power or right to make decisions, or an official organization with that power.',
+    chineseShort: '权力；当局；权威', chineseExplanation: '指与“权力；当局；权威”有关的概念、情况或事物，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'The power or right to make decisions, or an official organisation with that power.',
     examples: [{ english: 'Local authorities are responsible for waste collection.', chinese: '地方当局负责垃圾收集。' }], level: 3, cefr: 'B2', categories: ['Academic'],
   },
   {
@@ -289,7 +289,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'conduct', term: 'conduct', normalizedTerm: 'conduct', partOfSpeech: ['noun', 'verb'], ipa: '/kˈɑndəkt/',
-    chineseShort: '进行；实施；行为', chineseExplanation: '可作多种词性使用，核心意思包括“进行；实施；行为”。常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'To organize and carry out an activity such as research, or the way someone behaves.',
+    chineseShort: '进行；实施；行为', chineseExplanation: '可作多种词性使用，核心意思包括“进行；实施；行为”。常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'To organise and carry out an activity such as research, or the way someone behaves.',
     examples: [{ english: 'The university conducted a survey of first-year students.', chinese: '这所大学对一年级学生进行了一项调查。' }], level: 3, cefr: 'B2', categories: ['Academic', 'Business'],
   },
   {
@@ -364,7 +364,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'cooperate', term: 'cooperate', normalizedTerm: 'cooperate', partOfSpeech: ['verb'], ipa: '/koʊˈɑpɚˌeɪt/',
-    chineseShort: '合作；配合', chineseExplanation: '表示“合作；配合”的动作或过程，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'To work together with another person or group toward a shared goal.',
+    chineseShort: '合作；配合', chineseExplanation: '表示“合作；配合”的动作或过程，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'To work together with another person or group towards a shared goal.',
     examples: [{ english: 'Different departments must cooperate to complete the project.', chinese: '不同部门必须合作才能完成这个项目。' }], level: 3, cefr: 'B2', categories: ['Business', 'Daily English'],
   },
   {
@@ -379,7 +379,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'corporate', term: 'corporate', normalizedTerm: 'corporate', partOfSpeech: ['adjective'], ipa: '/kˈɔrpɚət/',
-    chineseShort: '公司的；企业的', chineseExplanation: '形容某人、事物或情况具有“公司的；企业的”的特点，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Related to a large company or business organization.',
+    chineseShort: '公司的；企业的', chineseExplanation: '形容某人、事物或情况具有“公司的；企业的”的特点，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Related to a large company or business organisation.',
     examples: [{ english: 'The company updated its corporate strategy for the next five years.', chinese: '公司更新了未来五年的企业战略。' }], level: 3, cefr: 'B2', categories: ['Business'],
   },
   {
@@ -429,7 +429,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'detect', term: 'detect', normalizedTerm: 'detect', partOfSpeech: ['verb'], ipa: '/dɪtˈɛkt/',
-    chineseShort: '发现；检测', chineseExplanation: '表示“发现；检测”的动作或过程，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'To discover or notice something that is difficult to see or recognize.',
+    chineseShort: '发现；检测', chineseExplanation: '表示“发现；检测”的动作或过程，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'To discover or notice something that is difficult to see or recognise.',
     examples: [{ english: 'The software can detect unusual activity on the network.', chinese: '该软件可以检测网络上的异常活动。' }], level: 3, cefr: 'B2', categories: ['Technology', 'Academic'],
   },
   {
@@ -450,7 +450,7 @@ export const level3Vocabulary = [
   {
     id: 'distribute', term: 'distribute', normalizedTerm: 'distribute', partOfSpeech: ['verb'], ipa: '/dɪstrˈɪbjut/',
     chineseShort: '分发；分配', chineseExplanation: '表示“分发；分配”的动作或过程，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'To give or deliver something to a number of people or places.',
-    examples: [{ english: 'The organization distributed food to families affected by the flood.', chinese: '该组织向受洪水影响的家庭分发食物。' }], level: 3, cefr: 'B2', categories: ['Academic', 'Business'],
+    examples: [{ english: 'The organisation distributed food to families affected by the flood.', chinese: '该组织向受洪水影响的家庭分发食物。' }], level: 3, cefr: 'B2', categories: ['Academic', 'Business'],
   },
   {
     id: 'diverse', term: 'diverse', normalizedTerm: 'diverse', partOfSpeech: ['adjective'], ipa: '/daɪvˈɝs/',
@@ -483,9 +483,9 @@ export const level3Vocabulary = [
     examples: [{ english: 'New problems began to emerge after the policy was introduced.', chinese: '政策实施后，新问题开始出现。' }], level: 3, cefr: 'B2', categories: ['Academic'],
   },
   {
-    id: 'emphasize', term: 'emphasize', normalizedTerm: 'emphasize', partOfSpeech: ['verb'], ipa: '/ˈɛmfəsˌaɪz/',
+    id: 'emphasize', term: 'emphasise', normalizedTerm: 'emphasise', partOfSpeech: ['verb'], ipa: '/ˈɛmfəsˌaɪz/',
     chineseShort: '强调', chineseExplanation: '表示“强调”的动作或过程，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'To give special importance or attention to something.',
-    examples: [{ english: 'The report emphasizes the need for better public transport.', chinese: '报告强调改善公共交通的必要性。' }], level: 3, cefr: 'B2', categories: ['Academic'],
+    examples: [{ english: 'The report emphasises the need for better public transport.', chinese: '报告强调改善公共交通的必要性。' }], level: 3, cefr: 'B2', categories: ['Academic'],
   },
   {
     id: 'enable', term: 'enable', normalizedTerm: 'enable', partOfSpeech: ['verb'], ipa: '/ɛnˈeɪbəl/',
@@ -529,7 +529,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'estimate', term: 'estimate', normalizedTerm: 'estimate', partOfSpeech: ['noun', 'verb'], ipa: '/ˈɛstəmət/',
-    chineseShort: '估计；估算', chineseExplanation: '可作多种词性使用，核心意思包括“估计；估算”。常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'An approximate calculation or judgment of a number, cost, or amount.',
+    chineseShort: '估计；估算', chineseExplanation: '可作多种词性使用，核心意思包括“估计；估算”。常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'An approximate calculation or judgement of a number, cost, or amount.',
     examples: [{ english: 'Experts estimate that the repairs will take at least two weeks.', chinese: '专家估计维修至少需要两周。' }], level: 3, cefr: 'B2', categories: ['Business', 'Academic'],
   },
   {
@@ -569,7 +569,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'external', term: 'external', normalizedTerm: 'external', partOfSpeech: ['adjective'], ipa: '/ɪkstˈɝnəl/',
-    chineseShort: '外部的；外来的', chineseExplanation: '形容某人、事物或情况具有“外部的；外来的”的特点，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Coming from or relating to outside a particular place, organization, or system.',
+    chineseShort: '外部的；外来的', chineseExplanation: '形容某人、事物或情况具有“外部的；外来的”的特点，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Coming from or relating to outside a particular place, organisation, or system.',
     examples: [{ english: 'External factors can influence the final result.', chinese: '外部因素会影响最终结果。' }], level: 3, cefr: 'B2', categories: ['Academic', 'Business'],
   },
   {
@@ -639,7 +639,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'identify', term: 'identify', normalizedTerm: 'identify', partOfSpeech: ['verb'], ipa: '/aɪdˈɛntəfˌaɪ/',
-    chineseShort: '识别；确定', chineseExplanation: '表示“识别；确定”的动作或过程，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'To recognize or discover what someone or something is.',
+    chineseShort: '识别；确定', chineseExplanation: '表示“识别；确定”的动作或过程，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'To recognise or discover what someone or something is.',
     examples: [{ english: 'The survey helped identify the main concerns of local residents.', chinese: '这项调查帮助确定了当地居民的主要担忧。' }], level: 3, cefr: 'B2', categories: ['Academic'],
   },
   {
@@ -664,7 +664,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'incentive', term: 'incentive', normalizedTerm: 'incentive', partOfSpeech: ['noun'], ipa: '/ˌɪnsˈɛntɪv/',
-    chineseShort: '激励；奖励措施', chineseExplanation: '指与“激励；奖励措施”有关的概念、情况或事物，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Something that encourages a person or organization to do something.',
+    chineseShort: '激励；奖励措施', chineseExplanation: '指与“激励；奖励措施”有关的概念、情况或事物，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Something that encourages a person or organisation to do something.',
     examples: [{ english: 'The government introduced tax incentives for green technology.', chinese: '政府为绿色技术推出了税收激励措施。' }], level: 3, cefr: 'B2', categories: ['Business', 'Academic'],
   },
   {
@@ -675,7 +675,7 @@ export const level3Vocabulary = [
   {
     id: 'individual', term: 'individual', normalizedTerm: 'individual', partOfSpeech: ['noun', 'adjective'], ipa: '/ˌɪndəvˈɪdʒəwəl/',
     chineseShort: '个人；个别的', chineseExplanation: '可作多种词性使用，核心意思包括“个人；个别的”。常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'A single person or thing considered separately from a group.',
-    examples: [{ english: 'The program can be adjusted to individual learning needs.', chinese: '该课程可以根据个人学习需求进行调整。' }], level: 3, cefr: 'B2', categories: ['Daily English', 'Academic'],
+    examples: [{ english: 'The programme can be adjusted to individual learning needs.', chinese: '该课程可以根据个人学习需求进行调整。' }], level: 3, cefr: 'B2', categories: ['Daily English', 'Academic'],
   },
   {
     id: 'inevitable', term: 'inevitable', normalizedTerm: 'inevitable', partOfSpeech: ['adjective'], ipa: '/ˌɪnˈɛvətəbəl/',
@@ -734,7 +734,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'internal', term: 'internal', normalizedTerm: 'internal', partOfSpeech: ['adjective'], ipa: '/ˌɪntˈɝnəl/',
-    chineseShort: '内部的；内在的', chineseExplanation: '形容某人、事物或情况具有“内部的；内在的”的特点，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Located, happening, or existing inside an organization, system, or body.',
+    chineseShort: '内部的；内在的', chineseExplanation: '形容某人、事物或情况具有“内部的；内在的”的特点，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Located, happening, or existing inside an organisation, system, or body.',
     examples: [{ english: 'The issue was discussed in an internal company meeting.', chinese: '这个问题在公司内部会议上进行了讨论。' }], level: 3, cefr: 'B2', categories: ['Business', 'Academic'],
   },
   {
@@ -765,7 +765,7 @@ export const level3Vocabulary = [
   {
     id: 'legal', term: 'legal', normalizedTerm: 'legal', partOfSpeech: ['adjective'], ipa: '/lˈiɡəl/',
     chineseShort: '法律的；合法的', chineseExplanation: '形容某人、事物或情况具有“法律的；合法的”的特点，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Related to the law or allowed by law.',
-    examples: [{ english: 'Businesses must understand their legal responsibilities toward customers.', chinese: '企业必须了解自己对顾客承担的法律责任。' }], level: 3, cefr: 'B2', categories: ['Academic', 'Business'],
+    examples: [{ english: 'Businesses must understand their legal responsibilities towards customers.', chinese: '企业必须了解自己对顾客承担的法律责任。' }], level: 3, cefr: 'B2', categories: ['Academic', 'Business'],
   },
   {
     id: 'limit', term: 'limit', normalizedTerm: 'limit', partOfSpeech: ['noun', 'verb'], ipa: '/lˈɪmət/',
@@ -789,7 +789,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'manage', term: 'manage', normalizedTerm: 'manage', partOfSpeech: ['verb'], ipa: '/mˈænədʒ/',
-    chineseShort: '管理；设法做到', chineseExplanation: '表示“管理；设法做到”的动作或过程，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'To control or organize something, or succeed in doing something difficult.',
+    chineseShort: '管理；设法做到', chineseExplanation: '表示“管理；设法做到”的动作或过程，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'To control or organise something, or succeed in doing something difficult.',
     examples: [{ english: 'Small businesses must manage their costs carefully.', chinese: '小企业必须谨慎管理成本。' }], level: 3, cefr: 'B2', categories: ['Business', 'Daily English'],
   },
   {
@@ -983,9 +983,9 @@ export const level3Vocabulary = [
     examples: [{ english: 'The hotel offers good service at a reasonable price.', chinese: '这家酒店以合理价格提供良好服务。' }], level: 3, cefr: 'B2', categories: ['Daily English', 'Business'],
   },
   {
-    id: 'recognize', term: 'recognize', normalizedTerm: 'recognize', partOfSpeech: ['verb'], ipa: '/rˈɛkəɡnˌaɪz/',
+    id: 'recognize', term: 'recognise', normalizedTerm: 'recognise', partOfSpeech: ['verb'], ipa: '/rˈɛkəɡnˌaɪz/',
     chineseShort: '认出；承认；认识到', chineseExplanation: '表示“认出；承认；认识到”的动作或过程，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'To identify someone or something, or accept that something is true or important.',
-    examples: [{ english: 'The government recognized the need for better public transport.', chinese: '政府认识到改善公共交通的必要性。' }], level: 3, cefr: 'B2', categories: ['Academic'],
+    examples: [{ english: 'The government recognised the need for better public transport.', chinese: '政府认识到改善公共交通的必要性。' }], level: 3, cefr: 'B2', categories: ['Academic'],
   },
   {
     id: 'recommend', term: 'recommend', normalizedTerm: 'recommend', partOfSpeech: ['verb'], ipa: '/rˌɛkəmˈɛnd/',
@@ -1010,7 +1010,7 @@ export const level3Vocabulary = [
   {
     id: 'reflect', term: 'reflect', normalizedTerm: 'reflect', partOfSpeech: ['verb'], ipa: '/rɪflˈɛkt/',
     chineseShort: '反映；思考', chineseExplanation: '表示“反映；思考”的动作或过程，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'To show the nature of something, or think carefully about an experience.',
-    examples: [{ english: 'The survey results reflect changing attitudes toward remote work.', chinese: '调查结果反映了人们对远程工作的态度变化。' }], level: 3, cefr: 'B2', categories: ['Academic', 'Business'],
+    examples: [{ english: 'The survey results reflect changing attitudes towards remote work.', chinese: '调查结果反映了人们对远程工作的态度变化。' }], level: 3, cefr: 'B2', categories: ['Academic', 'Business'],
   },
   {
     id: 'reform', term: 'reform', normalizedTerm: 'reform', partOfSpeech: ['noun', 'verb'], ipa: '/rəfˈɔrm/',
@@ -1135,7 +1135,7 @@ export const level3Vocabulary = [
   {
     id: 'shift', term: 'shift', normalizedTerm: 'shift', partOfSpeech: ['noun', 'verb'], ipa: '/ʃˈɪft/',
     chineseShort: '转变；轮班；转移', chineseExplanation: '可作多种词性使用，核心意思包括“转变；轮班；转移”。常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'A change in position, direction, opinion, or activity.',
-    examples: [{ english: 'There has been a clear shift toward online shopping.', chinese: '人们明显转向了网上购物。' }], level: 3, cefr: 'B2', categories: ['Business', 'Academic'],
+    examples: [{ english: 'There has been a clear shift towards online shopping.', chinese: '人们明显转向了网上购物。' }], level: 3, cefr: 'B2', categories: ['Business', 'Academic'],
   },
   {
     id: 'similar', term: 'similar', normalizedTerm: 'similar', partOfSpeech: ['adjective'], ipa: '/sˈɪməlɚ/',
@@ -1159,7 +1159,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'standard', term: 'standard', normalizedTerm: 'standard', partOfSpeech: ['noun', 'adjective'], ipa: '/stˈændɚd/',
-    chineseShort: '标准；标准的', chineseExplanation: '可作多种词性使用，核心意思包括“标准；标准的”。常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'A level of quality or a rule used for comparison or judgment.',
+    chineseShort: '标准；标准的', chineseExplanation: '可作多种词性使用，核心意思包括“标准；标准的”。常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'A level of quality or a rule used for comparison or judgement.',
     examples: [{ english: 'All products must meet the required safety standards.', chinese: '所有产品都必须达到规定的安全标准。' }], level: 3, cefr: 'B2', categories: ['Business', 'Academic'],
   },
   {
@@ -1174,7 +1174,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'structure', term: 'structure', normalizedTerm: 'structure', partOfSpeech: ['noun', 'verb'], ipa: '/strˈʌktʃɚ/',
-    chineseShort: '结构；组织', chineseExplanation: '可作多种词性使用，核心意思包括“结构；组织”。常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'The way parts are arranged to form a whole, or to organize something in a particular way.',
+    chineseShort: '结构；组织', chineseExplanation: '可作多种词性使用，核心意思包括“结构；组织”。常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'The way parts are arranged to form a whole, or to organise something in a particular way.',
     examples: [{ english: 'A clear structure makes an essay easier to follow.', chinese: '清晰的结构让文章更容易理解。' }], level: 3, cefr: 'B2', categories: ['Academic'],
   },
   {
@@ -1193,9 +1193,9 @@ export const level3Vocabulary = [
     examples: [{ english: 'There was not sufficient evidence to support the claim.', chinese: '没有足够证据支持这一说法。' }], level: 3, cefr: 'B2', categories: ['Academic'],
   },
   {
-    id: 'summarize', term: 'summarize', normalizedTerm: 'summarize', partOfSpeech: ['verb'], ipa: '/sˈʌmɚˌaɪz/',
+    id: 'summarize', term: 'summarise', normalizedTerm: 'summarise', partOfSpeech: ['verb'], ipa: '/sˈʌmɚˌaɪz/',
     chineseShort: '总结；概括', chineseExplanation: '表示“总结；概括”的动作或过程，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'To give the main points of something in a short and clear form.',
-    examples: [{ english: 'Please summarize the main findings in one paragraph.', chinese: '请用一个段落概括主要发现。' }], level: 3, cefr: 'B2', categories: ['Academic'],
+    examples: [{ english: 'Please summarise the main findings in one paragraph.', chinese: '请用一个段落概括主要发现。' }], level: 3, cefr: 'B2', categories: ['Academic'],
   },
   {
     id: 'supply', term: 'supply', normalizedTerm: 'supply', partOfSpeech: ['noun', 'verb'], ipa: '/səplˈaɪ/',
@@ -1219,7 +1219,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'technical', term: 'technical', normalizedTerm: 'technical', partOfSpeech: ['adjective'], ipa: '/tˈɛknɪkəl/',
-    chineseShort: '技术的；专业技术性的', chineseExplanation: '形容某人、事物或情况具有“技术的；专业技术性的”的特点，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Related to practical skills, specialized knowledge, machines, or technology.',
+    chineseShort: '技术的；专业技术性的', chineseExplanation: '形容某人、事物或情况具有“技术的；专业技术性的”的特点，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Related to practical skills, specialised knowledge, machines, or technology.',
     examples: [{ english: 'The support team solved the technical problem within an hour.', chinese: '技术支持团队在一小时内解决了技术问题。' }], level: 3, cefr: 'B2', categories: ['Technology', 'Business'],
   },
   {
@@ -1255,7 +1255,7 @@ export const level3Vocabulary = [
   {
     id: 'trend', term: 'trend', normalizedTerm: 'trend', partOfSpeech: ['noun'], ipa: '/trˈɛnd/',
     chineseShort: '趋势；动向', chineseExplanation: '指与“趋势；动向”有关的概念、情况或事物，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'A general direction in which a situation is changing or developing.',
-    examples: [{ english: 'The report identifies a growing trend toward flexible work.', chinese: '报告指出弹性工作正成为一种不断增长的趋势。' }], level: 3, cefr: 'B2', categories: ['Business', 'Academic'],
+    examples: [{ english: 'The report identifies a growing trend towards flexible work.', chinese: '报告指出弹性工作正成为一种不断增长的趋势。' }], level: 3, cefr: 'B2', categories: ['Business', 'Academic'],
   },
   {
     id: 'typical', term: 'typical', normalizedTerm: 'typical', partOfSpeech: ['adjective'], ipa: '/tˈɪpəkəl/',
@@ -1325,7 +1325,7 @@ export const level3Vocabulary = [
   {
     id: 'admission', term: 'admission', normalizedTerm: 'admission', partOfSpeech: ['noun'], ipa: '/ædmˈɪʃən/',
     chineseShort: '准许进入；承认；入场费', chineseExplanation: '指与“准许进入；承认；入场费”有关的概念、情况或事物，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Permission to enter a place or institution, or an act of admitting something is true.',
-    examples: [{ english: 'Admission to the program depends on academic performance.', chinese: '能否进入该课程取决于学业表现。' }], level: 3, cefr: 'B2', categories: ['Academic', 'Daily English'],
+    examples: [{ english: 'Admission to the programme depends on academic performance.', chinese: '能否进入该课程取决于学业表现。' }], level: 3, cefr: 'B2', categories: ['Academic', 'Daily English'],
   },
   {
     id: 'aggressive', term: 'aggressive', normalizedTerm: 'aggressive', partOfSpeech: ['adjective'], ipa: '/əɡrˈɛsɪv/',
@@ -1354,7 +1354,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'asset', term: 'asset', normalizedTerm: 'asset', partOfSpeech: ['noun'], ipa: '/ˈæsˌɛt/',
-    chineseShort: '资产；有价值的人或事物', chineseExplanation: '指与“资产；有价值的人或事物”有关的概念、情况或事物，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Something valuable that a person or organization owns or benefits from.',
+    chineseShort: '资产；有价值的人或事物', chineseExplanation: '指与“资产；有价值的人或事物”有关的概念、情况或事物，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Something valuable that a person or organisation owns or benefits from.',
     examples: [{ english: 'Strong communication skills are a valuable asset in most careers.', chinese: '良好的沟通能力在大多数职业中都是宝贵的优势。' }], level: 3, cefr: 'B2', categories: ['Business', 'Daily English'],
   },
   {
@@ -1384,7 +1384,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'broadcast', term: 'broadcast', normalizedTerm: 'broadcast', partOfSpeech: ['noun', 'verb'], ipa: '/brˈɔdkˌæst/',
-    chineseShort: '广播；播送', chineseExplanation: '可作多种词性使用，核心意思包括“广播；播送”。常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'A radio or television program, or to send programs or information to many people.',
+    chineseShort: '广播；播送', chineseExplanation: '可作多种词性使用，核心意思包括“广播；播送”。常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'A radio or television programme, or to send programmes or information to many people.',
     examples: [{ english: 'The interview was broadcast live across the country.', chinese: '这次采访在全国进行了现场直播。' }], level: 3, cefr: 'B2', categories: ['Technology', 'Academic'],
   },
   {
@@ -1459,7 +1459,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'curriculum', term: 'curriculum', normalizedTerm: 'curriculum', partOfSpeech: ['noun'], ipa: '/kɚˈɪkjələm/',
-    chineseShort: '课程体系；课程设置', chineseExplanation: '指与“课程体系；课程设置”有关的概念、情况或事物，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'The subjects and content taught in a school, college, or educational program.',
+    chineseShort: '课程体系；课程设置', chineseExplanation: '指与“课程体系；课程设置”有关的概念、情况或事物，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'The subjects and content taught in a school, college, or educational programme.',
     examples: [{ english: 'Digital literacy has become part of the school curriculum.', chinese: '数字素养已经成为学校课程的一部分。' }], level: 3, cefr: 'B2', categories: ['Academic'],
   },
   {
@@ -1549,7 +1549,7 @@ export const level3Vocabulary = [
   },
   {
     id: 'revenue', term: 'revenue', normalizedTerm: 'revenue', partOfSpeech: ['noun'], ipa: '/rˈɛvənˌu/',
-    chineseShort: '收入；收益', chineseExplanation: '指与“收入；收益”有关的概念、情况或事物，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Money received by a business, organization, or government from its activities.',
+    chineseShort: '收入；收益', chineseExplanation: '指与“收入；收益”有关的概念、情况或事物，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Money received by a business, organisation, or government from its activities.',
     examples: [{ english: 'Online sales now provide a large share of the company\'s revenue.', chinese: '网上销售现在占公司收入的很大一部分。' }], level: 3, cefr: 'B2', categories: ['Business'],
   },
 ] satisfies readonly VocabularyItem[]

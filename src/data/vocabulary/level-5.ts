@@ -1,6 +1,6 @@
 import type { VocabularyItem } from '../../types'
 
-/** Advanced Level 5 vocabulary centered on C2 **/
+/** Advanced Level 5 vocabulary centred on C2 **/
 export const level5Vocabulary = [
   {
     id: 'aberration', term: 'aberration', normalizedTerm: 'aberration', partOfSpeech: ['noun'], ipa: '/ˌabəɹˈeɪʃən/',
@@ -64,12 +64,12 @@ export const level5Vocabulary = [
   },
   {
     id: 'adjudicate', term: 'adjudicate', normalizedTerm: 'adjudicate', partOfSpeech: ['verb'], ipa: '/ɐdʒˈuːdɪkˌeɪt/',
-    chineseShort: '裁决；判定', chineseExplanation: '“adjudicate”属于高级正式词汇，表示“裁决；判定”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To make a formal judgment on a disputed matter.',
+    chineseShort: '裁决；判定', chineseExplanation: '“adjudicate”属于高级正式词汇，表示“裁决；判定”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To make a formal judgement on a disputed matter.',
     examples: [{ english: 'The memorandum explains why the parties chose to adjudicate under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“adjudicate”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'adroit', term: 'adroit', normalizedTerm: 'adroit', partOfSpeech: ['adjective'], ipa: '/ɐdɹˈɔɪt/',
-    chineseShort: '娴熟机敏的', chineseExplanation: '“adroit”属于高级正式词汇，表示“娴熟机敏的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Skillful, clever, and quick in thought or action.',
+    chineseShort: '娴熟机敏的', chineseExplanation: '“adroit”属于高级正式词汇，表示“娴熟机敏的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Skilful, clever, and quick in thought or action.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as adroit.', chinese: '审阅证据后，评审小组将该情况描述为“adroit”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -79,13 +79,13 @@ export const level5Vocabulary = [
   },
   {
     id: 'affectation', term: 'affectation', normalizedTerm: 'affectation', partOfSpeech: ['noun'], ipa: '/ɐfɪktˈeɪʃən/',
-    chineseShort: '做作；矫饰', chineseExplanation: '“affectation”属于高级正式词汇，表示“做作；矫饰”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Behavior or speech adopted to impress others rather than being natural.',
+    chineseShort: '做作；矫饰', chineseExplanation: '“affectation”属于高级正式词汇，表示“做作；矫饰”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Behaviour or speech adopted to impress others rather than being natural.',
     examples: [{ english: 'The report identifies affectation as a significant feature of the broader analysis.', chinese: '报告将“affectation”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
-    id: 'aggrandize', term: 'aggrandize', normalizedTerm: 'aggrandize', partOfSpeech: ['verb'], ipa: '/ɐɡɹˈandaɪz/',
-    chineseShort: '扩大权势；抬高地位', chineseExplanation: '“aggrandize”属于高级正式词汇，表示“扩大权势；抬高地位”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To increase the power, status, or reputation of someone or something.',
-    examples: [{ english: 'The memorandum explains why the parties chose to aggrandize under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“aggrandize”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
+    id: 'aggrandize', term: 'aggrandise', normalizedTerm: 'aggrandise', partOfSpeech: ['verb'], ipa: '/ɐɡɹˈandaɪz/',
+    chineseShort: '扩大权势；抬高地位', chineseExplanation: '“aggrandise”属于高级正式词汇，表示“扩大权势；抬高地位”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To increase the power, status, or reputation of someone or something.',
+    examples: [{ english: 'The memorandum explains why the parties chose to aggrandise under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“aggrandise”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'alacrity', term: 'alacrity', normalizedTerm: 'alacrity', partOfSpeech: ['noun'], ipa: '/ɐlˈakɹɪti/',
@@ -149,7 +149,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'arbitrate', term: 'arbitrate', normalizedTerm: 'arbitrate', partOfSpeech: ['verb'], ipa: '/ˈɑːbɪtɹˌeɪt/',
-    chineseShort: '仲裁；调解', chineseExplanation: '“arbitrate”属于高级正式词汇，表示“仲裁；调解”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To settle a dispute through impartial judgment.',
+    chineseShort: '仲裁；调解', chineseExplanation: '“arbitrate”属于高级正式词汇，表示“仲裁；调解”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To settle a dispute through impartial judgement.',
     examples: [{ english: 'The memorandum explains why the parties chose to arbitrate under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“arbitrate”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -174,7 +174,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'ascetic', term: 'ascetic', normalizedTerm: 'ascetic', partOfSpeech: ['adjective'], ipa: '/ɐsˈɛtɪk/',
-    chineseShort: '苦行的；克己的', chineseExplanation: '“ascetic”属于高级正式词汇，表示“苦行的；克己的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Characterized by severe self-discipline and abstention from indulgence.',
+    chineseShort: '苦行的；克己的', chineseExplanation: '“ascetic”属于高级正式词汇，表示“苦行的；克己的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Characterised by severe self-discipline and abstention from indulgence.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as ascetic.', chinese: '审阅证据后，评审小组将该情况描述为“ascetic”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -243,9 +243,9 @@ export const level5Vocabulary = [
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as bombastic.', chinese: '审阅证据后，评审小组将该情况描述为“bombastic”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
-    id: 'bowdlerize', term: 'bowdlerize', normalizedTerm: 'bowdlerize', partOfSpeech: ['verb'], ipa: '/bˈəʊdəlɹˌaɪz/',
-    chineseShort: '删改净化', chineseExplanation: '“bowdlerize”属于高级正式词汇，表示“删改净化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To remove material considered offensive or improper from a text.',
-    examples: [{ english: 'The memorandum explains why the parties chose to bowdlerize under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“bowdlerize”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
+    id: 'bowdlerize', term: 'bowdlerise', normalizedTerm: 'bowdlerise', partOfSpeech: ['verb'], ipa: '/bˈəʊdəlɹˌaɪz/',
+    chineseShort: '删改净化', chineseExplanation: '“bowdlerise”属于高级正式词汇，表示“删改净化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To remove material considered offensive or improper from a text.',
+    examples: [{ english: 'The memorandum explains why the parties chose to bowdlerise under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“bowdlerise”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'brazen', term: 'brazen', normalizedTerm: 'brazen', partOfSpeech: ['adjective'], ipa: '/bɹˈeɪzən/',
@@ -254,7 +254,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'bucolic', term: 'bucolic', normalizedTerm: 'bucolic', partOfSpeech: ['adjective'], ipa: '/bjuːkˈɒlɪk/',
-    chineseShort: '田园牧歌式的', chineseExplanation: '“bucolic”属于高级正式词汇，表示“田园牧歌式的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Relating to an idealized peaceful rural life.',
+    chineseShort: '田园牧歌式的', chineseExplanation: '“bucolic”属于高级正式词汇，表示“田园牧歌式的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Relating to an idealised peaceful rural life.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as bucolic.', chinese: '审阅证据后，评审小组将该情况描述为“bucolic”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -284,12 +284,12 @@ export const level5Vocabulary = [
   },
   {
     id: 'capricious', term: 'capricious', normalizedTerm: 'capricious', partOfSpeech: ['adjective'], ipa: '/kɐpɹˈɪʃəs/',
-    chineseShort: '反复无常的', chineseExplanation: '“capricious”属于高级正式词汇，表示“反复无常的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Given to sudden and unpredictable changes of mood or behavior.',
+    chineseShort: '反复无常的', chineseExplanation: '“capricious”属于高级正式词汇，表示“反复无常的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Given to sudden and unpredictable changes of mood or behaviour.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as capricious.', chinese: '审阅证据后，评审小组将该情况描述为“capricious”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'castigate', term: 'castigate', normalizedTerm: 'castigate', partOfSpeech: ['verb'], ipa: '/kˈastɪɡˌeɪt/',
-    chineseShort: '严厉谴责', chineseExplanation: '“castigate”属于高级正式词汇，表示“严厉谴责”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To reprimand or criticize someone severely.',
+    chineseShort: '严厉谴责', chineseExplanation: '“castigate”属于高级正式词汇，表示“严厉谴责”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To reprimand or criticise someone severely.',
     examples: [{ english: 'The memorandum explains why the parties chose to castigate under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“castigate”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -384,7 +384,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'connoisseur', term: 'connoisseur', normalizedTerm: 'connoisseur', partOfSpeech: ['noun'], ipa: '/kˌɒnəsˈɜː/',
-    chineseShort: '鉴赏家；行家', chineseExplanation: '“connoisseur”属于高级正式词汇，表示“鉴赏家；行家”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'A person with expert judgment in matters of taste or quality.',
+    chineseShort: '鉴赏家；行家', chineseExplanation: '“connoisseur”属于高级正式词汇，表示“鉴赏家；行家”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'A person with expert judgement in matters of taste or quality.',
     examples: [{ english: 'The report identifies connoisseur as a significant feature of the broader analysis.', chinese: '报告将“connoisseur”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -414,7 +414,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'contentious', term: 'contentious', normalizedTerm: 'contentious', partOfSpeech: ['adjective'], ipa: '/kəntˈɛnʃəs/',
-    chineseShort: '有争议的；好争辩的', chineseExplanation: '“contentious”属于高级正式词汇，表示“有争议的；好争辩的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Likely to cause disagreement or characterized by argument.',
+    chineseShort: '有争议的；好争辩的', chineseExplanation: '“contentious”属于高级正式词汇，表示“有争议的；好争辩的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Likely to cause disagreement or characterised by argument.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as contentious.', chinese: '审阅证据后，评审小组将该情况描述为“contentious”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -499,7 +499,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'deference', term: 'deference', normalizedTerm: 'deference', partOfSpeech: ['noun'], ipa: '/dˈɛfɹəns/',
-    chineseShort: '尊重；顺从', chineseExplanation: '“deference”属于高级正式词汇，表示“尊重；顺从”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Respectful submission to another person\'s judgment or authority.',
+    chineseShort: '尊重；顺从', chineseExplanation: '“deference”属于高级正式词汇，表示“尊重；顺从”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Respectful submission to another person\'s judgement or authority.',
     examples: [{ english: 'The report identifies deference as a significant feature of the broader analysis.', chinese: '报告将“deference”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -524,7 +524,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'denigrate', term: 'denigrate', normalizedTerm: 'denigrate', partOfSpeech: ['verb'], ipa: '/dˈɛnɪɡɹˌeɪt/',
-    chineseShort: '贬低；诋毁', chineseExplanation: '“denigrate”属于高级正式词汇，表示“贬低；诋毁”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To criticize unfairly or belittle the reputation of someone.',
+    chineseShort: '贬低；诋毁', chineseExplanation: '“denigrate”属于高级正式词汇，表示“贬低；诋毁”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To criticise unfairly or belittle the reputation of someone.',
     examples: [{ english: 'The memorandum explains why the parties chose to denigrate under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“denigrate”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -569,7 +569,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'discerning', term: 'discerning', normalizedTerm: 'discerning', partOfSpeech: ['adjective'], ipa: '/dɪsˈɜːnɪŋ/',
-    chineseShort: '有洞察力的；有鉴别力的', chineseExplanation: '“discerning”属于高级正式词汇，表示“有洞察力的；有鉴别力的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Showing good judgment and the ability to perceive subtle distinctions.',
+    chineseShort: '有洞察力的；有鉴别力的', chineseExplanation: '“discerning”属于高级正式词汇，表示“有洞察力的；有鉴别力的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Showing good judgement and the ability to perceive subtle distinctions.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as discerning.', chinese: '审阅证据后，评审小组将该情况描述为“discerning”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -639,7 +639,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'effrontery', term: 'effrontery', normalizedTerm: 'effrontery', partOfSpeech: ['noun'], ipa: '/ˈɛfɹəntəɹi/',
-    chineseShort: '厚颜无耻；放肆', chineseExplanation: '“effrontery”属于高级正式词汇，表示“厚颜无耻；放肆”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Shameless boldness or insolent behavior.',
+    chineseShort: '厚颜无耻；放肆', chineseExplanation: '“effrontery”属于高级正式词汇，表示“厚颜无耻；放肆”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Shameless boldness or insolent behaviour.',
     examples: [{ english: 'The report identifies effrontery as a significant feature of the broader analysis.', chinese: '报告将“effrontery”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -719,7 +719,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'esoteric', term: 'esoteric', normalizedTerm: 'esoteric', partOfSpeech: ['adjective'], ipa: '/ˌɛsəʊtˈɛɹɪk/',
-    chineseShort: '深奥小众的', chineseExplanation: '“esoteric”属于高级正式词汇，表示“深奥小众的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Intended for or understood by a small group with specialized knowledge.',
+    chineseShort: '深奥小众的', chineseExplanation: '“esoteric”属于高级正式词汇，表示“深奥小众的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Intended for or understood by a small group with specialised knowledge.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as esoteric.', chinese: '审阅证据后，评审小组将该情况描述为“esoteric”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -774,7 +774,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'facetious', term: 'facetious', normalizedTerm: 'facetious', partOfSpeech: ['adjective'], ipa: '/fɐsˈiːʃəs/',
-    chineseShort: '轻佻诙谐的', chineseExplanation: '“facetious”属于高级正式词汇，表示“轻佻诙谐的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Treating serious matters with deliberately inappropriate humor.',
+    chineseShort: '轻佻诙谐的', chineseExplanation: '“facetious”属于高级正式词汇，表示“轻佻诙谐的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Treating serious matters with deliberately inappropriate humour.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as facetious.', chinese: '审阅证据后，评审小组将该情况描述为“facetious”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -809,7 +809,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'fortuitous', term: 'fortuitous', normalizedTerm: 'fortuitous', partOfSpeech: ['adjective'], ipa: '/fɔːtjˈuːɪtəs/',
-    chineseShort: '偶然发生的；幸运巧合的', chineseExplanation: '“fortuitous”属于高级正式词汇，表示“偶然发生的；幸运巧合的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Happening by chance, often with a favorable result.',
+    chineseShort: '偶然发生的；幸运巧合的', chineseExplanation: '“fortuitous”属于高级正式词汇，表示“偶然发生的；幸运巧合的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Happening by chance, often with a favourable result.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as fortuitous.', chinese: '审阅证据后，评审小组将该情况描述为“fortuitous”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -874,7 +874,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'histrionic', term: 'histrionic', normalizedTerm: 'histrionic', partOfSpeech: ['adjective'], ipa: '/hˌɪstɹɪˈɒnɪk/',
-    chineseShort: '夸张做作的', chineseExplanation: '“histrionic”属于高级正式词汇，表示“夸张做作的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Overly theatrical or dramatic in behavior or expression.',
+    chineseShort: '夸张做作的', chineseExplanation: '“histrionic”属于高级正式词汇，表示“夸张做作的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Overly theatrical or dramatic in behaviour or expression.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as histrionic.', chinese: '审阅证据后，评审小组将该情况描述为“histrionic”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -934,7 +934,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'inchoate', term: 'inchoate', normalizedTerm: 'inchoate', partOfSpeech: ['adjective'], ipa: '/ˈɪntʃəʊt/',
-    chineseShort: '尚未成形的', chineseExplanation: '“inchoate”属于高级正式词汇，表示“尚未成形的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Only partly formed, organized, or developed.',
+    chineseShort: '尚未成形的', chineseExplanation: '“inchoate”属于高级正式词汇，表示“尚未成形的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Only partly formed, organised, or developed.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as inchoate.', chinese: '审阅证据后，评审小组将该情况描述为“inchoate”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -979,7 +979,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'internecine', term: 'internecine', normalizedTerm: 'internecine', partOfSpeech: ['adjective'], ipa: '/ˌɪntənˈɛsiːn/',
-    chineseShort: '内部相互残杀的', chineseExplanation: '“internecine”属于高级正式词汇，表示“内部相互残杀的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Destructive to both sides within the same group or organization.',
+    chineseShort: '内部相互残杀的', chineseExplanation: '“internecine”属于高级正式词汇，表示“内部相互残杀的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Destructive to both sides within the same group or organisation.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as internecine.', chinese: '审阅证据后，评审小组将该情况描述为“internecine”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1029,7 +1029,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'legerdemain', term: 'legerdemain', normalizedTerm: 'legerdemain', partOfSpeech: ['noun'], ipa: '/lˈɛdʒədɪmˌeɪn/',
-    chineseShort: '戏法；巧妙欺骗', chineseExplanation: '“legerdemain”属于高级正式词汇，表示“戏法；巧妙欺骗”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Skillful deception or sleight of hand used to mislead.',
+    chineseShort: '戏法；巧妙欺骗', chineseExplanation: '“legerdemain”属于高级正式词汇，表示“戏法；巧妙欺骗”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Skilful deception or sleight of hand used to mislead.',
     examples: [{ english: 'The report identifies legerdemain as a significant feature of the broader analysis.', chinese: '报告将“legerdemain”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1039,7 +1039,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'libertine', term: 'libertine', normalizedTerm: 'libertine', partOfSpeech: ['noun'], ipa: '/lˈɪbətˌiːn/',
-    chineseShort: '放纵者；浪荡者', chineseExplanation: '“libertine”属于高级正式词汇，表示“放纵者；浪荡者”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'A person who rejects conventional moral restraints, especially in sexual behavior.',
+    chineseShort: '放纵者；浪荡者', chineseExplanation: '“libertine”属于高级正式词汇，表示“放纵者；浪荡者”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'A person who rejects conventional moral restraints, especially in sexual behaviour.',
     examples: [{ english: 'The report identifies libertine as a significant feature of the broader analysis.', chinese: '报告将“libertine”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1064,7 +1064,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'magnanimous', term: 'magnanimous', normalizedTerm: 'magnanimous', partOfSpeech: ['adjective'], ipa: '/maɡnˈanɪməs/',
-    chineseShort: '宽宏大量的', chineseExplanation: '“magnanimous”属于高级正式词汇，表示“宽宏大量的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Generous and forgiving, especially toward a rival or opponent.',
+    chineseShort: '宽宏大量的', chineseExplanation: '“magnanimous”属于高级正式词汇，表示“宽宏大量的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Generous and forgiving, especially towards a rival or opponent.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as magnanimous.', chinese: '审阅证据后，评审小组将该情况描述为“magnanimous”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1084,7 +1084,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'mercurial', term: 'mercurial', normalizedTerm: 'mercurial', partOfSpeech: ['adjective'], ipa: '/mɜːkjˈʊɹɪəl/',
-    chineseShort: '善变的；情绪多变的', chineseExplanation: '“mercurial”属于高级正式词汇，表示“善变的；情绪多变的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Subject to rapid and unpredictable changes of mood or behavior.',
+    chineseShort: '善变的；情绪多变的', chineseExplanation: '“mercurial”属于高级正式词汇，表示“善变的；情绪多变的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Subject to rapid and unpredictable changes of mood or behaviour.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as mercurial.', chinese: '审阅证据后，评审小组将该情况描述为“mercurial”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1094,7 +1094,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'misanthropic', term: 'misanthropic', normalizedTerm: 'misanthropic', partOfSpeech: ['adjective'], ipa: '/mɪsanθɹˈɒpɪk/',
-    chineseShort: '厌恶人类的', chineseExplanation: '“misanthropic”属于高级正式词汇，表示“厌恶人类的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Characterized by distrust or dislike of humankind.',
+    chineseShort: '厌恶人类的', chineseExplanation: '“misanthropic”属于高级正式词汇，表示“厌恶人类的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Characterised by distrust or dislike of humankind.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as misanthropic.', chinese: '审阅证据后，评审小组将该情况描述为“misanthropic”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1294,7 +1294,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'platitudinous', term: 'platitudinous', normalizedTerm: 'platitudinous', partOfSpeech: ['adjective'], ipa: '/plˌatɪtjˈuːdɪnəs/',
-    chineseShort: '充满陈词滥调的', chineseExplanation: '“platitudinous”属于高级正式词汇，表示“充满陈词滥调的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Characterized by dull, overused, and unoriginal statements.',
+    chineseShort: '充满陈词滥调的', chineseExplanation: '“platitudinous”属于高级正式词汇，表示“充满陈词滥调的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Characterised by dull, overused, and unoriginal statements.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as platitudinous.', chinese: '审阅证据后，评审小组将该情况描述为“platitudinous”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1344,7 +1344,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'proclivity', term: 'proclivity', normalizedTerm: 'proclivity', partOfSpeech: ['noun'], ipa: '/pɹəklˈɪvɪti/',
-    chineseShort: '倾向；癖好', chineseExplanation: '“proclivity”属于高级正式词汇，表示“倾向；癖好”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'A natural or habitual tendency toward a particular behavior.',
+    chineseShort: '倾向；癖好', chineseExplanation: '“proclivity”属于高级正式词汇，表示“倾向；癖好”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'A natural or habitual tendency towards a particular behaviour.',
     examples: [{ english: 'The report identifies proclivity as a significant feature of the broader analysis.', chinese: '报告将“proclivity”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1369,7 +1369,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'propitious', term: 'propitious', normalizedTerm: 'propitious', partOfSpeech: ['adjective'], ipa: '/pɹəpˈɪʃəs/',
-    chineseShort: '吉利的；有利的', chineseExplanation: '“propitious”属于高级正式词汇，表示“吉利的；有利的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Giving or indicating a favorable chance of success.',
+    chineseShort: '吉利的；有利的', chineseExplanation: '“propitious”属于高级正式词汇，表示“吉利的；有利的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Giving or indicating a favourable chance of success.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as propitious.', chinese: '审阅证据后，评审小组将该情况描述为“propitious”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1379,7 +1379,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'providential', term: 'providential', normalizedTerm: 'providential', partOfSpeech: ['adjective'], ipa: '/pɹˌɒvɪdˈɛnʃəl/',
-    chineseShort: '幸运而及时的', chineseExplanation: '“providential”属于高级正式词汇，表示“幸运而及时的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Occurring at a favorable time as if through divine intervention.',
+    chineseShort: '幸运而及时的', chineseExplanation: '“providential”属于高级正式词汇，表示“幸运而及时的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Occurring at a favourable time as if through divine intervention.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as providential.', chinese: '审阅证据后，评审小组将该情况描述为“providential”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1449,7 +1449,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'sagacious', term: 'sagacious', normalizedTerm: 'sagacious', partOfSpeech: ['adjective'], ipa: '/saɡˈeɪʃəs/',
-    chineseShort: '睿智的；有远见的', chineseExplanation: '“sagacious”属于高级正式词汇，表示“睿智的；有远见的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Having sound judgment, wisdom, and practical insight.',
+    chineseShort: '睿智的；有远见的', chineseExplanation: '“sagacious”属于高级正式词汇，表示“睿智的；有远见的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Having sound judgement, wisdom, and practical insight.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as sagacious.', chinese: '审阅证据后，评审小组将该情况描述为“sagacious”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1479,7 +1479,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'sententious', term: 'sententious', normalizedTerm: 'sententious', partOfSpeech: ['adjective'], ipa: '/sɛntˈɛnʃəs/',
-    chineseShort: '说教式的；格言式的', chineseExplanation: '“sententious”属于高级正式词汇，表示“说教式的；格言式的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Given to moralizing in a terse or pompous manner.',
+    chineseShort: '说教式的；格言式的', chineseExplanation: '“sententious”属于高级正式词汇，表示“说教式的；格言式的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Given to moralising in a terse or pompous manner.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as sententious.', chinese: '审阅证据后，评审小组将该情况描述为“sententious”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1489,7 +1489,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'solipsistic', term: 'solipsistic', normalizedTerm: 'solipsistic', partOfSpeech: ['adjective'], ipa: '/sˌɒlɪpsˈɪstɪk/',
-    chineseShort: '唯我论的；自我中心的', chineseExplanation: '“solipsistic”属于高级正式词汇，表示“唯我论的；自我中心的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Extremely self-centered or based on the idea that only one\'s mind is certain.',
+    chineseShort: '唯我论的；自我中心的', chineseExplanation: '“solipsistic”属于高级正式词汇，表示“唯我论的；自我中心的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Extremely self-centred or based on the idea that only one\'s mind is certain.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as solipsistic.', chinese: '审阅证据后，评审小组将该情况描述为“solipsistic”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1534,7 +1534,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'sycophantic', term: 'sycophantic', normalizedTerm: 'sycophantic', partOfSpeech: ['adjective'], ipa: '/sˌɪkəfˈantɪk/',
-    chineseShort: '阿谀奉承的', chineseExplanation: '“sycophantic”属于高级正式词汇，表示“阿谀奉承的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Excessively flattering toward someone powerful for personal advantage.',
+    chineseShort: '阿谀奉承的', chineseExplanation: '“sycophantic”属于高级正式词汇，表示“阿谀奉承的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Excessively flattering towards someone powerful for personal advantage.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as sycophantic.', chinese: '审阅证据后，评审小组将该情况描述为“sycophantic”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1574,7 +1574,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'umbrage', term: 'umbrage', normalizedTerm: 'umbrage', partOfSpeech: ['noun'], ipa: '/ˈʌmbɹɪdʒ/',
-    chineseShort: '不快；冒犯感', chineseExplanation: '“umbrage”属于高级正式词汇，表示“不快；冒犯感”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Offense, resentment, or displeasure at a perceived slight.',
+    chineseShort: '不快；冒犯感', chineseExplanation: '“umbrage”属于高级正式词汇，表示“不快；冒犯感”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Offence, resentment, or displeasure at a perceived slight.',
     examples: [{ english: 'The report identifies umbrage as a significant feature of the broader analysis.', chinese: '报告将“umbrage”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1653,9 +1653,9 @@ export const level5Vocabulary = [
     examples: [{ english: 'The memorandum explains why the parties chose to adumbrate under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“adumbrate”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
-    id: 'aestheticize', term: 'aestheticize', normalizedTerm: 'aestheticize', partOfSpeech: ['verb'], ipa: '/iːsθˈɛtɪsˌaɪz/',
-    chineseShort: '审美化', chineseExplanation: '“aestheticize”属于高级正式词汇，表示“审美化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To present or treat something primarily in aesthetic terms.',
-    examples: [{ english: 'The memorandum explains why the parties chose to aestheticize under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“aestheticize”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
+    id: 'aestheticize', term: 'aestheticise', normalizedTerm: 'aestheticise', partOfSpeech: ['verb'], ipa: '/iːsθˈɛtɪsˌaɪz/',
+    chineseShort: '审美化', chineseExplanation: '“aestheticise”属于高级正式词汇，表示“审美化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To present or treat something primarily in aesthetic terms.',
+    examples: [{ english: 'The memorandum explains why the parties chose to aestheticise under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“aestheticise”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'afflatus', term: 'afflatus', normalizedTerm: 'afflatus', partOfSpeech: ['noun'], ipa: '/ɐflˈatəs/',
@@ -1694,12 +1694,12 @@ export const level5Vocabulary = [
   },
   {
     id: 'apotheosis', term: 'apotheosis', normalizedTerm: 'apotheosis', partOfSpeech: ['noun'], ipa: '/ɐpˈɒθiːəsiz/',
-    chineseShort: '巅峰；神化', chineseExplanation: '“apotheosis”属于高级正式词汇，表示“巅峰；神化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The highest point of development or elevation to idealized status.',
+    chineseShort: '巅峰；神化', chineseExplanation: '“apotheosis”属于高级正式词汇，表示“巅峰；神化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The highest point of development or elevation to idealised status.',
     examples: [{ english: 'The report identifies apotheosis as a significant feature of the broader analysis.', chinese: '报告将“apotheosis”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'argot', term: 'argot', normalizedTerm: 'argot', partOfSpeech: ['noun'], ipa: '/ˈɑːɡət/',
-    chineseShort: '行话；黑话', chineseExplanation: '“argot”属于高级正式词汇，表示“行话；黑话”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Specialized vocabulary used by a particular group.',
+    chineseShort: '行话；黑话', chineseExplanation: '“argot”属于高级正式词汇，表示“行话；黑话”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Specialised vocabulary used by a particular group.',
     examples: [{ english: 'The report identifies argot as a significant feature of the broader analysis.', chinese: '报告将“argot”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1759,7 +1759,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'canonical', term: 'canonical', normalizedTerm: 'canonical', partOfSpeech: ['adjective'], ipa: '/kɐnˈɒnɪkəl/',
-    chineseShort: '经典规范的；权威认可的', chineseExplanation: '“canonical”属于高级正式词汇，表示“经典规范的；权威认可的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Conforming to an accepted standard or officially recognized body of works.',
+    chineseShort: '经典规范的；权威认可的', chineseExplanation: '“canonical”属于高级正式词汇，表示“经典规范的；权威认可的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Conforming to an accepted standard or officially recognised body of works.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as canonical.', chinese: '审阅证据后，评审小组将该情况描述为“canonical”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1789,7 +1789,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'communitarian', term: 'communitarian', normalizedTerm: 'communitarian', partOfSpeech: ['adjective'], ipa: '/kəmjˌuːnɪtˈeəɹiən/',
-    chineseShort: '社群主义的', chineseExplanation: '“communitarian”属于高级正式词汇，表示“社群主义的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Emphasizing community interests and social responsibilities over individual autonomy.',
+    chineseShort: '社群主义的', chineseExplanation: '“communitarian”属于高级正式词汇，表示“社群主义的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Emphasising community interests and social responsibilities over individual autonomy.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as communitarian.', chinese: '审阅证据后，评审小组将该情况描述为“communitarian”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -1959,7 +1959,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'expiate', term: 'expiate', normalizedTerm: 'expiate', partOfSpeech: ['verb'], ipa: '/ˈɛkspɪˌeɪt/',
-    chineseShort: '赎罪；弥补', chineseExplanation: '“expiate”属于高级正式词汇，表示“赎罪；弥补”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To make amends for guilt, wrongdoing, or an offense.',
+    chineseShort: '赎罪；弥补', chineseExplanation: '“expiate”属于高级正式词汇，表示“赎罪；弥补”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To make amends for guilt, wrongdoing, or an offence.',
     examples: [{ english: 'The memorandum explains why the parties chose to expiate under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“expiate”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -2009,7 +2009,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'grandstanding', term: 'grandstanding', normalizedTerm: 'grandstanding', partOfSpeech: ['noun'], ipa: '/ɡɹˈandstandɪŋ/',
-    chineseShort: '哗众取宠；作秀', chineseExplanation: '“grandstanding”属于高级正式词汇，表示“哗众取宠；作秀”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Behavior intended primarily to attract attention or public approval.',
+    chineseShort: '哗众取宠；作秀', chineseExplanation: '“grandstanding”属于高级正式词汇，表示“哗众取宠；作秀”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Behaviour intended primarily to attract attention or public approval.',
     examples: [{ english: 'The report identifies grandstanding as a significant feature of the broader analysis.', chinese: '报告将“grandstanding”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -2044,7 +2044,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'inculcate', term: 'inculcate', normalizedTerm: 'inculcate', partOfSpeech: ['verb'], ipa: '/ˈɪnkəlkˌeɪt/',
-    chineseShort: '反复灌输；教导', chineseExplanation: '“inculcate”属于高级正式词汇，表示“反复灌输；教导”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To instill an idea or habit through persistent instruction.',
+    chineseShort: '反复灌输；教导', chineseExplanation: '“inculcate”属于高级正式词汇，表示“反复灌输；教导”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To instil an idea or habit through persistent instruction.',
     examples: [{ english: 'The memorandum explains why the parties chose to inculcate under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“inculcate”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -2079,7 +2079,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'judicious', term: 'judicious', normalizedTerm: 'judicious', partOfSpeech: ['adjective'], ipa: '/dʒuːdˈɪʃəs/',
-    chineseShort: '审慎明智的', chineseExplanation: '“judicious”属于高级正式词汇，表示“审慎明智的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Showing careful judgment and good sense.',
+    chineseShort: '审慎明智的', chineseExplanation: '“judicious”属于高级正式词汇，表示“审慎明智的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Showing careful judgement and good sense.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as judicious.', chinese: '审阅证据后，评审小组将该情况描述为“judicious”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -2089,7 +2089,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'lambaste', term: 'lambaste', normalizedTerm: 'lambaste', partOfSpeech: ['verb'], ipa: '/lˈambast/',
-    chineseShort: '严厉斥责', chineseExplanation: '“lambaste”属于高级正式词汇，表示“严厉斥责”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To criticize or attack someone very harshly.',
+    chineseShort: '严厉斥责', chineseExplanation: '“lambaste”属于高级正式词汇，表示“严厉斥责”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To criticise or attack someone very harshly.',
     examples: [{ english: 'The memorandum explains why the parties chose to lambaste under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“lambaste”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -2124,7 +2124,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'misprision', term: 'misprision', normalizedTerm: 'misprision', partOfSpeech: ['noun'], ipa: '/mɪspɹˈɪʒən/',
-    chineseShort: '隐瞒罪行；轻视', chineseExplanation: '“misprision”属于高级正式词汇，表示“隐瞒罪行；轻视”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Failure to report an offense or, historically, contemptuous neglect.',
+    chineseShort: '隐瞒罪行；轻视', chineseExplanation: '“misprision”属于高级正式词汇，表示“隐瞒罪行；轻视”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Failure to report an offence or, historically, contemptuous neglect.',
     examples: [{ english: 'The report identifies misprision as a significant feature of the broader analysis.', chinese: '报告将“misprision”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -2179,12 +2179,12 @@ export const level5Vocabulary = [
   },
   {
     id: 'pejorative', term: 'pejorative', normalizedTerm: 'pejorative', partOfSpeech: ['adjective'], ipa: '/pədʒˈɒɹətˌɪv/',
-    chineseShort: '贬义的', chineseExplanation: '“pejorative”属于高级正式词汇，表示“贬义的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Expressing contempt, disapproval, or a negative judgment.',
+    chineseShort: '贬义的', chineseExplanation: '“pejorative”属于高级正式词汇，表示“贬义的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Expressing contempt, disapproval, or a negative judgement.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as pejorative.', chinese: '审阅证据后，评审小组将该情况描述为“pejorative”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'peripatetic', term: 'peripatetic', normalizedTerm: 'peripatetic', partOfSpeech: ['adjective'], ipa: '/pˌɛɹɪpɐtˈɛtɪk/',
-    chineseShort: '巡回的；四处活动的', chineseExplanation: '“peripatetic”属于高级正式词汇，表示“巡回的；四处活动的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Traveling from place to place, especially in professional work.',
+    chineseShort: '巡回的；四处活动的', chineseExplanation: '“peripatetic”属于高级正式词汇，表示“巡回的；四处活动的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Travelling from place to place, especially in professional work.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as peripatetic.', chinese: '审阅证据后，评审小组将该情况描述为“peripatetic”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -2254,7 +2254,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'recidivism', term: 'recidivism', normalizedTerm: 'recidivism', partOfSpeech: ['noun'], ipa: '/ɹɪsˈɪdɪvˌɪzəm/',
-    chineseShort: '再犯；故态复萌', chineseExplanation: '“recidivism”属于高级正式词汇，表示“再犯；故态复萌”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The tendency to relapse into previous harmful or criminal behavior.',
+    chineseShort: '再犯；故态复萌', chineseExplanation: '“recidivism”属于高级正式词汇，表示“再犯；故态复萌”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The tendency to relapse into previous harmful or criminal behaviour.',
     examples: [{ english: 'The report identifies recidivism as a significant feature of the broader analysis.', chinese: '报告将“recidivism”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -2444,7 +2444,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'acumen', term: 'acumen', normalizedTerm: 'acumen', partOfSpeech: ['noun'], ipa: '/ˈakjuːmˌɛn/',
-    chineseShort: '敏锐判断力', chineseExplanation: '“acumen”属于高级正式词汇，表示“敏锐判断力”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The ability to make quick and accurate judgments.',
+    chineseShort: '敏锐判断力', chineseExplanation: '“acumen”属于高级正式词汇，表示“敏锐判断力”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The ability to make quick and accurate judgements.',
     examples: [{ english: 'The report identifies acumen as a significant feature of the broader analysis.', chinese: '报告将“acumen”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -2493,9 +2493,9 @@ export const level5Vocabulary = [
     examples: [{ english: 'The report identifies amanuensis as a significant feature of the broader analysis.', chinese: '报告将“amanuensis”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
-    id: 'amortize', term: 'amortize', normalizedTerm: 'amortize', partOfSpeech: ['verb'], ipa: '/ɐmˈɔːtaɪz/',
-    chineseShort: '分期摊销；偿还', chineseExplanation: '“amortize”属于高级正式词汇，表示“分期摊销；偿还”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To reduce a debt or allocate a cost gradually over time.',
-    examples: [{ english: 'The memorandum explains why the parties chose to amortize under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“amortize”。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Business'],
+    id: 'amortize', term: 'amortise', normalizedTerm: 'amortise', partOfSpeech: ['verb'], ipa: '/ɐmˈɔːtaɪz/',
+    chineseShort: '分期摊销；偿还', chineseExplanation: '“amortise”属于高级正式词汇，表示“分期摊销；偿还”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To reduce a debt or allocate a cost gradually over time.',
+    examples: [{ english: 'The memorandum explains why the parties chose to amortise under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“amortise”。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Business'],
   },
   {
     id: 'anomie', term: 'anomie', normalizedTerm: 'anomie', partOfSpeech: ['noun'], ipa: '/ɐnˈɒmi/',
@@ -2563,9 +2563,9 @@ export const level5Vocabulary = [
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as autochthonous.', chinese: '审阅证据后，评审小组将该情况描述为“autochthonous”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
-    id: 'balkanize', term: 'balkanize', normalizedTerm: 'balkanize', partOfSpeech: ['verb'], ipa: '/bˈɔːlkɐnˌaɪz/',
-    chineseShort: '使分裂成敌对小集团', chineseExplanation: '“balkanize”属于高级正式词汇，表示“使分裂成敌对小集团”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To divide a region or organization into smaller hostile units.',
-    examples: [{ english: 'The memorandum explains why the parties chose to balkanize under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“balkanize”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
+    id: 'balkanize', term: 'balkanise', normalizedTerm: 'balkanise', partOfSpeech: ['verb'], ipa: '/bˈɔːlkɐnˌaɪz/',
+    chineseShort: '使分裂成敌对小集团', chineseExplanation: '“balkanise”属于高级正式词汇，表示“使分裂成敌对小集团”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To divide a region or organisation into smaller hostile units.',
+    examples: [{ english: 'The memorandum explains why the parties chose to balkanise under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“balkanise”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'beatitude', term: 'beatitude', normalizedTerm: 'beatitude', partOfSpeech: ['noun'], ipa: '/biːˈatɪtjˌuːd/',
@@ -2584,7 +2584,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'braggadocio', term: 'braggadocio', normalizedTerm: 'braggadocio', partOfSpeech: ['noun'], ipa: '/bɹˌaɡɐdˈəʊsɪˌəʊ/',
-    chineseShort: '吹嘘；自夸', chineseExplanation: '“braggadocio”属于高级正式词汇，表示“吹嘘；自夸”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Boastful behavior or arrogant pretension.',
+    chineseShort: '吹嘘；自夸', chineseExplanation: '“braggadocio”属于高级正式词汇，表示“吹嘘；自夸”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Boastful behaviour or arrogant pretension.',
     examples: [{ english: 'The report identifies braggadocio as a significant feature of the broader analysis.', chinese: '报告将“braggadocio”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -2609,7 +2609,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'causalism', term: 'causalism', normalizedTerm: 'causalism', partOfSpeech: ['noun'], ipa: '/kˈɔːzəlˌɪzəm/',
-    chineseShort: '因果论', chineseExplanation: '“causalism”属于高级正式词汇，表示“因果论”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'An approach emphasizing causal relations as primary explanations.',
+    chineseShort: '因果论', chineseExplanation: '“causalism”属于高级正式词汇，表示“因果论”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'An approach emphasising causal relations as primary explanations.',
     examples: [{ english: 'The report identifies causalism as a significant feature of the broader analysis.', chinese: '报告将“causalism”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -2689,7 +2689,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'deontology', term: 'deontology', normalizedTerm: 'deontology', partOfSpeech: ['noun'], ipa: '/diːəntˈɒlədʒi/',
-    chineseShort: '义务论', chineseExplanation: '“deontology”属于高级正式词汇，表示“义务论”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'An ethical theory emphasizing duties and rules over consequences.',
+    chineseShort: '义务论', chineseExplanation: '“deontology”属于高级正式词汇，表示“义务论”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'An ethical theory emphasising duties and rules over consequences.',
     examples: [{ english: 'The report identifies deontology as a significant feature of the broader analysis.', chinese: '报告将“deontology”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -2854,7 +2854,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'formalist', term: 'formalist', normalizedTerm: 'formalist', partOfSpeech: ['adjective'], ipa: '/fˈɔːməlˌɪst/',
-    chineseShort: '形式主义的', chineseExplanation: '“formalist”属于高级正式词汇，表示“形式主义的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Emphasizing structure, rules, or form over context or substance.',
+    chineseShort: '形式主义的', chineseExplanation: '“formalist”属于高级正式词汇，表示“形式主义的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Emphasising structure, rules, or form over context or substance.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as formalist.', chinese: '审阅证据后，评审小组将该情况描述为“formalist”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -2888,9 +2888,9 @@ export const level5Vocabulary = [
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as heterogenous.', chinese: '审阅证据后，评审小组将该情况描述为“heterogenous”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
-    id: 'historicize', term: 'historicize', normalizedTerm: 'historicize', partOfSpeech: ['verb'], ipa: '/hɪstˈɔːɹɪsˌaɪz/',
-    chineseShort: '历史化解释', chineseExplanation: '“historicize”属于高级正式词汇，表示“历史化解释”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To interpret something in relation to its historical context.',
-    examples: [{ english: 'The memorandum explains why the parties chose to historicize under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“historicize”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
+    id: 'historicize', term: 'historicise', normalizedTerm: 'historicise', partOfSpeech: ['verb'], ipa: '/hɪstˈɔːɹɪsˌaɪz/',
+    chineseShort: '历史化解释', chineseExplanation: '“historicise”属于高级正式词汇，表示“历史化解释”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To interpret something in relation to its historical context.',
+    examples: [{ english: 'The memorandum explains why the parties chose to historicise under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“historicise”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'homiletic', term: 'homiletic', normalizedTerm: 'homiletic', partOfSpeech: ['adjective'], ipa: '/hˌɒmaɪlˈɛtɪk/',
@@ -2898,9 +2898,9 @@ export const level5Vocabulary = [
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as homiletic.', chinese: '审阅证据后，评审小组将该情况描述为“homiletic”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
-    id: 'hypostatize', term: 'hypostatize', normalizedTerm: 'hypostatize', partOfSpeech: ['verb'], ipa: '/hˌaɪpəʊstˈataɪz/',
-    chineseShort: '实体化；把抽象当实体', chineseExplanation: '“hypostatize”属于高级正式词汇，表示“实体化；把抽象当实体”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To treat an abstract concept as a concrete independent reality.',
-    examples: [{ english: 'The memorandum explains why the parties chose to hypostatize under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“hypostatize”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
+    id: 'hypostatize', term: 'hypostatise', normalizedTerm: 'hypostatise', partOfSpeech: ['verb'], ipa: '/hˌaɪpəʊstˈataɪz/',
+    chineseShort: '实体化；把抽象当实体', chineseExplanation: '“hypostatise”属于高级正式词汇，表示“实体化；把抽象当实体”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To treat an abstract concept as a concrete independent reality.',
+    examples: [{ english: 'The memorandum explains why the parties chose to hypostatise under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“hypostatise”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'ideational', term: 'ideational', normalizedTerm: 'ideational', partOfSpeech: ['adjective'], ipa: '/ˌaɪdɪˈeɪʃənəl/',
@@ -2964,7 +2964,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'interlocutory', term: 'interlocutory', normalizedTerm: 'interlocutory', partOfSpeech: ['adjective'], ipa: '/ˌɪntəlˈəʊkjuːtəɹi/',
-    chineseShort: '中间裁定的；对话性的', chineseExplanation: '“interlocutory”属于高级正式词汇，表示“中间裁定的；对话性的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Issued during a legal proceeding before final judgment or relating to dialogue.',
+    chineseShort: '中间裁定的；对话性的', chineseExplanation: '“interlocutory”属于高级正式词汇，表示“中间裁定的；对话性的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Issued during a legal proceeding before final judgement or relating to dialogue.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as interlocutory.', chinese: '审阅证据后，评审小组将该情况描述为“interlocutory”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -2988,9 +2988,9 @@ export const level5Vocabulary = [
     examples: [{ english: 'The report identifies legitimacy as a significant feature of the broader analysis.', chinese: '报告将“legitimacy”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
-    id: 'lexicalize', term: 'lexicalize', normalizedTerm: 'lexicalize', partOfSpeech: ['verb'], ipa: '/lˈɛksɪkəlˌaɪz/',
-    chineseShort: '词汇化', chineseExplanation: '“lexicalize”属于高级正式词汇，表示“词汇化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To establish a concept or expression as a conventional lexical item.',
-    examples: [{ english: 'The memorandum explains why the parties chose to lexicalize under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“lexicalize”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
+    id: 'lexicalize', term: 'lexicalise', normalizedTerm: 'lexicalise', partOfSpeech: ['verb'], ipa: '/lˈɛksɪkəlˌaɪz/',
+    chineseShort: '词汇化', chineseExplanation: '“lexicalise”属于高级正式词汇，表示“词汇化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To establish a concept or expression as a conventional lexical item.',
+    examples: [{ english: 'The memorandum explains why the parties chose to lexicalise under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“lexicalise”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'liminality', term: 'liminality', normalizedTerm: 'liminality', partOfSpeech: ['noun'], ipa: '/lˌɪmɪnˈalɪti/',
@@ -3019,7 +3019,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'metanarrative', term: 'metanarrative', normalizedTerm: 'metanarrative', partOfSpeech: ['noun'], ipa: '/mˌɛtənˈaɹətˌɪv/',
-    chineseShort: '宏大叙事', chineseExplanation: '“metanarrative”属于高级正式词汇，表示“宏大叙事”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'An overarching explanatory story that organizes historical or social meaning.',
+    chineseShort: '宏大叙事', chineseExplanation: '“metanarrative”属于高级正式词汇，表示“宏大叙事”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'An overarching explanatory story that organises historical or social meaning.',
     examples: [{ english: 'The report identifies metanarrative as a significant feature of the broader analysis.', chinese: '报告将“metanarrative”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -3063,9 +3063,9 @@ export const level5Vocabulary = [
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as ontological.', chinese: '审阅证据后，评审小组将该情况描述为“ontological”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
-    id: 'operationalize', term: 'operationalize', normalizedTerm: 'operationalize', partOfSpeech: ['verb'], ipa: '/ˌɒpəɹˈeɪʃənəlˌaɪz/',
-    chineseShort: '操作化；转化为可测指标', chineseExplanation: '“operationalize”属于高级正式词汇，表示“操作化；转化为可测指标”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To define a concept in terms that permit practical measurement or implementation.',
-    examples: [{ english: 'The memorandum explains why the parties chose to operationalize under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“operationalize”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
+    id: 'operationalize', term: 'operationalise', normalizedTerm: 'operationalise', partOfSpeech: ['verb'], ipa: '/ˌɒpəɹˈeɪʃənəlˌaɪz/',
+    chineseShort: '操作化；转化为可测指标', chineseExplanation: '“operationalise”属于高级正式词汇，表示“操作化；转化为可测指标”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To define a concept in terms that permit practical measurement or implementation.',
+    examples: [{ english: 'The memorandum explains why the parties chose to operationalise under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“operationalise”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'paradigmaticity', term: 'paradigmaticity', normalizedTerm: 'paradigmaticity', partOfSpeech: ['noun'], ipa: '/pˌaɹədˌɪɡmɐtˈɪsɪti/',
@@ -3089,13 +3089,13 @@ export const level5Vocabulary = [
   },
   {
     id: 'polycentric', term: 'polycentric', normalizedTerm: 'polycentric', partOfSpeech: ['adjective'], ipa: '/pˌɒlɪsˈɛntɹɪk/',
-    chineseShort: '多中心的', chineseExplanation: '“polycentric”属于高级正式词汇，表示“多中心的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Organized around multiple centers of authority or activity.',
+    chineseShort: '多中心的', chineseExplanation: '“polycentric”属于高级正式词汇，表示“多中心的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Organised around multiple centres of authority or activity.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as polycentric.', chinese: '审阅证据后，评审小组将该情况描述为“polycentric”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
-    id: 'problematize', term: 'problematize', normalizedTerm: 'problematize', partOfSpeech: ['verb'], ipa: '/pɹˈɒbəlmˌataɪz/',
-    chineseShort: '问题化；重新审视', chineseExplanation: '“problematize”属于高级正式词汇，表示“问题化；重新审视”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To treat something as a problem requiring critical examination.',
-    examples: [{ english: 'The memorandum explains why the parties chose to problematize under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“problematize”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
+    id: 'problematize', term: 'problematise', normalizedTerm: 'problematise', partOfSpeech: ['verb'], ipa: '/pɹˈɒbəlmˌataɪz/',
+    chineseShort: '问题化；重新审视', chineseExplanation: '“problematise”属于高级正式词汇，表示“问题化；重新审视”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To treat something as a problem requiring critical examination.',
+    examples: [{ english: 'The memorandum explains why the parties chose to problematise under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“problematise”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'prognosticate', term: 'prognosticate', normalizedTerm: 'prognosticate', partOfSpeech: ['verb'], ipa: '/pɹəɡnˈɒstɪkˌeɪt/',
@@ -3194,7 +3194,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'voluntarism', term: 'voluntarism', normalizedTerm: 'voluntarism', partOfSpeech: ['noun'], ipa: '/vˈɒləntəɹˌɪzəm/',
-    chineseShort: '意志主义；自愿原则', chineseExplanation: '“voluntarism”属于高级正式词汇，表示“意志主义；自愿原则”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'A doctrine emphasizing will, voluntary action, or free choice.',
+    chineseShort: '意志主义；自愿原则', chineseExplanation: '“voluntarism”属于高级正式词汇，表示“意志主义；自愿原则”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'A doctrine emphasising will, voluntary action, or free choice.',
     examples: [{ english: 'The report identifies voluntarism as a significant feature of the broader analysis.', chinese: '报告将“voluntarism”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -3209,7 +3209,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'adversarial', term: 'adversarial', normalizedTerm: 'adversarial', partOfSpeech: ['adjective'], ipa: '/ˌadvəsˈeəɹɪəl/',
-    chineseShort: '对抗性的', chineseExplanation: '“adversarial”属于高级正式词汇，表示“对抗性的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Characterized by opposition, contest, or competing parties.',
+    chineseShort: '对抗性的', chineseExplanation: '“adversarial”属于高级正式词汇，表示“对抗性的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Characterised by opposition, contest, or competing parties.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as adversarial.', chinese: '审阅证据后，评审小组将该情况描述为“adversarial”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -3244,7 +3244,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'bivariate', term: 'bivariate', normalizedTerm: 'bivariate', partOfSpeech: ['adjective'], ipa: '/baɪvˈeəɹɪˌeɪt/',
-    chineseShort: '双变量的', chineseExplanation: '“bivariate”属于高级正式词汇，表示“双变量的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Involving or analyzing two variables.',
+    chineseShort: '双变量的', chineseExplanation: '“bivariate”属于高级正式词汇，表示“双变量的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Involving or analysing two variables.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as bivariate.', chinese: '审阅证据后，评审小组将该情况描述为“bivariate”。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Technology'],
   },
   {
@@ -3329,7 +3329,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'probabilistic', term: 'probabilistic', normalizedTerm: 'probabilistic', partOfSpeech: ['adjective'], ipa: '/pɹˌɒbəbɪlˈɪstɪk/',
-    chineseShort: '概率性的', chineseExplanation: '“probabilistic”属于高级正式词汇，表示“概率性的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Expressed or analyzed in terms of probability rather than certainty.',
+    chineseShort: '概率性的', chineseExplanation: '“probabilistic”属于高级正式词汇，表示“概率性的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Expressed or analysed in terms of probability rather than certainty.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as probabilistic.', chinese: '审阅证据后，评审小组将该情况描述为“probabilistic”。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Technology'],
   },
   {
@@ -3383,9 +3383,9 @@ export const level5Vocabulary = [
     examples: [{ english: 'The report identifies variance as a significant feature of the broader analysis.', chinese: '报告将“variance”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
-    id: 'vectorization', term: 'vectorization', normalizedTerm: 'vectorization', partOfSpeech: ['noun'], ipa: '/vˌɛktəɹaɪzˈeɪʃən/',
-    chineseShort: '向量化', chineseExplanation: '“vectorization”属于高级正式词汇，表示“向量化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The conversion of operations or data into vector form for efficient processing.',
-    examples: [{ english: 'The report identifies vectorization as a significant feature of the broader analysis.', chinese: '报告将“vectorization”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Technology'],
+    id: 'vectorization', term: 'vectorisation', normalizedTerm: 'vectorisation', partOfSpeech: ['noun'], ipa: '/vˌɛktəɹaɪzˈeɪʃən/',
+    chineseShort: '向量化', chineseExplanation: '“vectorisation”属于高级正式词汇，表示“向量化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The conversion of operations or data into vector form for efficient processing.',
+    examples: [{ english: 'The report identifies vectorisation as a significant feature of the broader analysis.', chinese: '报告将“vectorisation”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Technology'],
   },
   {
     id: 'abductive', term: 'abductive', normalizedTerm: 'abductive', partOfSpeech: ['adjective'], ipa: '/ɐbdˈʌktɪv/',
@@ -3394,7 +3394,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'adversarialism', term: 'adversarialism', normalizedTerm: 'adversarialism', partOfSpeech: ['noun'], ipa: '/ˈadvəsˌɑːɹɪəlˌɪzəm/',
-    chineseShort: '对抗主义', chineseExplanation: '“adversarialism”属于高级正式词汇，表示“对抗主义”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'A system or tendency organized around structured opposition.',
+    chineseShort: '对抗主义', chineseExplanation: '“adversarialism”属于高级正式词汇，表示“对抗主义”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'A system or tendency organised around structured opposition.',
     examples: [{ english: 'The report identifies adversarialism as a significant feature of the broader analysis.', chinese: '报告将“adversarialism”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -3413,9 +3413,9 @@ export const level5Vocabulary = [
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as antinomical.', chinese: '审阅证据后，评审小组将该情况描述为“antinomical”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
-    id: 'axiomatize', term: 'axiomatize', normalizedTerm: 'axiomatize', partOfSpeech: ['verb'], ipa: '/ˈaksɪˌɒmɐtˌaɪz/',
-    chineseShort: '公理化', chineseExplanation: '“axiomatize”属于高级正式词汇，表示“公理化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To organize a theory into a formal system of axioms and deductions.',
-    examples: [{ english: 'The memorandum explains why the parties chose to axiomatize under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“axiomatize”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
+    id: 'axiomatize', term: 'axiomatise', normalizedTerm: 'axiomatise', partOfSpeech: ['verb'], ipa: '/ˈaksɪˌɒmɐtˌaɪz/',
+    chineseShort: '公理化', chineseExplanation: '“axiomatise”属于高级正式词汇，表示“公理化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'To organise a theory into a formal system of axioms and deductions.',
+    examples: [{ english: 'The memorandum explains why the parties chose to axiomatise under those circumstances.', chinese: '备忘录解释了相关各方为何在当时情况下选择“axiomatise”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'causal-inference', term: 'causal inference', normalizedTerm: 'causal inference', partOfSpeech: ['noun'], ipa: '/kˈɔːzəl ˈɪnfəɹəns/',
@@ -3508,9 +3508,9 @@ export const level5Vocabulary = [
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as nomothetic.', chinese: '审阅证据后，评审小组将该情况描述为“nomothetic”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
-    id: 'operationalization', term: 'operationalization', normalizedTerm: 'operationalization', partOfSpeech: ['noun'], ipa: '/ˌɒpəɹˌeɪʃənəlaɪzˈeɪʃən/',
-    chineseShort: '操作化', chineseExplanation: '“operationalization”属于高级正式词汇，表示“操作化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The process of translating abstract concepts into measurable procedures.',
-    examples: [{ english: 'The report identifies operationalization as a significant feature of the broader analysis.', chinese: '报告将“operationalization”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
+    id: 'operationalization', term: 'operationalisation', normalizedTerm: 'operationalisation', partOfSpeech: ['noun'], ipa: '/ˌɒpəɹˌeɪʃənəlaɪzˈeɪʃən/',
+    chineseShort: '操作化', chineseExplanation: '“operationalisation”属于高级正式词汇，表示“操作化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The process of translating abstract concepts into measurable procedures.',
+    examples: [{ english: 'The report identifies operationalisation as a significant feature of the broader analysis.', chinese: '报告将“operationalisation”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'parsimony', term: 'parsimony', normalizedTerm: 'parsimony', partOfSpeech: ['noun'], ipa: '/pˈɑːsɪməni/',
@@ -3533,9 +3533,9 @@ export const level5Vocabulary = [
     examples: [{ english: 'The report identifies replicability as a significant feature of the broader analysis.', chinese: '报告将“replicability”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
-    id: 'theorization', term: 'theorization', normalizedTerm: 'theorization', partOfSpeech: ['noun'], ipa: '/θˌiəɹaɪzˈeɪʃən/',
-    chineseShort: '理论化', chineseExplanation: '“theorization”属于高级正式词汇，表示“理论化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The process of developing systematic explanatory concepts or frameworks.',
-    examples: [{ english: 'The report identifies theorization as a significant feature of the broader analysis.', chinese: '报告将“theorization”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
+    id: 'theorization', term: 'theorisation', normalizedTerm: 'theorisation', partOfSpeech: ['noun'], ipa: '/θˌiəɹaɪzˈeɪʃən/',
+    chineseShort: '理论化', chineseExplanation: '“theorisation”属于高级正式词汇，表示“理论化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The process of developing systematic explanatory concepts or frameworks.',
+    examples: [{ english: 'The report identifies theorisation as a significant feature of the broader analysis.', chinese: '报告将“theorisation”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'verifiability', term: 'verifiability', normalizedTerm: 'verifiability', partOfSpeech: ['noun'], ipa: '/vˌɛɹɪfˌaɪəbˈɪlɪti/',
@@ -3564,7 +3564,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'asyndetic', term: 'asyndetic', normalizedTerm: 'asyndetic', partOfSpeech: ['adjective'], ipa: '/ɐsɪndˈɛtɪk/',
-    chineseShort: '省略连词的', chineseExplanation: '“asyndetic”属于高级正式词汇，表示“省略连词的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Characterized by omission of conjunctions between related clauses or items.',
+    chineseShort: '省略连词的', chineseExplanation: '“asyndetic”属于高级正式词汇，表示“省略连词的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Characterised by omission of conjunctions between related clauses or items.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as asyndetic.', chinese: '审阅证据后，评审小组将该情况描述为“asyndetic”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -3584,7 +3584,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'discoursal', term: 'discoursal', normalizedTerm: 'discoursal', partOfSpeech: ['adjective'], ipa: '/dɪskˈɔːsəl/',
-    chineseShort: '语篇层面的', chineseExplanation: '“discoursal”属于高级正式词汇，表示“语篇层面的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Relating to the organization and interpretation of connected discourse.',
+    chineseShort: '语篇层面的', chineseExplanation: '“discoursal”属于高级正式词汇，表示“语篇层面的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Relating to the organisation and interpretation of connected discourse.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as discoursal.', chinese: '审阅证据后，评审小组将该情况描述为“discoursal”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -3638,9 +3638,9 @@ export const level5Vocabulary = [
     examples: [{ english: 'The report identifies transitivity as a significant feature of the broader analysis.', chinese: '报告将“transitivity”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
-    id: 'vernacularization', term: 'vernacularization', normalizedTerm: 'vernacularization', partOfSpeech: ['noun'], ipa: '/vɜːnˌakjʊləɹaɪzˈeɪʃən/',
-    chineseShort: '本土语化', chineseExplanation: '“vernacularization”属于高级正式词汇，表示“本土语化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The process by which a local language becomes used in wider formal domains.',
-    examples: [{ english: 'The report identifies vernacularization as a significant feature of the broader analysis.', chinese: '报告将“vernacularization”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
+    id: 'vernacularization', term: 'vernacularisation', normalizedTerm: 'vernacularisation', partOfSpeech: ['noun'], ipa: '/vɜːnˌakjʊləɹaɪzˈeɪʃən/',
+    chineseShort: '本土语化', chineseExplanation: '“vernacularisation”属于高级正式词汇，表示“本土语化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The process by which a local language becomes used in wider formal domains.',
+    examples: [{ english: 'The report identifies vernacularisation as a significant feature of the broader analysis.', chinese: '报告将“vernacularisation”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'actuarial', term: 'actuarial', normalizedTerm: 'actuarial', partOfSpeech: ['adjective'], ipa: '/ˌaktʃuːˈeəɹɪəl/',
@@ -3648,9 +3648,9 @@ export const level5Vocabulary = [
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as actuarial.', chinese: '审阅证据后，评审小组将该情况描述为“actuarial”。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Technology'],
   },
   {
-    id: 'amortization', term: 'amortization', normalizedTerm: 'amortization', partOfSpeech: ['noun'], ipa: '/ɐmˌɔːtaɪzˈeɪʃən/',
-    chineseShort: '摊销；分期偿还', chineseExplanation: '“amortization”属于高级正式词汇，表示“摊销；分期偿还”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The gradual repayment of debt or allocation of an asset\'s cost over time.',
-    examples: [{ english: 'The report identifies amortization as a significant feature of the broader analysis.', chinese: '报告将“amortization”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Business'],
+    id: 'amortization', term: 'amortisation', normalizedTerm: 'amortisation', partOfSpeech: ['noun'], ipa: '/ɐmˌɔːtaɪzˈeɪʃən/',
+    chineseShort: '摊销；分期偿还', chineseExplanation: '“amortisation”属于高级正式词汇，表示“摊销；分期偿还”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The gradual repayment of debt or allocation of an asset\'s cost over time.',
+    examples: [{ english: 'The report identifies amortisation as a significant feature of the broader analysis.', chinese: '报告将“amortisation”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Business'],
   },
   {
     id: 'arbitrage', term: 'arbitrage', normalizedTerm: 'arbitrage', partOfSpeech: ['noun'], ipa: '/ˈɑːbɪtɹɪdʒ/',
@@ -3658,14 +3658,14 @@ export const level5Vocabulary = [
     examples: [{ english: 'The report identifies arbitrage as a significant feature of the broader analysis.', chinese: '报告将“arbitrage”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Business'],
   },
   {
-    id: 'capitalization', term: 'capitalization', normalizedTerm: 'capitalization', partOfSpeech: ['noun'], ipa: '/kˌapɪtəlaɪzˈeɪʃən/',
-    chineseShort: '资本化；市值', chineseExplanation: '“capitalization”属于高级正式词汇，表示“资本化；市值”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The conversion into capital or the total market value of a company.',
-    examples: [{ english: 'The report identifies capitalization as a significant feature of the broader analysis.', chinese: '报告将“capitalization”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Business'],
+    id: 'capitalization', term: 'capitalisation', normalizedTerm: 'capitalisation', partOfSpeech: ['noun'], ipa: '/kˌapɪtəlaɪzˈeɪʃən/',
+    chineseShort: '资本化；市值', chineseExplanation: '“capitalisation”属于高级正式词汇，表示“资本化；市值”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The conversion into capital or the total market value of a company.',
+    examples: [{ english: 'The report identifies capitalisation as a significant feature of the broader analysis.', chinese: '报告将“capitalisation”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Business'],
   },
   {
-    id: 'collateralization', term: 'collateralization', normalizedTerm: 'collateralization', partOfSpeech: ['noun'], ipa: '/kəlˌatəɹəlaɪzˈeɪʃən/',
-    chineseShort: '抵押化', chineseExplanation: '“collateralization”属于高级正式词汇，表示“抵押化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The use of assets as security for a financial obligation.',
-    examples: [{ english: 'The report identifies collateralization as a significant feature of the broader analysis.', chinese: '报告将“collateralization”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Business'],
+    id: 'collateralization', term: 'collateralisation', normalizedTerm: 'collateralisation', partOfSpeech: ['noun'], ipa: '/kəlˌatəɹəlaɪzˈeɪʃən/',
+    chineseShort: '抵押化', chineseExplanation: '“collateralisation”属于高级正式词汇，表示“抵押化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The use of assets as security for a financial obligation.',
+    examples: [{ english: 'The report identifies collateralisation as a significant feature of the broader analysis.', chinese: '报告将“collateralisation”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Business'],
   },
   {
     id: 'counterparty', term: 'counterparty', normalizedTerm: 'counterparty', partOfSpeech: ['noun'], ipa: '/kˈaʊntəpˌɑːti/',
@@ -3708,14 +3708,14 @@ export const level5Vocabulary = [
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as leveraged.', chinese: '审阅证据后，评审小组将该情况描述为“leveraged”。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Business'],
   },
   {
-    id: 'monetization', term: 'monetization', normalizedTerm: 'monetization', partOfSpeech: ['noun'], ipa: '/mˌɒnɪtaɪzˈeɪʃən/',
-    chineseShort: '货币化；变现', chineseExplanation: '“monetization”属于高级正式词汇，表示“货币化；变现”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The process of converting an asset, service, or activity into revenue or money.',
-    examples: [{ english: 'The report identifies monetization as a significant feature of the broader analysis.', chinese: '报告将“monetization”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Business'],
+    id: 'monetization', term: 'monetisation', normalizedTerm: 'monetisation', partOfSpeech: ['noun'], ipa: '/mˌɒnɪtaɪzˈeɪʃən/',
+    chineseShort: '货币化；变现', chineseExplanation: '“monetisation”属于高级正式词汇，表示“货币化；变现”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The process of converting an asset, service, or activity into revenue or money.',
+    examples: [{ english: 'The report identifies monetisation as a significant feature of the broader analysis.', chinese: '报告将“monetisation”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Business'],
   },
   {
-    id: 'securitization', term: 'securitization', normalizedTerm: 'securitization', partOfSpeech: ['noun'], ipa: '/sɪkjˌʊəɹɪtaɪzˈeɪʃən/',
-    chineseShort: '证券化', chineseExplanation: '“securitization”属于高级正式词汇，表示“证券化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The pooling of financial assets and conversion into tradable securities.',
-    examples: [{ english: 'The report identifies securitization as a significant feature of the broader analysis.', chinese: '报告将“securitization”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Business'],
+    id: 'securitization', term: 'securitisation', normalizedTerm: 'securitisation', partOfSpeech: ['noun'], ipa: '/sɪkjˌʊəɹɪtaɪzˈeɪʃən/',
+    chineseShort: '证券化', chineseExplanation: '“securitisation”属于高级正式词汇，表示“证券化”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The pooling of financial assets and conversion into tradable securities.',
+    examples: [{ english: 'The report identifies securitisation as a significant feature of the broader analysis.', chinese: '报告将“securitisation”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Business'],
   },
   {
     id: 'solvency', term: 'solvency', normalizedTerm: 'solvency', partOfSpeech: ['noun'], ipa: '/sˈɒlvənsi/',
@@ -3738,9 +3738,9 @@ export const level5Vocabulary = [
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as antitrust.', chinese: '审阅证据后，评审小组将该情况描述为“antitrust”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
-    id: 'cartelization', term: 'cartelization', normalizedTerm: 'cartelization', partOfSpeech: ['noun'], ipa: '/kˌɑːtɪlaɪzˈeɪʃən/',
-    chineseShort: '卡特尔化；垄断联盟形成', chineseExplanation: '“cartelization”属于高级正式词汇，表示“卡特尔化；垄断联盟形成”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The process by which firms coordinate to restrict competition.',
-    examples: [{ english: 'The report identifies cartelization as a significant feature of the broader analysis.', chinese: '报告将“cartelization”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Business'],
+    id: 'cartelization', term: 'cartelisation', normalizedTerm: 'cartelisation', partOfSpeech: ['noun'], ipa: '/kˌɑːtɪlaɪzˈeɪʃən/',
+    chineseShort: '卡特尔化；垄断联盟形成', chineseExplanation: '“cartelisation”属于高级正式词汇，表示“卡特尔化；垄断联盟形成”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The process by which firms coordinate to restrict competition.',
+    examples: [{ english: 'The report identifies cartelisation as a significant feature of the broader analysis.', chinese: '报告将“cartelisation”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Business'],
   },
   {
     id: 'contestability', term: 'contestability', normalizedTerm: 'contestability', partOfSpeech: ['noun'], ipa: '/kəntˌɛstəbˈɪlɪti/',
@@ -3794,7 +3794,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'macroeconometric', term: 'macroeconometric', normalizedTerm: 'macroeconometric', partOfSpeech: ['adjective'], ipa: '/mˌakɹəɹɪkˌɒnəmˈɛtɹɪk/',
-    chineseShort: '宏观计量经济的', chineseExplanation: '“macroeconometric”属于高级正式词汇，表示“宏观计量经济的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Relating to statistical modeling of economy-wide relationships.',
+    chineseShort: '宏观计量经济的', chineseExplanation: '“macroeconometric”属于高级正式词汇，表示“宏观计量经济的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Relating to statistical modelling of economy-wide relationships.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as macroeconometric.', chinese: '审阅证据后，评审小组将该情况描述为“macroeconometric”。' }], level: 5, cefr: 'C2', categories: ['Academic', 'Technology'],
   },
   {
@@ -3899,7 +3899,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'mens-rea', term: 'mens rea', normalizedTerm: 'mens rea', partOfSpeech: ['noun'], ipa: '/mˈɛnz ɹˈiə/',
-    chineseShort: '犯罪主观故意', chineseExplanation: '“mens rea”属于高级正式词汇，表示“犯罪主观故意”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The mental element or guilty state of mind required for a criminal offense.',
+    chineseShort: '犯罪主观故意', chineseExplanation: '“mens rea”属于高级正式词汇，表示“犯罪主观故意”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The mental element or guilty state of mind required for a criminal offence.',
     examples: [{ english: 'The report identifies mens rea as a significant feature of the broader analysis.', chinese: '报告将“mens rea”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -3909,7 +3909,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'res-judicata', term: 'res judicata', normalizedTerm: 'res judicata', partOfSpeech: ['noun'], ipa: '/ɹˈɛz dʒˌuːdɪkˈɑːtə/',
-    chineseShort: '既判力；一事不再理', chineseExplanation: '“res judicata”属于高级正式词汇，表示“既判力；一事不再理”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The principle that a final judgment bars relitigation of the same claim.',
+    chineseShort: '既判力；一事不再理', chineseExplanation: '“res judicata”属于高级正式词汇，表示“既判力；一事不再理”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'The principle that a final judgement bars relitigation of the same claim.',
     examples: [{ english: 'The report identifies res judicata as a significant feature of the broader analysis.', chinese: '报告将“res judicata”视为整体分析中的一个重要特征。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -3959,27 +3959,27 @@ export const level5Vocabulary = [
   },
   {
     id: 'deliberative', term: 'deliberative', normalizedTerm: 'deliberative', partOfSpeech: ['adjective'], ipa: '/dɪlˈɪbəɹətˌɪv/',
-    chineseShort: '审议性的', chineseExplanation: '“deliberative”属于高级正式词汇，表示“审议性的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Characterized by careful discussion and reasoned consideration before decision.',
+    chineseShort: '审议性的', chineseExplanation: '“deliberative”属于高级正式词汇，表示“审议性的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Characterised by careful discussion and reasoned consideration before decision.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as deliberative.', chinese: '审阅证据后，评审小组将该情况描述为“deliberative”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'plebiscitary', term: 'plebiscitary', normalizedTerm: 'plebiscitary', partOfSpeech: ['adjective'], ipa: '/plˈɛbɪsˌɪtəɹi/',
-    chineseShort: '公民投票式的；直接民意动员的', chineseExplanation: '“plebiscitary”属于高级正式词汇，表示“公民投票式的；直接民意动员的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Relating to direct popular voting or leader-centered appeals to mass approval.',
+    chineseShort: '公民投票式的；直接民意动员的', chineseExplanation: '“plebiscitary”属于高级正式词汇，表示“公民投票式的；直接民意动员的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Relating to direct popular voting or leader-centred appeals to mass approval.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as plebiscitary.', chinese: '审阅证据后，评审小组将该情况描述为“plebiscitary”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'technocratic', term: 'technocratic', normalizedTerm: 'technocratic', partOfSpeech: ['adjective'], ipa: '/tˌɛknəkɹˈatɪk/',
-    chineseShort: '技术官僚式的', chineseExplanation: '“technocratic”属于高级正式词汇，表示“技术官僚式的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Favoring decision-making by technical experts and specialized knowledge.',
+    chineseShort: '技术官僚式的', chineseExplanation: '“technocratic”属于高级正式词汇，表示“技术官僚式的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Favoring decision-making by technical experts and specialised knowledge.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as technocratic.', chinese: '审阅证据后，评审小组将该情况描述为“technocratic”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'corporatist', term: 'corporatist', normalizedTerm: 'corporatist', partOfSpeech: ['adjective'], ipa: '/kˈɔːpɔːɹətˌɪst/',
-    chineseShort: '社团主义的', chineseExplanation: '“corporatist”属于高级正式词汇，表示“社团主义的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Organizing political representation through structured interest groups or sectors.',
+    chineseShort: '社团主义的', chineseExplanation: '“corporatist”属于高级正式词汇，表示“社团主义的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Organising political representation through structured interest groups or sectors.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as corporatist.', chinese: '审阅证据后，评审小组将该情况描述为“corporatist”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
     id: 'clientelistic', term: 'clientelistic', normalizedTerm: 'clientelistic', partOfSpeech: ['adjective'], ipa: '/klˌaɪəntɪlˈɪstɪk/',
-    chineseShort: '恩庇侍从式的', chineseExplanation: '“clientelistic”属于高级正式词汇，表示“恩庇侍从式的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Based on exchanges of political support for targeted benefits or favors.',
+    chineseShort: '恩庇侍从式的', chineseExplanation: '“clientelistic”属于高级正式词汇，表示“恩庇侍从式的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Based on exchanges of political support for targeted benefits or favours.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as clientelistic.', chinese: '审阅证据后，评审小组将该情况描述为“clientelistic”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {
@@ -3989,7 +3989,7 @@ export const level5Vocabulary = [
   },
   {
     id: 'pluralistic', term: 'pluralistic', normalizedTerm: 'pluralistic', partOfSpeech: ['adjective'], ipa: '/plˌʊəɹəlˈɪstɪk/',
-    chineseShort: '多元主义的', chineseExplanation: '“pluralistic”属于高级正式词汇，表示“多元主义的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Recognizing multiple groups, values, or centers of influence.',
+    chineseShort: '多元主义的', chineseExplanation: '“pluralistic”属于高级正式词汇，表示“多元主义的”，常用于学术、专业、政策、法律、分析或严谨论述等高阶语境。', englishDefinition: 'Recognising multiple groups, values, or centres of influence.',
     examples: [{ english: 'After reviewing the evidence, the panel described the situation as pluralistic.', chinese: '审阅证据后，评审小组将该情况描述为“pluralistic”。' }], level: 5, cefr: 'C2', categories: ['Academic'],
   },
   {

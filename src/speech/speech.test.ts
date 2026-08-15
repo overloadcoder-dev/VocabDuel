@@ -12,15 +12,16 @@ class FakeUtterance {
   constructor(readonly text: string) {}
 }
 
-const voice = { lang: 'en-GB', default: true, name: 'Test English', voiceURI: 'test', localService: true } as SpeechSynthesisVoice
+const britishVoice = { lang: 'en-GB', default: false, name: 'Test British English', voiceURI: 'test-gb', localService: true } as SpeechSynthesisVoice
+const americanVoice = { lang: 'en-US', default: true, name: 'Test American English', voiceURI: 'test-us', localService: true } as SpeechSynthesisVoice
 
-function installSpeechSynthesis(finish: 'end' | 'cancelled' = 'end') {
+function installSpeechSynthesis(finish: 'end' | 'cancelled' = 'end', voices: SpeechSynthesisVoice[] = [americanVoice, britishVoice]) {
   let spoken: FakeUtterance | undefined
   const synthesis = {
     speaking: false,
     pending: false,
     paused: false,
-    getVoices: () => [voice],
+    getVoices: () => voices,
     addEventListener: vi.fn(),
     removeEventListener: vi.fn(),
     cancel: vi.fn(),
@@ -40,13 +41,20 @@ function installSpeechSynthesis(finish: 'end' | 'cancelled' = 'end') {
 afterEach(() => vi.unstubAllGlobals())
 
 describe('SpeechService', () => {
-  it('uses an available English voice without cancelling an idle synthesizer', async () => {
+  it('prefers an available British English voice without cancelling an idle synthesizer', async () => {
     const { synthesis, getSpoken } = installSpeechSynthesis()
     const result = await new SpeechService().speak('  clear  ')
 
     expect(result).toEqual({ ok: true })
     expect(synthesis.cancel).not.toHaveBeenCalled()
-    expect(getSpoken()).toMatchObject({ text: 'clear', lang: 'en-GB', rate: 1, voice })
+    expect(getSpoken()).toMatchObject({ text: 'clear', lang: 'en-GB', rate: 1, voice: britishVoice })
+  })
+
+  it('allows an explicit language override', async () => {
+    const { getSpoken } = installSpeechSynthesis()
+    await new SpeechService().speak('clear', { lang: 'en-US' })
+
+    expect(getSpoken()).toMatchObject({ lang: 'en-US', voice: americanVoice })
   })
 
   it.each([0.5, 0.75, 1, 1.25] as const)('uses the selected %s× pronunciation rate', async (rate) => {

@@ -78,9 +78,9 @@ export const level2Vocabulary = [
     examples: [{ english: 'The school announced the exam date yesterday.', chinese: '学校昨天公布了考试日期。' }], collocations: ['announce a decision', 'officially announce'], level: 2, cefr: 'B1', categories: ['School'],
   },
   {
-    id: 'apologize', term: 'apologize', normalizedTerm: 'apologize', partOfSpeech: ['verb'], ipa: '/ɐpˈɒlədʒˌaɪz/',
+    id: 'apologize', term: 'apologise', normalizedTerm: 'apologise', partOfSpeech: ['verb'], ipa: '/ɐpˈɒlədʒˌaɪz/',
     chineseShort: '道歉', chineseExplanation: '因为做错事或造成不便而表示歉意。', englishDefinition: 'To say that you are sorry for something you did.',
-    examples: [{ english: 'I apologized for arriving late.', chinese: '我为迟到而道歉。' }], collocations: ['apologize for', 'apologize to'], level: 2, cefr: 'B1', categories: ['Daily English'],
+    examples: [{ english: 'I apologised for arriving late.', chinese: '我为迟到而道歉。' }], collocations: ['apologise for', 'apologise to'], level: 2, cefr: 'B1', categories: ['Daily English'],
   },
   {
     id: 'apply', term: 'apply', normalizedTerm: 'apply', partOfSpeech: ['verb'], ipa: '/ɐplˈaɪ/',
@@ -99,7 +99,7 @@ export const level2Vocabulary = [
   },
   {
     id: 'behave', term: 'behave', normalizedTerm: 'behave', partOfSpeech: ['verb'], ipa: '/bɪhˈeɪv/',
-    chineseShort: '表现；举止', chineseExplanation: '以某种方式行动，尤其指在社交场合中的行为。', englishDefinition: 'To act in a particular way, especially toward other people.',
+    chineseShort: '表现；举止', chineseExplanation: '以某种方式行动，尤其指在社交场合中的行为。', englishDefinition: 'To act in a particular way, especially towards other people.',
     examples: [{ english: 'The children behaved well during the trip.', chinese: '孩子们在旅途中表现很好。' }], collocations: ['behave well', 'behave badly'], level: 2, cefr: 'B1', categories: ['Daily English'],
   },
   {
@@ -239,7 +239,7 @@ export const level2Vocabulary = [
   },
   {
     id: 'identify', term: 'identify', normalizedTerm: 'identify', partOfSpeech: ['verb'], ipa: '/aɪdˈɛntɪfˌaɪ/',
-    chineseShort: '识别；确认身份', chineseExplanation: '认出某人或某物，或确定其名称、性质或原因。', englishDefinition: 'To recognize someone or something and say who or what it is.',
+    chineseShort: '识别；确认身份', chineseExplanation: '认出某人或某物，或确定其名称、性质或原因。', englishDefinition: 'To recognise someone or something and say who or what it is.',
     examples: [{ english: 'The technician identified the cause of the problem.', chinese: '技术人员找出了问题的原因。' }], collocations: ['identify a problem', 'identify correctly'], level: 2, cefr: 'B1', categories: ['Technology', 'School'],
   },
   {
@@ -293,9 +293,9 @@ export const level2Vocabulary = [
     examples: [{ english: 'He offered to help me carry the bags.', chinese: '他主动提出帮我拿袋子。' }], collocations: ['offer help', 'offer to'], level: 2, cefr: 'B1', categories: ['Daily English', 'Business'],
   },
   {
-    id: 'organize', term: 'organize', normalizedTerm: 'organize', partOfSpeech: ['verb'], ipa: '/ˈɔːɡɐnˌaɪz/',
+    id: 'organize', term: 'organise', normalizedTerm: 'organise', partOfSpeech: ['verb'], ipa: '/ˈɔːɡɐnˌaɪz/',
     chineseShort: '组织；整理', chineseExplanation: '安排活动或任务，也可把物品整理得有条理。', englishDefinition: 'To plan an activity or arrange things in an orderly way.',
-    examples: [{ english: 'We organized a small event for new students.', chinese: '我们为新生组织了一个小活动。' }], collocations: ['organize an event', 'organize files'], level: 2, cefr: 'B1', categories: ['School', 'Business'],
+    examples: [{ english: 'We organised a small event for new students.', chinese: '我们为新生组织了一个小活动。' }], collocations: ['organise an event', 'organise files'], level: 2, cefr: 'B1', categories: ['School', 'Business'],
   },
   {
     id: 'perform', term: 'perform', normalizedTerm: 'perform', partOfSpeech: ['verb'], ipa: '/pəfˈɔːm/',
@@ -333,9 +333,9 @@ export const level2Vocabulary = [
     examples: [{ english: 'The hotel provides free breakfast.', chinese: '这家酒店提供免费早餐。' }], collocations: ['provide information', 'provide someone with'], level: 2, cefr: 'B1', categories: ['Business', 'Travel'],
   },
   {
-    id: 'realize', term: 'realize', normalizedTerm: 'realize', partOfSpeech: ['verb'], ipa: '/ɹˈiəlaɪz/',
+    id: 'realize', term: 'realise', normalizedTerm: 'realise', partOfSpeech: ['verb'], ipa: '/ɹˈiəlaɪz/',
     chineseShort: '意识到；实现', chineseExplanation: '突然理解或意识到某事，也可表示让计划成为现实。', englishDefinition: 'To become aware of something; also, to make a plan or hope become real.',
-    examples: [{ english: 'I realized that I had left my keys at home.', chinese: '我意识到自己把钥匙落在家里了。' }], collocations: ['realize that', 'realize a dream'], level: 2, cefr: 'B1', categories: ['Daily English'],
+    examples: [{ english: 'I realised that I had left my keys at home.', chinese: '我意识到自己把钥匙落在家里了。' }], collocations: ['realise that', 'realise a dream'], level: 2, cefr: 'B1', categories: ['Daily English'],
   },
   {
     id: 'receive', term: 'receive', normalizedTerm: 'receive', partOfSpeech: ['verb'], ipa: '/ɹɪsˈiːv/',
@@ -598,9 +598,9 @@ export const level2Vocabulary = [
     examples: [{ english: 'She has a background in customer service.', chinese: '她有客户服务方面的工作背景。' }], collocations: ['work background', 'background information'], level: 2, cefr: 'B1', categories: ['Business', 'School'],
   },
   {
-    id: 'behavior', term: 'behavior', normalizedTerm: 'behavior', partOfSpeech: ['noun'], ipa: '/bɪhˈeɪvjə/',
+    id: 'behavior', term: 'behaviour', normalizedTerm: 'behaviour', partOfSpeech: ['noun'], ipa: '/bɪhˈeɪvjə/',
     chineseShort: '行为；举止', chineseExplanation: '某人在特定情况下行动和表现的方式。', englishDefinition: 'The way a person acts, especially in a particular situation.',
-    examples: [{ english: 'Good behavior is expected during the trip.', chinese: '旅行期间应保持良好行为。' }], collocations: ['good behavior', 'change behavior'], level: 2, cefr: 'B1', categories: ['Daily English'],
+    examples: [{ english: 'Good behaviour is expected during the trip.', chinese: '旅行期间应保持良好行为。' }], collocations: ['good behaviour', 'change behaviour'], level: 2, cefr: 'B1', categories: ['Daily English'],
   },
   {
     id: 'benefit', term: 'benefit', normalizedTerm: 'benefit', partOfSpeech: ['noun'], ipa: '/bˈɛnɪfˌɪt/',
@@ -640,7 +640,7 @@ export const level2Vocabulary = [
   {
     id: 'community', term: 'community', normalizedTerm: 'community', partOfSpeech: ['noun'], ipa: '/kəmjˈuːnɪti/',
     chineseShort: '社区；群体', chineseExplanation: '住在同一地区或有共同兴趣、身份的人群。', englishDefinition: 'A group of people living in the same area or sharing an interest.',
-    examples: [{ english: 'The local community organized a clean-up day.', chinese: '当地社区组织了一次清洁活动。' }], collocations: ['local community', 'online community'], level: 2, cefr: 'B1', categories: ['Daily English', 'School'],
+    examples: [{ english: 'The local community organised a clean-up day.', chinese: '当地社区组织了一次清洁活动。' }], collocations: ['local community', 'online community'], level: 2, cefr: 'B1', categories: ['Daily English', 'School'],
   },
   {
     id: 'competition', term: 'competition', normalizedTerm: 'competition', partOfSpeech: ['noun'], ipa: '/kˌɒmpətˈɪʃən/',
@@ -669,7 +669,7 @@ export const level2Vocabulary = [
   },
   {
     id: 'decision', term: 'decision', normalizedTerm: 'decision', partOfSpeech: ['noun'], ipa: '/dɪsˈɪʒən/',
-    chineseShort: '决定', chineseExplanation: '经过考虑后作出的选择或判断。', englishDefinition: 'A choice or judgment made after thinking about something.',
+    chineseShort: '决定', chineseExplanation: '经过考虑后作出的选择或判断。', englishDefinition: 'A choice or judgement made after thinking about something.',
     examples: [{ english: 'We need to make a decision by Friday.', chinese: '我们需要在星期五前作出决定。' }], collocations: ['make a decision', 'final decision'], level: 2, cefr: 'B1', categories: ['Business', 'Daily English'],
   },
   {
@@ -689,7 +689,7 @@ export const level2Vocabulary = [
   },
   {
     id: 'direction', term: 'direction', normalizedTerm: 'direction', partOfSpeech: ['noun'], ipa: '/daɪɹˈɛkʃən/',
-    chineseShort: '方向；指示', chineseExplanation: '前往某处的路线，也可指如何做某事的说明。', englishDefinition: 'The way toward a place; also, an instruction about what to do.',
+    chineseShort: '方向；指示', chineseExplanation: '前往某处的路线，也可指如何做某事的说明。', englishDefinition: 'The way towards a place; also, an instruction about what to do.',
     examples: [{ english: 'Can you give me directions to the bus station?', chinese: '你能告诉我去巴士站怎么走吗？' }], collocations: ['give directions', 'opposite direction'], level: 2, cefr: 'B1', categories: ['Travel', 'Daily English'],
   },
   {
@@ -779,7 +779,7 @@ export const level2Vocabulary = [
   },
   {
     id: 'leader', term: 'leader', normalizedTerm: 'leader', partOfSpeech: ['noun'], ipa: '/lˈiːdə/',
-    chineseShort: '领导者', chineseExplanation: '负责带领团队、组织或群体的人。', englishDefinition: 'A person who guides or is in charge of a group or organization.',
+    chineseShort: '领导者', chineseExplanation: '负责带领团队、组织或群体的人。', englishDefinition: 'A person who guides or is in charge of a group or organisation.',
     examples: [{ english: 'A good leader listens to the whole team.', chinese: '好的领导者会听取整个团队的意见。' }], collocations: ['team leader', 'strong leader'], level: 2, cefr: 'B1', categories: ['Business', 'Daily English'],
   },
   {
@@ -809,18 +809,18 @@ export const level2Vocabulary = [
   },
   {
     id: 'mistake', term: 'mistake', normalizedTerm: 'mistake', partOfSpeech: ['noun'], ipa: '/mɪstˈeɪk/',
-    chineseShort: '错误', chineseExplanation: '因为理解、判断或行动不正确而产生的问题。', englishDefinition: 'Something wrong that happens because of incorrect understanding, judgment, or action.',
+    chineseShort: '错误', chineseExplanation: '因为理解、判断或行动不正确而产生的问题。', englishDefinition: 'Something wrong that happens because of incorrect understanding, judgement, or action.',
     examples: [{ english: 'I made a mistake in the final calculation.', chinese: '我在最后的计算中犯了一个错误。' }], collocations: ['make a mistake', 'common mistake'], level: 2, cefr: 'B1', categories: ['School', 'Daily English'],
   },
   {
     id: 'opinion', term: 'opinion', normalizedTerm: 'opinion', partOfSpeech: ['noun'], ipa: '/əpˈɪniən/',
-    chineseShort: '意见；看法', chineseExplanation: '一个人对某事的想法或判断。', englishDefinition: 'A person\'s view or judgment about something.',
+    chineseShort: '意见；看法', chineseExplanation: '一个人对某事的想法或判断。', englishDefinition: 'A person\'s view or judgement about something.',
     examples: [{ english: 'In my opinion, the second option is better.', chinese: '依我看，第二个选项更好。' }], collocations: ['in my opinion', 'give an opinion'], level: 2, cefr: 'B1', categories: ['School', 'Daily English'],
   },
   {
-    id: 'organization', term: 'organization', normalizedTerm: 'organization', partOfSpeech: ['noun'], ipa: '/ˌɔːɡɐnaɪzˈeɪʃən/',
+    id: 'organization', term: 'organisation', normalizedTerm: 'organisation', partOfSpeech: ['noun'], ipa: '/ˌɔːɡɐnaɪzˈeɪʃən/',
     chineseShort: '组织；机构', chineseExplanation: '为共同目标而组成的团体，也可指安排事物的方式。', englishDefinition: 'A group formed for a shared purpose; also, the way things are arranged.',
-    examples: [{ english: 'She works for an international organization.', chinese: '她在一家国际机构工作。' }], collocations: ['international organization', 'organization skills'], level: 2, cefr: 'B1', categories: ['Business', 'Daily English'],
+    examples: [{ english: 'She works for an international organisation.', chinese: '她在一家国际机构工作。' }], collocations: ['international organisation', 'organisation skills'], level: 2, cefr: 'B1', categories: ['Business', 'Daily English'],
   },
   {
     id: 'passenger', term: 'passenger', normalizedTerm: 'passenger', partOfSpeech: ['noun'], ipa: '/pˈasɪndʒə/',
@@ -854,7 +854,7 @@ export const level2Vocabulary = [
   },
   {
     id: 'progress', term: 'progress', normalizedTerm: 'progress', partOfSpeech: ['noun'], ipa: '/pɹˈəʊɡɹɛs/',
-    chineseShort: '进展；进步', chineseExplanation: '朝目标前进或逐渐改善的过程。', englishDefinition: 'Movement toward a goal or gradual improvement.',
+    chineseShort: '进展；进步', chineseExplanation: '朝目标前进或逐渐改善的过程。', englishDefinition: 'Movement towards a goal or gradual improvement.',
     examples: [{ english: 'You have made good progress in speaking.', chinese: '你的口语已经取得了不错的进步。' }], collocations: ['make progress', 'steady progress'], level: 2, cefr: 'B1', categories: ['School', 'Daily English'],
   },
   {
@@ -889,7 +889,7 @@ export const level2Vocabulary = [
   },
   {
     id: 'service', term: 'service', normalizedTerm: 'service', partOfSpeech: ['noun'], ipa: '/sˈɜːvɪs/',
-    chineseShort: '服务', chineseExplanation: '由企业或机构为顾客或公众提供的帮助或工作。', englishDefinition: 'Work or help provided by a business or organization to customers or the public.',
+    chineseShort: '服务', chineseExplanation: '由企业或机构为顾客或公众提供的帮助或工作。', englishDefinition: 'Work or help provided by a business or organisation to customers or the public.',
     examples: [{ english: 'The restaurant provides friendly service.', chinese: '这家餐厅提供友善的服务。' }], collocations: ['customer service', 'public service'], level: 2, cefr: 'B1', categories: ['Business', 'Daily English'],
   },
   {
@@ -899,7 +899,7 @@ export const level2Vocabulary = [
   },
   {
     id: 'society', term: 'society', normalizedTerm: 'society', partOfSpeech: ['noun'], ipa: '/səsˈaɪəti/',
-    chineseShort: '社会', chineseExplanation: '生活在一个有共同制度和文化的社区中的人们整体。', englishDefinition: 'People living together in an organized community with shared systems and culture.',
+    chineseShort: '社会', chineseExplanation: '生活在一个有共同制度和文化的社区中的人们整体。', englishDefinition: 'People living together in an organised community with shared systems and culture.',
     examples: [{ english: 'Technology has changed modern society.', chinese: '科技改变了现代社会。' }], collocations: ['modern society', 'society as a whole'], level: 2, cefr: 'B1', categories: ['School', 'Technology'],
   },
   {
@@ -919,7 +919,7 @@ export const level2Vocabulary = [
   },
   {
     id: 'team', term: 'team', normalizedTerm: 'team', partOfSpeech: ['noun'], ipa: '/tˈiːm/',
-    chineseShort: '团队', chineseExplanation: '为共同目标一起工作或比赛的一群人。', englishDefinition: 'A group of people who work or play together toward a shared goal.',
+    chineseShort: '团队', chineseExplanation: '为共同目标一起工作或比赛的一群人。', englishDefinition: 'A group of people who work or play together towards a shared goal.',
     examples: [{ english: 'Our team meets every Monday morning.', chinese: '我们的团队每周一早上开会。' }], collocations: ['team member', 'work as a team'], level: 2, cefr: 'B1', categories: ['Business', 'Daily English'],
   },
   {
@@ -995,7 +995,7 @@ export const level2Vocabulary = [
   {
     id: 'character', term: 'character', normalizedTerm: 'character', partOfSpeech: ['noun'], ipa: '/kˈaɹɪktə/',
     chineseShort: '性格；人物；字符', chineseExplanation: '一个人的性格，也可指故事人物或文字、数字等字符。', englishDefinition: 'A person\'s qualities; also, a person in a story or a written symbol.',
-    examples: [{ english: 'My favorite character in the film is the teacher.', chinese: '我最喜欢的电影角色是那位老师。' }], collocations: ['main character', 'strong character'], level: 2, cefr: 'B1', categories: ['Daily English'],
+    examples: [{ english: 'My favourite character in the film is the teacher.', chinese: '我最喜欢的电影角色是那位老师。' }], collocations: ['main character', 'strong character'], level: 2, cefr: 'B1', categories: ['Daily English'],
   },
   {
     id: 'climate', term: 'climate', normalizedTerm: 'climate', partOfSpeech: ['noun'], ipa: '/klˈaɪmət/',
@@ -1124,7 +1124,7 @@ export const level2Vocabulary = [
   },
   {
     id: 'confident', term: 'confident', normalizedTerm: 'confident', partOfSpeech: ['adjective'], ipa: '/kˈɒnfɪdənt/',
-    chineseShort: '自信的', chineseExplanation: '相信自己的能力、判断或成功可能性。', englishDefinition: 'Feeling sure about your ability, judgment, or chance of success.',
+    chineseShort: '自信的', chineseExplanation: '相信自己的能力、判断或成功可能性。', englishDefinition: 'Feeling sure about your ability, judgement, or chance of success.',
     examples: [{ english: 'She feels more confident speaking English now.', chinese: '她现在说英语更有自信了。' }], collocations: ['feel confident', 'confident about'], level: 2, cefr: 'B1', categories: ['Daily English', 'School'],
   },
   {
@@ -1194,7 +1194,7 @@ export const level2Vocabulary = [
   },
   {
     id: 'familiar', term: 'familiar', normalizedTerm: 'familiar', partOfSpeech: ['adjective'], ipa: '/fəmˈɪliə/',
-    chineseShort: '熟悉的', chineseExplanation: '以前见过、听过或知道，因此容易认出。', englishDefinition: 'Known from previous experience and easy to recognize.',
+    chineseShort: '熟悉的', chineseExplanation: '以前见过、听过或知道，因此容易认出。', englishDefinition: 'Known from previous experience and easy to recognise.',
     examples: [{ english: 'Her voice sounded familiar to me.', chinese: '她的声音听起来很熟悉。' }], collocations: ['familiar with', 'look familiar'], level: 2, cefr: 'B1', categories: ['Daily English'],
   },
   {
@@ -1239,7 +1239,7 @@ export const level2Vocabulary = [
   },
   {
     id: 'honest', term: 'honest', normalizedTerm: 'honest', partOfSpeech: ['adjective'], ipa: '/ˈɒnɪst/',
-    chineseShort: '诚实的', chineseExplanation: '说真话、不欺骗，并以公平方式行事的。', englishDefinition: 'Truthful, not deceptive, and fair in behavior.',
+    chineseShort: '诚实的', chineseExplanation: '说真话、不欺骗，并以公平方式行事的。', englishDefinition: 'Truthful, not deceptive, and fair in behaviour.',
     examples: [{ english: 'Please give me an honest answer.', chinese: '请给我一个诚实的回答。' }], collocations: ['honest answer', 'be honest with'], level: 2, cefr: 'B1', categories: ['Daily English'],
   },
   {
@@ -1375,7 +1375,7 @@ export const level2Vocabulary = [
   {
     id: 'responsible', term: 'responsible', normalizedTerm: 'responsible', partOfSpeech: ['adjective'], ipa: '/ɹɪspˈɒnsəbəl/',
     chineseShort: '负责的；有责任心的', chineseExplanation: '有义务完成某事，或能够认真可靠地处理事情。', englishDefinition: 'Having a duty to do something or behaving reliably and carefully.',
-    examples: [{ english: 'She is responsible for organizing the event.', chinese: '她负责组织这次活动。' }], collocations: ['responsible for', 'responsible person'], level: 2, cefr: 'B1', categories: ['Business', 'Daily English'],
+    examples: [{ english: 'She is responsible for organising the event.', chinese: '她负责组织这次活动。' }], collocations: ['responsible for', 'responsible person'], level: 2, cefr: 'B1', categories: ['Business', 'Daily English'],
   },
   {
     id: 'serious', term: 'serious', normalizedTerm: 'serious', partOfSpeech: ['adjective'], ipa: '/sˈiəɹɪəs/',
@@ -1395,7 +1395,7 @@ export const level2Vocabulary = [
   {
     id: 'social', term: 'social', normalizedTerm: 'social', partOfSpeech: ['adjective'], ipa: '/sˈəʊʃəl/',
     chineseShort: '社交的；社会的', chineseExplanation: '与人与人互动、社会活动或社会整体有关的。', englishDefinition: 'Related to interaction between people, social activities, or society.',
-    examples: [{ english: 'The club organizes social events every month.', chinese: '这个俱乐部每月举办社交活动。' }], collocations: ['social media', 'social activity'], level: 2, cefr: 'B1', categories: ['Daily English', 'Technology'],
+    examples: [{ english: 'The club organises social events every month.', chinese: '这个俱乐部每月举办社交活动。' }], collocations: ['social media', 'social activity'], level: 2, cefr: 'B1', categories: ['Daily English', 'Technology'],
   },
   {
     id: 'special', term: 'special', normalizedTerm: 'special', partOfSpeech: ['adjective'], ipa: '/spˈɛʃəl/',
@@ -1479,7 +1479,7 @@ export const level2Vocabulary = [
   },
   {
     id: 'especially', term: 'especially', normalizedTerm: 'especially', partOfSpeech: ['adverb'], ipa: '/ɪspˈɛʃəli/',
-    chineseShort: '尤其；特别', chineseExplanation: '用于强调某个人、事物或情况比其他更值得注意。', englishDefinition: 'Used to emphasize one person, thing, or situation more than others.',
+    chineseShort: '尤其；特别', chineseExplanation: '用于强调某个人、事物或情况比其他更值得注意。', englishDefinition: 'Used to emphasise one person, thing, or situation more than others.',
     examples: [{ english: 'I enjoy travelling, especially by train.', chinese: '我喜欢旅行，尤其是乘火车。' }], collocations: ['especially useful', 'especially important'], level: 2, cefr: 'B1', categories: ['Daily English', 'Travel'],
   },
   {

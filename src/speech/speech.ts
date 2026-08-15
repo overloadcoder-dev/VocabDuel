@@ -1,5 +1,6 @@
 export const SPEECH_RATES = [0.5, 0.75, 1, 1.25] as const
 export type SpeechRate = (typeof SPEECH_RATES)[number]
+export const DEFAULT_SPEECH_LANGUAGE = 'en-GB'
 
 export function isSpeechRate(value: number): value is SpeechRate {
   return SPEECH_RATES.some((rate) => rate === value)
@@ -64,7 +65,7 @@ export class SpeechService {
 
     return new Promise((resolve) => {
       const utterance = new SpeechSynthesisUtterance(cleanTerm)
-      const requestedLanguage = options.lang ?? 'en-US'
+      const requestedLanguage = options.lang ?? DEFAULT_SPEECH_LANGUAGE
       const voice = voices.find((candidate) => candidate.lang.toLocaleLowerCase() === requestedLanguage.toLocaleLowerCase())
         ?? voices.find((candidate) => candidate.default)
         ?? voices[0]

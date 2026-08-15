@@ -11,7 +11,7 @@ describe('multiplayer state transitions', () => {
   })
 })
 
-describe('synchronized timing', () => {
+describe('synchronised timing', () => {
   it('calculates round boundaries and clamps remaining time', () => {
     expect(roundWindow(1_000, 2, 5_000, 1_000)).toEqual({ roundStartAt: 13_000, roundEndAt: 18_000, resultEndAt: 19_000 })
     expect(remainingRoundMs(5_000, 200, 4_000)).toBe(800)
