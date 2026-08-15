@@ -1,6 +1,6 @@
 import { get, increment, onDisconnect, onValue, ref, remove, runTransaction, serverTimestamp, set, update, type Unsubscribe } from 'firebase/database'
 import { getFirebaseServices } from '../../multiplayer/firebase/client'
-import { allPlayersAnswered, allPlayersVoted, canStartMultiMatch } from '../state-machine'
+import { allConnectedPlayersAnswered, allPlayersVoted, canStartMultiMatch, nextConnectedHost } from '../state-machine'
 import type { AnswerRecord, MultiRoomConfig, MultiRoomRecord, MultiplayerIdentity, RoomPlayer } from '../types'
 
 const ROOM_LIFETIME_MS = 2 * 60 * 60 * 1000
@@ -24,7 +24,6 @@ export async function createMultiRoom(identity: MultiplayerIdentity, config: Mul
       players: { [identity.uid]: { ...identity, ready: false, connected: true, joinedAt: now, lastSeenAt: now } },
     }, { applyLocally: false })
     if (result.committed) {
-      await attachPresence(code, identity.uid)
       return code
     }
   }
@@ -38,11 +37,10 @@ export async function joinMultiRoom(code: string, identity: MultiplayerIdentity)
   const room = snapshot.val() as MultiRoomRecord | null
   if (!room) throw new Error('找不到此多人房间，请检查房间码。')
   if (room.metadata.expiresAt < Date.now()) throw new Error('此多人房间已过期。')
-  if (room.metadata.state !== 'waiting') throw new Error('此多人对战已经开始。')
   if (room.players?.[identity.uid]) {
-    await attachPresence(code, identity.uid)
     return room
   }
+  if (room.metadata.state !== 'waiting') throw new Error('此多人对战已经开始。')
   if (Object.keys(room.players ?? {}).length >= room.config.maxPlayers) throw new Error('此多人房间人数已满。')
 
   const now = Date.now()
@@ -51,15 +49,28 @@ export async function joinMultiRoom(code: string, identity: MultiplayerIdentity)
     'metadata/playerCount': increment(1),
     [`players/${identity.uid}`]: player,
   }).catch(() => { throw new Error('此多人房间人数已满或已无法加入。') })
-  await attachPresence(code, identity.uid)
   return (await get(roomRef)).val() as MultiRoomRecord
 }
 
-async function attachPresence(code: string, uid: string): Promise<void> {
+export async function resumeMultiRoom(code: string, uid: string): Promise<MultiRoomRecord | null> {
   const { database } = await getFirebaseServices()
+  const room = (await get(ref(database, `multiRooms/${code}`))).val() as MultiRoomRecord | null
+  if (!room || room.metadata.expiresAt < Date.now() || !room.players?.[uid]) return null
+  return room
+}
+
+export async function observeMultiPresence(code: string, uid: string): Promise<Unsubscribe> {
+  const { database } = await getFirebaseServices()
+  const connectedRef = ref(database, '.info/connected')
   const playerRef = ref(database, `multiRooms/${code}/players/${uid}`)
-  await onDisconnect(playerRef).update({ connected: false, ready: false, lastSeenAt: serverTimestamp() })
-  await update(playerRef, { connected: true, lastSeenAt: serverTimestamp() })
+  return onValue(connectedRef, (snapshot) => {
+    if (snapshot.val() !== true) return
+    void get(playerRef).then(async (playerSnapshot) => {
+      if (!playerSnapshot.exists()) return
+      await onDisconnect(playerRef).update({ connected: false, ready: false, lastSeenAt: serverTimestamp() })
+      await update(playerRef, { connected: true, lastSeenAt: serverTimestamp() })
+    }).catch(() => undefined)
+  })
 }
 
 export async function observeMultiServerOffset(callback: (offset: number) => void): Promise<Unsubscribe> {
@@ -70,6 +81,20 @@ export async function observeMultiServerOffset(callback: (offset: number) => voi
 export async function subscribeMultiRoom(code: string, callback: (room: MultiRoomRecord | null) => void): Promise<Unsubscribe> {
   const { database } = await getFirebaseServices()
   return onValue(ref(database, `multiRooms/${code}`), (snapshot) => callback(snapshot.val()))
+}
+
+export async function claimMultiHost(code: string, uid: string): Promise<void> {
+  const { database } = await getFirebaseServices()
+  const roomRef = ref(database, `multiRooms/${code}`)
+  const room = (await get(roomRef)).val() as MultiRoomRecord | null
+  if (!room || room.players?.[room.metadata.hostUid]?.connected !== false) return
+  if (nextConnectedHost(Object.values(room.players ?? {}), room.metadata.hostUid) !== uid) return
+  const previousHostUid = room.metadata.hostUid
+  await runTransaction(
+    ref(database, `multiRooms/${code}/metadata/hostUid`),
+    (currentHostUid) => currentHostUid === previousHostUid ? uid : undefined,
+    { applyLocally: false },
+  )
 }
 
 export async function setMultiReady(code: string, uid: string, ready: boolean): Promise<void> {
@@ -117,9 +142,7 @@ export async function closeMultiRoundEarly(code: string, roundId: string, uid: s
   const { database } = await getFirebaseServices()
   const room = (await get(ref(database, `multiRooms/${code}`))).val() as MultiRoomRecord | null
   if (!room || room.metadata.hostUid !== uid || room.metadata.state !== 'playing') return
-  const answerCount = Object.keys(room.answers?.[roundId] ?? {}).length
-  const playerCount = Object.keys(room.players ?? {}).length
-  if (!allPlayersAnswered(answerCount, playerCount)) return
+  if (!allConnectedPlayersAnswered(Object.values(room.players ?? {}), room.answers?.[roundId])) return
   await runTransaction(
     ref(database, `multiRooms/${code}/roundEnds/${roundId}`),
     (current) => current ?? serverTimestamp(),
@@ -139,14 +162,31 @@ export async function beginMultiRematch(code: string, uid: string, offsetMs: num
   if (!room || room.metadata.hostUid !== uid || room.metadata.state !== 'finished') return
   const players = Object.values(room.players ?? {})
   if (!allPlayersVoted(players, room.rematchVotes)) return
-  await update(roomRef, {
+  const connectedPlayers = players.filter((player) => player.connected)
+  const updates: Record<string, unknown> = {
     'metadata/seed': (room.metadata.seed + 1) >>> 0,
     'metadata/state': 'countdown',
+    'metadata/playerCount': connectedPlayers.length,
     match: { startAt: Date.now() + offsetMs + REMATCH_COUNTDOWN_MS, rematchNumber: (room.match?.rematchNumber ?? 0) + 1 },
     answers: null,
     answerCounts: null,
     roundEnds: null,
     rematchVotes: null,
+  }
+  players.filter((player) => !player.connected).forEach((player) => { updates[`players/${player.uid}`] = null })
+  await update(roomRef, updates)
+}
+
+export async function kickMultiPlayer(code: string, hostUid: string, targetUid: string): Promise<void> {
+  if (hostUid === targetUid) return
+  const { database } = await getFirebaseServices()
+  const roomRef = ref(database, `multiRooms/${code}`)
+  const room = (await get(roomRef)).val() as MultiRoomRecord | null
+  const target = room?.players?.[targetUid]
+  if (!room || room.metadata.hostUid !== hostUid || room.metadata.state !== 'waiting' || !target || target.connected) return
+  await update(roomRef, {
+    'metadata/playerCount': increment(-1),
+    [`players/${targetUid}`]: null,
   })
 }
 
@@ -156,7 +196,22 @@ export async function leaveMultiRoom(code: string, uid: string): Promise<void> {
   const room = (await get(roomRef)).val() as MultiRoomRecord | null
   if (!room) return
   if (room.metadata.hostUid === uid) {
-    await remove(roomRef)
+    const successorUid = nextConnectedHost(Object.values(room.players ?? {}), uid)
+    if (!successorUid && (room.metadata.state === 'waiting' || room.metadata.state === 'finished')) {
+      await remove(roomRef)
+      return
+    }
+    const hostUpdates: Record<string, unknown> = {}
+    if (successorUid) hostUpdates['metadata/hostUid'] = successorUid
+    if (room.metadata.state === 'waiting' || room.metadata.state === 'finished') {
+      hostUpdates['metadata/playerCount'] = increment(-1)
+      hostUpdates[`players/${uid}`] = null
+    } else {
+      hostUpdates[`players/${uid}/connected`] = false
+      hostUpdates[`players/${uid}/ready`] = false
+      hostUpdates[`players/${uid}/lastSeenAt`] = serverTimestamp()
+    }
+    await update(roomRef, hostUpdates)
     return
   }
   const playerRef = ref(database, `multiRooms/${code}/players/${uid}`)

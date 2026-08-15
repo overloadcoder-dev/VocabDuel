@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { allPlayersAnswered, allPlayersVoted, canStartMultiMatch } from './state-machine'
+import { allConnectedPlayersAnswered, allPlayersVoted, canStartMultiMatch, nextConnectedHost } from './state-machine'
 import type { RoomPlayer } from './types'
 
 function player(uid: string, ready = true, connected = true): RoomPlayer {
@@ -21,16 +21,27 @@ describe('multi-duel match readiness', () => {
 })
 
 describe('multi-duel round completion and rematches', () => {
-  it('closes a round only when every participating player has answered', () => {
-    expect(allPlayersAnswered(2, 3)).toBe(false)
-    expect(allPlayersAnswered(3, 3)).toBe(true)
-    expect(allPlayersAnswered(4, 4)).toBe(true)
+  it('treats disconnected players as unanswered without blocking connected players', () => {
+    const players = [player('a'), player('b'), player('c', true, false)]
+    expect(allConnectedPlayersAnswered(players, { a: true })).toBe(false)
+    expect(allConnectedPlayersAnswered(players, { a: true, b: true })).toBe(true)
+    expect(allConnectedPlayersAnswered([player('a')], { a: true })).toBe(true)
   })
 
-  it('requires every connected player to vote before a rematch', () => {
-    const players = [player('a'), player('b'), player('c')]
-    expect(allPlayersVoted(players, { a: true, b: true })).toBe(false)
-    expect(allPlayersVoted(players, { a: true, b: true, c: true })).toBe(true)
-    expect(allPlayersVoted([player('a'), player('b', true, false)], { a: true, b: true })).toBe(false)
+  it('requires every remaining connected player to vote before a rematch', () => {
+    const players = [player('a'), player('b'), player('c', true, false)]
+    expect(allPlayersVoted(players, { a: true })).toBe(false)
+    expect(allPlayersVoted(players, { a: true, b: true })).toBe(true)
+    expect(allPlayersVoted([player('a'), player('b', true, false)], { a: true })).toBe(false)
+  })
+
+  it('passes host control to the earliest connected remaining player', () => {
+    const players = [
+      { ...player('host', true, false), joinedAt: 1 },
+      { ...player('later'), joinedAt: 3 },
+      { ...player('next'), joinedAt: 2 },
+    ]
+    expect(nextConnectedHost(players, 'host')).toBe('next')
+    expect(nextConnectedHost([player('host', true, false)], 'host')).toBeUndefined()
   })
 })

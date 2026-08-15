@@ -1,5 +1,5 @@
 import { getApp, getApps, initializeApp, type FirebaseApp } from 'firebase/app'
-import { connectAuthEmulator, getAuth, signInAnonymously, type Auth } from 'firebase/auth'
+import { browserLocalPersistence, connectAuthEmulator, getAuth, setPersistence, signInAnonymously, type Auth } from 'firebase/auth'
 import { connectDatabaseEmulator, getDatabase, type Database } from 'firebase/database'
 
 export interface FirebaseServices { app: FirebaseApp; auth: Auth; database: Database }
@@ -33,5 +33,13 @@ export async function getFirebaseServices(): Promise<FirebaseServices> {
 export async function authenticateGuest(): Promise<string> {
   const { auth } = await getFirebaseServices()
   if (auth.currentUser) return auth.currentUser.uid
+  return (await signInAnonymously(auth)).user.uid
+}
+
+export async function authenticateResumableGuest(): Promise<string> {
+  const { auth } = await getFirebaseServices()
+  await auth.authStateReady()
+  if (auth.currentUser) return auth.currentUser.uid
+  await setPersistence(auth, browserLocalPersistence)
   return (await signInAnonymously(auth)).user.uid
 }
