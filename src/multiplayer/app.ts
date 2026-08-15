@@ -4,6 +4,7 @@ import { siteFooter, siteHeader } from '../components/site-shell'
 import { SITE } from '../config'
 import { loadVocabularyLevel, type VocabularyDataset } from '../data'
 import { generateQuestions, calculateScore } from '../games'
+import { speechService } from '../speech'
 import type { GameQuestion, VocabularyCategory } from '../types'
 import { authenticateGuest, isFirebaseConfigured } from './firebase/client'
 import {
@@ -482,10 +483,10 @@ function bindActions(): void {
     })
   }))
   root.querySelector<HTMLButtonElement>('[data-speak]')?.addEventListener('click', (event) => {
-    if (!('speechSynthesis' in window)) { setNotice('此浏览器不支持语音播放。'); return }
     const button = event.currentTarget as HTMLButtonElement
-    const utterance = new SpeechSynthesisUtterance(button.dataset.speak ?? '')
-    utterance.lang = 'en-US'; speechSynthesis.cancel(); speechSynthesis.speak(utterance)
+    void speechService.speak(button.dataset.speak ?? '').then((result) => {
+      if (!result.ok && !result.cancelled) setNotice(result.message ?? '此浏览器无法播放语音。')
+    })
   })
   root.querySelector<HTMLButtonElement>('[data-rematch]')?.addEventListener('click', () => {
     if (!identity || rematchVotePending || room?.rematchVotes?.[identity.uid]) return

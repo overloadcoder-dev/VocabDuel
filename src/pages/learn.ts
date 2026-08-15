@@ -17,7 +17,6 @@ let filtered: readonly VocabularyItem[] = []
 let index = 0
 
 const element = <T extends HTMLElement>(selector: string) => document.querySelector<T>(selector)!
-const search = element<HTMLInputElement>('#word-search')
 const level = element<HTMLSelectElement>('#level-filter')
 const category = element<HTMLSelectElement>('#category-filter')
 const filterToggle = element<HTMLButtonElement>('#filter-toggle')
@@ -63,8 +62,7 @@ function toggle(status: 'learned' | 'difficult'): void {
 }
 function updateWeakCount(): void { element('#weak-count').textContent = String(rankWeakWords(study).length) }
 function applyFilters(): void {
-  const query = search.value.trim().toLocaleLowerCase()
-  filtered = vocabulary.filter((word) => (level.value === 'all' || String(word.level) === level.value) && (category.value === 'all' || word.categories.includes(category.value as never)) && (!query || `${word.term} ${word.chineseShort} ${word.englishDefinition}`.toLocaleLowerCase().includes(query)))
+  filtered = vocabulary.filter((word) => (level.value === 'all' || String(word.level) === level.value) && (category.value === 'all' || word.categories.includes(category.value as never)))
   index = 0; render()
 }
 function moveTo(nextIndex: number): void {
@@ -75,16 +73,16 @@ function moveTo(nextIndex: number): void {
 function setFiltersExpanded(expanded: boolean): void {
   filters.toggleAttribute('data-collapsed', !expanded)
   filterToggle.setAttribute('aria-expanded', String(expanded))
-  filterToggle.textContent = expanded ? 'Hide search and filters' : 'Show search and filters'
+  filterToggle.textContent = expanded ? 'Hide filters' : 'Show filters'
 }
 async function speak(speed: 'normal' | 'slow'): Promise<void> {
   const word = filtered[index]; if (!word) return
-  const result = await speechService.speak(word.term, { speed }); if (!result.ok) announce(result.message ?? 'Pronunciation could not be played.', 'error')
+  const result = await speechService.speak(word.term, { speed }); if (!result.ok && !result.cancelled) announce(result.message ?? 'Pronunciation could not be played.', 'error')
 }
 
-search.addEventListener('input', applyFilters); level.addEventListener('change', applyFilters); category.addEventListener('change', applyFilters)
+level.addEventListener('change', applyFilters); category.addEventListener('change', applyFilters)
 filterToggle.addEventListener('click', () => setFiltersExpanded(filterToggle.getAttribute('aria-expanded') !== 'true'))
-element('#clear-filters').addEventListener('click', () => { search.value = ''; level.value = 'all'; category.value = 'all'; applyFilters(); search.focus() })
+element('#clear-filters').addEventListener('click', () => { level.value = 'all'; category.value = 'all'; applyFilters(); level.focus() })
 element('#previous-word').addEventListener('click', () => moveTo((index - 1 + filtered.length) % filtered.length))
 element('#next-word').addEventListener('click', () => moveTo((index + 1) % filtered.length))
 element('#random-word').addEventListener('click', () => { if (filtered.length > 1) moveTo((index + 1 + Math.floor(Math.random() * (filtered.length - 1))) % filtered.length) })

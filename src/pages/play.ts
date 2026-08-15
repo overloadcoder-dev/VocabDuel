@@ -201,7 +201,7 @@ function speakCurrent(): void {
   const question = questions[questionIndex]; if (!question?.audioTerm) return
   if (gameType === 'audio' && replayCount >= 3) { announce('You have used all three listens for this question.'); return }
   replayCount += 1; el('#replay-count').textContent = gameType === 'audio' ? `(${Math.max(0, 3 - replayCount)} plays left)` : ''
-  void speechService.speak(question.audioTerm).then((result) => { if (!result.ok) announce(result.message ?? 'Speech playback is unavailable.', 'error') })
+  void speechService.speak(question.audioTerm).then((result) => { if (!result.ok && !result.cancelled) announce(result.message ?? 'Speech playback is unavailable.', 'error') })
 }
 
 el<HTMLFormElement>('#game-setup').addEventListener('submit', (event) => { event.preventDefault(); const data = new FormData(el<HTMLFormElement>('#game-setup')); gameType = data.get('game-type') as GameType; sessionType = data.get('session-type') as SessionType; void startGame() })

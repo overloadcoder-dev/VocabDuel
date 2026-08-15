@@ -58,8 +58,9 @@
   .levels-page .content-hero { max-width: 61rem; padding-bottom: 2.75rem; }
   .levels-page .content-hero h1 { max-width: 57rem; color: var(--color-brand-dark); background: linear-gradient(125deg, #342582 0%, var(--color-brand) 52%, #8a4fc5 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: clamp(2.65rem, 6.4vw, 4.4rem); }
   .levels-page .content-hero .primary-link { margin-top: 1.15rem; }
-  .levels-guide { max-width: 54rem; }
-  .levels-guide-heading { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: .65rem 1.5rem; margin-bottom: 1rem; }
+  .levels-guide { max-width: 54rem; margin-inline: auto; }
+  .levels-guide-heading { display: flex; flex-wrap: wrap; align-items: end; justify-content: center; gap: .65rem 1.5rem; margin-bottom: 1rem; text-align: center; }
+  .levels-guide-heading > div, .levels-guide-heading > p { width: 100%; margin-inline: auto; }
   .levels-guide-heading h2 { margin: .25rem 0 0; font-size: clamp(1.35rem, 3vw, 1.8rem); }
   .levels-guide-heading > p { margin: 0; color: var(--color-muted); font-size: .9rem; }
   .level-accordion { display: grid; gap: .7rem; }
@@ -78,12 +79,31 @@
   .level-details { padding: 1rem 1.15rem 1.15rem 4.4rem; }
   .level-details > p { margin: .9rem 0 0; color: var(--color-muted); line-height: 1.65; }
   .levels-page .ielts-note { margin-block: 2.75rem; padding: clamp(1.2rem, 3vw, 1.65rem); }
-  .levels-practice { max-width: 54rem; }
-  .levels-practice > h2 { margin: 0; font-size: clamp(1.35rem, 3vw, 1.7rem); }
-  .levels-practice > p { max-width: 48rem; margin: .75rem 0 0; color: var(--color-muted); line-height: 1.7; }
+  .levels-practice { max-width: 54rem; margin-inline: auto; text-align: center; }
+  .levels-practice > h2 { margin: 0 auto; font-size: clamp(1.35rem, 3vw, 1.7rem); }
+  .levels-practice > p { max-width: 48rem; margin: .75rem auto 0; color: var(--color-muted); line-height: 1.7; }
   .levels-practice .cta-panel { margin-top: 1.75rem; }
-  .levels-practice .cta-panel h2 { margin: 0; font-size: 1.2rem; }
-  .levels-practice .cta-panel p { margin: .55rem 0 .8rem; color: var(--color-muted); line-height: 1.6; }
+  .levels-practice .cta-panel h2 { margin: 0 auto; font-size: 1.2rem; }
+  .levels-practice .cta-panel p { margin: .55rem auto .8rem; color: var(--color-muted); line-height: 1.6; }
+  .levels-practice .cta-panel > div { justify-content: center; }
+  .editorial-page .content-main > section { max-width: 60rem; }
+  .editorial-page .content-hero { padding-bottom: 3rem; }
+  .editorial-page .content-main > section:not(.content-hero) { margin-top: clamp(3rem, 7vw, 4.75rem); }
+  .editorial-page section > h2 { margin: 0 0 .9rem; font-size: clamp(1.45rem, 3vw, 1.9rem); line-height: 1.25; }
+  .editorial-page section > h2:not(:first-child) { margin-top: 2.75rem; }
+  .editorial-page section > p { max-width: 52rem; margin: .75rem 0 0; color: var(--color-muted); line-height: 1.75; }
+  .editorial-page .content-grid { margin-top: 1.25rem; }
+  .editorial-page .content-grid article { border: 1px solid rgb(23 32 51 / .08); border-radius: 1.1rem; background: white; padding: clamp(1.1rem, 3vw, 1.5rem); box-shadow: 0 10px 32px rgb(32 39 74 / .07); }
+  .editorial-page .content-grid article h3 { margin: 0; color: var(--color-ink); font-size: 1.05rem; line-height: 1.35; }
+  .editorial-page .content-grid article p { margin: .6rem 0 0; color: var(--color-muted); line-height: 1.65; }
+  .editorial-page .definition-list { margin-top: 1.25rem; border: 1px solid rgb(23 32 51 / .08); border-radius: 1.1rem; background: white; padding: clamp(1.1rem, 3vw, 1.5rem); box-shadow: 0 10px 32px rgb(32 39 74 / .06); }
+  .editorial-page ol { margin: 1.25rem 0 0; border: 1px solid rgb(23 32 51 / .08); border-radius: 1.1rem; background: white; padding: 1.25rem 1.25rem 1.25rem 3rem; box-shadow: 0 10px 32px rgb(32 39 74 / .06); }
+  .editorial-page ol li { padding-left: .3rem; line-height: 1.65; }
+  .editorial-page ol li + li { margin-top: .7rem; }
+  .editorial-page kbd { display: inline-grid; min-width: 1.75rem; min-height: 1.75rem; place-items: center; border: 1px solid #d7dae4; border-bottom-width: 2px; border-radius: .4rem; background: white; padding-inline: .35rem; color: var(--color-ink); font-size: .85em; font-weight: 800; box-shadow: 0 2px 5px rgb(23 32 51 / .08); }
+  .editorial-page .cta-panel { margin-top: 2rem; }
+  .editorial-page .cta-panel h2 { margin: 0; font-size: 1.25rem; }
+  .editorial-page .cta-panel p { margin: .6rem 0 .9rem; color: var(--color-muted); line-height: 1.65; }
   .ielts-note { margin-block: 2rem; border: 1px solid #d8d3ff; border-radius: 1.1rem; background: var(--color-brand-soft); padding: clamp(1rem, 3vw, 1.5rem); color: #493c9f; }
   .ielts-note h2 { margin: 0; color: #302672; font-size: 1.2rem; }
   .ielts-note p { margin: .65rem 0 0; line-height: 1.7; }
@@ -367,6 +387,11 @@ dialog::backdrop { background: rgb(23 32 51 / .55); backdrop-filter: blur(3px); 
   .levels-page .level-number { width: 2.5rem; height: 2.5rem; }
   .level-glance { padding-inline: .5rem; }
   .level-details { padding: .85rem .9rem 1rem; }
+  .editorial-page .content-main { padding-top: 1rem; }
+  .editorial-page .content-hero { padding-block: 1.25rem 2.25rem; }
+  .editorial-page .content-main > section:not(.content-hero) { margin-top: 2.75rem; }
+  .editorial-page section > h2:not(:first-child) { margin-top: 2.25rem; }
+  .editorial-page ol { padding-left: 2.5rem; }
   .definition-list dd + dt { margin-top: .65rem; }
   .site-footer { margin-top: 2.5rem; }
 }
