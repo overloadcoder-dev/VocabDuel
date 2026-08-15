@@ -54,11 +54,25 @@ let rematchVotePending = false
 let notice = ''
 const earlyClosePending = new Set<string>()
 const answerSubmissions = new Map<string, string>()
+const rankImageFiles = ['first.webp', 'second.webp', 'third.webp', 'fourth.webp'] as const
 
 function escapeHtml(value: string): string {
   const node = document.createElement('div')
   node.textContent = value
   return node.innerHTML
+}
+
+function leaderboardRankBadge(place: number, rankingDecided: boolean): string {
+  if (!rankingDecided) {
+    return '<span class="multi-rank" data-undecided aria-label="排名未定"><span aria-hidden="true">–</span></span>'
+  }
+
+  const rank = place + 1
+  const imageFile = rankImageFiles[place]
+  if (!imageFile) return `<span class="multi-rank" aria-label="第 ${rank} 名">${rank}</span>`
+
+  const imagePath = `${import.meta.env.BASE_URL}images/multi-duel/${imageFile}`
+  return `<span class="multi-rank" data-ranked aria-label="第 ${rank} 名"><img class="multi-rank-image" src="${imagePath}" alt="" width="64" height="64" decoding="async"></span>`
 }
 
 function setNotice(message: string): void {
@@ -220,6 +234,7 @@ function gameTemplate(current: MultiRoomRecord): string {
   const everyoneAnswered = allPlayersAnswered(Object.keys(roundAnswers).length, players.length)
   const revealAnswers = inResult || everyoneAnswered
   const standings = rankedPlayers(current, questions)
+  const rankingDecided = standings.some(({ score }) => score.score > 0)
   const nextStepLabel = index === questions.length - 1 ? '查看结果' : '下一题'
   const timerRemaining = remainingRoundMs(inResult ? window.resultEndAt : window.roundEndAt, serverOffset)
   const timerDuration = inResult ? resultTimeMs : current.config.roundTimeMs
@@ -237,7 +252,7 @@ function gameTemplate(current: MultiRoomRecord): string {
       const playerAnswer = roundAnswers[player.uid]
       const state = !player.connected ? 'offline' : !playerAnswer ? 'thinking' : revealAnswers ? (playerAnswer.selectedAnswer === question.correctAnswer ? 'correct' : 'incorrect') : 'answered'
       const status = { offline: '离线', thinking: '思考中', answered: '已作答', correct: '正确', incorrect: '错误' }[state]
-      return `<li data-state="${state}"><span class="multi-rank">${place + 1}</span><span class="multi-score-name">${escapeHtml(player.uid === identity?.uid ? '你' : player.displayName)}</span><strong>${score.score}</strong><small>${status}</small></li>`
+      return `<li data-state="${state}">${leaderboardRankBadge(place, rankingDecided)}<span class="multi-score-name">${escapeHtml(player.uid === identity?.uid ? '你' : player.displayName)}</span><strong>${score.score}</strong><small>${status}</small></li>`
     }).join('')}</ol>
     ${question.gameType === 'audio' ? `<p class="question-kicker">听发音，选出正确答案</p><button class="audio-orb" data-speak="${escapeHtml(question.audioTerm ?? '')}" aria-label="播放单词发音">▶</button>` : `<p class="question-kicker">请选择正确答案</p><h2 class="battle-question">${escapeHtml(question.prompt)}</h2>`}
     <div class="answer-grid">${question.choices?.map((choice, choiceIndex) => {
