@@ -176,7 +176,7 @@ function countdownTemplate(untilStart: number, isRematch: boolean): string {
   return `<section class="panel countdown-panel">
     <p class="countdown-status">${isRematch ? '双方已接受再战' : '双方都准备好了'}</p>
     <div class="countdown-dial" data-countdown-dial role="timer" aria-label="对战将在 ${count} 秒后开始" style="--countdown-progress:${progress}">
-      <div class="countdown-dial-inner"><strong class="countdown-number" data-countdown-number>${display}</strong><span data-countdown-unit>${unit}</span></div>
+      <div class="countdown-dial-inner"><strong class="countdown-number" data-countdown-number ${display === '准备' ? '' : 'data-numeric'}>${display}</strong><span data-countdown-unit>${unit}</span></div>
     </div>
     <p class="countdown-caption">${isRematch ? '下一场对决即将开始。' : '集中精神，对战即将开始！'}</p>
   </section>`
@@ -214,7 +214,12 @@ function gameTemplate(current: RoomRecord): string {
   }
   const mine = scoreFor(identity.uid, current, questions)
   const theirs = opponent ? scoreFor(opponent.uid, current, questions) : { score: 0, correct: 0, totalTime: 0 }
-  const remaining = remainingRoundMs(window.roundEndAt, serverOffset)
+  const nextStepLabel = index === questions.length - 1 ? '查看结果' : '下一题'
+  const timerRemaining = remainingRoundMs(inResult ? window.resultEndAt : window.roundEndAt, serverOffset)
+  const timerDuration = inResult ? resultTimeMs : current.config.roundTimeMs
+  const timerProgress = Math.max(0, Math.min(1, timerRemaining / timerDuration))
+  const timerText = inResult ? `${nextStepLabel} ${(timerRemaining / 1000).toFixed(1)}s` : `${(timerRemaining / 1000).toFixed(1)}s`
+  const timerLabel = inResult ? `${nextStepLabel}还有 ${Math.ceil(timerRemaining / 1000)} 秒` : `剩余 ${Math.ceil(timerRemaining / 1000)} 秒`
   const correctLabel = question.choices?.find((choice) => choice.id === question.correctAnswer)?.label ?? question.correctAnswer
   const vocabularyItem = vocabularyDataset?.byId.get(question.vocabularyId)
   const meaning = vocabularyItem?.chineseExplanation ?? question.explanation
@@ -235,7 +240,7 @@ function gameTemplate(current: RoomRecord): string {
   }[opponentStatusState]
   return `<section class="panel battle-panel" data-round-index="${index}" data-round-result="${inResult}">
     <div class="battle-meta"><span>Level ${current.config.level}</span><span>第 ${index + 1} / ${questions.length} 题</span></div>
-    <div class="timer" role="timer" aria-label="剩余 ${Math.ceil(remaining / 1000)} 秒" style="--progress:${remaining / current.config.roundTimeMs}" ${remaining / current.config.roundTimeMs <= .25 ? 'data-urgent' : ''}><span class="timer-fill" aria-hidden="true"></span><strong data-timer-value>${(remaining / 1000).toFixed(1)}s</strong></div>
+    <div class="timer" role="timer" aria-label="${timerLabel}" style="--progress:${timerProgress}" ${inResult ? 'data-transition' : timerProgress <= .25 ? 'data-urgent' : ''}><span class="timer-fill" aria-hidden="true"></span><strong data-timer-value>${timerText}</strong></div>
     <p class="opponent-status" data-state="${opponentStatusState}" role="status" aria-atomic="true"><span class="opponent-status-icon" aria-hidden="true">${opponentStatus.icon}</span><span>${opponentStatus.text}</span></p>
     ${question.gameType === 'audio' ? `<p class="question-kicker">听发音，选出正确答案</p><button class="audio-orb" data-speak="${escapeHtml(question.audioTerm ?? '')}" aria-label="播放单词发音">▶</button>` : `<p class="question-kicker">请选择正确答案</p><h2 class="battle-question">${escapeHtml(question.prompt)}</h2>`}
     <div class="answer-grid">${question.choices?.map((choice, choiceIndex) => {
@@ -262,9 +267,14 @@ function resultsTemplate(current: RoomRecord, suppliedQuestions?: GameQuestion[]
   const reviewedWords = questions.map((question) => vocabularyDataset?.byId.get(question.vocabularyId)).filter((item) => item !== undefined)
   const voted = Boolean(current.rematchVotes?.[identity.uid]) || rematchVotePending
   const opponentAvailable = Boolean(opponent?.connected)
+  const mineAccuracy = questions.length ? Math.round(mine.correct / questions.length * 100) : 0
+  const theirsAccuracy = questions.length ? Math.round(theirs.correct / questions.length * 100) : 0
   return `<section class="panel results-panel"><p class="eyebrow">对战完成 · MATCH COMPLETE</p><h2>${verdict}</h2>
-    <div class="final-score"><strong>${mine.score}</strong><span>—</span><strong>${theirs.score}</strong></div>
-    <div class="result-stats"><p><span>正确率</span><strong>${Math.round(mine.correct / questions.length * 100)}%</strong></p><p><span>答对题数</span><strong>${mine.correct}/${questions.length}</strong></p><p><span>平均用时</span><strong>${mine.correct ? (mine.totalTime / Math.max(1, Object.keys(current.answers ?? {}).length) / 1000).toFixed(1) : '—'} 秒</strong></p></div>
+    <div class="result-comparison" role="group" aria-label="双方成绩对比">
+      <div class="result-player-card" ${mine.score > theirs.score ? 'data-leading' : ''}><p class="result-player-name">你</p><p class="result-player-score"><strong>${mine.score}</strong><span>得分</span></p><p class="result-player-rate"><span>正确率</span><strong>${mineAccuracy}%</strong></p></div>
+      <span class="result-versus" aria-hidden="true">VS</span>
+      <div class="result-player-card" ${theirs.score > mine.score ? 'data-leading' : ''}><p class="result-player-name">${escapeHtml(opponent?.displayName ?? '对手')}</p><p class="result-player-score"><strong>${theirs.score}</strong><span>得分</span></p><p class="result-player-rate"><span>正确率</span><strong>${theirsAccuracy}%</strong></p></div>
+    </div>
     ${wrong.length ? `<details open><summary>复习答错的单词（${wrong.length}）</summary><ul class="word-review-list">${wrong.map((question) => `<li>${escapeHtml(question.explanation)}</li>`).join('')}</ul></details>` : '<p>满分！所有单词都答对了。</p>'}
     <details><summary>查看全部单词与词义（${reviewedWords.length}）</summary><dl class="match-word-list">${reviewedWords.map((item) => `<div><dt>${escapeHtml(item.term)}</dt><dd>${escapeHtml(item.chineseShort)} · ${escapeHtml(item.englishDefinition)}</dd></div>`).join('')}</dl></details>
     <div class="result-actions"><button class="button primary" data-rematch ${voted || !opponentAvailable ? 'disabled' : ''}>${!opponentAvailable ? '对手已离线' : voted ? '已提出再战…' : '再战一场'}</button><a class="button secondary" href="${SITE.routes.play}">单人练习</a><button class="button ghost" data-leave>离开房间</button></div>${voted && opponentAvailable ? '<p class="waiting-copy" role="status">正在等待对手；双方都同意后会自动开始下一场。</p>' : ''}
@@ -314,6 +324,7 @@ function updateCountdownDial(current: RoomRecord, untilStart: number): boolean {
   const count = Math.max(1, Math.ceil(untilStart / 1000))
   const display = !isRematch && count > 3 ? '准备' : String(count)
   dial.style.setProperty('--countdown-progress', String(Math.max(0, Math.min(1, untilStart / duration))))
+  number.toggleAttribute('data-numeric', display !== '准备')
   if (number.textContent !== display) {
     number.textContent = display
     unit.innerHTML = display === '准备' ? '' : '<small>秒</small>'
@@ -340,15 +351,19 @@ function updateRoundTimer(current: RoomRecord, now: number): boolean {
   const timer = battle.querySelector<HTMLElement>('.timer')
   const timerValue = timer?.querySelector<HTMLElement>('[data-timer-value]')
   if (!timer || !timerValue) return false
-  const remaining = remainingRoundMs(timing.roundEndAt, serverOffset)
-  const progress = Math.max(0, Math.min(1, remaining / current.config.roundTimeMs))
+  const nextStepLabel = timing.index === questions.length - 1 ? '查看结果' : '下一题'
+  const remaining = remainingRoundMs(inResult ? timing.resultEndAt : timing.roundEndAt, serverOffset)
+  const duration = inResult ? resultTimeMs : current.config.roundTimeMs
+  const progress = Math.max(0, Math.min(1, remaining / duration))
   timer.style.setProperty('--progress', String(progress))
-  timer.toggleAttribute('data-urgent', progress <= .25)
-  timerValue.textContent = `${(remaining / 1000).toFixed(1)}s`
+  timer.toggleAttribute('data-transition', inResult)
+  timer.toggleAttribute('data-urgent', !inResult && progress <= .25)
+  timerValue.textContent = inResult ? `${nextStepLabel} ${(remaining / 1000).toFixed(1)}s` : `${(remaining / 1000).toFixed(1)}s`
   const announcedSecond = Math.ceil(remaining / 1000)
-  if (timer.dataset.announcedSecond !== String(announcedSecond)) {
-    timer.dataset.announcedSecond = String(announcedSecond)
-    timer.setAttribute('aria-label', `剩余 ${announcedSecond} 秒`)
+  const announcementKey = `${inResult ? 'transition' : 'round'}-${announcedSecond}`
+  if (timer.dataset.announcedSecond !== announcementKey) {
+    timer.dataset.announcedSecond = announcementKey
+    timer.setAttribute('aria-label', inResult ? `${nextStepLabel}还有 ${announcedSecond} 秒` : `剩余 ${announcedSecond} 秒`)
   }
   return true
 }
