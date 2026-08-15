@@ -55,6 +55,28 @@
   .level-summary div { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25rem 1rem; border-top: 1px solid #eceef4; padding-top: .55rem; }
   .level-summary dt { color: var(--color-muted); font-size: .8rem; font-weight: 750; }
   .level-summary dd { margin: 0; color: var(--color-brand-dark); font-size: .9rem; font-weight: 850; text-align: right; }
+  .levels-page .content-hero { max-width: 61rem; padding-bottom: 2.75rem; }
+  .levels-page .content-hero h1 { max-width: 57rem; color: var(--color-brand-dark); background: linear-gradient(125deg, #342582 0%, var(--color-brand) 52%, #8a4fc5 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: clamp(2.65rem, 6.4vw, 4.4rem); }
+  .levels-page .content-hero .primary-link { margin-top: 1.15rem; }
+  .levels-guide { max-width: 54rem; }
+  .levels-guide-heading { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: .65rem 1.5rem; margin-bottom: 1rem; }
+  .levels-guide-heading h2 { margin: .25rem 0 0; font-size: clamp(1.35rem, 3vw, 1.8rem); }
+  .levels-guide-heading > p { margin: 0; color: var(--color-muted); font-size: .9rem; }
+  .level-accordion { display: grid; gap: .7rem; }
+  .levels-page .level-card { overflow: clip; padding: 0; border-radius: 1rem; box-shadow: 0 8px 28px rgb(32 39 74 / .07); }
+  .levels-page .level-card summary { display: grid; grid-template-columns: 2.65rem minmax(0, 1fr) auto 1rem; min-height: 4.5rem; align-items: center; gap: .75rem; padding: .7rem 1rem; cursor: pointer; list-style: none; }
+  .levels-page .level-card summary::-webkit-details-marker { display: none; }
+  .levels-page .level-card summary:hover { background: #faf9ff; }
+  .levels-page .level-card summary:focus-visible { outline: 3px solid rgb(21 163 184 / .5); outline-offset: -3px; }
+  .levels-page .level-card[open] { border-color: #cfc9ff; box-shadow: 0 12px 34px rgb(77 59 197 / .11); }
+  .levels-page .level-card[open] summary { border-bottom: 1px solid #e4e0ff; background: linear-gradient(90deg, #f7f5ff, white); }
+  .levels-page .level-number { width: 2.65rem; height: 2.65rem; border-radius: 50%; }
+  .level-name { min-width: 0; font-size: 1.05rem; font-weight: 850; }
+  .level-glance { border-radius: 999px; background: var(--color-brand-soft); padding: .3rem .65rem; color: var(--color-brand-dark); font-size: .78rem; font-weight: 850; }
+  .level-chevron { width: .65rem; height: .65rem; border-right: 2px solid var(--color-brand-dark); border-bottom: 2px solid var(--color-brand-dark); transform: rotate(45deg) translate(-2px, -2px); transition: transform .16s ease; }
+  .level-card[open] .level-chevron { transform: rotate(225deg) translate(-1px, -1px); }
+  .level-details { padding: 1rem 1.15rem 1.15rem 4.4rem; }
+  .level-details > p { margin: .9rem 0 0; color: var(--color-muted); line-height: 1.65; }
   .ielts-note { margin-block: 2rem; border: 1px solid #d8d3ff; border-radius: 1.1rem; background: var(--color-brand-soft); padding: clamp(1rem, 3vw, 1.5rem); color: #493c9f; }
   .ielts-note h2 { margin: 0; color: #302672; font-size: 1.2rem; }
   .ielts-note p { margin: .65rem 0 0; line-height: 1.7; }
@@ -330,6 +352,14 @@ dialog::backdrop { background: rgb(23 32 51 / .55); backdrop-filter: blur(3px); 
   .result-stats { gap: .35rem; }
   .result-stats p { padding-inline: .2rem; }
   .definition-list { grid-template-columns: 1fr; gap: .35rem; }
+  .levels-page .content-main { padding-top: 1rem; }
+  .levels-page .content-hero { padding-block: 1.25rem 2rem; }
+  .levels-page .content-hero h1 { font-size: clamp(2.35rem, 12vw, 3.25rem); }
+  .levels-guide-heading { align-items: start; }
+  .levels-page .level-card summary { grid-template-columns: 2.5rem minmax(0, 1fr) auto .8rem; gap: .55rem; padding-inline: .8rem; }
+  .levels-page .level-number { width: 2.5rem; height: 2.5rem; }
+  .level-glance { padding-inline: .5rem; }
+  .level-details { padding: .85rem .9rem 1rem; }
   .definition-list dd + dt { margin-top: .65rem; }
   .site-footer { margin-top: 2.5rem; }
 }
