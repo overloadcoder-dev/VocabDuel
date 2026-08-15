@@ -77,6 +77,13 @@
   .level-card[open] .level-chevron { transform: rotate(225deg) translate(-1px, -1px); }
   .level-details { padding: 1rem 1.15rem 1.15rem 4.4rem; }
   .level-details > p { margin: .9rem 0 0; color: var(--color-muted); line-height: 1.65; }
+  .levels-page .ielts-note { margin-block: 2.75rem; padding: clamp(1.2rem, 3vw, 1.65rem); }
+  .levels-practice { max-width: 54rem; }
+  .levels-practice > h2 { margin: 0; font-size: clamp(1.35rem, 3vw, 1.7rem); }
+  .levels-practice > p { max-width: 48rem; margin: .75rem 0 0; color: var(--color-muted); line-height: 1.7; }
+  .levels-practice .cta-panel { margin-top: 1.75rem; }
+  .levels-practice .cta-panel h2 { margin: 0; font-size: 1.2rem; }
+  .levels-practice .cta-panel p { margin: .55rem 0 .8rem; color: var(--color-muted); line-height: 1.6; }
   .ielts-note { margin-block: 2rem; border: 1px solid #d8d3ff; border-radius: 1.1rem; background: var(--color-brand-soft); padding: clamp(1rem, 3vw, 1.5rem); color: #493c9f; }
   .ielts-note h2 { margin: 0; color: #302672; font-size: 1.2rem; }
   .ielts-note p { margin: .65rem 0 0; line-height: 1.7; }
