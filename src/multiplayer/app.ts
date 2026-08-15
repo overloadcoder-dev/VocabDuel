@@ -219,9 +219,24 @@ function gameTemplate(current: RoomRecord): string {
   const vocabularyItem = vocabularyDataset?.byId.get(question.vocabularyId)
   const meaning = vocabularyItem?.chineseExplanation ?? question.explanation
   const acceptingAnswers = current.metadata.state === 'playing'
+  const opponentStatusState = opponent && !opponent.connected
+    ? 'reconnecting'
+    : !opponentAnswer
+      ? 'thinking'
+      : revealAnswers
+        ? opponentAnswer.selectedAnswer === question.correctAnswer ? 'correct' : 'incorrect'
+        : 'answered'
+  const opponentStatus = {
+    reconnecting: { icon: '↻', text: `对手正在重新连接… ${Math.ceil(reconnectRemaining / 1000)} 秒` },
+    thinking: { icon: '…', text: '对手正在思考…' },
+    answered: { icon: '✓', text: '对手已作答' },
+    correct: { icon: '✓', text: '对手回答正确' },
+    incorrect: { icon: '×', text: '对手回答错误' },
+  }[opponentStatusState]
   return `<section class="panel battle-panel" data-round-index="${index}" data-round-result="${inResult}">
     <div class="battle-meta"><span>Level ${current.config.level}</span><span>第 ${index + 1} / ${questions.length} 题</span></div>
     <div class="timer" role="timer" aria-label="剩余 ${Math.ceil(remaining / 1000)} 秒" style="--progress:${remaining / current.config.roundTimeMs}" ${remaining / current.config.roundTimeMs <= .25 ? 'data-urgent' : ''}><span class="timer-fill" aria-hidden="true"></span><strong data-timer-value>${(remaining / 1000).toFixed(1)}s</strong></div>
+    <p class="opponent-status" data-state="${opponentStatusState}" role="status" aria-atomic="true"><span class="opponent-status-icon" aria-hidden="true">${opponentStatus.icon}</span><span>${opponentStatus.text}</span></p>
     ${question.gameType === 'audio' ? `<p class="question-kicker">听发音，选出正确答案</p><button class="audio-orb" data-speak="${escapeHtml(question.audioTerm ?? '')}" aria-label="播放单词发音">▶</button>` : `<p class="question-kicker">请选择正确答案</p><h2 class="battle-question">${escapeHtml(question.prompt)}</h2>`}
     <div class="answer-grid">${question.choices?.map((choice, choiceIndex) => {
       const isMine = selectedAnswer === choice.id
@@ -231,7 +246,6 @@ function gameTemplate(current: RoomRecord): string {
       return `<button class="answer-button" data-answer="${choice.id}" aria-label="${escapeHtml(choice.label)}${answerStatus}" ${state ? `data-state="${state}"` : ''} ${selectedAnswer || revealAnswers || !acceptingAnswers ? 'disabled' : ''}><span aria-hidden="true">${marker}</span>${escapeHtml(choice.label)}</button>`
     }).join('') ?? ''}</div>
     ${revealAnswers ? `<div class="round-result ${selectedAnswer === question.correctAnswer ? 'correct' : 'incorrect'}"><strong>${selectedAnswer === question.correctAnswer ? '✓ 回答正确' : selectedAnswer ? '✕ 回答错误' : '时间到'}</strong><p>${escapeHtml(correctLabel)}</p><small><strong>${escapeHtml(vocabularyItem?.term ?? question.prompt)}</strong> — ${escapeHtml(meaning)}</small></div>` : selectedAnswer ? '<p class="answer-locked" role="status">答案已锁定，等待对手作答…</p>' : ''}
-    <p class="opponent-status" role="status">${opponent && !opponent.connected ? `对手正在重新连接… ${Math.ceil(reconnectRemaining / 1000)} 秒` : !opponentAnswer ? '对手正在思考…' : opponentAnswer.selectedAnswer === question.correctAnswer && revealAnswers ? '✓ 对手回答正确' : revealAnswers ? '✕ 对手回答错误' : '✓ 对手已作答'}</p>
     <div class="score-strip"><span>你 <strong>${mine.score}</strong></span><span>${escapeHtml(opponent?.displayName ?? '对手')} <strong>${theirs.score}</strong></span></div>
     ${notice ? `<p class="status-message" role="alert">${escapeHtml(notice)}</p>` : ''}
   </section>`

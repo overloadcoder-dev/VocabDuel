@@ -260,7 +260,7 @@
   .countdown-number { color: var(--color-brand-dark); font-size: clamp(3.6rem, 16vw, 5.5rem); line-height: .9; font-variant-numeric: tabular-nums; font-weight: 950; letter-spacing: -.055em; }
   .countdown-number + span small { display: block; margin-top: .55rem; color: var(--color-muted); font-size: .75rem; font-weight: 750; letter-spacing: .15em; }
   .battle-meta, .score-strip { display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: var(--color-muted); font-size: .85rem; font-weight: 750; }
-  .timer { --progress: 1; position: relative; isolation: isolate; overflow: hidden; margin: 1rem 0 1.6rem; border: 1px solid rgb(103 87 232 / .12); border-radius: 999px; background: #edf0f5; padding: .5rem 1rem; color: var(--color-ink); text-align: center; font-variant-numeric: tabular-nums; font-weight: 850; box-shadow: inset 0 1px 2px rgb(23 32 51 / .06); transition: border-color .25s ease, color .25s ease; }
+  .timer { --progress: 1; position: relative; isolation: isolate; overflow: hidden; margin: 1rem 0 .7rem; border: 1px solid rgb(103 87 232 / .12); border-radius: 999px; background: #edf0f5; padding: .5rem 1rem; color: var(--color-ink); text-align: center; font-variant-numeric: tabular-nums; font-weight: 850; box-shadow: inset 0 1px 2px rgb(23 32 51 / .06); transition: border-color .25s ease, color .25s ease; }
   .timer-fill { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgb(103 87 232 / .24), rgb(21 163 184 / .18)); transform: scaleX(var(--progress)); transform-origin: left; will-change: transform; }
   .timer strong { position: relative; letter-spacing: .02em; }
   .timer[data-urgent] { border-color: rgb(197 59 84 / .3); color: var(--color-danger); }
@@ -287,7 +287,11 @@
   .round-result p { font-size: 1.25rem; font-weight: 850; }
   .round-result small { line-height: 1.6; }
   .answer-grid + .round-result { margin-top: .85rem; }
-  .opponent-status { min-height: 1.5rem; color: var(--color-muted); text-align: center; font-size: .8rem; }
+  .opponent-status { display: flex; width: fit-content; max-width: 100%; min-height: 2.25rem; align-items: center; justify-content: center; gap: .5rem; margin: 0 auto 1.4rem; border: 1px solid #d8d3ff; border-radius: 999px; background: var(--color-brand-soft); padding: .35rem .8rem .35rem .4rem; color: var(--color-brand-dark); text-align: center; font-size: .82rem; line-height: 1.4; font-weight: 800; box-shadow: 0 5px 14px rgb(77 59 197 / .08); }
+  .opponent-status-icon { display: grid; width: 1.5rem; height: 1.5rem; flex: none; place-items: center; border-radius: 50%; background: white; color: inherit; font-size: .82rem; font-weight: 950; }
+  .opponent-status[data-state="reconnecting"] { border-color: #efc889; background: #fff7e8; color: #8a5100; }
+  .opponent-status[data-state="correct"] { border-color: #9fd9c2; background: #ebfaf4; color: #126647; }
+  .opponent-status[data-state="incorrect"] { border-color: #efb2bd; background: #fff1f3; color: #a62c42; }
   .score-strip { margin-top: 1rem; border-top: 1px solid #eceef2; padding-top: 1rem; color: var(--color-ink); }
   .score-strip strong { color: var(--color-brand-dark); font-size: 1.25rem; }
   .results-panel > h2 { margin: .5rem 0; font-size: clamp(2.7rem, 12vw, 5rem); font-weight: 950; letter-spacing: -.04em; }
@@ -298,6 +302,7 @@
   .results-panel details { margin-block: 1rem; text-align: left; }
   .results-panel summary { min-height: 2.75rem; cursor: pointer; font-weight: 800; }
   .word-review-list { display: grid; gap: .55rem; padding-left: 1.25rem; line-height: 1.55; }
+  .word-review-list > li { border-radius: .75rem; background: #f5f6fa; padding: .7rem .8rem; }
   .match-word-list { display: grid; gap: .55rem; margin: 0; }
   .match-word-list > div { display: grid; grid-template-columns: minmax(5.5rem, .35fr) 1fr; gap: .75rem; border-radius: .75rem; background: #f5f6fa; padding: .7rem .8rem; }
   .match-word-list dt { font-weight: 850; overflow-wrap: anywhere; }
@@ -374,7 +379,8 @@ dialog::backdrop { background: rgb(23 32 51 / .55); backdrop-filter: blur(3px); 
   .player-card { padding: .75rem .35rem; }
   .player-card p { margin-block: .3rem 0; overflow-wrap: anywhere; }
   .battle-meta, .score-strip { gap: .5rem; font-size: .75rem; }
-  .timer { margin-block: .75rem 1.25rem; }
+  .timer { margin-block: .75rem .65rem; }
+  .opponent-status { margin-bottom: 1.15rem; }
   .battle-question { margin-bottom: 1.25rem; }
   .answer-grid { gap: .55rem; }
   .answer-button { min-height: 3.25rem; padding: .65rem; }
