@@ -221,7 +221,9 @@ function gameTemplate(current: RoomRecord): string {
     <div class="answer-grid">${question.choices?.map((choice, choiceIndex) => {
       const isMine = selectedAnswer === choice.id
       const state = revealAnswers && isMine ? (choice.id === question.correctAnswer ? 'correct' : 'wrong') : isMine ? 'selected' : ''
-      return `<button class="answer-button" data-answer="${choice.id}" ${state ? `data-state="${state}"` : ''} ${selectedAnswer || revealAnswers || !acceptingAnswers ? 'disabled' : ''}><span>${choiceIndex + 1}</span>${escapeHtml(choice.label)}</button>`
+      const marker = state === 'correct' ? '✓' : state === 'wrong' ? '×' : String(choiceIndex + 1)
+      const answerStatus = state === 'correct' ? '，回答正确' : state === 'wrong' ? '，回答错误' : state === 'selected' ? '，已选择' : ''
+      return `<button class="answer-button" data-answer="${choice.id}" aria-label="${escapeHtml(choice.label)}${answerStatus}" ${state ? `data-state="${state}"` : ''} ${selectedAnswer || revealAnswers || !acceptingAnswers ? 'disabled' : ''}><span aria-hidden="true">${marker}</span>${escapeHtml(choice.label)}</button>`
     }).join('') ?? ''}</div>
     ${revealAnswers ? `<div class="round-result ${selectedAnswer === question.correctAnswer ? 'correct' : 'incorrect'}"><strong>${selectedAnswer === question.correctAnswer ? '✓ 回答正确' : selectedAnswer ? '✕ 回答错误' : '时间到'}</strong><p>${escapeHtml(correctLabel)}</p><small><strong>${escapeHtml(vocabularyItem?.term ?? question.prompt)}</strong> — ${escapeHtml(meaning)}</small></div>` : selectedAnswer ? '<p class="answer-locked" role="status">答案已锁定，等待对手作答…</p>' : ''}
     <p class="opponent-status" role="status">${opponent && !opponent.connected ? `对手正在重新连接… ${Math.ceil(reconnectRemaining / 1000)} 秒` : !opponentAnswer ? '对手正在思考…' : opponentAnswer.selectedAnswer === question.correctAnswer && revealAnswers ? '✓ 对手回答正确' : revealAnswers ? '✕ 对手回答错误' : '✓ 对手已作答'}</p>
