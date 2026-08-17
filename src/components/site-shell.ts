@@ -1,4 +1,9 @@
 import { SITE } from '../config'
+import { installBackToTop } from './back-to-top'
+import { installPageTransitions } from './page-transition'
+
+installPageTransitions()
+installBackToTop()
 
 const mark = `<span aria-hidden="true" class="grid size-9 place-items-center rounded-xl bg-brand text-sm font-black text-white shadow-md">VD</span>`
 
@@ -6,6 +11,7 @@ export type SiteSection = 'home' | 'learn' | 'play' | 'multiplayer' | 'multiDuel
 
 export function siteHeader(active: SiteSection): string {
   const items = [
+    ['home', SITE.routes.home, 'Home'],
     ['learn', SITE.routes.learn, 'Learn'],
     ['play', SITE.routes.play, 'Play'],
     ['multiplayer', SITE.routes.multiplayer, 'Duel'],
@@ -18,7 +24,7 @@ export function siteHeader(active: SiteSection): string {
       <a href="${SITE.routes.home}" class="flex items-center gap-2.5 font-extrabold tracking-tight" ${active === 'home' ? 'aria-current="page"' : ''}>${mark}<span class="brand-name">${SITE.name.slice(0, 5)}<span class="text-brand">${SITE.name.slice(5)}</span></span></a>
       <nav class="app-nav" aria-label="Primary navigation"><ul class="flex items-center gap-1 sm:gap-2">${items.map(([id, href, label]) => {
         const current = active === id || (active === 'placement' && id === 'levels')
-        return `<li><a href="${href}" ${current ? 'aria-current="page"' : ''} class="app-nav-link rounded-xl px-3 py-2 text-sm font-bold ${current ? 'bg-brand-soft text-brand-dark' : 'text-muted hover:bg-slate-100 hover:text-ink'}">${label}</a></li>`
+        return `<li${id === 'home' ? ' class="desktop-home-nav-item"' : ''}><a href="${href}" ${current ? 'aria-current="page"' : ''} class="app-nav-link rounded-xl px-3 py-2 text-sm font-bold ${current ? 'bg-brand-soft text-brand-dark' : 'text-muted hover:bg-slate-100 hover:text-ink'}">${label}</a></li>`
       }).join('')}</ul></nav>
     </div>
   </header>`

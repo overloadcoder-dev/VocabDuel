@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { bothPlayersAnswered, canTransition } from './state-machine'
 import { activeRoundTiming, remainingRoundMs, ROUND_REVIEW_MS, roundWindow } from './time'
-import { normalizeRoomCode, sanitizeNickname, validateNickname } from './validation'
+import { joinRoomErrorCopy, normalizeRoomCode, readInviteRoomCode, sanitizeNickname, validateNickname } from './validation'
 
 describe('multiplayer state transitions', () => {
   it('accepts legal progress and rejects state skipping', () => {
@@ -51,5 +51,21 @@ describe('room code input', () => {
   it('uppercases valid characters and removes ambiguous or unsafe input', () => {
     expect(normalizeRoomCode(' ab-cd29 ')).toBe('ABCD29')
     expect(normalizeRoomCode('io01k7pm42')).toBe('K7PM42')
+  })
+
+  it('accepts full-width characters produced by mobile keyboards', () => {
+    expect(normalizeRoomCode('ａｂＣＤ２９')).toBe('ABCD29')
+  })
+
+  it('recognizes only complete room codes in shared invitation links', () => {
+    expect(readInviteRoomCode('?room=%EF%BD%81%EF%BD%82%EF%BC%A3%EF%BC%A4%EF%BC%92%EF%BC%99')).toBe('ABCD29')
+    expect(readInviteRoomCode('?room=ABC')).toBeNull()
+    expect(readInviteRoomCode('?other=ABCD29')).toBeNull()
+  })
+
+  it('turns common join failures into clear popup copy', () => {
+    expect(joinRoomErrorCopy('此房间人数已满。').title).toBe('房间已满')
+    expect(joinRoomErrorCopy('此房间的对战已经开始。').title).toBe('对战已经开始')
+    expect(joinRoomErrorCopy('找不到此房间，请检查房间码。').title).toBe('找不到房间')
   })
 })

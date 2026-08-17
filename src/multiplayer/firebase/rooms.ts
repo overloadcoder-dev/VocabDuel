@@ -23,7 +23,7 @@ export async function createRoom(identity: MultiplayerIdentity, config: RoomConf
       config,
       players: { [identity.uid]: { ...identity, ready: false, connected: true, joinedAt: now, lastSeenAt: now } }
     }, { applyLocally: false })
-    if (result.committed) { await attachPresence(code, identity.uid); return code }
+    if (result.committed) return code
   }
   throw new Error('无法建立房间，请重新尝试。')
 }
@@ -37,7 +37,6 @@ export async function joinRoom(code: string, identity: MultiplayerIdentity): Pro
   if (room.metadata.expiresAt < Date.now()) throw new Error('此房间已过期。')
   if (room.metadata.state !== 'waiting') throw new Error('此房间的对战已经开始。')
   if (room.players?.[identity.uid]) {
-    await attachPresence(code, identity.uid)
     return room
   }
   if (room.metadata.guestUid && room.metadata.guestUid !== identity.uid) throw new Error('此房间人数已满。')
@@ -47,15 +46,28 @@ export async function joinRoom(code: string, identity: MultiplayerIdentity): Pro
     'metadata/guestUid': identity.uid,
     [`players/${identity.uid}`]: player
   }).catch(() => { throw new Error('此房间人数已满或已无法加入。') })
-  await attachPresence(code, identity.uid)
   return room
 }
 
-async function attachPresence(code: string, uid: string): Promise<void> {
+export async function resumeRoom(code: string, uid: string): Promise<RoomRecord | null> {
   const { database } = await getFirebaseServices()
+  const room = (await get(ref(database, `rooms/${code}`))).val() as RoomRecord | null
+  if (!room || room.metadata.expiresAt < Date.now() || !room.players?.[uid]) return null
+  return room
+}
+
+export async function observePresence(code: string, uid: string): Promise<Unsubscribe> {
+  const { database } = await getFirebaseServices()
+  const connectedRef = ref(database, '.info/connected')
   const playerRef = ref(database, `rooms/${code}/players/${uid}`)
-  await onDisconnect(playerRef).update({ connected: false, ready: false, lastSeenAt: serverTimestamp() })
-  await update(playerRef, { connected: true, lastSeenAt: serverTimestamp() })
+  return onValue(connectedRef, (snapshot) => {
+    if (snapshot.val() !== true) return
+    void get(playerRef).then(async (playerSnapshot) => {
+      if (!playerSnapshot.exists()) return
+      await onDisconnect(playerRef).update({ connected: false, ready: false, lastSeenAt: serverTimestamp() })
+      await update(playerRef, { connected: true, lastSeenAt: serverTimestamp() })
+    }).catch(() => undefined)
+  })
 }
 
 export async function observeServerOffset(callback: (offset: number) => void): Promise<Unsubscribe> {

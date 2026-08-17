@@ -3,6 +3,7 @@ import { announce, confirmAction } from '../components/feedback'
 import { siteFooter, siteHeader } from '../components/site-shell'
 import { SITE } from '../config'
 import { loadAllVocabulary } from '../data'
+import { matchesVocabularyTerm } from '../data/search-vocabulary'
 import { progressRepository, rankWeakWords, setWordStatus } from '../storage'
 import { isSpeechRate, speechService } from '../speech'
 import { VOCABULARY_CATEGORIES } from '../types'
@@ -19,6 +20,8 @@ let index = 0
 const element = <T extends HTMLElement>(selector: string) => document.querySelector<T>(selector)!
 const level = element<HTMLSelectElement>('#level-filter')
 const category = element<HTMLSelectElement>('#category-filter')
+const termSearch = element<HTMLInputElement>('#term-search-input')
+const searchForm = element<HTMLFormElement>('#vocabulary-search')
 const filterToggle = element<HTMLButtonElement>('#filter-toggle')
 const filters = element<HTMLElement>('#vocabulary-filters')
 const pronunciationSpeed = element<HTMLSelectElement>('#pronunciation-speed')
@@ -64,7 +67,9 @@ function toggle(status: 'learned' | 'difficult'): void {
 }
 function updateWeakCount(): void { element('#weak-count').textContent = String(rankWeakWords(study).length) }
 function applyFilters(): void {
-  filtered = vocabulary.filter((word) => (level.value === 'all' || String(word.level) === level.value) && (category.value === 'all' || word.categories.includes(category.value as never)))
+  filtered = vocabulary.filter((word) => (level.value === 'all' || String(word.level) === level.value) && (category.value === 'all' || word.categories.includes(category.value as never)) && matchesVocabularyTerm(word.term, termSearch.value))
+  const hasSearch = Boolean(termSearch.value.trim())
+  element('#search-status').textContent = hasSearch ? `${filtered.length} matching term${filtered.length === 1 ? '' : 's'} found in the VocabDuel library.` : `${filtered.length} terms available.`
   index = 0; render()
 }
 function moveTo(nextIndex: number): void {
@@ -84,19 +89,21 @@ async function speak(): Promise<void> {
 }
 
 level.addEventListener('change', applyFilters); category.addEventListener('change', applyFilters)
+searchForm.addEventListener('submit', (event) => { event.preventDefault(); applyFilters() })
+termSearch.addEventListener('search', () => { if (!termSearch.value) applyFilters() })
 pronunciationSpeed.addEventListener('change', () => {
   const selectedRate = Number(pronunciationSpeed.value)
   if (isSpeechRate(selectedRate)) study = progressRepository.update((current) => ({ ...current, audioSpeed: selectedRate }))
 })
 filterToggle.addEventListener('click', () => setFiltersExpanded(filterToggle.getAttribute('aria-expanded') !== 'true'))
-element('#clear-filters').addEventListener('click', () => { level.value = 'all'; category.value = 'all'; applyFilters(); level.focus() })
+element('#clear-filters').addEventListener('click', () => { level.value = 'all'; category.value = 'all'; termSearch.value = ''; applyFilters(); termSearch.focus() })
 element('#previous-word').addEventListener('click', () => moveTo((index - 1 + filtered.length) % filtered.length))
 element('#next-word').addEventListener('click', () => moveTo((index + 1) % filtered.length))
 element('#random-word').addEventListener('click', () => { if (filtered.length > 1) moveTo((index + 1 + Math.floor(Math.random() * (filtered.length - 1))) % filtered.length) })
 element('#learned-word').addEventListener('click', () => toggle('learned')); element('#difficult-word').addEventListener('click', () => toggle('difficult'))
 element('#speak-word').addEventListener('click', () => { void speak() })
 element<HTMLButtonElement>('#weak-practice').addEventListener('click', () => { const weak = rankWeakWords(study); if (!weak.length) announce('Mark difficult words or complete a few quizzes first.'); else location.href = `${SITE.routes.play}?words=${weak.join(',')}` })
-element('#progress-button').addEventListener('click', async () => { const accuracy = study.totalQuestionsAttempted ? Math.round(study.correctAnswers / study.totalQuestionsAttempted * 100) : 0; if (await confirmAction({ title: 'Local progress', message: `${study.learnedWords.length} learned · ${study.difficultWords.length} difficult · ${accuracy}% quiz accuracy. Reset all local progress?`, confirmLabel: 'Reset progress', danger: true })) { study = progressRepository.reset(); render(); announce('Local progress has been reset.', 'success') } })
+element('#progress-button').addEventListener('click', async () => { const accuracy = study.totalQuestionsAttempted ? Math.round(study.correctAnswers / study.totalQuestionsAttempted * 100) : 0; if (await confirmAction({ eyebrow: 'Your learning data', title: 'Local progress', metrics: [{ label: 'Learned', value: String(study.learnedWords.length), tone: 'success' }, { label: 'Difficult', value: String(study.difficultWords.length), tone: 'warning' }, { label: 'Accuracy', value: `${accuracy}%` }], message: 'Resetting will permanently remove your saved learning progress from this device.', confirmLabel: 'Reset progress', danger: true })) { study = progressRepository.reset(); render(); announce('Local progress has been reset.', 'success') } })
 setFiltersExpanded(false)
 void loadAllVocabulary().then((dataset) => {
   vocabulary = dataset.items

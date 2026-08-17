@@ -115,7 +115,7 @@ function answerQuestion(selected: HTMLButtonElement): void {
 
 previousButton.addEventListener('click', showPreviousQuestion)
 nextButton.addEventListener('click', showNextQuestion)
-void loadVocabularyLevel(1).then((dataset) => {
+void loadVocabularyLevel(4).then((dataset) => {
   vocabulary = dataset
   refillDeck()
   renderQuestion()

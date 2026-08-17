@@ -1,12 +1,13 @@
 import '../styles/main.css'
 import { answerMarker, getAnswerState } from '../components/answer-state'
+import { showAlertDialog } from '../components/feedback'
 import { siteFooter, siteHeader } from '../components/site-shell'
 import { SITE } from '../config'
 import { loadVocabularyLevel, type VocabularyDataset } from '../data'
 import { generateQuestions, calculateScore } from '../games'
 import { speechService } from '../speech'
 import type { GameQuestion, VocabularyCategory } from '../types'
-import { authenticateGuest, isFirebaseConfigured } from './firebase/client'
+import { authenticateResumableGuest, isFirebaseConfigured } from './firebase/client'
 import {
   beginRematch,
   closeRoundEarly,
@@ -15,7 +16,9 @@ import {
   joinRoom,
   leaveRoom,
   markPlaying,
+  observePresence,
   observeServerOffset,
+  resumeRoom,
   setReady,
   startMatch,
   submitAnswer,
@@ -25,7 +28,7 @@ import {
 import { bothPlayersAnswered } from './state-machine'
 import { activeRoundTiming, remainingRoundMs, ROUND_REVIEW_MS, roundTimingAtIndex, synchronizedNow } from './time'
 import type { MultiplayerIdentity, RoomConfig, RoomRecord } from './types'
-import { normalizeRoomCode, sanitizeNickname, validateNickname } from './validation'
+import { joinRoomErrorCopy, normalizeRoomCode, readInviteRoomCode, sanitizeNickname, validateNickname } from './validation'
 
 document.querySelector('#site-header')!.innerHTML = siteHeader('multiplayer')
 document.querySelector('#site-footer')!.innerHTML = siteFooter()
@@ -45,6 +48,7 @@ let vocabularyDataset: VocabularyDataset | undefined
 let serverOffset = 0
 let roomUnsubscribe: (() => void) | undefined
 let offsetUnsubscribe: (() => void) | undefined
+let presenceUnsubscribe: (() => void) | undefined
 let tickHandle: number | undefined
 let lastView = ''
 let lastRoundKey = ''
@@ -55,11 +59,30 @@ let rematchVotePending = false
 let notice = ''
 const earlyClosePending = new Set<string>()
 const answerSubmissions = new Map<string, string>()
+const rankImageFiles = ['first.webp', 'second.webp'] as const
 
 function escapeHtml(value: string): string {
   const node = document.createElement('div')
   node.textContent = value
   return node.innerHTML
+}
+
+function reviewSpeakButton(term: string): string {
+  const safeTerm = escapeHtml(term)
+  return `<button class="review-speak-button" type="button" data-speak="${safeTerm}" aria-label="播放 ${safeTerm} 的发音" title="播放发音"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5l4.5 4V5Z"/><path d="M15 9.5a4 4 0 0 1 0 5M17.8 6.8a8 8 0 0 1 0 10.4"/></svg></button>`
+}
+
+function leaderboardRankBadge(place: number, rankingDecided: boolean): string {
+  if (!rankingDecided) {
+    return '<span class="multi-rank" data-undecided aria-label="排名未定"><span aria-hidden="true">–</span></span>'
+  }
+
+  const rank = place + 1
+  const imageFile = rankImageFiles[place]
+  if (!imageFile) return `<span class="multi-rank" aria-label="第 ${rank} 名">${rank}</span>`
+
+  const imagePath = `${import.meta.env.BASE_URL}images/multi-duel/${imageFile}`
+  return `<span class="multi-rank" data-ranked aria-label="第 ${rank} 名"><img class="multi-rank-image" src="${imagePath}" alt="" width="64" height="64" decoding="async"></span>`
 }
 
 function setNotice(message: string): void {
@@ -90,18 +113,19 @@ function roomCodeInputTemplate(value: string): string {
   const code = normalizeRoomCode(value)
   const slots = Array.from({ length: 6 }, (_item, index) => `<span class="room-code-slot" ${code[index] ? 'data-filled' : ''}>${escapeHtml(code[index] ?? '')}</span>`).join('')
   return `<div class="room-code-input" data-room-code-input>
-    <input class="room-code-entry" name="code" inputmode="text" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" maxlength="6" pattern="[A-HJ-NP-Z2-9]{6}" value="${escapeHtml(code)}" aria-describedby="room-code-hint" required>
+    <input class="room-code-entry" name="code" inputmode="text" autocomplete="one-time-code" autocapitalize="characters" autocorrect="off" enterkeyhint="go" spellcheck="false" value="${escapeHtml(code)}" aria-label="6 位房间码" aria-describedby="room-code-hint" required>
     <div class="room-code-slots" aria-hidden="true">${slots}</div>
   </div><small id="room-code-hint" class="field-hint">输入或贴上 6 位房间码，英文字母会自动转为大写。</small>`
 }
 
-function refreshRoomCodeInput(input: HTMLInputElement): void {
-  input.value = normalizeRoomCode(input.value)
+function refreshRoomCodeInput(input: HTMLInputElement, commit = false): void {
+  const code = normalizeRoomCode(input.value)
+  if (commit) input.value = code
   const slots = input.closest<HTMLElement>('[data-room-code-input]')?.querySelectorAll<HTMLElement>('.room-code-slot')
   slots?.forEach((slot, index) => {
-    slot.textContent = input.value[index] ?? ''
-    slot.toggleAttribute('data-filled', Boolean(input.value[index]))
-    slot.toggleAttribute('data-active', document.activeElement === input && index === Math.min(input.value.length, 5))
+    slot.textContent = code[index] ?? ''
+    slot.toggleAttribute('data-filled', Boolean(code[index]))
+    slot.toggleAttribute('data-active', document.activeElement === input && index === Math.min(code.length, 5))
   })
 }
 
@@ -118,6 +142,21 @@ function questionsFor(current: RoomRecord): GameQuestion[] {
 }
 
 function menuTemplate(): string {
+  const invite = readInviteRoomCode(location.search)
+  if (invite) {
+    return `<section class="invite-entry-wrap">
+      <form class="panel multiplayer-form join-room-form invite-entry-card" data-join-form>
+        <div class="invite-entry-icon" aria-hidden="true">VS</div>
+        <div class="invite-entry-heading"><p class="eyebrow">好友邀请 · 1V1 DUEL</p><h2>你获邀加入一场单词对战</h2><p>房间已经准备好。输入昵称后即可进入等候室。</p></div>
+        <div class="invite-room-code"><span>房间码</span><strong>${escapeHtml(invite)}</strong><small>已从邀请链接自动填写</small></div>
+        <label>你的昵称<input name="nickname" autocomplete="nickname" minlength="2" maxlength="16" value="${escapeHtml(identity?.displayName ?? '')}" required></label>
+        <input type="hidden" name="code" value="${escapeHtml(invite)}">
+        <button class="button primary join-room-button" type="submit" ${actionPending ? 'disabled aria-busy="true"' : ''}>${actionPending ? '正在加入…' : '接受邀请并加入'}</button>
+        <button class="button ghost" type="button" data-dismiss-invite>使用其他房间码</button>
+      </form>
+      ${notice ? `<p class="status-message" role="alert">${escapeHtml(notice)}</p>` : ''}
+    </section>`
+  }
   return `
     <section class="multiplayer-grid">
       <form class="panel multiplayer-form create-room-form" data-create-form>
@@ -132,7 +171,7 @@ function menuTemplate(): string {
       <form class="panel multiplayer-form join-room-form" data-join-form>
         <div class="multiplayer-form-heading"><span class="form-step alternate" aria-hidden="true">加</span><div><h2>加入朋友的房间</h2><p class="form-copy">向房主取得 6 位房间码即可加入。</p></div></div>
         <label>你的昵称<input name="nickname" autocomplete="nickname" minlength="2" maxlength="16" value="${escapeHtml(identity?.displayName ?? '')}" required></label>
-        <label>房间码${roomCodeInputTemplate(new URLSearchParams(location.search).get('room') ?? '')}</label>
+        <label>房间码${roomCodeInputTemplate('')}</label>
         <button class="button secondary join-room-button" type="submit" ${actionPending ? 'disabled aria-busy="true"' : ''}>${actionPending ? '正在加入…' : '加入房间'}</button>
       </form>
     </section>${notice ? `<p class="status-message" role="alert">${escapeHtml(notice)}</p>` : ''}`
@@ -144,7 +183,7 @@ function lobbyTemplate(current: RoomRecord): string {
   const shareUrl = new URL(`${SITE.routes.multiplayer}?room=${roomCode}`, location.origin).toString()
   return `<section class="panel lobby-panel">
     <p class="eyebrow">房间码 · ROOM CODE</p><div class="room-code">${roomCode}</div>
-    <div class="room-actions"><button class="button small" data-copy="${roomCode}">复制房间码</button><button class="button small" data-share="${escapeHtml(shareUrl)}">分享邀请</button></div>
+    <div class="room-actions"><button class="button small" data-copy="${roomCode}">复制房间码</button><button class="button small" data-share="${escapeHtml(shareUrl)}">分享房间链接</button></div>
     <ul class="room-settings" aria-label="对战设定"><li>Level ${current.config.level}</li><li>${escapeHtml(categoryLabels[current.config.category] ?? current.config.category)}</li><li>${current.config.questionCount} 题</li><li>每题 ${current.config.roundTimeMs / 1000} 秒</li></ul>
     <div class="versus-grid">${players.map((player, index) => `<article class="player-card"><span class="presence ${player.connected ? 'online' : ''}" aria-hidden="true"></span><h2>${escapeHtml(player.displayName)}</h2><p>${player.connected ? (player.ready ? '✓ 已准备' : '尚未准备') : '正在重新连接…'}</p></article>${index === 0 ? '<strong class="versus">VS</strong>' : ''}`).join('')}</div>
     ${players.length < 2 ? '<p class="waiting-copy" role="status">把房间码分享给朋友，等待对方加入。</p>' : ''}
@@ -167,6 +206,12 @@ function scoreFor(uid: string, current: RoomRecord, questions: GameQuestion[]): 
     score += calculateScore({ correct: isCorrect, timeRemainingMs: current.config.roundTimeMs - elapsed, roundDurationMs: current.config.roundTimeMs }).total
   })
   return { score, correct, attempted, totalTime }
+}
+
+function rankedPlayers(current: RoomRecord, questions: GameQuestion[]): Array<{ player: RoomRecord['players'][string]; score: ReturnType<typeof scoreFor> }> {
+  return Object.values(current.players ?? {})
+    .map((player) => ({ player, score: scoreFor(player.uid, current, questions) }))
+    .sort((a, b) => b.score.score - a.score.score || b.score.correct - a.score.correct || a.score.totalTime - b.score.totalTime || a.player.joinedAt - b.player.joinedAt)
 }
 
 function countdownTemplate(untilStart: number, isRematch: boolean): string {
@@ -214,8 +259,9 @@ function gameTemplate(current: RoomRecord): string {
   if (opponent && !opponent.connected && reconnectRemaining <= 0) {
     return `<section class="panel unavailable-panel"><p class="eyebrow">对战已结束</p><h2>对手已断线</h2><p>连接在 30 秒内没有恢复，本场计分已停止。</p><button class="button primary" data-leave>返回多人对战</button><a class="button ghost" href="${SITE.routes.play}">单人练习</a></section>`
   }
-  const mine = scoreFor(identity.uid, current, questions)
-  const theirs = opponent ? scoreFor(opponent.uid, current, questions) : { score: 0, correct: 0, attempted: 0, totalTime: 0 }
+  const roundAnswers = current.answers?.[question.id] ?? {}
+  const standings = rankedPlayers(current, questions)
+  const rankingDecided = standings.some(({ score }) => score.score > 0)
   const nextStepLabel = index === questions.length - 1 ? '查看结果' : '下一题'
   const timerRemaining = remainingRoundMs(inResult ? window.resultEndAt : window.roundEndAt, serverOffset)
   const timerDuration = inResult ? resultTimeMs : current.config.roundTimeMs
@@ -226,24 +272,16 @@ function gameTemplate(current: RoomRecord): string {
   const vocabularyItem = vocabularyDataset?.byId.get(question.vocabularyId)
   const meaning = vocabularyItem?.chineseExplanation ?? question.explanation
   const acceptingAnswers = current.metadata.state === 'playing'
-  const opponentStatusState = opponent && !opponent.connected
-    ? 'reconnecting'
-    : !opponentAnswer
-      ? 'thinking'
-      : revealAnswers
-        ? opponentAnswer.selectedAnswer === question.correctAnswer ? 'correct' : 'incorrect'
-        : 'answered'
-  const opponentStatus = {
-    reconnecting: { icon: '↻', text: `对手正在重新连接… ${Math.ceil(reconnectRemaining / 1000)} 秒` },
-    thinking: { icon: '…', text: '对手正在思考…' },
-    answered: { icon: '✓', text: '对手已作答' },
-    correct: { icon: '✓', text: '对手回答正确' },
-    incorrect: { icon: '×', text: '对手回答错误' },
-  }[opponentStatusState]
   return `<section class="panel battle-panel" data-round-index="${index}" data-round-result="${inResult}">
     <div class="battle-meta"><span>Level ${current.config.level}</span><span>第 ${index + 1} / ${questions.length} 题</span></div>
     <div class="timer" role="timer" aria-label="${timerLabel}" style="--progress:${timerProgress}" ${inResult ? 'data-transition' : timerProgress <= .25 ? 'data-urgent' : ''}><span class="timer-fill" aria-hidden="true"></span><strong data-timer-value>${timerText}</strong></div>
-    <p class="opponent-status" data-state="${opponentStatusState}" role="status" aria-atomic="true"><span class="opponent-status-icon" aria-hidden="true">${opponentStatus.icon}</span><span>${opponentStatus.text}</span></p>
+    <ol class="multi-scoreboard duel-scoreboard" aria-label="即时排名与作答状态" aria-live="polite">${standings.map(({ player, score }, place) => {
+      const playerAnswer = roundAnswers[player.uid]
+      const hasOptimisticAnswer = player.uid === identity?.uid && Boolean(selectedAnswer)
+      const state = !player.connected ? 'reconnecting' : !playerAnswer && !hasOptimisticAnswer ? 'thinking' : revealAnswers && playerAnswer ? (playerAnswer.selectedAnswer === question.correctAnswer ? 'correct' : 'incorrect') : 'answered'
+      const status = state === 'reconnecting' ? `重新连接中 · ${Math.ceil(reconnectRemaining / 1000)} 秒` : { thinking: '思考中', answered: '已作答', correct: '正确', incorrect: '错误' }[state]
+      return `<li data-state="${state}">${leaderboardRankBadge(place, rankingDecided)}<span class="multi-score-name">${escapeHtml(player.uid === identity?.uid ? '你' : player.displayName)}</span><strong>${score.score}</strong><small>${status}</small></li>`
+    }).join('')}</ol>
     ${question.gameType === 'audio' ? `<p class="question-kicker">听发音，选出正确答案</p><button class="audio-orb" data-speak="${escapeHtml(question.audioTerm ?? '')}" aria-label="播放单词发音">▶</button>` : `<p class="question-kicker">请选择正确答案</p><h2 class="battle-question">${escapeHtml(question.prompt)}</h2>`}
     <div class="answer-grid">${question.choices?.map((choice, choiceIndex) => {
       const isMine = selectedAnswer === choice.id
@@ -253,7 +291,6 @@ function gameTemplate(current: RoomRecord): string {
       return `<button class="answer-button" data-answer="${choice.id}" aria-label="${escapeHtml(choice.label)}${answerStatus}" ${state ? `data-state="${state}"` : ''} ${selectedAnswer || revealAnswers || !acceptingAnswers ? 'disabled' : ''}><span aria-hidden="true">${marker}</span>${escapeHtml(choice.label)}</button>`
     }).join('') ?? ''}</div>
     ${revealAnswers ? `<div class="round-result ${selectedAnswer === question.correctAnswer ? 'correct' : 'incorrect'}"><strong>${selectedAnswer === question.correctAnswer ? '✓ 回答正确' : selectedAnswer ? '✕ 回答错误' : '时间到'}</strong><p>${escapeHtml(correctLabel)}</p><small><strong>${escapeHtml(vocabularyItem?.term ?? question.prompt)}</strong> — ${escapeHtml(meaning)}</small></div>` : selectedAnswer ? '<p class="answer-locked" role="status">答案已锁定，等待对手作答…</p>' : ''}
-    <div class="score-strip"><span>你 <strong>${mine.score}</strong></span><span>${escapeHtml(opponent?.displayName ?? '对手')} <strong>${theirs.score}</strong></span></div>
     ${notice ? `<p class="status-message" role="alert">${escapeHtml(notice)}</p>` : ''}
   </section>`
 }
@@ -279,8 +316,11 @@ function resultsTemplate(current: RoomRecord, suppliedQuestions?: GameQuestion[]
       <span class="result-versus" aria-hidden="true">VS</span>
       <div class="result-player-card" ${theirs.score > mine.score ? 'data-leading' : ''}><p class="result-player-name">${escapeHtml(opponent?.displayName ?? '对手')}</p><p class="result-player-score"><strong>${theirs.score}</strong><span>得分</span></p><p class="result-player-rate"><span>正确率</span><strong>${theirsAccuracy}%</strong></p><dl class="result-player-details"><div><dt>答对</dt><dd>${theirs.correct}/${questions.length}</dd></div><div><dt>答错</dt><dd>${questions.length - theirs.correct}</dd></div><div><dt>平均用时</dt><dd>${theirsAverageTime}</dd></div></dl></div>
     </div>
-    ${wrong.length ? `<details open><summary>复习答错的单词（${wrong.length}）</summary><ul class="word-review-list">${wrong.map((question) => `<li>${escapeHtml(question.explanation)}</li>`).join('')}</ul></details>` : '<p>满分！所有单词都答对了。</p>'}
-    <details><summary>查看全部单词与词义（${reviewedWords.length}）</summary><dl class="match-word-list">${reviewedWords.map((item) => `<div><dt>${escapeHtml(item.term)}</dt><dd>${escapeHtml(item.chineseShort)} · ${escapeHtml(item.englishDefinition)}</dd></div>`).join('')}</dl></details>
+    ${wrong.length ? `<details open><summary>复习答错的单词（${wrong.length}）</summary><ul class="word-review-list">${wrong.map((question) => {
+      const term = vocabularyDataset?.byId.get(question.vocabularyId)?.term ?? question.audioTerm ?? question.prompt
+      return `<li><span>${escapeHtml(question.explanation)}</span>${reviewSpeakButton(term)}</li>`
+    }).join('')}</ul></details>` : '<p>满分！所有单词都答对了。</p>'}
+    <details><summary>查看全部单词与词义（${reviewedWords.length}）</summary><dl class="match-word-list">${reviewedWords.map((item) => `<div><dt><span>${escapeHtml(item.term)}</span>${reviewSpeakButton(item.term)}</dt><dd>${escapeHtml(item.chineseShort)} · ${escapeHtml(item.englishDefinition)}</dd></div>`).join('')}</dl></details>
     <div class="result-actions"><button class="button primary" data-rematch ${voted || !opponentAvailable ? 'disabled' : ''}>${!opponentAvailable ? '对手已离线' : voted ? '已提出再战…' : '再战一场'}</button><a class="button secondary" href="${SITE.routes.play}">单人练习</a><button class="button ghost" data-leave>离开房间</button></div>${voted && opponentAvailable ? '<p class="waiting-copy" role="status">正在等待对手；双方都同意后会自动开始下一场。</p>' : ''}
   </section>`
 }
@@ -352,6 +392,14 @@ function updateRoundTimer(current: RoomRecord, now: number): boolean {
   if (!battle) return Boolean(root.querySelector('.loading-panel, .unavailable-panel'))
   if (battle.dataset.roundIndex !== String(timing.index) || battle.dataset.roundResult !== String(inResult)) return false
 
+  const opponent = identity ? Object.values(current.players).find((player) => player.uid !== identity?.uid) : undefined
+  if (opponent && !opponent.connected) {
+    const reconnectRemaining = Math.max(0, disconnectGraceMs - (now - opponent.lastSeenAt))
+    if (reconnectRemaining <= 0) return false
+    const reconnectStatus = battle.querySelector<HTMLElement>('.multi-scoreboard li[data-state="reconnecting"] small')
+    if (reconnectStatus) reconnectStatus.textContent = `重新连接中 · ${Math.ceil(reconnectRemaining / 1000)} 秒`
+  }
+
   const timer = battle.querySelector<HTMLElement>('.timer')
   const timerValue = timer?.querySelector<HTMLElement>('[data-timer-value]')
   if (!timer || !timerValue) return false
@@ -385,12 +433,17 @@ function runLiveTimer(): void {
 async function watchRoom(code: string): Promise<void> {
   roomUnsubscribe?.()
   offsetUnsubscribe?.()
+  presenceUnsubscribe?.()
   roomCode = code
   history.replaceState({}, '', `${SITE.routes.multiplayer}?room=${code}`)
+  if (identity) presenceUnsubscribe = await observePresence(code, identity.uid)
   offsetUnsubscribe = await observeServerOffset((value) => { serverOffset = value })
   roomUnsubscribe = await subscribeRoom(code, (value) => {
     room = value
-    if (!value) { answerSubmissions.clear(); roomCode = ''; history.replaceState({}, '', SITE.routes.multiplayer); setNotice('房间已关闭。'); return }
+    if (!value) { presenceUnsubscribe?.(); answerSubmissions.clear(); roomCode = ''; history.replaceState({}, '', SITE.routes.multiplayer); setNotice('房间已关闭。'); return }
+    if (identity && !value.players?.[identity.uid]) {
+      presenceUnsubscribe?.(); roomUnsubscribe?.(); offsetUnsubscribe?.(); room = null; roomCode = ''; history.replaceState({}, '', SITE.routes.multiplayer); setNotice('你已离开此房间。'); return
+    }
     if (identity) {
       answerSubmissions.forEach((_selection, roundId) => {
         if (value.answers?.[roundId]?.[identity!.uid]) answerSubmissions.delete(roundId)
@@ -433,15 +486,14 @@ function bindActions(): void {
   root.querySelectorAll<HTMLInputElement>('.room-code-entry').forEach((input) => {
     refreshRoomCodeInput(input)
     input.addEventListener('input', () => refreshRoomCodeInput(input))
-    input.addEventListener('paste', (event) => {
-      const pastedCode = normalizeRoomCode(event.clipboardData?.getData('text') ?? '')
-      if (!pastedCode) return
-      event.preventDefault()
-      input.value = pastedCode
-      refreshRoomCodeInput(input)
-    })
     input.addEventListener('focus', () => refreshRoomCodeInput(input))
-    input.addEventListener('blur', () => refreshRoomCodeInput(input))
+    input.addEventListener('blur', () => refreshRoomCodeInput(input, true))
+  })
+  root.querySelector<HTMLButtonElement>('[data-dismiss-invite]')?.addEventListener('click', () => {
+    history.replaceState({}, '', SITE.routes.multiplayer)
+    notice = ''
+    render()
+    root.querySelector<HTMLInputElement>('[name="code"]')?.focus()
   })
   root.querySelector<HTMLFormElement>('[data-create-form]')?.addEventListener('submit', async (event) => {
     event.preventDefault(); notice = ''
@@ -467,20 +519,27 @@ function bindActions(): void {
     const form = event.currentTarget as HTMLFormElement
     const currentIdentity = readIdentity(form); if (!currentIdentity) return
     const code = normalizeRoomCode(String(new FormData(form).get('code') ?? ''))
-    if (code.length !== 6) { setNotice('请输入完整的 6 位房间码。'); return }
+    if (code.length !== 6) {
+      await showAlertDialog({ title: '房间码不完整', message: '请输入完整的六位房间码，然后再试一次。' })
+      return
+    }
     actionPending = true; render()
     try {
       const joinedRoom = await joinRoom(code, currentIdentity)
       vocabularyDataset = await loadVocabularyLevel(joinedRoom.config.level)
       await watchRoom(code)
     }
-    catch (error) { setNotice(error instanceof Error ? error.message : '无法加入房间，请检查房间码。') }
+    catch (error) {
+      const copy = joinRoomErrorCopy(error instanceof Error ? error.message : '无法加入房间，请检查房间码。')
+      await showAlertDialog(copy)
+    }
     finally { actionPending = false; render() }
   })
   root.querySelector<HTMLButtonElement>('[data-ready]')?.addEventListener('click', () => {
     if (identity && room) void setReady(roomCode, identity.uid, !room.players[identity.uid]?.ready).catch(() => setNotice('无法更新准备状态，请检查网络连接。'))
   })
   root.querySelectorAll<HTMLButtonElement>('[data-leave]').forEach((button) => button.addEventListener('click', async () => {
+    presenceUnsubscribe?.()
     if (identity && roomCode) await leaveRoom(roomCode, identity.uid).catch(() => undefined)
     roomUnsubscribe?.(); offsetUnsubscribe?.(); room = null; roomCode = ''; history.replaceState({}, '', SITE.routes.multiplayer); render()
   }))
@@ -492,9 +551,10 @@ function bindActions(): void {
   root.querySelector<HTMLButtonElement>('[data-share]')?.addEventListener('click', async (event) => {
     const button = event.currentTarget as HTMLButtonElement
     const url = button.dataset.share ?? location.href
+    const text = `加入我的 VocabDuel 单词对战！房间码：${roomCode}`
     try {
-      if (navigator.share) await navigator.share({ title: '加入我的 VocabDuel 单词对战', url })
-      else { await navigator.clipboard.writeText(url); setNotice('邀请链接已复制。') }
+      if (navigator.share) await navigator.share({ title: '加入我的 VocabDuel 单词对战', text, url })
+      else { await navigator.clipboard.writeText(`${text}\n${url}`); setNotice('邀请内容与链接已复制。') }
     } catch (error) {
       if (error instanceof DOMException && error.name === 'AbortError') return
       setNotice('无法分享邀请，请改为复制房间码。')
@@ -515,12 +575,12 @@ function bindActions(): void {
       setNotice('答案提交失败，请检查网络连接。')
     })
   }))
-  root.querySelector<HTMLButtonElement>('[data-speak]')?.addEventListener('click', (event) => {
+  root.querySelectorAll<HTMLButtonElement>('[data-speak]').forEach((speakButton) => speakButton.addEventListener('click', (event) => {
     const button = event.currentTarget as HTMLButtonElement
     void speechService.speak(button.dataset.speak ?? '').then((result) => {
       if (!result.ok && !result.cancelled) setNotice(result.message ?? '此浏览器无法播放语音。')
     })
-  })
+  }))
   root.querySelector<HTMLButtonElement>('[data-rematch]')?.addEventListener('click', () => {
     if (!identity || rematchVotePending || room?.rematchVotes?.[identity.uid]) return
     rematchVotePending = true
@@ -544,16 +604,26 @@ async function initialize(): Promise<void> {
     return
   }
   try {
-    const uid = await authenticateGuest()
+    const uid = await authenticateResumableGuest()
     identity = { uid, displayName: guestName(uid) }
+    const invite = readInviteRoomCode(location.search)
+    if (invite) {
+      const resumableRoom = await resumeRoom(invite, uid).catch(() => null)
+      if (resumableRoom) {
+        vocabularyDataset = await loadVocabularyLevel(resumableRoom.config.level)
+        await watchRoom(invite)
+        return
+      }
+      render()
+      root.querySelector<HTMLInputElement>('[name="nickname"]')?.focus()
+      return
+    }
     render()
-    const invite = normalizeRoomCode(new URLSearchParams(location.search).get('room') ?? '')
-    if (invite.length === 6) root.querySelector<HTMLInputElement>('[name="code"]')?.focus()
   } catch (error) {
     root.innerHTML = `<section class="panel unavailable-panel" role="alert"><h2>无法连接多人对战</h2><p>${escapeHtml(error instanceof Error ? error.message : '请稍后再试。')}</p><button class="button primary" data-retry>重新连接</button><a class="button ghost" href="${SITE.routes.play}">单人练习</a></section>`
     root.querySelector('[data-retry]')?.addEventListener('click', () => { location.reload() })
   }
 }
 
-window.addEventListener('beforeunload', () => { roomUnsubscribe?.(); offsetUnsubscribe?.(); if (tickHandle !== undefined) window.cancelAnimationFrame(tickHandle) })
+window.addEventListener('beforeunload', () => { roomUnsubscribe?.(); offsetUnsubscribe?.(); presenceUnsubscribe?.(); if (tickHandle !== undefined) window.cancelAnimationFrame(tickHandle) })
 void initialize()
