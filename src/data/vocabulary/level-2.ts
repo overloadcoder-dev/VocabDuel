@@ -1552,4 +1552,2004 @@ export const level2Vocabulary = [
     chineseShort: '冷静的；平静的', chineseExplanation: '没有紧张、愤怒或强烈情绪，或环境安静稳定。', englishDefinition: 'Not nervous, angry, or excited; peaceful and controlled.',
     examples: [{ english: 'Try to stay calm during the emergency.', chinese: '紧急情况下尽量保持冷静。' }], collocations: ['stay calm', 'calm voice'], level: 2, cefr: 'B1', categories: ['Daily English'],
   },
+  {
+    id: 'university', term: 'university', normalizedTerm: 'university', partOfSpeech: ['noun'],
+    chineseShort: '大学', chineseExplanation: '大学是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The body of faculty and students at a university.',
+    examples: [{ english: 'The lesson explains the meaning of university.', chinese: '本课解释了“university”的含义。' }], level: 2, cefr: 'B1', categories: ['School'],
+  },
+  {
+    id: 'quality', term: 'quality', normalizedTerm: 'quality', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '品质, 特性, 才能, 质量；优质的', chineseExplanation: '品质, 特性, 才能, 质量；优质的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An essential and distinguishing attribute of something or someone.',
+    examples: [{ english: 'The lesson explains the meaning of quality.', chinese: '本课解释了“quality”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'republican', term: 'republican', normalizedTerm: 'republican', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '共和主义者, 共和党员；共和政体的, 共和国的, 共和主义的', chineseExplanation: '共和主义者, 共和党员；共和政体的, 共和国的, 共和主义的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A member of the Republican Party.',
+    examples: [{ english: 'The passage uses republican to describe the situation.', chinese: '文章用“republican”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'relation', term: 'relation', normalizedTerm: 'relation', partOfSpeech: ['noun'],
+    chineseShort: '关系, 联系, 叙述, 故事, 家属, 亲戚；关系', chineseExplanation: '关系, 联系, 叙述, 故事, 家属, 亲戚；关系是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An abstraction belonging to or characteristic of two entities or parts together.',
+    examples: [{ english: 'The lesson explains the meaning of relation.', chinese: '本课解释了“relation”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'element', term: 'element', normalizedTerm: 'element', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '元件, 元素, 要素；部分', chineseExplanation: '元件, 元素, 要素；部分是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The most favourable environment for a plant or animal.',
+    examples: [{ english: 'The lesson explains the meaning of element.', chinese: '本课解释了“element”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'discussion', term: 'discussion', normalizedTerm: 'discussion', partOfSpeech: ['noun'],
+    chineseShort: '讨论', chineseExplanation: '讨论是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An extended communication (often interactive) dealing with some particular topic.',
+    examples: [{ english: 'The lesson explains the meaning of discussion.', chinese: '本课解释了“discussion”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'conference', term: 'conference', normalizedTerm: 'conference', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '会议；会议, 讨论会, 协商会', chineseExplanation: '会议；会议, 讨论会, 协商会是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A prearranged meeting for consultation or exchange of information or discussion (especially one with a formal agenda).',
+    examples: [{ english: 'The lesson explains the meaning of conference.', chinese: '本课解释了“conference”的含义。' }], level: 2, cefr: 'B1', categories: ['Academic'],
+  },
+  {
+    id: 'division', term: 'division', normalizedTerm: 'division', partOfSpeech: ['noun'],
+    chineseShort: '分, 分开, 除法, 部门, 师；部分', chineseExplanation: '分, 分开, 除法, 部门, 师；部分是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An army unit large enough to sustain combat.',
+    examples: [{ english: 'The lesson explains the meaning of division.', chinese: '本课解释了“division”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'reference', term: 'reference', normalizedTerm: 'reference', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '参考, 索引, 参照；给...加上参考资料', chineseExplanation: '参考, 索引, 参照；给...加上参考资料是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The most direct or specific meaning of a word or expression; the class of objects that an expression refers to.',
+    examples: [{ english: 'The lesson explains the meaning of reference.', chinese: '本课解释了“reference”的含义。' }], level: 2, cefr: 'B1', categories: ['School'],
+  },
+  {
+    id: 'commercial', term: 'commercial', normalizedTerm: 'commercial', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '商业的, 商用的, 商品化的；商业广告节目', chineseExplanation: '商业的, 商用的, 商品化的；商业广告节目是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A commercially sponsored ad on radio or television.',
+    examples: [{ english: 'The passage uses commercial to describe the situation.', chinese: '文章用“commercial”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'positive', term: 'positive', normalizedTerm: 'positive', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '肯定的, 积极的, 有把握的；正的, 阳性的', chineseExplanation: '肯定的, 积极的, 有把握的；正的, 阳性的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The primary form of an adjective or adverb; denotes a quality without qualification, comparison, or relation to increase or diminution.',
+    examples: [{ english: 'The passage uses positive to describe the situation.', chinese: '文章用“positive”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'recognise', term: 'recognise', normalizedTerm: 'recognise', partOfSpeech: ['verb'],
+    chineseShort: '认识, 辩认, 认出, 承认, 认可, 清楚地认识到, 自认, 公认, 赏识, 准许某人发言', chineseExplanation: '认识, 辩认, 认出, 承认, 认可, 清楚地认识到, 自认, 公认, 赏识, 准许某人发言是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Show approval or appreciation of v grant credentials to v detect with the senses v express greetings upon meeting someone v express obligation, thanks, or gratitude for v be fully aware or…',
+    examples: [{ english: 'The example shows how to use the verb recognise.', chinese: '这个例子展示了如何使用动词“recognise”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'opposition', term: 'opposition', normalizedTerm: 'opposition', partOfSpeech: ['noun'],
+    chineseShort: '反对, 敌对, 相反, 在野党；对生, 对向, 反抗, 反对症', chineseExplanation: '反对, 敌对, 相反, 在野党；对生, 对向, 反抗, 反对症是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The relation between opposed entities.',
+    examples: [{ english: 'The lesson explains the meaning of opposition.', chinese: '本课解释了“opposition”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'researcher', term: 'researcher', normalizedTerm: 'researcher', partOfSpeech: ['noun'],
+    chineseShort: '研究人员', chineseExplanation: '研究人员是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A scientist who devotes himself to doing research.',
+    examples: [{ english: 'The lesson explains the meaning of researcher.', chinese: '本课解释了“researcher”的含义。' }], level: 2, cefr: 'B1', categories: ['Academic'],
+  },
+  {
+    id: 'contribution', term: 'contribution', normalizedTerm: 'contribution', partOfSpeech: ['noun'],
+    chineseShort: '捐助, 捐助之物, 贡献；贡献, 捐款, 补助品', chineseExplanation: '捐助, 捐助之物, 贡献；贡献, 捐款, 补助品是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The part played by a person in bringing about a result.',
+    examples: [{ english: 'The lesson explains the meaning of contribution.', chinese: '本课解释了“contribution”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'vision', term: 'vision', normalizedTerm: 'vision', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '视觉, 眼光, 视力, 幻想；梦见, 想象, 显示', chineseExplanation: '视觉, 眼光, 视力, 幻想；梦见, 想象, 显示是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A vivid mental image.',
+    examples: [{ english: 'The lesson explains the meaning of vision.', chinese: '本课解释了“vision”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'distance', term: 'distance', normalizedTerm: 'distance', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '距离, 远方, 遥远；位距', chineseExplanation: '距离, 远方, 遥远；位距是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The property created by the space between two objects or points.',
+    examples: [{ english: 'The lesson explains the meaning of distance.', chinese: '本课解释了“distance”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'apparently', term: 'apparently', normalizedTerm: 'apparently', partOfSpeech: ['adverb'],
+    chineseShort: '表面上, 清楚地, 显然地', chineseExplanation: '表面上, 清楚地, 显然地是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'From appearances alone.',
+    examples: [{ english: 'The speaker used apparently to add detail.', chinese: '说话者用“apparently”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'comment', term: 'comment', normalizedTerm: 'comment', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '注解, 批评, 评论, 备注；评论, 注解', chineseExplanation: '注解, 批评, 评论, 备注；评论, 注解是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A written explanation or criticism or illustration that is added to a book or other textual material.',
+    examples: [{ english: 'The lesson explains the meaning of comment.', chinese: '本课解释了“comment”的含义。' }], level: 2, cefr: 'B1', categories: ['School'],
+  },
+  {
+    id: 'conclusion', term: 'conclusion', normalizedTerm: 'conclusion', partOfSpeech: ['noun'],
+    chineseShort: '结论, 结尾, 推论；缔结, 结论, 推论', chineseExplanation: '结论, 结尾, 推论；缔结, 结论, 推论是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An intuitive assumption.',
+    examples: [{ english: 'The lesson explains the meaning of conclusion.', chinese: '本课解释了“conclusion”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'construction', term: 'construction', normalizedTerm: 'construction', partOfSpeech: ['noun'],
+    chineseShort: '建筑, 构造, 建筑物；施工', chineseExplanation: '建筑, 构造, 建筑物；施工是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The act of constructing something.',
+    examples: [{ english: 'The lesson explains the meaning of construction.', chinese: '本课解释了“construction”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'intelligence', term: 'intelligence', normalizedTerm: 'intelligence', partOfSpeech: ['noun'],
+    chineseShort: '智力, 情报, 信息；智力', chineseExplanation: '智力, 情报, 信息；智力是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The ability to comprehend; to understand and profit from experience.',
+    examples: [{ english: 'The lesson explains the meaning of intelligence.', chinese: '本课解释了“intelligence”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'launch', term: 'launch', normalizedTerm: 'launch', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '下水, 汽艇, 发射；使下水, 发射, 发动', chineseExplanation: '下水, 汽艇, 发射；使下水, 发射, 发动是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A motorboat with an open deck or a half deck.',
+    examples: [{ english: 'The lesson explains the meaning of launch.', chinese: '本课解释了“launch”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'appearance', term: 'appearance', normalizedTerm: 'appearance', partOfSpeech: ['noun'],
+    chineseShort: '出现, 露面, 外观, 外表, 出版；外观, 版面', chineseExplanation: '出现, 露面, 外观, 外表, 出版；外观, 版面是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Outward or visible aspect of a person or thing.',
+    examples: [{ english: 'The lesson explains the meaning of appearance.', chinese: '本课解释了“appearance”的含义。' }], level: 2, cefr: 'B1', categories: ['Academic'],
+  },
+  {
+    id: 'distribution', term: 'distribution', normalizedTerm: 'distribution', partOfSpeech: ['noun'],
+    chineseShort: '分配；分布', chineseExplanation: '分配；分布是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: '(statistics) an arrangement of values of a variable showing their observed or theoretical frequency of occurrence.',
+    examples: [{ english: 'The lesson explains the meaning of distribution.', chinese: '本课解释了“distribution”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'grab', term: 'grab', normalizedTerm: 'grab', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '抓握, 掠夺, 强占, 东方沿岸帆船；抓取, 抢去', chineseExplanation: '抓握, 掠夺, 强占, 东方沿岸帆船；抓取, 抢去是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A mechanical device for gripping an object.',
+    examples: [{ english: 'The example shows how to use the verb grab.', chinese: '这个例子展示了如何使用动词“grab”。' }], level: 2, cefr: 'B1', categories: ['Technology'],
+  },
+  {
+    id: 'conservative', term: 'conservative', normalizedTerm: 'conservative', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '保守的, 守旧的, 有保存力的；防腐剂', chineseExplanation: '保守的, 守旧的, 有保存力的；防腐剂是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A person who is reluctant to accept changes and new ideas.',
+    examples: [{ english: 'The passage uses conservative to describe the situation.', chinese: '文章用“conservative”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'warn', term: 'warn', normalizedTerm: 'warn', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '警告, 提醒, 通知；发出警告', chineseExplanation: '警告, 提醒, 通知；发出警告是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Notify of danger, potential harm, or risk.',
+    examples: [{ english: 'The example shows how to use the verb warn.', chinese: '这个例子展示了如何使用动词“warn”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'intention', term: 'intention', normalizedTerm: 'intention', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '意图, 目的, 含义；愈合, 意向', chineseExplanation: '意图, 目的, 含义；愈合, 意向是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: '(usually plural) the goal with respect to a marriage proposal.',
+    examples: [{ english: 'The lesson explains the meaning of intention.', chinese: '本课解释了“intention”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'nod', term: 'nod', normalizedTerm: 'nod', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '点头, 打盹, 晃动；点头, 打盹', chineseExplanation: '点头, 打盹, 晃动；点头, 打盹是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A sign of assent or salutation or command.',
+    examples: [{ english: 'The lesson explains the meaning of nod.', chinese: '本课解释了“nod”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'enterprise', term: 'enterprise', normalizedTerm: 'enterprise', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '企业, 事业心, 进取心, 干事业；企业', chineseExplanation: '企业, 事业心, 进取心, 干事业；企业是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A purposeful or industrious undertaking (especially one that requires effort or boldness).',
+    examples: [{ english: 'The lesson explains the meaning of enterprise.', chinese: '本课解释了“enterprise”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'instrument', term: 'instrument', normalizedTerm: 'instrument', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '工具, 手段, 仪器；仪器', chineseExplanation: '工具, 手段, 仪器；仪器是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A device that requires skill for proper use.',
+    examples: [{ english: 'The lesson explains the meaning of instrument.', chinese: '本课解释了“instrument”的含义。' }], level: 2, cefr: 'B1', categories: ['Technology'],
+  },
+  {
+    id: 'recognition', term: 'recognition', normalizedTerm: 'recognition', partOfSpeech: ['noun'],
+    chineseShort: '赞誉, 认得, 识别, 承认, 认可, 认识；认识', chineseExplanation: '赞誉, 认得, 识别, 承认, 认可, 认识；认识是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The state or quality of being recognised or acknowledged.',
+    examples: [{ english: 'The lesson explains the meaning of recognition.', chinese: '本课解释了“recognition”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'necessarily', term: 'necessarily', normalizedTerm: 'necessarily', partOfSpeech: ['adverb'],
+    chineseShort: '必然地, 必须地, 必要地', chineseExplanation: '必然地, 必须地, 必要地是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'In an essential manner.',
+    examples: [{ english: 'The speaker used necessarily to add detail.', chinese: '说话者用“necessarily”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'analyst', term: 'analyst', normalizedTerm: 'analyst', partOfSpeech: ['noun'],
+    chineseShort: '分析者, 精神分析学家；分析员', chineseExplanation: '分析者, 精神分析学家；分析员是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Someone who is skilled at analysing data.',
+    examples: [{ english: 'The lesson explains the meaning of analyst.', chinese: '本课解释了“analyst”的含义。' }], level: 2, cefr: 'B1', categories: ['Technology'],
+  },
+  {
+    id: 'appreciate', term: 'appreciate', normalizedTerm: 'appreciate', partOfSpeech: ['verb'],
+    chineseShort: '赏识, 鉴别, 为...而感激, 领会, 欣赏；增值, 涨价', chineseExplanation: '赏识, 鉴别, 为...而感激, 领会, 欣赏；增值, 涨价是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Recognise with gratitude; be grateful for.',
+    examples: [{ english: 'The example shows how to use the verb appreciate.', chinese: '这个例子展示了如何使用动词“appreciate”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'approve', term: 'approve', normalizedTerm: 'approve', partOfSpeech: ['verb'],
+    chineseShort: '赞同, 核准, 为...提供证据；赞许', chineseExplanation: '赞同, 核准, 为...提供证据；赞许是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Give sanction to.',
+    examples: [{ english: 'The example shows how to use the verb approve.', chinese: '这个例子展示了如何使用动词“approve”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'variation', term: 'variation', normalizedTerm: 'variation', partOfSpeech: ['noun'],
+    chineseShort: '变更, 变化, 变种, 变奏；变异, 变易', chineseExplanation: '变更, 变化, 变种, 变奏；变异, 变易是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An instance of change; the rate or magnitude of change.',
+    examples: [{ english: 'The lesson explains the meaning of variation.', chinese: '本课解释了“variation”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'winner', term: 'winner', normalizedTerm: 'winner', partOfSpeech: ['noun'],
+    chineseShort: '胜利者, 优胜者；取胜者', chineseExplanation: '胜利者, 优胜者；取胜者是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The contestant who wins the contest.',
+    examples: [{ english: 'The lesson explains the meaning of winner.', chinese: '本课解释了“winner”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'elect', term: 'elect', normalizedTerm: 'elect', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '当选人, 被选的人；被选的, 选出的', chineseExplanation: '当选人, 被选的人；被选的, 选出的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Select by a vote for an office or membership.',
+    examples: [{ english: 'The example shows how to use the verb elect.', chinese: '这个例子展示了如何使用动词“elect”。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'kick', term: 'kick', normalizedTerm: 'kick', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '踢, 反冲, 后座力, 凹底；踢, 反抗, 反冲', chineseExplanation: '踢, 反冲, 后座力, 凹底；踢, 反抗, 反冲是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The act of delivering a blow with the foot.',
+    examples: [{ english: 'The example shows how to use the verb kick.', chinese: '这个例子展示了如何使用动词“kick”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'observation', term: 'observation', normalizedTerm: 'observation', partOfSpeech: ['noun'],
+    chineseShort: '观察, 注意, 观测, 观察力；观察', chineseExplanation: '观察, 注意, 观测, 观察力；观察是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The act of making and recording a measurement.',
+    examples: [{ english: 'The lesson explains the meaning of observation.', chinese: '本课解释了“observation”的含义。' }], level: 2, cefr: 'B1', categories: ['School'],
+  },
+  {
+    id: 'tony', term: 'tony', normalizedTerm: 'tony', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '高贵的, 时髦的', chineseExplanation: '高贵的, 时髦的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A simpleton.',
+    examples: [{ english: 'The lesson explains the meaning of tony.', chinese: '本课解释了“tony”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'revolution', term: 'revolution', normalizedTerm: 'revolution', partOfSpeech: ['noun'],
+    chineseShort: '革命, 大变革, 旋转, 转数, 循环；回转', chineseExplanation: '革命, 大变革, 旋转, 转数, 循环；回转是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A drastic and far-reaching change in ways of thinking and behaving.',
+    examples: [{ english: 'The lesson explains the meaning of revolution.', chinese: '本课解释了“revolution”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'distinction', term: 'distinction', normalizedTerm: 'distinction', partOfSpeech: ['noun'],
+    chineseShort: '区别', chineseExplanation: '区别是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A distinguishing quality.',
+    examples: [{ english: 'The lesson explains the meaning of distinction.', chinese: '本课解释了“distinction”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'judgment', term: 'judgement', normalizedTerm: 'judgement', partOfSpeech: ['noun'],
+    chineseShort: '裁判, 宣告, 判决书；判断', chineseExplanation: '裁判, 宣告, 判决书；判断是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An opinion formed by judging something.',
+    examples: [{ english: 'The lesson explains the meaning of judgement.', chinese: '本课解释了“judgement”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'vegetable', term: 'vegetable', normalizedTerm: 'vegetable', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '蔬菜, 植物, 无精打采之人；蔬菜的, 植物的', chineseExplanation: '蔬菜, 植物, 无精打采之人；蔬菜的, 植物的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Edible seeds or roots or stems or leaves or bulbs or tubers or nonsweet fruits of any of numerous herbaceous plant.',
+    examples: [{ english: 'The lesson explains the meaning of vegetable.', chinese: '本课解释了“vegetable”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'dish', term: 'dish', normalizedTerm: 'dish', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '盘子, 碟, 菜肴；皿, 碟', chineseExplanation: '盘子, 碟, 菜肴；皿, 碟是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A piece of dishware normally used as a container for holding or serving food.',
+    examples: [{ english: 'The lesson explains the meaning of dish.', chinese: '本课解释了“dish”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'oppose', term: 'oppose', normalizedTerm: 'oppose', partOfSpeech: ['verb'],
+    chineseShort: '反对, 以...对抗, 抗争；反对', chineseExplanation: '反对, 以...对抗, 抗争；反对是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Be against; express opposition to.',
+    examples: [{ english: 'The example shows how to use the verb oppose.', chinese: '这个例子展示了如何使用动词“oppose”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'convention', term: 'convention', normalizedTerm: 'convention', partOfSpeech: ['noun'],
+    chineseShort: '大会, 协定, 惯例, 约定；约定', chineseExplanation: '大会, 协定, 惯例, 约定；约定是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A large formal assembly.',
+    examples: [{ english: 'The lesson explains the meaning of convention.', chinese: '本课解释了“convention”的含义。' }], level: 2, cefr: 'B1', categories: ['School'],
+  },
+  {
+    id: 'knock', term: 'knock', normalizedTerm: 'knock', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '敲, 敲打, 敲门；敲击, 互撞, 攻击', chineseExplanation: '敲, 敲打, 敲门；敲击, 互撞, 攻击是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The sound of knocking (as on a door or in an engine or bearing).',
+    examples: [{ english: 'The example shows how to use the verb knock.', chinese: '这个例子展示了如何使用动词“knock”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'resolution', term: 'resolution', normalizedTerm: 'resolution', partOfSpeech: ['noun'],
+    chineseShort: '解析, 决心, 坚定, 决定, 决议, 消除, 解答, 分解；图形分辨率', chineseExplanation: '解析, 决心, 坚定, 决定, 决议, 消除, 解答, 分解；图形分辨率是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A formal expression by a meeting; agreed to by a vote.',
+    examples: [{ english: 'The lesson explains the meaning of resolution.', chinese: '本课解释了“resolution”的含义。' }], level: 2, cefr: 'B1', categories: ['Technology'],
+  },
+  {
+    id: 'originally', term: 'originally', normalizedTerm: 'originally', partOfSpeech: ['adverb'],
+    chineseShort: '本来, 原来, 最初, 就起源而论, 独创地', chineseExplanation: '本来, 原来, 最初, 就起源而论, 独创地是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'In an original manner.',
+    examples: [{ english: 'The speaker used originally to add detail.', chinese: '说话者用“originally”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'tenant', term: 'tenant', normalizedTerm: 'tenant', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '承租人, 房客, 居住者；租借', chineseExplanation: '承租人, 房客, 居住者；租借是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Someone who pays rent to use land or a building or a car that is owned by someone else.',
+    examples: [{ english: 'The lesson explains the meaning of tenant.', chinese: '本课解释了“tenant”的含义。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'formation', term: 'formation', normalizedTerm: 'formation', partOfSpeech: ['noun'],
+    chineseShort: '形成, 构造, 编队；形成, 结构', chineseExplanation: '形成, 构造, 编队；形成, 结构是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An arrangement of people or things acting as a unit.',
+    examples: [{ english: 'The lesson explains the meaning of formation.', chinese: '本课解释了“formation”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'quantity', term: 'quantity', normalizedTerm: 'quantity', partOfSpeech: ['noun'],
+    chineseShort: '量, 数量, 总量；数量', chineseExplanation: '量, 数量, 总量；数量是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An adequate or large amount.',
+    examples: [{ english: 'The lesson explains the meaning of quantity.', chinese: '本课解释了“quantity”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'wrap', term: 'wrap', normalizedTerm: 'wrap', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '外套, 围巾, 包裹物, 限制, 约束, 秘密, 换行；包装, 卷, 缠绕, 包, 裹, 覆盖, 遮蔽, 隐藏, 掩护', chineseExplanation: '外套, 围巾, 包裹物, 限制, 约束, 秘密, 换行；包装, 卷, 缠绕, 包, 裹, 覆盖, 遮蔽, 隐藏, 掩护是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Cloak that is folded or wrapped around a person.',
+    examples: [{ english: 'The lesson explains the meaning of wrap.', chinese: '本课解释了“wrap”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'journalist', term: 'journalist', normalizedTerm: 'journalist', partOfSpeech: ['noun'],
+    chineseShort: '新闻记者, 从事新闻杂志业的人', chineseExplanation: '新闻记者, 从事新闻杂志业的人是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A writer for newspapers and magazines.',
+    examples: [{ english: 'The lesson explains the meaning of journalist.', chinese: '本课解释了“journalist”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'emotion', term: 'emotion', normalizedTerm: 'emotion', partOfSpeech: ['noun'],
+    chineseShort: '情绪, 激动, 强烈的情感；情绪, 情感', chineseExplanation: '情绪, 激动, 强烈的情感；情绪, 情感是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Any strong feeling.',
+    examples: [{ english: 'The lesson explains the meaning of emotion.', chinese: '本课解释了“emotion”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'analyse', term: 'analyse', normalizedTerm: 'analyse', partOfSpeech: ['verb'],
+    chineseShort: '分析, 细察, 分解；分析', chineseExplanation: '分析, 细察, 分解；分析是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Consider in detail and subject to an analysis in order to discover essential features or meaning v break down into components or essential features v make a mathematical, chemical, or grammatical…',
+    examples: [{ english: 'The example shows how to use the verb analyse.', chinese: '这个例子展示了如何使用动词“analyse”。' }], level: 2, cefr: 'B1', categories: ['Academic'],
+  },
+  {
+    id: 'portion', term: 'portion', normalizedTerm: 'portion', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '部分, 一份, 命运, 嫁妆；分配, 给...嫁妆', chineseExplanation: '部分, 一份, 命运, 嫁妆；分配, 给...嫁妆是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Something determined in relation to something that includes it n something less than the whole of a human artifact n the allotment of some amount by dividing something n assets belonging to or due…',
+    examples: [{ english: 'The lesson explains the meaning of portion.', chinese: '本课解释了“portion”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'opponent', term: 'opponent', normalizedTerm: 'opponent', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '对手, 敌手, 反对者；敌对的, 反对的, 对面的', chineseExplanation: '对手, 敌手, 反对者；敌对的, 反对的, 对面的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Characterised by active hostility.',
+    examples: [{ english: 'The lesson explains the meaning of opponent.', chinese: '本课解释了“opponent”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'glance', term: 'glance', normalizedTerm: 'glance', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '一瞥, 闪光, 掠过, 辉矿类；扫视, 闪光, 掠过, 提到, 略说', chineseExplanation: '一瞥, 闪光, 掠过, 辉矿类；扫视, 闪光, 掠过, 提到, 略说是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A quick look.',
+    examples: [{ english: 'The lesson explains the meaning of glance.', chinese: '本课解释了“glance”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'reckon', term: 'reckon', normalizedTerm: 'reckon', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '计算, 总计, 估计, 认为, 猜想；数, 计算, 估计, 依赖, 料想', chineseExplanation: '计算, 总计, 估计, 认为, 猜想；数, 计算, 估计, 依赖, 料想是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Take account of.',
+    examples: [{ english: 'The example shows how to use the verb reckon.', chinese: '这个例子展示了如何使用动词“reckon”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'resistance', term: 'resistance', normalizedTerm: 'resistance', partOfSpeech: ['noun'],
+    chineseShort: '抵抗力, 反抗, 耐力, 阻力, 电阻；抵抗', chineseExplanation: '抵抗力, 反抗, 耐力, 阻力, 电阻；抵抗是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The action of opposing something that you disapprove or disagree with.',
+    examples: [{ english: 'The lesson explains the meaning of resistance.', chinese: '本课解释了“resistance”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'pose', term: 'pose', normalizedTerm: 'pose', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '姿势, 姿态, 装模作样, 伪装；摆姿势, 装模作样, 假装', chineseExplanation: '姿势, 姿态, 装模作样, 伪装；摆姿势, 装模作样, 假装是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A posture assumed by models for photographic or artistic purposes.',
+    examples: [{ english: 'The example shows how to use the verb pose.', chinese: '这个例子展示了如何使用动词“pose”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'reputation', term: 'reputation', normalizedTerm: 'reputation', partOfSpeech: ['noun'],
+    chineseShort: '名誉, 名声, 声望；名声, 名誉, 公认证据', chineseExplanation: '名誉, 名声, 声望；名声, 名誉, 公认证据是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Notoriety for some particular characteristic.',
+    examples: [{ english: 'The lesson explains the meaning of reputation.', chinese: '本课解释了“reputation”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'relative', term: 'relative', normalizedTerm: 'relative', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '亲戚, 关系词；有关系的, 相对的, 比较的', chineseExplanation: '亲戚, 关系词；有关系的, 相对的, 比较的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A person related by blood or marriage.',
+    examples: [{ english: 'The passage uses relative to describe the situation.', chinese: '文章用“relative”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'distinguish', term: 'distinguish', normalizedTerm: 'distinguish', partOfSpeech: ['verb'],
+    chineseShort: '区别, 辨别', chineseExplanation: '区别, 辨别是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Mark as different.',
+    examples: [{ english: 'The example shows how to use the verb distinguish.', chinese: '这个例子展示了如何使用动词“distinguish”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'plaintiff', term: 'plaintiff', normalizedTerm: 'plaintiff', partOfSpeech: ['noun'],
+    chineseShort: '原告, 起诉人；原告, 原起诉人', chineseExplanation: '原告, 起诉人；原告, 原起诉人是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A person who brings an action in a court of law.',
+    examples: [{ english: 'The lesson explains the meaning of plaintiff.', chinese: '本课解释了“plaintiff”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'essentially', term: 'essentially', normalizedTerm: 'essentially', partOfSpeech: ['adverb'],
+    chineseShort: '本质上, 本来', chineseExplanation: '本质上, 本来是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'In essence; at bottom or by one\'s (or its) very nature.',
+    examples: [{ english: 'The speaker used essentially to add detail.', chinese: '说话者用“essentially”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'sauce', term: 'sauce', normalizedTerm: 'sauce', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '酱油, 调味汁, 酱；给...调味, 使增加趣味', chineseExplanation: '酱油, 调味汁, 酱；给...调味, 使增加趣味是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Flavorful relish or dressing or topping served as an accompaniment to food.',
+    examples: [{ english: 'The lesson explains the meaning of sauce.', chinese: '本课解释了“sauce”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'electricity', term: 'electricity', normalizedTerm: 'electricity', partOfSpeech: ['noun'],
+    chineseShort: '电, 电流, 电学, 热情, 电力供应；电学', chineseExplanation: '电, 电流, 电学, 热情, 电力供应；电学是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A physical phenomenon associated with stationary or moving electrons and protons.',
+    examples: [{ english: 'The lesson explains the meaning of electricity.', chinese: '本课解释了“electricity”的含义。' }], level: 2, cefr: 'B1', categories: ['Technology'],
+  },
+  {
+    id: 'inspire', term: 'inspire', normalizedTerm: 'inspire', partOfSpeech: ['verb'],
+    chineseShort: '使感动, 激发, 启示, 吸入, 鼓舞, 产生, 使生灵感；吸入, 赋予灵感', chineseExplanation: '使感动, 激发, 启示, 吸入, 鼓舞, 产生, 使生灵感；吸入, 赋予灵感是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Heighten or intensify.',
+    examples: [{ english: 'The example shows how to use the verb inspire.', chinese: '这个例子展示了如何使用动词“inspire”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'retire', term: 'retire', normalizedTerm: 'retire', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '隐居；引退, 退役, 退休, 退去, 撤退, 退却', chineseExplanation: '隐居；引退, 退役, 退休, 退去, 撤退, 退却是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Go into retirement; stop performing one\'s work or withdraw from one\'s position.',
+    examples: [{ english: 'The example shows how to use the verb retire.', chinese: '这个例子展示了如何使用动词“retire”。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'competitive', term: 'competitive', normalizedTerm: 'competitive', partOfSpeech: ['adjective'],
+    chineseShort: '竞争的；竞争的', chineseExplanation: '竞争的；竞争的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Involving competition or competitiveness.',
+    examples: [{ english: 'The passage uses competitive to describe the situation.', chinese: '文章用“competitive”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'laboratory', term: 'laboratory', normalizedTerm: 'laboratory', partOfSpeech: ['noun'],
+    chineseShort: '实验室, 研究室, 化工厂；实验室, 检验室, 化验室', chineseExplanation: '实验室, 研究室, 化工厂；实验室, 检验室, 化验室是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A workplace for the conduct of scientific research n a region resembling a laboratory inasmuch as it offers opportunities for observation and practice and experimentation.',
+    examples: [{ english: 'The lesson explains the meaning of laboratory.', chinese: '本课解释了“laboratory”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'possession', term: 'possession', normalizedTerm: 'possession', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '拥有, 占有, 所有, 财产, 领土, 领地, 自制, 着迷；占有, 持有', chineseExplanation: '拥有, 占有, 所有, 财产, 领土, 领地, 自制, 着迷；占有, 持有是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The act of having and controlling property.',
+    examples: [{ english: 'The lesson explains the meaning of possession.', chinese: '本课解释了“possession”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'bean', term: 'bean', normalizedTerm: 'bean', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '豆子；油嘴', chineseExplanation: '豆子；油嘴是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Any of various edible seeds of plants of the family Leguminosae used for food.',
+    examples: [{ english: 'The lesson explains the meaning of bean.', chinese: '本课解释了“bean”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'veteran', term: 'veteran', normalizedTerm: 'veteran', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '老手, 退伍军人, 老兵, 老树；老兵的, 老练的, 经验丰富的', chineseExplanation: '老手, 退伍军人, 老兵, 老树；老兵的, 老练的, 经验丰富的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A serviceman who has seen considerable active service.',
+    examples: [{ english: 'The lesson explains the meaning of veteran.', chinese: '本课解释了“veteran”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'tourist', term: 'tourist', normalizedTerm: 'tourist', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '观光客, 旅行者；旅游的', chineseExplanation: '观光客, 旅行者；旅游的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Someone who travels for pleasure.',
+    examples: [{ english: 'The lesson explains the meaning of tourist.', chinese: '本课解释了“tourist”的含义。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'electronic', term: 'electronic', normalizedTerm: 'electronic', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '电子的；电子工业协会接口', chineseExplanation: '电子的；电子工业协会接口是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Of or relating to electronics; concerned with or using devices that operate on principles governing the behaviour of electrons.',
+    examples: [{ english: 'The passage uses electronic to describe the situation.', chinese: '文章用“electronic”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Technology'],
+  },
+  {
+    id: 'confront', term: 'confront', normalizedTerm: 'confront', partOfSpeech: ['verb'],
+    chineseShort: '使面对, 对抗, 遭遇, 使对质, 比较；对证, 使对质, 比较', chineseExplanation: '使面对, 对抗, 遭遇, 使对质, 比较；对证, 使对质, 比较是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Oppose, as in hostility or a competition.',
+    examples: [{ english: 'The example shows how to use the verb confront.', chinese: '这个例子展示了如何使用动词“confront”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'toy', term: 'toy', normalizedTerm: 'toy', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '玩具, 小玩艺儿, 小型的东西, 消遣；供玩耍的, 作为玩具的', chineseExplanation: '玩具, 小玩艺儿, 小型的东西, 消遣；供玩耍的, 作为玩具的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A nonfunctional replica of something else (frequently used as a modifier).',
+    examples: [{ english: 'The lesson explains the meaning of toy.', chinese: '本课解释了“toy”的含义。' }], level: 2, cefr: 'B1', categories: ['Technology'],
+  },
+  {
+    id: 'remarkable', term: 'remarkable', normalizedTerm: 'remarkable', partOfSpeech: ['adjective'],
+    chineseShort: '不平常的, 值得注意的, 显著的', chineseExplanation: '不平常的, 值得注意的, 显著的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Unusual or striking.',
+    examples: [{ english: 'The passage uses remarkable to describe the situation.', chinese: '文章用“remarkable”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'landlord', term: 'landlord', normalizedTerm: 'landlord', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '房东, 地主；业主, 地主, 房东', chineseExplanation: '房东, 地主；业主, 地主, 房东是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A landowner who leases to others.',
+    examples: [{ english: 'The lesson explains the meaning of landlord.', chinese: '本课解释了“landlord”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'lad', term: 'lad', normalizedTerm: 'lad', partOfSpeech: ['noun'],
+    chineseShort: '青年, 家伙, 少年, 情人', chineseExplanation: '青年, 家伙, 少年, 情人是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A boy or man n a male child (a familiar term of address to a boy).',
+    examples: [{ english: 'The lesson explains the meaning of lad.', chinese: '本课解释了“lad”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'dig', term: 'dig', normalizedTerm: 'dig', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '挖, 翻土, 发掘；挖掘', chineseExplanation: '挖, 翻土, 发掘；挖掘是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The site of an archeological exploration.',
+    examples: [{ english: 'The example shows how to use the verb dig.', chinese: '这个例子展示了如何使用动词“dig”。' }], level: 2, cefr: 'B1', categories: ['School'],
+  },
+  {
+    id: 'entrance', term: 'entrance', normalizedTerm: 'entrance', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '入口, 进入点, 入场, 入学, 进入, 开始, 就任；使出神, 使入迷', chineseExplanation: '入口, 进入点, 入场, 入学, 进入, 开始, 就任；使出神, 使入迷是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Something that provides access (to get in or get out).',
+    examples: [{ english: 'The lesson explains the meaning of entrance.', chinese: '本课解释了“entrance”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'consultant', term: 'consultant', normalizedTerm: 'consultant', partOfSpeech: ['noun'],
+    chineseShort: '顾问, 征询意见者；顾问医师', chineseExplanation: '顾问, 征询意见者；顾问医师是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An expert who gives advice.',
+    examples: [{ english: 'The lesson explains the meaning of consultant.', chinese: '本课解释了“consultant”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'grandmother', term: 'grandmother', normalizedTerm: 'grandmother', partOfSpeech: ['noun'],
+    chineseShort: '祖母, 女祖先', chineseExplanation: '祖母, 女祖先是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The mother of your father or mother.',
+    examples: [{ english: 'The lesson explains the meaning of grandmother.', chinese: '本课解释了“grandmother”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'constantly', term: 'constantly', normalizedTerm: 'constantly', partOfSpeech: ['adverb'],
+    chineseShort: '不变地, 不断地, 时常地', chineseExplanation: '不变地, 不断地, 时常地是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Without variation or change, in every case.',
+    examples: [{ english: 'The speaker used constantly to add detail.', chinese: '说话者用“constantly”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'comprise', term: 'comprise', normalizedTerm: 'comprise', partOfSpeech: ['verb'],
+    chineseShort: '包含, 构成', chineseExplanation: '包含, 构成是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Be composed of v include or contain; have as a component v form or compose.',
+    examples: [{ english: 'The example shows how to use the verb comprise.', chinese: '这个例子展示了如何使用动词“comprise”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'elementary', term: 'elementary', normalizedTerm: 'elementary', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '初步的, 基本的；元素的, 基础的, 初级的', chineseExplanation: '初步的, 基本的；元素的, 基础的, 初级的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Easy and not involved or complicated.',
+    examples: [{ english: 'The passage uses elementary to describe the situation.', chinese: '文章用“elementary”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['School'],
+  },
+  {
+    id: 'concert', term: 'concert', normalizedTerm: 'concert', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '音乐会, 和声, 一致；协力, 协调', chineseExplanation: '音乐会, 和声, 一致；协力, 协调是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A performance of music by players or singers not involving theatrical staging.',
+    examples: [{ english: 'The lesson explains the meaning of concert.', chinese: '本课解释了“concert”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'nov', term: 'nov', normalizedTerm: 'nov', partOfSpeech: ['noun'],
+    chineseShort: 'abbr. 十一月（November）', chineseExplanation: 'abbr. 十一月（November）是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The month following October and preceding December.',
+    examples: [{ english: 'The lesson explains the meaning of nov.', chinese: '本课解释了“nov”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'relax', term: 'relax', normalizedTerm: 'relax', partOfSpeech: ['verb'],
+    chineseShort: '放松, 松懈, 松弛, 变从容, 休息, 休养；使松弛, 缓和, 使松懈, 使休息', chineseExplanation: '放松, 松懈, 松弛, 变从容, 休息, 休养；使松弛, 缓和, 使松懈, 使休息是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Become less tense, rest, or take one\'s ease.',
+    examples: [{ english: 'The example shows how to use the verb relax.', chinese: '这个例子展示了如何使用动词“relax”。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'respondent', term: 'respondent', normalizedTerm: 'respondent', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '回答的, 应答的, 反射的；应答者, 被告', chineseExplanation: '回答的, 应答的, 反射的；应答者, 被告是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The codefendant (especially in a divorce proceeding) who is accused of adultery with the corespondent.',
+    examples: [{ english: 'The lesson explains the meaning of respondent.', chinese: '本课解释了“respondent”的含义。' }], level: 2, cefr: 'B1', categories: ['Technology'],
+  },
+  {
+    id: 'resign', term: 'resign', normalizedTerm: 'resign', partOfSpeech: ['verb'],
+    chineseShort: '辞职, 放弃, 使顺从；辞职, 屈从', chineseExplanation: '辞职, 放弃, 使顺从；辞职, 屈从是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Accept as inevitable.',
+    examples: [{ english: 'The example shows how to use the verb resign.', chinese: '这个例子展示了如何使用动词“resign”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'disability', term: 'disability', normalizedTerm: 'disability', partOfSpeech: ['noun'],
+    chineseShort: '无力, 无能, 残疾；劳动能力丧失, 病废', chineseExplanation: '无力, 无能, 残疾；劳动能力丧失, 病废是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The condition of being unable to perform as a consequence of physical or mental unfitness.',
+    examples: [{ english: 'The lesson explains the meaning of disability.', chinese: '本课解释了“disability”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'refugee', term: 'refugee', normalizedTerm: 'refugee', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '难民, 流亡者；避难者, 流亡者, 难民', chineseExplanation: '难民, 流亡者；避难者, 流亡者, 难民是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An exile who flees for safety.',
+    examples: [{ english: 'The lesson explains the meaning of refugee.', chinese: '本课解释了“refugee”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'killer', term: 'killer', normalizedTerm: 'killer', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '杀人者, 屠杀者, 猛兽, 致死, 杀手, 止痛药, 限制器, 瞄准器；删除程序', chineseExplanation: '杀人者, 屠杀者, 猛兽, 致死, 杀手, 止痛药, 限制器, 瞄准器；删除程序是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Someone who causes the death of a person or animal.',
+    examples: [{ english: 'The lesson explains the meaning of killer.', chinese: '本课解释了“killer”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'respectively', term: 'respectively', normalizedTerm: 'respectively', partOfSpeech: ['adverb'],
+    chineseShort: '各自地, 独自地, 个别地, 分别地', chineseExplanation: '各自地, 独自地, 个别地, 分别地是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'In the order given.',
+    examples: [{ english: 'The speaker used respectively to add detail.', chinese: '说话者用“respectively”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'vacation', term: 'vacation', normalizedTerm: 'vacation', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '假期, 休假；假期, 停审期, 休庭期', chineseExplanation: '假期, 休假；假期, 停审期, 休庭期是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Leisure time away from work devoted to rest or pleasure.',
+    examples: [{ english: 'The lesson explains the meaning of vacation.', chinese: '本课解释了“vacation”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'fence', term: 'fence', normalizedTerm: 'fence', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '围墙, 栅栏, 买卖赃物的人, 剑术；用篱笆围住, 练习剑术, 防护', chineseExplanation: '围墙, 栅栏, 买卖赃物的人, 剑术；用篱笆围住, 练习剑术, 防护是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A barrier that serves to enclose an area.',
+    examples: [{ english: 'The lesson explains the meaning of fence.', chinese: '本课解释了“fence”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'indication', term: 'indication', normalizedTerm: 'indication', partOfSpeech: ['noun'],
+    chineseShort: '指示, 象征, 暗示；指示, 指征, 适应征', chineseExplanation: '指示, 象征, 暗示；指示, 指征, 适应征是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Something that serves to indicate or suggest.',
+    examples: [{ english: 'The lesson explains the meaning of indication.', chinese: '本课解释了“indication”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'inevitably', term: 'inevitably', normalizedTerm: 'inevitably', partOfSpeech: ['adverb'],
+    chineseShort: '不可避免地', chineseExplanation: '不可避免地是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'In such a manner as could not be otherwise.',
+    examples: [{ english: 'The speaker used inevitably to add detail.', chinese: '说话者用“inevitably”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'measurement', term: 'measurement', normalizedTerm: 'measurement', partOfSpeech: ['noun'],
+    chineseShort: '尺寸, 度量, 度量单位；度量, 度量单位', chineseExplanation: '尺寸, 度量, 度量单位；度量, 度量单位是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The act or process of assigning numbers to phenomena according to a rule.',
+    examples: [{ english: 'The lesson explains the meaning of measurement.', chinese: '本课解释了“measurement”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'enthusiasm', term: 'enthusiasm', normalizedTerm: 'enthusiasm', partOfSpeech: ['noun'],
+    chineseShort: '巨大的热情, 热心', chineseExplanation: '巨大的热情, 热心是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A feeling of excitement.',
+    examples: [{ english: 'The lesson explains the meaning of enthusiasm.', chinese: '本课解释了“enthusiasm”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'disagree', term: 'disagree', normalizedTerm: 'disagree', partOfSpeech: ['verb'],
+    chineseShort: '不一致, 不适宜；抵触, 不同意, 争执', chineseExplanation: '不一致, 不适宜；抵触, 不同意, 争执是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Be of different opinions.',
+    examples: [{ english: 'The example shows how to use the verb disagree.', chinese: '这个例子展示了如何使用动词“disagree”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'satisfaction', term: 'satisfaction', normalizedTerm: 'satisfaction', partOfSpeech: ['noun'],
+    chineseShort: '满足, 满意, 快事, 赔偿, 赎罪, 报仇的机会；偿还, 赎回', chineseExplanation: '满足, 满意, 快事, 赔偿, 赎罪, 报仇的机会；偿还, 赎回是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The contentment one feels when one has fulfilled a desire, need, or expectation.',
+    examples: [{ english: 'The lesson explains the meaning of satisfaction.', chinese: '本课解释了“satisfaction”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'qualify', term: 'qualify', normalizedTerm: 'qualify', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '取得资格, 有资格；使有资格, 使合格, 限定, 限制, 准予', chineseExplanation: '取得资格, 有资格；使有资格, 使合格, 限定, 限制, 准予是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Prove capable or fit; meet requirements.',
+    examples: [{ english: 'The example shows how to use the verb qualify.', chinese: '这个例子展示了如何使用动词“qualify”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'confusion', term: 'confusion', normalizedTerm: 'confusion', partOfSpeech: ['noun'],
+    chineseShort: '混乱, 混淆, 无秩序；含混', chineseExplanation: '混乱, 混淆, 无秩序；含混是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Disorder resulting from a failure to behave predictably.',
+    examples: [{ english: 'The lesson explains the meaning of confusion.', chinese: '本课解释了“confusion”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'wipe', term: 'wipe', normalizedTerm: 'wipe', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '擦拭, 用力打, 凸轮；擦, 揩, 消灭, 涂上, 拭去', chineseExplanation: '擦拭, 用力打, 凸轮；擦, 揩, 消灭, 涂上, 拭去是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Rub with a circular motion.',
+    examples: [{ english: 'The example shows how to use the verb wipe.', chinese: '这个例子展示了如何使用动词“wipe”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'ken', term: 'ken', normalizedTerm: 'ken', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '视野范围, 知识范围, 见地', chineseExplanation: '视野范围, 知识范围, 见地是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Range of what one can know or understand n the range of vision.',
+    examples: [{ english: 'The lesson explains the meaning of ken.', chinese: '本课解释了“ken”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'considerably', term: 'considerably', normalizedTerm: 'considerably', partOfSpeech: ['adverb'],
+    chineseShort: '非常地, 很, 颇', chineseExplanation: '非常地, 很, 颇是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'To a great extent or degree.',
+    examples: [{ english: 'The speaker used considerably to add detail.', chinese: '说话者用“considerably”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'replacement', term: 'replacement', normalizedTerm: 'replacement', partOfSpeech: ['noun'],
+    chineseShort: '归还, 更换, 代替者；复位, 置换', chineseExplanation: '归还, 更换, 代替者；复位, 置换是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The act of furnishing an equivalent person or thing in the place of another.',
+    examples: [{ english: 'The lesson explains the meaning of replacement.', chinese: '本课解释了“replacement”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'reflection', term: 'reflection', normalizedTerm: 'reflection', partOfSpeech: ['noun'],
+    chineseShort: '反映, 沉思, 映像, 想法, 责难；反射', chineseExplanation: '反映, 沉思, 映像, 想法, 责难；反射是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The phenomenon of a propagating wave (light or sound) being thrown back from a surface.',
+    examples: [{ english: 'The lesson explains the meaning of reflection.', chinese: '本课解释了“reflection”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'salad', term: 'salad', normalizedTerm: 'salad', partOfSpeech: ['noun'],
+    chineseShort: '色拉', chineseExplanation: '色拉是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Food mixtures either arranged on a plate or tossed and served with a moist dressing; usually consisting of or including greens.',
+    examples: [{ english: 'The lesson explains the meaning of salad.', chinese: '本课解释了“salad”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'unity', term: 'unity', normalizedTerm: 'unity', partOfSpeech: ['noun'],
+    chineseShort: '一致, 联合, 单一, 个体；统一', chineseExplanation: '一致, 联合, 单一, 个体；统一是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An undivided or unbroken completeness or totality with nothing wanting n the smallest whole number or a numeral representing this number n the quality of being united into one.',
+    examples: [{ english: 'The lesson explains the meaning of unity.', chinese: '本课解释了“unity”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'founder', term: 'founder', normalizedTerm: 'founder', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '创立者, 建立者；使沉没, 使摔倒, 弄跛, 浸水, 破坏', chineseExplanation: '创立者, 建立者；使沉没, 使摔倒, 弄跛, 浸水, 破坏是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A person who founds or establishes some institution.',
+    examples: [{ english: 'The lesson explains the meaning of founder.', chinese: '本课解释了“founder”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'conservation', term: 'conservation', normalizedTerm: 'conservation', partOfSpeech: ['noun'],
+    chineseShort: '保护, 保存；保存', chineseExplanation: '保护, 保存；保存是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An occurrence of improvement by virtue of preventing loss or injury or other change.',
+    examples: [{ english: 'The lesson explains the meaning of conservation.', chinese: '本课解释了“conservation”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'announcement', term: 'announcement', normalizedTerm: 'announcement', partOfSpeech: ['noun'],
+    chineseShort: '公告, 发表, 告知；通告, 布告, 公告', chineseExplanation: '公告, 发表, 告知；通告, 布告, 公告是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A formal public statement.',
+    examples: [{ english: 'The lesson explains the meaning of announcement.', chinese: '本课解释了“announcement”的含义。' }], level: 2, cefr: 'B1', categories: ['Academic'],
+  },
+  {
+    id: 'potentially', term: 'potentially', normalizedTerm: 'potentially', partOfSpeech: ['adverb'],
+    chineseShort: '可能地, 潜在地', chineseExplanation: '可能地, 潜在地是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'With a possibility of becoming actual.',
+    examples: [{ english: 'The speaker used potentially to add detail.', chinese: '说话者用“potentially”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'intellectual', term: 'intellectual', normalizedTerm: 'intellectual', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '有知识者, 知识分子, 凭理智做事者；智力的, 用脑力的, 聪明的', chineseExplanation: '有知识者, 知识分子, 凭理智做事者；智力的, 用脑力的, 聪明的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A person who uses the mind creatively.',
+    examples: [{ english: 'The passage uses intellectual to describe the situation.', chinese: '文章用“intellectual”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'constituency', term: 'constituency', normalizedTerm: 'constituency', partOfSpeech: ['noun'],
+    chineseShort: '选民, 顾客, 读者；选区, 全体选民, 选区内的选民', chineseExplanation: '选民, 顾客, 读者；选区, 全体选民, 选区内的选民是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The body of voters who elect a representative for their area.',
+    examples: [{ english: 'The lesson explains the meaning of constituency.', chinese: '本课解释了“constituency”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'helmet', term: 'helmet', normalizedTerm: 'helmet', partOfSpeech: ['noun'],
+    chineseShort: '头盔；安全帽', chineseExplanation: '保护头部免受撞击或伤害的坚硬帽子。', englishDefinition: 'A hard protective covering worn on the head.',
+    examples: [{ english: 'Always wear a helmet when riding a bicycle.', chinese: '骑自行车时一定要戴头盔。' }], level: 2, cefr: 'B1', categories: ['Daily English', 'Travel'],
+  },
+  {
+    id: 'reception', term: 'reception', normalizedTerm: 'reception', partOfSpeech: ['noun'],
+    chineseShort: '接待, 接受, 招待会；接受, 感受', chineseExplanation: '接待, 接受, 招待会；接受, 感受是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The manner in which something is greeted.',
+    examples: [{ english: 'The lesson explains the meaning of reception.', chinese: '本课解释了“reception”的含义。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'objection', term: 'objection', normalizedTerm: 'objection', partOfSpeech: ['noun'],
+    chineseShort: '异议, 反对, 不喜欢, 缺点, 缺陷, 妨碍, 拒绝之理由；异议, 反对, 抗议', chineseExplanation: '异议, 反对, 不喜欢, 缺点, 缺陷, 妨碍, 拒绝之理由；异议, 反对, 抗议是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The speech act of objecting.',
+    examples: [{ english: 'The lesson explains the meaning of objection.', chinese: '本课解释了“objection”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'grandfather', term: 'grandfather', normalizedTerm: 'grandfather', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '祖父, 始祖；原始资料组', chineseExplanation: '祖父, 始祖；原始资料组是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The father of your father or mother.',
+    examples: [{ english: 'The lesson explains the meaning of grandfather.', chinese: '本课解释了“grandfather”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'consequently', term: 'consequently', normalizedTerm: 'consequently', partOfSpeech: ['adverb'],
+    chineseShort: '所以', chineseExplanation: '所以是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: '(sentence connectors) because of the reason given.',
+    examples: [{ english: 'The speaker used consequently to add detail.', chinese: '说话者用“consequently”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'incredible', term: 'incredible', normalizedTerm: 'incredible', partOfSpeech: ['adjective'],
+    chineseShort: '难以置信的', chineseExplanation: '难以置信的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Beyond belief or understanding.',
+    examples: [{ english: 'The passage uses incredible to describe the situation.', chinese: '文章用“incredible”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'wander', term: 'wander', normalizedTerm: 'wander', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '游荡, 漫步, 徘徊, 迷路, 离题, 蜿蜒；在...漫游', chineseExplanation: '游荡, 漫步, 徘徊, 迷路, 离题, 蜿蜒；在...漫游是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Go via an indirect route or at no set pace.',
+    examples: [{ english: 'The example shows how to use the verb wander.', chinese: '这个例子展示了如何使用动词“wander”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'porch', term: 'porch', normalizedTerm: 'porch', partOfSpeech: ['noun'],
+    chineseShort: '门廊, 走廊', chineseExplanation: '门廊, 走廊是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A structure attached to the exterior of a building often forming a covered entrance.',
+    examples: [{ english: 'The lesson explains the meaning of porch.', chinese: '本课解释了“porch”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'reservation', term: 'reservation', normalizedTerm: 'reservation', partOfSpeech: ['noun'],
+    chineseShort: '保留, 预定, 保留品, 保留地；预定, 预约, 权益保留', chineseExplanation: '保留, 预定, 保留品, 保留地；预定, 预约, 权益保留是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A district that is reserved for particular purpose.',
+    examples: [{ english: 'The lesson explains the meaning of reservation.', chinese: '本课解释了“reservation”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'dividend', term: 'dividend', normalizedTerm: 'dividend', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '被除数, 股利；被除数', chineseExplanation: '被除数, 股利；被除数是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'That part of the earnings of a corporation that is distributed to its shareholders; usually paid quarterly.',
+    examples: [{ english: 'The lesson explains the meaning of dividend.', chinese: '本课解释了“dividend”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'resemble', term: 'resemble', normalizedTerm: 'resemble', partOfSpeech: ['verb'],
+    chineseShort: '相似, 类似', chineseExplanation: '相似, 类似是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Appear like; be similar or bear a likeness to.',
+    examples: [{ english: 'The example shows how to use the verb resemble.', chinese: '这个例子展示了如何使用动词“resemble”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'parcel', term: 'parcel', normalizedTerm: 'parcel', partOfSpeech: ['noun'],
+    chineseShort: '包裹；邮包', chineseExplanation: '包好并通过邮寄或配送方式送出的物品。', englishDefinition: 'An item wrapped and sent by post or delivery service.',
+    examples: [{ english: 'A parcel arrived for you this morning.', chinese: '今天早上有一个寄给你的包裹到了。' }], level: 2, cefr: 'B1', categories: ['Daily English', 'Business'],
+  },
+  {
+    id: 'handful', term: 'handful', normalizedTerm: 'handful', partOfSpeech: ['noun'],
+    chineseShort: '少数, 一把, 棘手事', chineseExplanation: '少数, 一把, 棘手事是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A small number or amount.',
+    examples: [{ english: 'The lesson explains the meaning of handful.', chinese: '本课解释了“handful”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'undoubtedly', term: 'undoubtedly', normalizedTerm: 'undoubtedly', partOfSpeech: ['adverb'],
+    chineseShort: '无疑, 必定, 确实地', chineseExplanation: '无疑, 必定, 确实地是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Without doubt; certainly.',
+    examples: [{ english: 'The speaker used undoubtedly to add detail.', chinese: '说话者用“undoubtedly”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'compose', term: 'compose', normalizedTerm: 'compose', partOfSpeech: ['verb'],
+    chineseShort: '组成, 写作, 作曲, 使平静；创作, 排字', chineseExplanation: '组成, 写作, 作曲, 使平静；创作, 排字是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Form the substance of.',
+    examples: [{ english: 'The example shows how to use the verb compose.', chinese: '这个例子展示了如何使用动词“compose”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'conversion', term: 'conversion', normalizedTerm: 'conversion', partOfSpeech: ['noun'],
+    chineseShort: '转变, 转换, 改变宗教信仰, 换位法；转换', chineseExplanation: '转变, 转换, 改变宗教信仰, 换位法；转换是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An event that results in a transformation.',
+    examples: [{ english: 'The lesson explains the meaning of conversion.', chinese: '本课解释了“conversion”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'registration', term: 'registration', normalizedTerm: 'registration', partOfSpeech: ['noun'],
+    chineseShort: '登记, 挂号, 注册；登记', chineseExplanation: '登记, 挂号, 注册；登记是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The act of enrolling.',
+    examples: [{ english: 'The lesson explains the meaning of registration.', chinese: '本课解释了“registration”的含义。' }], level: 2, cefr: 'B1', categories: ['School'],
+  },
+  {
+    id: 'overlook', term: 'overlook', normalizedTerm: 'overlook', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '俯瞰, 远眺, 没注意到；眺望, 俯瞰到的景色', chineseExplanation: '俯瞰, 远眺, 没注意到；眺望, 俯瞰到的景色是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A high place affording a good view.',
+    examples: [{ english: 'The example shows how to use the verb overlook.', chinese: '这个例子展示了如何使用动词“overlook”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'resignation', term: 'resignation', normalizedTerm: 'resignation', partOfSpeech: ['noun'],
+    chineseShort: '辞职, 辞呈, 听从；辞职', chineseExplanation: '辞职, 辞呈, 听从；辞职是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Acceptance of despair.',
+    examples: [{ english: 'The lesson explains the meaning of resignation.', chinese: '本课解释了“resignation”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'medication', term: 'medication', normalizedTerm: 'medication', partOfSpeech: ['noun'],
+    chineseShort: '药物治疗, 药物处理, 医药；药疗法, 投药法', chineseExplanation: '药物治疗, 药物处理, 医药；药疗法, 投药法是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The act of treating with medicines or remedies.',
+    examples: [{ english: 'The lesson explains the meaning of medication.', chinese: '本课解释了“medication”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'whistle', term: 'whistle', normalizedTerm: 'whistle', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '哨子；吹口哨', chineseExplanation: '可发出尖锐声音的小器具，或用嘴发出类似的声音。', englishDefinition: 'A small device that makes a high sound, or to make such a sound with your lips.',
+    examples: [{ english: 'The referee blew the whistle.', chinese: '裁判吹响了哨子。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'grin', term: 'grin', normalizedTerm: 'grin', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '露齿笑；露齿而笑', chineseExplanation: '露齿笑；露齿而笑是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'To draw back the lips and reveal the teeth, in a smile, grimace, or snarl.',
+    examples: [{ english: 'The lesson explains the meaning of grin.', chinese: '本课解释了“grin”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'electrical', term: 'electrical', normalizedTerm: 'electrical', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '电的, 有关电的；电的', chineseExplanation: '电的, 有关电的；电的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Relating to or concerned with electricity.',
+    examples: [{ english: 'The passage uses electrical to describe the situation.', chinese: '文章用“electrical”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'inspection', term: 'inspection', normalizedTerm: 'inspection', partOfSpeech: ['noun'],
+    chineseShort: '检验, 检查, 视察；检查, 视察, 监督, 望诊', chineseExplanation: '检验, 检查, 视察；检查, 视察, 监督, 望诊是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A formal or official examination.',
+    examples: [{ english: 'The lesson explains the meaning of inspection.', chinese: '本课解释了“inspection”的含义。' }], level: 2, cefr: 'B1', categories: ['School'],
+  },
+  {
+    id: 'withdrawal', term: 'withdrawal', normalizedTerm: 'withdrawal', partOfSpeech: ['noun'],
+    chineseShort: '提款, 撤退, 退回, 撤消, 退隐, 戒毒过程；戒除, 脱瘾', chineseExplanation: '提款, 撤退, 退回, 撤消, 退隐, 戒毒过程；戒除, 脱瘾是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A retraction of a previously held position.',
+    examples: [{ english: 'The lesson explains the meaning of withdrawal.', chinese: '本课解释了“withdrawal”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'inadequate', term: 'inadequate', normalizedTerm: 'inadequate', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '不充分的, 不适当的；不充分的, 不适当的', chineseExplanation: '不充分的, 不适当的；不充分的, 不适当的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Lacking the requisite qualities or resources to meet a task.',
+    examples: [{ english: 'The passage uses inadequate to describe the situation.', chinese: '文章用“inadequate”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'habitat', term: 'habitat', normalizedTerm: 'habitat', partOfSpeech: ['noun'],
+    chineseShort: '栖息地, 居留地, 自生地, 聚集处；习生地, 产地, 生境, 栖所', chineseExplanation: '栖息地, 居留地, 自生地, 聚集处；习生地, 产地, 生境, 栖所是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The type of environment in which an organism or group normally lives or occurs.',
+    examples: [{ english: 'The lesson explains the meaning of habitat.', chinese: '本课解释了“habitat”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'condemn', term: 'condemn', normalizedTerm: 'condemn', partOfSpeech: ['verb'],
+    chineseShort: '判刑, 责备, 谴责；定罪, 判刑, 宣告有罪', chineseExplanation: '判刑, 责备, 谴责；定罪, 判刑, 宣告有罪是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Express strong disapproval of.',
+    examples: [{ english: 'The example shows how to use the verb condemn.', chinese: '这个例子展示了如何使用动词“condemn”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'nomination', term: 'nomination', normalizedTerm: 'nomination', partOfSpeech: ['noun'],
+    chineseShort: '提名, 任命, 提名权', chineseExplanation: '提名, 任命, 提名权是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The act of officially naming a candidate.',
+    examples: [{ english: 'The lesson explains the meaning of nomination.', chinese: '本课解释了“nomination”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'repeatedly', term: 'repeatedly', normalizedTerm: 'repeatedly', partOfSpeech: ['adverb'],
+    chineseShort: '重复地, 再三地', chineseExplanation: '重复地, 再三地是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Several time.',
+    examples: [{ english: 'The speaker used repeatedly to add detail.', chinese: '说话者用“repeatedly”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'curtain', term: 'curtain', normalizedTerm: 'curtain', partOfSpeech: ['noun'],
+    chineseShort: '窗帘；帘子', chineseExplanation: '挂在窗户或开口处，用来遮光、保护隐私或装饰的布。', englishDefinition: 'A piece of cloth hung to cover a window or opening.',
+    examples: [{ english: 'She opened the curtain to let in the light.', chinese: '她拉开窗帘让光线进来。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'directive', term: 'directive', normalizedTerm: 'directive', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '指导的, 指挥的, 方向的；指令', chineseExplanation: '指导的, 指挥的, 方向的；指令是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A pronouncement encouraging or banning some activity.',
+    examples: [{ english: 'The lesson explains the meaning of directive.', chinese: '本课解释了“directive”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'federation', term: 'federation', normalizedTerm: 'federation', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '联邦, 联合, 联盟；联邦, 联盟, 联邦政府', chineseExplanation: '联邦, 联合, 联盟；联邦, 联盟, 联邦政府是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An organisation formed by merging several groups or parties.',
+    examples: [{ english: 'The lesson explains the meaning of federation.', chinese: '本课解释了“federation”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'disturb', term: 'disturb', normalizedTerm: 'disturb', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '扰乱, 妨碍, 使不安；滋扰, 扰乱', chineseExplanation: '扰乱, 妨碍, 使不安；滋扰, 扰乱是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Move deeply.',
+    examples: [{ english: 'The example shows how to use the verb disturb.', chinese: '这个例子展示了如何使用动词“disturb”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'kit', term: 'kit', normalizedTerm: 'kit', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '装备, 工具箱, 成套工具；成套部件', chineseExplanation: '装备, 工具箱, 成套工具；成套部件是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A case for containing a set of articles.',
+    examples: [{ english: 'The lesson explains the meaning of kit.', chinese: '本课解释了“kit”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'satisfactory', term: 'satisfactory', normalizedTerm: 'satisfactory', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '满意的, 赎罪的；令人满意的, 令当事人满意的, 充分的', chineseExplanation: '满意的, 赎罪的；令人满意的, 令当事人满意的, 充分的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Giving satisfaction.',
+    examples: [{ english: 'The passage uses satisfactory to describe the situation.', chinese: '文章用“satisfactory”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'intensity', term: 'intensity', normalizedTerm: 'intensity', partOfSpeech: ['noun'],
+    chineseShort: '强烈, 紧张, 强度；强度', chineseExplanation: '强烈, 紧张, 强度；强度是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The amount of energy transmitted (as by acoustic or electromagnetic radiation).',
+    examples: [{ english: 'The lesson explains the meaning of intensity.', chinese: '本课解释了“intensity”的含义。' }], level: 2, cefr: 'B1', categories: ['Technology'],
+  },
+  {
+    id: 'grocery', term: 'grocery', normalizedTerm: 'grocery', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '食品杂货店, 食品杂货业', chineseExplanation: '食品杂货店, 食品杂货业是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: '(usually plural) consumer goods sold by a grocer.',
+    examples: [{ english: 'The lesson explains the meaning of grocery.', chinese: '本课解释了“grocery”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'greet', term: 'greet', normalizedTerm: 'greet', partOfSpeech: ['verb', 'adjective'],
+    chineseShort: '问候, 致敬, 欢迎, 映入眼帘', chineseExplanation: '问候, 致敬, 欢迎, 映入眼帘是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Express greetings upon meeting someone.',
+    examples: [{ english: 'The example shows how to use the verb greet.', chinese: '这个例子展示了如何使用动词“greet”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'blanket', term: 'blanket', normalizedTerm: 'blanket', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '毛毯, 毯子；掩盖, 覆盖', chineseExplanation: '毛毯, 毯子；掩盖, 覆盖是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Bedding that keeps a person warm in bed.',
+    examples: [{ english: 'The lesson explains the meaning of blanket.', chinese: '本课解释了“blanket”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'dictionary', term: 'dictionary', normalizedTerm: 'dictionary', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '字典, 词典；词典', chineseExplanation: '字典, 词典；词典是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A reference book containing an alphabetical list of words with information about them.',
+    examples: [{ english: 'The lesson explains the meaning of dictionary.', chinese: '本课解释了“dictionary”的含义。' }], level: 2, cefr: 'B1', categories: ['School'],
+  },
+  {
+    id: 'constable', term: 'constable', normalizedTerm: 'constable', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '治安官, 警官, 总管；警察, 警官, 巡警', chineseExplanation: '治安官, 警官, 总管；警察, 警官, 巡警是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A lawman with less authority and jurisdiction than a sheriff.',
+    examples: [{ english: 'The lesson explains the meaning of constable.', chinese: '本课解释了“constable”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'pond', term: 'pond', normalizedTerm: 'pond', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '池塘；筑成池塘', chineseExplanation: '池塘；筑成池塘是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A small lake.',
+    examples: [{ english: 'The lesson explains the meaning of pond.', chinese: '本课解释了“pond”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'integrate', term: 'integrate', normalizedTerm: 'integrate', partOfSpeech: ['verb', 'adjective'],
+    chineseShort: '综合, 使完整, 使成整体；成一体', chineseExplanation: '综合, 使完整, 使成整体；成一体是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Make into a whole or make part of a whole.',
+    examples: [{ english: 'The example shows how to use the verb integrate.', chinese: '这个例子展示了如何使用动词“integrate”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'lap', term: 'lap', normalizedTerm: 'lap', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '膝盖, 舔, 一圈, 下摆, 衣兜, 山坳；重叠, 围住, 轻拍, 舔', chineseExplanation: '膝盖, 舔, 一圈, 下摆, 衣兜, 山坳；重叠, 围住, 轻拍, 舔是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The upper side of the thighs of a seated person.',
+    examples: [{ english: 'The lesson explains the meaning of lap.', chinese: '本课解释了“lap”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'toe', term: 'toe', normalizedTerm: 'toe', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '足趾, 趾部, 脚趾；以趾踏触, 用脚尖走', chineseExplanation: '足趾, 趾部, 脚趾；以趾踏触, 用脚尖走是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'One of the digits of the foot.',
+    examples: [{ english: 'The lesson explains the meaning of toe.', chinese: '本课解释了“toe”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'necessity', term: 'necessity', normalizedTerm: 'necessity', partOfSpeech: ['noun'],
+    chineseShort: '需要, 必需品, 必然；必要性, 必然性, 必要', chineseExplanation: '需要, 必需品, 必然；必要性, 必然性, 必要是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The condition of being essential or indispensable.',
+    examples: [{ english: 'The lesson explains the meaning of necessity.', chinese: '本课解释了“necessity”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'anniversary', term: 'anniversary', normalizedTerm: 'anniversary', partOfSpeech: ['noun'],
+    chineseShort: '周年纪念', chineseExplanation: '周年纪念是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The date on which an event occurred in some previous year (or the celebration of it).',
+    examples: [{ english: 'The lesson explains the meaning of anniversary.', chinese: '本课解释了“anniversary”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'grip', term: 'grip', normalizedTerm: 'grip', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '紧握, 柄, 握力, 握手方式, 手提包, 掌握, 支配, 控制；抓紧, 抱住, 吸住, 掌握', chineseExplanation: '紧握, 柄, 握力, 握手方式, 手提包, 掌握, 支配, 控制；抓紧, 抱住, 吸住, 掌握是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The friction between a body and the surface on which it moves (as between an automobile tire and the road).',
+    examples: [{ english: 'The lesson explains the meaning of grip.', chinese: '本课解释了“grip”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'interrupt', term: 'interrupt', normalizedTerm: 'interrupt', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '中断, 妨碍, 插嘴；打断', chineseExplanation: '中断, 妨碍, 插嘴；打断是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A signal that temporarily stops the execution of a programme so that another procedure can be carried out.',
+    examples: [{ english: 'The example shows how to use the verb interrupt.', chinese: '这个例子展示了如何使用动词“interrupt”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'forgive', term: 'forgive', normalizedTerm: 'forgive', partOfSpeech: ['verb'],
+    chineseShort: '原谅, 宽恕, 免除；免除, 宽恕, 原谅', chineseExplanation: '原谅, 宽恕, 免除；免除, 宽恕, 原谅是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Stop blaming or grant forgiveness.',
+    examples: [{ english: 'The example shows how to use the verb forgive.', chinese: '这个例子展示了如何使用动词“forgive”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'insect', term: 'insect', normalizedTerm: 'insect', partOfSpeech: ['noun'],
+    chineseShort: '昆虫, 卑鄙的人；昆虫', chineseExplanation: '昆虫, 卑鄙的人；昆虫是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Small air-breathing arthropod.',
+    examples: [{ english: 'The lesson explains the meaning of insect.', chinese: '本课解释了“insect”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'salmon', term: 'salmon', normalizedTerm: 'salmon', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '鲑鱼, 大麻哈鱼；鲑', chineseExplanation: '鲑鱼, 大麻哈鱼；鲑是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Any of various large food and game fishes of northern waters; usually migrate from salt to fresh water to spawn.',
+    examples: [{ english: 'The lesson explains the meaning of salmon.', chinese: '本课解释了“salmon”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'medal', term: 'medal', normalizedTerm: 'medal', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '奖牌, 勋章；授勋予', chineseExplanation: '奖牌, 勋章；授勋予是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An award for winning a championship or commemorating some other event.',
+    examples: [{ english: 'The lesson explains the meaning of medal.', chinese: '本课解释了“medal”的含义。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'beg', term: 'beg', normalizedTerm: 'beg', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '乞求, 乞讨, 请求', chineseExplanation: '乞求, 乞讨, 请求是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Call upon in supplication; entreat.',
+    examples: [{ english: 'The example shows how to use the verb beg.', chinese: '这个例子展示了如何使用动词“beg”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'rebel', term: 'rebel', normalizedTerm: 'rebel', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '叛逆者；反抗', chineseExplanation: '拒绝服从权威、规则或政府的人，也可表示公开反抗。', englishDefinition: 'A person who resists authority or control, or to oppose it openly.',
+    examples: [{ english: 'The lesson explains the meaning of rebel.', chinese: '本课解释了“rebel”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'melt', term: 'melt', normalizedTerm: 'melt', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '熔化, 熔化物, 溶解；熔化, 溶解, 消散, 变软', chineseExplanation: '熔化, 熔化物, 溶解；熔化, 溶解, 消散, 变软是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Reduce or cause to be reduced from a solid to a liquid state, usually by heating.',
+    examples: [{ english: 'The lesson explains the meaning of melt.', chinese: '本课解释了“melt”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'merger', term: 'merger', normalizedTerm: 'merger', partOfSpeech: ['noun'],
+    chineseShort: '合并, 归并；购并', chineseExplanation: '合并, 归并；购并是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The combination of two or more commercial companies n an occurrence that involves the production of a union.',
+    examples: [{ english: 'The lesson explains the meaning of merger.', chinese: '本课解释了“merger”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'jurisdiction', term: 'jurisdiction', normalizedTerm: 'jurisdiction', partOfSpeech: ['noun'],
+    chineseShort: '司法权, 审判权, 管辖权；法律管辖权, 审判权', chineseExplanation: '司法权, 审判权, 管辖权；法律管辖权, 审判权是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'In law; the territory within which power can be exercised.',
+    examples: [{ english: 'The lesson explains the meaning of jurisdiction.', chinese: '本课解释了“jurisdiction”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'elbow', term: 'elbow', normalizedTerm: 'elbow', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '手肘, 弯头, 扶手；用手肘推开, 推挤', chineseExplanation: '手肘, 弯头, 扶手；用手肘推开, 推挤是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Hinge joint between the forearm and upper arm and the corresponding joint in the forelimb of a quadruped.',
+    examples: [{ english: 'The lesson explains the meaning of elbow.', chinese: '本课解释了“elbow”的含义。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'disadvantage', term: 'disadvantage', normalizedTerm: 'disadvantage', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '缺点, 不利, 坏处', chineseExplanation: '缺点, 不利, 坏处是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The quality of having an inferior or less favourable position.',
+    examples: [{ english: 'The lesson explains the meaning of disadvantage.', chinese: '本课解释了“disadvantage”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'confuse', term: 'confuse', normalizedTerm: 'confuse', partOfSpeech: ['verb', 'adjective'],
+    chineseShort: '使混乱, 使狼狈, 使困惑；混淆', chineseExplanation: '使混乱, 使狼狈, 使困惑；混淆是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Mistake one thing for another.',
+    examples: [{ english: 'The example shows how to use the verb confuse.', chinese: '这个例子展示了如何使用动词“confuse”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'mechanical', term: 'mechanical', normalizedTerm: 'mechanical', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '机械的, 机械性的, 力学的；机械的, 力学的', chineseExplanation: '机械的, 机械性的, 力学的；机械的, 力学的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Using (or as if using) mechanisms or tools or devices.',
+    examples: [{ english: 'The passage uses mechanical to describe the situation.', chinese: '文章用“mechanical”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Technology'],
+  },
+  {
+    id: 'harbour', term: 'harbour', normalizedTerm: 'harbour', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '港, 避难所；庇护, 藏匿, 入港停泊', chineseExplanation: '港, 避难所；庇护, 藏匿, 入港停泊是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A sheltered port where ships can take on or discharge cargo n a place of refuge and comfort and security v secretly shelter (as of fugitives or criminals) v keep in one\'s possession;.',
+    examples: [{ english: 'The lesson explains the meaning of harbour.', chinese: '本课解释了“harbour”的含义。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'sandwich', term: 'sandwich', normalizedTerm: 'sandwich', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '三明治, 夹心面包, 夹层板；插入, 夹入, 把...制成三明治', chineseExplanation: '三明治, 夹心面包, 夹层板；插入, 夹入, 把...制成三明治是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Two (or more) slices of bread with a filling between them.',
+    examples: [{ english: 'The lesson explains the meaning of sandwich.', chinese: '本课解释了“sandwich”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'toilet', term: 'toilet', normalizedTerm: 'toilet', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '厕所, 梳妆；梳妆, 打扮, 上厕所', chineseExplanation: '厕所, 梳妆；梳妆, 打扮, 上厕所是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A room or building equipped with one or more toilets.',
+    examples: [{ english: 'The lesson explains the meaning of toilet.', chinese: '本课解释了“toilet”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'contend', term: 'contend', normalizedTerm: 'contend', partOfSpeech: ['verb'],
+    chineseShort: '奋斗, 斗争, 竞争；为...斗争', chineseExplanation: '奋斗, 斗争, 竞争；为...斗争是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Maintain or assert.',
+    examples: [{ english: 'The example shows how to use the verb contend.', chinese: '这个例子展示了如何使用动词“contend”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'hallway', term: 'hallway', normalizedTerm: 'hallway', partOfSpeech: ['noun'],
+    chineseShort: '门厅；玄关', chineseExplanation: '门厅；玄关是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An interior passage or corridor onto which rooms open.',
+    examples: [{ english: 'The lesson explains the meaning of hallway.', chinese: '本课解释了“hallway”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'diplomatic', term: 'diplomatic', normalizedTerm: 'diplomatic', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '外交的, 老练的；外交的, 外交上的, 文献上的', chineseExplanation: '外交的, 老练的；外交的, 外交上的, 文献上的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Relating to or characteristic of diplomacy.',
+    examples: [{ english: 'The passage uses diplomatic to describe the situation.', chinese: '文章用“diplomatic”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'obstacle', term: 'obstacle', normalizedTerm: 'obstacle', partOfSpeech: ['noun'],
+    chineseShort: '障碍, 妨害物, 阻碍', chineseExplanation: '障碍, 妨害物, 阻碍是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Something immaterial that stands in the way and must be circumvented or surmounted.',
+    examples: [{ english: 'The lesson explains the meaning of obstacle.', chinese: '本课解释了“obstacle”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'restoration', term: 'restoration', normalizedTerm: 'restoration', partOfSpeech: ['noun'],
+    chineseShort: '恢复, 归还, 复位；恢复, 康复, 复位, 回复, 修复', chineseExplanation: '恢复, 归还, 复位；恢复, 康复, 复位, 回复, 修复是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The reign of Charles II in England; 1660-1685.',
+    examples: [{ english: 'The lesson explains the meaning of restoration.', chinese: '本课解释了“restoration”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'consistently', term: 'consistently', normalizedTerm: 'consistently', partOfSpeech: ['adverb'],
+    chineseShort: '坚固, 坚实, 一致, 始终如一, 连贯；相容地', chineseExplanation: '坚固, 坚实, 一致, 始终如一, 连贯；相容地是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'In a systematic or consistent manner.',
+    examples: [{ english: 'The speaker used consistently to add detail.', chinese: '说话者用“consistently”补充细节。' }], level: 2, cefr: 'B1', categories: ['Academic'],
+  },
+  {
+    id: 'wildlife', term: 'wildlife', normalizedTerm: 'wildlife', partOfSpeech: ['noun'],
+    chineseShort: '野生动植物', chineseExplanation: '野生动植物是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'All living things (except people) that are undomesticated.',
+    examples: [{ english: 'The lesson explains the meaning of wildlife.', chinese: '本课解释了“wildlife”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'intelligent', term: 'intelligent', normalizedTerm: 'intelligent', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '聪明的, 智能的, 了解的', chineseExplanation: '聪明的, 智能的, 了解的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Having the capacity for thought and reason especially to a high degree.',
+    examples: [{ english: 'The passage uses intelligent to describe the situation.', chinese: '文章用“intelligent”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'wrist', term: 'wrist', normalizedTerm: 'wrist', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '手腕, 腕关节；腕', chineseExplanation: '手腕, 腕关节；腕是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A joint between the distal end of the radius and the proximal row of carpal bones.',
+    examples: [{ english: 'The lesson explains the meaning of wrist.', chinese: '本课解释了“wrist”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'unfair', term: 'unfair', normalizedTerm: 'unfair', partOfSpeech: ['adjective', 'verb'],
+    chineseShort: '不公平的, 不正直的, 不正当的；不正直的, 不公平的, 偏颇的', chineseExplanation: '不公平的, 不正直的, 不正当的；不正直的, 不公平的, 偏颇的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Not fair; marked by injustice or partiality or deception.',
+    examples: [{ english: 'The passage uses unfair to describe the situation.', chinese: '文章用“unfair”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'unite', term: 'unite', normalizedTerm: 'unite', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '联合, 接合, 混合；使联合, 统一, 使粘合, 使结合', chineseExplanation: '联合, 接合, 混合；使联合, 统一, 使粘合, 使结合是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Act in concert or unite in a common purpose or belief.',
+    examples: [{ english: 'The example shows how to use the verb unite.', chinese: '这个例子展示了如何使用动词“unite”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'receipt', term: 'receipt', normalizedTerm: 'receipt', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '收据, 收入, 收到；开...的收据', chineseExplanation: '收据, 收入, 收到；开...的收据是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An acknowledgement (usually tangible) that payment has been made.',
+    examples: [{ english: 'The lesson explains the meaning of receipt.', chinese: '本课解释了“receipt”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'unnecessary', term: 'unnecessary', normalizedTerm: 'unnecessary', partOfSpeech: ['adjective'],
+    chineseShort: '不必要的', chineseExplanation: '不必要的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Not necessary.',
+    examples: [{ english: 'The passage uses unnecessary to describe the situation.', chinese: '文章用“unnecessary”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'endure', term: 'endure', normalizedTerm: 'endure', partOfSpeech: ['verb'],
+    chineseShort: '忍受, 忍耐, 容忍, 耐；持久, 持续', chineseExplanation: '忍受, 忍耐, 容忍, 耐；持久, 持续是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Put up with something or somebody unpleasant v face and withstand with courage v continue to live through hardship or adversity v undergo or be subjected to v last and be usable v persist for a…',
+    examples: [{ english: 'The example shows how to use the verb endure.', chinese: '这个例子展示了如何使用动词“endure”。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'residence', term: 'residence', normalizedTerm: 'residence', partOfSpeech: ['noun'],
+    chineseShort: '住宅, 居留, 驻扎, 居住期间；住房', chineseExplanation: '住宅, 居留, 驻扎, 居住期间；住房是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Any address at which you dwell more than temporarily.',
+    examples: [{ english: 'The lesson explains the meaning of residence.', chinese: '本课解释了“residence”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'sadly', term: 'sadly', normalizedTerm: 'sadly', partOfSpeech: ['adverb'],
+    chineseShort: '悲痛地, 悲惨地, 悲伤地, 说来遗憾', chineseExplanation: '悲痛地, 悲惨地, 悲伤地, 说来遗憾是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'In an unfortunate way.',
+    examples: [{ english: 'The speaker used sadly to add detail.', chinese: '说话者用“sadly”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'towel', term: 'towel', normalizedTerm: 'towel', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '手巾, 毛巾；擦干身子', chineseExplanation: '手巾, 毛巾；擦干身子是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A rectangular piece of absorbent cloth (or paper) for drying or wiping.',
+    examples: [{ english: 'The lesson explains the meaning of towel.', chinese: '本课解释了“towel”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'fetch', term: 'fetch', normalizedTerm: 'fetch', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '取得, 拿, 诡计, 魂；接来, 取来, 售得, 带来, 推出, 引出, 杀死, 吸引, 到达', chineseExplanation: '取得, 拿, 诡计, 魂；接来, 取来, 售得, 带来, 推出, 引出, 杀死, 吸引, 到达是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The action of fetching.',
+    examples: [{ english: 'The example shows how to use the verb fetch.', chinese: '这个例子展示了如何使用动词“fetch”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'portfolio', term: 'portfolio', normalizedTerm: 'portfolio', partOfSpeech: ['noun'],
+    chineseShort: '皮包, 公文包, 部长职务, 有价证券财产目录, 艺术代表作选辑；公文包, 文件夹, 阁员职务', chineseExplanation: '皮包, 公文包, 部长职务, 有价证券财产目录, 艺术代表作选辑；公文包, 文件夹, 阁员职务是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A large, flat, thin case for carrying loose papers or drawings or maps; usually leather.',
+    examples: [{ english: 'The lesson explains the meaning of portfolio.', chinese: '本课解释了“portfolio”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'comparable', term: 'comparable', normalizedTerm: 'comparable', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '可比较的, 比得上的', chineseExplanation: '可比较的, 比得上的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Able to be compared or worthy of comparison.',
+    examples: [{ english: 'The passage uses comparable to describe the situation.', chinese: '文章用“comparable”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'installation', term: 'installation', normalizedTerm: 'installation', partOfSpeech: ['noun'],
+    chineseShort: '安装, 装置, 就职；结构, 装置, 设立', chineseExplanation: '安装, 装置, 就职；结构, 装置, 设立是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The act of installing something (as equipment).',
+    examples: [{ english: 'The lesson explains the meaning of installation.', chinese: '本课解释了“installation”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'fork', term: 'fork', normalizedTerm: 'fork', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '叉子, 叉状物, 分岔；分支, 分歧', chineseExplanation: '叉子, 叉状物, 分岔；分支, 分歧是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Cutlery used for serving and eating food.',
+    examples: [{ english: 'The lesson explains the meaning of fork.', chinese: '本课解释了“fork”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'relieve', term: 'relieve', normalizedTerm: 'relieve', partOfSpeech: ['verb'],
+    chineseShort: '减轻, 救济, 解除, 使免除, 换...的班, 使得到调剂, 使不单调, 衬托, 使显著；救济, 当替补投手, 呈鲜明突出', chineseExplanation: '减轻, 救济, 解除, 使免除, 换...的班, 使得到调剂, 使不单调, 衬托, 使显著；救济, 当替补投手, 呈鲜明突出是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Provide physical relief, as from pain.',
+    examples: [{ english: 'The example shows how to use the verb relieve.', chinese: '这个例子展示了如何使用动词“relieve”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'meaningful', term: 'meaningful', normalizedTerm: 'meaningful', partOfSpeech: ['adjective'],
+    chineseShort: '意味深长的', chineseExplanation: '意味深长的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Having a meaning or purpose.',
+    examples: [{ english: 'The passage uses meaningful to describe the situation.', chinese: '文章用“meaningful”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'regret', term: 'regret', normalizedTerm: 'regret', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '遗憾, 后悔, 悔恨, 抱歉, 歉意；为...感到遗憾, 后悔, 惋惜, 懊悔, 抱歉', chineseExplanation: '遗憾, 后悔, 悔恨, 抱歉, 歉意；为...感到遗憾, 后悔, 惋惜, 懊悔, 抱歉是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Feel sad about the loss or absence of.',
+    examples: [{ english: 'The lesson explains the meaning of regret.', chinese: '本课解释了“regret”的含义。' }], level: 2, cefr: 'B1', categories: ['Academic'],
+  },
+  {
+    id: 'resume', term: 'resume', normalizedTerm: 'resume', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '重新开始, 取回, 恢复；再开始', chineseExplanation: '重新开始, 取回, 恢复；再开始是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Take up or begin anew.',
+    examples: [{ english: 'The example shows how to use the verb resume.', chinese: '这个例子展示了如何使用动词“resume”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'belly', term: 'belly', normalizedTerm: 'belly', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '腹部, 食欲；使鼓起', chineseExplanation: '腹部, 食欲；使鼓起是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A protruding abdomen.',
+    examples: [{ english: 'The lesson explains the meaning of belly.', chinese: '本课解释了“belly”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'ankle', term: 'ankle', normalizedTerm: 'ankle', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '踝；踝, 踝关节', chineseExplanation: '踝；踝, 踝关节是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A gliding joint between the distal ends of the tibia and fibula and the proximal end of the talus.',
+    examples: [{ english: 'The lesson explains the meaning of ankle.', chinese: '本课解释了“ankle”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'instruct', term: 'instruct', normalizedTerm: 'instruct', partOfSpeech: ['verb', 'adjective'],
+    chineseShort: '教, 教育, 命令, 通知；托办, 指导, 指示', chineseExplanation: '教, 教育, 命令, 通知；托办, 指导, 指示是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Give instructions or directions for some task.',
+    examples: [{ english: 'The example shows how to use the verb instruct.', chinese: '这个例子展示了如何使用动词“instruct”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'happily', term: 'happily', normalizedTerm: 'happily', partOfSpeech: ['adverb'],
+    chineseShort: '幸福地, 快乐地, 幸好', chineseExplanation: '幸福地, 快乐地, 幸好是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'In a joyous manner.',
+    examples: [{ english: 'The speaker used happily to add detail.', chinese: '说话者用“happily”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'poster', term: 'poster', normalizedTerm: 'poster', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '海报, 招贴, 驿马', chineseExplanation: '海报, 招贴, 驿马是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A sign posted in a public place as an advertisement.',
+    examples: [{ english: 'The lesson explains the meaning of poster.', chinese: '本课解释了“poster”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'instinct', term: 'instinct', normalizedTerm: 'instinct', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '本能, 直觉；充满着的', chineseExplanation: '本能, 直觉；充满着的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Inborn pattern of behaviour often responsive to specific stimuli.',
+    examples: [{ english: 'The lesson explains the meaning of instinct.', chinese: '本课解释了“instinct”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'jazz', term: 'jazz', normalizedTerm: 'jazz', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '爵士乐, 喧闹；爵士乐的, 喧吵的', chineseExplanation: '爵士乐, 喧闹；爵士乐的, 喧吵的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A genre of popular music that originated in New Orleans around 1900 and developed through increasingly complex styles.',
+    examples: [{ english: 'The lesson explains the meaning of jazz.', chinese: '本课解释了“jazz”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'inn', term: 'inn', normalizedTerm: 'inn', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '旅馆, 客栈；住旅馆', chineseExplanation: '旅馆, 客栈；住旅馆是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A hotel providing overnight lodging for travellers.',
+    examples: [{ english: 'The lesson explains the meaning of inn.', chinese: '本课解释了“inn”的含义。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'nest', term: 'nest', normalizedTerm: 'nest', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '巢, 窝, 休息所, 隐匿处；筑巢, 找鸟巢', chineseExplanation: '巢, 窝, 休息所, 隐匿处；筑巢, 找鸟巢是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A structure in which animals lay eggs or give birth to their young.',
+    examples: [{ english: 'The lesson explains the meaning of nest.', chinese: '本课解释了“nest”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'organism', term: 'organism', normalizedTerm: 'organism', partOfSpeech: ['noun'],
+    chineseShort: '生物, 有机体, 社会组织；生物,机体', chineseExplanation: '生物, 有机体, 社会组织；生物,机体是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A living thing that has (or can develop) the ability to act or function independently.',
+    examples: [{ english: 'The lesson explains the meaning of organism.', chinese: '本课解释了“organism”的含义。' }], level: 2, cefr: 'B1', categories: ['Academic'],
+  },
+  {
+    id: 'blend', term: 'blend', normalizedTerm: 'blend', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '混合；混合', chineseExplanation: '混合；混合是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An occurrence of thorough mixing.',
+    examples: [{ english: 'The lesson explains the meaning of blend.', chinese: '本课解释了“blend”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'gravity', term: 'gravity', normalizedTerm: 'gravity', partOfSpeech: ['noun'],
+    chineseShort: '地心引力, 重力；重力', chineseExplanation: '地心引力, 重力；重力是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: '(physics) the force of attraction between all masses in the universe; especially the attraction of the earth\'s mass for bodies near its surface.',
+    examples: [{ english: 'The lesson explains the meaning of gravity.', chinese: '本课解释了“gravity”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'metropolitan', term: 'metropolitan', normalizedTerm: 'metropolitan', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '大都市居民, 都主教, 宗主国的公民；大都市的, 都主教区的, 宗主国的', chineseExplanation: '大都市居民, 都主教, 宗主国的公民；大都市的, 都主教区的, 宗主国的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'In the Eastern Orthodox Church this title is given to a position between bishop and patriarch; equivalent to archbishop in western Christianity.',
+    examples: [{ english: 'The passage uses metropolitan to describe the situation.', chinese: '文章用“metropolitan”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'popularity', term: 'popularity', normalizedTerm: 'popularity', partOfSpeech: ['noun'],
+    chineseShort: '名声, 受大众欢迎, 流行', chineseExplanation: '名声, 受大众欢迎, 流行是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The quality of being widely admired or accepted or sought after.',
+    examples: [{ english: 'The lesson explains the meaning of popularity.', chinese: '本课解释了“popularity”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'forecast', term: 'forecast', normalizedTerm: 'forecast', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '预想, 预测, 预报；预想, 预测, 预报', chineseExplanation: '预想, 预测, 预报；预想, 预测, 预报是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Predict in advance.',
+    examples: [{ english: 'The lesson explains the meaning of forecast.', chinese: '本课解释了“forecast”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'dismissal', term: 'dismissal', normalizedTerm: 'dismissal', partOfSpeech: ['noun'],
+    chineseShort: '免职, 解雇；解雇', chineseExplanation: '免职, 解雇；解雇是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Official notice that you have been fired from your job.',
+    examples: [{ english: 'The lesson explains the meaning of dismissal.', chinese: '本课解释了“dismissal”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'conceal', term: 'conceal', normalizedTerm: 'conceal', partOfSpeech: ['verb'],
+    chineseShort: '隐藏, 掩盖, 隐瞒；隐瞒, 隐匿, 保守秘密', chineseExplanation: '隐藏, 掩盖, 隐瞒；隐瞒, 隐匿, 保守秘密是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Hold back; keep from being perceived by others.',
+    examples: [{ english: 'The example shows how to use the verb conceal.', chinese: '这个例子展示了如何使用动词“conceal”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'compulsory', term: 'compulsory', normalizedTerm: 'compulsory', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '被强制的, 强迫的, 义务的；强迫的, 强制的', chineseExplanation: '被强制的, 强迫的, 义务的；强迫的, 强制的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Required by rule.',
+    examples: [{ english: 'The passage uses compulsory to describe the situation.', chinese: '文章用“compulsory”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'jaw', term: 'jaw', normalizedTerm: 'jaw', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '颚, 颌；闲谈, 教训, 唠叨', chineseExplanation: '颚, 颌；闲谈, 教训, 唠叨是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The part of the skull of a vertebrate that frames the mouth and holds the teeth.',
+    examples: [{ english: 'The lesson explains the meaning of jaw.', chinese: '本课解释了“jaw”的含义。' }], level: 2, cefr: 'B1', categories: ['Technology'],
+  },
+  {
+    id: 'orchestra', term: 'orchestra', normalizedTerm: 'orchestra', partOfSpeech: ['noun'],
+    chineseShort: '管弦乐队, 乐队演奏处', chineseExplanation: '管弦乐队, 乐队演奏处是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A musical organisation consisting of a group of instrumentalists including string players.',
+    examples: [{ english: 'The lesson explains the meaning of orchestra.', chinese: '本课解释了“orchestra”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'lately', term: 'lately', normalizedTerm: 'lately', partOfSpeech: ['adverb'],
+    chineseShort: '近来, 最近', chineseExplanation: '近来, 最近是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'In the recent past.',
+    examples: [{ english: 'The speaker used lately to add detail.', chinese: '说话者用“lately”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'operational', term: 'operational', normalizedTerm: 'operational', partOfSpeech: ['adjective'],
+    chineseShort: '操作的, 运作的；操作上的, 业务上的, 可起作用的', chineseExplanation: '操作的, 运作的；操作上的, 业务上的, 可起作用的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Pertaining to a process or series of actions for achieving a result.',
+    examples: [{ english: 'The passage uses operational to describe the situation.', chinese: '文章用“operational”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'constituent', term: 'constituent', normalizedTerm: 'constituent', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '成分, 选民, 构成物；构成的, 组织的, 选举的', chineseExplanation: '成分, 选民, 构成物；构成的, 组织的, 选举的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A member of a constituency; a citizen who is represented in a government by officials for whom he or she votes.',
+    examples: [{ english: 'The lesson explains the meaning of constituent.', chinese: '本课解释了“constituent”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'interim', term: 'interim', normalizedTerm: 'interim', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '暂时的, 临时的, 间歇的；过渡时期', chineseExplanation: '暂时的, 临时的, 间歇的；过渡时期是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The time between one event, process, or period and another.',
+    examples: [{ english: 'The passage uses interim to describe the situation.', chinese: '文章用“interim”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'inspiration', term: 'inspiration', normalizedTerm: 'inspiration', partOfSpeech: ['noun'],
+    chineseShort: '灵感, 鼓舞人心的人或物, 妙计, 吸气；吸', chineseExplanation: '灵感, 鼓舞人心的人或物, 妙计, 吸气；吸是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Arousal of the mind to special unusual activity or creativity.',
+    examples: [{ english: 'The lesson explains the meaning of inspiration.', chinese: '本课解释了“inspiration”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'unfortunate', term: 'unfortunate', normalizedTerm: 'unfortunate', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '不幸的, 不合适的, 不吉利的', chineseExplanation: '不幸的, 不合适的, 不吉利的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A person who suffers misfortune.',
+    examples: [{ english: 'The passage uses unfortunate to describe the situation.', chinese: '文章用“unfortunate”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'fortunately', term: 'fortunately', normalizedTerm: 'fortunately', partOfSpeech: ['adverb'],
+    chineseShort: '幸运地, 幸亏', chineseExplanation: '幸运地, 幸亏是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'By good fortune.',
+    examples: [{ english: 'The speaker used fortunately to add detail.', chinese: '说话者用“fortunately”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'nonsense', term: 'nonsense', normalizedTerm: 'nonsense', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '无意义的事, 荒谬言行, 荒唐', chineseExplanation: '无意义的事, 荒谬言行, 荒唐是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A message that seems to convey no meaning.',
+    examples: [{ english: 'The lesson explains the meaning of nonsense.', chinese: '本课解释了“nonsense”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'dignity', term: 'dignity', normalizedTerm: 'dignity', partOfSpeech: ['noun'],
+    chineseShort: '尊严, 高贵；尊严, 高位, 高贵', chineseExplanation: '尊严, 高贵；尊严, 高位, 高贵是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The quality of being worthy of esteem or respect.',
+    examples: [{ english: 'The lesson explains the meaning of dignity.', chinese: '本课解释了“dignity”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'dispose', term: 'dispose', normalizedTerm: 'dispose', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '处理, 排列, 布置；处置', chineseExplanation: '处理, 排列, 布置；处置是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Give, sell, or transfer to another.',
+    examples: [{ english: 'The example shows how to use the verb dispose.', chinese: '这个例子展示了如何使用动词“dispose”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'dissolve', term: 'dissolve', normalizedTerm: 'dissolve', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '溶解, 解散', chineseExplanation: '溶解, 解散是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: '(film) a gradual transition from one scene to the next; the next scene is gradually superimposed as the former scene fades out.',
+    examples: [{ english: 'The example shows how to use the verb dissolve.', chinese: '这个例子展示了如何使用动词“dissolve”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'virgin', term: 'virgin', normalizedTerm: 'virgin', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '处女；处女的, 贞洁的, 纯洁的, 初始的, 纯的', chineseExplanation: '处女；处女的, 贞洁的, 纯洁的, 初始的, 纯的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A person who has never had sex.',
+    examples: [{ english: 'The lesson explains the meaning of virgin.', chinese: '本课解释了“virgin”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'ladder', term: 'ladder', normalizedTerm: 'ladder', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '梯, 梯状物, 发迹的途径；袜子抽丝, 成名', chineseExplanation: '梯, 梯状物, 发迹的途径；袜子抽丝, 成名是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Steps consisting of two parallel members connected by rungs; for climbing up or down.',
+    examples: [{ english: 'The lesson explains the meaning of ladder.', chinese: '本课解释了“ladder”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'optimistic', term: 'optimistic', normalizedTerm: 'optimistic', partOfSpeech: ['adjective'],
+    chineseShort: '乐观的, 乐观主义的, 乐天的', chineseExplanation: '乐观的, 乐观主义的, 乐天的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Expecting the best in this best of all possible worlds.',
+    examples: [{ english: 'The passage uses optimistic to describe the situation.', chinese: '文章用“optimistic”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'keeper', term: 'keeper', normalizedTerm: 'keeper', partOfSpeech: ['noun'],
+    chineseShort: '监护人, 管理人, 看守人；保管人, 看守人, 保持片', chineseExplanation: '监护人, 管理人, 看守人；保管人, 看守人, 保持片是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Someone in charge of other people.',
+    examples: [{ english: 'The lesson explains the meaning of keeper.', chinese: '本课解释了“keeper”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'verdict', term: 'verdict', normalizedTerm: 'verdict', partOfSpeech: ['noun'],
+    chineseShort: '裁决, 判决, 判断性意见, 定论, 结论；定论, 判断, 意见', chineseExplanation: '裁决, 判决, 判断性意见, 定论, 结论；定论, 判断, 意见是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: '(law) the findings of a jury on issues of fact submitted to it for decision; can be used in formulating a judgement.',
+    examples: [{ english: 'The lesson explains the meaning of verdict.', chinese: '本课解释了“verdict”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'lamb', term: 'lamb', normalizedTerm: 'lamb', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '小羊, 羔羊；产羊羔', chineseExplanation: '小羊, 羔羊；产羊羔是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Young sheep.',
+    examples: [{ english: 'The lesson explains the meaning of lamb.', chinese: '本课解释了“lamb”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'orbit', term: 'orbit', normalizedTerm: 'orbit', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '轨道, 常轨, 眼眶；绕...轨道而行', chineseExplanation: '轨道, 常轨, 眼眶；绕...轨道而行是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The (usually elliptical) path described by one celestial body in its revolution about another.',
+    examples: [{ english: 'The lesson explains the meaning of orbit.', chinese: '本课解释了“orbit”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'revelation', term: 'revelation', normalizedTerm: 'revelation', partOfSpeech: ['noun'],
+    chineseShort: '揭露, 泄露, 发觉, 默示, 启示', chineseExplanation: '揭露, 泄露, 发觉, 默示, 启示是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An enlightening or astonishing disclosure.',
+    examples: [{ english: 'The lesson explains the meaning of revelation.', chinese: '本课解释了“revelation”的含义。' }], level: 2, cefr: 'B1', categories: ['School'],
+  },
+  {
+    id: 'commerce', term: 'commerce', normalizedTerm: 'commerce', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '商业, 商务, 贸易；商业, 贸易, 商务', chineseExplanation: '商业, 商务, 贸易；商业, 贸易, 商务是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Transactions (sales and purchases) having the objective of supplying commodities (goods and services).',
+    examples: [{ english: 'The lesson explains the meaning of commerce.', chinese: '本课解释了“commerce”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'competence', term: 'competence', normalizedTerm: 'competence', partOfSpeech: ['noun'],
+    chineseShort: '胜任, 职称, 能力；能力, 活性', chineseExplanation: '胜任, 职称, 能力；能力, 活性是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The quality of being adequately or well qualified physically and intellectually.',
+    examples: [{ english: 'The lesson explains the meaning of competence.', chinese: '本课解释了“competence”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'discourage', term: 'discourage', normalizedTerm: 'discourage', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '使气馁, 阻碍', chineseExplanation: '使气馁, 阻碍是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Deprive of courage or hope; take away hope from; cause to feel discouraged.',
+    examples: [{ english: 'The example shows how to use the verb discourage.', chinese: '这个例子展示了如何使用动词“discourage”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'intimate', term: 'intimate', normalizedTerm: 'intimate', partOfSpeech: ['adjective', 'verb'],
+    chineseShort: '亲密的, 私人的, 秘密的；暗示, 通知, 告诉', chineseExplanation: '亲密的, 私人的, 秘密的；暗示, 通知, 告诉是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Give to understand.',
+    examples: [{ english: 'The passage uses intimate to describe the situation.', chinese: '文章用“intimate”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'tender', term: 'tender', normalizedTerm: 'tender', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '嫩的, 柔软的, 脆弱的, 温柔的, 亲切的, 未成熟的, 微妙的, 棘手的, 审慎的；使变嫩, 提供, 偿还', chineseExplanation: '嫩的, 柔软的, 脆弱的, 温柔的, 亲切的, 未成熟的, 微妙的, 棘手的, 审慎的；使变嫩, 提供, 偿还是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Something that can be used as an official medium of payment.',
+    examples: [{ english: 'The lesson explains the meaning of tender.', chinese: '本课解释了“tender”的含义。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'conspiracy', term: 'conspiracy', normalizedTerm: 'conspiracy', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '同谋, 阴谋, 阴谋集团；阴谋, 通谋, 共谋', chineseExplanation: '同谋, 阴谋, 阴谋集团；阴谋, 通谋, 共谋是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A secret agreement between two or more people to perform an unlawful act.',
+    examples: [{ english: 'The lesson explains the meaning of conspiracy.', chinese: '本课解释了“conspiracy”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'indirect', term: 'indirect', normalizedTerm: 'indirect', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '间接的, 非直截了当的, 不坦率的；间接的', chineseExplanation: '间接的, 非直截了当的, 不坦率的；间接的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Having intervening factors or persons or influences.',
+    examples: [{ english: 'The passage uses indirect to describe the situation.', chinese: '文章用“indirect”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'notepad', term: 'notepad', normalizedTerm: 'notepad', partOfSpeech: ['noun'],
+    chineseShort: '记事本；便笺本', chineseExplanation: '装订在一起、用于快速记录信息的小张纸。', englishDefinition: 'A small pad of paper used for writing short notes.',
+    examples: [{ english: 'She wrote the address in her notepad.', chinese: '她把地址写在记事本上。' }], level: 2, cefr: 'B1', categories: ['Daily English', 'School'],
+  },
+  {
+    id: 'cushion', term: 'cushion', normalizedTerm: 'cushion', partOfSpeech: ['noun'],
+    chineseShort: '靠垫；软垫', chineseExplanation: '填充柔软材料、用于坐靠或支撑身体的垫子。', englishDefinition: 'A soft padded object used for sitting, resting, or support.',
+    examples: [{ english: 'She placed a cushion behind her back.', chinese: '她在背后放了一个靠垫。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'electron', term: 'electron', normalizedTerm: 'electron', partOfSpeech: ['noun'],
+    chineseShort: '电子；电子', chineseExplanation: '电子；电子是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An elementary particle with negative charge.',
+    examples: [{ english: 'The lesson explains the meaning of electron.', chinese: '本课解释了“electron”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'antibody', term: 'antibody', normalizedTerm: 'antibody', partOfSpeech: ['noun'],
+    chineseShort: '抗体；抗体', chineseExplanation: '抗体；抗体是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Any of a large variety of proteins normally present in the body or produced in response to an antigen which it neutralises, thus producing an immune response.',
+    examples: [{ english: 'The lesson explains the meaning of antibody.', chinese: '本课解释了“antibody”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'jar', term: 'jar', normalizedTerm: 'jar', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '广口瓶, 震动, 刺耳声；震惊, 冲突, 发刺耳声, 不一致', chineseExplanation: '广口瓶, 震动, 刺耳声；震惊, 冲突, 发刺耳声, 不一致是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A vessel (usually cylindrical) with a wide mouth and without handles.',
+    examples: [{ english: 'The lesson explains the meaning of jar.', chinese: '本课解释了“jar”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'vague', term: 'vague', normalizedTerm: 'vague', partOfSpeech: ['adjective', 'verb'],
+    chineseShort: '含糊的, 不清楚的, 茫然的', chineseExplanation: '含糊的, 不清楚的, 茫然的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Not clearly understood or expressed a not precisely limited, determined, or distinguished s lacking clarity or distinctness.',
+    examples: [{ english: 'The passage uses vague to describe the situation.', chinese: '文章用“vague”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'conscience', term: 'conscience', normalizedTerm: 'conscience', partOfSpeech: ['noun'],
+    chineseShort: '良心；良心, 道德感, 正义感', chineseExplanation: '良心；良心, 道德感, 正义感是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Motivation deriving logically from ethical or moral principles that govern a person\'s thoughts and actions.',
+    examples: [{ english: 'The lesson explains the meaning of conscience.', chinese: '本课解释了“conscience”的含义。' }], level: 2, cefr: 'B1', categories: ['Academic'],
+  },
+  {
+    id: 'disturbance', term: 'disturbance', normalizedTerm: 'disturbance', partOfSpeech: ['noun'],
+    chineseShort: '扰乱, 不安, 忧虑；扰动', chineseExplanation: '扰乱, 不安, 忧虑；扰动是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An unhappy and worried mental state.',
+    examples: [{ english: 'The lesson explains the meaning of disturbance.', chinese: '本课解释了“disturbance”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'zero', term: 'zero', normalizedTerm: 'zero', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '零, 零点, 零度, 无, 乌有, 最低点；零的, 没有的', chineseExplanation: '零, 零点, 零度, 无, 乌有, 最低点；零的, 没有的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A mathematical element that when added to another number yields the same number.',
+    examples: [{ english: 'The lesson explains the meaning of zero.', chinese: '本课解释了“zero”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'remarkably', term: 'remarkably', normalizedTerm: 'remarkably', partOfSpeech: ['adverb'],
+    chineseShort: '显著地, 引人注目地, 非常地', chineseExplanation: '显著地, 引人注目地, 非常地是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'To a remarkable degree or extent r in a signal manner.',
+    examples: [{ english: 'The speaker used remarkably to add detail.', chinese: '说话者用“remarkably”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'lump', term: 'lump', normalizedTerm: 'lump', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '块, 瘤, 很多, 肿块, 笨人；使成块状, 混在一起', chineseExplanation: '块, 瘤, 很多, 肿块, 笨人；使成块状, 混在一起是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Put together indiscriminately.',
+    examples: [{ english: 'The lesson explains the meaning of lump.', chinese: '本课解释了“lump”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'waist', term: 'waist', normalizedTerm: 'waist', partOfSpeech: ['noun'],
+    chineseShort: '腰部, 腰；腰', chineseExplanation: '腰部, 腰；腰是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The narrowing of the body between the ribs and hips.',
+    examples: [{ english: 'The lesson explains the meaning of waist.', chinese: '本课解释了“waist”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'blank', term: 'blank', normalizedTerm: 'blank', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '空格, 空白；空白的, 空虚的, 完全的, 无色的', chineseExplanation: '空格, 空白；空白的, 空虚的, 完全的, 无色的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A piece of material ready to be made into something.',
+    examples: [{ english: 'The passage uses blank to describe the situation.', chinese: '文章用“blank”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'discharge', term: 'discharge', normalizedTerm: 'discharge', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '卸下, 放出, 解雇, 拔染, 履行, 放电；卸货, 流出', chineseExplanation: '卸下, 放出, 解雇, 拔染, 履行, 放电；卸货, 流出是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The sudden giving off of energy.',
+    examples: [{ english: 'The lesson explains the meaning of discharge.', chinese: '本课解释了“discharge”的含义。' }], level: 2, cefr: 'B1', categories: ['Technology'],
+  },
+  {
+    id: 'tolerate', term: 'tolerate', normalizedTerm: 'tolerate', partOfSpeech: ['verb'],
+    chineseShort: '宽容, 容许, 有耐力', chineseExplanation: '宽容, 容许, 有耐力是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Recognise and respect (rights and beliefs of others).',
+    examples: [{ english: 'The example shows how to use the verb tolerate.', chinese: '这个例子展示了如何使用动词“tolerate”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'hazard', term: 'hazard', normalizedTerm: 'hazard', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '冒险, 危险, 机会；冒...的危险, 赌运气, 使冒危险', chineseExplanation: '冒险, 危险, 机会；冒...的危险, 赌运气, 使冒危险是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A source of danger; a possibility of incurring loss or misfortune.',
+    examples: [{ english: 'The lesson explains the meaning of hazard.', chinese: '本课解释了“hazard”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'appreciation', term: 'appreciation', normalizedTerm: 'appreciation', partOfSpeech: ['noun'],
+    chineseShort: '感激, 赏识, 鉴别；涨价, 增值', chineseExplanation: '感激, 赏识, 鉴别；涨价, 增值是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Understanding of the nature or meaning or quality or magnitude of something.',
+    examples: [{ english: 'The lesson explains the meaning of appreciation.', chinese: '本课解释了“appreciation”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'interact', term: 'interact', normalizedTerm: 'interact', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '互相影响, 交互作用；幕间剧, 幕间休息', chineseExplanation: '互相影响, 交互作用；幕间剧, 幕间休息是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Act together or towards others or with others.',
+    examples: [{ english: 'The example shows how to use the verb interact.', chinese: '这个例子展示了如何使用动词“interact”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'halt', term: 'halt', normalizedTerm: 'halt', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '停止, 立定, 休息；使停止, 使立定', chineseExplanation: '停止, 立定, 休息；使停止, 使立定是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Cause to stop.',
+    examples: [{ english: 'The lesson explains the meaning of halt.', chinese: '本课解释了“halt”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'vein', term: 'vein', normalizedTerm: 'vein', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '血管, 静脉, 纹理, 气质, 情绪；使有脉络, 像脉络般分布于', chineseExplanation: '血管, 静脉, 纹理, 气质, 情绪；使有脉络, 像脉络般分布于是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A blood vessel that carries blood from the capillaries towards the heart.',
+    examples: [{ english: 'The lesson explains the meaning of vein.', chinese: '本课解释了“vein”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'plea', term: 'plea', normalizedTerm: 'plea', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '恳求, 辩解, 抗辩, 诉讼, 请愿, 托词；抗辩, 申诉案件, 答辩', chineseExplanation: '恳求, 辩解, 抗辩, 诉讼, 请愿, 托词；抗辩, 申诉案件, 答辩是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: '(law) a defendant\'s answer by a factual matter (as distinguished from a demurrer).',
+    examples: [{ english: 'The lesson explains the meaning of plea.', chinese: '本课解释了“plea”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'fever', term: 'fever', normalizedTerm: 'fever', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '发烧, 发热, 热病；发热, 热', chineseExplanation: '发烧, 发热, 热病；发热, 热是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A rise in the temperature of the body; frequently a symptom of infection.',
+    examples: [{ english: 'The lesson explains the meaning of fever.', chinese: '本课解释了“fever”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'originate', term: 'originate', normalizedTerm: 'originate', partOfSpeech: ['verb', 'adjective'],
+    chineseShort: '创始, 发明, 发起；发源, 发生, 起航', chineseExplanation: '创始, 发明, 发起；发源, 发生, 起航是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Come into existence; take on form or shape.',
+    examples: [{ english: 'The example shows how to use the verb originate.', chinese: '这个例子展示了如何使用动词“originate”。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'embassy', term: 'embassy', normalizedTerm: 'embassy', partOfSpeech: ['noun'],
+    chineseShort: '大使馆, 大使馆全体人员；大使馆', chineseExplanation: '大使馆, 大使馆全体人员；大使馆是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A diplomatic building where ambassadors live or work.',
+    examples: [{ english: 'The lesson explains the meaning of embassy.', chinese: '本课解释了“embassy”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'reminder', term: 'reminder', normalizedTerm: 'reminder', partOfSpeech: ['noun'],
+    chineseShort: '提醒的人, 暗示；催单', chineseExplanation: '提醒的人, 暗示；催单是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A message that helps you remember something.',
+    examples: [{ english: 'The lesson explains the meaning of reminder.', chinese: '本课解释了“reminder”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'regiment', term: 'regiment', normalizedTerm: 'regiment', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '（军队）团, 大量（人或物）；组编成团，组织，严格管制', chineseExplanation: '（军队）团, 大量（人或物）；组编成团，组织，严格管制是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Army unit smaller than a division.',
+    examples: [{ english: 'The lesson explains the meaning of regiment.', chinese: '本课解释了“regiment”的含义。' }], level: 2, cefr: 'B1', categories: ['Academic'],
+  },
+  {
+    id: 'placement', term: 'placement', normalizedTerm: 'placement', partOfSpeech: ['noun'],
+    chineseShort: '放置, 布置, 工作安排, 编班, 定位球；放置', chineseExplanation: '放置, 布置, 工作安排, 编班, 定位球；放置是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The spatial property of the way in which something is placed.',
+    examples: [{ english: 'The lesson explains the meaning of placement.', chinese: '本课解释了“placement”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'sally', term: 'sally', normalizedTerm: 'sally', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '突击, 出击, 远足；突击, 出击, 出发', chineseExplanation: '突击, 出击, 远足；突击, 出击, 出发是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A venture off the beaten path.',
+    examples: [{ english: 'The lesson explains the meaning of sally.', chinese: '本课解释了“sally”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'tourism', term: 'tourism', normalizedTerm: 'tourism', partOfSpeech: ['noun'],
+    chineseShort: '观光业, 游览；旅游业', chineseExplanation: '观光业, 游览；旅游业是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The business of providing services to tourists.',
+    examples: [{ english: 'The lesson explains the meaning of tourism.', chinese: '本课解释了“tourism”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'notebook', term: 'notebook', normalizedTerm: 'notebook', partOfSpeech: ['noun'],
+    chineseShort: '笔记本, 手册, 期票簿', chineseExplanation: '笔记本, 手册, 期票簿是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A book with blank pages for recording notes or memoranda.',
+    examples: [{ english: 'The lesson explains the meaning of notebook.', chinese: '本课解释了“notebook”的含义。' }], level: 2, cefr: 'B1', categories: ['Technology'],
+  },
+  {
+    id: 'beast', term: 'beast', normalizedTerm: 'beast', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '畜生, 动物, 野兽, 兽性', chineseExplanation: '畜生, 动物, 野兽, 兽性是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A cruelly rapacious person.',
+    examples: [{ english: 'The lesson explains the meaning of beast.', chinese: '本课解释了“beast”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'innovative', term: 'innovative', normalizedTerm: 'innovative', partOfSpeech: ['adjective'],
+    chineseShort: '革新的, 创新的, 富有革新精神的', chineseExplanation: '革新的, 创新的, 富有革新精神的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Being or producing something like nothing done or experienced or created before.',
+    examples: [{ english: 'The passage uses innovative to describe the situation.', chinese: '文章用“innovative”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'instant', term: 'instant', normalizedTerm: 'instant', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '立即, 瞬间；紧急的, 立即的, 即时的', chineseExplanation: '立即, 瞬间；紧急的, 立即的, 即时的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'In or of the present month.',
+    examples: [{ english: 'The lesson explains the meaning of instant.', chinese: '本课解释了“instant”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'enthusiastic', term: 'enthusiastic', normalizedTerm: 'enthusiastic', partOfSpeech: ['adjective'],
+    chineseShort: '狂热的, 热心的, 热烈的', chineseExplanation: '狂热的, 热心的, 热烈的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Having or showing great excitement and interest.',
+    examples: [{ english: 'The passage uses enthusiastic to describe the situation.', chinese: '文章用“enthusiastic”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'sack', term: 'sack', normalizedTerm: 'sack', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '麻布袋, 洗劫；把...装入袋, 洗劫', chineseExplanation: '麻布袋, 洗劫；把...装入袋, 洗劫是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A bag made of paper or plastic for holding customer\'s purchases.',
+    examples: [{ english: 'The lesson explains the meaning of sack.', chinese: '本课解释了“sack”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'entertain', term: 'entertain', normalizedTerm: 'entertain', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '娱乐, 招待, 怀抱；款待', chineseExplanation: '娱乐, 招待, 怀抱；款待是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Provide entertainment for.',
+    examples: [{ english: 'The example shows how to use the verb entertain.', chinese: '这个例子展示了如何使用动词“entertain”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'warehouse', term: 'warehouse', normalizedTerm: 'warehouse', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '仓库, 货栈, 大商店；储入仓库', chineseExplanation: '仓库, 货栈, 大商店；储入仓库是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A storehouse for goods and merchandise.',
+    examples: [{ english: 'The lesson explains the meaning of warehouse.', chinese: '本课解释了“warehouse”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'openly', term: 'openly', normalizedTerm: 'openly', partOfSpeech: ['adverb'],
+    chineseShort: '公开地, 坦率地, 直率地, 公然地', chineseExplanation: '公开地, 坦率地, 直率地, 公然地是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'In an open way.',
+    examples: [{ english: 'The speaker used openly to add detail.', chinese: '说话者用“openly”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'compact', term: 'compact', normalizedTerm: 'compact', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '紧凑的, 紧密的, 简洁的；使紧密结合, 压缩', chineseExplanation: '紧凑的, 紧密的, 简洁的；使紧密结合, 压缩是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A small cosmetics case with a mirror; to be carried in a woman\'s purse.',
+    examples: [{ english: 'The passage uses compact to describe the situation.', chinese: '文章用“compact”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'jungle', term: 'jungle', normalizedTerm: 'jungle', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '丛林, 杂乱的一堆, 弱肉强食的地方', chineseExplanation: '丛林, 杂乱的一堆, 弱肉强食的地方是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A location marked by an intense competition and struggle for survival.',
+    examples: [{ english: 'The lesson explains the meaning of jungle.', chinese: '本课解释了“jungle”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'dick', term: 'dick', normalizedTerm: 'dick', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '家伙, 词典, 誓言；二氯乙胂', chineseExplanation: '家伙, 词典, 誓言；二氯乙胂是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Someone who is a detective.',
+    examples: [{ english: 'The lesson explains the meaning of dick.', chinese: '本课解释了“dick”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'raincoat', term: 'raincoat', normalizedTerm: 'raincoat', partOfSpeech: ['noun'],
+    chineseShort: '雨衣', chineseExplanation: '下雨时穿在衣服外面、用来保持身体干燥的防水外套。', englishDefinition: 'A waterproof coat worn to keep dry in the rain.',
+    examples: [{ english: 'Take a raincoat because rain is expected.', chinese: '可能会下雨，带上雨衣吧。' }], level: 2, cefr: 'B1', categories: ['Daily English', 'Travel'],
+  },
+  {
+    id: 'interference', term: 'interference', normalizedTerm: 'interference', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '冲突, 干涉；干扰', chineseExplanation: '冲突, 干涉；干扰是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: '(American football) blocking a player\'s path with your body.',
+    examples: [{ english: 'The lesson explains the meaning of interference.', chinese: '本课解释了“interference”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'feather', term: 'feather', normalizedTerm: 'feather', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '羽毛；长羽毛', chineseExplanation: '羽毛；长羽毛是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The light horny waterproof structure forming the external covering of birds.',
+    examples: [{ english: 'The lesson explains the meaning of feather.', chinese: '本课解释了“feather”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'dip', term: 'dip', normalizedTerm: 'dip', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '浸, 降下, 把伸入, 舀取；浸, 涉猎', chineseExplanation: '浸, 降下, 把伸入, 舀取；浸, 涉猎是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A depression in an otherwise level surface.',
+    examples: [{ english: 'The lesson explains the meaning of dip.', chinese: '本课解释了“dip”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'glimpse', term: 'glimpse', normalizedTerm: 'glimpse', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '一瞥, 一闪；投以一瞥, 闪烁不定', chineseExplanation: '一瞥, 一闪；投以一瞥, 闪烁不定是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A brief or incomplete view.',
+    examples: [{ english: 'The lesson explains the meaning of glimpse.', chinese: '本课解释了“glimpse”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'oscar', term: 'oscar', normalizedTerm: 'oscar', partOfSpeech: ['noun'],
+    chineseShort: '奥斯卡金像奖, 钱, 现金', chineseExplanation: '奥斯卡金像奖, 钱, 现金是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An annual award by the Academy of Motion Picture Arts and Sciences for achievements in motion picture production and performance.',
+    examples: [{ english: 'The lesson explains the meaning of oscar.', chinese: '本课解释了“oscar”的含义。' }], level: 2, cefr: 'B1', categories: ['Academic'],
+  },
+  {
+    id: 'layout', term: 'layout', normalizedTerm: 'layout', partOfSpeech: ['noun'],
+    chineseShort: '布局, 陈列, 规划图, 页面布局, 版面编排；页面布局, 版面', chineseExplanation: '布局, 陈列, 规划图, 页面布局, 版面编排；页面布局, 版面是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A plan or design of something that is laid out.',
+    examples: [{ english: 'The lesson explains the meaning of layout.', chinese: '本课解释了“layout”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'revision', term: 'revision', normalizedTerm: 'revision', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '校订, 修正, 修订本, 修订版；修订版', chineseExplanation: '校订, 修正, 修订本, 修订版；修订版是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The act of revising or altering (involving reconsideration and modification).',
+    examples: [{ english: 'The lesson explains the meaning of revision.', chinese: '本课解释了“revision”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'saint', term: 'saint', normalizedTerm: 'saint', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '圣徒, 圣人；神圣的', chineseExplanation: '圣徒, 圣人；神圣的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A person who has died and has been declared a saint by canonization.',
+    examples: [{ english: 'The lesson explains the meaning of saint.', chinese: '本课解释了“saint”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'halfway', term: 'halfway', normalizedTerm: 'halfway', partOfSpeech: ['adverb', 'adjective'],
+    chineseShort: '中途的, 不彻底的, 部分的；半路地, 在中途, 在半途', chineseExplanation: '中途的, 不彻底的, 部分的；半路地, 在中途, 在半途是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'At a point midway between two extremes.',
+    examples: [{ english: 'The speaker used halfway to add detail.', chinese: '说话者用“halfway”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'ferry', term: 'ferry', normalizedTerm: 'ferry', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '渡船, 渡口；摆渡营业权, 轮渡', chineseExplanation: '渡船, 渡口；摆渡营业权, 轮渡是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A boat that transports people or vehicles across a body of water and operates on a regular schedule.',
+    examples: [{ english: 'The lesson explains the meaning of ferry.', chinese: '本课解释了“ferry”的含义。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'harassment', term: 'harassment', normalizedTerm: 'harassment', partOfSpeech: ['noun'],
+    chineseShort: '困扰, 烦扰, 烦恼；折磨, 骚扰, 侵扰', chineseExplanation: '困扰, 烦扰, 烦恼；折磨, 骚扰, 侵扰是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A feeling of intense annoyance caused by being tormented.',
+    examples: [{ english: 'The lesson explains the meaning of harassment.', chinese: '本课解释了“harassment”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'graph', term: 'graph', normalizedTerm: 'graph', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '曲线图, 图表, 图形；图形', chineseExplanation: '曲线图, 图表, 图形；图形是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A visual representation of the relations between certain quantities plotted with reference to a set of axes.',
+    examples: [{ english: 'The lesson explains the meaning of graph.', chinese: '本课解释了“graph”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'continuity', term: 'continuity', normalizedTerm: 'continuity', partOfSpeech: ['noun'],
+    chineseShort: '连续性；连续性', chineseExplanation: '连续性；连续性是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Uninterrupted connection or union.',
+    examples: [{ english: 'The lesson explains the meaning of continuity.', chinese: '本课解释了“continuity”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'toll', term: 'toll', normalizedTerm: 'toll', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '通行费, 代价, 钟声；征收, 敲钟, 鸣钟, 勾引, 引诱', chineseExplanation: '通行费, 代价, 钟声；征收, 敲钟, 鸣钟, 勾引, 引诱是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A fee levied for the use of roads or bridges (used for maintenance).',
+    examples: [{ english: 'The lesson explains the meaning of toll.', chinese: '本课解释了“toll”的含义。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'quota', term: 'quota', normalizedTerm: 'quota', partOfSpeech: ['noun'],
+    chineseShort: '配额, 限额；定额', chineseExplanation: '配额, 限额；定额是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A prescribed number.',
+    examples: [{ english: 'The lesson explains the meaning of quota.', chinese: '本课解释了“quota”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'diameter', term: 'diameter', normalizedTerm: 'diameter', partOfSpeech: ['noun'],
+    chineseShort: '直径；直经, 径', chineseExplanation: '直径；直经, 径是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The length of a straight line passing through the centre of a circle and connecting two points on the circumference.',
+    examples: [{ english: 'The lesson explains the meaning of diameter.', chinese: '本课解释了“diameter”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'fox', term: 'fox', normalizedTerm: 'fox', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '狐狸, 狡猾的人；奸狡地行动, 生斑, 变酸', chineseExplanation: '狐狸, 狡猾的人；奸狡地行动, 生斑, 变酸是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Alert carnivorous mammal with pointed muzzle and ears and a bushy tail; most are predators that do not hunt in packs.',
+    examples: [{ english: 'The lesson explains the meaning of fox.', chinese: '本课解释了“fox”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'refuge', term: 'refuge', normalizedTerm: 'refuge', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '避难所, 安全地带, 避难, 庇护；躲避', chineseExplanation: '避难所, 安全地带, 避难, 庇护；躲避是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A shelter from danger or hardship.',
+    examples: [{ english: 'The lesson explains the meaning of refuge.', chinese: '本课解释了“refuge”的含义。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'intact', term: 'intact', normalizedTerm: 'intact', partOfSpeech: ['adjective'],
+    chineseShort: '尚未被人碰过的, 原封不动的, 完整的；完整的, 无伤的', chineseExplanation: '尚未被人碰过的, 原封不动的, 完整的；完整的, 无伤的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: '(of a woman) having the hymen unbroken.',
+    examples: [{ english: 'The passage uses intact to describe the situation.', chinese: '文章用“intact”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'diesel', term: 'diesel', normalizedTerm: 'diesel', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '内燃机, 柴油机, 柴油', chineseExplanation: '内燃机, 柴油机, 柴油是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'German engineer (born in France) who invented the diesel engine (1858-1913).',
+    examples: [{ english: 'The lesson explains the meaning of diesel.', chinese: '本课解释了“diesel”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'valuation', term: 'valuation', normalizedTerm: 'valuation', partOfSpeech: ['noun'],
+    chineseShort: '评价, 估价, 价值判断；估价, 计价, 评价', chineseExplanation: '评价, 估价, 价值判断；估价, 计价, 评价是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Assessed price.',
+    examples: [{ english: 'The lesson explains the meaning of valuation.', chinese: '本课解释了“valuation”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'fossil', term: 'fossil', normalizedTerm: 'fossil', partOfSpeech: ['noun'],
+    chineseShort: '化石, 古物；化石的, 陈腐的, 守旧的', chineseExplanation: '化石, 古物；化石的, 陈腐的, 守旧的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The remains (or an impression) of a plant or animal that existed in a past geological age and that has been excavated from the soil.',
+    examples: [{ english: 'The lesson explains the meaning of fossil.', chinese: '本课解释了“fossil”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'shoelace', term: 'shoelace', normalizedTerm: 'shoelace', partOfSpeech: ['noun'],
+    chineseShort: '鞋带', chineseExplanation: '穿过鞋面小孔并系紧鞋子的细绳。', englishDefinition: 'A cord passed through a shoe and tied to hold it in place.',
+    examples: [{ english: 'Your shoelace is untied.', chinese: '你的鞋带松开了。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'feminist', term: 'feminist', normalizedTerm: 'feminist', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '男女平等主义者', chineseExplanation: '男女平等主义者是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A supporter of feminism.',
+    examples: [{ english: 'The passage uses feminist to describe the situation.', chinese: '文章用“feminist”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'dictate', term: 'dictate', normalizedTerm: 'dictate', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '听写, 口述, 口授；口述, 使听写, 命令', chineseExplanation: '听写, 口述, 口授；口述, 使听写, 命令是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An authoritative rule.',
+    examples: [{ english: 'The example shows how to use the verb dictate.', chinese: '这个例子展示了如何使用动词“dictate”。' }], level: 2, cefr: 'B1', categories: ['Academic'],
+  },
+  {
+    id: 'tolerance', term: 'tolerance', normalizedTerm: 'tolerance', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '宽容, 忍受, 容忍, 容许量, 公差；允许误差', chineseExplanation: '宽容, 忍受, 容忍, 容许量, 公差；允许误差是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The power or capacity of an organism to tolerate unfavorable environmental conditions.',
+    examples: [{ english: 'The lesson explains the meaning of tolerance.', chinese: '本课解释了“tolerance”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'fortunate', term: 'fortunate', normalizedTerm: 'fortunate', partOfSpeech: ['adjective'],
+    chineseShort: '幸运的, 幸福的', chineseExplanation: '幸运的, 幸福的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Having unexpected good fortune.',
+    examples: [{ english: 'The passage uses fortunate to describe the situation.', chinese: '文章用“fortunate”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'temptation', term: 'temptation', normalizedTerm: 'temptation', partOfSpeech: ['noun'],
+    chineseShort: '诱惑, 诱惑物；诱惑, 诱惑物', chineseExplanation: '诱惑, 诱惑物；诱惑, 诱惑物是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Something that seduces or has the quality to seduce.',
+    examples: [{ english: 'The lesson explains the meaning of temptation.', chinese: '本课解释了“temptation”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'continually', term: 'continually', normalizedTerm: 'continually', partOfSpeech: ['adverb'],
+    chineseShort: '不断地, 频繁地', chineseExplanation: '不断地, 频繁地是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Seemingly without interruption.',
+    examples: [{ english: 'The speaker used continually to add detail.', chinese: '说话者用“continually”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'beard', term: 'beard', normalizedTerm: 'beard', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '胡须；抓住胡须, 公开反对', chineseExplanation: '胡须；抓住胡须, 公开反对是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The hair growing on the lower part of a man\'s face.',
+    examples: [{ english: 'The lesson explains the meaning of beard.', chinese: '本课解释了“beard”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'grid', term: 'grid', normalizedTerm: 'grid', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '格子, 栅格；网格', chineseExplanation: '格子, 栅格；网格是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A pattern of regularly spaced horizontal and vertical lines.',
+    examples: [{ english: 'The lesson explains the meaning of grid.', chinese: '本课解释了“grid”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'temporarily', term: 'temporarily', normalizedTerm: 'temporarily', partOfSpeech: ['adverb'],
+    chineseShort: '暂时, 一时, 临时', chineseExplanation: '暂时, 一时, 临时是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'For a limited time only; not permanently.',
+    examples: [{ english: 'The speaker used temporarily to add detail.', chinese: '说话者用“temporarily”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'positively', term: 'positively', normalizedTerm: 'positively', partOfSpeech: ['adverb'],
+    chineseShort: '明确地, 肯定地, 无疑地, 确实地, 真正地', chineseExplanation: '明确地, 肯定地, 无疑地, 确实地, 真正地是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Extremely.',
+    examples: [{ english: 'The speaker used positively to add detail.', chinese: '说话者用“positively”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'unpleasant', term: 'unpleasant', normalizedTerm: 'unpleasant', partOfSpeech: ['adjective'],
+    chineseShort: '使人不愉快的, 使人厌恶的, 煞风景的', chineseExplanation: '使人不愉快的, 使人厌恶的, 煞风景的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Disagreeable to the senses, to the mind, or feelings.',
+    examples: [{ english: 'The passage uses unpleasant to describe the situation.', chinese: '文章用“unpleasant”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'globe', term: 'globe', normalizedTerm: 'globe', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '球, 球状物, 地球仪, 天体；成球状', chineseExplanation: '球, 球状物, 地球仪, 天体；成球状是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A sphere on which a map (especially of the earth) is represented.',
+    examples: [{ english: 'The lesson explains the meaning of globe.', chinese: '本课解释了“globe”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'blast', term: 'blast', normalizedTerm: 'blast', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '一阵风, 爆炸, 枯萎病；炸, 使枯萎', chineseExplanation: '一阵风, 爆炸, 枯萎病；炸, 使枯萎是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A very long fly ball.',
+    examples: [{ english: 'The lesson explains the meaning of blast.', chinese: '本课解释了“blast”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'contempt', term: 'contempt', normalizedTerm: 'contempt', partOfSpeech: ['noun'],
+    chineseShort: '轻视, 轻蔑；藐视, 侮辱, 轻视', chineseExplanation: '轻视, 轻蔑；藐视, 侮辱, 轻视是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Lack of respect accompanied by a feeling of intense dislike.',
+    examples: [{ english: 'The lesson explains the meaning of contempt.', chinese: '本课解释了“contempt”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'relaxation', term: 'relaxation', normalizedTerm: 'relaxation', partOfSpeech: ['noun'],
+    chineseShort: '松弛, 放松, 减轻, 缓和, 休息, 休养；松弛', chineseExplanation: '松弛, 放松, 减轻, 缓和, 休息, 休养；松弛是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: '(physiology) the gradual lengthening of inactive muscle or muscle fibers.',
+    examples: [{ english: 'The lesson explains the meaning of relaxation.', chinese: '本课解释了“relaxation”的含义。' }], level: 2, cefr: 'B1', categories: ['Academic'],
+  },
+  {
+    id: 'graduation', term: 'graduation', normalizedTerm: 'graduation', partOfSpeech: ['noun'],
+    chineseShort: '毕业, 得学位, 分划, 刻度, 分等级；刻度, 分度, 毕业', chineseExplanation: '毕业, 得学位, 分划, 刻度, 分等级；刻度, 分度, 毕业是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The successful completion of a programme of study.',
+    examples: [{ english: 'The lesson explains the meaning of graduation.', chinese: '本课解释了“graduation”的含义。' }], level: 2, cefr: 'B1', categories: ['School'],
+  },
+  {
+    id: 'contrary', term: 'contrary', normalizedTerm: 'contrary', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '相反的, 矛盾的, 对立的；相反, 对立面', chineseExplanation: '相反的, 矛盾的, 对立的；相反, 对立面是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Exact opposition.',
+    examples: [{ english: 'The lesson explains the meaning of contrary.', chinese: '本课解释了“contrary”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'regain', term: 'regain', normalizedTerm: 'regain', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '取回, 恢复, 重回, 复得；回潮', chineseExplanation: '取回, 恢复, 重回, 复得；回潮是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Get or find back; recover the use of v come upon after searching; find the location of something that was missed or lost.',
+    examples: [{ english: 'The example shows how to use the verb regain.', chinese: '这个例子展示了如何使用动词“regain”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'retreat', term: 'retreat', normalizedTerm: 'retreat', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '休息寓所, 撤退, 隐居, 退避；撤退, 隐退, 向后倾', chineseExplanation: '休息寓所, 撤退, 隐居, 退避；撤退, 隐退, 向后倾是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: '(military) withdrawal of troops to a more favourable position to escape the enemy\'s superior forces or after a defeat.',
+    examples: [{ english: 'The lesson explains the meaning of retreat.', chinese: '本课解释了“retreat”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'insufficient', term: 'insufficient', normalizedTerm: 'insufficient', partOfSpeech: ['adjective'],
+    chineseShort: '不够的, 不能胜任的, 不充足的；不足的, 不充分的, 不能胜任的', chineseExplanation: '不够的, 不能胜任的, 不充足的；不足的, 不充分的, 不能胜任的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Of a quantity not able to fulfill a need or requirement.',
+    examples: [{ english: 'The passage uses insufficient to describe the situation.', chinese: '文章用“insufficient”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'reproduction', term: 'reproduction', normalizedTerm: 'reproduction', partOfSpeech: ['noun'],
+    chineseShort: '再现, 复制, 生殖, 繁殖, 复制品；生殖, 复现', chineseExplanation: '再现, 复制, 生殖, 繁殖, 复制品；生殖, 复现是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The process of generating offspring.',
+    examples: [{ english: 'The lesson explains the meaning of reproduction.', chinese: '本课解释了“reproduction”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'gravel', term: 'gravel', normalizedTerm: 'gravel', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '砂砾, 碎石；沙砾, 尿沙', chineseExplanation: '砂砾, 碎石；沙砾, 尿沙是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Rock fragments and pebbles.',
+    examples: [{ english: 'The lesson explains the meaning of gravel.', chinese: '本课解释了“gravel”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'noble', term: 'noble', normalizedTerm: 'noble', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '贵族；高贵的, 高尚的, 贵族的, 辉煌的', chineseExplanation: '贵族；高贵的, 高尚的, 贵族的, 辉煌的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Of or belonging to or constituting the hereditary aristocracy especially as derived from feudal times.',
+    examples: [{ english: 'The passage uses noble to describe the situation.', chinese: '文章用“noble”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'blond', term: 'blond', normalizedTerm: 'blond', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '金发的；白肤碧眼金发的人', chineseExplanation: '金发的；白肤碧眼金发的人是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A person with fair skin and hair.',
+    examples: [{ english: 'The passage uses blond to describe the situation.', chinese: '文章用“blond”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'harvest', term: 'harvest', normalizedTerm: 'harvest', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '收获, 成果, 收获物, 收获期；收割, 收获', chineseExplanation: '收获, 成果, 收获物, 收获期；收割, 收获是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The consequence of an effort or activity.',
+    examples: [{ english: 'The lesson explains the meaning of harvest.', chinese: '本课解释了“harvest”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'negligence', term: 'negligence', normalizedTerm: 'negligence', partOfSpeech: ['noun'],
+    chineseShort: '疏忽, 粗心大意, 忽视；疏忽, 过失', chineseExplanation: '疏忽, 粗心大意, 忽视；疏忽, 过失是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Failure to act with the prudence that a reasonable person would exercise under the same circumstances.',
+    examples: [{ english: 'The lesson explains the meaning of negligence.', chinese: '本课解释了“negligence”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'consecutive', term: 'consecutive', normalizedTerm: 'consecutive', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '连续的, 联贯的；连续的', chineseExplanation: '连续的, 联贯的；连续的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'In regular succession without gaps.',
+    examples: [{ english: 'The passage uses consecutive to describe the situation.', chinese: '文章用“consecutive”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'lace', term: 'lace', normalizedTerm: 'lace', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '饰带, 花边, 缎带, 鞋带；结带子, 饰以花边', chineseExplanation: '饰带, 花边, 缎带, 鞋带；结带子, 饰以花边是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A cord that is drawn through eyelets or around hooks in order to draw together two edges (as of a shoe or garment).',
+    examples: [{ english: 'The lesson explains the meaning of lace.', chinese: '本课解释了“lace”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'scarf', term: 'scarf', normalizedTerm: 'scarf', partOfSpeech: ['noun'],
+    chineseShort: '围巾；头巾', chineseExplanation: '围在颈部或头部用于保暖或装饰的一条布。', englishDefinition: 'A length of cloth worn around the neck or head for warmth or decoration.',
+    examples: [{ english: 'He wore a scarf because it was cold.', chinese: '天气很冷，所以他戴了围巾。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'greater', term: 'greater', normalizedTerm: 'greater', partOfSpeech: ['adjective'],
+    chineseShort: '大的', chineseExplanation: '大的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Greater in size or importance or degree.',
+    examples: [{ english: 'The passage uses greater to describe the situation.', chinese: '文章用“greater”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'membrane', term: 'membrane', normalizedTerm: 'membrane', partOfSpeech: ['noun'],
+    chineseShort: '薄膜, 膜, 羊皮纸；膜', chineseExplanation: '薄膜, 膜, 羊皮纸；膜是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A thin pliable sheet of material.',
+    examples: [{ english: 'The lesson explains the meaning of membrane.', chinese: '本课解释了“membrane”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'node', term: 'node', normalizedTerm: 'node', partOfSpeech: ['noun'],
+    chineseShort: '节, 结节, 瘤；节点', chineseExplanation: '节, 结节, 瘤；节点是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A connecting point at which several lines come together.',
+    examples: [{ english: 'The lesson explains the meaning of node.', chinese: '本课解释了“node”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'fog', term: 'fog', normalizedTerm: 'fog', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '雾, 迷惑, 最生草, 苔藓；被雾笼罩, 变模糊', chineseExplanation: '雾, 迷惑, 最生草, 苔藓；被雾笼罩, 变模糊是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Droplets of water vapor suspended in the air near the ground.',
+    examples: [{ english: 'The lesson explains the meaning of fog.', chinese: '本课解释了“fog”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'vacuum', term: 'vacuum', normalizedTerm: 'vacuum', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '真空, 空间, 真空吸尘器；真空的, 产生真空的, 利用真空的', chineseExplanation: '真空, 空间, 真空吸尘器；真空的, 产生真空的, 利用真空的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The absence of matter.',
+    examples: [{ english: 'The lesson explains the meaning of vacuum.', chinese: '本课解释了“vacuum”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'respectable', term: 'respectable', normalizedTerm: 'respectable', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '值得尊重的, 人格高尚的, 相当数量的；品格高尚的人', chineseExplanation: '值得尊重的, 人格高尚的, 相当数量的；品格高尚的人是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Characterised by socially or conventionally acceptable morals.',
+    examples: [{ english: 'The passage uses respectable to describe the situation.', chinese: '文章用“respectable”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'dislike', term: 'dislike', normalizedTerm: 'dislike', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '嫌恶；讨厌, 不喜欢', chineseExplanation: '嫌恶；讨厌, 不喜欢是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A feeling of aversion or antipathy.',
+    examples: [{ english: 'The lesson explains the meaning of dislike.', chinese: '本课解释了“dislike”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'obey', term: 'obey', normalizedTerm: 'obey', partOfSpeech: ['verb'],
+    chineseShort: '服从, 遵从, 顺从；服从', chineseExplanation: '服从, 遵从, 顺从；服从是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Be obedient to.',
+    examples: [{ english: 'The example shows how to use the verb obey.', chinese: '这个例子展示了如何使用动词“obey”。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'fond', term: 'fond', normalizedTerm: 'fond', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '喜欢的, 宠爱的, 温柔的', chineseExplanation: '喜欢的, 宠爱的, 温柔的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: '(followed by `of\' or `to\') having a strong preference or liking for.',
+    examples: [{ english: 'The passage uses fond to describe the situation.', chinese: '文章用“fond”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'hammer', term: 'hammer', normalizedTerm: 'hammer', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '锤, 铁锤, 钉锤；锤打, 敲打, 钉', chineseExplanation: '锤, 铁锤, 钉锤；锤打, 敲打, 钉是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The part of a gunlock that strikes the percussion cap when the trigger is pulled.',
+    examples: [{ english: 'The lesson explains the meaning of hammer.', chinese: '本课解释了“hammer”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'queue', term: 'queue', normalizedTerm: 'queue', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '辫子, 一队人, 队列；使排队, 将...梳成辫子', chineseExplanation: '辫子, 一队人, 队列；使排队, 将...梳成辫子是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A line of people or vehicles waiting for something.',
+    examples: [{ english: 'The lesson explains the meaning of queue.', chinese: '本课解释了“queue”的含义。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'confirmation', term: 'confirmation', normalizedTerm: 'confirmation', partOfSpeech: ['noun'],
+    chineseShort: '证实, 证明, 批准, 确认；确认', chineseExplanation: '证实, 证明, 批准, 确认；确认是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Additional proof that something that was believed (some fact or hypothesis or theory) is correct.',
+    examples: [{ english: 'The lesson explains the meaning of confirmation.', chinese: '本课解释了“confirmation”的含义。' }], level: 2, cefr: 'B1', categories: ['Academic'],
+  },
+  {
+    id: 'recorder', term: 'recorder', normalizedTerm: 'recorder', partOfSpeech: ['noun'],
+    chineseShort: '记录员, 录音机；记录器', chineseExplanation: '记录员, 录音机；记录器是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Equipment for making records.',
+    examples: [{ english: 'The lesson explains the meaning of recorder.', chinese: '本课解释了“recorder”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'foolish', term: 'foolish', normalizedTerm: 'foolish', partOfSpeech: ['adjective'],
+    chineseShort: '愚蠢的, 傻的', chineseExplanation: '愚蠢的, 傻的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Devoid of good sense or judgement.',
+    examples: [{ english: 'The passage uses foolish to describe the situation.', chinese: '文章用“foolish”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'interactive', term: 'interactive', normalizedTerm: 'interactive', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '相互作用的, 相互影响的；交互, 人机对话的', chineseExplanation: '相互作用的, 相互影响的；交互, 人机对话的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Used especially of drugs or muscles that work together so the total effect is greater than the sum of the two (or more) s capable of acting on or influencing each other.',
+    examples: [{ english: 'The passage uses interactive to describe the situation.', chinese: '文章用“interactive”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'intake', term: 'intake', normalizedTerm: 'intake', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '入口, 吸入, 吸入量；摄取量', chineseExplanation: '入口, 吸入, 吸入量；摄取量是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'An opening through which fluid is admitted to a tube or container.',
+    examples: [{ english: 'The lesson explains the meaning of intake.', chinese: '本课解释了“intake”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'unaware', term: 'unaware', normalizedTerm: 'unaware', partOfSpeech: ['adjective'],
+    chineseShort: '未认识到的, 不知道的；不知道的, 不察觉的, 无意的', chineseExplanation: '未认识到的, 不知道的；不知道的, 不察觉的, 无意的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: '(often followed by `of\') not aware.',
+    examples: [{ english: 'The passage uses unaware to describe the situation.', chinese: '文章用“unaware”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'compassion', term: 'compassion', normalizedTerm: 'compassion', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '同情, 怜悯', chineseExplanation: '同情, 怜悯是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A deep awareness of and sympathy for another\'s suffering.',
+    examples: [{ english: 'The lesson explains the meaning of compassion.', chinese: '本课解释了“compassion”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'congregation', term: 'congregation', normalizedTerm: 'congregation', partOfSpeech: ['noun'],
+    chineseShort: '集合, 聚集；集会, 人一, 红衣主教会议', chineseExplanation: '集合, 聚集；集会, 人一, 红衣主教会议是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A group of people who adhere to a common faith and habitually attend a given church.',
+    examples: [{ english: 'The lesson explains the meaning of congregation.', chinese: '本课解释了“congregation”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'mercy', term: 'mercy', normalizedTerm: 'mercy', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '仁慈, 宽恕, 慈悲, 怜悯, 幸运；权宜处置权, 决定权, 宽恕', chineseExplanation: '仁慈, 宽恕, 慈悲, 怜悯, 幸运；权宜处置权, 决定权, 宽恕是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Something for which to be thankful.',
+    examples: [{ english: 'The lesson explains the meaning of mercy.', chinese: '本课解释了“mercy”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'beautifully', term: 'beautifully', normalizedTerm: 'beautifully', partOfSpeech: ['adverb'],
+    chineseShort: '美好地, 漂亮地', chineseExplanation: '美好地, 漂亮地是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'In a beautiful manner.',
+    examples: [{ english: 'The speaker used beautifully to add detail.', chinese: '说话者用“beautifully”补充细节。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'competent', term: 'competent', normalizedTerm: 'competent', partOfSpeech: ['adjective'],
+    chineseShort: '能干的, 胜任的, 有效的, 足够的；有权的, 授权的, 胜任的', chineseExplanation: '能干的, 胜任的, 有效的, 足够的；有权的, 授权的, 胜任的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Properly or sufficiently qualified or capable or efficient.',
+    examples: [{ english: 'The passage uses competent to describe the situation.', chinese: '文章用“competent”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'tenure', term: 'tenure', normalizedTerm: 'tenure', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '享有, 保有期；占有, 占有权', chineseExplanation: '享有, 保有期；占有, 占有权是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The term during which some position is held.',
+    examples: [{ english: 'The lesson explains the meaning of tenure.', chinese: '本课解释了“tenure”的含义。' }], level: 2, cefr: 'B1', categories: ['Academic'],
+  },
+  {
+    id: 'wit', term: 'wit', normalizedTerm: 'wit', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '机智, 智力, 头脑, 理智, 妙语, 机智的人', chineseExplanation: '机智, 智力, 头脑, 理智, 妙语, 机智的人是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A message whose ingenuity or verbal skill or incongruity has the power to evoke laughter.',
+    examples: [{ english: 'The lesson explains the meaning of wit.', chinese: '本课解释了“wit”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'commentary', term: 'commentary', normalizedTerm: 'commentary', partOfSpeech: ['noun'],
+    chineseShort: '注释, 评论, 说明；注释, 评注, 评论', chineseExplanation: '注释, 评论, 说明；注释, 评注, 评论是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A written explanation or criticism or illustration that is added to a book or other textual material.',
+    examples: [{ english: 'The lesson explains the meaning of commentary.', chinese: '本课解释了“commentary”的含义。' }], level: 2, cefr: 'B1', categories: ['School'],
+  },
+  {
+    id: 'orthodox', term: 'orthodox', normalizedTerm: 'orthodox', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '正统的, 传统的, 惯常的', chineseExplanation: '正统的, 传统的, 惯常的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Of or pertaining to or characteristic of Judaism.',
+    examples: [{ english: 'The lesson explains the meaning of orthodox.', chinese: '本课解释了“orthodox”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'disagreement', term: 'disagreement', normalizedTerm: 'disagreement', partOfSpeech: ['noun'],
+    chineseShort: '不合, 争论, 不一致；不一致, 不同意, 陪审团的意见不一', chineseExplanation: '不合, 争论, 不一致；不一致, 不同意, 陪审团的意见不一是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A conflict of people\'s opinions or actions or characters.',
+    examples: [{ english: 'The lesson explains the meaning of disagreement.', chinese: '本课解释了“disagreement”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'knot', term: 'knot', normalizedTerm: 'knot', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '结, 群, 难题；打结, 纠缠', chineseExplanation: '结, 群, 难题；打结, 纠缠是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A tight cluster of people or things.',
+    examples: [{ english: 'The lesson explains the meaning of knot.', chinese: '本课解释了“knot”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'warfare', term: 'warfare', normalizedTerm: 'warfare', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '战争, 战斗, 交战, 斗争, 竞争；战事, 作战, 交战', chineseExplanation: '战争, 战斗, 交战, 斗争, 竞争；战事, 作战, 交战是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The waging of armed conflict against an enemy n an active struggle between competing entities.',
+    examples: [{ english: 'The lesson explains the meaning of warfare.', chinese: '本课解释了“warfare”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'glow', term: 'glow', normalizedTerm: 'glow', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '赤热, 光辉, 热情, 热烈, 红光；发红光, 红光焕发, 发热, 洋溢, 激动', chineseExplanation: '赤热, 光辉, 热情, 热烈, 红光；发红光, 红光焕发, 发热, 洋溢, 激动是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A feeling of considerable warmth.',
+    examples: [{ english: 'The lesson explains the meaning of glow.', chinese: '本课解释了“glow”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'unacceptable', term: 'unacceptable', normalizedTerm: 'unacceptable', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '无法接受的, 不受欢迎的；不能接受的, 不受欢迎的, 难以承认的', chineseExplanation: '无法接受的, 不受欢迎的；不能接受的, 不受欢迎的, 难以承认的是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Not adequate to give satisfaction.',
+    examples: [{ english: 'The passage uses unacceptable to describe the situation.', chinese: '文章用“unacceptable”来描述这种情况。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'hampshire', term: 'hampshire', normalizedTerm: 'hampshire', partOfSpeech: ['noun'],
+    chineseShort: '汉普郡（英国南部之一郡）', chineseExplanation: '汉普郡（英国南部之一郡）是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A county of southern England on the English Channel.',
+    examples: [{ english: 'The lesson explains the meaning of hampshire.', chinese: '本课解释了“hampshire”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'dive', term: 'dive', normalizedTerm: 'dive', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '潜水, 跳水；跳水, 俯冲, 猛冲', chineseExplanation: '潜水, 跳水；跳水, 俯冲, 猛冲是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A headlong plunge into water.',
+    examples: [{ english: 'The lesson explains the meaning of dive.', chinese: '本课解释了“dive”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'valve', term: 'valve', normalizedTerm: 'valve', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '活瓣, 阀, 活门；装阀, 用阀调节', chineseExplanation: '活瓣, 阀, 活门；装阀, 用阀调节是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A structure in a hollow organ (like the heart) with a flap to insure one-way flow of fluid through it.',
+    examples: [{ english: 'The lesson explains the meaning of valve.', chinese: '本课解释了“valve”的含义。' }], level: 2, cefr: 'B1', categories: ['Technology'],
+  },
+  {
+    id: 'memo', term: 'memo', normalizedTerm: 'memo', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '备忘录；备忘录', chineseExplanation: '备忘录；备忘录是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A written proposal or reminder.',
+    examples: [{ english: 'The lesson explains the meaning of memo.', chinese: '本课解释了“memo”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'santa', term: 'santa', normalizedTerm: 'santa', partOfSpeech: ['noun'],
+    chineseShort: '圣诞老人（等于Santa Claus）', chineseExplanation: '圣诞老人（等于Santa Claus）是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The legendary patron saint of children; an imaginary being who is thought to bring presents to children at Christmas.',
+    examples: [{ english: 'The lesson explains the meaning of santa.', chinese: '本课解释了“santa”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'revival', term: 'revival', normalizedTerm: 'revival', partOfSpeech: ['noun'],
+    chineseShort: '复兴, 复活, 恢复精神, 苏醒；复苏, 回生, 精神重振', chineseExplanation: '复兴, 复活, 恢复精神, 苏醒；复苏, 回生, 精神重振是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Bringing again into activity and prominence.',
+    examples: [{ english: 'The lesson explains the meaning of revival.', chinese: '本课解释了“revival”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'tommy', term: 'tommy', normalizedTerm: 'tommy', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '配给面包, 实物工资制；实物工资制', chineseExplanation: '配给面包, 实物工资制；实物工资制是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Bread, -- generally a penny roll; the supply of food carried by workmen as their daily allowance.',
+    examples: [{ english: 'The lesson explains the meaning of tommy.', chinese: '本课解释了“tommy”的含义。' }], level: 2, cefr: 'B1', categories: ['Business'],
+  },
+  {
+    id: 'torch', term: 'torch', normalizedTerm: 'torch', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '火把, 启发之物；火炬', chineseExplanation: '火把, 启发之物；火炬是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'A light usually carried in the hand; consists of some flammable substance.',
+    examples: [{ english: 'The lesson explains the meaning of torch.', chinese: '本课解释了“torch”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'kidney', term: 'kidney', normalizedTerm: 'kidney', partOfSpeech: ['noun'],
+    chineseShort: '肾, 个性；肾', chineseExplanation: '肾, 个性；肾是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Either of two bean-shaped excretory organs that filter wastes (especially urea) from the blood and excrete them and water in urine.',
+    examples: [{ english: 'The lesson explains the meaning of kidney.', chinese: '本课解释了“kidney”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
+  {
+    id: 'knight', term: 'knight', normalizedTerm: 'knight', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '骑士, 爵士；授以爵位', chineseExplanation: '骑士, 爵士；授以爵位是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'Originally a person of noble birth trained to arms and chivalry; today in Great Britain a person honored by the sovereign for personal merit.',
+    examples: [{ english: 'The lesson explains the meaning of knight.', chinese: '本课解释了“knight”的含义。' }], level: 2, cefr: 'B1', categories: ['Travel'],
+  },
+  {
+    id: 'emergence', term: 'emergence', normalizedTerm: 'emergence', partOfSpeech: ['noun'],
+    chineseShort: '出现, 浮现, 发生', chineseExplanation: '出现, 浮现, 发生是常见英语词汇，可用于日常交流和基础学习。', englishDefinition: 'The gradual beginning or coming forth.',
+    examples: [{ english: 'The lesson explains the meaning of emergence.', chinese: '本课解释了“emergence”的含义。' }], level: 2, cefr: 'B1', categories: ['Daily English'],
+  },
 ] satisfies readonly VocabularyItem[]

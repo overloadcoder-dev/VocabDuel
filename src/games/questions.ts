@@ -53,17 +53,23 @@ function choicesFor(
   label: (item: VocabularyItem) => string,
   random: () => number,
 ): Choice[] {
-  const nearby = pool.filter((item) => item.id !== correct.id && Math.abs(item.level - correct.level) <= 1)
-  const remaining = pool.filter((item) => item.id !== correct.id && Math.abs(item.level - correct.level) > 1)
   const distractors: VocabularyItem[] = []
   const usedLabels = new Set([label(correct)])
-  for (const candidate of [...shuffleSeeded(nearby, random), ...shuffleSeeded(remaining, random)]) {
-    const candidateLabel = label(candidate)
-    if (usedLabels.has(candidateLabel)) continue
-    usedLabels.add(candidateLabel)
-    distractors.push(candidate)
-    if (distractors.length === 3) break
+
+  const collect = (isEligible: (item: VocabularyItem) => boolean) => {
+    const start = Math.floor(random() * pool.length)
+    for (let offset = 0; offset < pool.length && distractors.length < 3; offset += 1) {
+      const candidate = pool[(start + offset) % pool.length]!
+      if (candidate.id === correct.id || !isEligible(candidate)) continue
+      const candidateLabel = label(candidate)
+      if (usedLabels.has(candidateLabel)) continue
+      usedLabels.add(candidateLabel)
+      distractors.push(candidate)
+    }
   }
+
+  collect((item) => Math.abs(item.level - correct.level) <= 1)
+  if (distractors.length < 3) collect((item) => Math.abs(item.level - correct.level) > 1)
   if (distractors.length < 3) throw new Error('At least four vocabulary items with distinct answers are required.')
   return shuffleSeeded([correct, ...distractors], random).map((item) => ({ id: item.id, label: label(item) }))
 }

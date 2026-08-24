@@ -7,7 +7,7 @@ describe('lazy vocabulary loading', () => {
     const dataset = await loadAllVocabulary()
 
     expect(dataset.items).toEqual(vocabulary)
-    expect(dataset.items).toHaveLength(2220)
+    expect(dataset.items).toHaveLength(3420)
     expect(dataset.byId.size).toBe(dataset.items.length)
   })
 

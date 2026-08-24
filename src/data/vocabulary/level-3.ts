@@ -1552,4 +1552,2004 @@ export const level3Vocabulary = [
     chineseShort: '收入；收益', chineseExplanation: '指与“收入；收益”有关的概念、情况或事物，常用于B2阶段的日常、学术或工作语境。', englishDefinition: 'Money received by a business, organisation, or government from its activities.',
     examples: [{ english: 'Online sales now provide a large share of the company\'s revenue.', chinese: '网上销售现在占公司收入的很大一部分。' }], level: 3, cefr: 'B2', categories: ['Business'],
   },
+  {
+    id: 'organisation', term: 'organisation', normalizedTerm: 'organisation', partOfSpeech: ['noun'],
+    chineseShort: '组织, 团体, 体制, 编制', chineseExplanation: '组织, 团体, 体制, 编制是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The persons (or committees or departments etc.) who make up a body for the purpose of administering something n a group of people who work together n an organised structure for arranging or…',
+    examples: [{ english: 'The lesson explains the meaning of organisation.', chinese: '本课解释了“organisation”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'responsibility', term: 'responsibility', normalizedTerm: 'responsibility', partOfSpeech: ['noun'],
+    chineseShort: '责任, 职责, 负担, 可靠性；职责', chineseExplanation: '责任, 职责, 负担, 可靠性；职责是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A form of trustworthiness; the trait of being answerable to someone for something or being responsible for one\'s conduct.',
+    examples: [{ english: 'The lesson explains the meaning of responsibility.', chinese: '本课解释了“responsibility”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'consideration', term: 'consideration', normalizedTerm: 'consideration', partOfSpeech: ['noun'],
+    chineseShort: '考虑, 原因；考虑, 思考, 报酬', chineseExplanation: '考虑, 原因；考虑, 思考, 报酬是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The process of giving careful thought to something.',
+    examples: [{ english: 'The lesson explains the meaning of consideration.', chinese: '本课解释了“consideration”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'representative', term: 'representative', normalizedTerm: 'representative', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '代表, 众议员, 典型；描写的, 表现的, 代理的, 代表的, 代议制的, 典型的', chineseExplanation: '代表, 众议员, 典型；描写的, 表现的, 代理的, 代表的, 代议制的, 典型的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A person who represents others.',
+    examples: [{ english: 'The lesson explains the meaning of representative.', chinese: '本课解释了“representative”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'concentration', term: 'concentration', normalizedTerm: 'concentration', partOfSpeech: ['noun'],
+    chineseShort: '集中, 专心；浓度', chineseExplanation: '集中, 专心；浓度是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The strength of a solution; number of molecules of a substance in a given volume.',
+    examples: [{ english: 'The lesson explains the meaning of concentration.', chinese: '本课解释了“concentration”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'organise', term: 'organise', normalizedTerm: 'organise', partOfSpeech: ['verb'],
+    chineseShort: '组织, 有机化, 给予生机', chineseExplanation: '组织, 有机化, 给予生机是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Bring order and organisation to v create (as an entity) v form or join a union v cause to be structured or ordered or operating according to some principle or idea v arrange by systematic planning…',
+    examples: [{ english: 'The example shows how to use the verb organise.', chinese: '这个例子展示了如何使用动词“organise”。' }], level: 3, cefr: 'B2', categories: ['Academic'],
+  },
+  {
+    id: 'interpretation', term: 'interpretation', normalizedTerm: 'interpretation', partOfSpeech: ['noun'],
+    chineseShort: '解释, 演出, 翻译；插值', chineseExplanation: '解释, 演出, 翻译；插值是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A mental representation of the meaning or significance of something.',
+    examples: [{ english: 'The lesson explains the meaning of interpretation.', chinese: '本课解释了“interpretation”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'unfortunately', term: 'unfortunately', normalizedTerm: 'unfortunately', partOfSpeech: ['adverb'],
+    chineseShort: '恐怕, 不幸的是', chineseExplanation: '恐怕, 不幸的是是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'By bad luck.',
+    examples: [{ english: 'The speaker used unfortunately to add detail.', chinese: '说话者用“unfortunately”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'metre', term: 'metre', normalizedTerm: 'metre', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '公尺, 格律, 韵律；米, 公尺', chineseExplanation: '公尺, 格律, 韵律；米, 公尺是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The basic unit of length adopted under the Systeme International d\'Unites (approximately 1.094 yards) n (prosody) the accent in a metrical foot of verse n rhythm as given by division into parts…',
+    examples: [{ english: 'The lesson explains the meaning of metre.', chinese: '本课解释了“metre”的含义。' }], level: 3, cefr: 'B2', categories: ['Academic'],
+  },
+  {
+    id: 'recommendation', term: 'recommendation', normalizedTerm: 'recommendation', partOfSpeech: ['noun'],
+    chineseShort: '推荐, 介绍, 推荐信, 劝告；建议书', chineseExplanation: '推荐, 介绍, 推荐信, 劝告；建议书是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Something (as a course of action) that is recommended as advisable.',
+    examples: [{ english: 'The lesson explains the meaning of recommendation.', chinese: '本课解释了“recommendation”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'entertainment', term: 'entertainment', normalizedTerm: 'entertainment', partOfSpeech: ['noun'],
+    chineseShort: '娱乐, 款待, 娱乐表演', chineseExplanation: '娱乐, 款待, 娱乐表演是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An activity that is diverting and that holds the attention.',
+    examples: [{ english: 'The lesson explains the meaning of entertainment.', chinese: '本课解释了“entertainment”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'approximately', term: 'approximately', normalizedTerm: 'approximately', partOfSpeech: ['adverb'],
+    chineseShort: '大约, 大致, 近于；大约, 近似', chineseExplanation: '大约, 大致, 近于；大约, 近似是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: '(of quantities) imprecise but fairly close to correct.',
+    examples: [{ english: 'The speaker used approximately to add detail.', chinese: '说话者用“approximately”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'qualification', term: 'qualification', normalizedTerm: 'qualification', partOfSpeech: ['noun'],
+    chineseShort: '资格, 条件, 限制；限定', chineseExplanation: '资格, 条件, 限制；限定是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An attribute that must be met or complied with and that fits a person for something.',
+    examples: [{ english: 'The lesson explains the meaning of qualification.', chinese: '本课解释了“qualification”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'yell', term: 'yell', normalizedTerm: 'yell', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '叫喊, 大叫, 呐喊欢呼；喊叫着说', chineseExplanation: '叫喊, 大叫, 呐喊欢呼；喊叫着说是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Utter or declare in a very loud voice.',
+    examples: [{ english: 'The example shows how to use the verb yell.', chinese: '这个例子展示了如何使用动词“yell”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'emphasise', term: 'emphasise', normalizedTerm: 'emphasise', partOfSpeech: ['verb'],
+    chineseShort: '强调, 重读, 加强...的语气, 着重', chineseExplanation: '强调, 重读, 加强...的语气, 着重是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Give extra weight to (a communication) v to stress, single out as important.',
+    examples: [{ english: 'The example shows how to use the verb emphasise.', chinese: '这个例子展示了如何使用动词“emphasise”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'tournament', term: 'tournament', normalizedTerm: 'tournament', partOfSpeech: ['noun'],
+    chineseShort: '比赛, 竞赛, 锦标赛, 联赛', chineseExplanation: '比赛, 竞赛, 锦标赛, 联赛是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A sporting competition in which contestants play a series of games to decide the winner.',
+    examples: [{ english: 'The lesson explains the meaning of tournament.', chinese: '本课解释了“tournament”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'glove', term: 'glove', normalizedTerm: 'glove', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '手套；给...戴手套', chineseExplanation: '手套；给...戴手套是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Handwear: covers the hand and wrist.',
+    examples: [{ english: 'The lesson explains the meaning of glove.', chinese: '本课解释了“glove”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'revolutionary', term: 'revolutionary', normalizedTerm: 'revolutionary', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '革命者, 革命党人；革命的, 革命性的', chineseExplanation: '革命者, 革命党人；革命的, 革命性的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Markedly new or introducing radical change.',
+    examples: [{ english: 'The passage uses revolutionary to describe the situation.', chinese: '文章用“revolutionary”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'discrimination', term: 'discrimination', normalizedTerm: 'discrimination', partOfSpeech: ['noun'],
+    chineseShort: '差别, 岐视, 辨别力；鉴别', chineseExplanation: '差别, 岐视, 辨别力；鉴别是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Unfair treatment of a person or group on the basis of prejudice.',
+    examples: [{ english: 'The lesson explains the meaning of discrimination.', chinese: '本课解释了“discrimination”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'youngster', term: 'youngster', normalizedTerm: 'youngster', partOfSpeech: ['noun'],
+    chineseShort: '小孩, 年轻人, 少年；儿童, 少年, 青年', chineseExplanation: '小孩, 年轻人, 少年；儿童, 少年, 青年是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A young person of either sex.',
+    examples: [{ english: 'The lesson explains the meaning of youngster.', chinese: '本课解释了“youngster”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'portray', term: 'portray', normalizedTerm: 'portray', partOfSpeech: ['verb'],
+    chineseShort: '描绘, 描写, 描绘...的肖像', chineseExplanation: '描绘, 描写, 描绘...的肖像是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Portray in words.',
+    examples: [{ english: 'The example shows how to use the verb portray.', chinese: '这个例子展示了如何使用动词“portray”。' }], level: 3, cefr: 'B2', categories: ['School'],
+  },
+  {
+    id: 'knit', term: 'knit', normalizedTerm: 'knit', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '编织, 结合', chineseExplanation: '编织, 结合是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A fabric made by knitting.',
+    examples: [{ english: 'The example shows how to use the verb knit.', chinese: '这个例子展示了如何使用动词“knit”。' }], level: 3, cefr: 'B2', categories: ['Technology'],
+  },
+  {
+    id: 'plead', term: 'plead', normalizedTerm: 'plead', partOfSpeech: ['verb'],
+    chineseShort: '辩护, 恳求；为...辩护, 提出...借口, 托称, 恳求', chineseExplanation: '辩护, 恳求；为...辩护, 提出...借口, 托称, 恳求是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Appeal or request earnestly.',
+    examples: [{ english: 'The example shows how to use the verb plead.', chinese: '这个例子展示了如何使用动词“plead”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'questionnaire', term: 'questionnaire', normalizedTerm: 'questionnaire', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '调查表, 问卷；调查表', chineseExplanation: '调查表, 问卷；调查表是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A form containing a set of questions; submitted to people to gain statistical information.',
+    examples: [{ english: 'The lesson explains the meaning of questionnaire.', chinese: '本课解释了“questionnaire”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'uncomfortable', term: 'uncomfortable', normalizedTerm: 'uncomfortable', partOfSpeech: ['adjective'],
+    chineseShort: '不舒服的, 不自在的, 不安的', chineseExplanation: '不舒服的, 不自在的, 不安的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Conducive to or feeling mental discomfort.',
+    examples: [{ english: 'The passage uses uncomfortable to describe the situation.', chinese: '文章用“uncomfortable”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'convict', term: 'convict', normalizedTerm: 'convict', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '囚犯, 罪犯；宣告有罪, 使知罪', chineseExplanation: '囚犯, 罪犯；宣告有罪, 使知罪是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A person serving a sentence in a jail or prison.',
+    examples: [{ english: 'The lesson explains the meaning of convict.', chinese: '本课解释了“convict”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'rebuild', term: 'rebuild', normalizedTerm: 'rebuild', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '改建, 重建, 改造；重建', chineseExplanation: '改建, 重建, 改造；重建是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Build again.',
+    examples: [{ english: 'The example shows how to use the verb rebuild.', chinese: '这个例子展示了如何使用动词“rebuild”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'disappointment', term: 'disappointment', normalizedTerm: 'disappointment', partOfSpeech: ['noun'],
+    chineseShort: '失望', chineseExplanation: '失望是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A feeling of dissatisfaction that results when your expectations are not realised.',
+    examples: [{ english: 'The lesson explains the meaning of disappointment.', chinese: '本课解释了“disappointment”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'vanish', term: 'vanish', normalizedTerm: 'vanish', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '消失, 不见, 成为零', chineseExplanation: '消失, 不见, 成为零是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Become invisible or unnoticeable.',
+    examples: [{ english: 'The example shows how to use the verb vanish.', chinese: '这个例子展示了如何使用动词“vanish”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'venue', term: 'venue', normalizedTerm: 'venue', partOfSpeech: ['noun'],
+    chineseShort: '犯罪地点, 审判地, 发生地点', chineseExplanation: '犯罪地点, 审判地, 发生地点是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The scene of any event or action (especially the place of a meeting).',
+    examples: [{ english: 'The lesson explains the meaning of venue.', chinese: '本课解释了“venue”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'incur', term: 'incur', normalizedTerm: 'incur', partOfSpeech: ['verb'],
+    chineseShort: '招致, 蒙受, 遭遇；招致, 蒙受, 担负', chineseExplanation: '招致, 蒙受, 遭遇；招致, 蒙受, 担负是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Make oneself subject to; bring upon oneself; become liable to.',
+    examples: [{ english: 'The example shows how to use the verb incur.', chinese: '这个例子展示了如何使用动词“incur”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'tempt', term: 'tempt', normalizedTerm: 'tempt', partOfSpeech: ['verb'],
+    chineseShort: '诱惑, 引诱, 引起...的兴趣, 吸引, 冒...风险', chineseExplanation: '诱惑, 引诱, 引起...的兴趣, 吸引, 冒...风险是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Dispose or incline or entice to.',
+    examples: [{ english: 'The example shows how to use the verb tempt.', chinese: '这个例子展示了如何使用动词“tempt”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'nominee', term: 'nominee', normalizedTerm: 'nominee', partOfSpeech: ['noun'],
+    chineseShort: '被提名者, 被任命者；被指定人', chineseExplanation: '被提名者, 被任命者；被指定人是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A politician who is running for public office.',
+    examples: [{ english: 'The lesson explains the meaning of nominee.', chinese: '本课解释了“nominee”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'haul', term: 'haul', normalizedTerm: 'haul', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '用力拖拉, 拖运, 强拉, 捕获量, 拖运距离；拖, 拉, 改变方向, 改变主意', chineseExplanation: '用力拖拉, 拖运, 强拉, 捕获量, 拖运距离；拖, 拉, 改变方向, 改变主意是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Draw slowly or heavily.',
+    examples: [{ english: 'The example shows how to use the verb haul.', chinese: '这个例子展示了如何使用动词“haul”。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'mechanic', term: 'mechanic', normalizedTerm: 'mechanic', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '机械工, 技工；手工的', chineseExplanation: '机械工, 技工；手工的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Resembling the action of a machine.',
+    examples: [{ english: 'The lesson explains the meaning of mechanic.', chinese: '本课解释了“mechanic”的含义。' }], level: 3, cefr: 'B2', categories: ['Technology'],
+  },
+  {
+    id: 'encouragement', term: 'encouragement', normalizedTerm: 'encouragement', partOfSpeech: ['noun'],
+    chineseShort: '鼓励, 激励, 奖励；怂恿, 煽动, 助长', chineseExplanation: '鼓励, 激励, 奖励；怂恿, 煽动, 助长是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The expression of approval and support.',
+    examples: [{ english: 'The lesson explains the meaning of encouragement.', chinese: '本课解释了“encouragement”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'incredibly', term: 'incredibly', normalizedTerm: 'incredibly', partOfSpeech: ['adverb'],
+    chineseShort: '不能相信地', chineseExplanation: '不能相信地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Not easy to believe.',
+    examples: [{ english: 'The speaker used incredibly to add detail.', chinese: '说话者用“incredibly”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'entrepreneur', term: 'entrepreneur', normalizedTerm: 'entrepreneur', partOfSpeech: ['noun'],
+    chineseShort: '企业家, 主办人；承包商, 企业家', chineseExplanation: '企业家, 主办人；承包商, 企业家是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Someone who organises a business venture and assumes the risk for it.',
+    examples: [{ english: 'The lesson explains the meaning of entrepreneur.', chinese: '本课解释了“entrepreneur”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'fortnight', term: 'fortnight', normalizedTerm: 'fortnight', partOfSpeech: ['noun'],
+    chineseShort: '两星期', chineseExplanation: '两星期是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A period of fourteen consecutive days.',
+    examples: [{ english: 'The lesson explains the meaning of fortnight.', chinese: '本课解释了“fortnight”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'enclose', term: 'enclose', normalizedTerm: 'enclose', partOfSpeech: ['verb'],
+    chineseShort: '围绕, 圈起, 放入封套, 附上', chineseExplanation: '围绕, 圈起, 放入封套, 附上是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Close in; darkness enclosed him".',
+    examples: [{ english: 'The example shows how to use the verb enclose.', chinese: '这个例子展示了如何使用动词“enclose”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'reportedly', term: 'reportedly', normalizedTerm: 'reportedly', partOfSpeech: ['adverb'],
+    chineseShort: '根据传说, 根据传闻, 据报道', chineseExplanation: '根据传说, 根据传闻, 据报道是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'According to reports or other information.',
+    examples: [{ english: 'The speaker used reportedly to add detail.', chinese: '说话者用“reportedly”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'handicap', term: 'handicap', normalizedTerm: 'handicap', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '障碍, 困难, 不利条件；加障碍于, 妨碍', chineseExplanation: '障碍, 困难, 不利条件；加障碍于, 妨碍是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Advantage given to a competitor to equalize chances of winning.',
+    examples: [{ english: 'The lesson explains the meaning of handicap.', chinese: '本课解释了“handicap”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'uncover', term: 'uncover', normalizedTerm: 'uncover', partOfSpeech: ['verb'],
+    chineseShort: '揭露, 揭开, 暴露, 脱帽致敬；脱帽致敬, 揭去盖子', chineseExplanation: '揭露, 揭开, 暴露, 脱帽致敬；脱帽致敬, 揭去盖子是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Make visible.',
+    examples: [{ english: 'The example shows how to use the verb uncover.', chinese: '这个例子展示了如何使用动词“uncover”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'quid', term: 'quid', normalizedTerm: 'quid', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '一镑金币, 一镑, 咀嚼物', chineseExplanation: '一镑金币, 一镑, 咀嚼物是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The basic unit of money in Great Britain and Northern Ireland; equal to 100 pence n something for something;.',
+    examples: [{ english: 'The lesson explains the meaning of quid.', chinese: '本课解释了“quid”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'referendum', term: 'referendum', normalizedTerm: 'referendum', partOfSpeech: ['noun'],
+    chineseShort: '（就重大政治或社会问题进行的）全民公决，全民投票', chineseExplanation: '（就重大政治或社会问题进行的）全民公决，全民投票是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A legislative act is referred for final approval to a popular vote by the electorate.',
+    examples: [{ english: 'The lesson explains the meaning of referendum.', chinese: '本课解释了“referendum”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'compel', term: 'compel', normalizedTerm: 'compel', partOfSpeech: ['verb'],
+    chineseShort: '强迫, 迫使', chineseExplanation: '强迫, 迫使是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Force somebody to do something.',
+    examples: [{ english: 'The example shows how to use the verb compel.', chinese: '这个例子展示了如何使用动词“compel”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'confrontation', term: 'confrontation', normalizedTerm: 'confrontation', partOfSpeech: ['noun'],
+    chineseShort: '对抗；对质', chineseExplanation: '对抗；对质是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A bold challenge.',
+    examples: [{ english: 'The lesson explains the meaning of confrontation.', chinese: '本课解释了“confrontation”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'organizational', term: 'organisational', normalizedTerm: 'organisational', partOfSpeech: ['adjective'],
+    chineseShort: '组织的；组织的, 编制的, 机构的', chineseExplanation: '组织的；组织的, 编制的, 机构的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Of or relating to an organisation.',
+    examples: [{ english: 'The passage uses organisational to describe the situation.', chinese: '文章用“organisational”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'embark', term: 'embark', normalizedTerm: 'embark', partOfSpeech: ['verb'],
+    chineseShort: '乘船, 着手, 从事, 上飞机；使上船, 使上飞机, 使从事', chineseExplanation: '乘船, 着手, 从事, 上飞机；使上船, 使上飞机, 使从事是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Go on board.',
+    examples: [{ english: 'The example shows how to use the verb embark.', chinese: '这个例子展示了如何使用动词“embark”。' }], level: 3, cefr: 'B2', categories: ['School'],
+  },
+  {
+    id: 'distract', term: 'distract', normalizedTerm: 'distract', partOfSpeech: ['verb', 'adjective'],
+    chineseShort: '转移, 分心, 使发狂', chineseExplanation: '转移, 分心, 使发狂是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Draw someone\'s attention away from something.',
+    examples: [{ english: 'The example shows how to use the verb distract.', chinese: '这个例子展示了如何使用动词“distract”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'planner', term: 'planner', normalizedTerm: 'planner', partOfSpeech: ['noun'],
+    chineseShort: '计划者, 设计者, 安排者；刨床机', chineseExplanation: '计划者, 设计者, 安排者；刨床机是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A person who makes plans.',
+    examples: [{ english: 'The lesson explains the meaning of planner.', chinese: '本课解释了“planner”的含义。' }], level: 3, cefr: 'B2', categories: ['School'],
+  },
+  {
+    id: 'retailer', term: 'retailer', normalizedTerm: 'retailer', partOfSpeech: ['noun'],
+    chineseShort: '零售商人, 传播的人；零售商', chineseExplanation: '零售商人, 传播的人；零售商是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A merchant who sells goods at retail.',
+    examples: [{ english: 'The lesson explains the meaning of retailer.', chinese: '本课解释了“retailer”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'widen', term: 'widen', normalizedTerm: 'widen', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '弄宽, 加宽, 扩大；变宽, 扩大', chineseExplanation: '弄宽, 加宽, 扩大；变宽, 扩大是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Become broader or wider or more extensive.',
+    examples: [{ english: 'The example shows how to use the verb widen.', chinese: '这个例子展示了如何使用动词“widen”。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'revive', term: 'revive', normalizedTerm: 'revive', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '使苏醒, 使复兴, 使振奋, 回想起, 重播；苏醒, 复活, 复兴, 恢复精神', chineseExplanation: '使苏醒, 使复兴, 使振奋, 回想起, 重播；苏醒, 复活, 复兴, 恢复精神是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Be brought back to life, consciousness, or strength.',
+    examples: [{ english: 'The example shows how to use the verb revive.', chinese: '这个例子展示了如何使用动词“revive”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'plunge', term: 'plunge', normalizedTerm: 'plunge', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '钻进, 跳进, 跳水, 跳水池, 猛跌, 落下, 投入, 开始从事, 盲目投资；投入, 投身于, 跳进, 陷入, 下降', chineseExplanation: '钻进, 跳进, 跳水, 跳水池, 猛跌, 落下, 投入, 开始从事, 盲目投资；投入, 投身于, 跳进, 陷入, 下降是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A steep and rapid fall.',
+    examples: [{ english: 'The example shows how to use the verb plunge.', chinese: '这个例子展示了如何使用动词“plunge”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'unfold', term: 'unfold', normalizedTerm: 'unfold', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '展开, 打开, 披露, 开展, 挑明；伸展, 开花, 呈现', chineseExplanation: '展开, 打开, 披露, 开展, 挑明；伸展, 开花, 呈现是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Open to the view.',
+    examples: [{ english: 'The example shows how to use the verb unfold.', chinese: '这个例子展示了如何使用动词“unfold”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'independently', term: 'independently', normalizedTerm: 'independently', partOfSpeech: ['adverb'],
+    chineseShort: '独立地, 自立地', chineseExplanation: '独立地, 自立地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'On your own; without outside help.',
+    examples: [{ english: 'The speaker used independently to add detail.', chinese: '说话者用“independently”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'blink', term: 'blink', normalizedTerm: 'blink', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '眨眼, 闪亮；眨眼, 使闪亮', chineseExplanation: '眨眼, 闪亮；眨眼, 使闪亮是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A reflex that closes and opens the eyes rapidly.',
+    examples: [{ english: 'The example shows how to use the verb blink.', chinese: '这个例子展示了如何使用动词“blink”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'yacht', term: 'yacht', normalizedTerm: 'yacht', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '快艇, 游艇；驾游艇, 乘游艇', chineseExplanation: '快艇, 游艇；驾游艇, 乘游艇是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An expensive vessel propelled by sail or power and used for cruising or racing.',
+    examples: [{ english: 'The lesson explains the meaning of yacht.', chinese: '本课解释了“yacht”的含义。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'referee', term: 'referee', normalizedTerm: 'referee', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '仲裁人, 调解人, 裁判员；仲裁, 裁判', chineseExplanation: '仲裁人, 调解人, 裁判员；仲裁, 裁判是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: '(sports) the chief official (as in boxing or American football) who is expected to ensure fair play.',
+    examples: [{ english: 'The lesson explains the meaning of referee.', chinese: '本课解释了“referee”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'forbid', term: 'forbid', normalizedTerm: 'forbid', partOfSpeech: ['verb'],
+    chineseShort: '禁止, 不准, 妨碍；不许, 禁止, 阻止', chineseExplanation: '禁止, 不准, 妨碍；不许, 禁止, 阻止是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Command against.',
+    examples: [{ english: 'The example shows how to use the verb forbid.', chinese: '这个例子展示了如何使用动词“forbid”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'underline', term: 'underline', normalizedTerm: 'underline', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '在...下面划线, 作...的衬里, 强调；下划线, 图下说明文字', chineseExplanation: '在...下面划线, 作...的衬里, 强调；下划线, 图下说明文字是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Draw a line or lines underneath to call attention to.',
+    examples: [{ english: 'The example shows how to use the verb underline.', chinese: '这个例子展示了如何使用动词“underline”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'landmark', term: 'landmark', normalizedTerm: 'landmark', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '陆标, 划时代的事, 地界标；界标', chineseExplanation: '陆标, 划时代的事, 地界标；界标是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The position of a prominent or well-known object in a particular landscape.',
+    examples: [{ english: 'The lesson explains the meaning of landmark.', chinese: '本课解释了“landmark”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'grape', term: 'grape', normalizedTerm: 'grape', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '葡萄, 葡萄树；葡萄', chineseExplanation: '葡萄, 葡萄树；葡萄是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Any of various juicy fruit of the genus Vitis with green or purple skins; grow in clusters.',
+    examples: [{ english: 'The lesson explains the meaning of grape.', chinese: '本课解释了“grape”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'inappropriate', term: 'inappropriate', normalizedTerm: 'inappropriate', partOfSpeech: ['adjective'],
+    chineseShort: '不适当的, 不相称的', chineseExplanation: '不适当的, 不相称的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Not suitable for a particular occasion etc.',
+    examples: [{ english: 'The passage uses inappropriate to describe the situation.', chinese: '文章用“inappropriate”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'overwhelm', term: 'overwhelm', normalizedTerm: 'overwhelm', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '淹没, 受打击, 制服, 压倒, 使不知所措；打翻, 倾覆, 覆盖', chineseExplanation: '淹没, 受打击, 制服, 压倒, 使不知所措；打翻, 倾覆, 覆盖是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Overcome, as with emotions or perceptual stimuli.',
+    examples: [{ english: 'The example shows how to use the verb overwhelm.', chinese: '这个例子展示了如何使用动词“overwhelm”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'quarry', term: 'quarry', normalizedTerm: 'quarry', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '采石场, 方形石, 猎物, 被追求物, 来源；挖出, 努力挖掘', chineseExplanation: '采石场, 方形石, 猎物, 被追求物, 来源；挖出, 努力挖掘是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Extract (something such as stones) from or as if from a quarry.',
+    examples: [{ english: 'The lesson explains the meaning of quarry.', chinese: '本课解释了“quarry”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'foreigner', term: 'foreigner', normalizedTerm: 'foreigner', partOfSpeech: ['noun'],
+    chineseShort: '外国人, 外地人；外国人, 进口货, 外国货', chineseExplanation: '外国人, 外地人；外国人, 进口货, 外国货是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A person who comes from a foreign country; someone who does not owe allegiance to your country.',
+    examples: [{ english: 'The lesson explains the meaning of foreigner.', chinese: '本课解释了“foreigner”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'diplomat', term: 'diplomat', normalizedTerm: 'diplomat', partOfSpeech: ['noun'],
+    chineseShort: '外交官, 有外交手腕的人；外交家, 外交官, 有权谋的人', chineseExplanation: '外交官, 有外交手腕的人；外交家, 外交官, 有权谋的人是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An official engaged in international negotiations.',
+    examples: [{ english: 'The lesson explains the meaning of diplomat.', chinese: '本课解释了“diplomat”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'renew', term: 'renew', normalizedTerm: 'renew', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '使更新, 使恢复, 复兴, 修补, 补充, 继续, 重订, 重申, 续借；更新, 重新开始', chineseExplanation: '使更新, 使恢复, 复兴, 修补, 补充, 继续, 重订, 重申, 续借；更新, 重新开始是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Reestablish on a new, usually improved, basis or make new or like new v cause to appear in a new form.',
+    examples: [{ english: 'The example shows how to use the verb renew.', chinese: '这个例子展示了如何使用动词“renew”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'kneel', term: 'kneel', normalizedTerm: 'kneel', partOfSpeech: ['verb'],
+    chineseShort: '跪下', chineseExplanation: '跪下是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Supporting yourself on your knees.',
+    examples: [{ english: 'The example shows how to use the verb kneel.', chinese: '这个例子展示了如何使用动词“kneel”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'nominate', term: 'nominate', normalizedTerm: 'nominate', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '提名, 任命, 命名；提名...为候选人, 指定, 推荐', chineseExplanation: '提名, 任命, 命名；提名...为候选人, 指定, 推荐是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Propose as a candidate for some honor.',
+    examples: [{ english: 'The example shows how to use the verb nominate.', chinese: '这个例子展示了如何使用动词“nominate”。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'follower', term: 'follower', normalizedTerm: 'follower', partOfSpeech: ['noun'],
+    chineseShort: '从者, 属下, 追补者；随动机', chineseExplanation: '从者, 属下, 追补者；随动机是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A person who accepts the leadership of another.',
+    examples: [{ english: 'The lesson explains the meaning of follower.', chinese: '本课解释了“follower”的含义。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'haunt', term: 'haunt', normalizedTerm: 'haunt', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '常到的地方, 生息地；常到, 出没于, 萦绕于', chineseExplanation: '常到的地方, 生息地；常到, 出没于, 萦绕于是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A frequently visited place.',
+    examples: [{ english: 'The example shows how to use the verb haunt.', chinese: '这个例子展示了如何使用动词“haunt”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'comparatively', term: 'comparatively', normalizedTerm: 'comparatively', partOfSpeech: ['adverb'],
+    chineseShort: '比较地, 相对地', chineseExplanation: '比较地, 相对地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'In a relative manner; by comparison to something else.',
+    examples: [{ english: 'The speaker used comparatively to add detail.', chinese: '说话者用“comparatively”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'embody', term: 'embody', normalizedTerm: 'embody', partOfSpeech: ['verb'],
+    chineseShort: '具体表达, 使具体化；合并, 具体化, 具体表现', chineseExplanation: '具体表达, 使具体化；合并, 具体化, 具体表现是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Represent, as of a character on stage.',
+    examples: [{ english: 'The example shows how to use the verb embody.', chinese: '这个例子展示了如何使用动词“embody”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'vinegar', term: 'vinegar', normalizedTerm: 'vinegar', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '醋, 尖酸刻薄；加醋于', chineseExplanation: '醋, 尖酸刻薄；加醋于是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Sour-tasting liquid produced usually by oxidation of the alcohol in wine or cider and used as a condiment or food preservative.',
+    examples: [{ english: 'The lesson explains the meaning of vinegar.', chinese: '本课解释了“vinegar”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'organizer', term: 'organiser', normalizedTerm: 'organiser', partOfSpeech: ['noun'],
+    chineseShort: '组织者, 编制者, 创立者, 组织导体；组织导体, 机化中心', chineseExplanation: '组织者, 编制者, 创立者, 组织导体；组织导体, 机化中心是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A person who brings order and organisation to an enterprise.',
+    examples: [{ english: 'The lesson explains the meaning of organiser.', chinese: '本课解释了“organiser”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'junk', term: 'junk', normalizedTerm: 'junk', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '垃圾, 乌七八糟的东西, 舢板；清除', chineseExplanation: '垃圾, 乌七八糟的东西, 舢板；清除是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Any of various Chinese boats with a high poop and lugsails.',
+    examples: [{ english: 'The lesson explains the meaning of junk.', chinese: '本课解释了“junk”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'greenhouse', term: 'greenhouse', normalizedTerm: 'greenhouse', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '温室', chineseExplanation: '温室是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A building with glass walls and roof; for the cultivation and exhibition of plants under controlled conditions.',
+    examples: [{ english: 'The lesson explains the meaning of greenhouse.', chinese: '本课解释了“greenhouse”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'pledge', term: 'pledge', normalizedTerm: 'pledge', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '诺言, 保证, 誓言, 抵押, 信物, 保人, 祝愿；许诺, 保证, 使发誓, 抵押, 典当, 举杯祝...健康', chineseExplanation: '诺言, 保证, 誓言, 抵押, 信物, 保人, 祝愿；许诺, 保证, 使发誓, 抵押, 典当, 举杯祝...健康是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A deposit of personal property as security for a debt.',
+    examples: [{ english: 'The lesson explains the meaning of pledge.', chinese: '本课解释了“pledge”的含义。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'yarn', term: 'yarn', normalizedTerm: 'yarn', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '纱, 纱线, 故事；纱', chineseExplanation: '纱, 纱线, 故事；纱是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Tell or spin a yarn.',
+    examples: [{ english: 'The lesson explains the meaning of yarn.', chinese: '本课解释了“yarn”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'appetite', term: 'appetite', normalizedTerm: 'appetite', partOfSpeech: ['noun'],
+    chineseShort: '食欲, 欲望, 爱好；食欲', chineseExplanation: '食欲, 欲望, 爱好；食欲是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A feeling of craving something.',
+    examples: [{ english: 'The lesson explains the meaning of appetite.', chinese: '本课解释了“appetite”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'referral', term: 'referral', normalizedTerm: 'referral', partOfSpeech: ['noun'],
+    chineseShort: '参照, 介绍, 被介绍人, 转诊病人', chineseExplanation: '参照, 介绍, 被介绍人, 转诊病人是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A person whose case has been referred to a specialist or professional group.',
+    examples: [{ english: 'The lesson explains the meaning of referral.', chinese: '本课解释了“referral”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'luxury', term: 'luxury', normalizedTerm: 'luxury', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '奢侈, 豪华；奢侈的, 豪华的', chineseExplanation: '奢侈, 豪华；奢侈的, 豪华的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Something that is an indulgence rather than a necessity.',
+    examples: [{ english: 'The lesson explains the meaning of luxury.', chinese: '本课解释了“luxury”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'tenth', term: 'tenth', normalizedTerm: 'tenth', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '第十, 十分之一', chineseExplanation: '第十, 十分之一是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Position ten in a countable series of things.',
+    examples: [{ english: 'The lesson explains the meaning of tenth.', chinese: '本课解释了“tenth”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'incidentally', term: 'incidentally', normalizedTerm: 'incidentally', partOfSpeech: ['adverb'],
+    chineseShort: '伴随地, 偶然, 顺便', chineseExplanation: '伴随地, 偶然, 顺便是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Of a minor or subordinate nature.',
+    examples: [{ english: 'The speaker used incidentally to add detail.', chinese: '说话者用“incidentally”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'juvenile', term: 'juvenile', normalizedTerm: 'juvenile', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '少年, 少年读物；少年的, 不成熟的, 适于少年的', chineseExplanation: '少年, 少年读物；少年的, 不成熟的, 适于少年的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A young person, not fully developed.',
+    examples: [{ english: 'The passage uses juvenile to describe the situation.', chinese: '文章用“juvenile”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'repay', term: 'repay', normalizedTerm: 'repay', partOfSpeech: ['verb'],
+    chineseShort: '偿还, 报答, 报复', chineseExplanation: '偿还, 报答, 报复是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Pay back v make repayment for or return something v act or give recompense in recognition of someone\'s behaviour or actions v answer back.',
+    examples: [{ english: 'The example shows how to use the verb repay.', chinese: '这个例子展示了如何使用动词“repay”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'torture', term: 'torture', normalizedTerm: 'torture', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '拷问, 苦闷；拷问, 曲解, 折磨, 使弯曲', chineseExplanation: '拷问, 苦闷；拷问, 曲解, 折磨, 使弯曲是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Unbearable physical pain.',
+    examples: [{ english: 'The lesson explains the meaning of torture.', chinese: '本课解释了“torture”的含义。' }], level: 3, cefr: 'B2', categories: ['Academic'],
+  },
+  {
+    id: 'fountain', term: 'fountain', normalizedTerm: 'fountain', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '水源, 源, 喷泉, 泉水, 本源；泉', chineseExplanation: '水源, 源, 喷泉, 泉水, 本源；泉是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A structure from which an artificially produced jet of water arises.',
+    examples: [{ english: 'The lesson explains the meaning of fountain.', chinese: '本课解释了“fountain”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'revenge', term: 'revenge', normalizedTerm: 'revenge', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '报仇, 复仇, 报复；报仇, 报复', chineseExplanation: '报仇, 复仇, 报复；报仇, 报复是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Take revenge for a perceived wrong.',
+    examples: [{ english: 'The lesson explains the meaning of revenge.', chinese: '本课解释了“revenge”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'underground', term: 'underground', normalizedTerm: 'underground', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '地下, 地铁, 地道, 秘密活动；地下的, 秘密的', chineseExplanation: '地下, 地铁, 地道, 秘密活动；地下的, 秘密的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A secret group organised to overthrow a government or occupation force.',
+    examples: [{ english: 'The passage uses underground to describe the situation.', chinese: '文章用“underground”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'unclear', term: 'unclear', normalizedTerm: 'unclear', partOfSpeech: ['adjective', 'verb'],
+    chineseShort: '不易了解的, 不清楚的, 含混的', chineseExplanation: '不易了解的, 不清楚的, 含混的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Not clear to the mind.',
+    examples: [{ english: 'The passage uses unclear to describe the situation.', chinese: '文章用“unclear”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'reside', term: 'reside', normalizedTerm: 'reside', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '住, 居留, 属于；居住', chineseExplanation: '住, 居留, 属于；居住是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Make one\'s home in a particular place or community.',
+    examples: [{ english: 'The example shows how to use the verb reside.', chinese: '这个例子展示了如何使用动词“reside”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'query', term: 'query', normalizedTerm: 'query', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '疑问, 疑问号, 质问, 查询；询问, 质问', chineseExplanation: '疑问, 疑问号, 质问, 查询；询问, 质问是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An instance of questioning v pose a question.',
+    examples: [{ english: 'The lesson explains the meaning of query.', chinese: '本课解释了“query”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'lure', term: 'lure', normalizedTerm: 'lure', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '饵, 诱惑；引诱, 诱惑', chineseExplanation: '饵, 诱惑；引诱, 诱惑是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Qualities that attract by seeming to promise some kind of reward.',
+    examples: [{ english: 'The lesson explains the meaning of lure.', chinese: '本课解释了“lure”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'repetition', term: 'repetition', normalizedTerm: 'repetition', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '重复, 背诵, 循环, 复制品, 副本；重复, 反复', chineseExplanation: '重复, 背诵, 循环, 复制品, 副本；重复, 反复是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The act of doing or performing again.',
+    examples: [{ english: 'The lesson explains the meaning of repetition.', chinese: '本课解释了“repetition”的含义。' }], level: 3, cefr: 'B2', categories: ['Technology'],
+  },
+  {
+    id: 'witch', term: 'witch', normalizedTerm: 'witch', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '巫婆, 女巫；施巫术, 迷惑', chineseExplanation: '巫婆, 女巫；施巫术, 迷惑是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A being (usually female) imagined to have special powers derived from the devil.',
+    examples: [{ english: 'The lesson explains the meaning of witch.', chinese: '本课解释了“witch”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'forge', term: 'forge', normalizedTerm: 'forge', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '熔炉, 铁工厂；打制, 锻造, 伪造', chineseExplanation: '熔炉, 铁工厂；打制, 锻造, 伪造是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Furnace consisting of a special hearth where metal is heated before shaping.',
+    examples: [{ english: 'The example shows how to use the verb forge.', chinese: '这个例子展示了如何使用动词“forge”。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'disrupt', term: 'disrupt', normalizedTerm: 'disrupt', partOfSpeech: ['verb', 'adjective'],
+    chineseShort: '分裂的, 中断的；使分裂, 使瓦解', chineseExplanation: '分裂的, 中断的；使分裂, 使瓦解是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Throw into disorder.',
+    examples: [{ english: 'The example shows how to use the verb disrupt.', chinese: '这个例子展示了如何使用动词“disrupt”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'postpone', term: 'postpone', normalizedTerm: 'postpone', partOfSpeech: ['verb'],
+    chineseShort: '延迟, 使延期, 缓办, 搁延；延缓, 延缓发作', chineseExplanation: '延迟, 使延期, 缓办, 搁延；延缓, 延缓发作是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Hold back to a later time.',
+    examples: [{ english: 'The example shows how to use the verb postpone.', chinese: '这个例子展示了如何使用动词“postpone”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'resentment', term: 'resentment', normalizedTerm: 'resentment', partOfSpeech: ['noun'],
+    chineseShort: '怨恨, 愤恨', chineseExplanation: '怨恨, 愤恨是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A feeling of deep and bitter anger and ill-will.',
+    examples: [{ english: 'The lesson explains the meaning of resentment.', chinese: '本课解释了“resentment”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'gradual', term: 'gradual', normalizedTerm: 'gradual', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '逐渐的, 渐增的；弥撒升阶圣歌', chineseExplanation: '逐渐的, 渐增的；弥撒升阶圣歌是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: '(Roman Catholic Church) an antiphon (usually from the Book of Psalms) immediately after the epistle at Mass.',
+    examples: [{ english: 'The passage uses gradual to describe the situation.', chinese: '文章用“gradual”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['School'],
+  },
+  {
+    id: 'quotation', term: 'quotation', normalizedTerm: 'quotation', partOfSpeech: ['noun'],
+    chineseShort: '引用语, 语录, 牌价, 报价；报价', chineseExplanation: '引用语, 语录, 牌价, 报价；报价是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A passage or expression that is quoted or cited.',
+    examples: [{ english: 'The lesson explains the meaning of quotation.', chinese: '本课解释了“quotation”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'insider', term: 'insider', normalizedTerm: 'insider', partOfSpeech: ['noun'],
+    chineseShort: '内部的人, 权威人士, 知道内情的人；熟悉内情者', chineseExplanation: '内部的人, 权威人士, 知道内情的人；熟悉内情者是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An officer of a corporation or others who have access to private information about the corporation\'s operations.',
+    examples: [{ english: 'The lesson explains the meaning of insider.', chinese: '本课解释了“insider”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'grim', term: 'grim', normalizedTerm: 'grim', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '冷酷的, 坚强的, 残忍的, 可怕的, 讨厌的', chineseExplanation: '冷酷的, 坚强的, 残忍的, 可怕的, 讨厌的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Not to be placated or appeased or moved by entreaty.',
+    examples: [{ english: 'The passage uses grim to describe the situation.', chinese: '文章用“grim”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'bead', term: 'bead', normalizedTerm: 'bead', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '珠子, 滴；用珠装饰', chineseExplanation: '珠子, 滴；用珠装饰是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A small ball with a hole through the middle.',
+    examples: [{ english: 'The lesson explains the meaning of bead.', chinese: '本课解释了“bead”的含义。' }], level: 3, cefr: 'B2', categories: ['School'],
+  },
+  {
+    id: 'resilience', term: 'resilience', normalizedTerm: 'resilience', partOfSpeech: ['noun'],
+    chineseShort: '韧性；恢复力', chineseExplanation: '经历困难、压力或变化后恢复并继续前进的能力。', englishDefinition: 'The ability to recover and continue after difficulty, pressure, or change.',
+    examples: [{ english: 'The team showed resilience after losing the first match.', chinese: '输掉第一场比赛后，球队表现出了韧性。' }], level: 3, cefr: 'B2', categories: ['Academic', 'Daily English'],
+  },
+  {
+    id: 'believer', term: 'believer', normalizedTerm: 'believer', partOfSpeech: ['noun'],
+    chineseShort: '信徒', chineseExplanation: '信徒是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A supporter who accepts something as true.',
+    examples: [{ english: 'The lesson explains the meaning of believer.', chinese: '本课解释了“believer”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'renewal', term: 'renewal', normalizedTerm: 'renewal', partOfSpeech: ['noun'],
+    chineseShort: '更新, 革新, 复兴, 恢复, 修补, 补充, 继续, 重订, 重申, 续借；更新, 换新, 重申', chineseExplanation: '更新, 革新, 复兴, 恢复, 修补, 补充, 继续, 重订, 重申, 续借；更新, 换新, 重申是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The act of renewing.',
+    examples: [{ english: 'The lesson explains the meaning of renewal.', chinese: '本课解释了“renewal”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'rebellion', term: 'rebellion', normalizedTerm: 'rebellion', partOfSpeech: ['noun'],
+    chineseShort: '谋反, 叛乱, 反抗；造反, 反叛, 叛乱', chineseExplanation: '谋反, 叛乱, 反抗；造反, 反叛, 叛乱是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Refusal to accept some authority or code or convention.',
+    examples: [{ english: 'The lesson explains the meaning of rebellion.', chinese: '本课解释了“rebellion”的含义。' }], level: 3, cefr: 'B2', categories: ['Technology'],
+  },
+  {
+    id: 'grind', term: 'grind', normalizedTerm: 'grind', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '磨, 碾, 苦差, 摩擦声, 用功的学生；磨擦, 磨碎, 磨光, 折磨, 压榨', chineseExplanation: '磨, 碾, 苦差, 摩擦声, 用功的学生；磨擦, 磨碎, 磨光, 折磨, 压榨是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The grade of particle fineness to which a substance is ground.',
+    examples: [{ english: 'The example shows how to use the verb grind.', chinese: '这个例子展示了如何使用动词“grind”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'keyboard', term: 'keyboard', normalizedTerm: 'keyboard', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '键盘；键盘', chineseExplanation: '键盘；键盘是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Device consisting of a set of keys on a piano or organ or typewriter or typesetting machine or computer or the like.',
+    examples: [{ english: 'The lesson explains the meaning of keyboard.', chinese: '本课解释了“keyboard”的含义。' }], level: 3, cefr: 'B2', categories: ['Technology'],
+  },
+  {
+    id: 'vanilla', term: 'vanilla', normalizedTerm: 'vanilla', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '香草, 香子兰', chineseExplanation: '香草, 香子兰是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Any of numerous climbing plants of the genus Vanilla having fleshy leaves and clusters of large waxy highly fragrant white or green or topaz flowers.',
+    examples: [{ english: 'The lesson explains the meaning of vanilla.', chinese: '本课解释了“vanilla”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'insure', term: 'insure', normalizedTerm: 'insure', partOfSpeech: ['verb'],
+    chineseShort: '保险, 确保；投保', chineseExplanation: '保险, 确保；投保是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Take out insurance for.',
+    examples: [{ english: 'The example shows how to use the verb insure.', chinese: '这个例子展示了如何使用动词“insure”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'graphic', term: 'graphic', normalizedTerm: 'graphic', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '生动的, 轮廓分明的, 绘画似的, 图解的；图形的', chineseExplanation: '生动的, 轮廓分明的, 绘画似的, 图解的；图形的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An image that is generated by a computer.',
+    examples: [{ english: 'The passage uses graphic to describe the situation.', chinese: '文章用“graphic”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Technology'],
+  },
+  {
+    id: 'grill', term: 'grill', normalizedTerm: 'grill', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '烤架, 铁格子, 烤肉；烧, 烤, 严加盘问, 给...装栅栏', chineseExplanation: '烤架, 铁格子, 烤肉；烧, 烤, 严加盘问, 给...装栅栏是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A framework of metal bars used as a partition or a grate.',
+    examples: [{ english: 'The lesson explains the meaning of grill.', chinese: '本课解释了“grill”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'innocence', term: 'innocence', normalizedTerm: 'innocence', partOfSpeech: ['noun'],
+    chineseShort: '无罪, 无知, 天真无邪；无罪, 无罪的人, 清白无辜者', chineseExplanation: '无罪, 无知, 天真无邪；无罪, 无罪的人, 清白无辜者是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A state or condition of being innocent of a specific crime or offence.',
+    examples: [{ english: 'The lesson explains the meaning of innocence.', chinese: '本课解释了“innocence”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'optimism', term: 'optimism', normalizedTerm: 'optimism', partOfSpeech: ['noun'],
+    chineseShort: '乐观主义, 乐观, 乐天；乐观主义, 乐观', chineseExplanation: '乐观主义, 乐观, 乐天；乐观主义, 乐观是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The optimistic feeling that all is going to turn out well.',
+    examples: [{ english: 'The lesson explains the meaning of optimism.', chinese: '本课解释了“optimism”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'folly', term: 'folly', normalizedTerm: 'folly', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '愚蠢, 荒唐事, 讽刺剧', chineseExplanation: '愚蠢, 荒唐事, 讽刺剧是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The trait of acting stupidly or rashly.',
+    examples: [{ english: 'The lesson explains the meaning of folly.', chinese: '本课解释了“folly”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'jointly', term: 'jointly', normalizedTerm: 'jointly', partOfSpeech: ['adverb'],
+    chineseShort: '共同地, 连带地', chineseExplanation: '共同地, 连带地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'In collaboration or cooperation.',
+    examples: [{ english: 'The speaker used jointly to add detail.', chinese: '说话者用“jointly”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'posture', term: 'posture', normalizedTerm: 'posture', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '姿势, 态度, 情形, 形势；作...的姿势', chineseExplanation: '姿势, 态度, 情形, 形势；作...的姿势是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The arrangement of the body and its limbs n characteristic way of bearing one\'s body n a rationalized mental attitude n capability in terms of personnel and materiel that affect the capacity to…',
+    examples: [{ english: 'The lesson explains the meaning of posture.', chinese: '本课解释了“posture”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'solidarity', term: 'solidarity', normalizedTerm: 'solidarity', partOfSpeech: ['noun'],
+    chineseShort: '团结, 团结一致, 共同一致；团结, 共同责任', chineseExplanation: '团结, 团结一致, 共同一致；团结, 共同责任是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A union of interests or purposes or sympathies among members of a group.',
+    examples: [{ english: 'The lesson explains the meaning of solidarity.', chinese: '本课解释了“solidarity”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'repayment', term: 'repayment', normalizedTerm: 'repayment', partOfSpeech: ['noun'],
+    chineseShort: '付还, 偿还, 报复, 付还的钱；偿还, 付还', chineseExplanation: '付还, 偿还, 报复, 付还的钱；偿还, 付还是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Payment of a debt or obligation.',
+    examples: [{ english: 'The lesson explains the meaning of repayment.', chinese: '本课解释了“repayment”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'discard', term: 'discard', normalizedTerm: 'discard', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '丢弃, 抛弃；垫牌', chineseExplanation: '丢弃, 抛弃；垫牌是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Anything that is cast aside or discarded.',
+    examples: [{ english: 'The example shows how to use the verb discard.', chinese: '这个例子展示了如何使用动词“discard”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'reservoir', term: 'reservoir', normalizedTerm: 'reservoir', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '贮水池, 贮藏处, 贮备, 水库；储藏', chineseExplanation: '贮水池, 贮藏处, 贮备, 水库；储藏是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A large or extra supply of something.',
+    examples: [{ english: 'The lesson explains the meaning of reservoir.', chinese: '本课解释了“reservoir”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'landowner', term: 'landowner', normalizedTerm: 'landowner', partOfSpeech: ['noun'],
+    chineseShort: '地主；土地所有人, 地主', chineseExplanation: '地主；土地所有人, 地主是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A holder or proprietor of land.',
+    examples: [{ english: 'The lesson explains the meaning of landowner.', chinese: '本课解释了“landowner”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'wardrobe', term: 'wardrobe', normalizedTerm: 'wardrobe', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '衣橱, 衣室, 全部衣服', chineseExplanation: '衣橱, 衣室, 全部衣服是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A tall piece of furniture that provides storage space for clothes; has a door and rails or hooks for hanging clothes.',
+    examples: [{ english: 'The lesson explains the meaning of wardrobe.', chinese: '本课解释了“wardrobe”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'renaissance', term: 'renaissance', normalizedTerm: 'renaissance', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '复活, 复兴, 文艺复兴；文艺复兴的', chineseExplanation: '复活, 复兴, 文艺复兴；文艺复兴的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The period of European history at the close of the Middle Ages and the rise of the modern world; a cultural rebirth from the 14th through the middle of the 17th centuries.',
+    examples: [{ english: 'The lesson explains the meaning of renaissance.', chinese: '本课解释了“renaissance”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'portable', term: 'portable', normalizedTerm: 'portable', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '可携带的, 可搬运的, 可移动的；可移植的', chineseExplanation: '可携带的, 可搬运的, 可移动的；可移植的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A small light typewriter; usually with a case in which it can be carried.',
+    examples: [{ english: 'The passage uses portable to describe the situation.', chinese: '文章用“portable”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'variant', term: 'variant', normalizedTerm: 'variant', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '变体, 异体；不同的, 有差别的', chineseExplanation: '变体, 异体；不同的, 有差别的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Differing from a norm or standard.',
+    examples: [{ english: 'The lesson explains the meaning of variant.', chinese: '本课解释了“variant”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'memorandum', term: 'memorandum', normalizedTerm: 'memorandum', partOfSpeech: ['noun'],
+    chineseShort: '备忘录, 外交备忘录, 交易备忘录；备忘录, 便笺, 便函', chineseExplanation: '备忘录, 外交备忘录, 交易备忘录；备忘录, 便笺, 便函是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A written proposal or reminder.',
+    examples: [{ english: 'The lesson explains the meaning of memorandum.', chinese: '本课解释了“memorandum”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'waiter', term: 'waiter', normalizedTerm: 'waiter', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '侍者', chineseExplanation: '侍者是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A person whose occupation is to serve at table (as in a restaurant).',
+    examples: [{ english: 'The lesson explains the meaning of waiter.', chinese: '本课解释了“waiter”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'disciplinary', term: 'disciplinary', normalizedTerm: 'disciplinary', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '训练的, 纪律的, 训诫的；纪律的, 惩戒性的', chineseExplanation: '训练的, 纪律的, 训诫的；纪律的, 惩戒性的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Relating to discipline in behaviour.',
+    examples: [{ english: 'The passage uses disciplinary to describe the situation.', chinese: '文章用“disciplinary”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['School'],
+  },
+  {
+    id: 'angrily', term: 'angrily', normalizedTerm: 'angrily', partOfSpeech: ['adverb'],
+    chineseShort: '愤怒地', chineseExplanation: '愤怒地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'With anger.',
+    examples: [{ english: 'The speaker used angrily to add detail.', chinese: '说话者用“angrily”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'jam', term: 'jam', normalizedTerm: 'jam', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '果酱, 拥塞之物, 堵塞, 困境；挤进, 使塞满, 混杂, 压碎, 使堵塞', chineseExplanation: '果酱, 拥塞之物, 堵塞, 困境；挤进, 使塞满, 混杂, 压碎, 使堵塞是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Preserve of crushed fruit.',
+    examples: [{ english: 'The lesson explains the meaning of jam.', chinese: '本课解释了“jam”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'empathy', term: 'empathy', normalizedTerm: 'empathy', partOfSpeech: ['noun'],
+    chineseShort: '同理心；共情', chineseExplanation: '理解并体会他人感受、处境或观点的能力。', englishDefinition: 'The ability to understand and share another person\'s feelings or perspective.',
+    examples: [{ english: 'Good managers show empathy towards their staff.', chinese: '优秀的管理者会对员工表现出同理心。' }], level: 3, cefr: 'B2', categories: ['Business', 'Daily English'],
+  },
+  {
+    id: 'misconception', term: 'misconception', normalizedTerm: 'misconception', partOfSpeech: ['noun'],
+    chineseShort: '误解；错误观念', chineseExplanation: '因理解不准确而形成的错误想法或看法。', englishDefinition: 'A mistaken belief or idea caused by incorrect understanding.',
+    examples: [{ english: 'The article corrects a common misconception about nutrition.', chinese: '这篇文章纠正了一个关于营养的常见误解。' }], level: 3, cefr: 'B2', categories: ['Academic', 'Daily English'],
+  },
+  {
+    id: 'recount', term: 'recount', normalizedTerm: 'recount', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '详述, 叙述, 重新计算；重新计算', chineseExplanation: '详述, 叙述, 重新计算；重新计算是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An additional (usually a second) count; especially of the votes in a close election.',
+    examples: [{ english: 'The example shows how to use the verb recount.', chinese: '这个例子展示了如何使用动词“recount”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'optical', term: 'optical', normalizedTerm: 'optical', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '眼睛的, 视觉的, 光学的；光学上的, 光学的', chineseExplanation: '眼睛的, 视觉的, 光学的；光学上的, 光学的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Of or relating to or involving light or optics.',
+    examples: [{ english: 'The passage uses optical to describe the situation.', chinese: '文章用“optical”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'paradox', term: 'paradox', normalizedTerm: 'paradox', partOfSpeech: ['noun'],
+    chineseShort: '悖论；矛盾现象', chineseExplanation: '看似自相矛盾，但可能揭示某种事实或道理的说法或情况。', englishDefinition: 'A statement or situation that seems contradictory but may reveal a truth.',
+    examples: [{ english: 'It is a paradox that more choice can make decisions harder.', chinese: '选择越多反而越难决定，这是一种悖论。' }], level: 3, cefr: 'B2', categories: ['Academic'],
+  },
+  {
+    id: 'glare', term: 'glare', normalizedTerm: 'glare', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '闪耀光, 刺眼；发眩光, 瞪视', chineseExplanation: '闪耀光, 刺眼；发眩光, 瞪视是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A light within the field of vision that is brighter than the brightness to which the eyes are adapted.',
+    examples: [{ english: 'The lesson explains the meaning of glare.', chinese: '本课解释了“glare”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'conceptual', term: 'conceptual', normalizedTerm: 'conceptual', partOfSpeech: ['adjective'],
+    chineseShort: '概念的；概念的', chineseExplanation: '概念的；概念的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Being or characterised by concepts or their formation.',
+    examples: [{ english: 'The passage uses conceptual to describe the situation.', chinese: '文章用“conceptual”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'visa', term: 'visa', normalizedTerm: 'visa', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '签证；签发', chineseExplanation: '签证；签发是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An endorsement made in a passport that allows the bearer to enter the country issuing it.',
+    examples: [{ english: 'The lesson explains the meaning of visa.', chinese: '本课解释了“visa”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'overhead', term: 'overhead', normalizedTerm: 'overhead', partOfSpeech: ['adjective', 'adverb'],
+    chineseShort: '经常开支, 普通用费, 天花板；在头上的, 高架的', chineseExplanation: '经常开支, 普通用费, 天花板；在头上的, 高架的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: '(nautical) the top surface of an enclosed space on a ship.',
+    examples: [{ english: 'The passage uses overhead to describe the situation.', chinese: '文章用“overhead”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'vivid', term: 'vivid', normalizedTerm: 'vivid', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '生动的, 鲜明的, 鲜艳的, 活泼的, 逼真的, 清晰的', chineseExplanation: '生动的, 鲜明的, 鲜艳的, 活泼的, 逼真的, 清晰的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Having the clarity and freshness of immediate experience.',
+    examples: [{ english: 'The passage uses vivid to describe the situation.', chinese: '文章用“vivid”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'warden', term: 'warden', normalizedTerm: 'warden', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '典狱官, 渔猎法监督官, 看守人；看守人, 监护人, 管理员', chineseExplanation: '典狱官, 渔猎法监督官, 看守人；看守人, 监护人, 管理员是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The chief official in charge of a prison.',
+    examples: [{ english: 'The lesson explains the meaning of warden.', chinese: '本课解释了“warden”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'poison', term: 'poison', normalizedTerm: 'poison', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '毒药, 毒, 毒物, 有毒害的事物；毒害, 毒杀, 使中毒', chineseExplanation: '毒药, 毒, 毒物, 有毒害的事物；毒害, 毒杀, 使中毒是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Any substance that causes injury or illness or death of a living organism.',
+    examples: [{ english: 'The lesson explains the meaning of poison.', chinese: '本课解释了“poison”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'indulge', term: 'indulge', normalizedTerm: 'indulge', partOfSpeech: ['verb'],
+    chineseShort: '纵情于, 使高兴, 放任, 迁就；沉溺', chineseExplanation: '纵情于, 使高兴, 放任, 迁就；沉溺是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Give free rein to.',
+    examples: [{ english: 'The example shows how to use the verb indulge.', chinese: '这个例子展示了如何使用动词“indulge”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'disguise', term: 'disguise', normalizedTerm: 'disguise', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '假面目, 假装；假装, 隐瞒', chineseExplanation: '假面目, 假装；假装, 隐瞒是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An outward semblance that misrepresents the true nature of something.',
+    examples: [{ english: 'The lesson explains the meaning of disguise.', chinese: '本课解释了“disguise”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'obsession', term: 'obsession', normalizedTerm: 'obsession', partOfSpeech: ['noun'],
+    chineseShort: '困扰, 困扰人的情绪；强迫观念', chineseExplanation: '困扰, 困扰人的情绪；强迫观念是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An unhealthy and compulsive preoccupation with something or someone.',
+    examples: [{ english: 'The lesson explains the meaning of obsession.', chinese: '本课解释了“obsession”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'obscure', term: 'obscure', normalizedTerm: 'obscure', partOfSpeech: ['adjective', 'verb'],
+    chineseShort: '模糊的, 昏暗的, 难解的, 晦涩的, 偏僻的, 微贱的, 无名的；使变暗, 隐藏, 使变模糊, 使难解', chineseExplanation: '模糊的, 昏暗的, 难解的, 晦涩的, 偏僻的, 微贱的, 无名的；使变暗, 隐藏, 使变模糊, 使难解是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Make less visible or unclear.',
+    examples: [{ english: 'The passage uses obscure to describe the situation.', chinese: '文章用“obscure”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'melody', term: 'melody', normalizedTerm: 'melody', partOfSpeech: ['noun'],
+    chineseShort: '曲子, 美妙音乐, 曲调', chineseExplanation: '曲子, 美妙音乐, 曲调是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The perception of pleasant arrangements of musical notes.',
+    examples: [{ english: 'The lesson explains the meaning of melody.', chinese: '本课解释了“melody”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'memoir', term: 'memoir', normalizedTerm: 'memoir', partOfSpeech: ['noun'],
+    chineseShort: '传记, 实录, 追思录, 回忆录, 自传；研究报告', chineseExplanation: '传记, 实录, 追思录, 回忆录, 自传；研究报告是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An account of the author\'s personal experiences.',
+    examples: [{ english: 'The lesson explains the meaning of memoir.', chinese: '本课解释了“memoir”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'salesman', term: 'salesman', normalizedTerm: 'salesman', partOfSpeech: ['noun'],
+    chineseShort: '售货员, 推销员；售货员, 店员, 推销员', chineseExplanation: '售货员, 推销员；售货员, 店员, 推销员是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A man salesperson.',
+    examples: [{ english: 'The lesson explains the meaning of salesman.', chinese: '本课解释了“salesman”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'unreasonable', term: 'unreasonable', normalizedTerm: 'unreasonable', partOfSpeech: ['adjective'],
+    chineseShort: '不合理的, 过度的, 不切实际的；不讲道理的, 非理智的, 不合理的', chineseExplanation: '不合理的, 过度的, 不切实际的；不讲道理的, 非理智的, 不合理的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Not reasonable; not showing good judgement.',
+    examples: [{ english: 'The passage uses unreasonable to describe the situation.', chinese: '文章用“unreasonable”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'meadow', term: 'meadow', normalizedTerm: 'meadow', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '草地, 牧场', chineseExplanation: '草地, 牧场是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A field where grass or alfalfa are grown to be made into hay.',
+    examples: [{ english: 'The lesson explains the meaning of meadow.', chinese: '本课解释了“meadow”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'eldest', term: 'eldest', normalizedTerm: 'eldest', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '最年长的, 排行中第一的；最年长者, 排行中第一者', chineseExplanation: '最年长的, 排行中第一的；最年长者, 排行中第一者是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The offspring who came first in the order of birth s first in order of birth.',
+    examples: [{ english: 'The passage uses eldest to describe the situation.', chinese: '文章用“eldest”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'plug', term: 'plug', normalizedTerm: 'plug', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '塞子, 栓, 插头；插入, 塞住, 接插头', chineseExplanation: '塞子, 栓, 插头；插入, 塞住, 接插头是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Blockage consisting of an object designed to fill a hole tightly.',
+    examples: [{ english: 'The lesson explains the meaning of plug.', chinese: '本课解释了“plug”的含义。' }], level: 3, cefr: 'B2', categories: ['Technology'],
+  },
+  {
+    id: 'wallet', term: 'wallet', normalizedTerm: 'wallet', partOfSpeech: ['noun'],
+    chineseShort: '皮夹；皮包, 皮夹, 钱袋', chineseExplanation: '皮夹；皮包, 皮夹, 钱袋是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A pocket-size case for holding papers and paper money.',
+    examples: [{ english: 'The lesson explains the meaning of wallet.', chinese: '本课解释了“wallet”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'uneasy', term: 'uneasy', normalizedTerm: 'uneasy', partOfSpeech: ['adjective'],
+    chineseShort: '心神不安的, 不自在的, 不稳定的, 不舒服的', chineseExplanation: '心神不安的, 不自在的, 不稳定的, 不舒服的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Lacking a sense of security or affording no ease or reassurance.',
+    examples: [{ english: 'The passage uses uneasy to describe the situation.', chinese: '文章用“uneasy”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'wildly', term: 'wildly', normalizedTerm: 'wildly', partOfSpeech: ['adverb'],
+    chineseShort: '狂暴地, 激动地, 狂热地, 鲁莽地, 轻率地', chineseExplanation: '狂暴地, 激动地, 狂热地, 鲁莽地, 轻率地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'To an extreme or greatly exaggerated degree.',
+    examples: [{ english: 'The speaker used wildly to add detail.', chinese: '说话者用“wildly”补充细节。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'reluctantly', term: 'reluctantly', normalizedTerm: 'reluctantly', partOfSpeech: ['adverb'],
+    chineseShort: '不情愿地, 勉强地', chineseExplanation: '不情愿地, 勉强地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'With reluctance.',
+    examples: [{ english: 'The speaker used reluctantly to add detail.', chinese: '说话者用“reluctantly”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'vaguely', term: 'vaguely', normalizedTerm: 'vaguely', partOfSpeech: ['adverb'],
+    chineseShort: '含糊地, 暧昧地', chineseExplanation: '含糊地, 暧昧地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'In a vague way.',
+    examples: [{ english: 'The speaker used vaguely to add detail.', chinese: '说话者用“vaguely”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'unusually', term: 'unusually', normalizedTerm: 'unusually', partOfSpeech: ['adverb'],
+    chineseShort: '不寻常地, 异乎寻常地, 非常', chineseExplanation: '不寻常地, 异乎寻常地, 非常是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'To a remarkable degree or extent.',
+    examples: [{ english: 'The speaker used unusually to add detail.', chinese: '说话者用“unusually”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'reluctance', term: 'reluctance', normalizedTerm: 'reluctance', partOfSpeech: ['noun'],
+    chineseShort: '不情愿, 勉强；磁阻', chineseExplanation: '不情愿, 勉强；磁阻是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: '(physics) opposition to magnetic flux (analogous to electric resistance).',
+    examples: [{ english: 'The lesson explains the meaning of reluctance.', chinese: '本课解释了“reluctance”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'quantum', term: 'quantum', normalizedTerm: 'quantum', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '量, 量子；量子', chineseExplanation: '量, 量子；量子是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A discrete amount of something that is analogous to the quantities in quantum theory.',
+    examples: [{ english: 'The lesson explains the meaning of quantum.', chinese: '本课解释了“quantum”的含义。' }], level: 3, cefr: 'B2', categories: ['Academic'],
+  },
+  {
+    id: 'con', term: 'con', normalizedTerm: 'con', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '精读, 仔细研究, 默记；反面地, 从反面', chineseExplanation: '精读, 仔细研究, 默记；反面地, 从反面是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An argument opposed to a proposal.',
+    examples: [{ english: 'The lesson explains the meaning of con.', chinese: '本课解释了“con”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'feast', term: 'feast', normalizedTerm: 'feast', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '宴会, 酒席, 享受, 节日；款待, 享乐, 请客', chineseExplanation: '宴会, 酒席, 享受, 节日；款待, 享乐, 请客是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Something experienced with great delight.',
+    examples: [{ english: 'The lesson explains the meaning of feast.', chinese: '本课解释了“feast”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'indictment', term: 'indictment', normalizedTerm: 'indictment', partOfSpeech: ['noun'],
+    chineseShort: '起诉, 控告, 起诉状；起诉书', chineseExplanation: '起诉, 控告, 起诉状；起诉书是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A formal document written for a prosecuting attorney charging a person with some offence.',
+    examples: [{ english: 'The lesson explains the meaning of indictment.', chinese: '本课解释了“indictment”的含义。' }], level: 3, cefr: 'B2', categories: ['Academic'],
+  },
+  {
+    id: 'interpreter', term: 'interpreter', normalizedTerm: 'interpreter', partOfSpeech: ['noun'],
+    chineseShort: '直译程序, 解释者, 口译者, 注释器；注释器', chineseExplanation: '直译程序, 解释者, 口译者, 注释器；注释器是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Someone who mediates between speakers of different languages.',
+    examples: [{ english: 'The lesson explains the meaning of interpreter.', chinese: '本课解释了“interpreter”的含义。' }], level: 3, cefr: 'B2', categories: ['Technology'],
+  },
+  {
+    id: 'diplomacy', term: 'diplomacy', normalizedTerm: 'diplomacy', partOfSpeech: ['noun'],
+    chineseShort: '外交, 外交手腕, 交际手段；外交, 外交手腕, 权谋', chineseExplanation: '外交, 外交手腕, 交际手段；外交, 外交手腕, 权谋是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Negotiation between nations.',
+    examples: [{ english: 'The lesson explains the meaning of diplomacy.', chinese: '本课解释了“diplomacy”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'unsuccessful', term: 'unsuccessful', normalizedTerm: 'unsuccessful', partOfSpeech: ['adjective'],
+    chineseShort: '不成功的', chineseExplanation: '不成功的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Not successful; having failed or having an unfavorable outcome.',
+    examples: [{ english: 'The passage uses unsuccessful to describe the situation.', chinese: '文章用“unsuccessful”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'instrumental', term: 'instrumental', normalizedTerm: 'instrumental', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '仪器的, 器具的, 可作为手段的；器械的', chineseExplanation: '仪器的, 器具的, 可作为手段的；器械的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Relating to or designed for or performed on musical instruments.',
+    examples: [{ english: 'The passage uses instrumental to describe the situation.', chinese: '文章用“instrumental”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'wartime', term: 'wartime', normalizedTerm: 'wartime', partOfSpeech: ['noun'],
+    chineseShort: '战时', chineseExplanation: '战时是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A period of time during which there is armed conflict.',
+    examples: [{ english: 'The lesson explains the meaning of wartime.', chinese: '本课解释了“wartime”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'notify', term: 'notify', normalizedTerm: 'notify', partOfSpeech: ['verb'],
+    chineseShort: '通知, 通告, 报告；通知', chineseExplanation: '通知, 通告, 报告；通知是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Inform (somebody) of something.',
+    examples: [{ english: 'The example shows how to use the verb notify.', chinese: '这个例子展示了如何使用动词“notify”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'intimacy', term: 'intimacy', normalizedTerm: 'intimacy', partOfSpeech: ['noun'],
+    chineseShort: '亲密, 熟悉, 亲昵行为；亲近的行为, 亲密, 隐私', chineseExplanation: '亲密, 熟悉, 亲昵行为；亲近的行为, 亲密, 隐私是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Close or warm friendship n a usually secretive or illicit sexual relationship n a feeling of being intimate and belonging together.',
+    examples: [{ english: 'The lesson explains the meaning of intimacy.', chinese: '本课解释了“intimacy”的含义。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'pottery', term: 'pottery', normalizedTerm: 'pottery', partOfSpeech: ['noun'],
+    chineseShort: '陶器, 陶器厂；陶器', chineseExplanation: '陶器, 陶器厂；陶器是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Ceramic ware made from clay and baked in a kiln.',
+    examples: [{ english: 'The lesson explains the meaning of pottery.', chinese: '本课解释了“pottery”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'indirectly', term: 'indirectly', normalizedTerm: 'indirectly', partOfSpeech: ['adverb'],
+    chineseShort: '间接, 曲折, 迂回, 不直截了当, 不诚实, 不坦率；间接地', chineseExplanation: '间接, 曲折, 迂回, 不直截了当, 不诚实, 不坦率；间接地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Not in a forthright manner.',
+    examples: [{ english: 'The speaker used indirectly to add detail.', chinese: '说话者用“indirectly”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'optional', term: 'optional', normalizedTerm: 'optional', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '可选择的, 随意的；选购的', chineseExplanation: '可选择的, 随意的；选购的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Possible but not necessary; left to personal choice.',
+    examples: [{ english: 'The passage uses optional to describe the situation.', chinese: '文章用“optional”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'haven', term: 'haven', normalizedTerm: 'haven', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '港, 避难所, 安息所；安置...于港中, 庇护, 入港', chineseExplanation: '港, 避难所, 安息所；安置...于港中, 庇护, 入港是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A shelter serving as a place of safety or sanctuary.',
+    examples: [{ english: 'The lesson explains the meaning of haven.', chinese: '本课解释了“haven”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'constructive', term: 'constructive', normalizedTerm: 'constructive', partOfSpeech: ['adjective'],
+    chineseShort: '建设性的, 构造上的；构成的', chineseExplanation: '建设性的, 构造上的；构成的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Constructing or tending to construct or improve or promote development.',
+    examples: [{ english: 'The passage uses constructive to describe the situation.', chinese: '文章用“constructive”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'jerk', term: 'jerk', normalizedTerm: 'jerk', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '性情古怪的人, 急拉, 肌肉抽搐, 牛肉干；痉挛, 急拉, 急推', chineseExplanation: '性情古怪的人, 急拉, 肌肉抽搐, 牛肉干；痉挛, 急拉, 急推是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A dull stupid fatuous person.',
+    examples: [{ english: 'The lesson explains the meaning of jerk.', chinese: '本课解释了“jerk”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'vicar', term: 'vicar', normalizedTerm: 'vicar', partOfSpeech: ['noun'],
+    chineseShort: '教区牧师, 教堂主持, 代理人；代表, 代理牧师, 代理主教', chineseExplanation: '教区牧师, 教堂主持, 代理人；代表, 代理牧师, 代理主教是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A Roman Catholic priest who acts for another higher-ranking clergyman.',
+    examples: [{ english: 'The lesson explains the meaning of vicar.', chinese: '本课解释了“vicar”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'dim', term: 'dim', normalizedTerm: 'dim', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '暗淡的, 模糊的；使暗淡', chineseExplanation: '暗淡的, 模糊的；使暗淡是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Switch (a car\'s headlights) from a higher to a lower beam.',
+    examples: [{ english: 'The passage uses dim to describe the situation.', chinese: '文章用“dim”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'facial', term: 'facial', normalizedTerm: 'facial', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '美颜, 脸部按摩；脸的, 表面的, 脸部用的', chineseExplanation: '美颜, 脸部按摩；脸的, 表面的, 脸部用的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Cranial nerve that supplies facial muscles.',
+    examples: [{ english: 'The passage uses facial to describe the situation.', chinese: '文章用“facial”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'plantation', term: 'plantation', normalizedTerm: 'plantation', partOfSpeech: ['noun'],
+    chineseShort: '种植园, 大农场, 植树造林, 新开垦地；栽植', chineseExplanation: '种植园, 大农场, 植树造林, 新开垦地；栽植是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An estate where cash crops are grown on a large scale (especially in tropical areas).',
+    examples: [{ english: 'The lesson explains the meaning of plantation.', chinese: '本课解释了“plantation”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'residue', term: 'residue', normalizedTerm: 'residue', partOfSpeech: ['noun'],
+    chineseShort: '残渣, 剩余, 余数；残基', chineseExplanation: '残渣, 剩余, 余数；残基是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Matter that remains after something has been removed.',
+    examples: [{ english: 'The lesson explains the meaning of residue.', chinese: '本课解释了“residue”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'antique', term: 'antique', normalizedTerm: 'antique', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '古董, 古物；古老的, 古风的, 旧式的, 过时的', chineseExplanation: '古董, 古物；古老的, 古风的, 旧式的, 过时的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Any piece of furniture or decorative object or the like produced in a former period and valuable because of its beauty or rarity.',
+    examples: [{ english: 'The passage uses antique to describe the situation.', chinese: '文章用“antique”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'toast', term: 'toast', normalizedTerm: 'toast', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '吐司, 烤面包, 干杯；敬酒, 烤, 使暖和', chineseExplanation: '吐司, 烤面包, 干杯；敬酒, 烤, 使暖和是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Slices of bread that have been toasted.',
+    examples: [{ english: 'The lesson explains the meaning of toast.', chinese: '本课解释了“toast”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'communism', term: 'communism', normalizedTerm: 'communism', partOfSpeech: ['noun'],
+    chineseShort: '共产主义', chineseExplanation: '共产主义是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A form of socialism that abolishes private ownership.',
+    examples: [{ english: 'The lesson explains the meaning of communism.', chinese: '本课解释了“communism”的含义。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'intersection', term: 'intersection', normalizedTerm: 'intersection', partOfSpeech: ['noun'],
+    chineseShort: '交集, 十字路口, 交叉点；逻辑乘', chineseExplanation: '交集, 十字路口, 交叉点；逻辑乘是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A point where lines intersect.',
+    examples: [{ english: 'The lesson explains the meaning of intersection.', chinese: '本课解释了“intersection”的含义。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'kettle', term: 'kettle', normalizedTerm: 'kettle', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '茶壶, 罐；釜体釜', chineseExplanation: '茶壶, 罐；釜体釜是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A metal pot for stewing or boiling; usually has a lid.',
+    examples: [{ english: 'The lesson explains the meaning of kettle.', chinese: '本课解释了“kettle”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'reverend', term: 'reverend', normalizedTerm: 'reverend', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '教士, 大人；应受尊敬的, 教士的', chineseExplanation: '教士, 大人；应受尊敬的, 教士的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A title of respect for a clergyman.',
+    examples: [{ english: 'The lesson explains the meaning of reverend.', chinese: '本课解释了“reverend”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'playground', term: 'playground', normalizedTerm: 'playground', partOfSpeech: ['noun'],
+    chineseShort: '运动场, 操场, 度假胜地, 活动场所', chineseExplanation: '运动场, 操场, 度假胜地, 活动场所是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Yard consisting of an outdoor area for children\'s play.',
+    examples: [{ english: 'The lesson explains the meaning of playground.', chinese: '本课解释了“playground”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'ant', term: 'ant', normalizedTerm: 'ant', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '蚂蚁', chineseExplanation: '蚂蚁是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Social insect living in organised colonies; characteristically the males and fertile queen have wings during breeding season; wingless sterile females are the workers.',
+    examples: [{ english: 'The lesson explains the meaning of ant.', chinese: '本课解释了“ant”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'feminine', term: 'feminine', normalizedTerm: 'feminine', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '女性的, 阴性的, 柔弱的；女性的, 雌性的', chineseExplanation: '女性的, 阴性的, 柔弱的；女性的, 雌性的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A gender that refers chiefly (but not exclusively) to females or to objects classified as female.',
+    examples: [{ english: 'The passage uses feminine to describe the situation.', chinese: '文章用“feminine”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['School'],
+  },
+  {
+    id: 'inexpensive', term: 'inexpensive', normalizedTerm: 'inexpensive', partOfSpeech: ['adjective'],
+    chineseShort: '便宜的, 不贵重的', chineseExplanation: '便宜的, 不贵重的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Relatively low in price or charging low prices.',
+    examples: [{ english: 'The passage uses inexpensive to describe the situation.', chinese: '文章用“inexpensive”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'vegetation', term: 'vegetation', normalizedTerm: 'vegetation', partOfSpeech: ['noun'],
+    chineseShort: '植物；贽生物, 贽疣, 增殖体', chineseExplanation: '植物；贽生物, 贽疣, 增殖体是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'All the plant life in a particular region or period.',
+    examples: [{ english: 'The lesson explains the meaning of vegetation.', chinese: '本课解释了“vegetation”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'underscore', term: 'underscore', normalizedTerm: 'underscore', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '划线于...下；下划线', chineseExplanation: '划线于...下；下划线是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A line drawn underneath (especially under written matter).',
+    examples: [{ english: 'The example shows how to use the verb underscore.', chinese: '这个例子展示了如何使用动词“underscore”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'wan', term: 'wan', normalizedTerm: 'wan', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '苍白的, 无血色的, 病态的, 暗淡的；变苍白', chineseExplanation: '苍白的, 无血色的, 病态的, 暗淡的；变苍白是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Become pale and sickly.',
+    examples: [{ english: 'The lesson explains the meaning of wan.', chinese: '本课解释了“wan”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'kite', term: 'kite', normalizedTerm: 'kite', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '风筝, 筝帆, 空头支票, 骗子；象风筝一样飞, 轻快地移动, 使用空头支票', chineseExplanation: '风筝, 筝帆, 空头支票, 骗子；象风筝一样飞, 轻快地移动, 使用空头支票是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A bank check that has been fraudulently altered to increase its face value.',
+    examples: [{ english: 'The lesson explains the meaning of kite.', chinese: '本课解释了“kite”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'cone', term: 'cone', normalizedTerm: 'cone', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '圆锥体, 球果；使成锥形', chineseExplanation: '圆锥体, 球果；使成锥形是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Any cone-shaped artifact.',
+    examples: [{ english: 'The lesson explains the meaning of cone.', chinese: '本课解释了“cone”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'adaptability', term: 'adaptability', normalizedTerm: 'adaptability', partOfSpeech: ['noun'],
+    chineseShort: '适应能力；适应性', chineseExplanation: '根据新情况、要求或环境灵活改变的能力。', englishDefinition: 'The ability to adjust effectively to new conditions or requirements.',
+    examples: [{ english: 'Adaptability is valuable in a changing workplace.', chinese: '适应能力在不断变化的工作环境中很重要。' }], level: 3, cefr: 'B2', categories: ['Business', 'Academic'],
+  },
+  {
+    id: 'forestry', term: 'forestry', normalizedTerm: 'forestry', partOfSpeech: ['noun'],
+    chineseShort: '林学, 森林地；林地, 林学, 林业', chineseExplanation: '林学, 森林地；林地, 林学, 林业是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The science of planting and caring for forests and the management of growing timber.',
+    examples: [{ english: 'The lesson explains the meaning of forestry.', chinese: '本课解释了“forestry”的含义。' }], level: 3, cefr: 'B2', categories: ['Academic'],
+  },
+  {
+    id: 'rebound', term: 'rebound', normalizedTerm: 'rebound', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '弹回, 返回, 产生事与愿违的结果；使弹回, 使返回', chineseExplanation: '弹回, 返回, 产生事与愿违的结果；使弹回, 使返回是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A reaction to a crisis or setback or frustration.',
+    examples: [{ english: 'The lesson explains the meaning of rebound.', chinese: '本课解释了“rebound”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'velocity', term: 'velocity', normalizedTerm: 'velocity', partOfSpeech: ['noun'],
+    chineseShort: '速度, 迅速；速度', chineseExplanation: '速度, 迅速；速度是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Distance travelled per unit time.',
+    examples: [{ english: 'The lesson explains the meaning of velocity.', chinese: '本课解释了“velocity”的含义。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'gall', term: 'gall', normalizedTerm: 'gall', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '胆汁, 五倍子, 苦味, 肿痛, 恼怒, 磨损处；烦恼, 屈辱, 磨伤', chineseExplanation: '胆汁, 五倍子, 苦味, 肿痛, 恼怒, 磨损处；烦恼, 屈辱, 磨伤是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A skin sore caused by chafing.',
+    examples: [{ english: 'The lesson explains the meaning of gall.', chinese: '本课解释了“gall”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'grammatical', term: 'grammatical', normalizedTerm: 'grammatical', partOfSpeech: ['adjective'],
+    chineseShort: '语法的, 合乎语法的；语法上的, 符合语法规则的, 文法上的', chineseExplanation: '语法的, 合乎语法的；语法上的, 符合语法规则的, 文法上的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Of or pertaining to grammar.',
+    examples: [{ english: 'The passage uses grammatical to describe the situation.', chinese: '文章用“grammatical”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'unfamiliar', term: 'unfamiliar', normalizedTerm: 'unfamiliar', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '不熟悉的', chineseExplanation: '不熟悉的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Not known or well known.',
+    examples: [{ english: 'The passage uses unfamiliar to describe the situation.', chinese: '文章用“unfamiliar”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'toddler', term: 'toddler', normalizedTerm: 'toddler', partOfSpeech: ['noun'],
+    chineseShort: '蹒跚行走的人, 学步的小孩, 学步的幼儿, 信步走的人', chineseExplanation: '蹒跚行走的人, 学步的小孩, 学步的幼儿, 信步走的人是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A young child.',
+    examples: [{ english: 'The lesson explains the meaning of toddler.', chinese: '本课解释了“toddler”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'continuously', term: 'continuously', normalizedTerm: 'continuously', partOfSpeech: ['adverb'],
+    chineseShort: '不断地, 连续地；连续地', chineseExplanation: '不断地, 连续地；连续地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'At every point.',
+    examples: [{ english: 'The speaker used continuously to add detail.', chinese: '说话者用“continuously”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'overtake', term: 'overtake', normalizedTerm: 'overtake', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '赶上, 突然降临于, 压倒, 代替', chineseExplanation: '赶上, 突然降临于, 压倒, 代替是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Catch up with and possibly overtake.',
+    examples: [{ english: 'The example shows how to use the verb overtake.', chinese: '这个例子展示了如何使用动词“overtake”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'revert', term: 'revert', normalizedTerm: 'revert', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '恢复, 复归, 回复, 还原；使回复原状, 使回转', chineseExplanation: '恢复, 复归, 回复, 还原；使回复原状, 使回转是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Go back to a previous state.',
+    examples: [{ english: 'The example shows how to use the verb revert.', chinese: '这个例子展示了如何使用动词“revert”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'resent', term: 'resent', normalizedTerm: 'resent', partOfSpeech: ['verb'],
+    chineseShort: '愤恨, 憎恶, 怨恨', chineseExplanation: '愤恨, 憎恶, 怨恨是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Feel bitter or indignant about.',
+    examples: [{ english: 'The example shows how to use the verb resent.', chinese: '这个例子展示了如何使用动词“resent”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'bleak', term: 'bleak', normalizedTerm: 'bleak', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '萧瑟的, 荒凉的, 阴冷的', chineseExplanation: '萧瑟的, 荒凉的, 阴冷的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Unpleasantly cold and damp.',
+    examples: [{ english: 'The passage uses bleak to describe the situation.', chinese: '文章用“bleak”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'tense', term: 'tense', normalizedTerm: 'tense', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '紧张的, 拉紧的；紧张, 拉紧', chineseExplanation: '紧张的, 拉紧的；紧张, 拉紧是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A grammatical category of verbs used to express distinctions of time.',
+    examples: [{ english: 'The lesson explains the meaning of tense.', chinese: '本课解释了“tense”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'postcard', term: 'postcard', normalizedTerm: 'postcard', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '明信片', chineseExplanation: '明信片是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A card for sending messages by post without an envelope.',
+    examples: [{ english: 'The lesson explains the meaning of postcard.', chinese: '本课解释了“postcard”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'disperse', term: 'disperse', normalizedTerm: 'disperse', partOfSpeech: ['verb', 'adjective'],
+    chineseShort: '分散, 传播, 散开；分散', chineseExplanation: '分散, 传播, 散开；分散是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'To cause to separate and go in different directions.',
+    examples: [{ english: 'The example shows how to use the verb disperse.', chinese: '这个例子展示了如何使用动词“disperse”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'ponder', term: 'ponder', normalizedTerm: 'ponder', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '沉思, 考虑', chineseExplanation: '沉思, 考虑是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Reflect deeply on a subject.',
+    examples: [{ english: 'The example shows how to use the verb ponder.', chinese: '这个例子展示了如何使用动词“ponder”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'complicate', term: 'complicate', normalizedTerm: 'complicate', partOfSpeech: ['verb', 'adjective'],
+    chineseShort: '弄复杂, 使错综, 使恶化；变复杂', chineseExplanation: '弄复杂, 使错综, 使恶化；变复杂是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Make more complicated.',
+    examples: [{ english: 'The example shows how to use the verb complicate.', chinese: '这个例子展示了如何使用动词“complicate”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'sanctuary', term: 'sanctuary', normalizedTerm: 'sanctuary', partOfSpeech: ['noun'],
+    chineseShort: '圣所, 耶路撒冷的神殿, 避难所；庇护所, 避难所, 教堂', chineseExplanation: '圣所, 耶路撒冷的神殿, 避难所；庇护所, 避难所, 教堂是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A consecrated place where sacred objects are kept.',
+    examples: [{ english: 'The lesson explains the meaning of sanctuary.', chinese: '本课解释了“sanctuary”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'unexpectedly', term: 'unexpectedly', normalizedTerm: 'unexpectedly', partOfSpeech: ['adverb'],
+    chineseShort: '想不到的, 突然的, 意外的, 出乎意料的', chineseExplanation: '想不到的, 突然的, 意外的, 出乎意料的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'In a way that was not expected.',
+    examples: [{ english: 'The speaker used unexpectedly to add detail.', chinese: '说话者用“unexpectedly”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'kindly', term: 'kindly', normalizedTerm: 'kindly', partOfSpeech: ['adverb', 'adjective'],
+    chineseShort: '和蔼的, 温和的, 爽快的；温和地, 亲切地', chineseExplanation: '和蔼的, 温和的, 爽快的；温和地, 亲切地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Pleasant and agreeable.',
+    examples: [{ english: 'The speaker used kindly to add detail.', chinese: '说话者用“kindly”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'wary', term: 'wary', normalizedTerm: 'wary', partOfSpeech: ['adjective', 'verb'],
+    chineseShort: '谨慎的, 小心的, 机警的, 周到的, 唯恐的', chineseExplanation: '谨慎的, 小心的, 机警的, 周到的, 唯恐的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Marked by keen caution and watchful prudence.',
+    examples: [{ english: 'The passage uses wary to describe the situation.', chinese: '文章用“wary”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'memorable', term: 'memorable', normalizedTerm: 'memorable', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '值得纪念的, 难忘的', chineseExplanation: '值得纪念的, 难忘的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Worth remembering.',
+    examples: [{ english: 'The passage uses memorable to describe the situation.', chinese: '文章用“memorable”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'congratulate', term: 'congratulate', normalizedTerm: 'congratulate', partOfSpeech: ['verb'],
+    chineseShort: '祝贺, 庆贺', chineseExplanation: '祝贺, 庆贺是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Express congratulations.',
+    examples: [{ english: 'The example shows how to use the verb congratulate.', chinese: '这个例子展示了如何使用动词“congratulate”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'elevate', term: 'elevate', normalizedTerm: 'elevate', partOfSpeech: ['verb', 'adjective'],
+    chineseShort: '举起, 提拔, 鼓舞', chineseExplanation: '举起, 提拔, 鼓舞是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Give a promotion to or assign to a higher position v raise from a lower to a higher position v raise in rank or condition.',
+    examples: [{ english: 'The example shows how to use the verb elevate.', chinese: '这个例子展示了如何使用动词“elevate”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'plaster', term: 'plaster', normalizedTerm: 'plaster', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '石膏, 灰泥, 安慰用品, 膏药；涂以灰泥, 敷以膏药, 掩饰, 使平服, 彻底击败, 减轻, 粘贴', chineseExplanation: '石膏, 灰泥, 安慰用品, 膏药；涂以灰泥, 敷以膏药, 掩饰, 使平服, 彻底击败, 减轻, 粘贴是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A mixture of lime or gypsum with sand and water; hardens into a smooth solid; used to cover walls and ceilings.',
+    examples: [{ english: 'The lesson explains the meaning of plaster.', chinese: '本课解释了“plaster”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'apprentice', term: 'apprentice', normalizedTerm: 'apprentice', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '学徒, 生手；使做学徒', chineseExplanation: '学徒, 生手；使做学徒是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Works for an expert to learn a trade.',
+    examples: [{ english: 'The lesson explains the meaning of apprentice.', chinese: '本课解释了“apprentice”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'solitary', term: 'solitary', normalizedTerm: 'solitary', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '独居者；孤独的, 独居的', chineseExplanation: '独居者；孤独的, 独居的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Confinement of a prisoner in isolation from other prisoners n one who lives in solitude s characterised by or preferring solitude s of plants and animals;.',
+    examples: [{ english: 'The passage uses solitary to describe the situation.', chinese: '文章用“solitary”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'oversight', term: 'oversight', normalizedTerm: 'oversight', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '勘漏, 失察, 失败, 照料；监督权', chineseExplanation: '勘漏, 失察, 失败, 照料；监督权是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An unintentional omission resulting from failure to notice something.',
+    examples: [{ english: 'The lesson explains the meaning of oversight.', chinese: '本课解释了“oversight”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'unbelievable', term: 'unbelievable', normalizedTerm: 'unbelievable', partOfSpeech: ['adjective'],
+    chineseShort: '难以置信的', chineseExplanation: '难以置信的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Beyond belief or understanding s having a probability too low to inspire belief.',
+    examples: [{ english: 'The passage uses unbelievable to describe the situation.', chinese: '文章用“unbelievable”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'jewel', term: 'jewel', normalizedTerm: 'jewel', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '珠宝, 贵重物, 镶珠宝的饰物；饰以珠宝, 镶以宝石', chineseExplanation: '珠宝, 贵重物, 镶珠宝的饰物；饰以珠宝, 镶以宝石是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A precious or semiprecious stone incorporated into a piece of jewellery.',
+    examples: [{ english: 'The lesson explains the meaning of jewel.', chinese: '本课解释了“jewel”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'nominal', term: 'nominal', normalizedTerm: 'nominal', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '名义上的, 名字的, 有名无实的, 稍许的；名词性词', chineseExplanation: '名义上的, 名字的, 有名无实的, 稍许的；名词性词是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Relating to or constituting or bearing or giving a name.',
+    examples: [{ english: 'The passage uses nominal to describe the situation.', chinese: '文章用“nominal”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Academic'],
+  },
+  {
+    id: 'overly', term: 'overly', normalizedTerm: 'overly', partOfSpeech: ['adverb', 'adjective'],
+    chineseShort: '过度地, 极度地', chineseExplanation: '过度地, 极度地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'To a degree exceeding normal or proper limits.',
+    examples: [{ english: 'The speaker used overly to add detail.', chinese: '说话者用“overly”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'disposition', term: 'disposition', normalizedTerm: 'disposition', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '性情, 处置, 处理, 布置；素因, 性情', chineseExplanation: '性情, 处置, 处理, 布置；素因, 性情是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Your usual mood.',
+    examples: [{ english: 'The lesson explains the meaning of disposition.', chinese: '本课解释了“disposition”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'beneficiary', term: 'beneficiary', normalizedTerm: 'beneficiary', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '受惠者, 受益人；受封的', chineseExplanation: '受惠者, 受益人；受封的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The recipient of funds or other benefits.',
+    examples: [{ english: 'The lesson explains the meaning of beneficiary.', chinese: '本课解释了“beneficiary”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'appropriately', term: 'appropriately', normalizedTerm: 'appropriately', partOfSpeech: ['adverb'],
+    chineseShort: '适当的, 恰如其分的, 恰当的, 合适的', chineseExplanation: '适当的, 恰如其分的, 恰当的, 合适的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'In an appropriate manner.',
+    examples: [{ english: 'The speaker used appropriately to add detail.', chinese: '说话者用“appropriately”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'dial', term: 'dial', normalizedTerm: 'dial', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '刻度盘, 钟面, 转盘；拨', chineseExplanation: '刻度盘, 钟面, 转盘；拨是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The face of a timepiece; graduated to show the hours.',
+    examples: [{ english: 'The lesson explains the meaning of dial.', chinese: '本课解释了“dial”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'hail', term: 'hail', normalizedTerm: 'hail', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '冰雹, 致敬, 欢呼, 招呼；向...欢呼, 致敬, 招呼, 使象下雹样落下', chineseExplanation: '冰雹, 致敬, 欢呼, 招呼；向...欢呼, 致敬, 招呼, 使象下雹样落下是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Precipitation of ice pellets when there are strong rising air currents.',
+    examples: [{ english: 'The lesson explains the meaning of hail.', chinese: '本课解释了“hail”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'zoo', term: 'zoo', normalizedTerm: 'zoo', partOfSpeech: ['noun'],
+    chineseShort: '动物园', chineseExplanation: '动物园是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The facility where wild animals are housed for exhibition.',
+    examples: [{ english: 'The lesson explains the meaning of zoo.', chinese: '本课解释了“zoo”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'compartment', term: 'compartment', normalizedTerm: 'compartment', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '分隔间, 卧车包房, 防水舱隔；隔室, 隔间', chineseExplanation: '分隔间, 卧车包房, 防水舱隔；隔室, 隔间是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A space into which an area is subdivided.',
+    examples: [{ english: 'The lesson explains the meaning of compartment.', chinese: '本课解释了“compartment”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'kindergarten', term: 'kindergarten', normalizedTerm: 'kindergarten', partOfSpeech: ['noun'],
+    chineseShort: '幼稚园', chineseExplanation: '幼稚园是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A preschool for children age 4 to 6 to prepare them for primary school.',
+    examples: [{ english: 'The lesson explains the meaning of kindergarten.', chinese: '本课解释了“kindergarten”的含义。' }], level: 3, cefr: 'B2', categories: ['School'],
+  },
+  {
+    id: 'quilt', term: 'quilt', normalizedTerm: 'quilt', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '棉被；加软衬料后缝制, 东拼西凑地编', chineseExplanation: '棉被；加软衬料后缝制, 东拼西凑地编是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Bedding made of two layers of cloth filled with stuffing and stitched together.',
+    examples: [{ english: 'The lesson explains the meaning of quilt.', chinese: '本课解释了“quilt”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'tomb', term: 'tomb', normalizedTerm: 'tomb', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '坟墓, 死亡；埋葬', chineseExplanation: '坟墓, 死亡；埋葬是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A place for the burial of a corpse (especially beneath the ground and marked by a tombstone).',
+    examples: [{ english: 'The lesson explains the meaning of tomb.', chinese: '本课解释了“tomb”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'unrest', term: 'unrest', normalizedTerm: 'unrest', partOfSpeech: ['noun'],
+    chineseShort: '不安的状态, 动荡的局面；不安', chineseExplanation: '不安的状态, 动荡的局面；不安是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A feeling of restless agitation.',
+    examples: [{ english: 'The lesson explains the meaning of unrest.', chinese: '本课解释了“unrest”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'ham', term: 'ham', normalizedTerm: 'ham', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '火腿, 后腿, 笨拙演员；过火的, 做作的', chineseExplanation: '火腿, 后腿, 笨拙演员；过火的, 做作的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Meat cut from the thigh of a hog (usually smoked).',
+    examples: [{ english: 'The lesson explains the meaning of ham.', chinese: '本课解释了“ham”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'fellowship', term: 'fellowship', normalizedTerm: 'fellowship', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '伙伴关系, 共同参与, 团体, 奖学金, 友谊；合伙关系, 研究员薪金, 研究员基金', chineseExplanation: '伙伴关系, 共同参与, 团体, 奖学金, 友谊；合伙关系, 研究员薪金, 研究员基金是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Money granted (by a university or foundation or other agency) for advanced study or research.',
+    examples: [{ english: 'The lesson explains the meaning of fellowship.', chinese: '本课解释了“fellowship”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'velvet', term: 'velvet', normalizedTerm: 'velvet', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '天鹅绒；天鹅绒的', chineseExplanation: '天鹅绒；天鹅绒的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A silky densely piled fabric with a plain back.',
+    examples: [{ english: 'The lesson explains the meaning of velvet.', chinese: '本课解释了“velvet”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'distortion', term: 'distortion', normalizedTerm: 'distortion', partOfSpeech: ['noun'],
+    chineseShort: '扭曲, 变形, 曲解；畸变', chineseExplanation: '扭曲, 变形, 曲解；畸变是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A change for the worse.',
+    examples: [{ english: 'The lesson explains the meaning of distortion.', chinese: '本课解释了“distortion”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'distraction', term: 'distraction', normalizedTerm: 'distraction', partOfSpeech: ['noun'],
+    chineseShort: '娱乐, 分心的事物, 分心；注意力分散, 内脱位, 牙弓过宽', chineseExplanation: '娱乐, 分心的事物, 分心；注意力分散, 内脱位, 牙弓过宽是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Mental turmoil.',
+    examples: [{ english: 'The lesson explains the meaning of distraction.', chinese: '本课解释了“distraction”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'foam', term: 'foam', normalizedTerm: 'foam', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '泡沫, 水沫, 泡沫材料；起泡沫, 吐白沫', chineseExplanation: '泡沫, 水沫, 泡沫材料；起泡沫, 吐白沫是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A mass of small bubbles formed in or on a liquid.',
+    examples: [{ english: 'The lesson explains the meaning of foam.', chinese: '本课解释了“foam”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'blonde', term: 'blonde', normalizedTerm: 'blonde', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '亚麻色的, 淡色的, 白肤金发碧眼的, 白里透红的, 白皙的, 淡黄色的；肤色白皙的金发女人', chineseExplanation: '亚麻色的, 淡色的, 白肤金发碧眼的, 白里透红的, 白皙的, 淡黄色的；肤色白皙的金发女人是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A person with fair skin and hair n a light grayish yellow to near white a being or having light colored skin and hair and usually blue or grey eyes.',
+    examples: [{ english: 'The passage uses blonde to describe the situation.', chinese: '文章用“blonde”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'anticipation', term: 'anticipation', normalizedTerm: 'anticipation', partOfSpeech: ['noun'],
+    chineseShort: '预期, 预料；提前出现', chineseExplanation: '预期, 预料；提前出现是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An expectation.',
+    examples: [{ english: 'The lesson explains the meaning of anticipation.', chinese: '本课解释了“anticipation”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'hastily', term: 'hastily', normalizedTerm: 'hastily', partOfSpeech: ['adverb'],
+    chineseShort: '匆忙地, 急速地, 急躁地', chineseExplanation: '匆忙地, 急速地, 急躁地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'In a hurried or hasty manner.',
+    examples: [{ english: 'The speaker used hastily to add detail.', chinese: '说话者用“hastily”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'meditation', term: 'meditation', normalizedTerm: 'meditation', partOfSpeech: ['noun'],
+    chineseShort: '沉思, 冥想', chineseExplanation: '沉思, 冥想是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Continuous and profound contemplation or musing on a subject or series of subjects of a deep or abstruse nature.',
+    examples: [{ english: 'The lesson explains the meaning of meditation.', chinese: '本课解释了“meditation”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'fearful', term: 'fearful', normalizedTerm: 'fearful', partOfSpeech: ['adjective', 'adverb'],
+    chineseShort: '可怕的, 恐怕的, 担心的', chineseExplanation: '可怕的, 恐怕的, 担心的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Experiencing or showing fear.',
+    examples: [{ english: 'The passage uses fearful to describe the situation.', chinese: '文章用“fearful”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'groan', term: 'groan', normalizedTerm: 'groan', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '呻吟, 叹息；呻吟, 抱怨, 受压迫', chineseExplanation: '呻吟, 叹息；呻吟, 抱怨, 受压迫是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An utterance expressing pain or disapproval.',
+    examples: [{ english: 'The lesson explains the meaning of groan.', chinese: '本课解释了“groan”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'novelist', term: 'novelist', normalizedTerm: 'novelist', partOfSpeech: ['noun'],
+    chineseShort: '小说家', chineseExplanation: '小说家是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'One who writes novels.',
+    examples: [{ english: 'The lesson explains the meaning of novelist.', chinese: '本课解释了“novelist”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'saddle', term: 'saddle', normalizedTerm: 'saddle', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '鞍, 马鞍, 车座, 鞍状物；装以马鞍, 使负担', chineseExplanation: '鞍, 马鞍, 车座, 鞍状物；装以马鞍, 使负担是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A seat for the rider of a horse or camel.',
+    examples: [{ english: 'The lesson explains the meaning of saddle.', chinese: '本课解释了“saddle”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'restrictive', term: 'restrictive', normalizedTerm: 'restrictive', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '限制的, 约束的, 限定的；限制词', chineseExplanation: '限制的, 约束的, 限定的；限制词是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Serving to restrict.',
+    examples: [{ english: 'The passage uses restrictive to describe the situation.', chinese: '文章用“restrictive”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'lazy', term: 'lazy', normalizedTerm: 'lazy', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '懒惰的, 怠惰的, 缓慢的；懒散', chineseExplanation: '懒惰的, 怠惰的, 缓慢的；懒散是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Moving slowly and gently.',
+    examples: [{ english: 'The passage uses lazy to describe the situation.', chinese: '文章用“lazy”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'consortium', term: 'consortium', normalizedTerm: 'consortium', partOfSpeech: ['noun'],
+    chineseShort: '协会, 合伙, 财团；合作, 联合, 财团', chineseExplanation: '协会, 合伙, 财团；合作, 联合, 财团是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An association of companies for some definite purpose.',
+    examples: [{ english: 'The lesson explains the meaning of consortium.', chinese: '本课解释了“consortium”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'questionable', term: 'questionable', normalizedTerm: 'questionable', partOfSpeech: ['adjective'],
+    chineseShort: '可疑的；可疑的, 有问题的, 不可靠的', chineseExplanation: '可疑的；可疑的, 有问题的, 不可靠的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Subject to question.',
+    examples: [{ english: 'The passage uses questionable to describe the situation.', chinese: '文章用“questionable”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'intercourse', term: 'intercourse', normalizedTerm: 'intercourse', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '交往, 交流；交际, 往来', chineseExplanation: '交往, 交流；交际, 往来是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Communication between individuals.',
+    examples: [{ english: 'The lesson explains the meaning of intercourse.', chinese: '本课解释了“intercourse”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'overview', term: 'overview', normalizedTerm: 'overview', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '概述, 概观, 总的看法；概述', chineseExplanation: '概述, 概观, 总的看法；概述是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A general summary of a subject.',
+    examples: [{ english: 'The lesson explains the meaning of overview.', chinese: '本课解释了“overview”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'sandy', term: 'sandy', normalizedTerm: 'sandy', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '沙的, 沙地的, 多沙的', chineseExplanation: '沙的, 沙地的, 多沙的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Of hair colour; pale yellowish to yellowish brown a resembling or containing or abounding in sand; or growing in sandy areas.',
+    examples: [{ english: 'The passage uses sandy to describe the situation.', chinese: '文章用“sandy”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'entitlement', term: 'entitlement', normalizedTerm: 'entitlement', partOfSpeech: ['noun'],
+    chineseShort: '权利；权利', chineseExplanation: '权利；权利是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Right granted by law or contract (especially a right to benefits).',
+    examples: [{ english: 'The lesson explains the meaning of entitlement.', chinese: '本课解释了“entitlement”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'emit', term: 'emit', normalizedTerm: 'emit', partOfSpeech: ['verb'],
+    chineseShort: '发出, 放射, 发表, 散发, 发行；放射', chineseExplanation: '发出, 放射, 发表, 散发, 发行；放射是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Expel (gases or odors).',
+    examples: [{ english: 'The example shows how to use the verb emit.', chinese: '这个例子展示了如何使用动词“emit”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'noun', term: 'noun', normalizedTerm: 'noun', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '名词', chineseExplanation: '名词是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A content word that can be used to refer to a person, place, thing, quality, or action.',
+    examples: [{ english: 'The lesson explains the meaning of noun.', chinese: '本课解释了“noun”的含义。' }], level: 3, cefr: 'B2', categories: ['School'],
+  },
+  {
+    id: 'anthropologist', term: 'anthropologist', normalizedTerm: 'anthropologist', partOfSpeech: ['noun'],
+    chineseShort: '人类学家', chineseExplanation: '人类学家是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A social scientist who specialises in anthropology.',
+    examples: [{ english: 'The lesson explains the meaning of anthropologist.', chinese: '本课解释了“anthropologist”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'potent', term: 'potent', normalizedTerm: 'potent', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '有力的, 有说服力的, 有效的；有力的, 有性交能力的', chineseExplanation: '有力的, 有说服力的, 有效的；有力的, 有性交能力的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Having great influence.',
+    examples: [{ english: 'The passage uses potent to describe the situation.', chinese: '文章用“potent”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'foremost', term: 'foremost', normalizedTerm: 'foremost', partOfSpeech: ['adjective', 'adverb'],
+    chineseShort: '最初的, 最重要的；在最前', chineseExplanation: '最初的, 最重要的；在最前是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Preceding all others in spatial position.',
+    examples: [{ english: 'The passage uses foremost to describe the situation.', chinese: '文章用“foremost”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'warranty', term: 'warranty', normalizedTerm: 'warranty', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '正当理由, 授权, 担保, 保证, 根据；保单, 担保书, 保证书', chineseExplanation: '正当理由, 授权, 担保, 保证, 根据；保单, 担保书, 保证书是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A written assurance that some product or service will be provided or will meet certain specifications.',
+    examples: [{ english: 'The lesson explains the meaning of warranty.', chinese: '本课解释了“warranty”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'platelet', term: 'platelet', normalizedTerm: 'platelet', partOfSpeech: ['noun'],
+    chineseShort: '血小板, 小盘, 小板', chineseExplanation: '血小板, 小盘, 小板是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Tiny bits of protoplasm found in vertebrate blood; essential for blood clotting.',
+    examples: [{ english: 'The lesson explains the meaning of platelet.', chinese: '本课解释了“platelet”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'understandable', term: 'understandable', normalizedTerm: 'understandable', partOfSpeech: ['adjective'],
+    chineseShort: '可以理解的', chineseExplanation: '可以理解的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Capable of being apprehended or understood.',
+    examples: [{ english: 'The passage uses understandable to describe the situation.', chinese: '文章用“understandable”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'incapable', term: 'incapable', normalizedTerm: 'incapable', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '无能力的, 不能的；不能行的, 耐不住的', chineseExplanation: '无能力的, 不能的；不能行的, 耐不住的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: '(followed by `of\') lacking capacity or ability.',
+    examples: [{ english: 'The passage uses incapable to describe the situation.', chinese: '文章用“incapable”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'vigorously', term: 'vigorously', normalizedTerm: 'vigorously', partOfSpeech: ['adverb'],
+    chineseShort: '朝气蓬勃, 精力充沛, 壮健, 茁壮, 健壮, 强有力', chineseExplanation: '朝气蓬勃, 精力充沛, 壮健, 茁壮, 健壮, 强有力是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'With vigor; in a vigorous manner.',
+    examples: [{ english: 'The speaker used vigorously to add detail.', chinese: '说话者用“vigorously”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'oblige', term: 'oblige', normalizedTerm: 'oblige', partOfSpeech: ['verb'],
+    chineseShort: '强制, 施恩惠于, 使感激；施恩惠, 帮忙', chineseExplanation: '强制, 施恩惠于, 使感激；施恩惠, 帮忙是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Bind by an obligation; cause to be indebted.',
+    examples: [{ english: 'The example shows how to use the verb oblige.', chinese: '这个例子展示了如何使用动词“oblige”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'noticeable', term: 'noticeable', normalizedTerm: 'noticeable', partOfSpeech: ['adjective'],
+    chineseShort: '显而易见的, 显著的, 值得注意的', chineseExplanation: '显而易见的, 显著的, 值得注意的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Capable or worthy of being perceived.',
+    examples: [{ english: 'The passage uses noticeable to describe the situation.', chinese: '文章用“noticeable”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'distinctly', term: 'distinctly', normalizedTerm: 'distinctly', partOfSpeech: ['adverb'],
+    chineseShort: '显然地, 明显地, 清楚地', chineseExplanation: '显然地, 明显地, 清楚地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Clear to the mind; with distinct mental discernment.',
+    examples: [{ english: 'The speaker used distinctly to add detail.', chinese: '说话者用“distinctly”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'token', term: 'token', normalizedTerm: 'token', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '表征, 记号, 代币；象征的, 表意的', chineseExplanation: '表征, 记号, 代币；象征的, 表意的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An individual instance of a type of symbol.',
+    examples: [{ english: 'The lesson explains the meaning of token.', chinese: '本课解释了“token”的含义。' }], level: 3, cefr: 'B2', categories: ['Technology'],
+  },
+  {
+    id: 'embargo', term: 'embargo', normalizedTerm: 'embargo', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '封港令, 禁运；禁止出入港口, 禁运', chineseExplanation: '封港令, 禁运；禁止出入港口, 禁运是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A government order imposing a trade barrier.',
+    examples: [{ english: 'The lesson explains the meaning of embargo.', chinese: '本课解释了“embargo”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'vintage', term: 'vintage', normalizedTerm: 'vintage', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '酒, 葡萄收获, 酿酒；采葡萄', chineseExplanation: '酒, 葡萄收获, 酿酒；采葡萄是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A season\'s yield of wine from a vineyard.',
+    examples: [{ english: 'The lesson explains the meaning of vintage.', chinese: '本课解释了“vintage”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'blur', term: 'blur', normalizedTerm: 'blur', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '使模糊, 弄脏；弄脏, 模糊', chineseExplanation: '使模糊, 弄脏；弄脏, 模糊是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A hazy or indistinct representation.',
+    examples: [{ english: 'The lesson explains the meaning of blur.', chinese: '本课解释了“blur”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'foresee', term: 'foresee', normalizedTerm: 'foresee', partOfSpeech: ['verb'],
+    chineseShort: '预见, 预知', chineseExplanation: '预见, 预知是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Realise beforehand v picture to oneself; imagine possible v act in advance of; deal with ahead of time.',
+    examples: [{ english: 'The example shows how to use the verb foresee.', chinese: '这个例子展示了如何使用动词“foresee”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'dietary', term: 'dietary', normalizedTerm: 'dietary', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '饮食的；规定食物', chineseExplanation: '饮食的；规定食物是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A regulated daily food allowance.',
+    examples: [{ english: 'The passage uses dietary to describe the situation.', chinese: '文章用“dietary”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'vacant', term: 'vacant', normalizedTerm: 'vacant', partOfSpeech: ['adjective'],
+    chineseShort: '空的, 空白的, 空虚的, 空闲的, 茫然的, 空缺的；空的, 空虚的, 闲暇的', chineseExplanation: '空的, 空白的, 空虚的, 空闲的, 茫然的, 空缺的；空的, 空虚的, 闲暇的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Void of thought or knowledge.',
+    examples: [{ english: 'The passage uses vacant to describe the situation.', chinese: '文章用“vacant”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'fertilizer', term: 'fertiliser', normalizedTerm: 'fertiliser', partOfSpeech: ['noun'],
+    chineseShort: '肥料, 促进发展者, 受精媒介物；肥料', chineseExplanation: '肥料, 促进发展者, 受精媒介物；肥料是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Any substance such as manure or a mixture of nitrates used to make soil more fertile.',
+    examples: [{ english: 'The lesson explains the meaning of fertiliser.', chinese: '本课解释了“fertiliser”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'insistence', term: 'insistence', normalizedTerm: 'insistence', partOfSpeech: ['noun'],
+    chineseShort: '坚持, 坚决主张', chineseExplanation: '坚持, 坚决主张是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Continual and persistent demands.',
+    examples: [{ english: 'The lesson explains the meaning of insistence.', chinese: '本课解释了“insistence”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'hardship', term: 'hardship', normalizedTerm: 'hardship', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '艰难, 辛苦, 苦难；受苦, 吃苦, 苦难', chineseExplanation: '艰难, 辛苦, 苦难；受苦, 吃苦, 苦难是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Something that causes or entails suffering.',
+    examples: [{ english: 'The lesson explains the meaning of hardship.', chinese: '本课解释了“hardship”的含义。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'dispense', term: 'dispense', normalizedTerm: 'dispense', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '分发, 分配；特许, 豁免', chineseExplanation: '分发, 分配；特许, 豁免是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Grant a dispensation; grant an exemption.',
+    examples: [{ english: 'The example shows how to use the verb dispense.', chinese: '这个例子展示了如何使用动词“dispense”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'elk', term: 'elk', normalizedTerm: 'elk', partOfSpeech: ['noun'],
+    chineseShort: '麋鹿', chineseExplanation: '麋鹿是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Large northern deer with enormous flattened antlers in the male; called `elk\' in Europe and `moose\' in North America.',
+    examples: [{ english: 'The lesson explains the meaning of elk.', chinese: '本课解释了“elk”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'remnant', term: 'remnant', normalizedTerm: 'remnant', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '剩余, 零料, 遗迹；剩余的, 残余的', chineseExplanation: '剩余, 零料, 遗迹；剩余的, 残余的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A small part or portion that remains after the main part no longer exists n a piece of cloth that is left over after the rest has been used or sold.',
+    examples: [{ english: 'The lesson explains the meaning of remnant.', chinese: '本课解释了“remnant”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'communal', term: 'communal', normalizedTerm: 'communal', partOfSpeech: ['adjective'],
+    chineseShort: '公有的, 公社的；公共的, 自治体的, 巴黎公社的', chineseExplanation: '公有的, 公社的；公共的, 自治体的, 巴黎公社的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'For or by a group rather than individuals.',
+    examples: [{ english: 'The passage uses communal to describe the situation.', chinese: '文章用“communal”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'unsatisfactory', term: 'unsatisfactory', normalizedTerm: 'unsatisfactory', partOfSpeech: ['adjective'],
+    chineseShort: '不令人满意的', chineseExplanation: '不令人满意的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Not giving satisfaction.',
+    examples: [{ english: 'The passage uses unsatisfactory to describe the situation.', chinese: '文章用“unsatisfactory”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'underestimate', term: 'underestimate', normalizedTerm: 'underestimate', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '低估；低估, 看轻', chineseExplanation: '低估；低估, 看轻是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An estimation that is too low; an estimate that is less than the true or actual value.',
+    examples: [{ english: 'The example shows how to use the verb underestimate.', chinese: '这个例子展示了如何使用动词“underestimate”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'vacancy', term: 'vacancy', normalizedTerm: 'vacancy', partOfSpeech: ['noun'],
+    chineseShort: '空, 空白, 空缺, 空虚, 空闲；空位', chineseExplanation: '空, 空白, 空缺, 空虚, 空闲；空位是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Being unoccupied.',
+    examples: [{ english: 'The lesson explains the meaning of vacancy.', chinese: '本课解释了“vacancy”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'undo', term: 'undo', normalizedTerm: 'undo', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '解开, 取消, 破坏, 毁灭, 扰乱；松开', chineseExplanation: '解开, 取消, 破坏, 毁灭, 扰乱；松开是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Cancel, annul, or reverse an action or its effect.',
+    examples: [{ english: 'The example shows how to use the verb undo.', chinese: '这个例子展示了如何使用动词“undo”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'blossom', term: 'blossom', normalizedTerm: 'blossom', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '花, 花开的状态, 兴旺期；开花, 兴旺, 发展', chineseExplanation: '花, 花开的状态, 兴旺期；开花, 兴旺, 发展是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Develop or come to a promising stage.',
+    examples: [{ english: 'The lesson explains the meaning of blossom.', chinese: '本课解释了“blossom”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'ditch', term: 'ditch', normalizedTerm: 'ditch', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '沟渠；在...开沟', chineseExplanation: '沟渠；在...开沟是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A long narrow excavation in the earth.',
+    examples: [{ english: 'The lesson explains the meaning of ditch.', chinese: '本课解释了“ditch”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'escort', term: 'escort', normalizedTerm: 'escort', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '护送者, 护卫者, 护航舰；护卫, 护送', chineseExplanation: '护送者, 护卫者, 护航舰；护卫, 护送是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The act of accompanying someone or something in order to protect them.',
+    examples: [{ english: 'The lesson explains the meaning of escort.', chinese: '本课解释了“escort”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'insane', term: 'insane', normalizedTerm: 'insane', partOfSpeech: ['adjective'],
+    chineseShort: '患精神病的, 极愚蠢的；神经错乱的', chineseExplanation: '患精神病的, 极愚蠢的；神经错乱的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Afflicted with or characteristic of mental derangement.',
+    examples: [{ english: 'The passage uses insane to describe the situation.', chinese: '文章用“insane”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'resemblance', term: 'resemblance', normalizedTerm: 'resemblance', partOfSpeech: ['noun'],
+    chineseShort: '相似处, 类似, 肖像', chineseExplanation: '相似处, 类似, 肖像是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Similarity in appearance or external or superficial details.',
+    examples: [{ english: 'The lesson explains the meaning of resemblance.', chinese: '本课解释了“resemblance”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'grove', term: 'grove', normalizedTerm: 'grove', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '小树林', chineseExplanation: '小树林是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A small growth of trees without underbrush.',
+    examples: [{ english: 'The lesson explains the meaning of grove.', chinese: '本课解释了“grove”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'conquest', term: 'conquest', normalizedTerm: 'conquest', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '战胜, 征服, 战利品；征服, 赢得, 获得', chineseExplanation: '战胜, 征服, 战利品；征服, 赢得, 获得是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The act of conquering.',
+    examples: [{ english: 'The lesson explains the meaning of conquest.', chinese: '本课解释了“conquest”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'orient', term: 'orient', normalizedTerm: 'orient', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '东方, 东方诸国；东方的', chineseExplanation: '东方, 东方诸国；东方的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Be oriented.',
+    examples: [{ english: 'The lesson explains the meaning of orient.', chinese: '本课解释了“orient”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'interruption', term: 'interruption', normalizedTerm: 'interruption', partOfSpeech: ['noun'],
+    chineseShort: '打扰, 中断, 障碍物；间断, 阻断, 中止', chineseExplanation: '打扰, 中断, 障碍物；间断, 阻断, 中止是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Some abrupt occurrence that interrupts an ongoing activity.',
+    examples: [{ english: 'The lesson explains the meaning of interruption.', chinese: '本课解释了“interruption”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'safeguard', term: 'safeguard', normalizedTerm: 'safeguard', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '保卫, 保护措施, 防护设施；保卫, 保护', chineseExplanation: '保卫, 保护措施, 防护设施；保卫, 保护是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Make safe.',
+    examples: [{ english: 'The example shows how to use the verb safeguard.', chinese: '这个例子展示了如何使用动词“safeguard”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'underwear', term: 'underwear', normalizedTerm: 'underwear', partOfSpeech: ['noun'],
+    chineseShort: '内衣', chineseExplanation: '内衣是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Undergarment worn next to the skin and under the outer garments.',
+    examples: [{ english: 'The lesson explains the meaning of underwear.', chinese: '本课解释了“underwear”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'appropriation', term: 'appropriation', normalizedTerm: 'appropriation', partOfSpeech: ['noun'],
+    chineseShort: '拨用, 挪用, 拨款；拨款, 挪用', chineseExplanation: '拨用, 挪用, 拨款；拨款, 挪用是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Money set aside (as by a legislature) for a specific purpose.',
+    examples: [{ english: 'The lesson explains the meaning of appropriation.', chinese: '本课解释了“appropriation”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'hay', term: 'hay', normalizedTerm: 'hay', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '干草；制干草, 供给干草', chineseExplanation: '干草；制干草, 供给干草是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Grass mowed and cured for use as fodder.',
+    examples: [{ english: 'The lesson explains the meaning of hay.', chinese: '本课解释了“hay”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'messenger', term: 'messenger', normalizedTerm: 'messenger', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '报信者, 使者；使者, 送信者, 通信员', chineseExplanation: '报信者, 使者；使者, 送信者, 通信员是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A person who carries a message.',
+    examples: [{ english: 'The lesson explains the meaning of messenger.', chinese: '本课解释了“messenger”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'mentality', term: 'mentality', normalizedTerm: 'mentality', partOfSpeech: ['noun'],
+    chineseShort: '精神力, 智力, 头脑作用, 心态；智力', chineseExplanation: '精神力, 智力, 头脑作用, 心态；智力是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A habitual or characteristic mental attitude that determines how you will interpret and respond to situations.',
+    examples: [{ english: 'The lesson explains the meaning of mentality.', chinese: '本课解释了“mentality”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'contention', term: 'contention', normalizedTerm: 'contention', partOfSpeech: ['noun'],
+    chineseShort: '争论, 争辩, 所持的论点；争用', chineseExplanation: '争论, 争辩, 所持的论点；争用是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A point asserted as part of an argument.',
+    examples: [{ english: 'The lesson explains the meaning of contention.', chinese: '本课解释了“contention”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'revolt', term: 'revolt', normalizedTerm: 'revolt', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '叛乱, 反抗, 反感；叛乱, 反抗, 起义, 厌恶, 反感', chineseExplanation: '叛乱, 反抗, 反感；叛乱, 反抗, 起义, 厌恶, 反感是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Make revolution.',
+    examples: [{ english: 'The lesson explains the meaning of revolt.', chinese: '本课解释了“revolt”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'insult', term: 'insult', normalizedTerm: 'insult', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '侮辱, 无礼, 损害；损害, 侮辱, 攻击', chineseExplanation: '侮辱, 无礼, 损害；损害, 侮辱, 攻击是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A deliberately offensive act or something producing the effect of deliberate disrespect.',
+    examples: [{ english: 'The lesson explains the meaning of insult.', chinese: '本课解释了“insult”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'kin', term: 'kin', normalizedTerm: 'kin', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '亲戚, 同族, 血缘关系, 家族；有亲属关系的, 性质类似的, 同类的', chineseExplanation: '亲戚, 同族, 血缘关系, 家族；有亲属关系的, 性质类似的, 同类的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A person having kinship with another or others.',
+    examples: [{ english: 'The lesson explains the meaning of kin.', chinese: '本课解释了“kin”的含义。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'contraction', term: 'contraction', normalizedTerm: 'contraction', partOfSpeech: ['noun'],
+    chineseShort: '收缩, 缩写式, 害病；收缩', chineseExplanation: '收缩, 缩写式, 害病；收缩是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: '(physiology) a shortening or tensing of a part or organ (especially of a muscle or muscle fiber).',
+    examples: [{ english: 'The lesson explains the meaning of contraction.', chinese: '本课解释了“contraction”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'bloom', term: 'bloom', normalizedTerm: 'bloom', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '花, 开花, 青春, 钢块；开花, 焕发青春, 茂盛', chineseExplanation: '花, 开花, 青春, 钢块；开花, 焕发青春, 茂盛是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The best time of youth.',
+    examples: [{ english: 'The lesson explains the meaning of bloom.', chinese: '本课解释了“bloom”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'necklace', term: 'necklace', normalizedTerm: 'necklace', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '项链', chineseExplanation: '项链是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Jewellery consisting of a cord or chain (often bearing gems) worn about the neck as an ornament (especially by women).',
+    examples: [{ english: 'The lesson explains the meaning of necklace.', chinese: '本课解释了“necklace”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'blouse', term: 'blouse', normalizedTerm: 'blouse', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '宽松的上衣', chineseExplanation: '宽松的上衣是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A top worn by women.',
+    examples: [{ english: 'The lesson explains the meaning of blouse.', chinese: '本课解释了“blouse”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'consequent', term: 'consequent', normalizedTerm: 'consequent', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '随后发生的事情, 结果；作为结果的, 合乎逻辑的', chineseExplanation: '随后发生的事情, 结果；作为结果的, 合乎逻辑的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Following or accompanying as a consequence.',
+    examples: [{ english: 'The passage uses consequent to describe the situation.', chinese: '文章用“consequent”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'convoy', term: 'convoy', normalizedTerm: 'convoy', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '护送, 护卫；护航, 护送', chineseExplanation: '护送, 护卫；护航, 护送是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A procession of land vehicles travelling together.',
+    examples: [{ english: 'The lesson explains the meaning of convoy.', chinese: '本课解释了“convoy”的含义。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'glen', term: 'glen', normalizedTerm: 'glen', partOfSpeech: ['noun'],
+    chineseShort: '峡谷, 幽谷', chineseExplanation: '峡谷, 幽谷是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A narrow secluded valley (in the mountains).',
+    examples: [{ english: 'The lesson explains the meaning of glen.', chinese: '本课解释了“glen”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'enclosure', term: 'enclosure', normalizedTerm: 'enclosure', partOfSpeech: ['noun'],
+    chineseShort: '附件, 围墙, 围绕；机壳', chineseExplanation: '附件, 围墙, 围绕；机壳是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A structure consisting of an area that has been enclosed for some purpose.',
+    examples: [{ english: 'The lesson explains the meaning of enclosure.', chinese: '本课解释了“enclosure”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'overweight', term: 'overweight', normalizedTerm: 'overweight', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '超过重量, 过重, 优势；超过重量的, 超重的', chineseExplanation: '超过重量, 过重, 优势；超过重量的, 超重的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The property of excessive fatness s usually describes a large person who is fat but has a large frame to carry it.',
+    examples: [{ english: 'The passage uses overweight to describe the situation.', chinese: '文章用“overweight”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'verge', term: 'verge', normalizedTerm: 'verge', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '边缘, 边界, 起始点；处在边缘, 接近, 下沉, 趋向', chineseExplanation: '边缘, 边界, 起始点；处在边缘, 接近, 下沉, 趋向是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The limit beyond which something happens or changes.',
+    examples: [{ english: 'The lesson explains the meaning of verge.', chinese: '本课解释了“verge”的含义。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'plague', term: 'plague', normalizedTerm: 'plague', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '瘟疫, 天罚, 麻烦, 灾祸；折磨, 使苦恼, 使得灾祸', chineseExplanation: '瘟疫, 天罚, 麻烦, 灾祸；折磨, 使苦恼, 使得灾祸是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A serious (sometimes fatal) infection of rodents caused by Yersinia pestis and accidentally transmitted to humans by the bite of a flea that has bitten an infected animal.',
+    examples: [{ english: 'The lesson explains the meaning of plague.', chinese: '本课解释了“plague”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'withhold', term: 'withhold', normalizedTerm: 'withhold', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '使停止, 扣留, 保留, 拒给；克制, 忍住', chineseExplanation: '使停止, 扣留, 保留, 拒给；克制, 忍住是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Hold back; refuse to hand over or share.',
+    examples: [{ english: 'The example shows how to use the verb withhold.', chinese: '这个例子展示了如何使用动词“withhold”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'messy', term: 'messy', normalizedTerm: 'messy', partOfSpeech: ['adjective'],
+    chineseShort: '散乱的, 污秽的, 麻烦的', chineseExplanation: '散乱的, 污秽的, 麻烦的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Dirty and disorderly.',
+    examples: [{ english: 'The passage uses messy to describe the situation.', chinese: '文章用“messy”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'unpredictable', term: 'unpredictable', normalizedTerm: 'unpredictable', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '不可预知的', chineseExplanation: '不可预知的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Not capable of being foretold.',
+    examples: [{ english: 'The passage uses unpredictable to describe the situation.', chinese: '文章用“unpredictable”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'lucrative', term: 'lucrative', normalizedTerm: 'lucrative', partOfSpeech: ['adjective'],
+    chineseShort: '有利益的, 获利的, 合算的', chineseExplanation: '有利益的, 获利的, 合算的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Producing a sizeable profit.',
+    examples: [{ english: 'The passage uses lucrative to describe the situation.', chinese: '文章用“lucrative”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'resistant', term: 'resistant', normalizedTerm: 'resistant', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '抵抗者, 反抗者；抵抗的, 反抗的, 耐...的', chineseExplanation: '抵抗者, 反抗者；抵抗的, 反抗的, 耐...的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Impervious to being affected.',
+    examples: [{ english: 'The passage uses resistant to describe the situation.', chinese: '文章用“resistant”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'conversely', term: 'conversely', normalizedTerm: 'conversely', partOfSpeech: ['adverb'],
+    chineseShort: '相反, 逆, 颠倒, 反题, 反', chineseExplanation: '相反, 逆, 颠倒, 反题, 反是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'With the terms of the relation reversed.',
+    examples: [{ english: 'The speaker used conversely to add detail.', chinese: '说话者用“conversely”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'complementary', term: 'complementary', normalizedTerm: 'complementary', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '补充的, 补足的；补足的, 补充的', chineseExplanation: '补充的, 补足的；补足的, 补充的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Of words or propositions so related that each is the negation of the other.',
+    examples: [{ english: 'The passage uses complementary to describe the situation.', chinese: '文章用“complementary”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'dissolution', term: 'dissolution', normalizedTerm: 'dissolution', partOfSpeech: ['noun'],
+    chineseShort: '分解, 溶解, 解散, 结束；溶解', chineseExplanation: '分解, 溶解, 解散, 结束；溶解是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Separation into component parts.',
+    examples: [{ english: 'The lesson explains the meaning of dissolution.', chinese: '本课解释了“dissolution”的含义。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'vest', term: 'vest', normalizedTerm: 'vest', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '背心, 汗背心；使穿衣服, 授予', chineseExplanation: '背心, 汗背心；使穿衣服, 授予是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A man\'s sleeveless garment worn underneath a coat.',
+    examples: [{ english: 'The lesson explains the meaning of vest.', chinese: '本课解释了“vest”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'vibration', term: 'vibration', normalizedTerm: 'vibration', partOfSpeech: ['noun'],
+    chineseShort: '振动, 颤动；振动', chineseExplanation: '振动, 颤动；振动是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The act of vibrating.',
+    examples: [{ english: 'The lesson explains the meaning of vibration.', chinese: '本课解释了“vibration”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'elevation', term: 'elevation', normalizedTerm: 'elevation', partOfSpeech: ['noun'],
+    chineseShort: '海拔, 提高, 仰角；仰角', chineseExplanation: '海拔, 提高, 仰角；仰角是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The event of something being raised upward.',
+    examples: [{ english: 'The lesson explains the meaning of elevation.', chinese: '本课解释了“elevation”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'vibrant', term: 'vibrant', normalizedTerm: 'vibrant', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '振动的, 战栗的, 响亮的, 活跃的', chineseExplanation: '振动的, 战栗的, 响亮的, 活跃的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Vigorous and animated.',
+    examples: [{ english: 'The passage uses vibrant to describe the situation.', chinese: '文章用“vibrant”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'reformer', term: 'reformer', normalizedTerm: 'reformer', partOfSpeech: ['noun'],
+    chineseShort: '改革家, 改革运动者；转化炉', chineseExplanation: '改革家, 改革运动者；转化炉是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A disputant who advocates reform.',
+    examples: [{ english: 'The lesson explains the meaning of reformer.', chinese: '本课解释了“reformer”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'interrogation', term: 'interrogation', normalizedTerm: 'interrogation', partOfSpeech: ['noun'],
+    chineseShort: '审问, 疑问句, 问号；询问', chineseExplanation: '审问, 疑问句, 问号；询问是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A transmission that will trigger an answering transmission from a transponder.',
+    examples: [{ english: 'The lesson explains the meaning of interrogation.', chinese: '本课解释了“interrogation”的含义。' }], level: 3, cefr: 'B2', categories: ['Academic'],
+  },
+  {
+    id: 'overlap', term: 'overlap', normalizedTerm: 'overlap', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '重叠, 重复, 部分的同时发生；重叠, 重复, 与...同时发生', chineseExplanation: '重叠, 重复, 部分的同时发生；重叠, 重复, 与...同时发生是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A representation of common ground between theories or phenomena.',
+    examples: [{ english: 'The lesson explains the meaning of overlap.', chinese: '本课解释了“overlap”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'foil', term: 'foil', normalizedTerm: 'foil', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '箔, 烘托, 衬托；贴箔于, 衬托, 阻止, 挡开, 挫败', chineseExplanation: '箔, 烘托, 衬托；贴箔于, 衬托, 阻止, 挡开, 挫败是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A piece of thin and flexible sheet metal.',
+    examples: [{ english: 'The lesson explains the meaning of foil.', chinese: '本课解释了“foil”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'uncommon', term: 'uncommon', normalizedTerm: 'uncommon', partOfSpeech: ['adjective', 'adverb'],
+    chineseShort: '不寻常的, 非凡的, 罕有的；不平常地', chineseExplanation: '不寻常的, 非凡的, 罕有的；不平常地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Not common or ordinarily encountered; unusually great in amount or remarkable in character or kind.',
+    examples: [{ english: 'The passage uses uncommon to describe the situation.', chinese: '文章用“uncommon”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'vet', term: 'vet', normalizedTerm: 'vet', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '兽医；当兽医', chineseExplanation: '兽医；当兽医是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Work as a veterinarian.',
+    examples: [{ english: 'The lesson explains the meaning of vet.', chinese: '本课解释了“vet”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'salon', term: 'salon', normalizedTerm: 'salon', partOfSpeech: ['noun'],
+    chineseShort: '大会客室, 大厅, 客厅, 交谊室, 沙龙, 美术展览馆, 画廊, 美容院, 发廊', chineseExplanation: '大会客室, 大厅, 客厅, 交谊室, 沙龙, 美术展览馆, 画廊, 美容院, 发廊是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Gallery where works of art can be displayed.',
+    examples: [{ english: 'The lesson explains the meaning of salon.', chinese: '本课解释了“salon”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'anthropology', term: 'anthropology', normalizedTerm: 'anthropology', partOfSpeech: ['noun'],
+    chineseShort: '人类学；人类学', chineseExplanation: '人类学；人类学是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The social science that studies the origins and social relationships of human beings.',
+    examples: [{ english: 'The lesson explains the meaning of anthropology.', chinese: '本课解释了“anthropology”的含义。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'conquer', term: 'conquer', normalizedTerm: 'conquer', partOfSpeech: ['verb'],
+    chineseShort: '克服, 征服, 战胜；得胜', chineseExplanation: '克服, 征服, 战胜；得胜是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Overcome by conquest.',
+    examples: [{ english: 'The example shows how to use the verb conquer.', chinese: '这个例子展示了如何使用动词“conquer”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'composite', term: 'composite', normalizedTerm: 'composite', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '合成的, 混合成的, 菊科的；合成物, 复合材料, 菊科', chineseExplanation: '合成的, 混合成的, 菊科的；合成物, 复合材料, 菊科是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Considered the most highly evolved dicotyledonous plants, characterised by florets arranged in dense heads that resemble single flowers.',
+    examples: [{ english: 'The passage uses composite to describe the situation.', chinese: '文章用“composite”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'tenancy', term: 'tenancy', normalizedTerm: 'tenancy', partOfSpeech: ['noun'],
+    chineseShort: '租用, 租赁；租赁, 租回', chineseExplanation: '租用, 租赁；租赁, 租回是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An act of being a tenant or occupant.',
+    examples: [{ english: 'The lesson explains the meaning of tenancy.', chinese: '本课解释了“tenancy”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'lush', term: 'lush', normalizedTerm: 'lush', partOfSpeech: ['adjective', 'verb'],
+    chineseShort: '苍翠繁茂的, 多青草的, 丰富的；酒, 酒鬼', chineseExplanation: '苍翠繁茂的, 多青草的, 丰富的；酒, 酒鬼是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Full of juice.',
+    examples: [{ english: 'The passage uses lush to describe the situation.', chinese: '文章用“lush”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'oracle', term: 'oracle', normalizedTerm: 'oracle', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '神谕, 神谕处, 预言', chineseExplanation: '神谕, 神谕处, 预言是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A prophecy (usually obscure or allegorical) revealed by a priest or priestess; believed to be infallible.',
+    examples: [{ english: 'The lesson explains the meaning of oracle.', chinese: '本课解释了“oracle”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'toby', term: 'toby', normalizedTerm: 'toby', partOfSpeech: ['noun'],
+    chineseShort: '人形水罐', chineseExplanation: '人形水罐是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A drinking mug in the shape of a stout man wearing a three-cornered hat.',
+    examples: [{ english: 'The lesson explains the meaning of toby.', chinese: '本课解释了“toby”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'median', term: 'median', normalizedTerm: 'median', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '中央的, 中间的, 正中的；正中动脉, 中位数, 中线', chineseExplanation: '中央的, 中间的, 正中的；正中动脉, 中位数, 中线是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The value below which 50% of the cases fall.',
+    examples: [{ english: 'The passage uses median to describe the situation.', chinese: '文章用“median”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'momentum', term: 'momentum', normalizedTerm: 'momentum', partOfSpeech: ['noun'],
+    chineseShort: '势头；动力；动量', chineseExplanation: '使过程继续发展并越来越有力的推动力；物理学中也表示动量。', englishDefinition: 'The force or progress that keeps a process developing, or mass in motion in physics.',
+    examples: [{ english: 'The campaign gained momentum after the debate.', chinese: '辩论后，这场活动的势头增强了。' }], level: 3, cefr: 'B2', categories: ['Academic', 'Daily English'],
+  },
+  {
+    id: 'granite', term: 'granite', normalizedTerm: 'granite', partOfSpeech: ['noun'],
+    chineseShort: '花岗岩；花岗岩', chineseExplanation: '花岗岩；花岗岩是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Plutonic igneous rock having visibly crystalline texture; generally composed of feldspar and mica and quartz.',
+    examples: [{ english: 'The lesson explains the meaning of granite.', chinese: '本课解释了“granite”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'beforehand', term: 'beforehand', normalizedTerm: 'beforehand', partOfSpeech: ['adverb', 'adjective'],
+    chineseShort: '预先', chineseExplanation: '预先是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Being ahead of time or need r ahead of time; in anticipation.',
+    examples: [{ english: 'The speaker used beforehand to add detail.', chinese: '说话者用“beforehand”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'foul', term: 'foul', normalizedTerm: 'foul', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '污秽的, 邪恶的, 恶臭的, 肮脏的, 恶劣的, 淤塞的；弄脏, 妨害, 污蔑, 犯规, 淤塞', chineseExplanation: '污秽的, 邪恶的, 恶臭的, 肮脏的, 恶劣的, 淤塞的；弄脏, 妨害, 污蔑, 犯规, 淤塞是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An act that violates the rules of a sport.',
+    examples: [{ english: 'The passage uses foul to describe the situation.', chinese: '文章用“foul”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'dice', term: 'dice', normalizedTerm: 'dice', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '骰子；切成方块', chineseExplanation: '骰子；切成方块是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Play dice.',
+    examples: [{ english: 'The lesson explains the meaning of dice.', chinese: '本课解释了“dice”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'unsuitable', term: 'unsuitable', normalizedTerm: 'unsuitable', partOfSpeech: ['adjective'],
+    chineseShort: '不适合的；不适合的, 不适当的', chineseExplanation: '不适合的；不适合的, 不适当的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Not meant or adapted for a particular purpose.',
+    examples: [{ english: 'The passage uses unsuitable to describe the situation.', chinese: '文章用“unsuitable”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'reflective', term: 'reflective', normalizedTerm: 'reflective', partOfSpeech: ['adjective'],
+    chineseShort: '反射的, 反映的, 沉思的', chineseExplanation: '反射的, 反映的, 沉思的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Capable of physically reflecting light or sound.',
+    examples: [{ english: 'The passage uses reflective to describe the situation.', chinese: '文章用“reflective”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'compliment', term: 'compliment', normalizedTerm: 'compliment', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '称赞, 恭维, 敬意；称赞, 褒扬, 恭维', chineseExplanation: '称赞, 恭维, 敬意；称赞, 褒扬, 恭维是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A remark (or act) expressing praise and admiration.',
+    examples: [{ english: 'The lesson explains the meaning of compliment.', chinese: '本课解释了“compliment”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'landfill', term: 'landfill', normalizedTerm: 'landfill', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '垃圾堆；垃圾填埋地', chineseExplanation: '垃圾堆；垃圾填埋地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A low area that has been filled in.',
+    examples: [{ english: 'The lesson explains the meaning of landfill.', chinese: '本课解释了“landfill”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'temporal', term: 'temporal', normalizedTerm: 'temporal', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '时间的, 暂时的, 现世的, 世俗的, 颞的, 太阳穴的；世间万物, 教会财产', chineseExplanation: '时间的, 暂时的, 现世的, 世俗的, 颞的, 太阳穴的；世间万物, 教会财产是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Not eternal.',
+    examples: [{ english: 'The passage uses temporal to describe the situation.', chinese: '文章用“temporal”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'pluck', term: 'pluck', normalizedTerm: 'pluck', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '勇气, 猛拉, 动物内脏；摘, 猛拉, 拔, 拉, 扯, 采', chineseExplanation: '勇气, 猛拉, 动物内脏；摘, 猛拉, 拔, 拉, 扯, 采是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The act of pulling and releasing a taut cord.',
+    examples: [{ english: 'The example shows how to use the verb pluck.', chinese: '这个例子展示了如何使用动词“pluck”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'lunar', term: 'lunar', normalizedTerm: 'lunar', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '阴历的, 月的, 微亮的；月的, 银的', chineseExplanation: '阴历的, 月的, 微亮的；月的, 银的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Of or relating to or associated with the moon.',
+    examples: [{ english: 'The passage uses lunar to describe the situation.', chinese: '文章用“lunar”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'plainly', term: 'plainly', normalizedTerm: 'plainly', partOfSpeech: ['adverb'],
+    chineseShort: '清楚地, 明白地, 简单地, 朴素地, 直率地, 坦白地', chineseExplanation: '清楚地, 明白地, 简单地, 朴素地, 直率地, 坦白地是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'In a simple manner; without extravagance or embellishment.',
+    examples: [{ english: 'The speaker used plainly to add detail.', chinese: '说话者用“plainly”补充细节。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'tout', term: 'tout', normalizedTerm: 'tout', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '招徕顾客, 兜售物品；招徕, 刺探...情报', chineseExplanation: '招徕顾客, 兜售物品；招徕, 刺探...情报是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Someone who buys tickets to an event in order to resell them at a profit.',
+    examples: [{ english: 'The example shows how to use the verb tout.', chinese: '这个例子展示了如何使用动词“tout”。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'jersey', term: 'jersey', normalizedTerm: 'jersey', partOfSpeech: ['noun'],
+    chineseShort: '运动衫', chineseExplanation: '运动衫是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The largest of the Channel Islands.',
+    examples: [{ english: 'The lesson explains the meaning of jersey.', chinese: '本课解释了“jersey”的含义。' }], level: 3, cefr: 'B2', categories: ['Technology'],
+  },
+  {
+    id: 'comprehend', term: 'comprehend', normalizedTerm: 'comprehend', partOfSpeech: ['verb'],
+    chineseShort: '理解, 包括', chineseExplanation: '理解, 包括是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Get the meaning of something v to become aware of through the senses v include in scope; include as part of something broader; have as one\'s sphere or territory.',
+    examples: [{ english: 'The example shows how to use the verb comprehend.', chinese: '这个例子展示了如何使用动词“comprehend”。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'plight', term: 'plight', normalizedTerm: 'plight', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '困境, 窘境；宣誓, 保证', chineseExplanation: '困境, 窘境；宣誓, 保证是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A solemn pledge of fidelity.',
+    examples: [{ english: 'The lesson explains the meaning of plight.', chinese: '本课解释了“plight”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'responsive', term: 'responsive', normalizedTerm: 'responsive', partOfSpeech: ['adjective'],
+    chineseShort: '回答的, 应答的, 易感应的', chineseExplanation: '回答的, 应答的, 易感应的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Containing or using responses; alternating.',
+    examples: [{ english: 'The passage uses responsive to describe the situation.', chinese: '文章用“responsive”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'plough', term: 'plough', normalizedTerm: 'plough', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '犁, 犁过的地；用犁耕田, 开路', chineseExplanation: '犁, 犁过的地；用犁耕田, 开路是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A group of seven bright stars in the constellation Ursa Major n a farm tool having one or more heavy blades to break the soil and cut a furrow prior to sowing v move in a way resembling that of a…',
+    examples: [{ english: 'The lesson explains the meaning of plough.', chinese: '本课解释了“plough”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'inclination', term: 'inclination', normalizedTerm: 'inclination', partOfSpeech: ['noun'],
+    chineseShort: '倾向, 趋向, 倾斜度, 点头；倾角', chineseExplanation: '倾向, 趋向, 倾斜度, 点头；倾角是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An attitude of mind especially one that favours one alternative over others.',
+    examples: [{ english: 'The lesson explains the meaning of inclination.', chinese: '本课解释了“inclination”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'wreck', term: 'wreck', normalizedTerm: 'wreck', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '失事, 残骸, 破坏；使失事, 拆毁, 破坏', chineseExplanation: '失事, 残骸, 破坏；使失事, 拆毁, 破坏是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Something or someone that has suffered ruin or dilapidation.',
+    examples: [{ english: 'The lesson explains the meaning of wreck.', chinese: '本课解释了“wreck”的含义。' }], level: 3, cefr: 'B2', categories: ['Travel'],
+  },
+  {
+    id: 'instability', term: 'instability', normalizedTerm: 'instability', partOfSpeech: ['noun'],
+    chineseShort: '不安定, 不稳定；不稳定性', chineseExplanation: '不安定, 不稳定；不稳定性是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An unstable order.',
+    examples: [{ english: 'The lesson explains the meaning of instability.', chinese: '本课解释了“instability”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'elusive', term: 'elusive', normalizedTerm: 'elusive', partOfSpeech: ['adjective'],
+    chineseShort: '难懂的, 易忘的, 难以捉摸的', chineseExplanation: '难懂的, 易忘的, 难以捉摸的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Difficult to describe.',
+    examples: [{ english: 'The passage uses elusive to describe the situation.', chinese: '文章用“elusive”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'mercury', term: 'mercury', normalizedTerm: 'mercury', partOfSpeech: ['noun'],
+    chineseShort: '水银, 汞, 使者；汞Hg', chineseExplanation: '水银, 汞, 使者；汞Hg是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A heavy silvery toxic univalent and bivalent metallic element; the only metal that is liquid at ordinary temperatures.',
+    examples: [{ english: 'The lesson explains the meaning of mercury.', chinese: '本课解释了“mercury”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'incomplete', term: 'incomplete', normalizedTerm: 'incomplete', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '不完全的, 未完成的, 不完善的；不完全的', chineseExplanation: '不完全的, 未完成的, 不完善的；不完全的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Not complete or total; not completed.',
+    examples: [{ english: 'The passage uses incomplete to describe the situation.', chinese: '文章用“incomplete”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'laborer', term: 'labourer', normalizedTerm: 'labourer', partOfSpeech: ['noun'],
+    chineseShort: '体力劳动者, 辅助工；劳动者', chineseExplanation: '体力劳动者, 辅助工；劳动者是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Someone who works with their hands; someone engaged in manual labour.',
+    examples: [{ english: 'The lesson explains the meaning of labourer.', chinese: '本课解释了“labourer”的含义。' }], level: 3, cefr: 'B2', categories: ['Business'],
+  },
+  {
+    id: 'planetary', term: 'planetary', normalizedTerm: 'planetary', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '行星的, 流浪的, 迁移不定的, 地球上的, 现世的', chineseExplanation: '行星的, 流浪的, 迁移不定的, 地球上的, 现世的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Of or relating to or characteristic of the planet Earth or its inhabitants.',
+    examples: [{ english: 'The passage uses planetary to describe the situation.', chinese: '文章用“planetary”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'formality', term: 'formality', normalizedTerm: 'formality', partOfSpeech: ['noun'],
+    chineseShort: '礼节, 拘谨, 正式手续；克式浓度', chineseExplanation: '礼节, 拘谨, 正式手续；克式浓度是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A requirement of etiquette or custom.',
+    examples: [{ english: 'The lesson explains the meaning of formality.', chinese: '本课解释了“formality”的含义。' }], level: 3, cefr: 'B2', categories: ['Academic'],
+  },
+  {
+    id: 'endeavour', term: 'endeavour', normalizedTerm: 'endeavour', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '努力, 力图, 尽力；努力, 力图, 尽力', chineseExplanation: '努力, 力图, 尽力；努力, 力图, 尽力是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A purposeful or industrious undertaking (especially one that requires effort or boldness) n earnest and conscientious activity intended to do or accomplish something v attempt by employing effort.',
+    examples: [{ english: 'The lesson explains the meaning of endeavour.', chinese: '本课解释了“endeavour”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'diversion', term: 'diversion', normalizedTerm: 'diversion', partOfSpeech: ['noun'],
+    chineseShort: '转移；转向', chineseExplanation: '转移；转向是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An activity that diverts or amuses or stimulates.',
+    examples: [{ english: 'The lesson explains the meaning of diversion.', chinese: '本课解释了“diversion”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'withstand', term: 'withstand', normalizedTerm: 'withstand', partOfSpeech: ['verb'],
+    chineseShort: '抵住, 顶住, 经得起', chineseExplanation: '抵住, 顶住, 经得起是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Resist or confront with resistance v stand up or offer resistance to somebody or something.',
+    examples: [{ english: 'The example shows how to use the verb withstand.', chinese: '这个例子展示了如何使用动词“withstand”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'unstable', term: 'unstable', normalizedTerm: 'unstable', partOfSpeech: ['adjective', 'verb'],
+    chineseShort: '不稳定的', chineseExplanation: '不稳定的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Lacking stability or fixity or firmness.',
+    examples: [{ english: 'The passage uses unstable to describe the situation.', chinese: '文章用“unstable”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'lumber', term: 'lumber', normalizedTerm: 'lumber', partOfSpeech: ['noun', 'verb'],
+    chineseShort: '木材, 破旧家俱, 废物, 隆隆声；砍伐木材, 乱堆', chineseExplanation: '木材, 破旧家俱, 废物, 隆隆声；砍伐木材, 乱堆是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'The wood of trees cut and prepared for use as building material.',
+    examples: [{ english: 'The lesson explains the meaning of lumber.', chinese: '本课解释了“lumber”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'glossy', term: 'glossy', normalizedTerm: 'glossy', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '平滑的, 有光泽的', chineseExplanation: '平滑的, 有光泽的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'A photograph that is printed on smooth shiny paper.',
+    examples: [{ english: 'The passage uses glossy to describe the situation.', chinese: '文章用“glossy”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'gloomy', term: 'gloomy', normalizedTerm: 'gloomy', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '抑沉的, 忧闷的, 黑暗的, 悲观的', chineseExplanation: '抑沉的, 忧闷的, 黑暗的, 悲观的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Filled with melancholy and despondency.',
+    examples: [{ english: 'The passage uses gloomy to describe the situation.', chinese: '文章用“gloomy”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'benign', term: 'benign', normalizedTerm: 'benign', partOfSpeech: ['adjective'],
+    chineseShort: '善良的, 良性的；良性的', chineseExplanation: '善良的, 良性的；良性的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Not dangerous to health; not recurrent or progressive (especially of a tumor).',
+    examples: [{ english: 'The passage uses benign to describe the situation.', chinese: '文章用“benign”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'harden', term: 'harden', normalizedTerm: 'harden', partOfSpeech: ['verb', 'noun'],
+    chineseShort: '使变硬, 使坚强, 使冷酷；变硬, 变冷酷', chineseExplanation: '使变硬, 使坚强, 使冷酷；变硬, 变冷酷是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Become hard or harder.',
+    examples: [{ english: 'The example shows how to use the verb harden.', chinese: '这个例子展示了如何使用动词“harden”。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'windshield', term: 'windscreen', normalizedTerm: 'windscreen', partOfSpeech: ['noun'],
+    chineseShort: '挡风玻璃；风遮蔽', chineseExplanation: '挡风玻璃；风遮蔽是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Transparent screen (as of glass) to protect occupants of a vehicle.',
+    examples: [{ english: 'The lesson explains the meaning of windscreen.', chinese: '本课解释了“windscreen”的含义。' }], level: 3, cefr: 'B2', categories: ['Technology'],
+  },
+  {
+    id: 'optimal', term: 'optimal', normalizedTerm: 'optimal', partOfSpeech: ['adjective', 'noun'],
+    chineseShort: '最佳的, 最理想的；最优的', chineseExplanation: '最佳的, 最理想的；最优的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Most desirable possible under a restriction expressed or implied.',
+    examples: [{ english: 'The passage uses optimal to describe the situation.', chinese: '文章用“optimal”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'grievance', term: 'grievance', normalizedTerm: 'grievance', partOfSpeech: ['noun'],
+    chineseShort: '委屈, 冤情, 苦况；不满', chineseExplanation: '委屈, 冤情, 苦况；不满是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'An allegation that something imposes an illegal obligation or denies some legal right or causes injustice.',
+    examples: [{ english: 'The lesson explains the meaning of grievance.', chinese: '本课解释了“grievance”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'discontent', term: 'discontent', normalizedTerm: 'discontent', partOfSpeech: ['noun', 'adjective'],
+    chineseShort: '不满', chineseExplanation: '不满是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Make dissatisfied.',
+    examples: [{ english: 'The lesson explains the meaning of discontent.', chinese: '本课解释了“discontent”的含义。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
+  {
+    id: 'uneven', term: 'uneven', normalizedTerm: 'uneven', partOfSpeech: ['adjective', 'verb'],
+    chineseShort: '不平坦的, 不均等的, 奇数的', chineseExplanation: '不平坦的, 不均等的, 奇数的是第3级词汇，使用时要注意具体语境、搭配和语体。', englishDefinition: 'Not even or uniform as e.g. in shape or texture.',
+    examples: [{ english: 'The passage uses uneven to describe the situation.', chinese: '文章用“uneven”来描述这种情况。' }], level: 3, cefr: 'B2', categories: ['Daily English'],
+  },
 ] satisfies readonly VocabularyItem[]
