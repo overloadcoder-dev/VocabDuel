@@ -1,6 +1,7 @@
 import '../styles/main.css'
 import { answerMarker, getAnswerState } from '../components/answer-state'
 import { siteFooter, siteHeader } from '../components/site-shell'
+import { currentLanguage } from '../config'
 import { loadVocabularyLevel, type VocabularyDataset } from '../data'
 import { generateQuestions } from '../games'
 import type { GameQuestion } from '../types'
@@ -27,7 +28,7 @@ function randomSeed(): number {
 
 function refillDeck(previousVocabularyId?: string): void {
   if (!vocabulary) throw new Error('Vocabulary is still loading.')
-  deck = generateQuestions({ gameType: 'meaning', questionCount: vocabulary.items.length, seed: randomSeed() }, vocabulary.items)
+  deck = generateQuestions({ gameType: 'meaning', questionCount: vocabulary.items.length, seed: randomSeed(), language: currentLanguage() }, vocabulary.items)
   if (deck.length > 1 && deck[0]?.vocabularyId === previousVocabularyId) {
     ;[deck[0], deck[1]] = [deck[1]!, deck[0]!]
   }

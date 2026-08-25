@@ -42,6 +42,17 @@ describe('question generation', () => {
     expect(questions.every(({ prompt }) => prompt.includes('______'))).toBe(true)
   })
 
+  it('uses the selected language for meanings and explanations', () => {
+    const apple = vocabulary.find(({ id }) => id === 'apple')!
+    for (const language of ['en', 'ms', 'zh'] as const) {
+      const question = generateQuestions({ gameType: 'meaning', vocabularyIds: ['apple'], questionCount: 1, seed: 'locale', language }, vocabulary)[0]!
+      const correctChoice = question.choices?.find(({ id }) => id === 'apple')
+      const expected = language === 'en' ? apple.englishDefinition : language === 'ms' ? apple.examples[0]?.malay : apple.chineseShort
+      expect(correctChoice?.label).toBe(expected)
+      expect(question.explanation).toContain(language === 'zh' ? apple.chineseExplanation : language === 'ms' ? apple.examples[0]!.malay : apple.englishDefinition)
+    }
+  })
+
   it('normalizes harmless input differences without accepting misspellings', () => {
     expect(answersMatch('  ACQUIRE  ', 'acquire')).toBe(true)
     expect(answersMatch('acqiure', 'acquire')).toBe(false)

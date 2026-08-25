@@ -23,7 +23,7 @@ Consider all of these together:
 5. **Register:** Is it neutral and general, or formal, academic, idiomatic, or specialised?
 6. **Precision:** Could a common word replace it without losing important nuance?
 
-Use a stable unique `id`, lowercase `normalizedTerm`, at least one bilingual example, and only categories declared in `VOCABULARY_CATEGORIES`. Keep definitions and examples original or appropriately licensed and human-reviewed.
+Use a stable unique `id`, lowercase `normalizedTerm`, at least one example in British English, Bahasa Melayu, and Simplified Chinese, and only categories declared in `VOCABULARY_CATEGORIES`. Keep definitions and examples original or appropriately licensed and human-reviewed.
 
 The August 2026 expansion used the MIT-licensed [ECDICT](https://github.com/skywind3000/ECDICT) dataset for bilingual gloss and corpus-rank checks. English definitions and example sentences should still receive normal editorial review when terms are revised.
 

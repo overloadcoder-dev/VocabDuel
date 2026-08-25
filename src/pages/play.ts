@@ -1,8 +1,8 @@
 import '../styles/main.css'
 import { announce, confirmAction } from '../components/feedback'
 import { siteFooter, siteHeader } from '../components/site-shell'
-import { SITE } from '../config'
-import { loadVocabulary } from '../data'
+import { currentLanguage, SITE } from '../config'
+import { loadVocabulary, vocabularyMeaning } from '../data'
 import { answersMatch, calculateSoloQuestionScore, generateQuestions, SESSION_CONFIGS } from '../games'
 import { progressRepository, recordWordResult } from '../storage'
 import { speechService } from '../speech'
@@ -14,6 +14,7 @@ document.querySelector('#site-footer')!.innerHTML = siteFooter()
 
 const el = <T extends HTMLElement>(selector: string) => document.querySelector<T>(selector)!
 const categorySelect = el<HTMLSelectElement>('#game-category')
+const language = currentLanguage()
 VOCABULARY_CATEGORIES.forEach((category) => categorySelect.insertAdjacentHTML('beforeend', `<option>${category}</option>`))
 
 let vocabulary: readonly VocabularyItem[] = []
@@ -61,7 +62,7 @@ function createQuestionSet(count: number, level?: VocabularyLevel, category?: Vo
   let round = 0
   while (result.length < count) {
     const amount = Math.min(count - result.length, eligible.length)
-    const batch = generateQuestions({ gameType, questionCount: amount, seed: `${Date.now()}-${round}` }, eligible)
+    const batch = generateQuestions({ gameType, questionCount: amount, seed: `${Date.now()}-${round}`, language: currentLanguage() }, eligible)
     result.push(...batch.map((question) => ({ ...question, id: `${question.id}-batch${round}` })))
     round += 1
   }
@@ -103,7 +104,7 @@ function renderQuestion(): void {
   el('#question-kind').textContent = gameType === 'audio' ? 'Press listen, then identify the word' : gameLabels[gameType]
   const prompt = el('#question-prompt')
   prompt.textContent = question.prompt
-  prompt.lang = gameType === 'reverse' || gameType === 'spelling' ? 'zh-Hans' : 'en'
+  prompt.lang = gameType === 'reverse' || gameType === 'spelling' ? (language === 'zh' ? 'zh-Hans' : language === 'ms' ? 'ms-MY' : 'en-GB') : 'en-GB'
   prompt.classList.remove('blur-sm')
   el('#question-ipa').textContent = gameType === 'audio' ? 'The word stays hidden until you answer.' : question.ipa ?? ''
   const listen = el<HTMLButtonElement>('#listen-button'); listen.classList.toggle('hidden', gameType !== 'audio' && gameType !== 'spelling'); listen.disabled = false
@@ -204,7 +205,7 @@ function finishGame(): void {
   el('#result-subtitle').textContent = sessionType === 'level-challenge' ? `${accuracy}% accuracy · ${passed ? 'Level cleared' : '80% needed to pass'}` : `You answered ${correctCount} of ${attempted} correctly.`
   el('#result-score').textContent = String(score); el('#result-accuracy').textContent = `${accuracy}%`; el('#result-xp').textContent = `+${Math.max(0, current.xp - progressBefore.xp)}`
   const uniqueWrong = [...new Set(incorrectIds)].map((id) => vocabulary.find((word) => word.id === id)).filter((word) => word !== undefined)
-  el('#review-words').innerHTML = uniqueWrong.length ? `<h2 class="font-extrabold">Words to revisit</h2><div class="mt-3 flex flex-wrap gap-2">${uniqueWrong.map((word) => `<a class="tag hover:bg-brand-soft" href="${SITE.routes.learn}#${word.id}">${word.term} · ${word.chineseShort}</a>`).join('')}</div>` : '<p class="font-bold text-success">✓ No missed words in this round.</p>'
+  el('#review-words').innerHTML = uniqueWrong.length ? `<h2 class="font-extrabold">Words to revisit</h2><div class="mt-3 flex flex-wrap gap-2">${uniqueWrong.map((word) => `<a class="tag hover:bg-brand-soft" href="${SITE.routes.learn}#${word.id}">${word.term} · ${vocabularyMeaning(word, language)}</a>`).join('')}</div>` : '<p class="font-bold text-success">✓ No missed words in this round.</p>'
   showScreen('result')
 }
 

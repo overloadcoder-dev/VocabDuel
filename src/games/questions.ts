@@ -1,8 +1,8 @@
 import { filterVocabulary } from '../data/filters'
+import { vocabularyExplanation, vocabularyMeaning } from '../data/localised-vocabulary'
+import type { AppLanguage } from '../config/locale'
 import type { Choice, GameQuestion, QuestionGenerationOptions, VocabularyItem } from '../types'
 import { createSeededRandom, shuffleSeeded } from './rng'
-
-const meaning = (item: VocabularyItem) => item.chineseShort
 
 function inflectedForms(term: string): string[] {
   const words = term.split(' ')
@@ -80,23 +80,24 @@ function createQuestion(
   pool: readonly VocabularyItem[],
   random: () => number,
   index: number,
+  language: AppLanguage,
 ): GameQuestion {
   const base = {
     id: `${gameType}-${index + 1}-${item.id}`,
     gameType,
     vocabularyId: item.id,
-    explanation: `${item.term}：${item.chineseExplanation}`,
+    explanation: `${item.term}${language === 'zh' ? '：' : ': '}${vocabularyExplanation(item, language)}`,
     ipa: item.ipa,
   }
   switch (gameType) {
     case 'meaning':
-      return { ...base, prompt: item.term, choices: choicesFor(item, pool, meaning, random), correctAnswer: item.id }
+      return { ...base, prompt: item.term, choices: choicesFor(item, pool, (candidate) => vocabularyMeaning(candidate, language), random), correctAnswer: item.id }
     case 'reverse':
-      return { ...base, prompt: meaning(item), choices: choicesFor(item, pool, ({ term }) => term, random), correctAnswer: item.id }
+      return { ...base, prompt: vocabularyMeaning(item, language), choices: choicesFor(item, pool, ({ term }) => term, random), correctAnswer: item.id }
     case 'audio':
-      return { ...base, prompt: 'Listen, then choose the word you hear.', choices: choicesFor(item, pool, ({ term }) => term, random), correctAnswer: item.id, audioTerm: item.term }
+      return { ...base, prompt: language === 'ms' ? 'Dengar, kemudian pilih perkataan yang anda dengar.' : language === 'zh' ? '请听发音，然后选择听到的单词。' : 'Listen, then choose the word you hear.', choices: choicesFor(item, pool, ({ term }) => term, random), correctAnswer: item.id, audioTerm: item.term }
     case 'spelling':
-      return { ...base, prompt: meaning(item), correctAnswer: item.term, audioTerm: item.term }
+      return { ...base, prompt: vocabularyMeaning(item, language), correctAnswer: item.term, audioTerm: item.term }
     case 'context': {
       const context = contextPrompt(item)
       return { ...base, prompt: context.prompt, example: context.example, choices: choicesFor(item, pool, ({ term }) => term, random), correctAnswer: item.id }
@@ -124,7 +125,8 @@ export function generateQuestions(
     throw new Error('Choice-based games require at least four vocabulary items.')
   }
   const random = createSeededRandom(options.seed)
+  const language = options.language ?? 'zh'
   return shuffleSeeded(targets, random)
     .slice(0, options.questionCount)
-    .map((item, index) => createQuestion(item, options.gameType, source, random, index))
+    .map((item, index) => createQuestion(item, options.gameType, source, random, index, language))
 }

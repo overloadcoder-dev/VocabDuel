@@ -1,7 +1,7 @@
 {
   "name": "VocabDuel",
   "short_name": "VocabDuel",
-  "description": "Learn English vocabulary with Chinese explanations and focused word games.",
+  "description": "Learn British English vocabulary in Bahasa Melayu, English, or Simplified Chinese with focused word games.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

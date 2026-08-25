@@ -4,6 +4,21 @@
     "cleanUrls": true,
     "trailingSlash": true,
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "redirects": [
+      { "source": "/cn", "destination": "/zh/", "type": 301 },
+      { "source": "/cn/:path*", "destination": "/zh/:path", "type": 301 },
+      { "source": "/learn", "destination": "/en/learn/", "type": 301 },
+      { "source": "/play", "destination": "/en/play/", "type": 301 },
+      { "source": "/multiplayer", "destination": "/en/multiplayer/", "type": 301 },
+      { "source": "/multi-duel", "destination": "/en/multi-duel/", "type": 301 },
+      { "source": "/placement", "destination": "/en/placement/", "type": 301 },
+      { "source": "/levels", "destination": "/en/levels/", "type": 301 },
+      { "source": "/how-to-play", "destination": "/en/how-to-play/", "type": 301 },
+      { "source": "/about", "destination": "/en/about/", "type": 301 },
+      { "source": "/privacy", "destination": "/en/privacy/", "type": 301 },
+      { "source": "/terms", "destination": "/en/terms/", "type": 301 },
+      { "source": "/words/:path*", "destination": "/en/words/:path", "type": 301 }
+    ],
     "headers": [
       {
         "source": "/assets/**",

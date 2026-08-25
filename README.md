@@ -1,6 +1,6 @@
 # VocabDuel
 
-VocabDuel is a static, mobile-first English vocabulary learning game for Chinese-speaking learners. A shared, typed vocabulary dataset powers detailed word study, five solo question types, configurable challenge sessions, local weak-word practice, casual private 1v1 matches, and isolated 2–4 player Multi Duel rooms.
+VocabDuel is a static, mobile-first British English vocabulary learning game with Bahasa Melayu, English-only, and Simplified Chinese experiences. A shared, typed vocabulary dataset powers detailed word study, five solo question types, configurable challenge sessions, local weak-word practice, casual private 1v1 matches, and isolated 2–4 player Multi Duel rooms.
 
 The production site is static. Firebase Anonymous Authentication and Realtime Database are loaded only for multiplayer; normal learning and solo games do not require an account or Firebase.
 
@@ -10,7 +10,7 @@ The production site is static. Firebase Anonymous Authentication and Realtime Da
 
 - Static multi-page HTML provides crawlable content at `/`, `/learn/`, `/play/`, `/multiplayer/`, `/placement/`, `/levels/`, `/how-to-play/`, `/about/`, `/privacy/`, and `/terms/`.
 - `src/data/vocabulary/` contains one curated term module per learning level. Browser routes dynamically load only the levels they need; `src/data/vocabulary.ts` remains the full editorial/test aggregate, and `src/types/` defines vocabulary, game, and progress contracts.
-- `src/config/site.ts` centralizes the product name, provisional origin, description, and canonical route map; static HTML keeps route-specific metadata crawlable without JavaScript.
+- `src/config/locale.ts`, `src/config/localised-seo.ts`, and `src/config/site.ts` centralise language routing, localised SEO, the product name, provisional origin, and canonical route map; generated static HTML keeps route-specific metadata crawlable without JavaScript.
 - `src/games/` contains deterministic question generation, scoring, and session behaviour separately from page rendering.
 - `src/storage/` stores non-sensitive solo progress in localStorage.
 - `src/speech/` wraps the browser Web Speech API.
@@ -133,7 +133,16 @@ Monitor Function logs for batch-cap warnings. The Pages workflow installs and te
 
 ## Vocabulary data
 
-Each item follows the typed `VocabularyItem` contract: stable ID and normalized term, part of speech, optional IPA, short and detailed Chinese explanations, an English definition, bilingual examples, optional collocations/synonyms/antonyms, an internal Level 1–5, optional accurately curated CEFR tag, and data-driven categories.
+Each item follows the typed `VocabularyItem` contract: stable ID and normalised British English term, part of speech, optional IPA, short and detailed Chinese explanations, an English definition, examples in British English, Bahasa Melayu, and Simplified Chinese, optional collocations/synonyms/antonyms, an internal Level 1–5, optional accurately curated CEFR tag, and data-driven categories.
+
+## Language routes
+
+- `/my/` uses Bahasa Melayu guidance and BM examples.
+- `/en/` is the British English-only experience.
+- `/zh/` uses Simplified Chinese guidance and examples.
+- `/` is the language chooser. `/cn/` permanently redirects to `/zh/`, and legacy unprefixed app routes redirect to `/en/` equivalents on Firebase Hosting.
+
+Every canonical page has locale-specific metadata and reciprocal `hreflang` links. Word detail pages are generated for all three languages, while progress remains shared in the same browser profile.
 
 To add words:
 

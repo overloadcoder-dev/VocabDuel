@@ -2,7 +2,7 @@ import '../styles/main.css'
 import { answerMarker, getAnswerState } from '../components/answer-state'
 import { showAlertDialog } from '../components/feedback'
 import { siteFooter, siteHeader } from '../components/site-shell'
-import { SITE } from '../config'
+import { currentLanguage, SITE } from '../config'
 import { loadVocabularyLevel, type VocabularyDataset } from '../data'
 import { generateQuestions, calculateScore } from '../games'
 import { speechService } from '../speech'
@@ -80,7 +80,7 @@ function defaultConfig(): MultiRoomConfig {
 function questionsFor(current: MultiRoomRecord): GameQuestion[] {
   if (!vocabularyDataset) throw new Error('Vocabulary is still loading.')
   const source = vocabularyDataset.items
-  const base = { gameType: current.config.gameType, questionCount: current.config.questionCount, seed: current.metadata.seed }
+  const base = { gameType: current.config.gameType, questionCount: current.config.questionCount, seed: current.metadata.seed, language: currentLanguage() }
   try {
     return generateQuestions({ ...base, level: current.config.level, category: current.config.category === 'All' ? undefined : current.config.category as VocabularyCategory }, source)
   } catch {

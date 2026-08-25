@@ -1,3 +1,5 @@
+import { currentLanguage } from '../config/locale'
+
 let installed = false
 
 export function installBackToTop(): void {
@@ -8,8 +10,10 @@ export function installBackToTop(): void {
   button.type = 'button'
   button.className = 'back-to-top'
   button.hidden = true
-  button.setAttribute('aria-label', 'Scroll back to top')
-  button.title = 'Back to top'
+  const language = currentLanguage()
+  const label = language === 'ms' ? 'Kembali ke atas' : language === 'zh' ? '返回顶部' : 'Back to top'
+  button.setAttribute('aria-label', label)
+  button.title = label
   button.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 14 7-7 7 7" /></svg>'
   document.body.append(button)
 

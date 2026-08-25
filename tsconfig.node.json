@@ -19,6 +19,8 @@
     "src/data/vocabulary/level-5.ts",
     "src/data/editorial-quality.ts",
     "src/data/word-slug.ts",
+    "src/config/locale.ts",
+    "src/config/localised-seo.ts",
     "src/types/*.ts"
   ]
 }

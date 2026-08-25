@@ -1,3 +1,5 @@
+import { currentLanguage } from '../config/locale'
+
 const navigationDelayMs = 200
 
 let installed = false
@@ -37,7 +39,9 @@ export function installPageTransitions(): void {
     overlay.setAttribute('role', 'status')
     overlay.setAttribute('aria-live', 'polite')
     overlay.setAttribute('aria-atomic', 'true')
-    overlay.innerHTML = '<span class="page-transition-spinner" aria-hidden="true"></span><strong>正在载入下一页…</strong><small>VocabDuel</small>'
+    const language = currentLanguage()
+    const loading = language === 'ms' ? 'Memuatkan halaman seterusnya…' : language === 'zh' ? '正在加载下一页…' : 'Loading the next page…'
+    overlay.innerHTML = `<span class="page-transition-spinner" aria-hidden="true"></span><strong>${loading}</strong><small>VocabDuel</small>`
     document.body.append(overlay)
   }
 

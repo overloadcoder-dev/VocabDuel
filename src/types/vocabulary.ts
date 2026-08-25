@@ -15,6 +15,7 @@ export type VocabularyCategory = (typeof VOCABULARY_CATEGORIES)[number]
 
 export interface VocabularyExample {
   english: string
+  malay: string
   chinese: string
 }
 
@@ -35,4 +36,3 @@ export interface VocabularyItem {
   cefr?: CefrLevel
   categories: VocabularyCategory[]
 }
-

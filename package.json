@@ -4,13 +4,14 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --configLoader runner",
     "build": "tsc -b && vite build",
     "release:verify": "node scripts/verify-release.mjs",
+    "vocabulary:backfill-malay": "node scripts/backfill-malay-examples.mjs",
     "typecheck": "tsc -b --pretty false",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "preview": "vite preview",
+    "test": "vitest run --configLoader runner",
+    "test:watch": "vitest --configLoader runner",
+    "preview": "vite preview --configLoader runner",
     "functions:test": "npm --prefix functions test",
     "firebase:emulators": "firebase emulators:start",
     "firebase:rules:test": "firebase emulators:exec --project demo-vocabduel --only database \"vitest run src/multiplayer/firebase/rules.test.ts\""

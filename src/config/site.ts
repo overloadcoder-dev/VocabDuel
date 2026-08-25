@@ -1,12 +1,15 @@
+import { currentLanguage, languagePath } from './locale'
+
 export function sitePath(path: string): string {
   const relativePath = path.replace(/^\/+/, '')
-  return `${import.meta.env.BASE_URL}${relativePath}`
+  const localisedPath = languagePath(`/${relativePath}`, currentLanguage()).replace(/^\/+/, '')
+  return `${import.meta.env.BASE_URL}${localisedPath}`
 }
 
 export const SITE = {
   name: 'VocabDuel',
   origin: (import.meta.env.VITE_SITE_URL || 'https://vocabduel.example').replace(/\/+$/, ''),
-  description: 'Learn English vocabulary with clear Chinese guidance, pronunciation, examples and focused games.',
+  description: 'Learn British English vocabulary with clear guidance, pronunciation, examples and focused games.',
   routes: {
     home: sitePath('/'),
     learn: sitePath('/learn/'),

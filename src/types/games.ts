@@ -1,4 +1,5 @@
 import type { VocabularyCategory, VocabularyLevel } from './vocabulary'
+import type { AppLanguage } from '../config/locale'
 
 export type GameType = 'meaning' | 'reverse' | 'audio' | 'spelling' | 'context'
 export type SessionType = 'practice' | 'time-attack' | 'survival' | 'level-challenge'
@@ -10,6 +11,7 @@ export interface QuestionGenerationOptions {
   questionCount: number
   seed: string | number
   vocabularyIds?: readonly string[]
+  language?: AppLanguage
 }
 
 export interface Choice {
@@ -54,4 +56,3 @@ export interface SessionState {
   finishedAt?: number
   finishReason?: 'completed' | 'time-expired' | 'out-of-lives'
 }
-

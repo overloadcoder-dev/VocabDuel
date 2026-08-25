@@ -1,7 +1,7 @@
 import '../styles/main.css'
 import { announce } from '../components/feedback'
 import { siteFooter, siteHeader } from '../components/site-shell'
-import { SITE } from '../config'
+import { currentLanguage, SITE } from '../config'
 import { loadVocabularyLevel } from '../data'
 import { getVocabularyLevelGuide } from '../data/vocabulary/levels'
 import {
@@ -53,7 +53,7 @@ async function nextQuestion(): Promise<void> {
   const source = candidates.length ? candidates : vocabulary.filter((item) => item.level === level)
   const target = source[(seed + state.answered * 997) % source.length]
   if (!target) throw new Error(`No vocabulary is available for Level ${level}.`)
-  question = generateQuestions({ gameType: 'meaning', vocabularyIds: [target.id], questionCount: 1, seed: `${seed}-${state.answered}` }, vocabulary)[0]
+  question = generateQuestions({ gameType: 'meaning', vocabularyIds: [target.id], questionCount: 1, seed: `${seed}-${state.answered}`, language: currentLanguage() }, vocabulary)[0]
   usedIds.add(target.id)
   answered = false
   renderQuestion(level)

@@ -1,8 +1,8 @@
 import '../styles/main.css'
 import { announce, confirmAction } from '../components/feedback'
 import { siteFooter, siteHeader } from '../components/site-shell'
-import { SITE, sitePath } from '../config'
-import { loadAllVocabulary } from '../data'
+import { currentLanguage, SITE, sitePath } from '../config'
+import { loadAllVocabulary, vocabularyExample, vocabularyExplanation } from '../data'
 import { matchesVocabularyTerm } from '../data/search-vocabulary'
 import { vocabularyWordSlug } from '../data/word-slug'
 import { progressRepository, rankWeakWords, setWordStatus } from '../storage'
@@ -14,6 +14,7 @@ interface LearnPreferences { level: string; category: string; query: string; boo
 
 const PREFERENCES_KEY = 'vocabduel.learn.preferences.v1'
 const RESULT_STEP = 36
+const language = currentLanguage()
 
 document.querySelector('#site-header')!.innerHTML = siteHeader('learn')
 document.querySelector('#site-footer')!.innerHTML = siteFooter()
@@ -110,11 +111,20 @@ function render(): void {
   element('#word-term').textContent = word.term
   element('#word-ipa').textContent = word.ipa ?? 'Pronunciation guide unavailable'
   element('#word-pos').textContent = word.partOfSpeech.join(' · ')
-  element('#word-short').textContent = word.chineseShort
-  element('#word-explanation').textContent = word.chineseExplanation
+  const wordShort = element('#word-short')
+  wordShort.textContent = language === 'zh' ? word.chineseShort : language === 'ms' ? word.examples[0]?.malay ?? '' : ''
+  wordShort.classList.toggle('hidden', language === 'en')
+  wordShort.lang = language === 'zh' ? 'zh-Hans' : language === 'ms' ? 'ms-MY' : 'en-GB'
+  element('#word-explanation').textContent = vocabularyExplanation(word, language)
   element('#word-definition').textContent = word.englishDefinition
   element('#word-example').textContent = word.examples[0]?.english ?? '—'
-  element('#word-example-cn').textContent = word.examples[0]?.chinese ?? ''
+  const localisedExample = element('#word-example-cn')
+  localisedExample.textContent = language === 'en' ? '' : vocabularyExample(word, language)
+  localisedExample.classList.toggle('hidden', language === 'en')
+  localisedExample.lang = language === 'zh' ? 'zh-Hans' : 'ms-MY'
+  const localisedExplanation = element('#word-localised-explanation')
+  localisedExplanation.classList.toggle('hidden', language === 'en')
+  localisedExplanation.lang = language === 'zh' ? 'zh-Hans' : 'ms-MY'
   element('#word-level').textContent = `Level ${word.level}`
   const cefr = element('#word-cefr'); cefr.textContent = word.cefr ?? ''; cefr.classList.toggle('hidden', !word.cefr)
   element('#word-collocations').innerHTML = relatedTags(word.collocations)

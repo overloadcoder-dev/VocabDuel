@@ -39,23 +39,32 @@ const sitemap = await readFile(join(releaseDirectory, 'sitemap.xml'), 'utf8')
 const sitemapLocations = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1])
 const duplicateLocations = [...new Set(sitemapLocations.filter((location, index) => sitemapLocations.indexOf(location) !== index))]
 if (duplicateLocations.length) failures.push(`sitemap contains ${duplicateLocations.length} duplicate location(s)`)
-const wordDirectories = (await readdir(join(releaseDirectory, 'words'), { withFileTypes: true })).filter((entry) => entry.isDirectory())
-if (wordDirectories.length < 3_000) failures.push(`only ${wordDirectories.length} generated word pages were found`)
-if (!sitemap.includes('/words/apple/')) failures.push('sitemap is missing generated word URLs')
-if (sitemap.includes('/words/telemetry/')) failures.push('sitemap contains a word awaiting editorial review')
+for (const segment of ['my', 'en', 'zh']) {
+  const wordDirectories = (await readdir(join(releaseDirectory, segment, 'words'), { withFileTypes: true })).filter((entry) => entry.isDirectory())
+  if (wordDirectories.length < 3_000) failures.push(`only ${wordDirectories.length} generated ${segment} word pages were found`)
+  if (!sitemap.includes(`/${segment}/words/apple/`)) failures.push(`sitemap is missing ${segment} generated word URLs`)
+  if (sitemap.includes(`/${segment}/words/telemetry/`)) failures.push(`sitemap contains a ${segment} word awaiting editorial review`)
+}
 if (sitemap.includes('/privacy/') || sitemap.includes('/terms/')) failures.push('sitemap contains unfinished legal pages')
 
-const sampleWordPage = await readFile(join(releaseDirectory, 'words', 'apple', 'index.html'), 'utf8')
-for (const requiredMarkup of ['<h1>apple</h1>', '"@type":"DefinedTerm"', 'lang="zh-Hans"']) {
-  if (!sampleWordPage.includes(requiredMarkup)) failures.push(`sample word page is missing ${requiredMarkup}`)
+for (const [segment, languageTag] of [['my', 'ms-MY'], ['en', 'en-GB'], ['zh', 'zh-Hans']]) {
+  const sampleWordPage = await readFile(join(releaseDirectory, segment, 'words', 'apple', 'index.html'), 'utf8')
+  for (const requiredMarkup of ['<h1>apple</h1>', '"@type":"DefinedTerm"', `lang="${languageTag}"`, 'hreflang="x-default"']) {
+    if (!sampleWordPage.includes(requiredMarkup)) failures.push(`${segment} sample word page is missing ${requiredMarkup}`)
+  }
+  if (segment === 'en' && sampleWordPage.includes('lang="zh-Hans"')) failures.push('English-only sample word page contains Chinese content')
 }
 
-const templatedWordPage = await readFile(join(releaseDirectory, 'words', 'telemetry', 'index.html'), 'utf8')
-if (!templatedWordPage.includes('<meta name="robots" content="noindex, follow">')) failures.push('templated word page is missing noindex')
+for (const segment of ['my', 'en', 'zh']) {
+  const templatedWordPage = await readFile(join(releaseDirectory, segment, 'words', 'telemetry', 'index.html'), 'utf8')
+  if (!templatedWordPage.includes('<meta name="robots" content="noindex, follow">')) failures.push(`${segment} templated word page is missing noindex`)
+}
 
-for (const legalRoute of ['privacy', 'terms']) {
-  const legalHtml = await readFile(join(releaseDirectory, legalRoute, 'index.html'), 'utf8')
-  if (!legalHtml.includes('<meta name="robots" content="noindex, follow">')) failures.push(`${legalRoute} is missing noindex`)
+for (const segment of ['my', 'en', 'zh']) {
+  for (const legalRoute of ['privacy', 'terms']) {
+    const legalHtml = await readFile(join(releaseDirectory, segment, legalRoute, 'index.html'), 'utf8')
+    if (!legalHtml.includes('<meta name="robots" content="noindex, follow">')) failures.push(`${segment}/${legalRoute} is missing noindex`)
+  }
 }
 
 const manifest = JSON.parse(await readFile(join(releaseDirectory, 'site.webmanifest'), 'utf8'))

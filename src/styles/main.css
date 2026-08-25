@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+.language-switcher { display: flex; flex-wrap: wrap; gap: .25rem; align-items: center; }
+.language-switcher a { border-radius: .65rem; color: var(--color-muted); font-size: .75rem; font-weight: 800; padding: .4rem .55rem; }
+.language-switcher a[aria-current="true"] { background: var(--color-brand-soft); color: var(--color-brand-dark); }
+
 @theme {
   --color-ink: #172033;
   --color-muted: #667085;

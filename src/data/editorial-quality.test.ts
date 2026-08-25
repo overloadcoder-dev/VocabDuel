@@ -8,7 +8,7 @@ function wordWithExample(english: string): VocabularyItem {
     id: 'sample', term: 'sample', normalizedTerm: 'sample', partOfSpeech: ['noun'],
     chineseShort: '示例', chineseExplanation: '用于测试的示例。',
     englishDefinition: 'An item used to demonstrate something.',
-    examples: [{ english, chinese: '这是一个示例。' }], level: 1, categories: ['Daily English'],
+    examples: [{ english, malay: 'Ini ialah contoh untuk ujian.', chinese: '这是一个示例。' }], level: 1, categories: ['Daily English'],
   }
 }
 

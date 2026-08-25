@@ -1,3 +1,5 @@
+import { currentLanguage } from '../config/locale'
+
 export type FeedbackTone = 'info' | 'success' | 'error'
 type ConfirmMetricTone = 'brand' | 'success' | 'warning'
 type ConfirmMetric = { label: string; value: string; tone?: ConfirmMetricTone }
@@ -34,7 +36,10 @@ export function confirmAction(options: ConfirmActionOptions): Promise<boolean> {
     const icon = hasMetrics
       ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V10m7 9V5m7 14v-6"/><path d="M3 19h18"/></svg>'
       : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v5m0 3.5v.01"/><path d="M10.3 3.8 2.7 17a2 2 0 0 0 1.7 3h15.2a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/></svg>'
-    dialog.innerHTML = `<form method="dialog" class="confirm-dialog-form"><div class="confirm-dialog-heading"><span class="confirm-dialog-icon">${icon}</span><div>${options.eyebrow ? `<p class="confirm-dialog-eyebrow">${escapeHtml(options.eyebrow)}</p>` : ''}<h2 id="${titleId}">${escapeHtml(options.title)}</h2></div></div>${metrics ? `<ul class="confirm-metrics" aria-label="Progress summary">${metrics}</ul>` : ''}<div id="${descriptionId}" class="confirm-dialog-message"${options.danger ? ' data-danger' : ''}><span aria-hidden="true">!</span><p>${escapeHtml(options.message)}</p></div><div class="confirm-dialog-actions"><button class="button button-secondary" value="cancel" autofocus>Cancel</button><button class="button ${options.danger ? 'button-danger' : 'button-primary'}" value="confirm">${escapeHtml(options.confirmLabel)}</button></div></form>`
+    const language = currentLanguage()
+    const cancel = language === 'ms' ? 'Batal' : language === 'zh' ? '取消' : 'Cancel'
+    const progressSummary = language === 'ms' ? 'Ringkasan kemajuan' : language === 'zh' ? '学习进度摘要' : 'Progress summary'
+    dialog.innerHTML = `<form method="dialog" class="confirm-dialog-form"><div class="confirm-dialog-heading"><span class="confirm-dialog-icon">${icon}</span><div>${options.eyebrow ? `<p class="confirm-dialog-eyebrow">${escapeHtml(options.eyebrow)}</p>` : ''}<h2 id="${titleId}">${escapeHtml(options.title)}</h2></div></div>${metrics ? `<ul class="confirm-metrics" aria-label="${progressSummary}">${metrics}</ul>` : ''}<div id="${descriptionId}" class="confirm-dialog-message"${options.danger ? ' data-danger' : ''}><span aria-hidden="true">!</span><p>${escapeHtml(options.message)}</p></div><div class="confirm-dialog-actions"><button class="button button-secondary" value="cancel" autofocus>${cancel}</button><button class="button ${options.danger ? 'button-danger' : 'button-primary'}" value="confirm">${escapeHtml(options.confirmLabel)}</button></div></form>`
     document.body.append(dialog)
     dialog.addEventListener('close', () => {
       resolve(dialog.returnValue === 'confirm')
@@ -72,7 +77,8 @@ export function showAlertDialog(options: { title: string; message: string; butto
     actions.className = 'mt-6 flex justify-center'
     closeButton.className = 'button button-primary'
     closeButton.value = 'close'
-    closeButton.textContent = options.buttonLabel ?? '我知道了'
+    const language = currentLanguage()
+    closeButton.textContent = options.buttonLabel ?? (language === 'ms' ? 'Faham' : language === 'zh' ? '我知道了' : 'Got it')
     actions.append(closeButton)
     form.append(title, description, actions)
     dialog.append(form)
