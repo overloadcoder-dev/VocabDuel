@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-.language-switcher { display: flex; flex-wrap: wrap; gap: .25rem; align-items: center; }
-.language-switcher a { border-radius: .65rem; color: var(--color-muted); font-size: .75rem; font-weight: 800; padding: .4rem .55rem; }
-.language-switcher a[aria-current="true"] { background: var(--color-brand-soft); color: var(--color-brand-dark); }
+.language-switcher { position: relative; display: inline-flex; align-items: center; color: var(--color-muted); }
+.language-switcher-icon { position: absolute; left: .7rem; z-index: 1; font-size: .9rem; pointer-events: none; }
+.language-switcher select { min-height: 2.5rem; max-width: 12rem; appearance: auto; border: 1px solid #d9dce5; border-radius: .75rem; background: white; color: var(--color-ink); cursor: pointer; font-size: .8rem; font-weight: 800; padding: .45rem .65rem .45rem 2rem; }
 
 @theme {
   --color-ink: #172033;
@@ -39,6 +39,7 @@
   .home-hero-title-serif { font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
   .app-header { position: relative; z-index: 20; }
   .app-nav-link { display: flex; min-height: 2.75rem; align-items: center; justify-content: center; }
+  .app-nav { display: flex; align-items: center; gap: .5rem; }
   .app-menu-button { display: none; min-height: 2.75rem; align-items: center; gap: .45rem; border: 1px solid #d9dce5; border-radius: .85rem; background: white; padding: .55rem .8rem; color: var(--color-ink); font-weight: 800; cursor: pointer; }
   .page-shell { min-height: 100vh; overflow-x: hidden; }
   .multiplayer-page, .content-page { min-height: 100vh; background: radial-gradient(circle at 85% 0%, rgb(103 87 232 / .1), transparent 28rem), var(--color-paper); color: var(--color-ink); }
@@ -516,6 +517,8 @@ dialog::backdrop { background: rgb(23 32 51 / .55); backdrop-filter: blur(3px); 
   .app-nav[data-open] { display: block; }
   .app-nav ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; gap: .35rem; }
   .app-nav-link { width: 100%; padding-inline: .75rem; }
+  .app-nav .language-switcher { width: 100%; margin-top: .5rem; }
+  .app-nav .language-switcher select { width: 100%; max-width: none; }
   .learn-filters[data-collapsed] { display: none; }
   .learn-top-actions { width: 100%; }
   .learn-top-actions .button { flex: 1; }

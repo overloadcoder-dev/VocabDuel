@@ -68,11 +68,32 @@ function localiseBuiltPage(html: string, language: AppLanguage, route: SeoRoute,
 
 function languageGatewayHtml(siteOrigin: string, basePath: string, cssFile: string): string {
   const choices = [
-    ['my', 'Bahasa Melayu', 'Belajar kosa kata Bahasa Inggeris British dengan contoh Bahasa Melayu.'],
-    ['en', 'English (UK)', 'Learn with British English definitions, spellings and pronunciation.'],
-    ['zh', '简体中文', '通过简体中文讲解和例句学习英式英语词汇。'],
+    ['my', 'Bahasa Melayu'],
+    ['en', 'English (UK)'],
+    ['zh', '简体中文'],
   ] as const
-  return `<!doctype html><html lang="en-GB"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>VocabDuel — Choose your language</title><meta name="description" content="Choose Bahasa Melayu, British English, or Simplified Chinese to learn British English vocabulary with VocabDuel."><meta name="theme-color" content="#6757e8"><link rel="canonical" href="${siteOrigin}${basePath}">${appLanguages.map((language) => `<link rel="alternate" hreflang="${language === 'ms' ? 'ms' : language}" href="${localisedUrl(siteOrigin, basePath, language, '')}">`).join('')}<link rel="alternate" hreflang="x-default" href="${siteOrigin}${basePath}"><link rel="icon" href="${basePath}favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="${basePath}assets/${cssFile}"></head><body><main id="main-content" class="page-wrap grid min-h-screen place-content-center py-12"><section class="glass-card mx-auto max-w-3xl p-7 sm:p-10"><p class="eyebrow">VocabDuel</p><h1 class="mt-3 text-4xl font-black">Choose your learning language</h1><p class="mt-3 text-lg text-muted">All versions teach British English. You can change language at any time without losing local progress.</p><div class="mt-8 grid gap-4 sm:grid-cols-3">${choices.map(([segment, name, description]) => `<a class="rounded-2xl border border-black/5 bg-white p-5 shadow-sm hover:border-brand" href="${basePath}${segment}/"><strong class="text-xl">${name}</strong><span class="mt-2 block text-sm leading-6 text-muted">${description}</span></a>`).join('')}</div></section></main></body></html>`
+  return `<!doctype html><html lang="en-GB"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>VocabDuel — Choose your language</title><meta name="description" content="Choose Bahasa Melayu, British English, or Simplified Chinese to learn British English vocabulary with VocabDuel."><meta name="theme-color" content="#6757e8"><link rel="canonical" href="${siteOrigin}${basePath}">${appLanguages.map((language) => `<link rel="alternate" hreflang="${language === 'ms' ? 'ms' : language}" href="${localisedUrl(siteOrigin, basePath, language, '')}">`).join('')}<link rel="alternate" hreflang="x-default" href="${siteOrigin}${basePath}"><link rel="icon" href="${basePath}favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="${basePath}assets/${cssFile}"></head><body><main id="main-content" class="page-wrap grid min-h-screen place-content-center py-12"><section class="glass-card mx-auto w-full max-w-xl p-7 sm:p-10"><p class="eyebrow">VocabDuel</p><h1 class="mt-3 text-4xl font-black">Choose your learning language</h1><p class="mt-3 text-lg text-muted">All versions teach British English. You can change language at any time without losing local progress.</p><form id="language-gateway" class="mt-8 grid gap-4"><label for="gateway-language" class="font-bold">Language</label><select id="gateway-language" class="field" aria-label="Language">${choices.map(([segment, name]) => `<option value="${basePath}${segment}/"${segment === 'en' ? ' selected' : ''}>${name}</option>`).join('')}</select><button class="button button-primary" type="submit">Continue</button></form></section></main><script>document.querySelector('#language-gateway').addEventListener('submit',function(event){event.preventDefault();location.assign(document.querySelector('#gateway-language').value)})</script></body></html>`
+}
+
+function localisedDevRoutes(basePath: string): Plugin {
+  return {
+    name: 'vocabduel-localised-dev-routes',
+    apply: 'serve',
+    configureServer(server) {
+      server.middlewares.use((request, _response, next) => {
+        if (!request.url) return next()
+        const [pathname, query] = request.url.split('?', 2)
+        const pathWithinBase = basePath !== '/' && pathname.startsWith(basePath)
+          ? `/${pathname.slice(basePath.length)}`
+          : pathname
+        const sourcePath = pathWithinBase.replace(/^\/(?:en|my|ms|zh|cn)(?=\/|$)/i, '') || '/'
+        if (sourcePath === pathWithinBase) return next()
+        const rewrittenPath = basePath === '/' ? sourcePath : `${basePath.replace(/\/$/, '')}${sourcePath}`
+        request.url = `${rewrittenPath}${query ? `?${query}` : ''}`
+        next()
+      })
+    },
+  }
 }
 
 function wordPageHtml(word: VocabularyItem, previous: VocabularyItem, next: VocabularyItem, siteOrigin: string, basePath: string, cssFile: string, byTerm: ReadonlyMap<string, VocabularyItem>, language: AppLanguage): string {
@@ -201,7 +222,10 @@ export default defineConfig(({ mode }) => {
 
   return {
     base: basePath,
-    plugins: [initialPageLoader(), tailwindcss(), ...(mode === 'test' ? [] : [deploymentMetadata(siteOrigin, basePath)])],
+    plugins: [localisedDevRoutes(basePath), initialPageLoader(), tailwindcss(), ...(mode === 'test' ? [] : [deploymentMetadata(siteOrigin, basePath)])],
+    optimizeDeps: {
+      noDiscovery: true,
+    },
     build: {
       rollupOptions: {
         input: {

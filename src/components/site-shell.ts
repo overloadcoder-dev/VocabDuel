@@ -25,6 +25,12 @@ document.addEventListener('click', (event) => {
   }
 })
 
+document.addEventListener('change', (event) => {
+  const target = event.target
+  if (!(target instanceof HTMLSelectElement) || !target.matches('[data-language-switcher]')) return
+  window.location.assign(target.value)
+})
+
 document.addEventListener('keydown', (event) => {
   if (event.key !== 'Escape') return
   const toggle = document.querySelector<HTMLButtonElement>('[data-app-menu-button][aria-expanded="true"]')
@@ -71,7 +77,15 @@ const routeForSection = (section: SiteSection): string => SITE.routes[section]
 
 function languageSwitcher(language: AppLanguage): string {
   const currentRoute = typeof location === 'undefined' ? '/' : location.pathname
-  return `<div class="language-switcher" role="group" aria-label="${shellCopy[language].language}">${(['ms', 'en', 'zh'] as const).map((option) => `<a href="${languagePath(currentRoute, option)}" lang="${option === 'ms' ? 'ms-MY' : option === 'en' ? 'en-GB' : 'zh-Hans'}" hreflang="${option === 'ms' ? 'ms' : option}" ${option === language ? 'aria-current="true"' : ''}>${LANGUAGE_NAMES[option]}</a>`).join('')}</div>`
+  const basePath = import.meta.env.BASE_URL
+  const routeWithinBase = basePath !== '/' && currentRoute.startsWith(basePath)
+    ? `/${currentRoute.slice(basePath.length)}`
+    : currentRoute
+  const options = (['ms', 'en', 'zh'] as const).map((option) => {
+    const target = `${basePath}${languagePath(routeWithinBase, option).replace(/^\/+/, '')}`
+    return `<option value="${target}" lang="${option === 'ms' ? 'ms-MY' : option === 'en' ? 'en-GB' : 'zh-Hans'}"${option === language ? ' selected' : ''}>${LANGUAGE_NAMES[option]}</option>`
+  }).join('')
+  return `<label class="language-switcher"><span class="sr-only">${shellCopy[language].language}</span><span class="language-switcher-icon" aria-hidden="true">🌐</span><select data-language-switcher aria-label="${shellCopy[language].language}">${options}</select></label>`
 }
 
 export function siteHeader(active: SiteSection): string {
