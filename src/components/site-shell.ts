@@ -1,4 +1,4 @@
-import { currentLanguage, languagePath, LANGUAGE_NAMES, SITE, type AppLanguage } from '../config'
+import { currentLanguage, languageNavigationPath, LANGUAGE_NAMES, SITE, type AppLanguage } from '../config'
 import { installBackToTop } from './back-to-top'
 import { installPageTransitions } from './page-transition'
 import { localiseStaticDocument } from './localise-static'
@@ -76,13 +76,10 @@ const shellCopy: Record<AppLanguage, {
 const routeForSection = (section: SiteSection): string => SITE.routes[section]
 
 function languageSwitcher(language: AppLanguage): string {
-  const currentRoute = typeof location === 'undefined' ? '/' : location.pathname
+  const currentLocation = typeof location === 'undefined' ? { pathname: '/', search: '', hash: '' } : location
   const basePath = import.meta.env.BASE_URL
-  const routeWithinBase = basePath !== '/' && currentRoute.startsWith(basePath)
-    ? `/${currentRoute.slice(basePath.length)}`
-    : currentRoute
   const options = (['ms', 'en', 'zh'] as const).map((option) => {
-    const target = `${basePath}${languagePath(routeWithinBase, option).replace(/^\/+/, '')}`
+    const target = languageNavigationPath(currentLocation.pathname, currentLocation.search, currentLocation.hash, option, basePath)
     return `<option value="${target}" lang="${option === 'ms' ? 'ms-MY' : option === 'en' ? 'en-GB' : 'zh-Hans'}"${option === language ? ' selected' : ''}>${LANGUAGE_NAMES[option]}</option>`
   }).join('')
   return `<label class="language-switcher"><span class="sr-only">${shellCopy[language].language}</span><span class="language-switcher-icon" aria-hidden="true">🌐</span><select data-language-switcher aria-label="${shellCopy[language].language}">${options}</select></label>`

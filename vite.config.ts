@@ -14,6 +14,8 @@ import { vocabularyWordSlug } from './src/data/word-slug'
 import { isEditoriallyIndexable } from './src/data/editorial-quality'
 import { LANGUAGE_HTML_TAGS, LANGUAGE_URL_SEGMENTS, type AppLanguage } from './src/config/locale'
 import { LOCALISED_SEO, SEO_ROUTES, type SeoRoute } from './src/config/localised-seo'
+import { localisedStaticText } from './src/components/localise-static'
+import { localisedDuelText } from './src/multiplayer/duel-localisation'
 
 const allVocabulary = [...level1Vocabulary, ...level2Vocabulary, ...level3Vocabulary, ...level4Vocabulary, ...level5Vocabulary] as readonly VocabularyItem[]
 const projectRoot = fileURLToPath(new URL('.', import.meta.url))
@@ -40,6 +42,22 @@ function localisedUrl(siteOrigin: string, basePath: string, language: AppLanguag
   return `${siteOrigin}${basePath}${LANGUAGE_URL_SEGMENTS[language]}/${routeSuffix(route)}`
 }
 
+export function localiseHtmlContent(html: string, language: AppLanguage, route: SeoRoute): string {
+  const translate = (value: string) => route === 'multiplayer' || route === 'multi-duel'
+    ? localisedDuelText(value, language)
+    : localisedStaticText(value, language)
+  const textLocalised = html.replace(/>([^<>]+)</g, (full, raw: string) => {
+    const trimmed = raw.trim()
+    if (!trimmed) return full
+    const translated = translate(trimmed)
+    return translated === trimmed ? full : `>${raw.replace(trimmed, translated)}<`
+  })
+  return textLocalised.replace(/\b(aria-label|title|placeholder)="([^"]+)"/g, (full, attribute: string, value: string) => {
+    const translated = translate(value)
+    return translated === value ? full : `${attribute}="${translated}"`
+  })
+}
+
 function localiseBuiltPage(html: string, language: AppLanguage, route: SeoRoute, siteOrigin: string, basePath: string): string {
   const seo = LOCALISED_SEO[language][route]
   const canonical = localisedUrl(siteOrigin, basePath, language, route)
@@ -48,13 +66,13 @@ function localiseBuiltPage(html: string, language: AppLanguage, route: SeoRoute,
   let output = html
     .replace(/<html lang="[^"]+">/, `<html lang="${LANGUAGE_HTML_TAGS[language]}">`)
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(seo.title)}</title>`)
-    .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${escapeHtml(seo.description)}">`)
-    .replace(/<link rel="canonical" href="[^"]+">/, `${alternates}<link rel="canonical" href="${canonical}">`)
-    .replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${escapeHtml(seo.title)}">`)
-    .replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${escapeHtml(seo.description)}">`)
-    .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${canonical}">`)
-    .replace(/<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${escapeHtml(seo.title)}">`)
-    .replace(/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${escapeHtml(seo.description)}">`)
+    .replace(/<meta name="description" content="[^"]*"\s*\/?>/, `<meta name="description" content="${escapeHtml(seo.description)}">`)
+    .replace(/<link rel="canonical" href="[^"]+"\s*\/?>/, `${alternates}<link rel="canonical" href="${canonical}">`)
+    .replace(/<meta property="og:title" content="[^"]*"\s*\/?>/, `<meta property="og:title" content="${escapeHtml(seo.title)}">`)
+    .replace(/<meta property="og:description" content="[^"]*"\s*\/?>/, `<meta property="og:description" content="${escapeHtml(seo.description)}">`)
+    .replace(/<meta property="og:url" content="[^"]*"\s*\/?>/, `<meta property="og:url" content="${canonical}">`)
+    .replace(/<meta name="twitter:title" content="[^"]*"\s*\/?>/, `<meta name="twitter:title" content="${escapeHtml(seo.title)}">`)
+    .replace(/<meta name="twitter:description" content="[^"]*"\s*\/?>/, `<meta name="twitter:description" content="${escapeHtml(seo.description)}">`)
     .replace(/<h1([^>]*)>[\s\S]*?<\/h1>/, `<h1$1>${escapeHtml(seo.headline)}</h1><p class="locale-page-summary mt-3 max-w-3xl text-lg leading-8 text-muted" lang="${LANGUAGE_HTML_TAGS[language]}">${escapeHtml(seo.summary)}</p>`)
 
   for (const targetRoute of SEO_ROUTES) {
@@ -63,7 +81,7 @@ function localiseBuiltPage(html: string, language: AppLanguage, route: SeoRoute,
     output = output.replaceAll(`href="${existing}"`, `href="${localised}"`)
   }
   if (language !== 'zh') output = output.replace(/<([a-z][a-z0-9-]*)([^>]*\slang="zh-Hans"[^>]*)>/gi, '<$1$2 hidden>')
-  return output
+  return localiseHtmlContent(output, language, route)
 }
 
 function languageGatewayHtml(siteOrigin: string, basePath: string, cssFile: string): string {
@@ -154,7 +172,14 @@ function normalizeBasePath(value: string | undefined): string {
   return `/${value.replace(/^\/+|\/+$/g, '')}/`
 }
 
+export function normalizeSiteOrigin(value: string | undefined): string {
+  const configured = value || 'https://vocabduel.example'
+  try { return new URL(configured).origin }
+  catch { return configured.replace(/\/+$/, '') }
+}
+
 function deploymentMetadata(siteOrigin: string, basePath: string): Plugin {
+  const siteBaseUrl = `${siteOrigin}${basePath === '/' ? '' : basePath.slice(0, -1)}`
   return {
     name: 'vocabduel-deployment-metadata',
     transformIndexHtml: {
@@ -162,7 +187,7 @@ function deploymentMetadata(siteOrigin: string, basePath: string): Plugin {
       handler(html) {
         const baseWithoutLeadingSlash = basePath.slice(1)
         return html
-          .replaceAll('https://vocabduel.example', siteOrigin)
+          .replaceAll('https://vocabduel.example', siteBaseUrl)
           .replace(/href="\/([^"#]*)"/g, (full: string, target: string) => {
             if (basePath !== '/' && target.startsWith(baseWithoutLeadingSlash)) return full
             return `href="${basePath}${target}"`
@@ -172,7 +197,7 @@ function deploymentMetadata(siteOrigin: string, basePath: string): Plugin {
     },
     closeBundle() {
       const robotsPath = resolve(projectRoot, 'dist/robots.txt')
-      writeFileSync(robotsPath, readFileSync(robotsPath, 'utf8').replaceAll('https://vocabduel.example', siteOrigin))
+      writeFileSync(robotsPath, readFileSync(robotsPath, 'utf8').replaceAll('https://vocabduel.example', siteBaseUrl))
 
       const manifestPath = resolve(projectRoot, 'dist/site.webmanifest')
       const manifest = JSON.parse(readFileSync(manifestPath, 'utf8')) as {
@@ -220,7 +245,7 @@ function deploymentMetadata(siteOrigin: string, basePath: string): Plugin {
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, projectRoot, '')
   const basePath = normalizeBasePath(env.VITE_BASE_PATH)
-  const siteOrigin = (env.VITE_SITE_URL || 'https://vocabduel.example').replace(/\/+$/, '')
+  const siteOrigin = normalizeSiteOrigin(env.VITE_SITE_URL)
 
   return {
     base: basePath,

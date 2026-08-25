@@ -4,6 +4,7 @@ import { showAlertDialog } from '../components/feedback'
 import { siteFooter, siteHeader } from '../components/site-shell'
 import { currentLanguage, SITE } from '../config'
 import { loadVocabularyLevel, type VocabularyDataset } from '../data'
+import { vocabularyExplanation, vocabularyMeaning } from '../data/localised-vocabulary'
 import { generateQuestions, calculateScore } from '../games'
 import { speechService } from '../speech'
 import type { GameQuestion, VocabularyCategory } from '../types'
@@ -13,6 +14,7 @@ import { activeRoundTiming, remainingRoundMs, ROUND_REVIEW_MS, roundTimingAtInde
 import type { MultiRoomConfig, MultiRoomRecord, MultiplayerIdentity, RoomPlayer } from './types'
 import { joinRoomErrorCopy, normalizeRoomCode, readInviteRoomCode, sanitizeNickname, validateNickname } from '../multiplayer/validation'
 import { escapeHtml, guestName, leaderboardRankBadge as sharedLeaderboardRankBadge, refreshRoomCodeInput, reviewSpeakButton, roomCodeInputTemplate, saveGuestName } from '../multiplayer/ui'
+import { localiseDuelRoot, localisedDuelDialog, localisedDuelText } from '../multiplayer/duel-localisation'
 
 document.querySelector('#site-header')!.innerHTML = siteHeader('multiDuel')
 document.querySelector('#site-footer')!.innerHTML = siteFooter()
@@ -20,6 +22,8 @@ document.querySelector('#site-footer')!.innerHTML = siteFooter()
 const rootElement = document.querySelector<HTMLElement>('#multi-duel-app')
 if (!rootElement) throw new Error('Multi Duel root is missing.')
 const root: HTMLElement = rootElement
+const language = currentLanguage()
+localiseDuelRoot(document.body, language)
 
 try {
   sessionStorage.removeItem(`vocabduel-duel-asset-retry:${location.pathname}`)
@@ -48,6 +52,7 @@ let identity: MultiplayerIdentity | null = null
 let roomCode = ''
 let room: MultiRoomRecord | null = null
 let vocabularyDataset: VocabularyDataset | undefined
+let questionCache: { key: string; questions: GameQuestion[] } | undefined
 let serverOffset = 0
 let roomUnsubscribe: (() => void) | undefined
 let offsetUnsubscribe: (() => void) | undefined
@@ -68,7 +73,7 @@ function leaderboardRankBadge(place: number, rankingDecided: boolean): string {
 }
 
 function setNotice(message: string): void {
-  notice = message
+  notice = localisedDuelText(message, language)
   render()
 }
 
@@ -88,13 +93,24 @@ function defaultConfig(): MultiRoomConfig {
 
 function questionsFor(current: MultiRoomRecord): GameQuestion[] {
   if (!vocabularyDataset) throw new Error('Vocabulary is still loading.')
+  const cacheKey = [current.metadata.seed, current.config.level, current.config.category, current.config.gameType, current.config.questionCount, language].join('|')
+  if (questionCache?.key === cacheKey) return questionCache.questions
   const source = vocabularyDataset.items
   const base = { gameType: current.config.gameType, questionCount: current.config.questionCount, seed: current.metadata.seed, language: currentLanguage() }
   try {
-    return generateQuestions({ ...base, level: current.config.level, category: current.config.category === 'All' ? undefined : current.config.category as VocabularyCategory }, source)
+    const questions = generateQuestions({ ...base, level: current.config.level, category: current.config.category === 'All' ? undefined : current.config.category as VocabularyCategory }, source)
+    questionCache = { key: cacheKey, questions }
+    return questions
   } catch {
-    try { return generateQuestions({ ...base, level: current.config.level }, source) }
-    catch { return generateQuestions(base, source) }
+    try {
+      const questions = generateQuestions({ ...base, level: current.config.level }, source)
+      questionCache = { key: cacheKey, questions }
+      return questions
+    } catch {
+      const questions = generateQuestions(base, source)
+      questionCache = { key: cacheKey, questions }
+      return questions
+    }
   }
 }
 
@@ -229,7 +245,7 @@ function gameTemplate(current: MultiRoomRecord): string {
   const timerLabel = inResult ? `${nextStepLabel}还有 ${Math.ceil(timerRemaining / 1000)} 秒` : `剩余 ${Math.ceil(timerRemaining / 1000)} 秒`
   const correctLabel = question.choices?.find((choice) => choice.id === question.correctAnswer)?.label ?? question.correctAnswer
   const vocabularyItem = vocabularyDataset?.byId.get(question.vocabularyId)
-  const meaning = vocabularyItem?.chineseExplanation ?? question.explanation
+  const meaning = vocabularyItem ? vocabularyExplanation(vocabularyItem, language) : question.explanation
   const acceptingAnswers = current.metadata.state === 'playing'
   return `<section class="panel battle-panel" data-round-index="${index}" data-round-result="${inResult}">
     <div class="battle-meta"><span>Level ${current.config.level}</span><span>第 ${index + 1} / ${questions.length} 题</span></div>
@@ -280,7 +296,7 @@ function resultsTemplate(current: MultiRoomRecord, suppliedQuestions?: GameQuest
       const term = vocabularyDataset?.byId.get(question.vocabularyId)?.term ?? question.audioTerm ?? question.prompt
       return `<li><span>${escapeHtml(question.explanation)}</span>${reviewSpeakButton(term)}</li>`
     }).join('')}</ul></details>` : '<p>满分！所有单词都答对了。</p>'}
-    <details><summary>查看全部单词与词义（${reviewedWords.length}）</summary><dl class="match-word-list">${reviewedWords.map((item) => `<div><dt><span>${escapeHtml(item.term)}</span>${reviewSpeakButton(item.term)}</dt><dd>${escapeHtml(item.chineseShort)} · ${escapeHtml(item.englishDefinition)}</dd></div>`).join('')}</dl></details>
+    <details><summary>查看全部单词与词义（${reviewedWords.length}）</summary><dl class="match-word-list">${reviewedWords.map((item) => `<div><dt><span>${escapeHtml(item.term)}</span>${reviewSpeakButton(item.term)}</dt><dd>${escapeHtml(vocabularyMeaning(item, language))} · ${escapeHtml(vocabularyExplanation(item, language))}</dd></div>`).join('')}</dl></details>
     <div class="result-actions"><button class="button primary" data-rematch ${voted || !rematchAvailable ? 'disabled' : ''}>${!rematchAvailable ? '至少需要 2 位在线玩家' : voted ? `等待再战（${voteCount}/${connectedPlayers.length}）` : '与在线玩家再战'}</button><a class="button secondary" href="${SITE.routes.play}">单人练习</a><button class="button ghost" data-leave>离开房间</button></div>${voted && rematchAvailable ? `<p class="waiting-copy" role="status">已有 ${voteCount}/${connectedPlayers.length} 位在线玩家同意；全员同意后自动开始，离线玩家会退出下一场。</p>` : ''}
   </section>`
 }
@@ -293,6 +309,7 @@ function render(): void {
     html = room.metadata.state === 'waiting' ? lobbyTemplate(room) : room.metadata.state === 'finished' ? resultsTemplate(room) : gameTemplate(room)
   }
   root.innerHTML = html
+  localiseDuelRoot(root, language)
   root.setAttribute('aria-busy', String(actionPending))
   const roundKey = root.querySelector<HTMLElement>('[data-round-index]')?.dataset.roundIndex ?? ''
   if (lastView !== view || (roundKey && roundKey !== lastRoundKey)) {
@@ -325,19 +342,19 @@ function updateCountdownDial(current: MultiRoomRecord, untilStart: number): bool
   const isRematch = (current.match?.rematchNumber ?? 0) > 0
   const duration = isRematch ? rematchCountdownMs : initialCountdownMs
   const count = Math.max(1, Math.ceil(untilStart / 1000))
-  const display = !isRematch && count > 3 ? '准备' : String(count)
+  const display = !isRematch && count > 3 ? localisedDuelText('准备', language) : String(count)
   dial.style.setProperty('--countdown-progress', String(Math.max(0, Math.min(1, untilStart / duration))))
-  number.toggleAttribute('data-numeric', display !== '准备')
+  number.toggleAttribute('data-numeric', count <= 3 || isRematch)
   if (number.textContent !== display) {
     number.textContent = display
-    unit.innerHTML = display === '准备' ? '' : '<small>秒</small>'
+    unit.innerHTML = count > 3 && !isRematch ? '' : `<small>${language === 'zh' ? '秒' : 's'}</small>`
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       number.animate([{ opacity: .35, transform: 'scale(.78)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 320, easing: 'cubic-bezier(.2,.8,.2,1)' })
     }
   }
   if (dial.dataset.announcedSecond !== String(count)) {
     dial.dataset.announcedSecond = String(count)
-    dial.setAttribute('aria-label', `对战将在 ${count} 秒后开始`)
+    dial.setAttribute('aria-label', localisedDuelText(`对战将在 ${count} 秒后开始`, language))
   }
   return true
 }
@@ -354,19 +371,23 @@ function updateRoundTimer(current: MultiRoomRecord, now: number): boolean {
   const timer = battle.querySelector<HTMLElement>('.timer')
   const timerValue = timer?.querySelector<HTMLElement>('[data-timer-value]')
   if (!timer || !timerValue) return false
-  const nextStepLabel = timing.index === questions.length - 1 ? '查看结果' : '下一题'
+  const nextStepSource = timing.index === questions.length - 1 ? '查看结果' : '下一题'
+  const nextStepLabel = localisedDuelText(nextStepSource, language)
   const remaining = remainingRoundMs(inResult ? timing.resultEndAt : timing.roundEndAt, serverOffset)
   const duration = inResult ? resultTimeMs : current.config.roundTimeMs
   const progress = Math.max(0, Math.min(1, remaining / duration))
   timer.style.setProperty('--progress', String(progress))
   timer.toggleAttribute('data-transition', inResult)
   timer.toggleAttribute('data-urgent', !inResult && progress <= .25)
-  timerValue.textContent = inResult ? `${nextStepLabel} ${(remaining / 1000).toFixed(1)}s` : `${(remaining / 1000).toFixed(1)}s`
+  const timerText = inResult ? `${nextStepLabel} ${(remaining / 1000).toFixed(1)}s` : `${(remaining / 1000).toFixed(1)}s`
+  if (timerValue.textContent !== timerText) timerValue.textContent = timerText
   const announcedSecond = Math.ceil(remaining / 1000)
   const announcementKey = `${inResult ? 'transition' : 'round'}-${announcedSecond}`
   if (timer.dataset.announcedSecond !== announcementKey) {
     timer.dataset.announcedSecond = announcementKey
-    timer.setAttribute('aria-label', inResult ? `${nextStepLabel}还有 ${announcedSecond} 秒` : `剩余 ${announcedSecond} 秒`)
+    timer.setAttribute('aria-label', inResult
+      ? localisedDuelText(`${nextStepSource}还有 ${announcedSecond} 秒`, language)
+      : localisedDuelText(`剩余 ${announcedSecond} 秒`, language))
   }
   return true
 }
@@ -478,7 +499,7 @@ function bindActions(): void {
     const currentIdentity = await readIdentity(form); if (!currentIdentity) return
     const code = normalizeRoomCode(String(new FormData(form).get('code') ?? ''))
     if (code.length !== 6) {
-      await showAlertDialog({ title: '房间码不完整', message: '请输入完整的六位房间码，然后再试一次。' })
+      await showAlertDialog(localisedDuelDialog({ title: '房间码不完整', message: '请输入完整的六位房间码，然后再试一次。' }, language))
       return
     }
     actionPending = true; render()
@@ -489,7 +510,7 @@ function bindActions(): void {
     }
     catch (error) {
       const copy = joinRoomErrorCopy(error instanceof Error ? error.message : '无法加入房间，请检查房间码。')
-      await showAlertDialog(copy)
+      await showAlertDialog(localisedDuelDialog(copy, language))
     }
     finally { actionPending = false; render() }
   })
@@ -525,9 +546,10 @@ function bindActions(): void {
   root.querySelector<HTMLButtonElement>('[data-share]')?.addEventListener('click', async (event) => {
     const button = event.currentTarget as HTMLButtonElement
     const url = button.dataset.share ?? location.href
-    const text = `加入我的 VocabDuel Multi Duel！房间码：${roomCode}`
+    const text = language === 'ms' ? `Sertai VocabDuel Multi Duel saya! Kod bilik: ${roomCode}` : language === 'en' ? `Join my VocabDuel Multi Duel! Room code: ${roomCode}` : `加入我的 VocabDuel Multi Duel！房间码：${roomCode}`
+    const title = language === 'ms' ? 'Sertai VocabDuel Multi Duel saya' : language === 'en' ? 'Join my VocabDuel Multi Duel' : '加入我的 VocabDuel Multi Duel'
     try {
-      if (navigator.share) await navigator.share({ title: '加入我的 VocabDuel Multi Duel', text, url })
+      if (navigator.share) await navigator.share({ title, text, url })
       else { await navigator.clipboard.writeText(`${text}\n${url}`); setNotice('邀请内容与链接已复制。') }
     } catch (error) {
       if (error instanceof DOMException && error.name === 'AbortError') return
@@ -575,13 +597,14 @@ document.addEventListener('keydown', (event) => {
 async function initialize(): Promise<void> {
   if (!isFirebaseConfigured()) {
     root.innerHTML = `<section class="panel unavailable-panel"><p class="eyebrow">MULTI DUEL 未连接</p><h2>暂时无法使用 Multi Duel</h2><p>Firebase 环境变量尚未设定；原有 1v1 对战、单词学习和单人游戏不受影响。</p><a class="button primary" href="${SITE.routes.multiplayer}">前往 1v1 Duel</a><p class="technical-note">开发者可按照 README 设定 Firebase 或本地模拟器。</p></section>`
+    localiseDuelRoot(root, language)
     return
   }
   try {
     const invite = readInviteRoomCode(location.search)
     if (!invite) { render(); return }
     const uid = await authenticateResumableGuest()
-    identity = { uid, displayName: guestName(uid) }
+    identity = { uid, displayName: guestName(uid, language) }
     if (invite) {
       const resumableRoom = await resumeMultiRoom(invite, uid).catch(() => null)
       if (resumableRoom) {
@@ -595,7 +618,8 @@ async function initialize(): Promise<void> {
     }
     render()
   } catch (error) {
-    root.innerHTML = `<section class="panel unavailable-panel" role="alert"><h2>无法连接 Multi Duel</h2><p>${escapeHtml(error instanceof Error ? error.message : '请稍后再试。')}</p><button class="button primary" data-retry>重新连接</button><a class="button ghost" href="${SITE.routes.multiplayer}">返回 1v1 Duel</a></section>`
+    root.innerHTML = `<section class="panel unavailable-panel" role="alert"><h2>无法连接 Multi Duel</h2><p>${escapeHtml(localisedDuelText(error instanceof Error ? error.message : '请稍后再试。', language))}</p><button class="button primary" data-retry>重新连接</button><a class="button ghost" href="${SITE.routes.multiplayer}">返回 1v1 Duel</a></section>`
+    localiseDuelRoot(root, language)
     root.querySelector('[data-retry]')?.addEventListener('click', () => { location.reload() })
   }
 }

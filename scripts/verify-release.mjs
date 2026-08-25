@@ -45,11 +45,24 @@ const sitemap = await readFile(join(releaseDirectory, 'sitemap.xml'), 'utf8')
 const sitemapLocations = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1])
 const duplicateLocations = [...new Set(sitemapLocations.filter((location, index) => sitemapLocations.indexOf(location) !== index))]
 if (duplicateLocations.length) failures.push(`sitemap contains ${duplicateLocations.length} duplicate location(s)`)
+for (const location of sitemapLocations) {
+  const segments = new URL(location).pathname.split('/').filter(Boolean)
+  if (segments.some((segment, index) => index > 0 && segment.toLocaleLowerCase() === segments[index - 1].toLocaleLowerCase())) {
+    failures.push(`sitemap location repeats a path segment: ${location}`)
+    break
+  }
+}
 for (const segment of ['my', 'en', 'zh']) {
   const wordDirectories = (await readdir(join(releaseDirectory, segment, 'words'), { withFileTypes: true })).filter((entry) => entry.isDirectory())
   if (wordDirectories.length < 3_000) failures.push(`only ${wordDirectories.length} generated ${segment} word pages were found`)
   if (!sitemap.includes(`/${segment}/words/apple/`)) failures.push(`sitemap is missing ${segment} generated word URLs`)
   if (sitemap.includes(`/${segment}/words/telemetry/`)) failures.push(`sitemap contains a ${segment} word awaiting editorial review`)
+}
+
+for (const route of ['multiplayer', 'multi-duel']) {
+  const englishHtml = await readFile(join(releaseDirectory, 'en', route, 'index.html'), 'utf8')
+  const visibleEnglishHtml = englishHtml.replace(/<script[\s\S]*?<\/script>/gi, '')
+  if (/\p{Script=Han}/u.test(visibleEnglishHtml)) failures.push(`en/${route} contains visible Chinese source copy`)
 }
 if (sitemap.includes('/privacy/') || sitemap.includes('/terms/')) failures.push('sitemap contains unfinished legal pages')
 

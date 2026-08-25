@@ -2,7 +2,7 @@
   "compilerOptions": {
     "composite": true,
     "target": "ES2022",
-    "lib": ["ES2022"],
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
     "module": "ESNext",
     "moduleResolution": "Bundler",
@@ -21,6 +21,8 @@
     "src/data/word-slug.ts",
     "src/config/locale.ts",
     "src/config/localised-seo.ts",
+    "src/components/localise-static.ts",
+    "src/multiplayer/duel-localisation.ts",
     "src/types/*.ts"
   ]
 }

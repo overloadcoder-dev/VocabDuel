@@ -1,4 +1,5 @@
 import { normalizeRoomCode, validateNickname } from './validation'
+import type { AppLanguage } from '../config/locale'
 
 export function escapeHtml(value: string): string {
   const node = document.createElement('div')
@@ -20,10 +21,12 @@ export function leaderboardRankBadge(place: number, rankingDecided: boolean, ima
   return `<span class="multi-rank" data-ranked aria-label="第 ${rank} 名"><img class="multi-rank-image" src="${import.meta.env.BASE_URL}images/multi-duel/${imageFile}" alt="" width="64" height="64" decoding="async"></span>`
 }
 
-export function guestName(uid: string): string {
+export function guestName(uid: string, language: AppLanguage): string {
   let saved: string | null = null
   try { saved = localStorage.getItem('vocabduel.nickname') } catch { /* Storage can be denied. */ }
-  return saved && !validateNickname(saved) ? saved : `玩家 ${uid.slice(-4).toUpperCase()}`
+  if (saved && !validateNickname(saved)) return saved
+  const suffix = uid.slice(-4).toUpperCase()
+  return language === 'ms' ? `Pemain ${suffix}` : language === 'en' ? `Player ${suffix}` : `玩家 ${suffix}`
 }
 
 export function saveGuestName(name: string, storage: Pick<Storage, 'setItem'> = localStorage): boolean {

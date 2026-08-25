@@ -28,6 +28,8 @@ export interface VocabularyItem {
   chineseShort: string
   chineseExplanation: string
   englishDefinition: string
+  malayShort?: string
+  malayExplanation?: string
   examples: VocabularyExample[]
   collocations?: string[]
   synonyms?: string[]

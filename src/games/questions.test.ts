@@ -47,9 +47,9 @@ describe('question generation', () => {
     for (const language of ['en', 'ms', 'zh'] as const) {
       const question = generateQuestions({ gameType: 'meaning', vocabularyIds: ['apple'], questionCount: 1, seed: 'locale', language }, vocabulary)[0]!
       const correctChoice = question.choices?.find(({ id }) => id === 'apple')
-      const expected = language === 'en' ? apple.englishDefinition : language === 'ms' ? apple.examples[0]?.malay : apple.chineseShort
+      const expected = language === 'en' ? apple.englishDefinition : language === 'ms' ? apple.malayShort ?? apple.englishDefinition : apple.chineseShort
       expect(correctChoice?.label).toBe(expected)
-      expect(question.explanation).toContain(language === 'zh' ? apple.chineseExplanation : language === 'ms' ? apple.examples[0]!.malay : apple.englishDefinition)
+      expect(question.explanation).toContain(language === 'zh' ? apple.chineseExplanation : language === 'ms' ? apple.malayExplanation ?? apple.malayShort ?? apple.englishDefinition : apple.englishDefinition)
     }
   })
 

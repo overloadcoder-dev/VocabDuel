@@ -93,7 +93,7 @@ const chinese: Record<string, string> = {
   'Not sure where to begin?': '不确定从哪里开始？', 'Take the 10-question placement quiz or start a game.': '完成 10 题分级测验，或直接开始游戏。', 'Take the placement quiz': '参加分级测验', 'Choose a game': '选择游戏',
 }
 
-const duelEnglish: Record<string, string> = {
+export const legacyDuelEnglish: Record<string, string> = {
   'English → Chinese': 'English → meaning', 'Chinese → English': 'Meaning → English',
   '好友单词对战 · PRIVATE 1V1': 'FRIENDLY WORD DUEL · PRIVATE 1V1',
   '和朋友来一场': 'Challenge a friend to an', '英语词汇对决': 'English vocabulary duel',
@@ -123,7 +123,7 @@ const duelEnglish: Record<string, string> = {
   '好友邀请 · 1V1 DUEL': 'FRIEND INVITATION · 1V1 DUEL', '好友邀请 · MULTI DUEL': 'FRIEND INVITATION · MULTI DUEL', '你获邀加入一场单词对战': 'You are invited to a word duel', '你获邀加入多人单词对战': 'You are invited to a Multi Duel', '房间已经准备好。输入昵称后即可进入等候室。': 'The room is ready. Enter a nickname to join the lobby.', '已从邀请链接自动填写': 'Filled from the invitation link', '接受邀请并加入': 'Accept and join', '使用其他房间码': 'Use another room code',
 }
 
-const duelMalay: Record<string, string> = {
+export const legacyDuelMalay: Record<string, string> = {
   '好友单词对战 · PRIVATE 1V1': 'DUEL PERKATAAN RAKAN · PRIVATE 1V1',
   '和朋友来一场': 'Cabar rakan dalam', '英语词汇对决': 'duel kosa kata Bahasa Inggeris',
   '建立或加入私人房间，两位玩家会收到相同题目与同步倒计时。无需注册，输入昵称即可开始。': 'Cipta atau sertai bilik peribadi. Kedua-dua pemain menerima soalan yang sama dan kira detik yang diselaraskan. Masukkan nama panggilan untuk bermula.',
@@ -153,8 +153,8 @@ const duelMalay: Record<string, string> = {
 }
 
 const copies: Partial<Record<AppLanguage, Record<string, string>>> = {
-  en: duelEnglish,
-  ms: { ...malay, ...duelMalay },
+  en: {},
+  ms: malay,
   zh: chinese,
 }
 
@@ -171,7 +171,7 @@ export function gameDirectionLabel(direction: 'forward' | 'reverse', language: A
   return labels[language][direction]
 }
 
-function localiseTree(root: Node, language: AppLanguage): void {
+export function localiseStaticRoot(root: Node, language: AppLanguage): void {
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT)
   let node = walker.nextNode()
   while (node) {
@@ -180,6 +180,15 @@ function localiseTree(root: Node, language: AppLanguage): void {
     const translated = localisedStaticText(trimmed, language)
     if (translated !== trimmed) node.textContent = raw.replace(trimmed, translated)
     node = walker.nextNode()
+  }
+  if (root instanceof Element) {
+    const elements = [root, ...root.querySelectorAll<HTMLElement>('[aria-label], [title], [placeholder]')]
+    for (const element of elements) {
+      for (const attribute of ['aria-label', 'title', 'placeholder']) {
+        const value = element.getAttribute(attribute)
+        if (value) element.setAttribute(attribute, localisedStaticText(value, language))
+      }
+    }
   }
 }
 
@@ -195,10 +204,5 @@ export function localiseStaticDocument(): void {
   })
   const copy = copies[language]
   if (!copy) return
-  localiseTree(document.body, language)
-  if (language !== 'zh') {
-    document.querySelectorAll<HTMLElement>('#multiplayer-app, #multi-duel-app').forEach((root) => {
-      new MutationObserver(() => localiseTree(root, language)).observe(root, { childList: true, subtree: true })
-    })
-  }
+  localiseStaticRoot(document.body, language)
 }

@@ -46,6 +46,19 @@ export function languagePath(pathname: string, language: AppLanguage = currentLa
   return `/${LANGUAGE_URL_SEGMENTS[language]}/${route}`.replace(/(?<!:)\/{2,}/g, '/')
 }
 
+export function languageNavigationPath(
+  pathname: string,
+  search: string,
+  hash: string,
+  language: AppLanguage,
+  basePath = '/',
+): string {
+  const routeWithinBase = pathWithinBase(pathname, basePath)
+  const localisedRoute = languagePath(routeWithinBase, language).replace(/^\/+/, '')
+  const normalisedBase = basePath === '/' ? '/' : `/${basePath.replace(/^\/+|\/+$/g, '')}/`
+  return `${normalisedBase}${localisedRoute}${search}${hash}`.replace(/(?<!:)\/{2,}/g, '/')
+}
+
 export const LANGUAGE_NAMES: Record<AppLanguage, string> = {
   en: 'English (UK)',
   ms: 'Bahasa Melayu',

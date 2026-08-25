@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { languageFromPath, languagePath, stripLanguageSegment } from './locale'
+import { languageFromPath, languageNavigationPath, languagePath, stripLanguageSegment } from './locale'
 
 describe('locale routing', () => {
   it('recognises canonical and compatibility language segments', () => {
@@ -17,5 +17,12 @@ describe('locale routing', () => {
     expect(languagePath('/my/play/', 'zh')).toBe('/zh/play/')
     expect(languagePath('/levels/', 'en')).toBe('/en/levels/')
     expect(stripLanguageSegment('/zh/words/apple/')).toBe('/words/apple/')
+  })
+
+  it('preserves query parameters and hashes while changing language', () => {
+    expect(languageNavigationPath('/VocabDuel/en/multiplayer/', '?room=ABC123', '', 'ms', '/VocabDuel/'))
+      .toBe('/VocabDuel/my/multiplayer/?room=ABC123')
+    expect(languageNavigationPath('/VocabDuel/my/learn/', '', '#apple', 'zh', '/VocabDuel/'))
+      .toBe('/VocabDuel/zh/learn/#apple')
   })
 })
