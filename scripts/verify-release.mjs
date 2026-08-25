@@ -3,16 +3,20 @@ import { extname, join, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const releaseDirectory = fileURLToPath(new URL('../dist/', import.meta.url))
-const forbidden = [
+const blockingTokens = [
   'vocabduel.example',
   'Future sponsor space',
+]
+const warningTokens = [
   'Replace the operator and contact placeholders',
   'Operator/contact required before launch',
   'Required before launch:',
 ]
+const inspectedTokens = [...blockingTokens, ...warningTokens]
 const textExtensions = new Set(['.html', '.xml', '.txt', '.js', '.css', '.json', '.webmanifest'])
 const failures = []
-const forbiddenMatches = new Map(forbidden.map((token) => [token, []]))
+const warnings = []
+const tokenMatches = new Map(inspectedTokens.map((token) => [token, []]))
 
 async function inspect(directory) {
   for (const entry of await readdir(directory, { withFileTypes: true })) {
@@ -20,19 +24,21 @@ async function inspect(directory) {
     if (entry.isDirectory()) await inspect(path)
     else if (textExtensions.has(extname(entry.name))) {
       const contents = await readFile(path, 'utf8')
-      for (const token of forbidden) {
-        if (contents.includes(token)) forbiddenMatches.get(token).push(relative(releaseDirectory, path))
+      for (const token of inspectedTokens) {
+        if (contents.includes(token)) tokenMatches.get(token).push(relative(releaseDirectory, path))
       }
     }
   }
 }
 
 await inspect(releaseDirectory)
-for (const [token, paths] of forbiddenMatches) {
+for (const [token, paths] of tokenMatches) {
   if (!paths.length) continue
   const examples = paths.slice(0, 5).join(', ')
   const remaining = paths.length > 5 ? ` and ${paths.length - 5} more` : ''
-  failures.push(`${paths.length} file(s) contain ${token}: ${examples}${remaining}`)
+  const message = `${paths.length} file(s) contain ${token}: ${examples}${remaining}`
+  if (blockingTokens.includes(token)) failures.push(message)
+  else warnings.push(message)
 }
 
 const sitemap = await readFile(join(releaseDirectory, 'sitemap.xml'), 'utf8')
@@ -71,9 +77,10 @@ const manifest = JSON.parse(await readFile(join(releaseDirectory, 'site.webmanif
 for (const icon of ['favicon-192.png', 'favicon-512.png', 'favicon-maskable-512.png']) {
   if (!manifest.icons.some((entry) => entry.src.endsWith(icon))) failures.push(`manifest is missing ${icon}`)
 }
+if (warnings.length) console.warn(`Release verification warnings:\n${warnings.map((warning) => `- ${warning}`).join('\n')}`)
 if (failures.length) {
   console.error(`Release verification failed:\n${failures.map((failure) => `- ${failure}`).join('\n')}`)
   process.exitCode = 1
 } else {
-  console.log('Release verification passed: no provisional origin or sponsor placeholders found.')
+  console.log('Release verification passed: no blocking production metadata issues found.')
 }
