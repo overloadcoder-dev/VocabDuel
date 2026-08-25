@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --configLoader runner",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build --configLoader runner",
     "release:verify": "node scripts/verify-release.mjs",
     "vocabulary:backfill-malay": "node scripts/backfill-malay-examples.mjs",
     "typecheck": "tsc -b --pretty false",

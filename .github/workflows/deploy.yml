@@ -70,7 +70,6 @@ jobs:
           test -n "$VITE_FIREBASE_DATABASE_URL"
           test -n "$VITE_FIREBASE_PROJECT_ID"
           test -n "$VITE_FIREBASE_APP_ID"
-          test -n "$VITE_FIREBASE_APPCHECK_SITE_KEY"
 
       - name: Build VocabDuel for GitHub Pages
         env:

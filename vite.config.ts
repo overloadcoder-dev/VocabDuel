@@ -198,9 +198,6 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, projectRoot, '')
   const basePath = normalizeBasePath(env.VITE_BASE_PATH)
   const siteOrigin = (env.VITE_SITE_URL || 'https://vocabduel.example').replace(/\/+$/, '')
-  if (mode === 'production' && siteOrigin !== 'https://vocabduel.example' && !env.VITE_FIREBASE_APPCHECK_SITE_KEY) {
-    throw new Error('VITE_FIREBASE_APPCHECK_SITE_KEY is required for a configured production origin.')
-  }
 
   return {
     base: basePath,
