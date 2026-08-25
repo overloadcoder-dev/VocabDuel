@@ -12,7 +12,7 @@ import { allConnectedPlayersAnswered, allPlayersVoted, canStartMultiMatch, nextC
 import { activeRoundTiming, remainingRoundMs, ROUND_REVIEW_MS, roundTimingAtIndex, synchronizedNow } from '../multiplayer/time'
 import type { MultiRoomConfig, MultiRoomRecord, MultiplayerIdentity, RoomPlayer } from './types'
 import { joinRoomErrorCopy, normalizeRoomCode, readInviteRoomCode, sanitizeNickname, validateNickname } from '../multiplayer/validation'
-import { escapeHtml, guestName, leaderboardRankBadge as sharedLeaderboardRankBadge, refreshRoomCodeInput, reviewSpeakButton, roomCodeInputTemplate } from '../multiplayer/ui'
+import { escapeHtml, guestName, leaderboardRankBadge as sharedLeaderboardRankBadge, refreshRoomCodeInput, reviewSpeakButton, roomCodeInputTemplate, saveGuestName } from '../multiplayer/ui'
 
 document.querySelector('#site-header')!.innerHTML = siteHeader('multiDuel')
 document.querySelector('#site-footer')!.innerHTML = siteFooter()
@@ -304,7 +304,7 @@ async function readIdentity(form: HTMLFormElement): Promise<MultiplayerIdentity 
   if (error) { setNotice(error); return null }
   const uid = identity?.uid ?? await authenticateResumableGuest()
   identity = { uid, displayName: name }
-  localStorage.setItem('vocabduel.nickname', name)
+  saveGuestName(name)
   return identity
 }
 

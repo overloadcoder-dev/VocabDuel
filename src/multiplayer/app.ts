@@ -12,7 +12,7 @@ import { bothPlayersAnswered } from './state-machine'
 import { activeRoundTiming, remainingRoundMs, ROUND_REVIEW_MS, roundTimingAtIndex, synchronizedNow } from './time'
 import type { MultiplayerIdentity, RoomConfig, RoomRecord } from './types'
 import { joinRoomErrorCopy, normalizeRoomCode, readInviteRoomCode, sanitizeNickname, validateNickname } from './validation'
-import { escapeHtml, guestName, leaderboardRankBadge, refreshRoomCodeInput, reviewSpeakButton, roomCodeInputTemplate } from './ui'
+import { escapeHtml, guestName, leaderboardRankBadge, refreshRoomCodeInput, reviewSpeakButton, roomCodeInputTemplate, saveGuestName } from './ui'
 
 document.querySelector('#site-header')!.innerHTML = siteHeader('multiplayer')
 document.querySelector('#site-footer')!.innerHTML = siteFooter()
@@ -298,7 +298,7 @@ async function readIdentity(form: HTMLFormElement): Promise<MultiplayerIdentity 
   if (error) { setNotice(error); return null }
   const uid = identity?.uid ?? await authenticateResumableGuest()
   identity = { uid, displayName: name }
-  localStorage.setItem('vocabduel.nickname', name)
+  saveGuestName(name)
   return identity
 }
 

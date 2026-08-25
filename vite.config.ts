@@ -10,8 +10,17 @@ import { level4Vocabulary } from './src/data/vocabulary/level-4'
 import { level5Vocabulary } from './src/data/vocabulary/level-5'
 import type { VocabularyItem } from './src/types/vocabulary'
 import { vocabularyWordSlug } from './src/data/word-slug'
+import { isEditoriallyIndexable } from './src/data/editorial-quality'
 
 const allVocabulary = [...level1Vocabulary, ...level2Vocabulary, ...level3Vocabulary, ...level4Vocabulary, ...level5Vocabulary] as readonly VocabularyItem[]
+
+function uniqueVocabularyItems(words: readonly VocabularyItem[]): VocabularyItem[] {
+  const byId = new Map<string, VocabularyItem>()
+  for (const word of words) {
+    if (!byId.has(word.id)) byId.set(word.id, word)
+  }
+  return [...byId.values()]
+}
 
 function escapeHtml(value: string): string {
   return value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;')
@@ -28,11 +37,12 @@ function wordPageHtml(word: VocabularyItem, previous: VocabularyItem, next: Voca
     .filter((item): item is VocabularyItem => Boolean(item))
     .slice(0, 8)
   const structuredData = JSON.stringify({ '@context': 'https://schema.org', '@type': 'DefinedTerm', name: word.term, description: word.englishDefinition, inDefinedTermSet: `${siteOrigin}${basePath}learn/` }).replaceAll('<', '\\u003c')
+  const robots = isEditoriallyIndexable(word) ? '' : '<meta name="robots" content="noindex, follow">'
   const related = links.length ? links.map((item) => `<a class="tag" href="${basePath}words/${vocabularyWordSlug(item.id)}/">${escapeHtml(item.term)}</a>`).join('') : '<span class="text-muted">No linked terms yet.</span>'
   return `<!doctype html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><title>${escapeHtml(word.term + variantLabel)} Meaning in Chinese, Definition &amp; Examples | VocabDuel</title><meta name="description" content="${escapeHtml(description)}"><link rel="canonical" href="${canonical}"><meta property="og:type" content="article"><meta property="og:site_name" content="VocabDuel"><meta property="og:title" content="${escapeHtml(word.term + variantLabel)} meaning and examples"><meta property="og:description" content="${escapeHtml(description)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${siteOrigin}${basePath}social-card.svg"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="${basePath}favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" sizes="180x180" href="${basePath}apple-touch-icon.png"><link rel="manifest" href="${basePath}site.webmanifest"><link rel="stylesheet" href="${basePath}assets/${cssFile}"><script type="application/ld+json">${structuredData}</script></head>
 <body class="content-page word-page"><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><a class="brand" href="${basePath}" aria-label="VocabDuel home">Vocab<span>Duel</span></a><nav aria-label="Primary navigation"><a href="${basePath}learn/">Learn</a><a href="${basePath}play/">Play</a><a href="${basePath}levels/">Levels</a></nav></header>
-<main id="main-content" class="content-main"><nav class="word-breadcrumbs" aria-label="Breadcrumb"><a href="${basePath}">Home</a><span aria-hidden="true">›</span><a href="${basePath}learn/">Words</a><span aria-hidden="true">›</span><span aria-current="page">${escapeHtml(word.term)}</span></nav><article class="panel word-detail"><p class="eyebrow">Level ${word.level}${word.cefr ? ` · ${word.cefr}` : ''}</p><h1>${escapeHtml(word.term)}</h1><p class="word-ipa">${escapeHtml(word.ipa ?? 'Pronunciation guide unavailable')} · ${escapeHtml(word.partOfSpeech.join(' · '))}</p><p class="word-chinese-short" lang="zh-Hans">${escapeHtml(word.chineseShort)}</p><section lang="zh-Hans"><h2>中文详解</h2><p>${escapeHtml(word.chineseExplanation)}</p></section><section><h2>English definition</h2><p>${escapeHtml(word.englishDefinition)}</p></section><section><h2>Example</h2><blockquote>${escapeHtml(word.examples[0]?.english ?? '')}</blockquote><p lang="zh-Hans">${escapeHtml(word.examples[0]?.chinese ?? '')}</p></section><section><h2>Related words</h2><div class="flex flex-wrap gap-2">${related}</div></section><div class="word-page-actions"><a class="button button-primary" href="${basePath}play/?words=${encodeURIComponent(word.id)}">Practise this word</a><a class="button button-secondary" href="${basePath}learn/#${encodeURIComponent(word.id)}">Open in word library</a></div></article><nav class="word-pagination" aria-label="Adjacent vocabulary"><a href="${basePath}words/${vocabularyWordSlug(previous.id)}/">← ${escapeHtml(previous.term)}</a><a href="${basePath}words/${vocabularyWordSlug(next.id)}/">${escapeHtml(next.term)} →</a></nav></main><footer class="site-footer"><nav aria-label="Footer navigation"><a href="${basePath}about/">About</a><a href="${basePath}privacy/">Privacy</a><a href="${basePath}terms/">Terms</a></nav><p>© ${new Date().getFullYear()} VocabDuel</p></footer></body></html>`
+<main id="main-content" class="content-main"><nav class="word-breadcrumbs" aria-label="Breadcrumb"><a href="${basePath}">Home</a><span aria-hidden="true">›</span><a href="${basePath}learn/">Words</a><span aria-hidden="true">›</span><span aria-current="page">${escapeHtml(word.term)}</span></nav><article class="panel word-detail"><p class="eyebrow">Level ${word.level}${word.cefr ? ` · ${word.cefr}` : ''}</p><h1>${escapeHtml(word.term)}</h1><p class="word-ipa">${escapeHtml(word.ipa ?? 'Pronunciation guide unavailable')} · ${escapeHtml(word.partOfSpeech.join(' · '))}</p><p class="word-chinese-short" lang="zh-Hans">${escapeHtml(word.chineseShort)}</p><section lang="zh-Hans"><h2>中文详解</h2><p>${escapeHtml(word.chineseExplanation)}</p></section><section><h2>English definition</h2><p>${escapeHtml(word.englishDefinition)}</p></section><section><h2>Example</h2><blockquote>${escapeHtml(word.examples[0]?.english ?? '')}</blockquote><p lang="zh-Hans">${escapeHtml(word.examples[0]?.chinese ?? '')}</p></section><section><h2>Related words</h2><div class="flex flex-wrap gap-2">${related}</div></section><div class="word-page-actions"><a class="button button-primary" href="${basePath}play/?words=${encodeURIComponent(word.id)}">Practise this word</a><a class="button button-secondary" href="${basePath}learn/#${encodeURIComponent(word.id)}">Open in word library</a></div></article><nav class="word-pagination" aria-label="Adjacent vocabulary"><a href="${basePath}words/${vocabularyWordSlug(previous.id)}/">← ${escapeHtml(previous.term)}</a><a href="${basePath}words/${vocabularyWordSlug(next.id)}/">${escapeHtml(next.term)} →</a></nav></main><footer class="site-footer"><nav aria-label="Footer navigation"><a href="${basePath}about/">About</a><a href="${basePath}privacy/">Privacy</a><a href="${basePath}terms/">Terms</a></nav><p>© ${new Date().getFullYear()} VocabDuel</p></footer></body></html>`.replace('<title>', `${robots}<title>`)
 }
 
 const initialLoaderCss = `
@@ -103,7 +113,8 @@ function deploymentMetadata(siteOrigin: string, basePath: string): Plugin {
 
       const cssFile = readdirSync(resolve(__dirname, 'dist/assets')).find((file) => file.endsWith('.css'))
       if (!cssFile) throw new Error('Built CSS asset was not found for generated word pages.')
-      const uniqueWords = [...new Map(allVocabulary.map((word) => [word.id, word])).values()]
+      const uniqueWords = uniqueVocabularyItems(allVocabulary)
+      const indexableWords = uniqueWords.filter(isEditoriallyIndexable)
       const byTerm = new Map(uniqueWords.map((word) => [word.normalizedTerm, word]))
       uniqueWords.forEach((word, index) => {
         const outputDirectory = resolve(__dirname, 'dist/words', vocabularyWordSlug(word.id))
@@ -111,7 +122,7 @@ function deploymentMetadata(siteOrigin: string, basePath: string): Plugin {
         writeFileSync(resolve(outputDirectory, 'index.html'), wordPageHtml(word, uniqueWords[(index - 1 + uniqueWords.length) % uniqueWords.length]!, uniqueWords[(index + 1) % uniqueWords.length]!, siteOrigin, basePath, cssFile, byTerm))
       })
       const sitemapPath = resolve(__dirname, 'dist/sitemap.xml')
-      const wordLocations = uniqueWords.map((word) => `  <url><loc>${siteOrigin}${basePath}words/${vocabularyWordSlug(word.id)}/</loc></url>`).join('\n')
+      const wordLocations = indexableWords.map((word) => `  <url><loc>${siteOrigin}${basePath}words/${vocabularyWordSlug(word.id)}/</loc></url>`).join('\n')
       writeFileSync(sitemapPath, readFileSync(sitemapPath, 'utf8').replace('</urlset>', `${wordLocations}\n</urlset>`))
     },
   }
@@ -121,10 +132,13 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, __dirname, '')
   const basePath = normalizeBasePath(env.VITE_BASE_PATH)
   const siteOrigin = (env.VITE_SITE_URL || 'https://vocabduel.example').replace(/\/+$/, '')
+  if (mode === 'production' && siteOrigin !== 'https://vocabduel.example' && !env.VITE_FIREBASE_APPCHECK_SITE_KEY) {
+    throw new Error('VITE_FIREBASE_APPCHECK_SITE_KEY is required for a configured production origin.')
+  }
 
   return {
     base: basePath,
-    plugins: [initialPageLoader(), tailwindcss(), deploymentMetadata(siteOrigin, basePath)],
+    plugins: [initialPageLoader(), tailwindcss(), ...(mode === 'test' ? [] : [deploymentMetadata(siteOrigin, basePath)])],
     build: {
       rollupOptions: {
         input: {

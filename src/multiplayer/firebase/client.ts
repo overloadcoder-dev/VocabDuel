@@ -34,6 +34,14 @@ export async function getFirebaseServices(): Promise<FirebaseServices> {
     connectAuthEmulator(auth, 'http://127.0.0.1:9099', { disableWarnings: true })
     connectDatabaseEmulator(database, '127.0.0.1', 9000)
   }
+  const appCheckSiteKey = import.meta.env.VITE_FIREBASE_APPCHECK_SITE_KEY
+  if (appCheckSiteKey && !(import.meta.env.DEV && import.meta.env.VITE_USE_FIREBASE_EMULATOR === 'true')) {
+    const { initializeAppCheck, ReCaptchaEnterpriseProvider } = await import('firebase/app-check')
+    initializeAppCheck(app, {
+      provider: new ReCaptchaEnterpriseProvider(appCheckSiteKey),
+      isTokenAutoRefreshEnabled: true,
+    })
+  }
   services = { app, auth, database }
   return services
 }

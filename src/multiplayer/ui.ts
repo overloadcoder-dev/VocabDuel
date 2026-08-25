@@ -21,8 +21,18 @@ export function leaderboardRankBadge(place: number, rankingDecided: boolean, ima
 }
 
 export function guestName(uid: string): string {
-  const saved = localStorage.getItem('vocabduel.nickname')
+  let saved: string | null = null
+  try { saved = localStorage.getItem('vocabduel.nickname') } catch { /* Storage can be denied. */ }
   return saved && !validateNickname(saved) ? saved : `玩家 ${uid.slice(-4).toUpperCase()}`
+}
+
+export function saveGuestName(name: string, storage: Pick<Storage, 'setItem'> = localStorage): boolean {
+  try {
+    storage.setItem('vocabduel.nickname', name)
+    return true
+  } catch {
+    return false
+  }
 }
 
 export function roomCodeInputTemplate(value: string): string {

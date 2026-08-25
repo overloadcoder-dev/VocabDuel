@@ -17,6 +17,7 @@
     "src/data/vocabulary/level-3.ts",
     "src/data/vocabulary/level-4.ts",
     "src/data/vocabulary/level-5.ts",
+    "src/data/editorial-quality.ts",
     "src/data/word-slug.ts",
     "src/types/*.ts"
   ]

@@ -50,6 +50,7 @@ VITE_FIREBASE_AUTH_DOMAIN=
 VITE_FIREBASE_DATABASE_URL=
 VITE_FIREBASE_PROJECT_ID=
 VITE_FIREBASE_APP_ID=
+VITE_FIREBASE_APPCHECK_SITE_KEY=
 VITE_SITE_URL=https://your-production-origin.example
 VITE_BASE_PATH=/
 VITE_USE_FIREBASE_EMULATOR=false
@@ -114,7 +115,7 @@ Configured local ports are Auth `9099`, Database `9000`, Functions `5001`, and E
 
 ### App Check and operational hardening
 
-Before public launch, enable Firebase App Check for the web app with an appropriate provider (such as reCAPTCHA Enterprise), register the production and intentional preview origins, verify valid traffic, and then enable enforcement for Realtime Database. Use the documented debug-token flow only for local development, never a production token in source control.
+Before public launch, create a reCAPTCHA Enterprise web key for Firebase App Check, register the production and intentional preview origins, and set its site key as `VITE_FIREBASE_APPCHECK_SITE_KEY`. The multiplayer client initializes App Check with automatic token refresh whenever that key is configured. Verify valid traffic in Firebase metrics before enabling enforcement for Realtime Database. The production build rejects a configured public origin without this key. Use the documented debug-token flow only for local development, never a production token in source control.
 
 Also configure Firebase budget alerts and usage monitoring. App Check reduces unauthorised clients but does not replace Authentication or Security Rules.
 
@@ -168,6 +169,7 @@ In the GitHub repository, open **Settings → Secrets and variables → Actions 
 - `VITE_FIREBASE_DATABASE_URL`
 - `VITE_FIREBASE_PROJECT_ID`
 - `VITE_FIREBASE_APP_ID`
+- `VITE_FIREBASE_APPCHECK_SITE_KEY`
 
 These values are bundled into browser code and are project identifiers, not service-account secrets. Never add a service-account JSON key to a `VITE_` variable. Optionally set `VITE_SITE_URL` and `VITE_BASE_PATH` when using a custom domain or a nonstandard Pages path.
 
