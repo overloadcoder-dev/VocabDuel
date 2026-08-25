@@ -21,6 +21,15 @@ const rootElement = document.querySelector<HTMLElement>('#multiplayer-app')
 if (!rootElement) throw new Error('Multiplayer root is missing.')
 const root: HTMLElement = rootElement
 
+try {
+  sessionStorage.removeItem(`vocabduel-duel-asset-retry:${location.pathname}`)
+  const currentUrl = new URL(location.href)
+  if (currentUrl.searchParams.has('_asset_retry')) {
+    currentUrl.searchParams.delete('_asset_retry')
+    history.replaceState(history.state, '', currentUrl)
+  }
+} catch {}
+
 type RoomApi = typeof import('./firebase/rooms')
 let roomApiPromise: Promise<RoomApi> | undefined
 const roomOperations = new Proxy({} as RoomApi, {

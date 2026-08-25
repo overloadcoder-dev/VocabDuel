@@ -21,6 +21,15 @@ const rootElement = document.querySelector<HTMLElement>('#multi-duel-app')
 if (!rootElement) throw new Error('Multi Duel root is missing.')
 const root: HTMLElement = rootElement
 
+try {
+  sessionStorage.removeItem(`vocabduel-duel-asset-retry:${location.pathname}`)
+  const currentUrl = new URL(location.href)
+  if (currentUrl.searchParams.has('_asset_retry')) {
+    currentUrl.searchParams.delete('_asset_retry')
+    history.replaceState(history.state, '', currentUrl)
+  }
+} catch {}
+
 type MultiRoomApi = typeof import('./firebase/rooms')
 let multiRoomApiPromise: Promise<MultiRoomApi> | undefined
 const multiRoomOperations = new Proxy({} as MultiRoomApi, {
