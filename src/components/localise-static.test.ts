@@ -23,4 +23,19 @@ describe('static duel localisation', () => {
     expect(gameDirectionLabel('reverse', 'en')).toBe('Meaning → EN')
     expect(gameDirectionLabel('forward', 'zh')).toBe('EN → 中')
   })
+
+  it('translates dynamically generated Duel form values', () => {
+    expect(localisedStaticText('10 题', 'en')).toBe('10 questions')
+    expect(localisedStaticText('10 题', 'ms')).toBe('10 soalan')
+    expect(localisedStaticText('输入或贴上 6 位房间码，英文字母会自动转为大写。', 'en')).toContain('6-character room code')
+    expect(localisedStaticText('输入或贴上 6 位房间码，英文字母会自动转为大写。', 'ms')).toContain('kod bilik 6 aksara')
+  })
+
+  it('provides complete Malay and Chinese copy for the Levels guidance', () => {
+    const source = 'Broader and more abstract vocabulary found in articles, education, work, and discussions across a range of familiar topics.'
+    expect(localisedStaticText(source, 'ms')).toContain('Kosa kata yang lebih luas')
+    expect(localisedStaticText(source, 'zh')).toContain('较广泛、较抽象的词汇')
+    expect(localisedStaticText('MUET guidance', 'ms')).toBe('Panduan MUET')
+    expect(localisedStaticText('MUET guidance', 'zh')).toBe('MUET 参考')
+  })
 })

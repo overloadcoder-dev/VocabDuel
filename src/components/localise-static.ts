@@ -34,6 +34,23 @@ const malay: Record<string, string> = {
   'Start session': 'Mulakan sesi', 'Challenge a friend': 'Cabar rakan', Quit: 'Keluar', Listen: 'Dengar',
   'Type the English word': 'Taip perkataan Bahasa Inggeris', 'Check answer': 'Semak jawapan', Continue: 'Teruskan',
   'Session complete': 'Sesi selesai', Score: 'Markah', Accuracy: 'Ketepatan', 'XP earned': 'XP diperoleh', 'Play again': 'Main lagi', 'Review words': 'Semak perkataan',
+  'A path that grows with you': 'Laluan yang berkembang bersama anda',
+  'Five vocabulary levels, one clear progression': 'Lima tahap kosa kata, satu perkembangan yang jelas',
+  'VocabDuel’s levels organise practice by familiarity and language complexity. Each level includes CEFR guidance and approximate IELTS and MUET targets to help you choose where to begin.': 'Tahap VocabDuel menyusun latihan mengikut kebiasaan dan kerumitan bahasa. Setiap tahap merangkumi panduan CEFR serta sasaran anggaran IELTS dan MUET untuk membantu anda memilih titik permulaan.',
+  'Explore the path': 'Terokai laluan', 'Choose your starting level': 'Pilih tahap permulaan anda', 'Select a level to see its full guidance.': 'Pilih tahap untuk melihat panduan lengkapnya.',
+  Foundation: 'Asas', Developing: 'Membangun', Independent: 'Berdikari', Advanced: 'Lanjutan', Mastery: 'Penguasaan',
+  'Typical CEFR': 'CEFR lazim', 'IELTS guidance': 'Panduan IELTS', 'MUET guidance': 'Panduan MUET',
+  'Foundation / below Band 4': 'Asas / bawah Band 4',
+  'Frequent, concrete words for people, places, actions, and everyday needs. Choose this level to build essential recognition and recall.': 'Perkataan konkrit yang kerap digunakan untuk orang, tempat, tindakan dan keperluan harian. Pilih tahap ini untuk membina pengecaman dan ingatan asas.',
+  'Familiar vocabulary for everyday life, travel, study, and routine work. Learners begin choosing words more precisely in common situations.': 'Kosa kata biasa untuk kehidupan harian, perjalanan, pembelajaran dan kerja rutin. Pelajar mula memilih perkataan dengan lebih tepat dalam situasi umum.',
+  'Broader and more abstract vocabulary found in articles, education, work, and discussions across a range of familiar topics.': 'Kosa kata yang lebih luas dan abstrak dalam artikel, pendidikan, pekerjaan dan perbincangan tentang pelbagai topik yang biasa.',
+  'Less-common words where precise meaning, appropriate register, natural collocation, and effective paraphrasing become important.': 'Perkataan yang kurang lazim, apabila makna tepat, laras sesuai, kolokasi semula jadi dan parafrasa berkesan menjadi penting.',
+  'Highly nuanced, specialised, or uncommon vocabulary used flexibly and accurately in demanding academic and professional contexts.': 'Kosa kata yang sangat bernuansa, khusus atau jarang digunakan secara fleksibel dan tepat dalam konteks akademik dan profesional yang mencabar.',
+  'IELTS and MUET guidance': 'Panduan IELTS dan MUET',
+  'These ranges are helpful starting points—not official bands or score guarantees. IELTS and MUET assess listening, speaking, reading, and writing; vocabulary is only one part of your overall performance.': 'Julat ini ialah panduan permulaan, bukannya band rasmi atau jaminan skor. IELTS dan MUET menilai kemahiran mendengar, bertutur, membaca dan menulis; kosa kata hanyalah satu bahagian daripada prestasi keseluruhan anda.',
+  'How levels work': 'Cara tahap berfungsi',
+  'Learn the meanings and examples, then reinforce them in short games. Move between levels whenever the words feel too easy or too difficult.': 'Pelajari makna dan contoh, kemudian kukuhkannya melalui permainan ringkas. Tukar tahap apabila perkataan terasa terlalu mudah atau terlalu sukar.',
+  'Not sure where to begin?': 'Tidak pasti hendak bermula di mana?', 'Take the 10-question placement quiz or start a game.': 'Ambil kuiz penempatan 10 soalan atau mulakan permainan.', 'Take the placement quiz': 'Ambil kuiz penempatan', 'Choose a game': 'Pilih permainan',
 }
 
 const chinese: Record<string, string> = {
@@ -57,6 +74,23 @@ const chinese: Record<string, string> = {
   'After feedback': '答题反馈后', 'Continue manually': '手动继续', 'Next after 1 second': '1 秒后自动继续', 'Start session': '开始练习', 'Challenge a friend': '挑战好友',
   Quit: '退出', Listen: '听发音', 'Type the English word': '输入英文单词', 'Check answer': '检查答案', Continue: '继续',
   'Session complete': '练习完成', Score: '得分', Accuracy: '正确率', 'XP earned': '获得经验', 'Play again': '再玩一次', 'Review words': '复习单词',
+  'A path that grows with you': '与你共同成长的学习路径',
+  'Five vocabulary levels, one clear progression': '五个词汇等级，一条清晰的进阶路径',
+  'VocabDuel’s levels organise practice by familiarity and language complexity. Each level includes CEFR guidance and approximate IELTS and MUET targets to help you choose where to begin.': 'VocabDuel 按熟悉程度和语言复杂度安排练习。每个等级都提供 CEFR 参考及 IELTS、MUET 大致目标，帮助你选择起点。',
+  'Explore the path': '探索学习路径', 'Choose your starting level': '选择你的起始等级', 'Select a level to see its full guidance.': '选择一个等级以查看完整说明。',
+  Foundation: '基础', Developing: '发展', Independent: '独立运用', Advanced: '高级', Mastery: '精通',
+  'Typical CEFR': '对应 CEFR', 'IELTS guidance': 'IELTS 参考', 'MUET guidance': 'MUET 参考',
+  'Foundation / below Band 4': '基础 / 低于 Band 4',
+  'Frequent, concrete words for people, places, actions, and everyday needs. Choose this level to build essential recognition and recall.': '学习有关人物、地点、动作和日常需要的高频具体词汇。选择此等级来建立基本的识别与记忆能力。',
+  'Familiar vocabulary for everyday life, travel, study, and routine work. Learners begin choosing words more precisely in common situations.': '学习日常生活、旅行、学习和常规工作中的常用词汇，并开始在常见情境中更准确地选词。',
+  'Broader and more abstract vocabulary found in articles, education, work, and discussions across a range of familiar topics.': '学习文章、教育、工作及各种熟悉话题讨论中较广泛、较抽象的词汇。',
+  'Less-common words where precise meaning, appropriate register, natural collocation, and effective paraphrasing become important.': '学习较少见的词汇，重点掌握准确含义、适当语体、自然搭配和有效改写。',
+  'Highly nuanced, specialised, or uncommon vocabulary used flexibly and accurately in demanding academic and professional contexts.': '灵活、准确地运用含义细腻、专业或少见的词汇，应对高要求的学术与专业语境。',
+  'IELTS and MUET guidance': 'IELTS 与 MUET 参考',
+  'These ranges are helpful starting points—not official bands or score guarantees. IELTS and MUET assess listening, speaking, reading, and writing; vocabulary is only one part of your overall performance.': '这些范围仅供选择起点，并非官方等级或分数保证。IELTS 与 MUET 都评估听、说、读、写能力；词汇只是整体表现的一部分。',
+  'How levels work': '等级使用方式',
+  'Learn the meanings and examples, then reinforce them in short games. Move between levels whenever the words feel too easy or too difficult.': '先学习词义和例句，再通过短游戏巩固。若词汇太容易或太困难，可随时更换等级。',
+  'Not sure where to begin?': '不确定从哪里开始？', 'Take the 10-question placement quiz or start a game.': '完成 10 题分级测验，或直接开始游戏。', 'Take the placement quiz': '参加分级测验', 'Choose a game': '选择游戏',
 }
 
 const duelEnglish: Record<string, string> = {
@@ -83,6 +117,10 @@ const duelEnglish: Record<string, string> = {
   '建立房间并邀请多人': 'Create room and invite players', '加入 Multi Duel 房间': 'Join a Multi Duel room',
   '全部类别': 'All categories', '日常英语': 'Daily English', '旅游': 'Travel', '校园': 'School', '商务': 'Business', '科技': 'Technology', '学术': 'Academic',
   '英文 → 中文': 'English → meaning', '中文 → 英文': 'Meaning → English', '听发音选单词': 'Listen and choose', '语境判断': 'Context challenge',
+  建: '1', 多: '1', 加: '2', '房间码': 'Room code', '10 题': '10 questions', '15 题': '15 questions', '20 题': '20 questions', '10 秒': '10 seconds', '15 秒': '15 seconds', '20 秒': '20 seconds',
+  '房间人数上限': 'Maximum players', '最多 4 人': 'Up to 4 players', '最多 3 人': 'Up to 3 players', '加入 Multi Duel': 'Join Multi Duel', '输入朋友分享的 6 位多人房间码。': 'Enter the 6-character Multi Duel room code shared by your friend.',
+  '输入或贴上 6 位房间码，英文字母会自动转为大写。': 'Enter or paste the 6-character room code. Letters are changed to uppercase automatically.',
+  '好友邀请 · 1V1 DUEL': 'FRIEND INVITATION · 1V1 DUEL', '好友邀请 · MULTI DUEL': 'FRIEND INVITATION · MULTI DUEL', '你获邀加入一场单词对战': 'You are invited to a word duel', '你获邀加入多人单词对战': 'You are invited to a Multi Duel', '房间已经准备好。输入昵称后即可进入等候室。': 'The room is ready. Enter a nickname to join the lobby.', '已从邀请链接自动填写': 'Filled from the invitation link', '接受邀请并加入': 'Accept and join', '使用其他房间码': 'Use another room code',
 }
 
 const duelMalay: Record<string, string> = {
@@ -108,6 +146,10 @@ const duelMalay: Record<string, string> = {
   '建立房间并邀请多人': 'Cipta bilik dan jemput pemain', '加入 Multi Duel 房间': 'Sertai bilik Multi Duel',
   '全部类别': 'Semua kategori', '日常英语': 'Bahasa Inggeris harian', '旅游': 'Perjalanan', '校园': 'Sekolah', '商务': 'Perniagaan', '科技': 'Teknologi', '学术': 'Akademik',
   '英文 → 中文': 'Bahasa Inggeris → makna', '中文 → 英文': 'Makna → Bahasa Inggeris', '听发音选单词': 'Dengar dan pilih', '语境判断': 'Cabaran konteks',
+  建: '1', 多: '1', 加: '2', '房间码': 'Kod bilik', '10 题': '10 soalan', '15 题': '15 soalan', '20 题': '20 soalan', '10 秒': '10 saat', '15 秒': '15 saat', '20 秒': '20 saat',
+  '房间人数上限': 'Bilangan maksimum pemain', '最多 4 人': 'Sehingga 4 pemain', '最多 3 人': 'Sehingga 3 pemain', '加入 Multi Duel': 'Sertai Multi Duel', '输入朋友分享的 6 位多人房间码。': 'Masukkan kod bilik Multi Duel 6 aksara yang dikongsi oleh rakan anda.',
+  '输入或贴上 6 位房间码，英文字母会自动转为大写。': 'Masukkan atau tampal kod bilik 6 aksara. Huruf akan ditukar kepada huruf besar secara automatik.',
+  '好友邀请 · 1V1 DUEL': 'JEMPUTAN RAKAN · 1V1 DUEL', '好友邀请 · MULTI DUEL': 'JEMPUTAN RAKAN · MULTI DUEL', '你获邀加入一场单词对战': 'Anda dijemput menyertai duel perkataan', '你获邀加入多人单词对战': 'Anda dijemput menyertai Multi Duel', '房间已经准备好。输入昵称后即可进入等候室。': 'Bilik sudah sedia. Masukkan nama panggilan untuk menyertai ruang menunggu.', '已从邀请链接自动填写': 'Diisi daripada pautan jemputan', '接受邀请并加入': 'Terima dan sertai', '使用其他房间码': 'Gunakan kod bilik lain',
 }
 
 const copies: Partial<Record<AppLanguage, Record<string, string>>> = {
