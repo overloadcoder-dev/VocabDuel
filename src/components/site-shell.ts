@@ -91,12 +91,13 @@ function languageSwitcher(language: AppLanguage): string {
 export function siteHeader(active: SiteSection): string {
   const language = currentLanguage()
   const copy = shellCopy[language]
+  const navigationCopy = shellCopy.en
   return `<a class="skip-link" href="#main-content">${copy.skip}</a>
   <header class="app-header border-b border-black/5 bg-white/80 backdrop-blur-lg">
     <div class="app-header-inner page-wrap flex min-h-18 items-center justify-between gap-4">
       <a href="${SITE.routes.home}" class="flex items-center gap-2.5 font-extrabold tracking-tight" ${active === 'home' ? 'aria-current="page"' : ''}>${mark}<span class="brand-name">${SITE.name.slice(0, 5)}<span class="text-brand">${SITE.name.slice(5)}</span></span></a>
-      <button class="app-menu-button" type="button" data-app-menu-button aria-expanded="false" aria-controls="app-primary-navigation"><span aria-hidden="true">☰</span><span>${copy.menu}</span></button>
-      <nav id="app-primary-navigation" class="app-nav" aria-label="${copy.navigation}"><ul class="flex items-center gap-1 sm:gap-2">${copy.items.map(([id, label]) => {
+      <button class="app-menu-button" type="button" data-app-menu-button aria-expanded="false" aria-controls="app-primary-navigation"><span aria-hidden="true">☰</span><span>${navigationCopy.menu}</span></button>
+      <nav id="app-primary-navigation" class="app-nav" aria-label="${navigationCopy.navigation}"><ul class="flex items-center gap-1 sm:gap-2">${navigationCopy.items.map(([id, label]) => {
         const current = active === id || (active === 'placement' && id === 'levels')
         return `<li${id === 'home' ? ' class="desktop-home-nav-item"' : ''}><a href="${routeForSection(id)}" ${current ? 'aria-current="page"' : ''} class="app-nav-link rounded-xl px-3 py-2 text-sm font-bold ${current ? 'bg-brand-soft text-brand-dark' : 'text-muted hover:bg-slate-100 hover:text-ink'}">${label}</a></li>`
       }).join('')}</ul>${languageSwitcher(language)}</nav>
