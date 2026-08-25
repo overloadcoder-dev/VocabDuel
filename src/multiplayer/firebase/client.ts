@@ -1,6 +1,6 @@
-import { getApp, getApps, initializeApp, type FirebaseApp } from 'firebase/app'
-import { browserLocalPersistence, connectAuthEmulator, getAuth, setPersistence, signInAnonymously, type Auth } from 'firebase/auth'
-import { connectDatabaseEmulator, getDatabase, type Database } from 'firebase/database'
+import type { FirebaseApp } from 'firebase/app'
+import type { Auth } from 'firebase/auth'
+import type { Database } from 'firebase/database'
 
 export interface FirebaseServices { app: FirebaseApp; auth: Auth; database: Database }
 
@@ -13,6 +13,14 @@ export function isFirebaseConfigured(): boolean {
 export async function getFirebaseServices(): Promise<FirebaseServices> {
   if (services) return services
   if (!isFirebaseConfigured()) throw new Error('Firebase 尚未设定，请先加入 VITE_FIREBASE_* 环境变量。')
+  const [appSdk, authSdk, databaseSdk] = await Promise.all([
+    import('firebase/app'),
+    import('firebase/auth'),
+    import('firebase/database'),
+  ])
+  const { getApp, getApps, initializeApp } = appSdk
+  const { connectAuthEmulator, getAuth } = authSdk
+  const { connectDatabaseEmulator, getDatabase } = databaseSdk
   const app = getApps().length ? getApp() : initializeApp({
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
     authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
@@ -33,6 +41,7 @@ export async function getFirebaseServices(): Promise<FirebaseServices> {
 export async function authenticateGuest(): Promise<string> {
   const { auth } = await getFirebaseServices()
   if (auth.currentUser) return auth.currentUser.uid
+  const { signInAnonymously } = await import('firebase/auth')
   return (await signInAnonymously(auth)).user.uid
 }
 
@@ -40,6 +49,7 @@ export async function authenticateResumableGuest(): Promise<string> {
   const { auth } = await getFirebaseServices()
   await auth.authStateReady()
   if (auth.currentUser) return auth.currentUser.uid
+  const { browserLocalPersistence, setPersistence, signInAnonymously } = await import('firebase/auth')
   await setPersistence(auth, browserLocalPersistence)
   return (await signInAnonymously(auth)).user.uid
 }

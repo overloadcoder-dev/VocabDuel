@@ -32,6 +32,7 @@ let questionEndAt: number | undefined
 let questionTimeLimitMs = 0
 let feedbackPace: 'manual' | 'auto' = 'manual'
 let timerFrame = 0
+let lastRenderedTimerSecond = -1
 let advanceHandle = 0
 let replayCount = 0
 let incorrectIds: string[] = []
@@ -100,8 +101,10 @@ function renderQuestion(): void {
   if (!question) { finishGame(); return }
   answered = false; replayCount = 0; questionStartedAt = Date.now(); questionEndAt = questionTimeLimitMs ? questionStartedAt + questionTimeLimitMs : undefined
   el('#question-kind').textContent = gameType === 'audio' ? 'Press listen, then identify the word' : gameLabels[gameType]
-  el('#question-prompt').textContent = question.prompt
-  el('#question-prompt').classList.remove('blur-sm')
+  const prompt = el('#question-prompt')
+  prompt.textContent = question.prompt
+  prompt.lang = gameType === 'reverse' || gameType === 'spelling' ? 'zh-Hans' : 'en'
+  prompt.classList.remove('blur-sm')
   el('#question-ipa').textContent = gameType === 'audio' ? 'The word stays hidden until you answer.' : question.ipa ?? ''
   const listen = el<HTMLButtonElement>('#listen-button'); listen.classList.toggle('hidden', gameType !== 'audio' && gameType !== 'spelling'); listen.disabled = false
   el('#replay-count').textContent = gameType === 'audio' ? '(3 plays left)' : ''
@@ -115,7 +118,7 @@ function renderQuestion(): void {
   const input = el<HTMLInputElement>('#spelling-answer'); input.value = ''
   el('#answer-feedback').classList.add('hidden')
   if (gameType === 'spelling') window.setTimeout(() => input.focus(), 50)
-  else window.setTimeout(() => { const prompt = el('#question-prompt'); prompt.tabIndex = -1; prompt.focus({ preventScroll: true }) }, 50)
+  else window.setTimeout(() => { prompt.tabIndex = -1; prompt.focus({ preventScroll: true }) }, 50)
   updateStats(); startTimer()
 }
 
@@ -162,6 +165,7 @@ function updateStats(): void {
 
 function startTimer(): void {
   cancelAnimationFrame(timerFrame)
+  lastRenderedTimerSecond = -1
   const timer = el('#timer-display')
   const deadline = [endAt, questionEndAt].filter((value): value is number => value !== undefined).sort((a, b) => a - b)[0]
   timer.classList.toggle('hidden', !deadline)
@@ -171,7 +175,14 @@ function startTimer(): void {
     const now = Date.now()
     const activeDeadline = [endAt, questionEndAt].filter((value): value is number => value !== undefined).sort((a, b) => a - b)[0]
     if (!activeDeadline) return
-    const remaining = Math.max(0, activeDeadline - now); timer.textContent = `${Math.ceil(remaining / 1000)}s`; timer.setAttribute('aria-label', `${Math.ceil(remaining / 1000)} seconds remaining`); updateStats()
+    const remaining = Math.max(0, activeDeadline - now)
+    const displayedSecond = Math.ceil(remaining / 1000)
+    if (displayedSecond !== lastRenderedTimerSecond) {
+      lastRenderedTimerSecond = displayedSecond
+      timer.textContent = `${displayedSecond}s`
+      timer.setAttribute('aria-label', `${displayedSecond} seconds remaining`)
+      updateStats()
+    }
     if (remaining <= 0) {
       if (endAt !== undefined && endAt <= now) finishGame()
       else submitAnswer('')

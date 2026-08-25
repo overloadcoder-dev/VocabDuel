@@ -10,5 +10,14 @@
     "strict": true,
     "noEmit": true
   },
-  "include": ["vite.config.ts"]
+  "include": [
+    "vite.config.ts",
+    "src/data/vocabulary/level-1.ts",
+    "src/data/vocabulary/level-2.ts",
+    "src/data/vocabulary/level-3.ts",
+    "src/data/vocabulary/level-4.ts",
+    "src/data/vocabulary/level-5.ts",
+    "src/data/word-slug.ts",
+    "src/types/*.ts"
+  ]
 }

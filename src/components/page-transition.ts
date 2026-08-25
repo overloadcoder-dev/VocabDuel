@@ -1,4 +1,4 @@
-const navigationDelayMs = 500
+const navigationDelayMs = 250
 
 let installed = false
 let navigationPending = false

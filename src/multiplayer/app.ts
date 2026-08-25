@@ -8,27 +8,11 @@ import { generateQuestions, calculateScore } from '../games'
 import { speechService } from '../speech'
 import type { GameQuestion, VocabularyCategory } from '../types'
 import { authenticateResumableGuest, isFirebaseConfigured } from './firebase/client'
-import {
-  beginRematch,
-  closeRoundEarly,
-  createRoom,
-  finishMatch,
-  joinRoom,
-  leaveRoom,
-  markPlaying,
-  observePresence,
-  observeServerOffset,
-  resumeRoom,
-  setReady,
-  startMatch,
-  submitAnswer,
-  subscribeRoom,
-  voteRematch,
-} from './firebase/rooms'
 import { bothPlayersAnswered } from './state-machine'
 import { activeRoundTiming, remainingRoundMs, ROUND_REVIEW_MS, roundTimingAtIndex, synchronizedNow } from './time'
 import type { MultiplayerIdentity, RoomConfig, RoomRecord } from './types'
 import { joinRoomErrorCopy, normalizeRoomCode, readInviteRoomCode, sanitizeNickname, validateNickname } from './validation'
+import { escapeHtml, guestName, leaderboardRankBadge, refreshRoomCodeInput, reviewSpeakButton, roomCodeInputTemplate } from './ui'
 
 document.querySelector('#site-header')!.innerHTML = siteHeader('multiplayer')
 document.querySelector('#site-footer')!.innerHTML = siteFooter()
@@ -36,6 +20,17 @@ document.querySelector('#site-footer')!.innerHTML = siteFooter()
 const rootElement = document.querySelector<HTMLElement>('#multiplayer-app')
 if (!rootElement) throw new Error('Multiplayer root is missing.')
 const root: HTMLElement = rootElement
+
+type RoomApi = typeof import('./firebase/rooms')
+let roomApiPromise: Promise<RoomApi> | undefined
+const roomOperations = new Proxy({} as RoomApi, {
+  get: (_target, property: string) => async (...args: unknown[]) => {
+    const api = await (roomApiPromise ??= import('./firebase/rooms'))
+    const operation = api[property as keyof RoomApi] as (...values: unknown[]) => unknown
+    return operation(...args)
+  },
+})
+const { beginRematch, closeRoundEarly, createRoom, finishMatch, joinRoom, leaveRoom, markPlaying, observePresence, observeServerOffset, resumeRoom, setReady, startMatch, submitAnswer, subscribeRoom, voteRematch } = roomOperations
 
 const resultTimeMs = ROUND_REVIEW_MS
 const disconnectGraceMs = 30_000
@@ -59,40 +54,10 @@ let rematchVotePending = false
 let notice = ''
 const earlyClosePending = new Set<string>()
 const answerSubmissions = new Map<string, string>()
-const rankImageFiles = ['first.webp', 'second.webp'] as const
-
-function escapeHtml(value: string): string {
-  const node = document.createElement('div')
-  node.textContent = value
-  return node.innerHTML
-}
-
-function reviewSpeakButton(term: string): string {
-  const safeTerm = escapeHtml(term)
-  return `<button class="review-speak-button" type="button" data-speak="${safeTerm}" aria-label="播放 ${safeTerm} 的发音" title="播放发音"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5l4.5 4V5Z"/><path d="M15 9.5a4 4 0 0 1 0 5M17.8 6.8a8 8 0 0 1 0 10.4"/></svg></button>`
-}
-
-function leaderboardRankBadge(place: number, rankingDecided: boolean): string {
-  if (!rankingDecided) {
-    return '<span class="multi-rank" data-undecided aria-label="排名未定"><span aria-hidden="true">–</span></span>'
-  }
-
-  const rank = place + 1
-  const imageFile = rankImageFiles[place]
-  if (!imageFile) return `<span class="multi-rank" aria-label="第 ${rank} 名">${rank}</span>`
-
-  const imagePath = `${import.meta.env.BASE_URL}images/multi-duel/${imageFile}`
-  return `<span class="multi-rank" data-ranked aria-label="第 ${rank} 名"><img class="multi-rank-image" src="${imagePath}" alt="" width="64" height="64" decoding="async"></span>`
-}
 
 function setNotice(message: string): void {
   notice = message
   render()
-}
-
-function guestName(uid: string): string {
-  const saved = localStorage.getItem('vocabduel.nickname')
-  return saved && !validateNickname(saved) ? saved : `玩家 ${uid.slice(-4).toUpperCase()}`
 }
 
 const categoryLabels: Record<string, string> = {
@@ -107,26 +72,6 @@ const categoryLabels: Record<string, string> = {
 
 function defaultConfig(): RoomConfig {
   return { level: 3, category: 'All', gameType: 'meaning', questionCount: 10, roundTimeMs: 10_000 }
-}
-
-function roomCodeInputTemplate(value: string): string {
-  const code = normalizeRoomCode(value)
-  const slots = Array.from({ length: 6 }, (_item, index) => `<span class="room-code-slot" ${code[index] ? 'data-filled' : ''}>${escapeHtml(code[index] ?? '')}</span>`).join('')
-  return `<div class="room-code-input" data-room-code-input>
-    <input class="room-code-entry" name="code" inputmode="text" autocomplete="one-time-code" autocapitalize="characters" autocorrect="off" enterkeyhint="go" spellcheck="false" value="${escapeHtml(code)}" aria-label="6 位房间码" aria-describedby="room-code-hint" required>
-    <div class="room-code-slots" aria-hidden="true">${slots}</div>
-  </div><small id="room-code-hint" class="field-hint">输入或贴上 6 位房间码，英文字母会自动转为大写。</small>`
-}
-
-function refreshRoomCodeInput(input: HTMLInputElement, commit = false): void {
-  const code = normalizeRoomCode(input.value)
-  if (commit) input.value = code
-  const slots = input.closest<HTMLElement>('[data-room-code-input]')?.querySelectorAll<HTMLElement>('.room-code-slot')
-  slots?.forEach((slot, index) => {
-    slot.textContent = code[index] ?? ''
-    slot.toggleAttribute('data-filled', Boolean(code[index]))
-    slot.toggleAttribute('data-active', document.activeElement === input && index === Math.min(code.length, 5))
-  })
 }
 
 function questionsFor(current: RoomRecord): GameQuestion[] {
@@ -346,13 +291,13 @@ function render(): void {
   bindActions()
 }
 
-function readIdentity(form: HTMLFormElement): MultiplayerIdentity | null {
-  if (!identity) return null
+async function readIdentity(form: HTMLFormElement): Promise<MultiplayerIdentity | null> {
   const data = new FormData(form)
   const name = sanitizeNickname(String(data.get('nickname') ?? ''))
   const error = validateNickname(name)
   if (error) { setNotice(error); return null }
-  identity = { ...identity, displayName: name }
+  const uid = identity?.uid ?? await authenticateResumableGuest()
+  identity = { uid, displayName: name }
   localStorage.setItem('vocabduel.nickname', name)
   return identity
 }
@@ -498,7 +443,7 @@ function bindActions(): void {
   root.querySelector<HTMLFormElement>('[data-create-form]')?.addEventListener('submit', async (event) => {
     event.preventDefault(); notice = ''
     const form = event.currentTarget as HTMLFormElement
-    const currentIdentity = readIdentity(form); if (!currentIdentity) return
+    const currentIdentity = await readIdentity(form); if (!currentIdentity) return
     const data = new FormData(form)
     const config = defaultConfig()
     config.level = Number(data.get('level')) as RoomConfig['level']
@@ -517,7 +462,7 @@ function bindActions(): void {
   root.querySelector<HTMLFormElement>('[data-join-form]')?.addEventListener('submit', async (event) => {
     event.preventDefault(); notice = ''
     const form = event.currentTarget as HTMLFormElement
-    const currentIdentity = readIdentity(form); if (!currentIdentity) return
+    const currentIdentity = await readIdentity(form); if (!currentIdentity) return
     const code = normalizeRoomCode(String(new FormData(form).get('code') ?? ''))
     if (code.length !== 6) {
       await showAlertDialog({ title: '房间码不完整', message: '请输入完整的六位房间码，然后再试一次。' })
@@ -604,9 +549,10 @@ async function initialize(): Promise<void> {
     return
   }
   try {
+    const invite = readInviteRoomCode(location.search)
+    if (!invite) { render(); return }
     const uid = await authenticateResumableGuest()
     identity = { uid, displayName: guestName(uid) }
-    const invite = readInviteRoomCode(location.search)
     if (invite) {
       const resumableRoom = await resumeRoom(invite, uid).catch(() => null)
       if (resumableRoom) {
