@@ -286,7 +286,6 @@ function resultsTemplate(current: MultiRoomRecord, suppliedQuestions?: GameQuest
 }
 
 function render(): void {
-  if (!identity) return
   let view = 'menu'
   let html = menuTemplate()
   if (roomCode && room) {

@@ -280,7 +280,6 @@ function resultsTemplate(current: RoomRecord, suppliedQuestions?: GameQuestion[]
 }
 
 function render(): void {
-  if (!identity) return
   let view = 'menu'
   let html = menuTemplate()
   if (roomCode && room) {
