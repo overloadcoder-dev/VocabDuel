@@ -63,8 +63,10 @@ const copies: Partial<Record<AppLanguage, Record<string, string>>> = { ms: malay
 
 export function localiseStaticDocument(): void {
   const language = currentLanguage()
-  if (language === 'en') {
+  if (language !== 'zh') {
     document.querySelectorAll<HTMLElement>('[lang="zh-Hans"]').forEach((element) => { element.hidden = true })
+  }
+  if (language === 'en') {
     document.querySelectorAll<HTMLElement>('.game-choice').forEach((element) => {
       if (element.textContent?.includes('EN → 中')) element.innerHTML = element.innerHTML.replace('EN → 中', 'EN → Definition').replace('English → Chinese', 'English → definition')
       if (element.textContent?.includes('中 → EN')) element.innerHTML = element.innerHTML.replace('中 → EN', 'Definition → EN').replace('Chinese → English', 'Definition → English')
@@ -83,4 +85,3 @@ export function localiseStaticDocument(): void {
     node = walker.nextNode()
   }
 }
-

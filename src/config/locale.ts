@@ -14,8 +14,18 @@ export const LANGUAGE_HTML_TAGS: Record<AppLanguage, string> = {
   zh: 'zh-Hans',
 }
 
-export function languageFromPath(pathname: string): AppLanguage {
-  const segment = pathname.replace(/^\/+/, '').split('/')[0]?.toLocaleLowerCase()
+function pathWithinBase(pathname: string, basePath: string): string {
+  const normalisedBase = `/${basePath.replace(/^\/+|\/+$/g, '')}`
+  if (normalisedBase === '/') return pathname
+  const lowerPath = pathname.toLocaleLowerCase()
+  const lowerBase = normalisedBase.toLocaleLowerCase()
+  if (lowerPath === lowerBase) return '/'
+  return lowerPath.startsWith(`${lowerBase}/`) ? pathname.slice(normalisedBase.length) : pathname
+}
+
+export function languageFromPath(pathname: string, basePath = '/'): AppLanguage {
+  const segments = pathWithinBase(pathname, basePath).replace(/^\/+/, '').split('/').map((segment) => segment.toLocaleLowerCase())
+  const segment = segments.find((candidate) => ['en', 'my', 'ms', 'zh', 'cn'].includes(candidate))
   if (segment === 'my' || segment === 'ms') return 'ms'
   if (segment === 'zh' || segment === 'cn') return 'zh'
   return 'en'

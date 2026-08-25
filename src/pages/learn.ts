@@ -113,17 +113,17 @@ function render(): void {
   element('#word-pos').textContent = word.partOfSpeech.join(' · ')
   const wordShort = element('#word-short')
   wordShort.textContent = language === 'zh' ? word.chineseShort : language === 'ms' ? word.examples[0]?.malay ?? '' : ''
-  wordShort.classList.toggle('hidden', language === 'en')
+  wordShort.hidden = language === 'en'
   wordShort.lang = language === 'zh' ? 'zh-Hans' : language === 'ms' ? 'ms-MY' : 'en-GB'
   element('#word-explanation').textContent = vocabularyExplanation(word, language)
   element('#word-definition').textContent = word.englishDefinition
   element('#word-example').textContent = word.examples[0]?.english ?? '—'
   const localisedExample = element('#word-example-cn')
   localisedExample.textContent = language === 'en' ? '' : vocabularyExample(word, language)
-  localisedExample.classList.toggle('hidden', language === 'en')
+  localisedExample.hidden = language === 'en'
   localisedExample.lang = language === 'zh' ? 'zh-Hans' : 'ms-MY'
   const localisedExplanation = element('#word-localised-explanation')
-  localisedExplanation.classList.toggle('hidden', language === 'en')
+  localisedExplanation.hidden = language === 'en'
   localisedExplanation.lang = language === 'zh' ? 'zh-Hans' : 'ms-MY'
   element('#word-level').textContent = `Level ${word.level}`
   const cefr = element('#word-cefr'); cefr.textContent = word.cefr ?? ''; cefr.classList.toggle('hidden', !word.cefr)

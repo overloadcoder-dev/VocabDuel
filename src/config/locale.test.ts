@@ -7,6 +7,9 @@ describe('locale routing', () => {
     expect(languageFromPath('/en/play/')).toBe('en')
     expect(languageFromPath('/zh/words/apple/')).toBe('zh')
     expect(languageFromPath('/cn/levels/')).toBe('zh')
+    expect(languageFromPath('/VocabDuel/my/learn/', '/VocabDuel/')).toBe('ms')
+    expect(languageFromPath('/VocabDuel/zh/play/', '/VocabDuel/')).toBe('zh')
+    expect(languageFromPath('/VocabDuel/en/', '/VocabDuel/')).toBe('en')
   })
 
   it('changes language without changing the current route', () => {
