@@ -60,6 +60,7 @@ const chinese: Record<string, string> = {
 }
 
 const duelEnglish: Record<string, string> = {
+  'English → Chinese': 'English → meaning', 'Chinese → English': 'Meaning → English',
   '好友单词对战 · PRIVATE 1V1': 'FRIENDLY WORD DUEL · PRIVATE 1V1',
   '和朋友来一场': 'Challenge a friend to an', '英语词汇对决': 'English vocabulary duel',
   '建立或加入私人房间，两位玩家会收到相同题目与同步倒计时。无需注册，输入昵称即可开始。': 'Create or join a private room. Both players receive the same questions and a synchronized countdown. No registration—just enter a nickname to begin.',
@@ -119,6 +120,15 @@ export function localisedStaticText(value: string, language: AppLanguage): strin
   return copies[language]?.[value] ?? value
 }
 
+export function gameDirectionLabel(direction: 'forward' | 'reverse', language: AppLanguage): string {
+  const labels = {
+    en: { forward: 'EN → Meaning', reverse: 'Meaning → EN' },
+    ms: { forward: 'EN → BM', reverse: 'BM → EN' },
+    zh: { forward: 'EN → 中', reverse: '中 → EN' },
+  } as const
+  return labels[language][direction]
+}
+
 function localiseTree(root: Node, language: AppLanguage): void {
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT)
   let node = walker.nextNode()
@@ -136,12 +146,11 @@ export function localiseStaticDocument(): void {
   if (language !== 'zh') {
     document.querySelectorAll<HTMLElement>('[lang="zh-Hans"]').forEach((element) => { element.hidden = true })
   }
-  if (language === 'en') {
-    document.querySelectorAll<HTMLElement>('.game-choice').forEach((element) => {
-      if (element.textContent?.includes('EN → 中')) element.innerHTML = element.innerHTML.replace('EN → 中', 'EN → Definition').replace('English → Chinese', 'English → definition')
-      if (element.textContent?.includes('中 → EN')) element.innerHTML = element.innerHTML.replace('中 → EN', 'Definition → EN').replace('Chinese → English', 'Definition → English')
-    })
-  }
+  document.querySelectorAll<HTMLElement>('.game-choice').forEach((element) => {
+    const direction = element.textContent?.includes('EN → 中') ? 'forward' : element.textContent?.includes('中 → EN') ? 'reverse' : undefined
+    const label = element.querySelector<HTMLElement>('[aria-hidden="true"]')
+    if (direction && label) label.textContent = gameDirectionLabel(direction, language)
+  })
   const copy = copies[language]
   if (!copy) return
   localiseTree(document.body, language)

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { localisedStaticText } from './localise-static'
+import { gameDirectionLabel, localisedStaticText } from './localise-static'
 
 describe('static duel localisation', () => {
   it('translates Duel explanations from their Chinese source', () => {
@@ -14,5 +14,13 @@ describe('static duel localisation', () => {
     expect(localisedStaticText(source, 'en')).toBe('Multi Duel runs separately from 1v1 Duel')
     expect(localisedStaticText(source, 'ms')).toBe('Multi Duel beroperasi berasingan daripada 1v1 Duel')
     expect(localisedStaticText(source, 'zh')).toBe(source)
+  })
+
+  it('uses locale-appropriate game direction abbreviations', () => {
+    expect(gameDirectionLabel('forward', 'ms')).toBe('EN → BM')
+    expect(gameDirectionLabel('reverse', 'ms')).toBe('BM → EN')
+    expect(gameDirectionLabel('forward', 'en')).toBe('EN → Meaning')
+    expect(gameDirectionLabel('reverse', 'en')).toBe('Meaning → EN')
+    expect(gameDirectionLabel('forward', 'zh')).toBe('EN → 中')
   })
 })
