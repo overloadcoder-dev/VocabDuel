@@ -19,6 +19,7 @@ const levels = [
 const expectedLengths = [710, 710, 710, 610, 800] as const
 const allowedCategories = new Set<string>(VOCABULARY_CATEGORIES)
 const americanSpelling = /\b(?:color(?:s|ed|ing|ful|less)?|organize(?:s|d|r|rs|ing|ation|ations)?|behavior(?:s|al)?|recognize(?:s|d|r|rs|ing)?|grayish|colored)\b/i
+const genericMalayPlaceholder = /^Ayat ini menunjukkan penggunaan perkataan .+ dalam konteks Bahasa Inggeris British\.$/
 
 function expectCompleteItem(item: VocabularyItem, expectedLevel: number) {
   expect(item.id).toMatch(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)
@@ -30,6 +31,7 @@ function expectCompleteItem(item: VocabularyItem, expectedLevel: number) {
   expect(item.englishDefinition.trim()).not.toBe('')
   expect(item.examples.length).toBeGreaterThan(0)
   expect(item.examples.every(({ english, malay, chinese }) => english.trim() && malay.trim() && chinese.trim())).toBe(true)
+  item.examples.forEach(({ malay }) => expect(malay, `${item.id} Malay example`).not.toMatch(genericMalayPlaceholder))
   expect(item.level).toBe(expectedLevel)
   expect(item.categories.length).toBeGreaterThan(0)
   expect(item.categories.every((category) => allowedCategories.has(category))).toBe(true)
