@@ -1,25 +1,36 @@
 # VocabDuel
 
-VocabDuel is a static, mobile-first British English vocabulary learning game with Bahasa Melayu, English-only, and Simplified Chinese experiences. A shared, typed vocabulary dataset powers detailed word study, five solo question types, configurable challenge sessions, local weak-word practice, casual private 1v1 matches, and isolated 2–4 player Multi Duel rooms.
+VocabDuel is a mobile-first British English vocabulary-learning game with Bahasa Melayu, English-only, and Simplified Chinese experiences. It combines guided word study, five solo question types, placement and weak-word practice, private 1v1 matches, and 2-4 player Multi Duel rooms.
 
-The production site is static. Firebase Anonymous Authentication and Realtime Database are loaded only for multiplayer; normal learning and solo games do not require an account or Firebase.
+Learning and solo play are delivered as a static Vite site and work without an account. Multiplayer loads Firebase Anonymous Authentication and Realtime Database only when needed.
 
-> **Pre-deployment checklist:** source metadata uses `https://vocabduel.example` as a build-time token. The GitHub Pages workflow replaces it with `VITE_SITE_URL` or the repository-derived Pages origin; other production builds must set `VITE_SITE_URL`. The Privacy and Terms pages still require the real operator/contact/jurisdiction facts and appropriate legal review.
+> [!IMPORTANT]
+> Before production deployment, set the real `VITE_SITE_URL`. The Privacy and Terms pages also need the operator's real contact and jurisdiction details and appropriate legal review.
 
-## Architecture
+## Features
 
-- Static multi-page HTML provides crawlable content at `/`, `/learn/`, `/play/`, `/multiplayer/`, `/placement/`, `/levels/`, `/how-to-play/`, `/about/`, `/privacy/`, and `/terms/`.
-- `src/data/vocabulary/` contains one curated term module per learning level. Browser routes dynamically load only the levels they need; `src/data/vocabulary.ts` remains the full editorial/test aggregate, and `src/types/` defines vocabulary, game, and progress contracts.
-- `src/config/locale.ts`, `src/config/localised-seo.ts`, and `src/config/site.ts` centralise language routing, localised SEO, the product name, provisional origin, and canonical route map; generated static HTML keeps route-specific metadata crawlable without JavaScript.
-- `src/games/` contains deterministic question generation, scoring, and session behaviour separately from page rendering.
-- `src/storage/` stores non-sensitive solo progress in localStorage.
-- `src/speech/` wraps the browser Web Speech API.
-- `src/multiplayer/` isolates Firebase loading, room operations, presence, synchronised time, and state transitions.
-- Vite builds every route as a static HTML entry. Tailwind is compiled locally.
+- Bahasa Melayu (`/my/`), British English (`/en/`), and Simplified Chinese (`/zh/`) routes
+- Five curated vocabulary levels with localised definitions and examples
+- Deterministic question generation, scoring, placement, and progress tracking
+- Browser speech synthesis where supported
+- Private 1v1 matches and configurable 2-4 player rooms
+- Static, crawlable route metadata and generated word-detail pages
+- Responsive, keyboard-friendly UI with reduced-motion support
 
-## Requirements and installation
+## Technology
 
-Use a current Node.js LTS release and npm.
+- TypeScript, Vite, and Tailwind CSS
+- Vitest for frontend and Firebase Rules tests
+- Node's test runner for Cloud Functions
+- Firebase Authentication, Realtime Database, App Check, Hosting, and scheduled Functions
+- GitHub Actions and GitHub Pages deployment support
+
+## Requirements and setup
+
+- Node.js 22 or a compatible current LTS release
+- npm
+- Java 21 or newer for Firebase emulator tests
+- A Firebase project for multiplayer and production deployment
 
 ```sh
 npm install
@@ -27,22 +38,25 @@ cp .env.example .env.local
 npm run dev
 ```
 
-On PowerShell, copy the environment file with `Copy-Item .env.example .env.local`.
+In PowerShell, use `Copy-Item .env.example .env.local`.
 
-Useful commands:
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm test` | Run frontend tests |
+| `npm run functions:test` | Test scheduled room cleanup |
+| `npm run firebase:rules:test` | Test Realtime Database Rules in the emulator |
+| `npm run typecheck` | Run TypeScript checks |
+| `npm run build` | Create the production build in `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm run release:verify` | Check built routes, metadata, and placeholders |
+| `npm run vocabulary:backfill-malay` | Run the maintained Malay-example backfill utility |
 
-```sh
-npm run typecheck
-npm test
-npm run build
-npm run preview
-```
+Do not open files from `dist/` directly; use `npm run preview` so routes and assets resolve correctly.
 
-`npm run build` writes the static production output to `dist/`. Verify representative routes from `npm run preview`, including a content page and multiplayer, rather than opening built HTML directly from the filesystem.
+## Environment
 
-## Environment configuration
-
-Create `.env.local`; do not commit it. Supply the public Firebase web-app configuration from Firebase Console:
+Create `.env.local` from `.env.example`. Do not commit it.
 
 ```dotenv
 VITE_FIREBASE_API_KEY=
@@ -51,23 +65,76 @@ VITE_FIREBASE_DATABASE_URL=
 VITE_FIREBASE_PROJECT_ID=
 VITE_FIREBASE_APP_ID=
 VITE_FIREBASE_APPCHECK_SITE_KEY=
+VITE_USE_FIREBASE_EMULATOR=false
 VITE_SITE_URL=https://your-production-origin.example
 VITE_BASE_PATH=/
-VITE_USE_FIREBASE_EMULATOR=false
 ```
 
-Firebase web API keys identify a Firebase project; they are not database authorization. Security depends on Authentication, Realtime Database Rules, App Check, quotas, and monitoring. Never put service-account credentials or other secrets in a `VITE_` variable.
+Firebase web API keys identify a project; they are not database authorisation. Security depends on Authentication, Database Rules, App Check, quotas, and monitoring. Never place service-account credentials or other secrets in a `VITE_` variable.
 
-If Firebase variables are missing or Firebase is unavailable, multiplayer reports an unavailable state while local learning remains usable.
+Without valid Firebase configuration, multiplayer reports that it is unavailable while local learning remains usable. For a GitHub Pages project site, use an origin such as `https://OWNER.github.io/REPOSITORY` and a base path such as `/REPOSITORY/`.
 
-For a GitHub Pages project site, use an origin such as `https://OWNER.github.io/REPOSITORY` and a base path such as `/REPOSITORY/`. The deployment workflow derives both automatically unless the `VITE_SITE_URL` and `VITE_BASE_PATH` repository variables override them.
+## Project structure
 
-## Firebase setup
+```text
+.
+|- about/, learn/, play/, ...   Static HTML route entry points
+|- firebase/                    Realtime Database Rules
+|- functions/                   Scheduled expired-room cleanup
+|- public/                      Icons, manifest, robots, sitemap, and images
+|- scripts/                     Release verification and data utilities
+|- src/
+|  |- components/               Shared UI behaviour
+|  |- config/                   Locale, route, SEO, and site configuration
+|  |- data/                     Vocabulary loading, search, and editorial rules
+|  |- games/                    Questions, scoring, sessions, and placement
+|  |- multi-duel/               Multi-player room client and state machine
+|  |- multiplayer/              1v1 room client and state machine
+|  |- pages/                    Page controllers
+|  |- speech/                   Web Speech API wrapper
+|  |- storage/                  Local progress persistence
+|  `- types/                    Shared TypeScript contracts
+|- vite.config.ts               Multi-page and generated-route build setup
+`- firebase.json                Hosting, emulators, Rules, and Functions config
+```
 
-1. Create or select a Firebase project and register a Web app.
-2. In **Authentication → Sign-in method**, enable **Anonymous** authentication. Configure authorized domains for production and previews.
-3. Create a Realtime Database in the region appropriate for the audience. Copy its complete URL (including the regional hostname) to `VITE_FIREBASE_DATABASE_URL`.
-4. Review `firebase/database.rules.json`, select the intended Firebase CLI project, then deploy rules:
+Vite builds each public route as a static HTML entry. Locale configuration and SEO metadata are centralised under `src/config/`; game rules remain separate from page rendering.
+
+## Vocabulary and editorial standard
+
+Vocabulary lives in `src/data/vocabulary/`, split into one module per learning level. `src/data/vocabulary.ts` exposes the combined catalogue, while browser features dynamically load only the levels they need.
+
+Each `VocabularyItem` uses a stable ID and normalised British English term, part of speech, optional IPA, English and Chinese explanations, examples in British English, Bahasa Melayu, and Simplified Chinese, optional collocations/synonyms/antonyms, an internal Level 1-5, optional CEFR tag, and declared categories.
+
+| Level | Typical CEFR | Approximate IELTS target | Editorial meaning |
+| --- | --- | --- | --- |
+| 1 | A1-A2 | Foundation / below Band 4 | Frequent, concrete, everyday words |
+| 2 | A2-B1 | Band 4.0-5.0 | Familiar vocabulary for everyday life, travel, study, and routine work |
+| 3 | B1-B2 | Band 5.5-6.5 | Broader or abstract vocabulary used in general and academic topics |
+| 4 | B2-C1 | Band 7.0-8.0 | Less-common vocabulary requiring accurate register, nuance, or collocation |
+| 5 | C1-C2 | Band 8.5-9.0 | Highly nuanced, specialised, idiomatic, or uncommon vocabulary |
+
+IELTS ranges are learner orientation labels, not official word-to-band assignments. When assigning a term, consider frequency, concreteness, range, collocation, register, and nuance. Use a unique `id`, lowercase `normalizedTerm`, valid categories, and original or appropriately licensed, human-reviewed content.
+
+The August 2026 expansion used the MIT-licensed [ECDICT](https://github.com/skywind3000/ECDICT) dataset for bilingual gloss and corpus-rank checks. English definitions and examples still require editorial review.
+
+To add vocabulary:
+
+1. Add the entry to the appropriate level module under `src/data/vocabulary/`.
+2. Follow the `VocabularyItem` contract and declared categories.
+3. Provide reviewed examples in British English, Bahasa Melayu, and Simplified Chinese.
+4. Assign only defensible levels, categories, and optional CEFR labels.
+5. Run `npm run typecheck` and `npm test`; confirm question generation has enough suitable distractors.
+
+The typed level rubric used by the application is in `src/data/vocabulary/levels.ts`.
+
+## Firebase
+
+1. Register a Firebase Web app.
+2. Enable Anonymous sign-in and configure authorised domains.
+3. Create a Realtime Database in an appropriate region and set its full URL.
+4. Review and emulator-test `firebase/database.rules.json`.
+5. Select the intended CLI project and deploy the rules:
 
    ```sh
    npx firebase-tools login
@@ -75,53 +142,13 @@ For a GitHub Pages project site, use an origin such as `https://OWNER.github.io/
    npx firebase-tools deploy --only database
    ```
 
-5. Never switch a production database to open test mode. Test rules against the emulator before every material model change.
+Never use open test-mode rules in production.
 
-### Realtime Database model
+For local emulators, set `VITE_USE_FIREBASE_EMULATOR=true` and run `npm run firebase:emulators` and `npm run dev` in separate terminals. Configured ports are Auth `9099`, Database `9000`, Functions `5001`, and Emulator UI `4000`. Use a non-production project ID.
 
-```text
-rooms/{roomCode}/
-  metadata/{code, hostUid, state, seed, createdAt, expiresAt}
-  config/{level, category, gameType, questionCount, roundTimeMs}
-  players/{uid}/{uid, displayName, ready, connected, joinedAt, lastSeenAt}
-  match/{startAt, rematchNumber}
-  answers/{roundId}/{uid}/{selectedAnswer, submittedAt}
-  rematchVotes/{uid}
+Room codes are locators, not passwords. Rules enforce membership, host-controlled state changes, player-owned answers, bounded values, capacity, and expiry. The `rooms` tree supports 1v1 play; `multiRooms` supports two to four players.
 
-multiRooms/{roomCode}/
-  metadata/{code, hostUid, playerCount, state, seed, createdAt, expiresAt}
-  config/{level, category, gameType, questionCount, roundTimeMs, maxPlayers}
-  players/{uid}/{uid, displayName, ready, connected, joinedAt, lastSeenAt}
-  match/{startAt, rematchNumber}
-  answers/{roundId}/{uid}/{selectedAnswer, submittedAt}
-  answerCounts/{roundId}
-  rematchVotes/{uid}
-```
-
-Room codes are locators, not passwords. Rules allow authenticated visitors to read a waiting room addressed by its code so they can join; after play starts, reads are member-only. The original `rooms` tree remains limited to two players. Multi Duel uses the separate `multiRooms` tree, supports a configured maximum of three or four, and lets a host start with any ready group of at least two. The host controls configuration, match timing, and state changes. Each player can update only their own player record and create only their own bounded answer or rematch vote. Payload keys, strings, enums, counts, timing ranges, and room capacity are validated. Unknown top-level data is rejected.
-
-The initial client uses server timestamp resolution and `/.info/serverTimeOffset` to render timers locally. It writes state transitions rather than countdown ticks. Presence uses `onDisconnect`; listeners must be detached when leaving a room.
-
-### Emulator workflow
-
-Set `VITE_USE_FIREBASE_EMULATOR=true` in `.env.local`, then run in separate terminals:
-
-```sh
-npm run firebase:emulators
-npm run dev
-```
-
-Configured local ports are Auth `9099`, Database `9000`, Functions `5001`, and Emulator UI `4000`. Always use a non-production Firebase project ID for emulator work. Run `npm run firebase:rules:test` after installing Java 21 or newer; emulator smoke testing alone is not a complete security test.
-
-### App Check and operational hardening
-
-App Check is optional during development and initial deployment. Before enabling App Check enforcement, create a reCAPTCHA Enterprise web key, register the production and intentional preview origins, and set its site key as `VITE_FIREBASE_APPCHECK_SITE_KEY`. The multiplayer client initialises App Check with automatic token refresh whenever that key is configured; when it is empty, multiplayer continues without App Check. Verify valid traffic in Firebase metrics before enabling enforcement for Realtime Database. Use the documented debug-token flow only for local development, never a production token in source control.
-
-Also configure Firebase budget alerts and usage monitoring. App Check reduces unauthorised clients but does not replace Authentication or Security Rules.
-
-Rooms expire two hours after creation. Rules deny reads and non-delete writes after expiry, and `functions/index.js` defines the trusted `cleanupExpiredRooms` job that deletes expired records every 15 minutes in bounded batches. The job is idempotent because scheduled invocations can overlap; under normal operation, room records are retained for roughly two hours plus the scheduler interval.
-
-The cleanup function requires a Firebase project on the Blaze plan with Cloud Scheduler available. Before the first production deployment, confirm that the Function and Realtime Database regions are appropriately colocated, then deploy from a trusted Firebase CLI session:
+Rooms expire two hours after creation. Scheduled cleanup jobs in `functions/index.js` run every 15 minutes. Deployment requires a Firebase Blaze project with Cloud Scheduler:
 
 ```sh
 npm install --prefix functions
@@ -129,80 +156,54 @@ npm run functions:test
 npx firebase-tools deploy --only functions:cleanupExpiredRooms,functions:cleanupExpiredMultiRooms,database
 ```
 
-Monitor Function logs for batch-cap warnings. The Pages workflow installs and tests the Functions package so it cannot silently rot, but intentionally does not deploy backend resources or Database Rules.
+App Check is optional locally. Before enforcement, configure reCAPTCHA Enterprise, register intended origins, set `VITE_FIREBASE_APPCHECK_SITE_KEY`, and verify valid traffic. App Check supplements rather than replaces Authentication and Rules.
 
-## Vocabulary data
+## Deployment
 
-Each item follows the typed `VocabularyItem` contract: stable ID and normalised British English term, part of speech, optional IPA, short and detailed Chinese explanations, an English definition, examples in British English, Bahasa Melayu, and Simplified Chinese, optional collocations/synonyms/antonyms, an internal Level 1–5, optional accurately curated CEFR tag, and data-driven categories.
+### Firebase Hosting
 
-## Language routes
+`firebase.json` serves `dist/`, configures clean URLs, and uses the generated `404.html` for unknown routes.
 
-- `/my/` uses Bahasa Melayu guidance and BM examples.
-- `/en/` is the British English-only experience.
-- `/zh/` uses Simplified Chinese guidance and examples.
-- `/` is the language chooser. `/cn/` permanently redirects to `/zh/`, and legacy unprefixed app routes redirect to `/en/` equivalents on Firebase Hosting.
-
-Every canonical page has locale-specific metadata and reciprocal `hreflang` links. Word detail pages are generated for all three languages, while progress remains shared in the same browser profile.
-
-To add words:
-
-1. Add entries to the relevant module under `src/data/vocabulary/`.
-2. Use a stable unique ID and a lowercase normalized form suitable for answer comparison.
-3. Write original or properly licensed, human-reviewed definitions and examples. Do not fabricate content to increase the count.
-4. Assign only accurate levels, categories, and optional CEFR labels.
-5. Run typechecking and tests. Check that distractor generation still has enough same-level candidates.
-
-The typed classification rubric lives in `src/data/vocabulary/levels.ts` and its editorial explanation in `src/data/vocabulary/README.md`. IELTS ranges are approximate learner targets rather than official word-to-band assignments.
-
-If an individual level grows very large, it can be split further by category and dynamically loaded without changing the item contract.
-
-## Deployment and SEO
-
-Deploy `dist/` to a static host. Configure clean directory URLs and make sure `/route/` resolves to `/route/index.html`. Configure the host to return a real `404` for unknown paths rather than rewriting every request to the homepage. Use HTTPS and apply appropriate security headers.
-
-For Firebase Hosting, the included `firebase.json` serves `dist/`, enables clean trailing-slash URLs, and lets the generated `404.html` handle unknown routes. After selecting the correct Firebase project:
-
-```bash
+```sh
 npm run build
+npm run release:verify
 npx firebase-tools deploy --only hosting
 ```
 
-### GitHub Pages deployment
+### GitHub Pages
 
-The included `.github/workflows/deploy.yml` publishes the frontend to GitHub Pages while Firebase continues to provide Authentication and Realtime Database.
-
-In the GitHub repository, open **Settings → Secrets and variables → Actions → Variables** and add these repository variables from the Firebase Web app configuration:
+`.github/workflows/deploy.yml` tests, type-checks, builds, verifies, and publishes the frontend from `main`. Add these repository Actions variables:
 
 - `VITE_FIREBASE_API_KEY`
 - `VITE_FIREBASE_AUTH_DOMAIN`
 - `VITE_FIREBASE_DATABASE_URL`
 - `VITE_FIREBASE_PROJECT_ID`
 - `VITE_FIREBASE_APP_ID`
-- `VITE_FIREBASE_APPCHECK_SITE_KEY` (optional until App Check is configured)
+- `VITE_FIREBASE_APPCHECK_SITE_KEY` (optional until configured)
+- `VITE_SITE_URL` and `VITE_BASE_PATH` (optional overrides)
 
-These values are bundled into browser code and are project identifiers, not service-account secrets. Never add a service-account JSON key to a `VITE_` variable. Optionally set `VITE_SITE_URL` and `VITE_BASE_PATH` when using a custom domain or a nonstandard Pages path.
+Choose **GitHub Actions** as the Pages source. The workflow does not deploy Database Rules or Functions; deploy those separately from a trusted environment.
 
-Then open **Settings → Pages**, choose **GitHub Actions** as the source, and push to `main`. The workflow validates configuration, runs tests and TypeScript, builds with the repository subpath, and publishes `dist/`.
+## Release checklist
 
-The Pages workflow does not deploy Realtime Database Rules. Deploy `firebase/database.rules.json` from a trusted local Firebase CLI session as described above. If rules deployment is later automated, use short-lived GitHub OIDC/Google Workload Identity credentials rather than a legacy `FIREBASE_TOKEN`.
+- Run frontend, Functions, and Rules tests, typechecking, build, and release verification.
+- Confirm the build contains no `vocabduel.example` placeholder.
+- Verify representative content and multiplayer routes using the preview server.
+- Confirm canonical routes return `200` and unknown routes return a real `404`.
+- Check titles, descriptions, canonical URLs, `hreflang`, headings, links, `robots.txt`, and `sitemap.xml`.
+- Test keyboard navigation, focus, 320 px reflow, reduced motion, reconnects, expiry, and simultaneous answers.
+- Test current Chromium and Firefox, Safari where available, Chrome Android, and Safari iPhone.
+- Check social previews; some networks require a 1200x630 PNG instead of `public/social-card.svg`.
 
-Before release:
+## Limitations
 
-- Set the canonical `VITE_SITE_URL` and `VITE_BASE_PATH`, rebuild, and confirm `dist/` contains no `vocabduel.example`. The Pages workflow derives these values automatically unless repository variables override them.
-- Confirm each canonical route returns `200` and has one H1, its own title/description/canonical, visible content, and internal links.
-- Fetch the deployed `/robots.txt` and `/sitemap.xml`; parse the sitemap and verify every listed canonical URL.
-- Check the social preview image on the target networks. Some networks do not accept SVG preview images; export `public/social-card.svg` to a 1200×630 PNG and update metadata if required.
-- Protect staging with authentication or intentional `noindex`; do not accidentally ship staging robots directives to production.
+- Speech voices, quality, and availability vary by browser and operating system.
+- Local progress can be lost when browser storage is cleared or another profile/device is used.
+- Anonymous Firebase identities are temporary.
+- Multiplayer is for casual learning. Client-visible content and browser-trusted logic are unsuitable for prizes, gambling, ranked seasons, or authoritative leaderboards.
+- Competitive play would require server-authoritative question delivery, timing, scoring, and validation.
+- The Privacy and Terms pages are product disclosures and launch checklists, not legal advice.
 
-## Browser and product limitations
+## Licence and content rights
 
-- Speech synthesis voices, accents, pronunciation quality, and voice loading differ across browsers and operating systems. Audio starts only after user interaction and remains unavailable where the Web Speech API is unsupported.
-- localStorage is browser- and profile-specific. Clearing site data, private browsing, or moving devices can remove progress.
-- Anonymous Firebase identities are temporary and are not user accounts. Clearing site storage may create a new identity.
-- The multiplayer client is suitable for casual learning, not authoritative competition. A technically capable player can inspect vocabulary and manipulate browser-trusted game logic. Do not use client scores for prizes, ranked seasons, gambling, or global authoritative leaderboards.
-- Security Rules constrain access and obvious invalid mutations, but they cannot prove that a submitted answer was honestly produced or calculate a trusted score. A future ranked mode needs server-authoritative question delivery, timing, scoring, and match validation (for example, trusted Cloud Functions).
-- Privacy and legal requirements vary by operator and region. The included pages are accurate product disclosures and launch checklists, not substitute legal advice.
-
-## Manual release coverage
-
-In addition to automated tests, check current Chromium and Firefox desktop, Safari where available, Chrome Android, and Safari iPhone. Pay particular attention to keyboard-only operation, visible focus, 320 px reflow, speech availability/failure, simultaneous answers, reconnect and expiry behaviour, reduced motion, and production HTML metadata.
+No repository-wide software licence is currently declared. Unless the owner adds one, the source remains all rights reserved by default. Third-party vocabulary acknowledgements do not license the application as a whole.
